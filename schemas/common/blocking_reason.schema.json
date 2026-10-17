@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["code","message"],"properties":{"code":{"enum":["UNRESOLVED_MANDATORY_PLACEHOLDER","UNRESOLVED_CRITICAL_DEPENDENCY","DEPENDENCY_NOT_READY","AMBIGUOUS_SOURCE","MISSING_REQUIRED_VALUE"]},"message":{"type":"string"},"field_path":{"type":["string","null"]}},"additionalProperties":false}

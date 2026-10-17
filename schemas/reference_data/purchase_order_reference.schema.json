@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PURCHASE_ORDER_REFERENCE",
+  "allOf": [
+    {
+      "$ref": "../common/canonical_object.schema.json"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "object_type": {
+      "const": "PURCHASE_ORDER_REFERENCE"
+    },
+    "classification": {
+      "const": "REFERENCE_DATA"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "reference_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "supplier": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "plant": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "purchasing_organization": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "purchasing_group": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "company_code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "storage_location": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "net_price": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "confirmation_control": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

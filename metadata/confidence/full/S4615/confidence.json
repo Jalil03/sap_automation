@@ -1,0 +1,454 @@
+{
+  "objects": [
+    {
+      "blocking_reason_codes": [],
+      "confidence": "HIGH",
+      "object_id": "S4615_SHARED_COMPANY_CODE_1010",
+      "object_type": "COMPANY_CODE",
+      "readiness_status": "READY"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "UNRESOLVED_CRITICAL_DEPENDENCY"
+      ],
+      "confidence": "MEDIUM",
+      "object_id": "S4615_CH1_EX1_BILLING_IMPORTED_A3",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_CRITICAL_DEPENDENCY"
+      ],
+      "confidence": "MEDIUM",
+      "object_id": "S4615_CH3_EX3_BILLING_F2_FROM_IMPORTED_DELIVERY",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH3_EX3_SALES_ORDER_FAIR",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH3_EX3_OUTBOUND_DELIVERY_FAIR",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH3_EX3_BILLING_FAIR",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "UNRESOLVED_CRITICAL_DEPENDENCY"
+      ],
+      "confidence": "MEDIUM",
+      "object_id": "S4615_CH4_EX4_BILLING_ORIGINAL_F2",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH4_EX4_COPY_CONTROL_F2_TO_RK",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "READY"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "UNRESOLVED_CRITICAL_DEPENDENCY",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH4_EX4_BILLING_CREDIT_MEMO",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH4_EX5_OUTBOUND_DELIVERY_CASH_SALE",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH4_EX5_BILLING_CASH_SALE",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH4_EX5_SALES_ORDER_PRO_FORMA",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH4_EX5_BILLING_PRO_FORMA",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "UNRESOLVED_CRITICAL_DEPENDENCY"
+      ],
+      "confidence": "MEDIUM",
+      "object_id": "S4615_CH5_EX6_BILLING_F1_OVERRIDE",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH5_EX6_SALES_ORDER_FAIR_FREIGHT",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH5_EX6_OUTBOUND_DELIVERY_FAIR_FREIGHT",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH5_EX6_BILLING_FAIR_FREIGHT",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH6_EX7_SALES_ORDER_MONTH_END",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH6_EX7_OUTBOUND_DELIVERY_MONTH_END",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "MEDIUM",
+      "object_id": "S4615_CH6_EX7_BILLING_MONTH_END",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH6_EX7_SALES_ORDER_FIORI_APP_FINAL",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH6_EX7_BILLING_FIORI_APP_CANCELLED",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH6_EX7_BILLING_FIORI_APP_POSTED",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "UNRESOLVED_CRITICAL_DEPENDENCY"
+      ],
+      "confidence": "LOW",
+      "object_id": "S4615_CH7_EX9_BILLING_SPLIT_1",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "UNRESOLVED_CRITICAL_DEPENDENCY"
+      ],
+      "confidence": "LOW",
+      "object_id": "S4615_CH7_EX9_BILLING_SPLIT_2",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_CRITICAL_DEPENDENCY"
+      ],
+      "confidence": "MEDIUM",
+      "object_id": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST_SOURCE_A11",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_CRITICAL_DEPENDENCY"
+      ],
+      "confidence": "MEDIUM",
+      "object_id": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST_SOURCE_A12",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "UNRESOLVED_CRITICAL_DEPENDENCY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH8_EX10_BILLING_PERIODIC_FIRST_PERIOD",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH8_EX11_SALES_ORDER_DOWN_PAYMENT",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH8_EX11_BILLING_DOWN_PAYMENT_REQUEST",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH8_EX11_PAYMENT_REFERENCE_DOWN_PAYMENT",
+      "object_type": "PAYMENT_REFERENCE",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH8_EX11_BILLING_FIRST_PARTIAL",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_SALES_ORDER_INSTALLMENT",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "READY"
+    },
+    {
+      "blocking_reason_codes": [],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_OUTBOUND_DELIVERY_INSTALLMENT",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "READY"
+    },
+    {
+      "blocking_reason_codes": [],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_BILLING_INSTALLMENT",
+      "object_type": "BILLING",
+      "readiness_status": "READY"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH9_EX12_ACCOUNT_DETERMINATION_AFFILIATED_REVENUE",
+      "object_type": "ACCOUNT_DETERMINATION",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH9_EX12_SALES_ORDER_ACCOUNT_DETERMINATION_TEST",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH9_EX12_OUTBOUND_DELIVERY_ACCOUNT_DETERMINATION_TEST",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH9_EX12_BILLING_ACCOUNT_DETERMINATION_TEST",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH10_EX13_SALES_ORDER_POSTING_BLOCK",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH10_EX13_OUTBOUND_DELIVERY_POSTING_BLOCK",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH10_EX13_BILLING_POSTING_BLOCK",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH10_EX13_SALES_ORDER_FI_REFERENCE",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH10_EX13_OUTBOUND_DELIVERY_FI_REFERENCE",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4615_CH10_EX13_BILLING_FI_REFERENCE",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    }
+  ]
+}

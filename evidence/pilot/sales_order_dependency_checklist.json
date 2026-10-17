@@ -1,0 +1,244 @@
+{
+  "acceptance_criteria": {
+    "abort_failure_conditions": [
+      "Any dependency pre-check is not PASS.",
+      "Duplicate or ambiguous pre-existing order is found.",
+      "CREATE authorization, CSRF acquisition, or explicit pilot approval is absent.",
+      "Payload differs from the pinned SHA-256 or contains PartnerFunctionInternalCode, a token, or an invented field/value.",
+      "Response is not HTTP 201, lacks an unambiguous created SalesOrder ID, or returns a business/validation error.",
+      "Connection outcome is ambiguous, re-read does not match, or multiple orders are observed."
+    ],
+    "get_reread": [
+      "SalesOrder",
+      "SalesOrderType",
+      "SalesOrganization",
+      "DistributionChannel",
+      "OrganizationDivision",
+      "SoldToParty",
+      "PurchaseOrderByCustomer",
+      "CustomerPaymentTerms",
+      "to_Partner/PartnerFunction",
+      "to_Partner/Customer",
+      "to_Item/SalesOrderItem",
+      "to_Item/Material",
+      "to_Item/RequestedQuantity",
+      "to_Item/RequestedQuantityUnit",
+      "to_Item/ProductionPlant",
+      "to_Item/ShippingPoint"
+    ],
+    "http": [
+      "One authorized POST to API_SALES_ORDER_SRV/A_SalesOrder returns HTTP 201 Created.",
+      "Response contains a non-empty SAP-generated SalesOrder string and no business error payload.",
+      "Location and/or entity metadata identifies A_SalesOrder(<created key>); capture ETag when returned."
+    ],
+    "manual_va03_or_fiori": [
+      "Order exists once and has document type OR and sales area 1010/10/00.",
+      "Sold-to partner is C615-A00 and the observed external DO role resolves to sold-to semantics.",
+      "Item 10 contains material P615-100 and requested quantity 10 PC.",
+      "Customer reference 4712 and payment terms R001 are retained.",
+      "System-determined plant and shipping point are valid and no incompletion/error blocks processing.",
+      "No unintended partner, pricing, schedule-line, delivery, billing, or accounting object was created."
+    ]
+  },
+  "all_checks_status": "NOT_RUN",
+  "application_idempotency": {
+    "canonical_object_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_SALES_ORDER_INSTALLMENT",
+    "correlation_storage": "APPLICATION_LEDGER_ONLY_NOT_SAP_PAYLOAD",
+    "execution_ledger_required_fields": [
+      "canonical_object_id",
+      "migration_correlation_id",
+      "payload_sha256",
+      "attempt_number",
+      "status",
+      "started_at",
+      "completed_at",
+      "http_status",
+      "created_sales_order_id",
+      "response_etag",
+      "sanitized_error"
+    ],
+    "forbidden_ledger_fields": [
+      "csrf_token",
+      "authorization_header",
+      "session_cookie"
+    ],
+    "migration_correlation_id": "SO-PILOT-49B1BBA4FA3FE33DD3B3",
+    "pre_write_duplicate_check": [
+      "Reject when the ledger already has SUBMITTED, CREATED, or AMBIGUOUS for the canonical object ID, correlation ID, or payload SHA-256.",
+      "Run a read-only SAP search using the source-backed fingerprint: SalesOrderType OR, SalesOrganization 1010, DistributionChannel 10, OrganizationDivision 00, SoldToParty C615-A00, PurchaseOrderByCustomer 4712, material P615-100, quantity 10, and unit PC.",
+      "Abort on an exact match or on any ambiguous partial match; require human reconciliation."
+    ],
+    "safe_retry_abort_policy": [
+      "Never retry blindly after a timeout, disconnect, or ambiguous response.",
+      "Before every retry, rerun ledger and SAP duplicate checks.",
+      "Do not retry validation errors, HTTP 4xx, authorization failures, or conflicts without correcting and reapproving the pilot.",
+      "Retry a transient failure only when no order exists, the previous attempt is conclusively not committed, and a new per-session CSRF token is acquired at execution time.",
+      "Allow at most one approved retry; otherwise abort for manual reconciliation."
+    ]
+  },
+  "artifact_version": "1.0.0",
+  "canonical_object_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_SALES_ORDER_INSTALLMENT",
+  "current_gate": "NO_GO_UNTIL_ALL_LIVE_PRECHECKS_PASS_AND_EXECUTION_IS_EXPLICITLY_AUTHORIZED",
+  "dependencies": [
+    {
+      "checks": [
+        "Customer exists and is active.",
+        "Customer is extended to sales area 1010/10/00.",
+        "Customer is permitted as sold-to for order type OR."
+      ],
+      "mode": "REFERENCED_VALUE",
+      "on_failure": "ABORT_BEFORE_POST",
+      "payload_paths": [
+        "SoldToParty",
+        "to_Partner[0].Customer"
+      ],
+      "status": "REQUIRES_LIVE_PRECHECK",
+      "type": "CUSTOMER",
+      "value": "C615-A00"
+    },
+    {
+      "checks": [
+        "External OData PartnerFunction DO is active and maps to internal AG / Donneur d'ordre.",
+        "PartnerFunctionInternalCode is not sent."
+      ],
+      "mode": "REFERENCED_VALUE",
+      "on_failure": "ABORT_BEFORE_POST",
+      "payload_paths": [
+        "to_Partner[0].PartnerFunction"
+      ],
+      "status": "REQUIRES_LIVE_PRECHECK",
+      "type": "PARTNER_FUNCTION",
+      "value": "DO"
+    },
+    {
+      "checks": [
+        "Material exists and is active.",
+        "Material has the required sales views for sales area 1010/10.",
+        "Material is orderable for order type OR and customer C615-A00."
+      ],
+      "mode": "REFERENCED_VALUE",
+      "on_failure": "ABORT_BEFORE_POST",
+      "payload_paths": [
+        "to_Item[0].Material"
+      ],
+      "status": "REQUIRES_LIVE_PRECHECK",
+      "type": "MATERIAL",
+      "value": "P615-100"
+    },
+    {
+      "checks": [
+        "Sales organization exists and is active for order processing."
+      ],
+      "mode": "REFERENCED_VALUE",
+      "on_failure": "ABORT_BEFORE_POST",
+      "payload_paths": [
+        "SalesOrganization"
+      ],
+      "status": "REQUIRES_LIVE_PRECHECK",
+      "type": "SALES_ORGANIZATION",
+      "value": "1010"
+    },
+    {
+      "checks": [
+        "Distribution channel exists and is assigned to sales organization 1010."
+      ],
+      "mode": "REFERENCED_VALUE",
+      "on_failure": "ABORT_BEFORE_POST",
+      "payload_paths": [
+        "DistributionChannel"
+      ],
+      "status": "REQUIRES_LIVE_PRECHECK",
+      "type": "DISTRIBUTION_CHANNEL",
+      "value": "10"
+    },
+    {
+      "checks": [
+        "Division exists and completes valid sales area 1010/10/00."
+      ],
+      "mode": "REFERENCED_VALUE",
+      "on_failure": "ABORT_BEFORE_POST",
+      "payload_paths": [
+        "OrganizationDivision"
+      ],
+      "status": "REQUIRES_LIVE_PRECHECK",
+      "type": "SALES_DIVISION",
+      "value": "00"
+    },
+    {
+      "checks": [
+        "Document type OR exists, is creatable through this service, and is allowed for sales area 1010/10/00."
+      ],
+      "mode": "REFERENCED_VALUE",
+      "on_failure": "ABORT_BEFORE_POST",
+      "payload_paths": [
+        "SalesOrderType"
+      ],
+      "status": "REQUIRES_LIVE_PRECHECK",
+      "type": "SALES_DOCUMENT_TYPE",
+      "value": "OR"
+    },
+    {
+      "checks": [
+        "PC is accepted by the API as an external requested-quantity unit.",
+        "PC is valid for material P615-100 and quantity 10."
+      ],
+      "mode": "REFERENCED_VALUE",
+      "on_failure": "ABORT_BEFORE_POST",
+      "payload_paths": [
+        "to_Item[0].RequestedQuantityUnit"
+      ],
+      "status": "REQUIRES_LIVE_PRECHECK",
+      "type": "UNIT_OF_MEASURE",
+      "value": "PC"
+    },
+    {
+      "checks": [
+        "Payment terms R001 exists and is permitted for customer/order context."
+      ],
+      "mode": "REFERENCED_VALUE",
+      "on_failure": "ABORT_BEFORE_POST",
+      "payload_paths": [
+        "CustomerPaymentTerms"
+      ],
+      "status": "REQUIRES_LIVE_PRECHECK",
+      "type": "PAYMENT_TERMS",
+      "value": "R001"
+    },
+    {
+      "checks": [
+        "A valid plant can be determined from customer/material/sales-area configuration when ProductionPlant is omitted.",
+        "Abort if plant is mandatory and cannot be determined."
+      ],
+      "mode": "SYSTEM_DETERMINED_NOT_IN_PAYLOAD",
+      "on_failure": "ABORT_BEFORE_POST",
+      "payload_paths": [],
+      "status": "REQUIRES_LIVE_PRECHECK",
+      "type": "PLANT",
+      "value": null
+    },
+    {
+      "checks": [
+        "A valid shipping point can be determined when ShippingPoint is omitted.",
+        "Abort if shipping point is mandatory and cannot be determined."
+      ],
+      "mode": "SYSTEM_DETERMINED_NOT_IN_PAYLOAD",
+      "on_failure": "ABORT_BEFORE_POST",
+      "payload_paths": [],
+      "status": "REQUIRES_LIVE_PRECHECK",
+      "type": "SHIPPING_POINT",
+      "value": null
+    }
+  ],
+  "payload_sha256": "fee6311451a3cfb8d0e09501f86c5596e4fcec46f272fcc88376d36a28605c33",
+  "target": {
+    "entity_set": "A_SalesOrder",
+    "service": "API_SALES_ORDER_SRV"
+  },
+  "unproven": [
+    "deep-insert write behavior",
+    "CREATE authorization",
+    "accepted write serialization",
+    "transaction behavior",
+    "idempotency in SAP itself"
+  ]
+}

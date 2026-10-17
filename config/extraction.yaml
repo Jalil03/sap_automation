@@ -1,0 +1,6 @@
+extraction:
+  preserve_page_provenance: true
+  preserve_raw_excerpt: true
+  extract_tables: true
+  detect_exercises: true
+  detect_placeholders: true

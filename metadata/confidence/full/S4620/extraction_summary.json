@@ -1,0 +1,47 @@
+{
+  "classification_counts": {
+    "CUSTOMIZING": 17,
+    "MASTER_DATA": 13,
+    "TRANSACTION": 21
+  },
+  "confidence_counts": {
+    "HIGH": 48,
+    "MEDIUM": 3
+  },
+  "counts_by_type": {
+    "ACCESS_SEQUENCE": 2,
+    "CONDITION_CONTRACT": 1,
+    "CONDITION_TABLE": 4,
+    "CONDITION_TYPE": 5,
+    "CUSTOMER_HIERARCHY": 1,
+    "PRICING_CONDITION": 11,
+    "PRICING_PROCEDURE": 3,
+    "PRICING_PROCEDURE_DETERMINATION": 3,
+    "SALES_ORDER": 18,
+    "SETTLEMENT_DOCUMENT": 3
+  },
+  "dependency_edge_count": 87,
+  "object_count": 51,
+  "objects_with_placeholders": 38,
+  "placeholder_count": 99,
+  "readiness_counts": {
+    "BLOCKED": 40,
+    "READY": 11
+  },
+  "schema_invalid_count": 0,
+  "schema_valid_count": 51,
+  "source": {
+    "condition_term_page_count": 307,
+    "exercise_count": 27,
+    "logical_name": "S4620",
+    "page_count": 351,
+    "sha256": "8433ee1c05da24062bf849672b66bd3857e71608198b8ca127fc5a8500f2bae1",
+    "solution_count": 27,
+    "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf"
+  },
+  "source_pages_processed": [
+    1,
+    351
+  ],
+  "unresolved_dependency_count": 43
+}

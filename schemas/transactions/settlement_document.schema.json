@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SETTLEMENT_DOCUMENT",
+  "allOf": [
+    {
+      "$ref": "../common/canonical_object.schema.json"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "object_type": {
+      "const": "SETTLEMENT_DOCUMENT"
+    },
+    "classification": {
+      "const": "TRANSACTION"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "settlement_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "condition_contract": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "settlement_date": {
+          "type": [
+            "object",
+            "string",
+            "null"
+          ],
+          "properties": {
+            "kind": {
+              "type": "string"
+            },
+            "raw": {
+              "type": "string"
+            },
+            "offset": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "amount": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "execution_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "document_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "settlement_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "business_volume": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "accounting_metadata": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

@@ -1,0 +1,265 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phase 2C local SAP payload contracts",
+  "description": "Strict local schemas for Phase 2B mapper output. SALES_ORDER facets were validated against the local Phase 3A.1 live metadata evidence; other object types remain local-only contracts.",
+  "$defs": {
+    "string": {"type": "string", "minLength": 1},
+    "number": {"type": "number"},
+    "BUSINESS_PARTNER": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["BusinessPartner"],
+          "properties": {
+            "BusinessPartner": {"$ref": "#/$defs/string"},
+            "BusinessPartnerGrouping": {"$ref": "#/$defs/string"},
+            "BusinessPartnerCategory": {"$ref": "#/$defs/string"},
+            "OrganizationBPName1": {"$ref": "#/$defs/string"}
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": ["BusinessPartner", "BusinessPartnerRole"],
+          "properties": {
+            "BusinessPartner": {"$ref": "#/$defs/string"},
+            "BusinessPartnerRole": {"$ref": "#/$defs/string"}
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": ["Customer", "CompanyCode"],
+          "properties": {
+            "Customer": {"$ref": "#/$defs/string"},
+            "CompanyCode": {"$ref": "#/$defs/string"},
+            "ReconciliationAccount": {"$ref": "#/$defs/string"},
+            "PaymentTerms": {"$ref": "#/$defs/string"},
+            "CustomerAccountGroup": {"$ref": "#/$defs/string"}
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": ["Customer", "SalesOrganization", "DistributionChannel", "Division"],
+          "properties": {
+            "Customer": {"$ref": "#/$defs/string"},
+            "SalesOrganization": {"$ref": "#/$defs/string"},
+            "DistributionChannel": {"$ref": "#/$defs/string"},
+            "Division": {"$ref": "#/$defs/string"},
+            "Currency": {"$ref": "#/$defs/string"},
+            "ShippingCondition": {"$ref": "#/$defs/string"},
+            "SupplyingPlant": {"$ref": "#/$defs/string"},
+            "IncotermsClassification": {"$ref": "#/$defs/string"},
+            "IncotermsLocation1": {"$ref": "#/$defs/string"},
+            "CustomerPaymentTerms": {"$ref": "#/$defs/string"},
+            "CustomerAccountAssignmentGroup": {"$ref": "#/$defs/string"},
+            "CustomerPricingProcedure": {"$ref": "#/$defs/string"},
+            "CustomerAccountGroup": {"$ref": "#/$defs/string"}
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "MATERIAL": {
+      "type": "object",
+      "required": ["HEADDATA"],
+      "properties": {
+        "HEADDATA": {
+          "type": "object",
+          "required": ["MATERIAL", "IND_SECTOR", "MATL_TYPE"],
+          "properties": {
+            "MATERIAL": {"$ref": "#/$defs/string"},
+            "IND_SECTOR": {"$ref": "#/$defs/string"},
+            "MATL_TYPE": {"$ref": "#/$defs/string"},
+            "BASIC_VIEW": {"const": "X"},
+            "SALES_VIEW": {"const": "X"}
+          },
+          "additionalProperties": false
+        },
+        "CLIENTDATA": {
+          "type": "object",
+          "properties": {"BASE_UOM": {"$ref": "#/$defs/string"}},
+          "additionalProperties": false
+        },
+        "CLIENTDATAX": {
+          "type": "object",
+          "properties": {"BASE_UOM": {"const": "X"}},
+          "additionalProperties": false
+        },
+        "MATERIALDESCRIPTION": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["MATL_DESC"],
+            "properties": {"MATL_DESC": {"$ref": "#/$defs/string"}},
+            "additionalProperties": false
+          }
+        },
+        "SALESDATA": {
+          "type": "object",
+          "properties": {
+            "SALES_ORG": {"$ref": "#/$defs/string"},
+            "DISTR_CHAN": {"$ref": "#/$defs/string"},
+            "DELYG_PLNT": {"$ref": "#/$defs/string"},
+            "MIN_ORDER": {"$ref": "#/$defs/number"},
+            "MIN_ORDER_UNIT": {"$ref": "#/$defs/string"},
+            "ITEM_CAT": {"$ref": "#/$defs/string"}
+          },
+          "additionalProperties": false
+        },
+        "SALESDATAX": {
+          "type": "object",
+          "properties": {
+            "SALES_ORG": {"const": "X"}, "DISTR_CHAN": {"const": "X"},
+            "DELYG_PLNT": {"const": "X"}, "MIN_ORDER": {"const": "X"},
+            "MIN_ORDER_UNIT": {"const": "X"}, "ITEM_CAT": {"const": "X"}
+          },
+          "additionalProperties": false
+        },
+        "TAXCLASSIFICATIONS": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["TAX_CLASS"],
+            "properties": {"TAX_CLASS": {"$ref": "#/$defs/string"}},
+            "additionalProperties": false
+          }
+        },
+        "PLANTDATA": {
+          "type": "object",
+          "properties": {
+            "PLANT": {"$ref": "#/$defs/string"},
+            "AVAILCHECK": {"$ref": "#/$defs/string"},
+            "STRATEGY_GROUP": {"$ref": "#/$defs/string"}
+          },
+          "additionalProperties": false
+        },
+        "PLANTDATAX": {
+          "type": "object",
+          "properties": {
+            "PLANT": {"const": "X"}, "AVAILCHECK": {"const": "X"},
+            "STRATEGY_GROUP": {"const": "X"}
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "sales_order_item": {
+      "type": "object",
+      "required": ["SalesOrderItem", "Material", "RequestedQuantity"],
+      "properties": {
+        "SalesOrderItem": {"type": "string", "minLength": 1, "maxLength": 6},
+        "Material": {"type": "string", "minLength": 1, "maxLength": 40},
+        "RequestedQuantity": {"type": "number"},
+        "RequestedQuantityUnit": {"type": "string", "minLength": 1, "maxLength": 3},
+        "ProductionPlant": {"type": "string", "minLength": 1, "maxLength": 4},
+        "ShippingPoint": {"type": "string", "minLength": 1, "maxLength": 4},
+        "SalesOrderItemCategory": {"type": "string", "minLength": 1, "maxLength": 4}
+      },
+      "additionalProperties": false
+    },
+    "sales_order_header_partner": {
+      "type": "object",
+      "required": ["PartnerFunction", "Customer"],
+      "properties": {
+        "PartnerFunction": {"type": "string", "minLength": 1, "maxLength": 2},
+        "Customer": {"type": "string", "minLength": 1, "maxLength": 10}
+      },
+      "additionalProperties": false
+    },
+    "SALES_ORDER": {
+      "type": "object",
+      "required": ["SalesOrderType", "SalesOrganization", "DistributionChannel", "OrganizationDivision", "SoldToParty", "to_Item"],
+      "properties": {
+        "SalesOrderType": {"type": "string", "minLength": 1, "maxLength": 4},
+        "SalesOrganization": {"type": "string", "minLength": 1, "maxLength": 4},
+        "DistributionChannel": {"type": "string", "minLength": 1, "maxLength": 2},
+        "OrganizationDivision": {"type": "string", "minLength": 1, "maxLength": 2},
+        "SoldToParty": {"type": "string", "minLength": 1, "maxLength": 10},
+        "PurchaseOrderByCustomer": {"type": "string", "minLength": 1, "maxLength": 35},
+        "CustomerPaymentTerms": {"type": "string", "minLength": 1, "maxLength": 4},
+        "RequestedDeliveryDate": {"$ref": "#/$defs/string"},
+        "to_Partner": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/sales_order_header_partner"}},
+        "to_Item": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/sales_order_item"}}
+      },
+      "additionalProperties": false
+    },
+    "pricing_scale": {
+      "type": "object",
+      "properties": {
+        "ConditionScaleBasis": {"enum": ["QUANTITY", "VALUE"]},
+        "ConditionScaleValue": {"$ref": "#/$defs/number"},
+        "ConditionScaleValueUnit": {"$ref": "#/$defs/string"},
+        "ConditionScaleValueCurrency": {"$ref": "#/$defs/string"},
+        "ConditionRateValue": {"$ref": "#/$defs/number"},
+        "ConditionRateValueUnit": {"$ref": "#/$defs/string"},
+        "ConditionQuantity": {"$ref": "#/$defs/number"}
+      },
+      "additionalProperties": false
+    },
+    "PRICING_CONDITION": {
+      "type": "object",
+      "required": ["ConditionType"],
+      "properties": {
+        "ConditionType": {"$ref": "#/$defs/string"}, "ConditionRateValue": {"$ref": "#/$defs/number"},
+        "ConditionRateValueUnit": {"$ref": "#/$defs/string"}, "ConditionQuantity": {"$ref": "#/$defs/number"},
+        "ConditionCalculationType": {"$ref": "#/$defs/string"}, "ConditionIsDeleted": {"type": "boolean"},
+        "SalesOrganization": {"$ref": "#/$defs/string"}, "DistributionChannel": {"$ref": "#/$defs/string"},
+        "Customer": {"$ref": "#/$defs/string"}, "Material": {"$ref": "#/$defs/string"},
+        "IncotermsClassification": {"$ref": "#/$defs/string"}, "DestinationCountry": {"$ref": "#/$defs/string"},
+        "CustomerHierarchyNode": {"$ref": "#/$defs/string"}, "Promotion": {"$ref": "#/$defs/string"},
+        "SalesDeal": {"$ref": "#/$defs/string"}, "ConditionValidityStartDate": {"$ref": "#/$defs/string"},
+        "ConditionValidityEndDate": {"$ref": "#/$defs/string"},
+        "to_PricingScale": {"type": "array", "items": {"$ref": "#/$defs/pricing_scale"}}
+      },
+      "anyOf": [{"required": ["ConditionRateValue"]}, {"required": ["to_PricingScale"]}],
+      "additionalProperties": false
+    },
+    "delivery_item": {
+      "type": "object",
+      "properties": {
+        "DeliveryDocumentItem": {"$ref": "#/$defs/string"}, "Material": {"$ref": "#/$defs/string"},
+        "ActualDeliveryQuantity": {"$ref": "#/$defs/number"}, "DeliveryQuantityUnit": {"$ref": "#/$defs/string"},
+        "ReferenceSDDocumentItem": {"$ref": "#/$defs/string"}, "Plant": {"$ref": "#/$defs/string"},
+        "StorageLocation": {"$ref": "#/$defs/string"}, "Warehouse": {"$ref": "#/$defs/string"},
+        "DeliveryDocumentItemCategory": {"$ref": "#/$defs/string"}
+      },
+      "additionalProperties": false
+    },
+    "OUTBOUND_DELIVERY": {
+      "type": "object",
+      "required": ["ShippingPoint"],
+      "properties": {
+        "DeliveryDocumentType": {"$ref": "#/$defs/string"}, "ShipToParty": {"$ref": "#/$defs/string"},
+        "ShippingPoint": {"$ref": "#/$defs/string"}, "SelectionDate": {"$ref": "#/$defs/string"},
+        "PlannedGoodsIssueDate": {"$ref": "#/$defs/string"},
+        "to_DeliveryDocumentItem": {"type": "array", "items": {"$ref": "#/$defs/delivery_item"}}
+      },
+      "additionalProperties": false
+    },
+    "billing_item": {
+      "type": "object",
+      "properties": {
+        "BillingDocumentItem": {"$ref": "#/$defs/string"}, "Material": {"$ref": "#/$defs/string"},
+        "BillingQuantity": {"$ref": "#/$defs/number"}, "BillingQuantityUnit": {"$ref": "#/$defs/string"},
+        "ReferenceSDDocumentItem": {"$ref": "#/$defs/string"}, "NetAmount": {"$ref": "#/$defs/number"},
+        "TransactionCurrency": {"$ref": "#/$defs/string"}, "Division": {"$ref": "#/$defs/string"}
+      },
+      "additionalProperties": false
+    },
+    "BILLING": {
+      "type": "object",
+      "required": ["BillingDocumentType"],
+      "properties": {
+        "BillingDocumentType": {"$ref": "#/$defs/string"}, "PayerParty": {"$ref": "#/$defs/string"},
+        "BillingDocumentDate": {"$ref": "#/$defs/string"}, "ReferenceSDDocument": {"$ref": "#/$defs/string"},
+        "CustomerPaymentTerms": {"$ref": "#/$defs/string"}, "TotalNetAmount": {"$ref": "#/$defs/number"},
+        "TransactionCurrency": {"$ref": "#/$defs/string"},
+        "to_Item": {"type": "array", "items": {"$ref": "#/$defs/billing_item"}}
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Golden Book · S4615</title>
+  <meta name="description" content="Validation fonctionnelle offline du scénario S4615 chapitre 4 exercice 5">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="topline">
+      <div class="brand"><span class="brand-mark">GB</span><span>Golden Book Scenario</span></div>
+      <div class="offline"><span></span> Mode offline · lecture seule</div>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow" id="course">S4615 · Chapitre 4</p>
+        <h1>Facturation spéciale,<br><em>comprise et traçable.</em></h1>
+        <p class="lede">Une lecture fonctionnelle du book, du placeholder participant jusqu’aux contrôles SAP — sans écriture et sans valeur inventée.</p>
+      </div>
+      <aside class="selector-card">
+        <label for="training-user">Training user</label>
+        <select id="training-user" aria-label="Training user de 00 à 99"></select>
+        <div class="resolved-user"><span>Identité résolue</span><strong id="resolved-user">S4615-07</strong></div>
+        <p>00 = formateur · 01–99 = participants</p>
+      </aside>
+    </div>
+  </header>
+
+  <main id="content" aria-live="polite">
+    <section class="summary band">
+      <div>
+        <span class="section-no">01</span><p class="kicker">Ancrage source</p>
+        <h2 id="exercise-title">Chargement…</h2>
+      </div>
+      <dl class="source-grid" id="source-grid"></dl>
+    </section>
+
+    <section class="band compare-section">
+      <div class="section-heading"><div><span class="section-no">02</span><p class="kicker">Résolution contrôlée</p><h2>Le book reste intact.<br>Le runtime devient concret.</h2></div><p class="section-note">Les valeurs de gauche proviennent du canonique. Celles de droite sont une copie runtime calculée pour le participant sélectionné.</p></div>
+      <div class="compare-grid">
+        <article class="data-card original"><header><span>BOOK</span><h3>Données originales</h3></header><div id="original-data"></div></article>
+        <div class="transform-arrow" aria-hidden="true">→</div>
+        <article class="data-card runtime"><header><span>RUNTIME</span><h3>Données résolues</h3></header><div id="runtime-data"></div></article>
+      </div>
+    </section>
+
+    <section class="band workflow-section">
+      <div class="section-heading"><div><span class="section-no">03</span><p class="kicker">Workflow détecté</p><h2>Deux parcours,<br>un même exercice.</h2></div></div>
+      <div id="workflow"></div>
+    </section>
+
+    <section class="band mapping-section">
+      <div class="section-heading"><div><span class="section-no">04</span><p class="kicker">Mapping SAP</p><h2>Du canonique au contrat OData.</h2></div><div class="interface-badge" id="interface-badge"></div></div>
+      <div class="table-wrap"><table><thead><tr><th>Champ canonique</th><th>Valeur runtime</th><th>Champ SAP</th><th>État</th></tr></thead><tbody id="mapping-rows"></tbody></table></div>
+      <details><summary>Aperçu du payload offline</summary><pre id="payload-preview"></pre></details>
+    </section>
+
+    <section class="band checks-section">
+      <div class="section-heading"><div><span class="section-no">05</span><p class="kicker">Gates read-only</p><h2>Sept prechecks,<br>aucune supposition.</h2></div><p class="section-note">Chaque contrôle reste bloquant jusqu’à preuve GET exacte dans le système cible.</p></div>
+      <div class="checks-grid" id="prechecks"></div>
+    </section>
+
+    <section class="result band" id="result-section">
+      <div><p class="kicker">Résultat final</p><h2 id="final-status">—</h2><p id="final-copy"></p></div>
+      <ol id="blocking-reasons"></ol>
+    </section>
+  </main>
+
+  <footer><span>Golden Book · S4615_CH4_EX5</span><span>Canonical immutable · GET only · POST interdit</span></footer>
+  <script src="/app.js"></script>
+</body>
+</html>

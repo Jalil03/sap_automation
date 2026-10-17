@@ -1,0 +1,45 @@
+{
+  "classification_counts": {
+    "CUSTOMIZING": 3,
+    "REFERENCE_DATA": 2,
+    "TRANSACTION": 43
+  },
+  "confidence_counts": {
+    "HIGH": 39,
+    "LOW": 2,
+    "MEDIUM": 7
+  },
+  "counts_by_type": {
+    "ACCOUNT_DETERMINATION": 1,
+    "BILLING": 24,
+    "COMPANY_CODE": 1,
+    "COPY_CONTROL": 2,
+    "OUTBOUND_DELIVERY": 8,
+    "PAYMENT_REFERENCE": 1,
+    "SALES_ORDER": 11
+  },
+  "dependency_edge_count": 66,
+  "object_count": 48,
+  "objects_with_placeholders": 39,
+  "placeholder_count": 70,
+  "readiness_counts": {
+    "BLOCKED": 43,
+    "READY": 5
+  },
+  "schema_invalid_count": 0,
+  "schema_valid_count": 48,
+  "source": {
+    "exercise_count": 13,
+    "logical_name": "S4615",
+    "page_count": 263,
+    "sha256": "c43431aca0d15add006a5872ac721ef7ffd16e89520195a47b47d7f98ac387d9",
+    "solution_count": 13,
+    "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+    "table_marker_count": 33
+  },
+  "source_pages_processed": [
+    1,
+    263
+  ],
+  "unresolved_dependency_count": 32
+}

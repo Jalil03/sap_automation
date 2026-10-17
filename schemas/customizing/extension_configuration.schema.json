@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EXTENSION_CONFIGURATION",
+  "allOf": [
+    {
+      "$ref": "../common/canonical_object.schema.json"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "object_type": {
+      "const": "EXTENSION_CONFIGURATION"
+    },
+    "classification": {
+      "const": "CUSTOMIZING"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "configuration_family": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "configuration_key": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "target_object": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "settings": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

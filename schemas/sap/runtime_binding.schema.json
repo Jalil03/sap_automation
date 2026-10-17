@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phase 2C runtime dependency binding",
+  "type": "object",
+  "required": ["sap_field", "relation", "target_type", "target_object_id", "dependency_status", "source_phrase"],
+  "properties": {
+    "sap_field": {"type": "string", "minLength": 1},
+    "relation": {"type": "string", "minLength": 1},
+    "target_type": {"type": "string", "minLength": 1},
+    "target_object_id": {"type": "string", "minLength": 1},
+    "dependency_status": {"const": "RESOLVED"},
+    "source_phrase": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}

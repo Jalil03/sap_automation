@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "contracts": {
+    "S4615_BV_CB04": {
+      "scope": "S4615",
+      "transaction": "VOV4",
+      "program": "SAPL080O",
+      "overview_screen": "1002",
+      "copy_screen": "1003",
+      "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL080OTCTRL_V_T184",
+      "copy_button_id": "/app/con[0]/ses[0]/wnd[0]/tbar[1]/btn[6]",
+      "save_button_id": "/app/con[0]/ses[0]/wnd[0]/tbar[0]/btn[11]",
+      "transport_request": "A4HK908422",
+      "fields": {
+        "sales_document_type": {"name": "AUART", "column": 0},
+        "item_category_group": {"name": "MTPOS", "column": 1},
+        "usage": {"name": "VWPOS", "column": 2},
+        "higher_level_item_category": {"name": "UEPST", "column": 3},
+        "default_item_category": {"name": "PSTYV", "column": 4},
+        "manual_item_category_1": {"name": "PSTY1", "column": 5}
+      },
+      "source": {
+        "sales_document_type": "CS",
+        "item_category_group": "CB04",
+        "usage": "",
+        "higher_level_item_category": "",
+        "default_item_category": "CBTA",
+        "manual_item_category_1": "TAN"
+      },
+      "target": {
+        "sales_document_type": "BV",
+        "item_category_group": "CB04",
+        "usage": "",
+        "higher_level_item_category": "",
+        "default_item_category": "CBTA",
+        "manual_item_category_1": "TAN"
+      },
+      "evidence": [
+        "runtime/sap_gui_responses/9d0eded3-e056-4565-8218-1e18de827e4e.json",
+        "runtime/sap_gui_responses/1bee06b2-99a2-4c9c-80dd-48f32e5198ab.json",
+        "runtime/sap_gui_responses/9cc4e197-8678-419b-9b5b-353922f6d5b3.json"
+      ]
+    }
+  }
+}

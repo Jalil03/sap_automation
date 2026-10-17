@@ -1,0 +1,203 @@
+{
+  "sections": [
+    {
+      "chapter": 1,
+      "decision": "SKIP",
+      "exercise": 1,
+      "exercise_page": 19,
+      "object_ids": [],
+      "reason": "Theory-only delivery concepts; supplier returns do not resolve the S4600 customer-return direction.",
+      "scenario_id": "S4610_CH1_EX1",
+      "solution_page": 20
+    },
+    {
+      "chapter": 1,
+      "decision": "EXTRACT",
+      "exercise": 2,
+      "exercise_page": 25,
+      "object_ids": [
+        "S4610_CH1_EX2_OUTBOUND_DELIVERY_EXISTING_BY_CUSTOMER_REFERENCE"
+      ],
+      "reason": "Concrete source-backed instance data.",
+      "scenario_id": "S4610_CH1_EX2",
+      "solution_page": 26
+    },
+    {
+      "chapter": 2,
+      "decision": "EXTRACT",
+      "exercise": 3,
+      "exercise_page": 41,
+      "object_ids": [
+        "S4610_CH2_EX3_SHIPPING_POINT_Y0-GROUP",
+        "S4610_CH2_EX3_SHIPPING_POINT_Z0-GROUP",
+        "S4610_SHARED_PLANT_1010"
+      ],
+      "reason": "Concrete source-backed instance data.",
+      "scenario_id": "S4610_CH2_EX3",
+      "solution_page": 43
+    },
+    {
+      "chapter": 3,
+      "decision": "EXTRACT",
+      "exercise": 4,
+      "exercise_page": 65,
+      "object_ids": [
+        "S4610_CH3_EX4_COPY_CONTROL_CDCL_TO_ZLGROUP",
+        "S4610_CH3_EX4_COPY_CONTROL_ZAGROUP_TO_ZLGROUP",
+        "S4610_CH3_EX4_OUTBOUND_DELIVERY_EXPRESS_FROM_ORDER",
+        "S4610_CH3_EX4_SALES_ORDER_ZA-GROUP"
+      ],
+      "reason": "Concrete source-backed instance data.",
+      "scenario_id": "S4610_CH3_EX4",
+      "solution_page": 69
+    },
+    {
+      "chapter": 4,
+      "decision": "ENRICH_EXISTING",
+      "exercise": 5,
+      "exercise_page": 91,
+      "object_ids": [
+        "S4610_CH2_EX3_SHIPPING_POINT_Y0-GROUP"
+      ],
+      "reason": "Route and shipping-point determination enrich the existing Y0## record; no route object exists in scope.",
+      "scenario_id": "S4610_CH4_EX5",
+      "solution_page": 93
+    },
+    {
+      "chapter": 4,
+      "decision": "ENRICH_EXISTING",
+      "exercise": 6,
+      "exercise_page": 107,
+      "object_ids": [
+        "S4610_CH2_EX3_SHIPPING_POINT_Y0-GROUP"
+      ],
+      "reason": "Scheduling values enrich Y0##; no duplicate shipping-point object.",
+      "scenario_id": "S4610_CH4_EX6",
+      "solution_page": 108
+    },
+    {
+      "chapter": 4,
+      "decision": "EXTRACT",
+      "exercise": 7,
+      "exercise_page": 109,
+      "object_ids": [
+        "S4610_CH4_EX7_SALES_ORDER_ZA-GROUP"
+      ],
+      "reason": "Concrete source-backed instance data.",
+      "scenario_id": "S4610_CH4_EX7",
+      "solution_page": 111
+    },
+    {
+      "chapter": 4,
+      "decision": "ENRICH_EXISTING",
+      "exercise": 8,
+      "exercise_page": 127,
+      "object_ids": [
+        "S4610_CH2_EX3_SHIPPING_POINT_Y0-GROUP",
+        "S4610_SHARED_STORAGE_LOCATION_101C"
+      ],
+      "reason": "Mass-delivery count is only 'at least two' with blank identifiers; no pseudo-deliveries created.",
+      "scenario_id": "S4610_CH4_EX8",
+      "solution_page": 129
+    },
+    {
+      "chapter": 4,
+      "decision": "SKIP",
+      "exercise": 9,
+      "exercise_page": 135,
+      "object_ids": [],
+      "reason": "Outbound-delivery monitor/list procedure; no new business-object instance.",
+      "scenario_id": "S4610_CH4_EX9",
+      "solution_page": 136
+    },
+    {
+      "chapter": 5,
+      "decision": "EXTRACT",
+      "exercise": 10,
+      "exercise_page": 153,
+      "object_ids": [
+        "S4610_CH5_EX10_OUTBOUND_DELIVERY_FROM_ORDER",
+        "S4610_CH5_EX10_SALES_ORDER_ZA-GROUP"
+      ],
+      "reason": "Concrete source-backed instance data.",
+      "scenario_id": "S4610_CH5_EX10",
+      "solution_page": 155
+    },
+    {
+      "chapter": 5,
+      "decision": "EXTRACT",
+      "exercise": 11,
+      "exercise_page": 163,
+      "object_ids": [
+        "S4610_CH5_EX11_WAREHOUSE_TASK_OUTBOUND",
+        "S4610_SHARED_WAREHOUSE_NUMBER_1010"
+      ],
+      "reason": "Concrete source-backed instance data.",
+      "scenario_id": "S4610_CH5_EX11",
+      "solution_page": 164
+    },
+    {
+      "chapter": 5,
+      "decision": "EXTRACT",
+      "exercise": 12,
+      "exercise_page": 169,
+      "object_ids": [
+        "S4610_CH5_EX10_OUTBOUND_DELIVERY_FROM_ORDER",
+        "S4610_CH5_EX12_GOODS_ISSUE_FROM_EX10_DELIVERY"
+      ],
+      "reason": "Concrete source-backed instance data.",
+      "scenario_id": "S4610_CH5_EX12",
+      "solution_page": 170
+    },
+    {
+      "chapter": 5,
+      "decision": "EXTRACT",
+      "exercise": 13,
+      "exercise_page": 179,
+      "object_ids": [
+        "S4610_CH5_EX13_INBOUND_DELIVERY_FROM_PURCHASE_ORDER",
+        "S4610_CH5_EX13_PURCHASE_ORDER_REFERENCE_EXTERNAL_PROCUREMENT",
+        "S4610_SHARED_STORAGE_LOCATION_101D"
+      ],
+      "reason": "Concrete source-backed instance data.",
+      "scenario_id": "S4610_CH5_EX13",
+      "solution_page": 181
+    },
+    {
+      "chapter": 5,
+      "decision": "EXTRACT",
+      "exercise": 14,
+      "exercise_page": 189,
+      "object_ids": [
+        "S4610_CH5_EX14_INBOUND_DELIVERY_FROM_PURCHASE_ORDER",
+        "S4610_CH5_EX14_PURCHASE_ORDER_REFERENCE_EXTERNAL_PROCUREMENT",
+        "S4610_CH5_EX14_WAREHOUSE_TASK_INBOUND"
+      ],
+      "reason": "Concrete source-backed instance data.",
+      "scenario_id": "S4610_CH5_EX14",
+      "solution_page": 191
+    }
+  ],
+  "skipped_candidates": [
+    {
+      "exercise": 1,
+      "reason": "Theory-only delivery concepts; supplier returns do not resolve the S4600 customer-return direction."
+    },
+    {
+      "exercise": 5,
+      "reason": "Route and shipping-point determination enrich the existing Y0## record; no route object exists in scope."
+    },
+    {
+      "exercise": 6,
+      "reason": "Scheduling values enrich Y0##; no duplicate shipping-point object."
+    },
+    {
+      "exercise": 8,
+      "reason": "Mass-delivery count is only 'at least two' with blank identifiers; no pseudo-deliveries created."
+    },
+    {
+      "exercise": 9,
+      "reason": "Outbound-delivery monitor/list procedure; no new business-object instance."
+    }
+  ]
+}

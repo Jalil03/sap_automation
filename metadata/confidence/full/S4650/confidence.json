@@ -1,0 +1,270 @@
+{
+  "objects": [
+    {
+      "blocking_reason_codes": [],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH1_EX1_SALES_ORGANIZATION_1010",
+      "object_type": "SALES_ORGANIZATION",
+      "readiness_status": "READY"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "MEDIUM",
+      "object_id": "S4650_CH1_EX1_DISTRIBUTION_CHANNEL_GROUP",
+      "object_type": "DISTRIBUTION_CHANNEL",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH1_EX1_SALES_DIVISION_00",
+      "object_type": "SALES_DIVISION",
+      "readiness_status": "READY"
+    },
+    {
+      "blocking_reason_codes": [],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH1_EX1_SALES_DIVISION_03",
+      "object_type": "SALES_DIVISION",
+      "readiness_status": "READY"
+    },
+    {
+      "blocking_reason_codes": [
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH1_EX1_SALES_AREA_GROUP_00",
+      "object_type": "SALES_AREA",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH1_EX1_SALES_AREA_GROUP_03",
+      "object_type": "SALES_AREA",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH1_EX2_SHARED_MASTER_DATA_ASSIGNMENT_CHANNEL_10",
+      "object_type": "SHARED_MASTER_DATA_ASSIGNMENT",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH1_EX2_SALES_ORDER_COMMON_MASTER_DATA_TEST",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH2_EX3_COPY_CONTROL_OF_TO_ZA_GROUP",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "MEDIUM",
+      "object_id": "S4650_CH2_EX3_COPY_CONTROL_ZQ_GROUP_TO_OF",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "UNRESOLVED_CRITICAL_DEPENDENCY",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "MEDIUM",
+      "object_id": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_DIFFERENT_CUSTOMER",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "UNRESOLVED_CRITICAL_DEPENDENCY",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_SAME_CUSTOMER",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH2_EX4_COPY_CONTROL_ZA_GROUP_TO_LF",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_CRITICAL_DEPENDENCY",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "MEDIUM",
+      "object_id": "S4650_CH2_EX4_OUTBOUND_DELIVERY_HEADER_CONTROL_TEST",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_CRITICAL_DEPENDENCY",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "MEDIUM",
+      "object_id": "S4650_CH2_EX4_OUTBOUND_DELIVERY_ITEM_CONTROL_TEST",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH2_EX5_COPY_CONTROL_LF_TO_F2",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "READY"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH3_EX6_TEXT_DETERMINATION_MATERIAL_SALES_TEXT",
+      "object_type": "TEXT_DETERMINATION",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH3_EX7_TEXT_DETERMINATION_HEADER_GROUP",
+      "object_type": "TEXT_DETERMINATION",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "UNRESOLVED_CRITICAL_DEPENDENCY",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH3_EX7_SALES_ORDER_HEADER_TEXT_FROM_QUOTATION",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH4_EX9_BUSINESS_PARTNER_C650_A_GROUP",
+      "object_type": "BUSINESS_PARTNER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH4_EX9_OUTPUT_DETERMINATION_BA00",
+      "object_type": "OUTPUT_DETERMINATION",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "MEDIUM",
+      "object_id": "S4650_CH4_EX9_SALES_ORDER_BA00_OUTPUT_TEST",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH4_EX10_OUTPUT_DETERMINATION_ZLD0",
+      "object_type": "OUTPUT_DETERMINATION",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH4_EX10_SALES_ORDER_ZLD0_DELIVERY_SOURCE",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH4_EX10_OUTBOUND_DELIVERY_ZLD0_TEST",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH4_EX11_OUTPUT_DETERMINATION_ORDER_CONFIRMATION_GROUP",
+      "object_type": "OUTPUT_DETERMINATION",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH4_EX11_SALES_ORDER_NEW_OUTPUT_CONFIRMATION_TEST",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH5_EX12_EXTENSION_CONFIGURATION_SALES_ORDER_LIST_LAYOUT",
+      "object_type": "EXTENSION_CONFIGURATION",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4650_CH5_EX13_EXTENSION_CONFIGURATION_MATERIAL_FIELD_SELECTION",
+      "object_type": "EXTENSION_CONFIGURATION",
+      "readiness_status": "BLOCKED"
+    }
+  ]
+}

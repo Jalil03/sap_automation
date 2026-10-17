@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CUSTOMER_MATERIAL_INFO",
+  "allOf": [
+    {
+      "$ref": "../common/canonical_object.schema.json"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "object_type": {
+      "const": "CUSTOMER_MATERIAL_INFO"
+    },
+    "classification": {
+      "const": "MASTER_DATA"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "business_partner": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "material": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "customer_material": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sales_organization": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "distribution_channel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

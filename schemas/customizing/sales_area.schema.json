@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SALES_AREA",
+  "allOf": [
+    {
+      "$ref": "../common/canonical_object.schema.json"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "object_type": {
+      "const": "SALES_AREA"
+    },
+    "classification": {
+      "const": "CUSTOMIZING"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "sales_organization": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "distribution_channel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sales_division": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "business_area_assignment_rule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

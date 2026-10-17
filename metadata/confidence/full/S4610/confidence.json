@@ -1,0 +1,196 @@
+{
+  "objects": [
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_CRITICAL_DEPENDENCY"
+      ],
+      "confidence": "LOW",
+      "object_id": "S4610_CH1_EX2_OUTBOUND_DELIVERY_EXISTING_BY_CUSTOMER_REFERENCE",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4610_CH2_EX3_SHIPPING_POINT_Y0-GROUP",
+      "object_type": "SHIPPING_POINT",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4610_CH2_EX3_SHIPPING_POINT_Z0-GROUP",
+      "object_type": "SHIPPING_POINT",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "MEDIUM",
+      "object_id": "S4610_CH3_EX4_COPY_CONTROL_CDCL_TO_ZLGROUP",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4610_CH3_EX4_COPY_CONTROL_ZAGROUP_TO_ZLGROUP",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4610_CH3_EX4_OUTBOUND_DELIVERY_EXPRESS_FROM_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "UNRESOLVED_CRITICAL_DEPENDENCY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4610_CH3_EX4_SALES_ORDER_ZA-GROUP",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "UNRESOLVED_CRITICAL_DEPENDENCY",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4610_CH4_EX7_SALES_ORDER_ZA-GROUP",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "MEDIUM",
+      "object_id": "S4610_CH5_EX10_OUTBOUND_DELIVERY_FROM_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "UNRESOLVED_CRITICAL_DEPENDENCY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4610_CH5_EX10_SALES_ORDER_ZA-GROUP",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "MEDIUM",
+      "object_id": "S4610_CH5_EX11_WAREHOUSE_TASK_OUTBOUND",
+      "object_type": "WAREHOUSE_TASK",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "MEDIUM",
+      "object_id": "S4610_CH5_EX12_GOODS_ISSUE_FROM_EX10_DELIVERY",
+      "object_type": "GOODS_ISSUE",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4610_CH5_EX13_INBOUND_DELIVERY_FROM_PURCHASE_ORDER",
+      "object_type": "INBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "UNRESOLVED_CRITICAL_DEPENDENCY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4610_CH5_EX13_PURCHASE_ORDER_REFERENCE_EXTERNAL_PROCUREMENT",
+      "object_type": "PURCHASE_ORDER_REFERENCE",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4610_CH5_EX14_INBOUND_DELIVERY_FROM_PURCHASE_ORDER",
+      "object_type": "INBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "UNRESOLVED_MANDATORY_PLACEHOLDER",
+        "UNRESOLVED_CRITICAL_DEPENDENCY"
+      ],
+      "confidence": "HIGH",
+      "object_id": "S4610_CH5_EX14_PURCHASE_ORDER_REFERENCE_EXTERNAL_PROCUREMENT",
+      "object_type": "PURCHASE_ORDER_REFERENCE",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [
+        "DEPENDENCY_NOT_READY"
+      ],
+      "confidence": "MEDIUM",
+      "object_id": "S4610_CH5_EX14_WAREHOUSE_TASK_INBOUND",
+      "object_type": "WAREHOUSE_TASK",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "blocking_reason_codes": [],
+      "confidence": "HIGH",
+      "object_id": "S4610_SHARED_PLANT_1010",
+      "object_type": "PLANT",
+      "readiness_status": "READY"
+    },
+    {
+      "blocking_reason_codes": [],
+      "confidence": "HIGH",
+      "object_id": "S4610_SHARED_STORAGE_LOCATION_101C",
+      "object_type": "STORAGE_LOCATION",
+      "readiness_status": "READY"
+    },
+    {
+      "blocking_reason_codes": [],
+      "confidence": "HIGH",
+      "object_id": "S4610_SHARED_STORAGE_LOCATION_101D",
+      "object_type": "STORAGE_LOCATION",
+      "readiness_status": "READY"
+    },
+    {
+      "blocking_reason_codes": [],
+      "confidence": "HIGH",
+      "object_id": "S4610_SHARED_WAREHOUSE_NUMBER_1010",
+      "object_type": "WAREHOUSE_NUMBER",
+      "readiness_status": "READY"
+    }
+  ]
+}

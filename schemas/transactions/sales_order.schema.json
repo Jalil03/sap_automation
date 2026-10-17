@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SALES_ORDER",
+  "allOf": [
+    {
+      "$ref": "../common/canonical_object.schema.json"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "object_type": {
+      "const": "SALES_ORDER"
+    },
+    "classification": {
+      "const": "TRANSACTION"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "order_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sales_organization": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "distribution_channel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sales_division": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sold_to_party": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ship_to_party": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "customer_reference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "requested_delivery_date": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "line_id"
+            ],
+            "properties": {
+              "line_id": {
+                "type": "string"
+              },
+              "material": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "quantity": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "unit": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "plant": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "ship_to_party": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "shipping_point": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "route": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "net_weight": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "net_weight_unit": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "item_category": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "payment_terms": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "processing_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "completeness_state": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pricing_elements": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

@@ -1,0 +1,114 @@
+{
+  "version": "2.0.0",
+  "policy": "Every probe remains fail-closed until its service metadata and one GET response are captured locally.",
+  "offline_evidence": [
+    "inputs/sap_inventory/odata_services.xlsx",
+    "mappings/sap/interface_registry.yaml",
+    "evidence/sap_live/odata/API_SALES_ORDER_SRV.metadata.xml"
+  ],
+  "probes": [
+    {
+      "name": "CUSTOMER",
+      "canonical_paths": ["data.sold_to_party"],
+      "payload_paths": ["SoldToParty"],
+      "status": "NEEDS_LIVE_VALIDATION",
+      "service": {"technical_name": "ZAPI_BUSINESS_PARTNER", "external_name": "API_BUSINESS_PARTNER", "inventory_status": "CONFIRMED"},
+      "entity_set": {"name": "A_Customer", "status": "PROPOSED_NOT_CONFIRMED"},
+      "key_or_filter": "$filter=Customer eq '{CUSTOMER}'&$select=Customer&$top=1",
+      "path_template": "/sap/opu/odata/sap/API_BUSINESS_PARTNER/A_Customer?$filter=Customer eq '{CUSTOMER}'&$select=Customer&$top=1",
+      "expected_result": "HTTP 200 and at least one row whose Customer equals the requested sold-to party.",
+      "on_not_found": "BLOCKED",
+      "on_interface_unavailable": "BLOCKED",
+      "evidence_note": "Service registration is present offline; EntitySet/property/path are not backed by local service metadata."
+    },
+    {
+      "name": "MATERIAL",
+      "canonical_paths": ["data.items[].material"],
+      "payload_paths": ["to_Item[].Material"],
+      "status": "NEEDS_LIVE_VALIDATION",
+      "service": {"technical_name": "ZAPI_PRODUCT_SRV", "external_name": "API_PRODUCT_SRV", "inventory_status": "CONFIRMED"},
+      "entity_set": {"name": "A_Product", "status": "PROPOSED_NOT_CONFIRMED"},
+      "key_or_filter": "$filter=Product eq '{MATERIAL}'&$select=Product&$top=1",
+      "path_template": "/sap/opu/odata/sap/API_PRODUCT_SRV/A_Product?$filter=Product eq '{MATERIAL}'&$select=Product&$top=1",
+      "expected_result": "HTTP 200 and at least one exact Product row for every distinct item material.",
+      "on_not_found": "BLOCKED",
+      "on_interface_unavailable": "BLOCKED",
+      "evidence_note": "Service registration is present offline; EntitySet/property/path are not backed by local service metadata."
+    },
+    {
+      "name": "SALES_ORGANIZATION",
+      "canonical_paths": ["data.sales_organization"],
+      "payload_paths": ["SalesOrganization"],
+      "status": "NEEDS_LIVE_VALIDATION",
+      "service": {"technical_name": "ZAPI_SALESORGANIZATION_SRV", "external_name": "API_SALESORGANIZATION_SRV", "inventory_status": "CONFIRMED"},
+      "entity_set": {"name": "A_SalesOrganization", "status": "PROPOSED_NOT_CONFIRMED"},
+      "key_or_filter": "$filter=SalesOrganization eq '{SALES_ORGANIZATION}'&$select=SalesOrganization&$top=1",
+      "path_template": "/sap/opu/odata/sap/API_SALESORGANIZATION_SRV/A_SalesOrganization?$filter=SalesOrganization eq '{SALES_ORGANIZATION}'&$select=SalesOrganization&$top=1",
+      "expected_result": "HTTP 200 and at least one exact SalesOrganization row.",
+      "on_not_found": "BLOCKED",
+      "on_interface_unavailable": "BLOCKED",
+      "evidence_note": "Service registration is present offline; EntitySet/property/path are not backed by local service metadata."
+    },
+    {
+      "name": "DISTRIBUTION_CHANNEL",
+      "canonical_paths": ["data.distribution_channel"],
+      "payload_paths": ["DistributionChannel"],
+      "status": "NEEDS_LIVE_VALIDATION",
+      "service": {"technical_name": "ZAPI_DISTRIBUTIONCHANNEL_SRV", "external_name": "API_DISTRIBUTIONCHANNEL_SRV", "inventory_status": "CONFIRMED"},
+      "entity_set": {"name": "A_DistributionChannel", "status": "PROPOSED_NOT_CONFIRMED"},
+      "key_or_filter": "$filter=DistributionChannel eq '{DISTRIBUTION_CHANNEL}'&$select=DistributionChannel&$top=1",
+      "path_template": "/sap/opu/odata/sap/API_DISTRIBUTIONCHANNEL_SRV/A_DistributionChannel?$filter=DistributionChannel eq '{DISTRIBUTION_CHANNEL}'&$select=DistributionChannel&$top=1",
+      "expected_result": "HTTP 200 and at least one exact DistributionChannel row.",
+      "on_not_found": "BLOCKED",
+      "on_interface_unavailable": "BLOCKED",
+      "evidence_note": "Service registration is present offline; EntitySet/property/path are not backed by local service metadata."
+    },
+    {
+      "name": "ORGANIZATION_DIVISION",
+      "canonical_paths": ["data.sales_division"],
+      "payload_paths": ["OrganizationDivision"],
+      "status": "NEEDS_LIVE_VALIDATION",
+      "service": {"technical_name": "ZAPI_DIVISION_SRV", "external_name": "API_DIVISION_SRV", "inventory_status": "CONFIRMED"},
+      "entity_set": {"name": "A_Division", "status": "PROPOSED_NOT_CONFIRMED"},
+      "key_or_filter": "$filter=Division eq '{ORGANIZATION_DIVISION}'&$select=Division&$top=1",
+      "path_template": "/sap/opu/odata/sap/API_DIVISION_SRV/A_Division?$filter=Division eq '{ORGANIZATION_DIVISION}'&$select=Division&$top=1",
+      "expected_result": "HTTP 200 and at least one exact Division row.",
+      "on_not_found": "BLOCKED",
+      "on_interface_unavailable": "BLOCKED",
+      "evidence_note": "Canonical sales_division maps to SAP OrganizationDivision; service registration is present, lookup metadata is not."
+    },
+    {
+      "name": "SALES_ORDER_TYPE",
+      "canonical_paths": ["data.order_type"],
+      "payload_paths": ["SalesOrderType"],
+      "status": "NEEDS_LIVE_VALIDATION",
+      "service": {"technical_name": "ZAPI_SALESORDERTYPE_SRV", "external_name": "API_SALESORDERTYPE_SRV", "inventory_status": "CONFIRMED"},
+      "entity_set": {"name": "A_SalesOrderType", "status": "PROPOSED_NOT_CONFIRMED"},
+      "key_or_filter": "$filter=SalesOrderType eq '{SALES_ORDER_TYPE}'&$select=SalesOrderType&$top=1",
+      "path_template": "/sap/opu/odata/sap/API_SALESORDERTYPE_SRV/A_SalesOrderType?$filter=SalesOrderType eq '{SALES_ORDER_TYPE}'&$select=SalesOrderType&$top=1",
+      "expected_result": "HTTP 200 and at least one exact SalesOrderType row.",
+      "on_not_found": "BLOCKED",
+      "on_interface_unavailable": "BLOCKED",
+      "evidence_note": "The inventory confirms the service name. API_SALES_ORDER_SRV metadata confirms the write field only, not this lookup EntitySet."
+    },
+    {
+      "name": "UNIT_OF_MEASURE",
+      "canonical_paths": ["data.items[].unit"],
+      "payload_paths": ["to_Item[].RequestedQuantityUnit"],
+      "status": "NEEDS_LIVE_VALIDATION",
+      "service": {
+        "technical_name": null,
+        "external_name": null,
+        "inventory_status": "NO_DETERMINISTIC_SERVICE_SELECTED",
+        "unverified_candidates": ["API_ET_UNITOFMEASURE_SRV", "API_EXSTXUNITOFMEASURE_SRV"]
+      },
+      "entity_set": {"name": null, "status": "NOT_CONFIRMED"},
+      "key_or_filter": null,
+      "path_template": null,
+      "expected_result": "A confirmed read-only lookup must return an exact row for every distinct RequestedQuantityUnit.",
+      "on_not_found": "BLOCKED",
+      "on_interface_unavailable": "BLOCKED",
+      "evidence_note": "Inventory names alone do not prove that either candidate is the correct generic unit lookup. API_SALES_ORDER_SRV only proves the RequestedQuantityUnit write/read field."
+    }
+  ]
+}

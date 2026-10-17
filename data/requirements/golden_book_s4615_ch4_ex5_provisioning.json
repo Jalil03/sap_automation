@@ -1,0 +1,558 @@
+{
+  "cash_sale_assessment": {
+    "downstream": {
+      "S4615_CH4_EX5_BILLING_CASH_SALE": "EXPECTED_FOLLOW_UP_NOT_ROOT_PREREQUISITE",
+      "S4615_CH4_EX5_BILLING_PRO_FORMA": "EXCLUDED_SIBLING_BRANCH",
+      "S4615_CH4_EX5_OUTBOUND_DELIVERY_CASH_SALE": "EXPECTED_WORKFLOW_OUTCOME_NOT_PROVISIONING_PREREQUISITE",
+      "S4615_CH4_EX5_SALES_ORDER_PRO_FORMA": "EXCLUDED_SIBLING_BRANCH"
+    },
+    "required": [
+      "valid sales area",
+      "sold-to customer usable in 1010/10/00",
+      "product usable in 1010/10",
+      "product-specific PC unit"
+    ],
+    "sales_order_type": "BV",
+    "status": "EXISTS"
+  },
+  "customer_assessment": {
+    "decision": "C_CANNOT_DETERMINE_WITHOUT_LIVE_CHECK",
+    "possibly_required_for_downstream_billing": [
+      "Customer company-code view 1010"
+    ],
+    "reason": "MISSING is established for the scenario-facing customer, but retained evidence does not distinguish absent BP root, absent customer role, or absent 1010/10/00 sales-area extension.",
+    "required_views_if_root_exists": [
+      "Customer role/entity",
+      "Customer sales area 1010/10/00"
+    ],
+    "runtime_customer": "C615-D00",
+    "unknown_create_attributes": [
+      "Business-partner grouping",
+      "name/address",
+      "customer account group",
+      "mandatory sales-area attributes"
+    ]
+  },
+  "first_required_sap_write": {
+    "authorized": false,
+    "component": "SALES_ORGANIZATION_1010",
+    "kind": "MANUAL_CUSTOMIZING_REQUIRED",
+    "reason": "It is a required order-header prerequisite and is confirmed MISSING; the local registry exposes lookup only."
+  },
+  "plan_version": "1.0.0",
+  "policy": "OFFLINE_READ_ONLY_NO_SAP_EXECUTION",
+  "product_assessment": {
+    "decision": "C_CANNOT_DETERMINE_WITHOUT_LIVE_CHECK",
+    "possibly_required": [
+      "Plant extension for the SAP-determined plant",
+      "delivery-related product data"
+    ],
+    "reason": "MISSING is established for the scenario-facing material, but retained evidence does not distinguish absent product root from missing sales/plant views.",
+    "required_views": [
+      "Product/material root",
+      "Sales organization 1010 / distribution channel 10",
+      "Product-specific unit P615-400 + PC"
+    ],
+    "runtime_product": "P615-400",
+    "unknown_create_attributes": [
+      "Industry sector",
+      "material type",
+      "base unit if different from the order unit",
+      "mandatory valuation/plant attributes"
+    ],
+    "uom_rule": "PC remains PC. The observed FG228/PC association and runtime code 289 do not authorize a conversion for P615-400."
+  },
+  "provisioning_dag": [
+    {
+      "layer": 0,
+      "name": "EXISTING prerequisites",
+      "nodes": [
+        "REQ_DISTRIBUTION_CHANNEL_9411C41EC990",
+        "REQ_SALES_DIVISION_12DB1A50F04D",
+        "REQ_SALES_ORDER_TYPE_FD17CC7ED649"
+      ]
+    },
+    {
+      "layer": 1,
+      "name": "Global / organizational customizing",
+      "nodes": [
+        "REQ_COMPANY_CODE_8131EAD50CED",
+        "REQ_SALES_ORGANIZATION_017B33085362"
+      ]
+    },
+    {
+      "layer": 2,
+      "name": "Sales-area customizing",
+      "nodes": [
+        "REQ_SALES_AREA_2D070605D0FF"
+      ]
+    },
+    {
+      "layer": 3,
+      "name": "Customer / product root master data",
+      "nodes": [
+        "REQ_BUSINESS_PARTNER_7BE3434D7102",
+        "REQ_MATERIAL_67C49094879C"
+      ]
+    },
+    {
+      "layer": 4,
+      "name": "Master-data extensions and product-specific unit",
+      "nodes": [
+        "REQ_CUSTOMER_SALES_AREA_EXTENSION_09190AA5FDD8",
+        "REQ_PRODUCT_SALES_AREA_EXTENSION_D237B2C0DF76",
+        "REQ_PRODUCT_UNIT_OF_MEASURE_3FF2FF2DA869"
+      ]
+    },
+    {
+      "layer": 5,
+      "name": "Read-only runtime qualification checks",
+      "nodes": [
+        "CHECK_CUSTOMER_ROOT_VS_EXTENSION",
+        "CHECK_PRODUCT_ROOT_VS_EXTENSION",
+        "CHECK_SALES_AREA",
+        "CHECK_PRODUCT_UOM",
+        "CHECK_DUPLICATE_ORDER"
+      ]
+    },
+    {
+      "layer": 6,
+      "name": "Sales Order BV runtime creation",
+      "nodes": [
+        "REQ_SALES_ORDER_8347DE8AC9E6"
+      ]
+    },
+    {
+      "layer": 7,
+      "name": "Downstream outcome observation",
+      "nodes": [
+        "OBSERVE_AUTO_OUTBOUND_DELIVERY",
+        "OBSERVE_CASH_SALE_BILLING"
+      ]
+    }
+  ],
+  "read_only_validation_plan": {
+    "checks": [
+      "Company Code 1010 existence",
+      "Sales area 1010/10/00 exact assignment (no confirmed browser endpoint; manual read-only validation needed)",
+      "Business Partner root, customer role, and customer sales-area extension for C615-D00",
+      "Product root and sales-view metadata for P615-400",
+      "Product-specific P615-400 + PC association",
+      "Pre-existing duplicate cash-sale order fingerprint"
+    ],
+    "execution_performed": false,
+    "script": "scripts/browser_checks_s4615_ch4_ex5.js"
+  },
+  "requirements": [
+    {
+      "confidence": "NOT_APPLICABLE",
+      "current_sap_status": "EXISTS",
+      "depends_on": [
+        "REQ_SALES_ORGANIZATION_017B33085362"
+      ],
+      "direct_or_transitive": "DIRECT",
+      "entity_set_or_bapi": "API_DISTRIBUTIONCHANNEL_SRV",
+      "evidence": [
+        "Exact reference/customizing interface restricted to validation or lookup.",
+        "No write is required for an existing prerequisite.",
+        "Phase 4 requirement REQ_DISTRIBUTION_CHANNEL_9411C41EC990"
+      ],
+      "interface_candidate": "API_DISTRIBUTIONCHANNEL_SRV",
+      "provisioning_layer": "EXISTING",
+      "provisioning_strategy": "REUSE",
+      "requirement_id": "REQ_DISTRIBUTION_CHANNEL_9411C41EC990",
+      "risk": "LOW",
+      "runtime_value": "10",
+      "scope": "GLOBAL",
+      "template": "10",
+      "type": "DISTRIBUTION_CHANNEL",
+      "write_capability": "UNKNOWN"
+    },
+    {
+      "confidence": "NOT_APPLICABLE",
+      "current_sap_status": "EXISTS",
+      "depends_on": [],
+      "direct_or_transitive": "DIRECT",
+      "entity_set_or_bapi": "API_DIVISION_SRV",
+      "evidence": [
+        "Exact reference/customizing interface restricted to validation or lookup.",
+        "No write is required for an existing prerequisite.",
+        "Phase 4 requirement REQ_SALES_DIVISION_12DB1A50F04D"
+      ],
+      "interface_candidate": "API_DIVISION_SRV",
+      "provisioning_layer": "EXISTING",
+      "provisioning_strategy": "REUSE",
+      "requirement_id": "REQ_SALES_DIVISION_12DB1A50F04D",
+      "risk": "LOW",
+      "runtime_value": "00",
+      "scope": "GLOBAL",
+      "template": "00",
+      "type": "SALES_DIVISION",
+      "write_capability": "UNKNOWN"
+    },
+    {
+      "confidence": "NOT_APPLICABLE",
+      "current_sap_status": "EXISTS",
+      "depends_on": [],
+      "direct_or_transitive": "DIRECT",
+      "entity_set_or_bapi": "API_SALESORDERTYPE_SRV",
+      "evidence": [
+        "config/sap_sales_order_prechecks.example.json; live read-only result",
+        "No write is required for an existing prerequisite.",
+        "Phase 4 requirement REQ_SALES_ORDER_TYPE_FD17CC7ED649"
+      ],
+      "interface_candidate": "API_SALESORDERTYPE_SRV",
+      "provisioning_layer": "EXISTING",
+      "provisioning_strategy": "REUSE",
+      "requirement_id": "REQ_SALES_ORDER_TYPE_FD17CC7ED649",
+      "risk": "LOW",
+      "runtime_value": "BV",
+      "scope": "BOOK",
+      "template": "BV",
+      "type": "SALES_ORDER_TYPE",
+      "write_capability": "UNKNOWN"
+    },
+    {
+      "confidence": "HIGH",
+      "current_sap_status": "UNKNOWN",
+      "depends_on": [],
+      "direct_or_transitive": "TRANSITIVE",
+      "entity_set_or_bapi": "API_COMPANYCODE_SRV",
+      "evidence": [
+        "Exact reference/customizing interface restricted to validation or lookup.",
+        "The registry restricts this interface to lookup.",
+        "Phase 4 requirement REQ_COMPANY_CODE_8131EAD50CED"
+      ],
+      "interface_candidate": "API_COMPANYCODE_SRV",
+      "provisioning_layer": "GLOBAL_CUSTOMIZING",
+      "provisioning_strategy": "CUSTOMIZING",
+      "requirement_id": "REQ_COMPANY_CODE_8131EAD50CED",
+      "risk": "HIGH",
+      "runtime_value": "1010",
+      "scope": "GLOBAL",
+      "template": "1010",
+      "type": "COMPANY_CODE",
+      "write_capability": "MANUAL_CUSTOMIZING_REQUIRED"
+    },
+    {
+      "confidence": "HIGH",
+      "current_sap_status": "MISSING",
+      "depends_on": [
+        "REQ_COMPANY_CODE_8131EAD50CED"
+      ],
+      "direct_or_transitive": "DIRECT",
+      "entity_set_or_bapi": "API_SALESORGANIZATION_SRV",
+      "evidence": [
+        "Exact reference/customizing interface restricted to validation or lookup.",
+        "The registry restricts this interface to lookup.",
+        "Phase 4 requirement REQ_SALES_ORGANIZATION_017B33085362"
+      ],
+      "interface_candidate": "API_SALESORGANIZATION_SRV",
+      "provisioning_layer": "GLOBAL_CUSTOMIZING",
+      "provisioning_strategy": "CUSTOMIZING",
+      "requirement_id": "REQ_SALES_ORGANIZATION_017B33085362",
+      "risk": "HIGH",
+      "runtime_value": "1010",
+      "scope": "GLOBAL",
+      "template": "1010",
+      "type": "SALES_ORGANIZATION",
+      "write_capability": "MANUAL_CUSTOMIZING_REQUIRED"
+    },
+    {
+      "confidence": "HIGH",
+      "current_sap_status": "UNKNOWN",
+      "depends_on": [
+        "REQ_DISTRIBUTION_CHANNEL_9411C41EC990",
+        "REQ_SALES_DIVISION_12DB1A50F04D",
+        "REQ_SALES_ORGANIZATION_017B33085362"
+      ],
+      "direct_or_transitive": "TRANSITIVE",
+      "entity_set_or_bapi": "BAPI_SALES_AREAS_GET",
+      "evidence": [
+        "Exact reference/customizing interface restricted to validation or lookup.",
+        "The registry restricts this interface to lookup.",
+        "Phase 4 requirement REQ_SALES_AREA_2D070605D0FF"
+      ],
+      "interface_candidate": "BAPI_SALES_AREAS_GET",
+      "provisioning_layer": "SALES_AREA_CUSTOMIZING",
+      "provisioning_strategy": "CUSTOMIZING",
+      "requirement_id": "REQ_SALES_AREA_2D070605D0FF",
+      "risk": "HIGH",
+      "runtime_value": "1010/10/00",
+      "scope": "BOOK",
+      "template": "1010/10/00",
+      "type": "SALES_AREA",
+      "write_capability": "MANUAL_CUSTOMIZING_REQUIRED"
+    },
+    {
+      "confidence": "MEDIUM",
+      "current_sap_status": "MISSING",
+      "depends_on": [],
+      "direct_or_transitive": "DIRECT",
+      "entity_set_or_bapi": "A_BusinessPartner (mapper contract; local service metadata absent)",
+      "evidence": [
+        "Exact object-specific inventory name; no generic name-only fallback used.",
+        "Phase 2 contract maps BUSINESS_PARTNER to API_BUSINESS_PARTNER; exact create shape is not live-validated.",
+        "Phase 4 requirement REQ_BUSINESS_PARTNER_7BE3434D7102"
+      ],
+      "interface_candidate": "API_BUSINESS_PARTNER",
+      "provisioning_layer": "MASTER_DATA_CREATE",
+      "provisioning_strategy": "BLOCKED",
+      "requirement_id": "REQ_BUSINESS_PARTNER_7BE3434D7102",
+      "risk": "HIGH",
+      "runtime_value": "C615-D00",
+      "scope": "PER_USER",
+      "template": "C615-D##",
+      "type": "BUSINESS_PARTNER",
+      "write_capability": "ODATA_CREATE_SUPPORTED"
+    },
+    {
+      "confidence": "HIGH",
+      "current_sap_status": "MISSING",
+      "depends_on": [],
+      "direct_or_transitive": "DIRECT",
+      "entity_set_or_bapi": "BAPI_MATERIAL_SAVEDATA",
+      "evidence": [
+        "Exact object-specific inventory name; no generic name-only fallback used.",
+        "Exact STANDARD_BAPI candidate with MAINTAIN operation in the local inventory.",
+        "Phase 4 requirement REQ_MATERIAL_67C49094879C"
+      ],
+      "interface_candidate": "BAPI_MATERIAL_SAVEDATA",
+      "provisioning_layer": "MASTER_DATA_CREATE",
+      "provisioning_strategy": "BLOCKED",
+      "requirement_id": "REQ_MATERIAL_67C49094879C",
+      "risk": "HIGH",
+      "runtime_value": "P615-400",
+      "scope": "PER_USER",
+      "template": "P615-4##",
+      "type": "MATERIAL",
+      "write_capability": "BAPI_SUPPORTED"
+    },
+    {
+      "confidence": "MEDIUM",
+      "current_sap_status": "UNKNOWN",
+      "depends_on": [
+        "REQ_BUSINESS_PARTNER_7BE3434D7102",
+        "REQ_SALES_AREA_2D070605D0FF"
+      ],
+      "direct_or_transitive": "TRANSITIVE",
+      "entity_set_or_bapi": "A_CustomerSalesArea (Phase 2 mapping path; local metadata not captured)",
+      "evidence": [
+        "schemas/sap/core_mapping_contracts.json maps sales_areas to to_CustomerSalesArea[].",
+        "No local API_BUSINESS_PARTNER metadata proves create/update facets for this entity set."
+      ],
+      "interface_candidate": "API_BUSINESS_PARTNER",
+      "provisioning_layer": "MASTER_DATA_EXTEND",
+      "provisioning_strategy": "BLOCKED",
+      "requirement_id": "REQ_CUSTOMER_SALES_AREA_EXTENSION_09190AA5FDD8",
+      "risk": "HIGH",
+      "runtime_value": "C615-D00|1010/10/00",
+      "scope": "PER_USER",
+      "template": "C615-D##|1010/10/00",
+      "type": "CUSTOMER_SALES_AREA_EXTENSION",
+      "write_capability": "ODATA_UPDATE_SUPPORTED"
+    },
+    {
+      "confidence": "MEDIUM",
+      "current_sap_status": "UNKNOWN",
+      "depends_on": [
+        "REQ_DISTRIBUTION_CHANNEL_9411C41EC990",
+        "REQ_MATERIAL_67C49094879C",
+        "REQ_SALES_ORGANIZATION_017B33085362"
+      ],
+      "direct_or_transitive": "TRANSITIVE",
+      "entity_set_or_bapi": "SALESDATA.SALES_ORG + SALESDATA.DISTR_CHAN",
+      "evidence": [
+        "schemas/sap/core_mapping_contracts.json maps material sales_organization and distribution_channel to BAPI SALESDATA.",
+        "Required BAPI create/extend attributes are not present in the selected SALES_ORDER canonical object."
+      ],
+      "interface_candidate": "BAPI_MATERIAL_SAVEDATA",
+      "provisioning_layer": "MASTER_DATA_EXTEND",
+      "provisioning_strategy": "BLOCKED",
+      "requirement_id": "REQ_PRODUCT_SALES_AREA_EXTENSION_D237B2C0DF76",
+      "risk": "HIGH",
+      "runtime_value": "P615-400|1010/10",
+      "scope": "PER_USER",
+      "template": "P615-4##|1010/10",
+      "type": "PRODUCT_SALES_AREA_EXTENSION",
+      "write_capability": "BAPI_SUPPORTED"
+    },
+    {
+      "confidence": "HIGH",
+      "current_sap_status": "UNKNOWN",
+      "depends_on": [
+        "REQ_MATERIAL_67C49094879C"
+      ],
+      "direct_or_transitive": "DIRECT",
+      "entity_set_or_bapi": "A_ProductUnitsOfMeasure",
+      "evidence": [
+        "TEST 600 live metadata validation",
+        "Entity set and Product + AlternativeUnit keys are read-confirmed; write capability is not proven.",
+        "Phase 4 requirement REQ_PRODUCT_UNIT_OF_MEASURE_3FF2FF2DA869"
+      ],
+      "interface_candidate": "API_PRODUCT_SRV",
+      "provisioning_layer": "MASTER_DATA_EXTEND",
+      "provisioning_strategy": "BLOCKED",
+      "requirement_id": "REQ_PRODUCT_UNIT_OF_MEASURE_3FF2FF2DA869",
+      "risk": "HIGH",
+      "runtime_value": "P615-400|PC",
+      "scope": "PER_USER",
+      "template": "P615-4##|PC",
+      "type": "PRODUCT_UNIT_OF_MEASURE",
+      "write_capability": "UNKNOWN"
+    },
+    {
+      "confidence": "HIGH",
+      "current_sap_status": "UNKNOWN",
+      "depends_on": [],
+      "direct_or_transitive": "DIRECT",
+      "entity_set_or_bapi": "A_ProductUnitsOfMeasure (product-specific lookup only)",
+      "evidence": [
+        "TEST 600 live metadata validation",
+        "There is no evidenced standalone unit write contract.",
+        "Phase 4 requirement REQ_UNIT_OF_MEASURE_8CF4FF8ED738"
+      ],
+      "interface_candidate": "API_PRODUCT_SRV",
+      "provisioning_layer": "UNKNOWN",
+      "provisioning_strategy": "CUSTOMIZING",
+      "requirement_id": "REQ_UNIT_OF_MEASURE_8CF4FF8ED738",
+      "risk": "HIGH",
+      "runtime_value": "PC",
+      "scope": "GLOBAL",
+      "template": "PC",
+      "type": "UNIT_OF_MEASURE",
+      "write_capability": "UNKNOWN"
+    },
+    {
+      "confidence": "HIGH",
+      "current_sap_status": "UNKNOWN",
+      "depends_on": [
+        "REQ_BUSINESS_PARTNER_7BE3434D7102",
+        "REQ_CUSTOMER_SALES_AREA_EXTENSION_09190AA5FDD8",
+        "REQ_DISTRIBUTION_CHANNEL_9411C41EC990",
+        "REQ_MATERIAL_67C49094879C",
+        "REQ_PRODUCT_SALES_AREA_EXTENSION_D237B2C0DF76",
+        "REQ_PRODUCT_UNIT_OF_MEASURE_3FF2FF2DA869",
+        "REQ_SALES_DIVISION_12DB1A50F04D",
+        "REQ_SALES_ORDER_TYPE_FD17CC7ED649",
+        "REQ_SALES_ORGANIZATION_017B33085362",
+        "REQ_UNIT_OF_MEASURE_8CF4FF8ED738"
+      ],
+      "direct_or_transitive": "DIRECT",
+      "entity_set_or_bapi": "A_SalesOrder",
+      "evidence": [
+        "Exact object-specific inventory name; no generic name-only fallback used.",
+        "evidence/sap_live/odata/API_SALES_ORDER_SRV.metadata.xml confirms A_SalesOrder and metadata-level create capability.",
+        "Deep-insert execution and authorization remain unproven.",
+        "Phase 4 requirement REQ_SALES_ORDER_8347DE8AC9E6"
+      ],
+      "interface_candidate": "API_SALES_ORDER_SRV",
+      "provisioning_layer": "TRANSACTIONAL_RUNTIME",
+      "provisioning_strategy": "RUNTIME_CREATE",
+      "requirement_id": "REQ_SALES_ORDER_8347DE8AC9E6",
+      "risk": "HIGH",
+      "runtime_value": "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+      "scope": "PER_USER",
+      "template": "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+      "type": "SALES_ORDER",
+      "write_capability": "ODATA_CREATE_SUPPORTED"
+    }
+  ],
+  "scenario": {
+    "book": "S4615",
+    "canonical_object_id": "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+    "chapter": 4,
+    "exercise": 5,
+    "scenario_id": "S4615_CH4_EX5",
+    "selection_boundary": "Selected cash-sale SALES_ORDER and its prerequisites; pro-forma branch excluded.",
+    "training_user_code": "00",
+    "training_user_runtime": "S4615-00"
+  },
+  "source_integrity": {
+    "canonical_modified": false,
+    "canonical_objects": "data/validated/canonical_objects.json",
+    "canonical_sha256": "cb26afeda023743c862479c32664d981889c825c9aa15f2c293b32b119dd9b36",
+    "phase4_inventory": "data/requirements/training_environment_requirements.json",
+    "phase4_inventory_sha256": "eb37a270687416179a52f59dd89b6078d4700771bc1443379ad80cfcabb842bb",
+    "sap_connection_performed": false
+  },
+  "structural_dependency_assessment": [
+    {
+      "component": "COMPANY_CODE_1010",
+      "necessity": "REQUIRED_FOR_BOOK",
+      "reason": "Source-backed dependency of Sales Organization 1010; existence remains UNKNOWN."
+    },
+    {
+      "component": "SALES_ORGANIZATION_1010",
+      "necessity": "REQUIRED_FOR_BOOK",
+      "reason": "Exact order header value; confirmed MISSING."
+    },
+    {
+      "component": "DISTRIBUTION_CHANNEL_10",
+      "necessity": "REQUIRED_FOR_BOOK",
+      "reason": "Exact order header value; code EXISTS, assignment to 1010 still requires sales-area validation."
+    },
+    {
+      "component": "SALES_DIVISION_00",
+      "necessity": "REQUIRED_FOR_BOOK",
+      "reason": "Exact order header value; code EXISTS, assignment still requires sales-area validation."
+    },
+    {
+      "component": "SALES_AREA_1010_10_00",
+      "necessity": "REQUIRED_FOR_BOOK",
+      "reason": "Exact composite used by the order and customer extension."
+    },
+    {
+      "component": "SALES_ORDER_TYPE_BV",
+      "necessity": "REQUIRED_FOR_BOOK",
+      "reason": "Exact order type; confirmed EXISTS."
+    },
+    {
+      "component": "PLANT",
+      "necessity": "MAY_BE_REQUIRED",
+      "reason": "No plant is supplied by the canonical item; SAP determination may require a valid customer/product plant setup."
+    },
+    {
+      "component": "PLANT_TO_SALES_ORGANIZATION",
+      "necessity": "MAY_BE_REQUIRED",
+      "reason": "Relevant only if plant determination is needed; no exact assignment is source-backed for this scenario."
+    },
+    {
+      "component": "SHIPPING_POINT",
+      "necessity": "MAY_BE_REQUIRED",
+      "reason": "No shipping point is supplied; cash-sale delivery may require determination."
+    },
+    {
+      "component": "SHIPPING_DETERMINATION",
+      "necessity": "MAY_BE_REQUIRED",
+      "reason": "Required only if automatic delivery needs shipping-point determination; exact rule is absent from this scenario."
+    },
+    {
+      "component": "PRICING_CONFIGURATION",
+      "necessity": "MAY_BE_REQUIRED",
+      "reason": "The order contains no explicit pricing condition or procedure identity."
+    },
+    {
+      "component": "OTHER_S4615_DOCUMENT_TYPES",
+      "necessity": "NOT_REQUIRED_FOR_THIS_BOOK",
+      "reason": "Only BV is required for the selected cash-sale order."
+    },
+    {
+      "component": "PRO_FORMA_BRANCH",
+      "necessity": "NOT_REQUIRED_FOR_THIS_BOOK",
+      "reason": "The selected canonical object is the cash-sale order; pro-forma objects are a sibling branch, not prerequisites."
+    }
+  ],
+  "summary": {
+    "customizing": 6,
+    "direct": 9,
+    "exists": 3,
+    "high_risk": 10,
+    "master_data": 6,
+    "missing": 3,
+    "total": 13,
+    "transactional": 1,
+    "transitive": 4,
+    "unknown": 7
+  }
+}

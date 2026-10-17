@@ -1,0 +1,163 @@
+[
+  {
+    "object_id": "S4650_CH1_EX1_DISTRIBUTION_CHANNEL_GROUP",
+    "scenario_id": "S4650_CH1_EX1",
+    "source_to_canonical": [
+      {
+        "source_term": "Canal de distribution / Organis. commerciale / Secteur d'activité",
+        "section_type": "EXERCISE",
+        "page": 17
+      },
+      {
+        "source_term": "Canal de distribution",
+        "section_type": "SOLUTION",
+        "page": 18
+      },
+      {
+        "source_term": "Organis. commerciale / Secteur d'activité",
+        "section_type": "SOLUTION",
+        "page": 19
+      }
+    ],
+    "supporting_references": []
+  },
+  {
+    "object_id": "S4650_CH1_EX1_SALES_AREA_1010_GROUP_00",
+    "scenario_id": "S4650_CH1_EX1",
+    "source_to_canonical": [
+      {
+        "source_term": "Canal de distribution / Organis. commerciale / Secteur d'activité",
+        "section_type": "EXERCISE",
+        "page": 17
+      },
+      {
+        "source_term": "Canal de distribution",
+        "section_type": "SOLUTION",
+        "page": 18
+      },
+      {
+        "source_term": "Organis. commerciale / Secteur d'activité",
+        "section_type": "SOLUTION",
+        "page": 19
+      }
+    ],
+    "supporting_references": []
+  },
+  {
+    "object_id": "S4650_CH1_EX1_SALES_AREA_1010_GROUP_03",
+    "scenario_id": "S4650_CH1_EX1",
+    "source_to_canonical": [
+      {
+        "source_term": "Canal de distribution / Organis. commerciale / Secteur d'activité",
+        "section_type": "EXERCISE",
+        "page": 17
+      },
+      {
+        "source_term": "Canal de distribution",
+        "section_type": "SOLUTION",
+        "page": 18
+      },
+      {
+        "source_term": "Organis. commerciale / Secteur d'activité",
+        "section_type": "SOLUTION",
+        "page": 19
+      }
+    ],
+    "supporting_references": []
+  },
+  {
+    "object_id": "S4620_CH1_EX1_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL",
+    "scenario_id": "S4620_CH1_EX1",
+    "source_to_canonical": [
+      {
+        "source_term": "Organis. commerciale / Canal distribution / Client / Article / Quantité échelonnée / Montant",
+        "section_type": "EXERCISE",
+        "page": 21
+      },
+      {
+        "source_term": "Client/article / Barèmes",
+        "section_type": "SOLUTION",
+        "page": 27
+      },
+      {
+        "source_term": "Quantité échelonnée / Montant",
+        "section_type": "SOLUTION",
+        "page": 28
+      }
+    ],
+    "supporting_references": []
+  },
+  {
+    "object_id": "S4600_CH3_EX3_SALES_ORDER_STANDARD",
+    "scenario_id": "S4600_CH3_EX3",
+    "source_to_canonical": [
+      {
+        "source_term": "Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / DateLivrSouh.",
+        "section_type": "EXERCISE",
+        "page": 57
+      },
+      {
+        "source_term": "Type commande client / Article / Quantité",
+        "section_type": "SOLUTION",
+        "page": 58
+      }
+    ],
+    "supporting_references": []
+  },
+  {
+    "object_id": "S4600_CH3_EX5_OUTBOUND_DELIVERY_FROM_EX3",
+    "scenario_id": "S4600_CH3_EX5",
+    "source_to_canonical": [
+      {
+        "source_term": "Point d'expédition / Date de création planifiée",
+        "section_type": "EXERCISE",
+        "page": 71
+      },
+      {
+        "source_term": "numéro de votre commande client",
+        "section_type": "SOLUTION",
+        "page": 72
+      }
+    ],
+    "supporting_references": [
+      {
+        "course_code": "S4610",
+        "source_file": "S4610_FR_Col12_ILT_FV_Inst_A4.pdf",
+        "pages": [
+          114,
+          115
+        ],
+        "relation": "SEMANTIC_REFERENCE",
+        "topic": "Traitement des livraisons sortantes"
+      }
+    ]
+  },
+  {
+    "object_id": "S4600_CH3_EX7_BILLING_FROM_EX5",
+    "scenario_id": "S4600_CH3_EX7",
+    "source_to_canonical": [
+      {
+        "source_term": "document de facturation / livraison sortante de la tâche précédente",
+        "section_type": "EXERCISE",
+        "page": 87
+      },
+      {
+        "source_term": "Création de documents de facturation",
+        "section_type": "SOLUTION",
+        "page": 88
+      }
+    ],
+    "supporting_references": [
+      {
+        "course_code": "S4615",
+        "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+        "pages": [
+          109,
+          110
+        ],
+        "relation": "SEMANTIC_REFERENCE",
+        "topic": "Création de documents de facturation"
+      }
+    ]
+  }
+]

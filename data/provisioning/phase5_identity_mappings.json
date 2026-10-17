@@ -1,0 +1,36 @@
+{
+  "mappings": {
+    "C615-D00": {
+      "evidence": {
+        "company_code": "1010",
+        "company_readback": "EXISTS",
+        "sales_area": "1010/10/00",
+        "sales_area_readback": "EXISTS",
+        "service": "API_BUSINESS_PARTNER"
+      },
+      "logical_id": "C615-D00",
+      "object_type": "BUSINESS_PARTNER",
+      "sap_id": "1000000114",
+      "status": "LIVE_VERIFIED"
+    },
+    "P615-400": {
+      "evidence": {
+        "availability_check": "SP",
+        "base_unit": "PC",
+        "division": "00",
+        "plant": "1710",
+        "plant_readback": "EXISTS",
+        "product_tax": "BE/MWST/1",
+        "root_readback": "EXISTS",
+        "sales_area": "1010/10",
+        "sales_readback": "EXISTS",
+        "service": "API_PRODUCT_SRV"
+      },
+      "logical_id": "P615-400",
+      "object_type": "MATERIAL",
+      "sap_id": "10000287",
+      "status": "LIVE_VERIFIED"
+    }
+  },
+  "version": 1
+}

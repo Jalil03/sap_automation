@@ -1,0 +1,7 @@
+validation:
+  require_provenance: true
+  reject_invented_values: true
+  unresolved_placeholders_allowed: true
+  unresolved_mandatory_placeholder_readiness: BLOCKED
+  lifecycle_statuses: [RAW, EXTRACTED, NORMALIZED, VALIDATED, REJECTED]
+  readiness_statuses: [READY, BLOCKED]

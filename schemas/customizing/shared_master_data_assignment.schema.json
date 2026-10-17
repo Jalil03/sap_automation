@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SHARED_MASTER_DATA_ASSIGNMENT",
+  "allOf": [
+    {
+      "$ref": "../common/canonical_object.schema.json"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "object_type": {
+      "const": "SHARED_MASTER_DATA_ASSIGNMENT"
+    },
+    "classification": {
+      "const": "CUSTOMIZING"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "sales_organization": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_distribution_channel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "target_distribution_channel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_sales_division": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "target_sales_division": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scope": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

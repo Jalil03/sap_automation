@@ -1,0 +1,913 @@
+{
+  "authority": "LOCAL_PHASE2B_MAPPING_CONTRACT_ONLY",
+  "contract_version": "1.3.0",
+  "live_sap_metadata_validated": false,
+  "object_types": {
+    "BILLING": {
+      "canonical_object_count": 30,
+      "disposition_counts": {
+        "INTENTIONALLY_IGNORED": 6,
+        "MAPPED": 13,
+        "RUNTIME_RESOLVED": 2,
+        "UNSUPPORTED": 4
+      },
+      "field_count": 25,
+      "fields": {
+        "accounting_document_type": {
+          "disposition": "INTENTIONALLY_IGNORED",
+          "reason": "Observed FI metadata, not a write input."
+        },
+        "accounting_status": {
+          "disposition": "INTENTIONALLY_IGNORED",
+          "reason": "Observed FI state, not a write input."
+        },
+        "billing_date": {
+          "disposition": "RUNTIME_RESOLVED",
+          "sap_paths": [
+            "BillingDocumentDate"
+          ]
+        },
+        "billing_plan": {
+          "disposition": "UNSUPPORTED",
+          "reason": "No verified local writable billing-plan contract."
+        },
+        "billing_status": {
+          "disposition": "INTENTIONALLY_IGNORED",
+          "reason": "Observed source state, not a write input."
+        },
+        "billing_subtype": {
+          "disposition": "INTENTIONALLY_IGNORED",
+          "reason": "Canonical subtype used for classification, not a local write field."
+        },
+        "billing_type": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "BillingDocumentType"
+          ]
+        },
+        "currency": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "TransactionCurrency"
+          ]
+        },
+        "down_payments": {
+          "disposition": "UNSUPPORTED",
+          "reason": "No verified local writable down-payment contract."
+        },
+        "fi_co_dependencies": {
+          "disposition": "INTENTIONALLY_IGNORED",
+          "reason": "Lineage/dependency evidence, not a write field."
+        },
+        "installment_payments": {
+          "disposition": "UNSUPPORTED",
+          "reason": "No verified local writable installment contract."
+        },
+        "items[].condition_values": {
+          "disposition": "UNSUPPORTED",
+          "reason": "No verified local writable condition-value contract."
+        },
+        "items[].currency": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_Item[].TransactionCurrency"
+          ]
+        },
+        "items[].line_id": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_Item[].BillingDocumentItem"
+          ]
+        },
+        "items[].material": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_Item[].Material"
+          ]
+        },
+        "items[].net_value": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_Item[].NetAmount"
+          ]
+        },
+        "items[].quantity": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_Item[].BillingQuantity"
+          ]
+        },
+        "items[].reference_item": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_Item[].ReferenceSDDocumentItem"
+          ]
+        },
+        "items[].sales_division": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_Item[].Division"
+          ]
+        },
+        "items[].unit": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_Item[].BillingQuantityUnit"
+          ]
+        },
+        "net_value": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "TotalNetAmount"
+          ]
+        },
+        "payer": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "PayerParty"
+          ]
+        },
+        "payment_terms": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "CustomerPaymentTerms"
+          ]
+        },
+        "posting_blocked": {
+          "disposition": "INTENTIONALLY_IGNORED",
+          "reason": "Observed posting state, not a write input."
+        },
+        "reference_document": {
+          "disposition": "RUNTIME_RESOLVED",
+          "sap_paths": [
+            "ReferenceSDDocument"
+          ]
+        }
+      },
+      "interface": "ZAPI_BILLING_DOCUMENT_SRV",
+      "mandatory_paths": [
+        "billing_type"
+      ],
+      "protocol": "ODATA",
+      "runtime_bindings": [
+        {
+          "relation": "BILLED_FROM",
+          "sap_field": "ReferenceSDDocument",
+          "target_type": "OUTBOUND_DELIVERY"
+        },
+        {
+          "relation": "BILLED_FROM",
+          "sap_field": "ReferenceSDDocument",
+          "target_type": "SALES_ORDER"
+        }
+      ]
+    },
+    "BUSINESS_PARTNER": {
+      "canonical_object_count": 3,
+      "disposition_counts": {
+        "INTENTIONALLY_IGNORED": 0,
+        "MAPPED": 15,
+        "RUNTIME_RESOLVED": 0,
+        "UNSUPPORTED": 4
+      },
+      "field_count": 19,
+      "fields": {
+        "account_assignment_group": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "A_CustomerSalesArea.CustomerAccountAssignmentGroup"
+          ]
+        },
+        "addresses": {
+          "disposition": "UNSUPPORTED",
+          "reason": "A sequential A_BusinessPartnerAddress live create contract has not been validated; addresses are not placed in an unverified deep insert."
+        },
+        "company_code": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "A_CustomerCompany.CompanyCode"
+          ]
+        },
+        "currency": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "A_CustomerSalesArea.Currency"
+          ]
+        },
+        "customer_pricing_procedure": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "A_CustomerSalesArea.CustomerPricingProcedure"
+          ]
+        },
+        "delivering_plant": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "A_CustomerSalesArea.SupplyingPlant"
+          ]
+        },
+        "fax_number": {
+          "disposition": "UNSUPPORTED",
+          "reason": "The sequential address/fax live create contract has not been validated."
+        },
+        "grouping": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "A_BusinessPartner.BusinessPartnerGrouping",
+            "A_CustomerCompany.CustomerAccountGroup",
+            "A_CustomerSalesArea.CustomerAccountGroup"
+          ]
+        },
+        "incoterms": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "A_CustomerSalesArea.IncotermsClassification"
+          ]
+        },
+        "incoterms_location": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "A_CustomerSalesArea.IncotermsLocation1"
+          ]
+        },
+        "name": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "A_BusinessPartner.OrganizationBPName1"
+          ]
+        },
+        "partner_functions": {
+          "disposition": "UNSUPPORTED",
+          "reason": "The sequential A_CustSalesPartnerFunc live create contract has not been validated."
+        },
+        "partner_id": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "A_BusinessPartner.BusinessPartner",
+            "A_BusinessPartnerRole.BusinessPartner",
+            "A_CustomerCompany.Customer",
+            "A_CustomerSalesArea.Customer"
+          ]
+        },
+        "payment_terms": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "A_CustomerCompany.PaymentTerms",
+            "A_CustomerSalesArea.CustomerPaymentTerms"
+          ]
+        },
+        "reconciliation_account": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "A_CustomerCompany.ReconciliationAccount"
+          ]
+        },
+        "roles": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "A_BusinessPartnerRole[].BusinessPartnerRole"
+          ]
+        },
+        "sales_areas": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "A_CustomerSalesArea[]"
+          ]
+        },
+        "shipping_conditions": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "A_CustomerSalesArea.ShippingCondition"
+          ]
+        },
+        "tax_classifications": {
+          "disposition": "UNSUPPORTED",
+          "reason": "The sequential A_CustomerSalesAreaTax live create contract has not been validated."
+        }
+      },
+      "interface": "API_BUSINESS_PARTNER",
+      "mandatory_paths": [
+        "partner_id"
+      ],
+      "protocol": "ODATA",
+      "runtime_bindings": []
+    },
+    "MATERIAL": {
+      "canonical_object_count": 4,
+      "disposition_counts": {
+        "INTENTIONALLY_IGNORED": 0,
+        "MAPPED": 15,
+        "RUNTIME_RESOLVED": 0,
+        "UNSUPPORTED": 1
+      },
+      "field_count": 16,
+      "fields": {
+        "availability_check": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "PLANTDATA.AVAILCHECK"
+          ]
+        },
+        "base_unit": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "CLIENTDATA.BASE_UOM"
+          ]
+        },
+        "delivering_plant": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "SALESDATA.DELYG_PLNT"
+          ]
+        },
+        "description": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "MATERIALDESCRIPTION[].MATL_DESC"
+          ]
+        },
+        "distribution_channel": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "SALESDATA.DISTR_CHAN"
+          ]
+        },
+        "industry_sector": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "HEADDATA.IND_SECTOR"
+          ]
+        },
+        "item_category_group": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "SALESDATA.ITEM_CAT"
+          ]
+        },
+        "material_id": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "HEADDATA.MATERIAL"
+          ]
+        },
+        "material_type": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "HEADDATA.MATL_TYPE"
+          ]
+        },
+        "minimum_order_quantity": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "SALESDATA.MIN_ORDER"
+          ]
+        },
+        "minimum_order_unit": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "SALESDATA.MIN_ORDER_UNIT"
+          ]
+        },
+        "plants": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "PLANTDATA.PLANT"
+          ]
+        },
+        "sales_organization": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "SALESDATA.SALES_ORG"
+          ]
+        },
+        "sales_text": {
+          "disposition": "UNSUPPORTED",
+          "reason": "No language-qualified local BAPI long-text contract exists."
+        },
+        "strategy_group": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "PLANTDATA.STRATEGY_GROUP"
+          ]
+        },
+        "tax_classification": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "TAXCLASSIFICATIONS[].TAX_CLASS"
+          ]
+        }
+      },
+      "interface": "BAPI_MATERIAL_SAVEDATA",
+      "mandatory_paths": [
+        "material_id",
+        "industry_sector",
+        "material_type"
+      ],
+      "protocol": "BAPI",
+      "runtime_bindings": []
+    },
+    "OUTBOUND_DELIVERY": {
+      "canonical_object_count": 21,
+      "disposition_counts": {
+        "INTENTIONALLY_IGNORED": 1,
+        "MAPPED": 12,
+        "RUNTIME_RESOLVED": 2,
+        "UNSUPPORTED": 4
+      },
+      "field_count": 19,
+      "fields": {
+        "delivery_type": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "DeliveryDocumentType"
+          ]
+        },
+        "items[].gross_weight": {
+          "disposition": "UNSUPPORTED",
+          "reason": "No Phase 2B target field was established."
+        },
+        "items[].gross_weight_unit": {
+          "disposition": "UNSUPPORTED",
+          "reason": "No Phase 2B target field was established."
+        },
+        "items[].item_category": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_DeliveryDocumentItem[].DeliveryDocumentItemCategory"
+          ]
+        },
+        "items[].line_id": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_DeliveryDocumentItem[].DeliveryDocumentItem"
+          ]
+        },
+        "items[].material": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_DeliveryDocumentItem[].Material"
+          ]
+        },
+        "items[].plant": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_DeliveryDocumentItem[].Plant"
+          ]
+        },
+        "items[].quantity": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_DeliveryDocumentItem[].ActualDeliveryQuantity"
+          ]
+        },
+        "items[].reference_item": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_DeliveryDocumentItem[].ReferenceSDDocumentItem"
+          ]
+        },
+        "items[].storage_location": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_DeliveryDocumentItem[].StorageLocation"
+          ]
+        },
+        "items[].unit": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_DeliveryDocumentItem[].DeliveryQuantityUnit"
+          ]
+        },
+        "items[].warehouse_number": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_DeliveryDocumentItem[].Warehouse"
+          ]
+        },
+        "planned_creation_date": {
+          "disposition": "RUNTIME_RESOLVED",
+          "sap_paths": [
+            "SelectionDate"
+          ]
+        },
+        "planned_goods_issue_date": {
+          "disposition": "RUNTIME_RESOLVED",
+          "sap_paths": [
+            "PlannedGoodsIssueDate"
+          ]
+        },
+        "ship_to_party": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "ShipToParty"
+          ]
+        },
+        "shipping_point": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "ShippingPoint"
+          ]
+        },
+        "storage_location": {
+          "disposition": "UNSUPPORTED",
+          "reason": "Only item-level storage-location mapping is defined."
+        },
+        "system_representations": {
+          "disposition": "INTENTIONALLY_IGNORED",
+          "reason": "Canonical observation metadata, not a write field."
+        },
+        "warehouse_number": {
+          "disposition": "UNSUPPORTED",
+          "reason": "Only item-level warehouse mapping is defined."
+        }
+      },
+      "interface": "ZAPI_OUTBOUND_DELIVERY_SRV",
+      "mandatory_paths": [
+        "shipping_point"
+      ],
+      "protocol": "ODATA",
+      "runtime_bindings": [
+        {
+          "relation": "CREATED_FROM",
+          "sap_field": "ReferenceSDDocument",
+          "target_type": "SALES_ORDER"
+        }
+      ]
+    },
+    "PRICING_CONDITION": {
+      "canonical_object_count": 14,
+      "disposition_counts": {
+        "INTENTIONALLY_IGNORED": 5,
+        "MAPPED": 25,
+        "RUNTIME_RESOLVED": 2,
+        "UNSUPPORTED": 4
+      },
+      "field_count": 36,
+      "fields": {
+        "adjustment_percent": {
+          "disposition": "UNSUPPORTED",
+          "reason": "No verified local target field."
+        },
+        "calculation_semantics": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "ConditionCalculationType"
+          ]
+        },
+        "condition_type": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "ConditionType"
+          ]
+        },
+        "currency": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "ConditionRateValueUnit"
+          ]
+        },
+        "deletion_indicator": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "ConditionIsDeleted"
+          ]
+        },
+        "key_combination.customer": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "Customer"
+          ]
+        },
+        "key_combination.customer_hierarchy_node": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "CustomerHierarchyNode"
+          ]
+        },
+        "key_combination.destination_country": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "DestinationCountry"
+          ]
+        },
+        "key_combination.distribution_channel": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "DistributionChannel"
+          ]
+        },
+        "key_combination.incoterms": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "IncotermsClassification"
+          ]
+        },
+        "key_combination.material": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "Material"
+          ]
+        },
+        "key_combination.promotion_reference": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "Promotion"
+          ]
+        },
+        "key_combination.sales_deal_reference": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "SalesDeal"
+          ]
+        },
+        "key_combination.sales_organization": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "SalesOrganization"
+          ]
+        },
+        "maximum_order_count": {
+          "disposition": "UNSUPPORTED",
+          "reason": "No verified local target field."
+        },
+        "maximum_quantity": {
+          "disposition": "UNSUPPORTED",
+          "reason": "No verified local target field."
+        },
+        "maximum_quantity_unit": {
+          "disposition": "UNSUPPORTED",
+          "reason": "No verified local target field."
+        },
+        "pricing_unit": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "ConditionQuantity"
+          ]
+        },
+        "rate": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "ConditionRateValue"
+          ]
+        },
+        "rate_unit": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "ConditionRateValueUnit"
+          ]
+        },
+        "record_status": {
+          "disposition": "INTENTIONALLY_IGNORED",
+          "reason": "Canonical record state, not a write field."
+        },
+        "scale_basis": {
+          "disposition": "INTENTIONALLY_IGNORED",
+          "reason": "Repeated on individual scale rows when present."
+        },
+        "scales[].amount": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_PricingScale[].ConditionRateValue"
+          ]
+        },
+        "scales[].currency": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_PricingScale[].ConditionRateValueUnit"
+          ]
+        },
+        "scales[].from_quantity": {
+          "disposition": "INTENTIONALLY_IGNORED",
+          "reason": "Normalized alias of scale threshold."
+        },
+        "scales[].pricing_unit": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_PricingScale[].ConditionQuantity"
+          ]
+        },
+        "scales[].quantity_unit": {
+          "disposition": "INTENTIONALLY_IGNORED",
+          "reason": "Normalized alias of threshold unit."
+        },
+        "scales[].rate": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_PricingScale[].ConditionRateValue"
+          ]
+        },
+        "scales[].rate_unit": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_PricingScale[].ConditionRateValueUnit"
+          ]
+        },
+        "scales[].scale_basis": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_PricingScale[].ConditionScaleBasis"
+          ]
+        },
+        "scales[].threshold": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_PricingScale[].ConditionScaleValue"
+          ]
+        },
+        "scales[].threshold_currency": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_PricingScale[].ConditionScaleValueCurrency"
+          ]
+        },
+        "scales[].threshold_unit": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_PricingScale[].ConditionScaleValueUnit"
+          ]
+        },
+        "source_operation": {
+          "disposition": "INTENTIONALLY_IGNORED",
+          "reason": "Mapper operation metadata, not a payload field."
+        },
+        "valid_from": {
+          "disposition": "RUNTIME_RESOLVED",
+          "sap_paths": [
+            "ConditionValidityStartDate"
+          ]
+        },
+        "valid_to": {
+          "disposition": "RUNTIME_RESOLVED",
+          "sap_paths": [
+            "ConditionValidityEndDate"
+          ]
+        }
+      },
+      "interface": "ZSD_PRICING_CONDITIONRECORD_SRV",
+      "mandatory_paths": [
+        "condition_type"
+      ],
+      "protocol": "ODATA",
+      "runtime_bindings": []
+    },
+    "SALES_ORDER": {
+      "canonical_object_count": 57,
+      "disposition_counts": {
+        "INTENTIONALLY_IGNORED": 2,
+        "MAPPED": 14,
+        "RUNTIME_RESOLVED": 1,
+        "UNSUPPORTED": 6
+      },
+      "field_count": 23,
+      "fields": {
+        "completeness_state": {
+          "disposition": "INTENTIONALLY_IGNORED",
+          "reason": "Observed source state, not a write input."
+        },
+        "customer_reference": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "PurchaseOrderByCustomer"
+          ]
+        },
+        "distribution_channel": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "DistributionChannel"
+          ]
+        },
+        "items[].item_category": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_Item[].SalesOrderItemCategory"
+          ]
+        },
+        "items[].line_id": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_Item[].SalesOrderItem"
+          ]
+        },
+        "items[].material": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_Item[].Material"
+          ]
+        },
+        "items[].net_weight": {
+          "disposition": "UNSUPPORTED",
+          "reason": "Live metadata exposes ItemNetWeight, not NetWeight, and marks it sap:creatable=false and sap:updatable=false."
+        },
+        "items[].net_weight_unit": {
+          "disposition": "UNSUPPORTED",
+          "reason": "Live metadata exposes ItemWeightUnit, not WeightUnit, and marks it sap:creatable=false and sap:updatable=false."
+        },
+        "items[].plant": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_Item[].ProductionPlant"
+          ]
+        },
+        "items[].quantity": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_Item[].RequestedQuantity"
+          ]
+        },
+        "items[].route": {
+          "disposition": "UNSUPPORTED",
+          "reason": "Route is absent from the live A_SalesOrderItemType metadata."
+        },
+        "items[].ship_to_party": {
+          "disposition": "UNSUPPORTED",
+          "reason": "Live metadata has no item ShipToParty property. A to_Partner navigation exists, but partner-function semantics and deep-insert write behavior are not verified by metadata."
+        },
+        "items[].shipping_point": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_Item[].ShippingPoint"
+          ]
+        },
+        "items[].unit": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "to_Item[].RequestedQuantityUnit"
+          ]
+        },
+        "order_type": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "SalesOrderType"
+          ]
+        },
+        "payment_terms": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "CustomerPaymentTerms"
+          ]
+        },
+        "pricing_elements": {
+          "disposition": "UNSUPPORTED",
+          "reason": "No verified local writable pricing-element field contract."
+        },
+        "processing_status": {
+          "disposition": "INTENTIONALLY_IGNORED",
+          "reason": "Observed source state, not a write input."
+        },
+        "requested_delivery_date": {
+          "disposition": "RUNTIME_RESOLVED",
+          "sap_paths": [
+            "RequestedDeliveryDate"
+          ]
+        },
+        "sales_division": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "OrganizationDivision"
+          ]
+        },
+        "sales_organization": {
+          "disposition": "MAPPED",
+          "sap_paths": [
+            "SalesOrganization"
+          ]
+        },
+        "ship_to_party": {
+          "disposition": "UNSUPPORTED",
+          "reason": "Live metadata has no header ShipToParty property. A to_Partner navigation exists, but partner-function semantics and deep-insert write behavior are not verified by metadata."
+        },
+        "sold_to_party": {
+          "disposition": "MAPPED",
+          "internal_code_evidence": "AG",
+          "partner_function": "DO",
+          "sap_paths": [
+            "SoldToParty",
+            "to_Partner[].Customer"
+          ],
+          "semantic": "SOLD_TO_PARTY"
+        }
+      },
+      "interface": "API_SALES_ORDER_SRV",
+      "mandatory_paths": [
+        "order_type",
+        "sales_organization",
+        "distribution_channel",
+        "sales_division",
+        "sold_to_party",
+        "items"
+      ],
+      "protocol": "ODATA",
+      "runtime_bindings": []
+    }
+  },
+  "totals": {
+    "canonical_object_count": 129,
+    "disposition_counts": {
+      "INTENTIONALLY_IGNORED": 14,
+      "MAPPED": 94,
+      "RUNTIME_RESOLVED": 7,
+      "UNSUPPORTED": 23
+    },
+    "field_count": 138
+  }
+}

@@ -1,0 +1,4942 @@
+{
+  "objects": [
+    {
+      "blocking_reasons": [],
+      "classification": "REFERENCE_DATA",
+      "data": {
+        "code": "1010",
+        "description": null
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_SHARED_COMPANY_CODE_1010",
+      "object_type": "COMPANY_CODE",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4615",
+          "exercise": 2,
+          "page": 29,
+          "raw_excerpt": "1010",
+          "scenario_id": "S4615_CH2_EX2",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Société affectée à l'organisation commerciale 1010"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4615",
+          "exercise": 2,
+          "page": 30,
+          "raw_excerpt": "1010",
+          "scenario_id": "S4615_CH2_EX2",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Société affectée à l'organisation commerciale 1010"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4615_CH2_EX2",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "assignment_number_rule": "E",
+        "billing_quantity_rule": null,
+        "data_transfer_routine": "3",
+        "level": "HEADER_AND_ITEM",
+        "positive_negative_quantity": null,
+        "pricing_type": "H",
+        "reference_number_rule": "B",
+        "requirements": [
+          "billing from delivery",
+          "re-determine freight",
+          "one billing document per delivery",
+          "FI reference transfer"
+        ],
+        "source_document_type": "LF",
+        "source_item_category": "TAN",
+        "target_document_type": "ZF##"
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING",
+      "object_type": "COPY_CONTROL",
+      "placeholders": [
+        {
+          "field_path": "data.target_document_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 3,
+          "course_code": "S4615",
+          "exercise": 3,
+          "page": 41,
+          "raw_excerpt": "ZA## utilise ZF## pour la facturation liée à la commande ou à la livraison",
+          "scenario_id": "S4615_CH3_EX3",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture par défaut pour commande/livraison Foire"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4615",
+          "exercise": 3,
+          "page": 43,
+          "raw_excerpt": "ZA## utilise ZF## pour la facturation liée à la commande ou à la livraison",
+          "scenario_id": "S4615_CH3_EX3",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture par défaut pour commande/livraison Foire"
+        },
+        {
+          "chapter": 5,
+          "course_code": "S4615",
+          "exercise": 6,
+          "page": 103,
+          "raw_excerpt": "cible ZF##; source LF; poste TAN; détermination du prix H",
+          "scenario_id": "S4615_CH5_EX6",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Pilotage copie livraison vers facture"
+        },
+        {
+          "chapter": 7,
+          "course_code": "S4615",
+          "exercise": 9,
+          "page": 148,
+          "raw_excerpt": "cible ZF##; source LF; poste TAN; routine 3 Facture individuelle",
+          "scenario_id": "S4615_CH7_EX9",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Données VBRK/VBRP"
+        },
+        {
+          "chapter": 10,
+          "course_code": "S4615",
+          "exercise": 13,
+          "page": 241,
+          "raw_excerpt": "référence B (commande client); affectation E (facture actuelle)",
+          "scenario_id": "S4615_CH10_EX13",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Numéro de référence / numéro d'affectation"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH3_EX3",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable canonical identifier"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "POSTED_TO_FI",
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_status": "CREATED",
+        "billing_subtype": "STANDARD",
+        "billing_type": null,
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "POSTED_TO_FI",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [],
+        "items": [
+          {
+            "condition_values": [
+              {
+                "amount": 1400,
+                "condition_type": "PR00",
+                "currency": "EUR"
+              }
+            ],
+            "currency": "EUR",
+            "line_id": "10",
+            "material": null,
+            "net_value": 1400,
+            "quantity": null,
+            "reference_item": null,
+            "sales_division": "03",
+            "unit": null
+          }
+        ],
+        "net_value": null,
+        "payer": "C615-A##",
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "livraison ayant servi de modèle au document de facturation",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "OUTBOUND_DELIVERY"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH1_EX1_BILLING_IMPORTED_A3",
+      "object_type": "BILLING",
+      "placeholders": [
+        {
+          "field_path": "data.payer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4615",
+          "exercise": 1,
+          "page": 13,
+          "raw_excerpt": "##S4615-A3; facture importée; livraison non notée; PR00 1 400 EUR; secteur 03",
+          "scenario_id": "S4615_CH1_EX1",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Commande d'achat / facture / modèle document / PR00 / secteur d'activité"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4615",
+          "exercise": 1,
+          "page": 16,
+          "raw_excerpt": "pièce comptable créée; FI liquidé; PR00 1 400 EUR; secteur 03",
+          "scenario_id": "S4615_CH1_EX1",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Commande d'achat / facture / modèle document / PR00 / secteur d'activité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH1_EX1",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable canonical identifier"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "POSTED_TO_FI",
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_status": "CREATED",
+        "billing_subtype": "STANDARD",
+        "billing_type": "F2",
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "POSTED_TO_FI",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [],
+        "items": [],
+        "net_value": null,
+        "payer": null,
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "livraison de la commande d'achat ##S4615-A1",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "OUTBOUND_DELIVERY"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH3_EX3_BILLING_F2_FROM_IMPORTED_DELIVERY",
+      "object_type": "BILLING",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 3,
+          "course_code": "S4615",
+          "exercise": 3,
+          "page": 41,
+          "raw_excerpt": "F2; livraison de la commande d'achat ##S4615-A1",
+          "scenario_id": "S4615_CH3_EX3",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4615",
+          "exercise": 3,
+          "page": 43,
+          "raw_excerpt": "F2; livraison de la commande d'achat ##S4615-A1",
+          "scenario_id": "S4615_CH3_EX3",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH3_EX3",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "S4615-ZF##",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P615-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 5,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "ZA##",
+        "payment_terms": null,
+        "processing_status": null,
+        "requested_delivery_date": null,
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C615-A##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C615-A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P615-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH3_EX3_SALES_ORDER_FAIR",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.order_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 3,
+          "course_code": "S4615",
+          "exercise": 3,
+          "page": 41,
+          "raw_excerpt": "ZA##; 1010/10/00; C615-A##; S4615-ZF##; P615-1##; 5 PC",
+          "scenario_id": "S4615_CH3_EX3",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4615",
+          "exercise": 3,
+          "page": 43,
+          "raw_excerpt": "ZA##; 1010/10/00; C615-A##; S4615-ZF##; P615-1##; 5 PC",
+          "scenario_id": "S4615_CH3_EX3",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH3_EX3",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_type": "OUTBOUND",
+        "items": [
+          {
+            "gross_weight": null,
+            "gross_weight_unit": null,
+            "item_category": null,
+            "line_id": "10",
+            "material": "P615-1##",
+            "plant": null,
+            "quantity": 5,
+            "reference_item": "10",
+            "storage_location": null,
+            "unit": "PC",
+            "warehouse_number": null
+          }
+        ],
+        "planned_creation_date": {
+          "kind": "RELATIVE",
+          "offset": "P10D",
+          "raw": "date du jour + 10 jours"
+        },
+        "planned_goods_issue_date": null,
+        "ship_to_party": null,
+        "shipping_point": "1010",
+        "storage_location": null,
+        "system_representations": [],
+        "warehouse_number": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "CREATED_FROM",
+          "source_phrase": "commande client précédente",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH3_EX3_SALES_ORDER_FAIR",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH3_EX3_OUTBOUND_DELIVERY_FAIR",
+      "object_type": "OUTBOUND_DELIVERY",
+      "placeholders": [
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 3,
+          "course_code": "S4615",
+          "exercise": 3,
+          "page": 41,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 5 PC",
+          "scenario_id": "S4615_CH3_EX3",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4615",
+          "exercise": 3,
+          "page": 43,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 5 PC",
+          "scenario_id": "S4615_CH3_EX3",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH3_EX3",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "POSTED_TO_FI",
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_status": "CREATED",
+        "billing_subtype": "STANDARD",
+        "billing_type": "ZF##",
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "POSTED_TO_FI",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [],
+        "items": [
+          {
+            "condition_values": [],
+            "currency": null,
+            "line_id": "10",
+            "material": "P615-1##",
+            "net_value": null,
+            "quantity": 5,
+            "reference_item": "10",
+            "sales_division": "00",
+            "unit": "PC"
+          }
+        ],
+        "net_value": null,
+        "payer": "C615-A##",
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "livraison de la commande Foire ##",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH3_EX3_OUTBOUND_DELIVERY_FAIR",
+          "target_type": "OUTBOUND_DELIVERY"
+        },
+        {
+          "critical": true,
+          "relation": "CONTROLLED_BY",
+          "source_phrase": "type par défaut ZF## pour ZA##",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING",
+          "target_type": "COPY_CONTROL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH3_EX3_BILLING_FAIR",
+      "object_type": "BILLING",
+      "placeholders": [
+        {
+          "field_path": "data.billing_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.payer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 3,
+          "course_code": "S4615",
+          "exercise": 3,
+          "page": 41,
+          "raw_excerpt": "ZF##; livraison de la commande Foire ##",
+          "scenario_id": "S4615_CH3_EX3",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4615",
+          "exercise": 3,
+          "page": 43,
+          "raw_excerpt": "ZF##; livraison de la commande Foire ##",
+          "scenario_id": "S4615_CH3_EX3",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH3_EX3",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable canonical identifier"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "POSTED_TO_FI",
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_status": "PRE_EXISTING",
+        "billing_subtype": "STANDARD",
+        "billing_type": "F2",
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "POSTED_TO_FI",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [],
+        "items": [],
+        "net_value": null,
+        "payer": "C615-A##",
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "commande portant la référence ##S4615-A4",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH4_EX4_BILLING_ORIGINAL_F2",
+      "object_type": "BILLING",
+      "placeholders": [
+        {
+          "field_path": "data.payer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4615",
+          "exercise": 4,
+          "page": 61,
+          "raw_excerpt": "F2; commande portant la référence ##S4615-A4",
+          "scenario_id": "S4615_CH4_EX4",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4615",
+          "exercise": 4,
+          "page": 63,
+          "raw_excerpt": "F2; commande portant la référence ##S4615-A4",
+          "scenario_id": "S4615_CH4_EX4",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH4_EX4",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "assignment_number_rule": null,
+        "billing_quantity_rule": null,
+        "data_transfer_routine": null,
+        "level": "ITEM",
+        "positive_negative_quantity": "opposite signs",
+        "pricing_type": null,
+        "reference_number_rule": null,
+        "requirements": [
+          "create paired credit and debit items"
+        ],
+        "source_document_type": "F2",
+        "source_item_category": "TAN",
+        "target_document_type": "RK"
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH4_EX4_COPY_CONTROL_F2_TO_RK",
+      "object_type": "COPY_CONTROL",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4615",
+          "exercise": 4,
+          "page": 61,
+          "raw_excerpt": "source F2; cible RK; poste TAN; propositions débit/crédit et détermination du prix",
+          "scenario_id": "S4615_CH4_EX4",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Pilotage copie facture vers document de vente"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4615",
+          "exercise": 4,
+          "page": 63,
+          "raw_excerpt": "source F2; cible RK; poste TAN; propositions débit/crédit et détermination du prix",
+          "scenario_id": "S4615_CH4_EX4",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Pilotage copie facture vers document de vente"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4615_CH4_EX4",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable canonical identifier"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "POSTED_TO_FI",
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_status": "CREATED",
+        "billing_subtype": "CREDIT_MEMO",
+        "billing_type": null,
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "POSTED_TO_FI",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [],
+        "items": [
+          {
+            "condition_values": [
+              {
+                "adjustment": -100,
+                "condition_type": "PR00",
+                "currency": "EUR",
+                "per_unit": true
+              }
+            ],
+            "currency": "EUR",
+            "line_id": "40",
+            "material": null,
+            "net_value": 1000,
+            "quantity": null,
+            "reference_item": "10",
+            "sales_division": null,
+            "unit": null
+          }
+        ],
+        "net_value": null,
+        "payer": "C615-A##",
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "demande de correction de facture créée depuis la facture F2",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "CREDIT_MEMO_REQUEST"
+        },
+        {
+          "critical": true,
+          "relation": "CORRECTS",
+          "source_phrase": "facture F2 de référence",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH4_EX4_BILLING_ORIGINAL_F2",
+          "target_type": "BILLING"
+        },
+        {
+          "critical": true,
+          "relation": "CONTROLLED_BY",
+          "source_phrase": "F2 vers RK",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH4_EX4_COPY_CONTROL_F2_TO_RK",
+          "target_type": "COPY_CONTROL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH4_EX4_BILLING_CREDIT_MEMO",
+      "object_type": "BILLING",
+      "placeholders": [
+        {
+          "field_path": "data.payer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4615",
+          "exercise": 4,
+          "page": 61,
+          "raw_excerpt": "type non indiqué; demande de correction de facture créée depuis la facture F2",
+          "scenario_id": "S4615_CH4_EX4",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4615",
+          "exercise": 4,
+          "page": 63,
+          "raw_excerpt": "type non indiqué; demande de correction de facture créée depuis la facture F2",
+          "scenario_id": "S4615_CH4_EX4",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH4_EX4",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##S4615-BV",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P615-4##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 1,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "BV",
+        "payment_terms": null,
+        "processing_status": null,
+        "requested_delivery_date": null,
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C615-D##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C615-D##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P615-4##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4615",
+          "exercise": 5,
+          "page": 73,
+          "raw_excerpt": "BV; 1010/10/00; C615-D##; ##S4615-BV; P615-4##; 1 PC",
+          "scenario_id": "S4615_CH4_EX5",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4615",
+          "exercise": 5,
+          "page": 75,
+          "raw_excerpt": "BV; 1010/10/00; C615-D##; ##S4615-BV; P615-4##; 1 PC",
+          "scenario_id": "S4615_CH4_EX5",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH4_EX5",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_type": "OUTBOUND",
+        "items": [
+          {
+            "gross_weight": null,
+            "gross_weight_unit": null,
+            "item_category": null,
+            "line_id": "10",
+            "material": "P615-4##",
+            "plant": null,
+            "quantity": 1,
+            "reference_item": "10",
+            "storage_location": null,
+            "unit": "PC",
+            "warehouse_number": null
+          }
+        ],
+        "planned_creation_date": {
+          "kind": "RELATIVE",
+          "offset": "P10D",
+          "raw": "date du jour + 10 jours"
+        },
+        "planned_goods_issue_date": null,
+        "ship_to_party": null,
+        "shipping_point": "1010",
+        "storage_location": null,
+        "system_representations": [],
+        "warehouse_number": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "CREATED_FROM",
+          "source_phrase": "commande client précédente",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH4_EX5_OUTBOUND_DELIVERY_CASH_SALE",
+      "object_type": "OUTBOUND_DELIVERY",
+      "placeholders": [
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4615",
+          "exercise": 5,
+          "page": 73,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 1 PC",
+          "scenario_id": "S4615_CH4_EX5",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4615",
+          "exercise": 5,
+          "page": 75,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 1 PC",
+          "scenario_id": "S4615_CH4_EX5",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH4_EX5",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "POSTED_TO_CASH_REVENUE_TAX",
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_status": "CREATED",
+        "billing_subtype": "CASH_SALE",
+        "billing_type": "BV",
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "POSTED_TO_CASH_REVENUE_TAX",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [],
+        "items": [
+          {
+            "condition_values": [],
+            "currency": null,
+            "line_id": "10",
+            "material": "P615-4##",
+            "net_value": null,
+            "quantity": 1,
+            "reference_item": "10",
+            "sales_division": "00",
+            "unit": "PC"
+          }
+        ],
+        "net_value": null,
+        "payer": "C615-D##",
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "vente au comptant BV",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+          "target_type": "SALES_ORDER"
+        },
+        {
+          "critical": true,
+          "relation": "DELIVERED_VIA",
+          "source_phrase": "livraison créée avec la commande",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH4_EX5_OUTBOUND_DELIVERY_CASH_SALE",
+          "target_type": "OUTBOUND_DELIVERY"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH4_EX5_BILLING_CASH_SALE",
+      "object_type": "BILLING",
+      "placeholders": [
+        {
+          "field_path": "data.payer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4615",
+          "exercise": 5,
+          "page": 73,
+          "raw_excerpt": "BV; vente au comptant BV",
+          "scenario_id": "S4615_CH4_EX5",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4615",
+          "exercise": 5,
+          "page": 75,
+          "raw_excerpt": "BV; vente au comptant BV",
+          "scenario_id": "S4615_CH4_EX5",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH4_EX5",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##S4615-PF",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P615-2##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 5,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDLC",
+        "payment_terms": null,
+        "processing_status": null,
+        "requested_delivery_date": null,
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C615-A##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C615-A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P615-2##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH4_EX5_SALES_ORDER_PRO_FORMA",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4615",
+          "exercise": 5,
+          "page": 73,
+          "raw_excerpt": "CDLC; 1010/10/00; C615-A##; ##S4615-PF; P615-2##; 5 PC",
+          "scenario_id": "S4615_CH4_EX5",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4615",
+          "exercise": 5,
+          "page": 75,
+          "raw_excerpt": "CDLC; 1010/10/00; C615-A##; ##S4615-PF; P615-2##; 5 PC",
+          "scenario_id": "S4615_CH4_EX5",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH4_EX5",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "NOT_APPLICABLE_PRO_FORMA",
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_status": "CREATED",
+        "billing_subtype": "PRO_FORMA_INVOICE",
+        "billing_type": "F5",
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "NOT_APPLICABLE_PRO_FORMA",
+            "system": "FI"
+          }
+        ],
+        "installment_payments": [],
+        "items": [
+          {
+            "condition_values": [],
+            "currency": null,
+            "line_id": "10",
+            "material": "P615-2##",
+            "net_value": null,
+            "quantity": 5,
+            "reference_item": "10",
+            "sales_division": "00",
+            "unit": "PC"
+          }
+        ],
+        "net_value": null,
+        "payer": "C615-A##",
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "commande avant livraison",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH4_EX5_SALES_ORDER_PRO_FORMA",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH4_EX5_BILLING_PRO_FORMA",
+      "object_type": "BILLING",
+      "placeholders": [
+        {
+          "field_path": "data.payer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4615",
+          "exercise": 5,
+          "page": 73,
+          "raw_excerpt": "F5; commande avant livraison",
+          "scenario_id": "S4615_CH4_EX5",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4615",
+          "exercise": 5,
+          "page": 75,
+          "raw_excerpt": "F5; commande avant livraison",
+          "scenario_id": "S4615_CH4_EX5",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH4_EX5",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable canonical identifier"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "POSTED_TO_FI",
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_status": "CREATED",
+        "billing_subtype": "STANDARD",
+        "billing_type": "F1",
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "POSTED_TO_FI",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [],
+        "items": [
+          {
+            "condition_values": [
+              {
+                "amount": 1700,
+                "condition_type": "PR00",
+                "currency": "EUR"
+              }
+            ],
+            "currency": "EUR",
+            "line_id": "10",
+            "material": "P615-1##",
+            "net_value": 1700,
+            "quantity": null,
+            "reference_item": null,
+            "sales_division": null,
+            "unit": null
+          }
+        ],
+        "net_value": null,
+        "payer": null,
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "livraison de la commande d'achat ##S4615-A5",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "OUTBOUND_DELIVERY"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH5_EX6_BILLING_F1_OVERRIDE",
+      "object_type": "BILLING",
+      "placeholders": [
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 5,
+          "course_code": "S4615",
+          "exercise": 6,
+          "page": 97,
+          "raw_excerpt": "F1; livraison de la commande d'achat ##S4615-A5",
+          "scenario_id": "S4615_CH5_EX6",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "chapter": 5,
+          "course_code": "S4615",
+          "exercise": 6,
+          "page": 100,
+          "raw_excerpt": "F1; livraison de la commande d'achat ##S4615-A5",
+          "scenario_id": "S4615_CH5_EX6",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH5_EX6",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##fret",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P615-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 1,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "ZA##",
+        "payment_terms": null,
+        "processing_status": null,
+        "requested_delivery_date": null,
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C615-D##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C615-D##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P615-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH5_EX6_SALES_ORDER_FAIR_FREIGHT",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.order_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 5,
+          "course_code": "S4615",
+          "exercise": 6,
+          "page": 97,
+          "raw_excerpt": "ZA##; 1010/10/00; C615-D##; ##fret; P615-1##; 1 PC",
+          "scenario_id": "S4615_CH5_EX6",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 5,
+          "course_code": "S4615",
+          "exercise": 6,
+          "page": 100,
+          "raw_excerpt": "ZA##; 1010/10/00; C615-D##; ##fret; P615-1##; 1 PC",
+          "scenario_id": "S4615_CH5_EX6",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH5_EX6",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_type": "OUTBOUND",
+        "items": [
+          {
+            "gross_weight": null,
+            "gross_weight_unit": null,
+            "item_category": null,
+            "line_id": "10",
+            "material": "P615-1##",
+            "plant": null,
+            "quantity": 1,
+            "reference_item": "10",
+            "storage_location": null,
+            "unit": "PC",
+            "warehouse_number": null
+          }
+        ],
+        "planned_creation_date": {
+          "kind": "RELATIVE",
+          "offset": "P10D",
+          "raw": "date du jour + 10 jours"
+        },
+        "planned_goods_issue_date": null,
+        "ship_to_party": null,
+        "shipping_point": "1010",
+        "storage_location": null,
+        "system_representations": [],
+        "warehouse_number": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "CREATED_FROM",
+          "source_phrase": "commande client précédente",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH5_EX6_SALES_ORDER_FAIR_FREIGHT",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH5_EX6_OUTBOUND_DELIVERY_FAIR_FREIGHT",
+      "object_type": "OUTBOUND_DELIVERY",
+      "placeholders": [
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 5,
+          "course_code": "S4615",
+          "exercise": 6,
+          "page": 97,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 1 PC",
+          "scenario_id": "S4615_CH5_EX6",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        },
+        {
+          "chapter": 5,
+          "course_code": "S4615",
+          "exercise": 6,
+          "page": 100,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 1 PC",
+          "scenario_id": "S4615_CH5_EX6",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH5_EX6",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "POSTED_TO_FI",
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_status": "CREATED",
+        "billing_subtype": "STANDARD",
+        "billing_type": "ZF##",
+        "currency": "EUR",
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "POSTED_TO_FI",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [],
+        "items": [
+          {
+            "condition_values": [
+              {
+                "condition_type": "KF00",
+                "currency": "EUR",
+                "per": 1,
+                "rate": 10,
+                "unit": "KG"
+              }
+            ],
+            "currency": "EUR",
+            "line_id": "10",
+            "material": "P615-1##",
+            "net_value": 1900,
+            "quantity": 1,
+            "reference_item": "10",
+            "sales_division": "00",
+            "unit": "PC"
+          }
+        ],
+        "net_value": 1900,
+        "payer": "C615-D##",
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "livraison Foire avec frais de transport",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH5_EX6_OUTBOUND_DELIVERY_FAIR_FREIGHT",
+          "target_type": "OUTBOUND_DELIVERY"
+        },
+        {
+          "critical": true,
+          "relation": "CONTROLLED_BY",
+          "source_phrase": "ZF## / LF / TAN / type de prix H",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING",
+          "target_type": "COPY_CONTROL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH5_EX6_BILLING_FAIR_FREIGHT",
+      "object_type": "BILLING",
+      "placeholders": [
+        {
+          "field_path": "data.billing_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.payer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 5,
+          "course_code": "S4615",
+          "exercise": 6,
+          "page": 97,
+          "raw_excerpt": "ZF##; livraison Foire avec frais de transport",
+          "scenario_id": "S4615_CH5_EX6",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "chapter": 5,
+          "course_code": "S4615",
+          "exercise": 6,
+          "page": 100,
+          "raw_excerpt": "ZF##; livraison Foire avec frais de transport",
+          "scenario_id": "S4615_CH5_EX6",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH5_EX6",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-mois",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P615-2##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 2,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDLC",
+        "payment_terms": null,
+        "processing_status": null,
+        "requested_delivery_date": null,
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C615-B##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C615-B##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P615-2##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH6_EX7_SALES_ORDER_MONTH_END",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 6,
+          "course_code": "S4615",
+          "exercise": 7,
+          "page": 119,
+          "raw_excerpt": "CDLC; 1010/10/00; C615-B##; ##-mois; P615-2##; 2 PC",
+          "scenario_id": "S4615_CH6_EX7",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 6,
+          "course_code": "S4615",
+          "exercise": 7,
+          "page": 123,
+          "raw_excerpt": "CDLC; 1010/10/00; C615-B##; ##-mois; P615-2##; 2 PC",
+          "scenario_id": "S4615_CH6_EX7",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH6_EX7",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_type": "OUTBOUND",
+        "items": [
+          {
+            "gross_weight": null,
+            "gross_weight_unit": null,
+            "item_category": null,
+            "line_id": "10",
+            "material": "P615-2##",
+            "plant": null,
+            "quantity": 2,
+            "reference_item": "10",
+            "storage_location": null,
+            "unit": "PC",
+            "warehouse_number": null
+          }
+        ],
+        "planned_creation_date": {
+          "kind": "RELATIVE",
+          "offset": "P10D",
+          "raw": "date du jour + 10 jours"
+        },
+        "planned_goods_issue_date": null,
+        "ship_to_party": null,
+        "shipping_point": "1010",
+        "storage_location": null,
+        "system_representations": [],
+        "warehouse_number": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "CREATED_FROM",
+          "source_phrase": "commande client précédente",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH6_EX7_SALES_ORDER_MONTH_END",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH6_EX7_OUTBOUND_DELIVERY_MONTH_END",
+      "object_type": "OUTBOUND_DELIVERY",
+      "placeholders": [
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 6,
+          "course_code": "S4615",
+          "exercise": 7,
+          "page": 119,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 2 PC",
+          "scenario_id": "S4615_CH6_EX7",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        },
+        {
+          "chapter": 6,
+          "course_code": "S4615",
+          "exercise": 7,
+          "page": 123,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 2 PC",
+          "scenario_id": "S4615_CH6_EX7",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH6_EX7",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "POSTED_TO_FI",
+        "billing_date": {
+          "kind": "RELATIVE",
+          "offset": "MONTH_END",
+          "raw": "fin du mois"
+        },
+        "billing_plan": null,
+        "billing_status": "CREATED",
+        "billing_subtype": "STANDARD",
+        "billing_type": null,
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "POSTED_TO_FI",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [],
+        "items": [],
+        "net_value": null,
+        "payer": "C615-B##",
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "livraison facturée à la fin du mois",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH6_EX7_OUTBOUND_DELIVERY_MONTH_END",
+          "target_type": "OUTBOUND_DELIVERY"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH6_EX7_BILLING_MONTH_END",
+      "object_type": "BILLING",
+      "placeholders": [
+        {
+          "field_path": "data.payer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 6,
+          "course_code": "S4615",
+          "exercise": 7,
+          "page": 119,
+          "raw_excerpt": "type non indiqué; livraison facturée à la fin du mois",
+          "scenario_id": "S4615_CH6_EX7",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "chapter": 6,
+          "course_code": "S4615",
+          "exercise": 7,
+          "page": 123,
+          "raw_excerpt": "type non indiqué; livraison facturée à la fin du mois",
+          "scenario_id": "S4615_CH6_EX7",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH6_EX7",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-app-1",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P-Service",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 8,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDLC",
+        "payment_terms": null,
+        "processing_status": null,
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C615-A##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C615-A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P-Service",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH6_EX7_SALES_ORDER_FIORI_APP_FINAL",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 6,
+          "course_code": "S4615",
+          "exercise": 7,
+          "page": 121,
+          "raw_excerpt": "CDLC; ##-app-1; dans une semaine; P-Service; quantité initiale 10 puis 8",
+          "scenario_id": "S4615_CH6_EX7",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Commande CDLC / référence / date / article / quantité"
+        },
+        {
+          "chapter": 6,
+          "course_code": "S4615",
+          "exercise": 7,
+          "page": 127,
+          "raw_excerpt": "CDLC; ##-app-1; dans une semaine; P-Service; quantité initiale 10 puis 8",
+          "scenario_id": "S4615_CH6_EX7",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Commande CDLC / référence / date / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH6_EX7",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "NO_ACCOUNTING_ENTRY",
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_status": "CANCELLED",
+        "billing_subtype": "STANDARD",
+        "billing_type": null,
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "NO_ACCOUNTING_ENTRY",
+            "system": "FI"
+          }
+        ],
+        "installment_payments": [],
+        "items": [
+          {
+            "condition_values": [],
+            "currency": null,
+            "line_id": "10",
+            "material": "P-Service",
+            "net_value": null,
+            "quantity": 10,
+            "reference_item": "10",
+            "sales_division": "00",
+            "unit": null
+          }
+        ],
+        "net_value": null,
+        "payer": "C615-A##",
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "commande ##-app-1 avant réduction de quantité",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH6_EX7_SALES_ORDER_FIORI_APP_FINAL",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH6_EX7_BILLING_FIORI_APP_CANCELLED",
+      "object_type": "BILLING",
+      "placeholders": [
+        {
+          "field_path": "data.payer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 6,
+          "course_code": "S4615",
+          "exercise": 7,
+          "page": 121,
+          "raw_excerpt": "facture sauvegardée, À enregistrer, aucune écriture, puis annulée",
+          "scenario_id": "S4615_CH6_EX7",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Facture Fiori / statut / écriture comptable"
+        },
+        {
+          "chapter": 6,
+          "course_code": "S4615",
+          "exercise": 7,
+          "page": 128,
+          "raw_excerpt": "facture sauvegardée, À enregistrer, aucune écriture, puis annulée",
+          "scenario_id": "S4615_CH6_EX7",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Facture Fiori / statut / écriture comptable"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH6_EX7",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "POSTED_TO_FI_UNCLEARED",
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_status": "POSTED",
+        "billing_subtype": "STANDARD",
+        "billing_type": null,
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "POSTED_TO_FI_UNCLEARED",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [],
+        "items": [
+          {
+            "condition_values": [],
+            "currency": null,
+            "line_id": "10",
+            "material": "P-Service",
+            "net_value": null,
+            "quantity": 8,
+            "reference_item": "10",
+            "sales_division": "00",
+            "unit": null
+          }
+        ],
+        "net_value": null,
+        "payer": "C615-A##",
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "commande ##-app-1 modifiée à 8",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH6_EX7_SALES_ORDER_FIORI_APP_FINAL",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH6_EX7_BILLING_FIORI_APP_POSTED",
+      "object_type": "BILLING",
+      "placeholders": [
+        {
+          "field_path": "data.payer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 6,
+          "course_code": "S4615",
+          "exercise": 7,
+          "page": 122,
+          "raw_excerpt": "quantité 8; facture sauvegardée puis enregistrée; écriture Non rapprochée",
+          "scenario_id": "S4615_CH6_EX7",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Nouvelle facture / quantité / écriture comptable"
+        },
+        {
+          "chapter": 6,
+          "course_code": "S4615",
+          "exercise": 7,
+          "page": 129,
+          "raw_excerpt": "quantité 8; facture sauvegardée puis enregistrée; écriture Non rapprochée",
+          "scenario_id": "S4615_CH6_EX7",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Nouvelle facture / quantité / écriture comptable"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH6_EX7",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable canonical identifier"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "POSTED_TO_FI",
+        "billing_date": {
+          "kind": "RELATIVE",
+          "offset": "MONTH_START",
+          "raw": "premier jour du mois"
+        },
+        "billing_plan": null,
+        "billing_status": "CREATED",
+        "billing_subtype": "STANDARD",
+        "billing_type": "F1",
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "POSTED_TO_FI",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [],
+        "items": [],
+        "net_value": null,
+        "payer": "C615-C##",
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "première livraison de l'échéancier",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "OUTBOUND_DELIVERY"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH7_EX9_BILLING_SPLIT_1",
+      "object_type": "BILLING",
+      "placeholders": [
+        {
+          "field_path": "data.payer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 7,
+          "course_code": "S4615",
+          "exercise": 9,
+          "page": 145,
+          "raw_excerpt": "F1; première livraison de l'échéancier",
+          "scenario_id": "S4615_CH7_EX9",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "chapter": 7,
+          "course_code": "S4615",
+          "exercise": 9,
+          "page": 147,
+          "raw_excerpt": "F1; première livraison de l'échéancier",
+          "scenario_id": "S4615_CH7_EX9",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH7_EX9",
+      "validation": {
+        "confidence": "LOW",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable canonical identifier"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "POSTED_TO_FI",
+        "billing_date": {
+          "kind": "RELATIVE",
+          "offset": "MONTH_START",
+          "raw": "premier jour du mois"
+        },
+        "billing_plan": null,
+        "billing_status": "CREATED",
+        "billing_subtype": "STANDARD",
+        "billing_type": "F1",
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "POSTED_TO_FI",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [],
+        "items": [],
+        "net_value": null,
+        "payer": "C615-C##",
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "livraison liée à la commande ##S4615-A10",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "OUTBOUND_DELIVERY"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH7_EX9_BILLING_SPLIT_2",
+      "object_type": "BILLING",
+      "placeholders": [
+        {
+          "field_path": "data.payer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 7,
+          "course_code": "S4615",
+          "exercise": 9,
+          "page": 145,
+          "raw_excerpt": "F1; livraison liée à la commande ##S4615-A10",
+          "scenario_id": "S4615_CH7_EX9",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "chapter": 7,
+          "course_code": "S4615",
+          "exercise": 9,
+          "page": 147,
+          "raw_excerpt": "F1; livraison liée à la commande ##S4615-A10",
+          "scenario_id": "S4615_CH7_EX9",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH7_EX9",
+      "validation": {
+        "confidence": "LOW",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable canonical identifier"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "POSTED_TO_FI_DUNNING_BLOCK",
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_status": "CREATED",
+        "billing_subtype": "STANDARD",
+        "billing_type": null,
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "POSTED_TO_FI_DUNNING_BLOCK",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [],
+        "items": [],
+        "net_value": null,
+        "payer": "C615-GC00",
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "commande 00S4615-A11 du client C615-GB00",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST_SOURCE_A11",
+      "object_type": "BILLING",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 7,
+          "course_code": "S4615",
+          "exercise": null,
+          "page": 152,
+          "raw_excerpt": "00S4615-A11 C615-GB00; 00S4615-A12 C615-GA00; payeur C615-GC00",
+          "scenario_id": "S4615_CH7_DEMO_INVOICE_LIST",
+          "section_type": "DEMONSTRATION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Commande d'achat / client / payeur"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH7_DEMO_INVOICE_LIST",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable canonical identifier"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "POSTED_TO_FI_DUNNING_BLOCK",
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_status": "CREATED",
+        "billing_subtype": "STANDARD",
+        "billing_type": null,
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "POSTED_TO_FI_DUNNING_BLOCK",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [],
+        "items": [],
+        "net_value": null,
+        "payer": "C615-GC00",
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "commande 00S4615-A12 du client C615-GA00",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST_SOURCE_A12",
+      "object_type": "BILLING",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 7,
+          "course_code": "S4615",
+          "exercise": null,
+          "page": 152,
+          "raw_excerpt": "00S4615-A11 C615-GB00; 00S4615-A12 C615-GA00; payeur C615-GC00",
+          "scenario_id": "S4615_CH7_DEMO_INVOICE_LIST",
+          "section_type": "DEMONSTRATION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Commande d'achat / client / payeur"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH7_DEMO_INVOICE_LIST",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "FI_REFERENCES_REPLACED_BY_LIST",
+        "billing_date": {
+          "kind": "RELATIVE",
+          "offset": null,
+          "raw": "du premier jour de la semaine à la fin du mois"
+        },
+        "billing_plan": null,
+        "billing_status": "CREATED",
+        "billing_subtype": "INVOICE_LIST",
+        "billing_type": "LR",
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "REFERENCE_NUMBER",
+            "status": "INVOICE_LIST_REFERENCE",
+            "system": "FI"
+          }
+        ],
+        "installment_payments": [],
+        "items": [],
+        "net_value": null,
+        "payer": "C615-GC00",
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "CONTAINS",
+          "source_phrase": "document de facturation du relevé",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST_SOURCE_A11",
+          "target_type": "BILLING"
+        },
+        {
+          "critical": true,
+          "relation": "CONTAINS",
+          "source_phrase": "document de facturation du relevé",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST_SOURCE_A12",
+          "target_type": "BILLING"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST",
+      "object_type": "BILLING",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 7,
+          "course_code": "S4615",
+          "exercise": null,
+          "page": 153,
+          "raw_excerpt": "liste sauvegardée pour C615-GC00 contenant les deux documents de facturation",
+          "scenario_id": "S4615_CH7_DEMO_INVOICE_LIST",
+          "section_type": "DEMONSTRATION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Relevé de factures"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH7_DEMO_INVOICE_LIST",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable canonical identifier"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "POSTED_TO_FI",
+        "billing_date": {
+          "kind": "RELATIVE",
+          "offset": "MONTH_END",
+          "raw": "dernier jour du mois"
+        },
+        "billing_plan": {
+          "calculation_rule": "M_MONTHLY_QUANTITY",
+          "date_category": "01",
+          "first_period_status": "C_BILLED",
+          "item_category": "WVN",
+          "plan_semantics": "PERIODIC",
+          "plan_type": "02",
+          "pricing_condition": "PPSV"
+        },
+        "billing_status": "CREATED",
+        "billing_subtype": "PERIODIC",
+        "billing_type": null,
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "POSTED_TO_FI",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [],
+        "items": [],
+        "net_value": null,
+        "payer": "C615-E##",
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "contrat de maintenance WV ##S6415-PB",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "SALES_CONTRACT_REFERENCE"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH8_EX10_BILLING_PERIODIC_FIRST_PERIOD",
+      "object_type": "BILLING",
+      "placeholders": [
+        {
+          "field_path": "data.payer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 8,
+          "course_code": "S4615",
+          "exercise": 10,
+          "page": 173,
+          "raw_excerpt": "type non indiqué; contrat de maintenance WV ##S6415-PB",
+          "scenario_id": "S4615_CH8_EX10",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4615",
+          "exercise": 10,
+          "page": 175,
+          "raw_excerpt": "type non indiqué; contrat de maintenance WV ##S6415-PB",
+          "scenario_id": "S4615_CH8_EX10",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH8_EX10",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##S4615-AZ",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P615-6##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 1,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDLC",
+        "payment_terms": null,
+        "processing_status": null,
+        "requested_delivery_date": null,
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C615-F##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C615-F##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P615-6##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH8_EX11_SALES_ORDER_DOWN_PAYMENT",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 8,
+          "course_code": "S4615",
+          "exercise": 11,
+          "page": 189,
+          "raw_excerpt": "CDLC; 1010/10/00; C615-F##; ##S4615-AZ; P615-6##; 1 PC",
+          "scenario_id": "S4615_CH8_EX11",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4615",
+          "exercise": 11,
+          "page": 192,
+          "raw_excerpt": "CDLC; 1010/10/00; C615-F##; ##S4615-AZ; P615-6##; 1 PC",
+          "scenario_id": "S4615_CH8_EX11",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH8_EX11",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "DOWN_PAYMENT_REQUEST_POSTED_TO_FI",
+        "billing_date": null,
+        "billing_plan": {
+          "due_date": "UNRESOLVED_SOURCE_RESULT",
+          "plan_semantics": "MILESTONE_PARTIAL"
+        },
+        "billing_status": "CREATED",
+        "billing_subtype": "DOWN_PAYMENT_REQUEST",
+        "billing_type": "FAZ",
+        "currency": null,
+        "down_payments": [
+          {
+            "amount": null,
+            "currency": null,
+            "kind": "REQUEST",
+            "status": "BILLED",
+            "tax_inclusive_amount": 33000
+          }
+        ],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "DOWN_PAYMENT_REQUEST_POSTED_TO_FI",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [],
+        "items": [],
+        "net_value": null,
+        "payer": "C615-F##",
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "commande avec calendrier d'acompte",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH8_EX11_SALES_ORDER_DOWN_PAYMENT",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH8_EX11_BILLING_DOWN_PAYMENT_REQUEST",
+      "object_type": "BILLING",
+      "placeholders": [
+        {
+          "field_path": "data.payer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 8,
+          "course_code": "S4615",
+          "exercise": 11,
+          "page": 189,
+          "raw_excerpt": "FAZ; commande avec calendrier d'acompte",
+          "scenario_id": "S4615_CH8_EX11",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4615",
+          "exercise": 11,
+          "page": 192,
+          "raw_excerpt": "FAZ; commande avec calendrier d'acompte",
+          "scenario_id": "S4615_CH8_EX11",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH8_EX11",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "REFERENCE_DATA",
+      "data": {
+        "amount": 33000,
+        "bank_account": "11100025",
+        "billing_reference": null,
+        "currency": null,
+        "payer": "C615-F##",
+        "payment_date": {
+          "kind": "RELATIVE",
+          "offset": "P0D",
+          "raw": "date du jour"
+        },
+        "payment_status": "POSTED",
+        "reference_id": null,
+        "special_gl_indicator": "A"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SETTLES",
+          "source_phrase": "demande d'acompte FAZ",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH8_EX11_BILLING_DOWN_PAYMENT_REQUEST",
+          "target_type": "BILLING"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH8_EX11_PAYMENT_REFERENCE_DOWN_PAYMENT",
+      "object_type": "PAYMENT_REFERENCE",
+      "placeholders": [
+        {
+          "field_path": "data.payer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 8,
+          "course_code": "S4615",
+          "exercise": 11,
+          "page": 189,
+          "raw_excerpt": "client C615-F##; compte 11100025; code A; montant acompte + TVA = 33000",
+          "scenario_id": "S4615_CH8_EX11",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Acompte / compte bancaire / code CGS / montant"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4615",
+          "exercise": 11,
+          "page": 192,
+          "raw_excerpt": "client C615-F##; compte 11100025; code A; montant acompte + TVA = 33000",
+          "scenario_id": "S4615_CH8_EX11",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Acompte / compte bancaire / code CGS / montant"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH8_EX11",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "POSTED_TO_FI_WITH_DOWN_PAYMENT_CLEARING",
+        "billing_date": null,
+        "billing_plan": {
+          "billing_block_removed": true,
+          "period": 1,
+          "plan_semantics": "MILESTONE_PARTIAL"
+        },
+        "billing_status": "CREATED",
+        "billing_subtype": "PARTIAL_BILLING",
+        "billing_type": null,
+        "currency": null,
+        "down_payments": [
+          {
+            "amount": 33000,
+            "condition_type": "AZWR",
+            "currency": null,
+            "status": "TO_BE_CLEARED"
+          }
+        ],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "POSTED_TO_FI_WITH_DOWN_PAYMENT_CLEARING",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [],
+        "items": [],
+        "net_value": null,
+        "payer": "C615-F##",
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "première période de décompte",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH8_EX11_SALES_ORDER_DOWN_PAYMENT",
+          "target_type": "SALES_ORDER"
+        },
+        {
+          "critical": true,
+          "relation": "CLEARS",
+          "source_phrase": "acompte versé par le client",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH8_EX11_PAYMENT_REFERENCE_DOWN_PAYMENT",
+          "target_type": "PAYMENT_REFERENCE"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH8_EX11_BILLING_FIRST_PARTIAL",
+      "object_type": "BILLING",
+      "placeholders": [
+        {
+          "field_path": "data.payer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 8,
+          "course_code": "S4615",
+          "exercise": 11,
+          "page": 189,
+          "raw_excerpt": "type non indiqué; première période de décompte",
+          "scenario_id": "S4615_CH8_EX11",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4615",
+          "exercise": 11,
+          "page": 192,
+          "raw_excerpt": "type non indiqué; première période de décompte",
+          "scenario_id": "S4615_CH8_EX11",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH8_EX11",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "4712",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P615-100",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "OR",
+        "payment_terms": "R001",
+        "processing_status": null,
+        "requested_delivery_date": null,
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C615-A00"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C615-A00",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P615-100",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_SALES_ORDER_INSTALLMENT",
+      "object_type": "SALES_ORDER",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 8,
+          "course_code": "S4615",
+          "exercise": null,
+          "page": 200,
+          "raw_excerpt": "OR; 1010/10/00; C615-A00; 4712; R001; P615-100; 10 PC",
+          "scenario_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS",
+          "section_type": "DEMONSTRATION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Conditions de paiement / commande / article"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_type": "OUTBOUND",
+        "items": [
+          {
+            "gross_weight": null,
+            "gross_weight_unit": null,
+            "item_category": null,
+            "line_id": "10",
+            "material": "P615-100",
+            "plant": null,
+            "quantity": 10,
+            "reference_item": "10",
+            "storage_location": null,
+            "unit": "PC",
+            "warehouse_number": null
+          }
+        ],
+        "planned_creation_date": {
+          "kind": "RELATIVE",
+          "offset": "P10D",
+          "raw": "date du jour + 10 jours"
+        },
+        "planned_goods_issue_date": null,
+        "ship_to_party": null,
+        "shipping_point": "1010",
+        "storage_location": null,
+        "system_representations": [],
+        "warehouse_number": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "CREATED_FROM",
+          "source_phrase": "commande client précédente",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_SALES_ORDER_INSTALLMENT",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_OUTBOUND_DELIVERY_INSTALLMENT",
+      "object_type": "OUTBOUND_DELIVERY",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 8,
+          "course_code": "S4615",
+          "exercise": null,
+          "page": 200,
+          "raw_excerpt": "OR; 1010/10/00; C615-A00; 4712; R001; P615-100; 10 PC",
+          "scenario_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS",
+          "section_type": "DEMONSTRATION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Conditions de paiement / commande / article"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "POSTED_TO_MULTIPLE_FI_RECEIVABLE_ITEMS",
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_status": "CREATED",
+        "billing_subtype": "INSTALLMENT_INVOICE",
+        "billing_type": "F2",
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "POSTED_TO_MULTIPLE_FI_RECEIVABLE_ITEMS",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [
+          {
+            "installment_count": null,
+            "percentages": [],
+            "semantic": "one billing document; multiple FI customer entries",
+            "terms": "R001"
+          }
+        ],
+        "items": [],
+        "net_value": null,
+        "payer": "C615-A00",
+        "payment_terms": "R001",
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "livraison de la commande 4712",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_OUTBOUND_DELIVERY_INSTALLMENT",
+          "target_type": "OUTBOUND_DELIVERY"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_BILLING_INSTALLMENT",
+      "object_type": "BILLING",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 8,
+          "course_code": "S4615",
+          "exercise": null,
+          "page": 200,
+          "raw_excerpt": "OR; 1010/10/00; C615-A00; 4712; R001; P615-100; 10 PC",
+          "scenario_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS",
+          "section_type": "DEMONSTRATION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Conditions de paiement / commande / article"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "access_sequence": "KOFI",
+        "account_determination_procedure": "KOFI00",
+        "account_key": "ERL",
+        "application": "V",
+        "chart_of_accounts": "YCOA",
+        "condition_table": "001",
+        "condition_type": "KOFI",
+        "customer_account_assignment_group": "80+##",
+        "general_ledger_account": "49000000",
+        "material_account_assignment_group": "01",
+        "sales_organization": "1010"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "APPLIES_IN",
+          "source_phrase": "société 1010",
+          "status": "RESOLVED",
+          "target_id": "S4615_SHARED_COMPANY_CODE_1010",
+          "target_type": "COMPANY_CODE"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH9_EX12_ACCOUNT_DETERMINATION_AFFILIATED_REVENUE",
+      "object_type": "ACCOUNT_DETERMINATION",
+      "placeholders": [
+        {
+          "field_path": "data.customer_account_assignment_group",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 9,
+          "course_code": "S4615",
+          "exercise": 12,
+          "page": 213,
+          "raw_excerpt": "001; V; KOFI; YCOA; 1010; 80+##; 01; ERL; 49000000",
+          "scenario_id": "S4615_CH9_EX12",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Table 001 / application / type de condition / plan comptable / organisation commerciale / groupes d'imputation / clé / compte"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4615",
+          "exercise": 12,
+          "page": 216,
+          "raw_excerpt": "001; V; KOFI; YCOA; 1010; 80+##; 01; ERL; 49000000",
+          "scenario_id": "S4615_CH9_EX12",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Table 001 / application / type de condition / plan comptable / organisation commerciale / groupes d'imputation / clé / compte"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH9_EX12",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##S4615-KO",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P615-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 1,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDLC",
+        "payment_terms": null,
+        "processing_status": null,
+        "requested_delivery_date": null,
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C615-B##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C615-B##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P615-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH9_EX12_SALES_ORDER_ACCOUNT_DETERMINATION_TEST",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 9,
+          "course_code": "S4615",
+          "exercise": 12,
+          "page": 213,
+          "raw_excerpt": "CDLC; 1010/10/00; C615-B##; ##S4615-KO; P615-1##; 1 PC",
+          "scenario_id": "S4615_CH9_EX12",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4615",
+          "exercise": 12,
+          "page": 216,
+          "raw_excerpt": "CDLC; 1010/10/00; C615-B##; ##S4615-KO; P615-1##; 1 PC",
+          "scenario_id": "S4615_CH9_EX12",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH9_EX12",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_type": "OUTBOUND",
+        "items": [
+          {
+            "gross_weight": null,
+            "gross_weight_unit": null,
+            "item_category": null,
+            "line_id": "10",
+            "material": "P615-1##",
+            "plant": null,
+            "quantity": 1,
+            "reference_item": "10",
+            "storage_location": null,
+            "unit": "PC",
+            "warehouse_number": null
+          }
+        ],
+        "planned_creation_date": {
+          "kind": "RELATIVE",
+          "offset": "P10D",
+          "raw": "date du jour + 10 jours"
+        },
+        "planned_goods_issue_date": null,
+        "ship_to_party": null,
+        "shipping_point": "1010",
+        "storage_location": null,
+        "system_representations": [],
+        "warehouse_number": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "CREATED_FROM",
+          "source_phrase": "commande client précédente",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH9_EX12_SALES_ORDER_ACCOUNT_DETERMINATION_TEST",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH9_EX12_OUTBOUND_DELIVERY_ACCOUNT_DETERMINATION_TEST",
+      "object_type": "OUTBOUND_DELIVERY",
+      "placeholders": [
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 9,
+          "course_code": "S4615",
+          "exercise": 12,
+          "page": 213,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 1 PC",
+          "scenario_id": "S4615_CH9_EX12",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4615",
+          "exercise": 12,
+          "page": 216,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 1 PC",
+          "scenario_id": "S4615_CH9_EX12",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH9_EX12",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "POSTED_TO_GL_49000000",
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_status": "CREATED",
+        "billing_subtype": "STANDARD",
+        "billing_type": null,
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "POSTED_TO_GL_49000000",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [],
+        "items": [],
+        "net_value": null,
+        "payer": "C615-B##",
+        "payment_terms": null,
+        "posting_blocked": false,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "livraison de la commande ##S4615-KO",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH9_EX12_OUTBOUND_DELIVERY_ACCOUNT_DETERMINATION_TEST",
+          "target_type": "OUTBOUND_DELIVERY"
+        },
+        {
+          "critical": true,
+          "relation": "ACCOUNT_DETERMINED_BY",
+          "source_phrase": "table 001 vers compte 49000000",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH9_EX12_ACCOUNT_DETERMINATION_AFFILIATED_REVENUE",
+          "target_type": "ACCOUNT_DETERMINATION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH9_EX12_BILLING_ACCOUNT_DETERMINATION_TEST",
+      "object_type": "BILLING",
+      "placeholders": [
+        {
+          "field_path": "data.payer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 9,
+          "course_code": "S4615",
+          "exercise": 12,
+          "page": 213,
+          "raw_excerpt": "type non indiqué; livraison de la commande ##S4615-KO",
+          "scenario_id": "S4615_CH9_EX12",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4615",
+          "exercise": 12,
+          "page": 216,
+          "raw_excerpt": "type non indiqué; livraison de la commande ##S4615-KO",
+          "scenario_id": "S4615_CH9_EX12",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH9_EX12",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##S4615-BS",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P615-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 1,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "ZA##",
+        "payment_terms": null,
+        "processing_status": null,
+        "requested_delivery_date": null,
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C615-A##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C615-A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P615-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH10_EX13_SALES_ORDER_POSTING_BLOCK",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.order_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 10,
+          "course_code": "S4615",
+          "exercise": 13,
+          "page": 235,
+          "raw_excerpt": "ZA##; 1010/10/00; C615-A##; ##S4615-BS; P615-1##; 1 PC",
+          "scenario_id": "S4615_CH10_EX13",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 10,
+          "course_code": "S4615",
+          "exercise": 13,
+          "page": 238,
+          "raw_excerpt": "ZA##; 1010/10/00; C615-A##; ##S4615-BS; P615-1##; 1 PC",
+          "scenario_id": "S4615_CH10_EX13",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH10_EX13",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_type": "OUTBOUND",
+        "items": [
+          {
+            "gross_weight": null,
+            "gross_weight_unit": null,
+            "item_category": null,
+            "line_id": "10",
+            "material": "P615-1##",
+            "plant": null,
+            "quantity": 1,
+            "reference_item": "10",
+            "storage_location": null,
+            "unit": "PC",
+            "warehouse_number": null
+          }
+        ],
+        "planned_creation_date": {
+          "kind": "RELATIVE",
+          "offset": "P10D",
+          "raw": "date du jour + 10 jours"
+        },
+        "planned_goods_issue_date": null,
+        "ship_to_party": null,
+        "shipping_point": "1010",
+        "storage_location": null,
+        "system_representations": [],
+        "warehouse_number": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "CREATED_FROM",
+          "source_phrase": "commande client précédente",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH10_EX13_SALES_ORDER_POSTING_BLOCK",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH10_EX13_OUTBOUND_DELIVERY_POSTING_BLOCK",
+      "object_type": "OUTBOUND_DELIVERY",
+      "placeholders": [
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 10,
+          "course_code": "S4615",
+          "exercise": 13,
+          "page": 235,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 1 PC",
+          "scenario_id": "S4615_CH10_EX13",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        },
+        {
+          "chapter": 10,
+          "course_code": "S4615",
+          "exercise": 13,
+          "page": 238,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 1 PC",
+          "scenario_id": "S4615_CH10_EX13",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH10_EX13",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "POSTED_AFTER_MANUAL_RELEASE",
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_status": "POSTED",
+        "billing_subtype": "STANDARD",
+        "billing_type": "ZF##",
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "POSTED_AFTER_MANUAL_RELEASE",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [],
+        "items": [],
+        "net_value": null,
+        "payer": "C615-A##",
+        "payment_terms": null,
+        "posting_blocked": true,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "livraison de la commande Foire ##",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH10_EX13_OUTBOUND_DELIVERY_POSTING_BLOCK",
+          "target_type": "OUTBOUND_DELIVERY"
+        },
+        {
+          "critical": true,
+          "relation": "CONTROLLED_BY",
+          "source_phrase": "ZF##/LF avec référence B et affectation E",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING",
+          "target_type": "COPY_CONTROL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH10_EX13_BILLING_POSTING_BLOCK",
+      "object_type": "BILLING",
+      "placeholders": [
+        {
+          "field_path": "data.billing_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.payer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 10,
+          "course_code": "S4615",
+          "exercise": 13,
+          "page": 235,
+          "raw_excerpt": "ZF##; livraison de la commande Foire ##",
+          "scenario_id": "S4615_CH10_EX13",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "chapter": 10,
+          "course_code": "S4615",
+          "exercise": 13,
+          "page": 238,
+          "raw_excerpt": "ZF##; livraison de la commande Foire ##",
+          "scenario_id": "S4615_CH10_EX13",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH10_EX13",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##S4615-Réf",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P615-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 1,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "ZA##",
+        "payment_terms": null,
+        "processing_status": null,
+        "requested_delivery_date": null,
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C615-A##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C615-A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P615-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH10_EX13_SALES_ORDER_FI_REFERENCE",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.order_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 10,
+          "course_code": "S4615",
+          "exercise": 13,
+          "page": 235,
+          "raw_excerpt": "ZA##; 1010/10/00; C615-A##; ##S4615-Réf; P615-1##; 1 PC",
+          "scenario_id": "S4615_CH10_EX13",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 10,
+          "course_code": "S4615",
+          "exercise": 13,
+          "page": 238,
+          "raw_excerpt": "ZA##; 1010/10/00; C615-A##; ##S4615-Réf; P615-1##; 1 PC",
+          "scenario_id": "S4615_CH10_EX13",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH10_EX13",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_type": "OUTBOUND",
+        "items": [
+          {
+            "gross_weight": null,
+            "gross_weight_unit": null,
+            "item_category": null,
+            "line_id": "10",
+            "material": "P615-1##",
+            "plant": null,
+            "quantity": 1,
+            "reference_item": "10",
+            "storage_location": null,
+            "unit": "PC",
+            "warehouse_number": null
+          }
+        ],
+        "planned_creation_date": {
+          "kind": "RELATIVE",
+          "offset": "P10D",
+          "raw": "date du jour + 10 jours"
+        },
+        "planned_goods_issue_date": null,
+        "ship_to_party": null,
+        "shipping_point": "1010",
+        "storage_location": null,
+        "system_representations": [],
+        "warehouse_number": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "CREATED_FROM",
+          "source_phrase": "commande client précédente",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH10_EX13_SALES_ORDER_FI_REFERENCE",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH10_EX13_OUTBOUND_DELIVERY_FI_REFERENCE",
+      "object_type": "OUTBOUND_DELIVERY",
+      "placeholders": [
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 10,
+          "course_code": "S4615",
+          "exercise": 13,
+          "page": 235,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 1 PC",
+          "scenario_id": "S4615_CH10_EX13",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        },
+        {
+          "chapter": 10,
+          "course_code": "S4615",
+          "exercise": 13,
+          "page": 238,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 1 PC",
+          "scenario_id": "S4615_CH10_EX13",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH10_EX13",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_document_type": null,
+        "accounting_status": "POSTED_AFTER_MANUAL_RELEASE",
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_status": "POSTED",
+        "billing_subtype": "STANDARD",
+        "billing_type": "ZF##",
+        "currency": null,
+        "down_payments": [],
+        "fi_co_dependencies": [
+          {
+            "identifier": null,
+            "relationship": "ACCOUNTING_DOCUMENT",
+            "status": "POSTED_AFTER_MANUAL_RELEASE",
+            "system": "FI"
+          },
+          {
+            "identifier": null,
+            "relationship": "CONTROLLING_POSTING",
+            "status": "DEPENDENT_ON_FI_TRANSFER",
+            "system": "CO"
+          }
+        ],
+        "installment_payments": [],
+        "items": [],
+        "net_value": null,
+        "payer": "C615-A##",
+        "payment_terms": null,
+        "posting_blocked": true,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "livraison de la commande Foire ##",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH10_EX13_OUTBOUND_DELIVERY_FI_REFERENCE",
+          "target_type": "OUTBOUND_DELIVERY"
+        },
+        {
+          "critical": true,
+          "relation": "CONTROLLED_BY",
+          "source_phrase": "ZF##/LF avec référence B et affectation E",
+          "status": "RESOLVED",
+          "target_id": "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING",
+          "target_type": "COPY_CONTROL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4615_CH10_EX13_BILLING_FI_REFERENCE",
+      "object_type": "BILLING",
+      "placeholders": [
+        {
+          "field_path": "data.billing_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.payer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 10,
+          "course_code": "S4615",
+          "exercise": 13,
+          "page": 235,
+          "raw_excerpt": "ZF##; livraison de la commande Foire ##",
+          "scenario_id": "S4615_CH10_EX13",
+          "section_type": "EXERCISE",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "chapter": 10,
+          "course_code": "S4615",
+          "exercise": 13,
+          "page": 238,
+          "raw_excerpt": "ZF##; livraison de la commande Foire ##",
+          "scenario_id": "S4615_CH10_EX13",
+          "section_type": "SOLUTION",
+          "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4615_CH10_EX13",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    }
+  ]
+}

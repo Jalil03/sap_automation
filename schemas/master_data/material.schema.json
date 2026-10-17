@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MATERIAL",
+  "allOf": [
+    {
+      "$ref": "../common/canonical_object.schema.json"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "object_type": {
+      "const": "MATERIAL"
+    },
+    "classification": {
+      "const": "MASTER_DATA"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "material_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "base_unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "plants": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "industry_sector": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "material_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sales_organization": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "distribution_channel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tax_classification": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "minimum_order_quantity": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "minimum_order_unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sales_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "availability_check": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "delivering_plant": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "strategy_group": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "item_category_group": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

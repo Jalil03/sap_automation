@@ -1,0 +1,5293 @@
+{
+  "objects": [
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_type": null,
+        "items": [],
+        "planned_creation_date": null,
+        "planned_goods_issue_date": null,
+        "ship_to_party": null,
+        "shipping_point": "Z0##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "CREATED_FROM",
+          "source_phrase": "document créé à l'étape précédente",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH10_EX35_SALES_ORDER_STANDARD",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH10_EX35_OUTBOUND_DELIVERY_FROM_RESOLVED_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "placeholders": [
+        {
+          "field_path": "data.shipping_point",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 10,
+          "course_code": "S4600",
+          "exercise": 35,
+          "page": 337,
+          "raw_excerpt": "Z0##; document créé à l'étape précédente",
+          "scenario_id": "S4600_CH10_EX35",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "chapter": 10,
+          "course_code": "S4600",
+          "exercise": 35,
+          "page": 338,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH10_EX35",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "chapter": 10,
+          "course_code": "S4600",
+          "exercise": 35,
+          "page": 339,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH10_EX35",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Créer livraison"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH10_EX35",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": "COMPLETE",
+        "customer_reference": "658–##",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-MS1##",
+            "quantity": 3,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDCL",
+        "payment_terms": "Payable immédiatement sans déduction",
+        "processing_status": "TERMINÉ",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P0D",
+          "raw": "Date du jour"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "T-S50A##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH10_EX35_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 10,
+          "course_code": "S4600",
+          "exercise": 35,
+          "page": 337,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 658–##",
+          "scenario_id": "S4600_CH10_EX35",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "chapter": 10,
+          "course_code": "S4600",
+          "exercise": 35,
+          "page": 338,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH10_EX35",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH10_EX35",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "customer_reference": "4-2##",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-MS1##",
+            "quantity": 10,
+            "unit": "PC"
+          },
+          {
+            "line_id": "20",
+            "material": "T-MS2##",
+            "quantity": 20,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDCL",
+        "processing_status": "EN COURS",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans 1 semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "T-S50A##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS2##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH3_EX3_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[1].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 3,
+          "course_code": "S4600",
+          "exercise": 3,
+          "page": 57,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 4-2##",
+          "scenario_id": "S4600_CH3_EX3",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4600",
+          "exercise": 3,
+          "page": 58,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH3_EX3",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4600",
+          "exercise": 4,
+          "page": 65,
+          "raw_excerpt": "Le statut doit être En cours",
+          "scenario_id": "S4600_CH3_EX4",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Statut de traitement global"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH3_EX3",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_type": null,
+        "items": [],
+        "planned_creation_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "Échue la semaine prochaine"
+        },
+        "planned_goods_issue_date": null,
+        "ship_to_party": null,
+        "shipping_point": "Z0##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "CREATED_FROM",
+          "source_phrase": "document créé à l'étape précédente",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH3_EX3_SALES_ORDER_STANDARD",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH3_EX5_OUTBOUND_DELIVERY_FROM_EX3",
+      "object_type": "OUTBOUND_DELIVERY",
+      "placeholders": [
+        {
+          "field_path": "data.shipping_point",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 3,
+          "course_code": "S4600",
+          "exercise": 5,
+          "page": 71,
+          "raw_excerpt": "Z0##; Échue la semaine prochaine",
+          "scenario_id": "S4600_CH3_EX5",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4600",
+          "exercise": 5,
+          "page": 72,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH3_EX5",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH3_EX5",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "code": "Z0##",
+        "description": null,
+        "plant": null
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH3_EX5_SHIPPING_POINT_Z0-GROUP",
+      "object_type": "SHIPPING_POINT",
+      "placeholders": [
+        {
+          "field_path": "data.code",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 3,
+          "course_code": "S4600",
+          "exercise": 5,
+          "page": 71,
+          "raw_excerpt": "Point d'expédition Z0##",
+          "scenario_id": "S4600_CH3_EX5",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Point d'expédition"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4600",
+          "exercise": 5,
+          "page": 72,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH3_EX5",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Point d'expédition"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH3_EX5",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_reference": null,
+        "items": [],
+        "movement_reference": null,
+        "posting_date": "Date du jour"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "POSTED_FOR",
+          "source_phrase": "livraison créée précédemment",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH3_EX5_OUTBOUND_DELIVERY_FROM_EX3",
+          "target_type": "OUTBOUND_DELIVERY"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH3_EX6_GOODS_ISSUE_FROM_DELIVERY",
+      "object_type": "GOODS_ISSUE",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 3,
+          "course_code": "S4600",
+          "exercise": 6,
+          "page": 79,
+          "raw_excerpt": "Enregistrer la sortie de marchandises pour la livraison créée précédemment",
+          "scenario_id": "S4600_CH3_EX6",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Sortie de marchandises / livraison précédente"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4600",
+          "exercise": 6,
+          "page": 80,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH3_EX6",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Sortie de marchandises / livraison précédente"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH3_EX6",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_subtype": "STANDARD",
+        "billing_type": null,
+        "down_payments": [],
+        "installment_payments": [],
+        "items": [],
+        "payer": null,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "document créé à l'étape précédente",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH3_EX5_OUTBOUND_DELIVERY_FROM_EX3",
+          "target_type": "OUTBOUND_DELIVERY"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH3_EX7_BILLING_STANDARD_FROM_EX5",
+      "object_type": "BILLING",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 3,
+          "course_code": "S4600",
+          "exercise": 7,
+          "page": 87,
+          "raw_excerpt": "Créer le document de facturation avec référence au document précédent",
+          "scenario_id": "S4600_CH3_EX7",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4600",
+          "exercise": 7,
+          "page": 88,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH3_EX7",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Document de facturation / document de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH3_EX7",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "REFERENCE_DATA",
+      "data": {
+        "amount": 1237.72,
+        "billing_reference": null,
+        "currency": "EUR",
+        "payer": "T-S50A##",
+        "payment_date": {
+          "kind": "RELATIVE",
+          "offset": "P0D",
+          "raw": "Date du jour"
+        },
+        "reference_id": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SETTLES",
+          "source_phrase": "document de facturation",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH3_EX7_BILLING_STANDARD_FROM_EX5",
+          "target_type": "BILLING"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH3_EX8_PAYMENT_REFERENCE_FOR_EX7",
+      "object_type": "PAYMENT_REFERENCE",
+      "placeholders": [
+        {
+          "field_path": "data.payer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 3,
+          "course_code": "S4600",
+          "exercise": 8,
+          "page": 91,
+          "raw_excerpt": "1010; DZ; 11100000; montant calculé; EUR; T-S50A##",
+          "scenario_id": "S4600_CH3_EX8",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Société / Type d'écriture / Compte général / Montant / Devise / Client"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4600",
+          "exercise": 8,
+          "page": 92,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH3_EX8",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "1276 - 38,28 = 1237,72"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH3_EX8",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "customer_reference": "5-9##",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-MS2##",
+            "quantity": 2,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDCL",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans 1 semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": "T-S50A##",
+        "sold_to_party": "T-CUS##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-CUS##",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH4_EX9_BUSINESS_PARTNER_T-CUS-GROUP",
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "SHIP_TO_PARTY",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS2##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH4_EX10_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.ship_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 10,
+          "page": 111,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-CUS##; 5-9##",
+          "scenario_id": "S4600_CH4_EX10",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 10,
+          "page": 113,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH4_EX10",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH4_EX10",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "availability_check": null,
+        "base_unit": "PC",
+        "delivering_plant": "1010",
+        "description": "Phare standard",
+        "distribution_channel": "10",
+        "industry_sector": "Commerce",
+        "item_category_group": null,
+        "material_id": "T-MS4##",
+        "material_type": "Produits négociables",
+        "minimum_order_quantity": 10,
+        "minimum_order_unit": "PC",
+        "plants": [
+          "1010"
+        ],
+        "sales_organization": "1010",
+        "sales_text": "Article fragile",
+        "strategy_group": null,
+        "tax_classification": "1"
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH4_EX11_MATERIAL_T-MS4-GROUP",
+      "object_type": "MATERIAL",
+      "placeholders": [
+        {
+          "field_path": "data.material_id",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 11,
+          "page": 119,
+          "raw_excerpt": "T-MS4##; Commerce; Produits négociables; Phare standard; 10 pièces",
+          "scenario_id": "S4600_CH4_EX11",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Article / secteur industriel / type d'article / description / quantité minimale"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 11,
+          "page": 121,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH4_EX11",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Article / secteur industriel / type d'article / description / quantité minimale"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH4_EX11",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "condition_type": "PR00",
+        "currency": "EUR",
+        "key_combination": {
+          "customer": null,
+          "distribution_channel": "10",
+          "material": "T-MS4##",
+          "sales_organization": "1010"
+        },
+        "pricing_unit": 1,
+        "rate": 35,
+        "scale_basis": "QUANTITY",
+        "scales": [],
+        "valid_from": null,
+        "valid_to": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "FOR_MATERIAL",
+          "source_phrase": "T-MS4##",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH4_EX11_MATERIAL_T-MS4-GROUP",
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH4_EX11_PRICING_CONDITION_PR00_T-MS4",
+      "object_type": "PRICING_CONDITION",
+      "placeholders": [
+        {
+          "field_path": "data.key_combination.material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 11,
+          "page": 119,
+          "raw_excerpt": "Prix de vente 35 EUR à partir de quantité 1",
+          "scenario_id": "S4600_CH4_EX11",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Prix de vente"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 11,
+          "page": 121,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH4_EX11",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Prix de vente"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH4_EX11",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "customer_reference": "5-13##",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-MS4##",
+            "quantity": 5,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDCL",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P10D",
+          "raw": "dans 10 jours"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "T-S50A##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS4##",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH4_EX11_MATERIAL_T-MS4-GROUP",
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "PRICED_BY",
+          "source_phrase": "Prix de vente 35 EUR",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH4_EX11_PRICING_CONDITION_PR00_T-MS4",
+          "target_type": "PRICING_CONDITION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH4_EX11_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 11,
+          "page": 119,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 5-13##",
+          "scenario_id": "S4600_CH4_EX11",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 11,
+          "page": 121,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH4_EX11",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH4_EX11",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "business_partner": "T-S50A##",
+        "customer_material": "K-MS-##",
+        "distribution_channel": "10",
+        "material": "T-MS1##",
+        "sales_organization": "1010"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "FOR_CUSTOMER",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "FOR_MATERIAL",
+          "source_phrase": "T-MS1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH4_EX12_CUSTOMER_MATERIAL_INFO_T-S50A_T-MS1",
+      "object_type": "CUSTOMER_MATERIAL_INFO",
+      "placeholders": [
+        {
+          "field_path": "data.business_partner",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 12,
+          "page": 129,
+          "raw_excerpt": "T-S50A##; T-MS1##; K-MS-##; Phare Premium",
+          "scenario_id": "S4600_CH4_EX12",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Client / Article / Référence article client / Description"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 12,
+          "page": 131,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH4_EX12",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Client / Article / Référence article client / Description"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH4_EX12",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_type": null,
+        "items": [],
+        "planned_creation_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "Échue la semaine prochaine"
+        },
+        "planned_goods_issue_date": null,
+        "ship_to_party": null,
+        "shipping_point": "Z0##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "CREATED_FROM",
+          "source_phrase": "document créé à l'étape précédente",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH4_EX12_SALES_ORDER_STANDARD",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH4_EX12_OUTBOUND_DELIVERY_FROM_EX12_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "placeholders": [
+        {
+          "field_path": "data.shipping_point",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 12,
+          "page": 129,
+          "raw_excerpt": "Z0##; Échue la semaine prochaine",
+          "scenario_id": "S4600_CH4_EX12",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 12,
+          "page": 131,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH4_EX12",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 12,
+          "page": 130,
+          "raw_excerpt": "Z0##; Échue la semaine prochaine",
+          "scenario_id": "S4600_CH4_EX12",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 12,
+          "page": 132,
+          "raw_excerpt": "Z0##; Échue la semaine prochaine",
+          "scenario_id": "S4600_CH4_EX12",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH4_EX12",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "customer_reference": "5-19##",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-MS1##",
+            "quantity": 10,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDCL",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans 1 semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "T-S50A##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH4_EX12_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 12,
+          "page": 129,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 5-19##",
+          "scenario_id": "S4600_CH4_EX12",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 12,
+          "page": 131,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH4_EX12",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH4_EX12",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "condition_type": "PR00",
+        "currency": "EUR",
+        "key_combination": {
+          "customer": "T-S50A##",
+          "distribution_channel": "10",
+          "material": "T-MS1##",
+          "sales_organization": "1010"
+        },
+        "pricing_unit": 1,
+        "rate": null,
+        "scale_basis": "QUANTITY",
+        "scales": [
+          {
+            "amount": 53,
+            "currency": "EUR",
+            "from_quantity": 1,
+            "pricing_unit": 1,
+            "quantity_unit": "PC",
+            "rate": null,
+            "rate_unit": null,
+            "scale_basis": "QUANTITY",
+            "threshold": 1,
+            "threshold_currency": null,
+            "threshold_unit": "PC"
+          },
+          {
+            "amount": 51,
+            "currency": "EUR",
+            "from_quantity": 10,
+            "pricing_unit": 1,
+            "quantity_unit": "PC",
+            "rate": null,
+            "rate_unit": null,
+            "scale_basis": "QUANTITY",
+            "threshold": 10,
+            "threshold_currency": null,
+            "threshold_unit": "PC"
+          },
+          {
+            "amount": 49,
+            "currency": "EUR",
+            "from_quantity": 20,
+            "pricing_unit": 1,
+            "quantity_unit": "PC",
+            "rate": null,
+            "rate_unit": null,
+            "scale_basis": "QUANTITY",
+            "threshold": 20,
+            "threshold_currency": null,
+            "threshold_unit": "PC"
+          }
+        ],
+        "valid_from": null,
+        "valid_to": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "FOR_CUSTOMER",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "FOR_MATERIAL",
+          "source_phrase": "T-MS1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH4_EX13_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL",
+      "object_type": "PRICING_CONDITION",
+      "placeholders": [
+        {
+          "field_path": "data.key_combination.customer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.key_combination.material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 13,
+          "page": 137,
+          "raw_excerpt": "PR00; 1010 / 10; T-S50A##; T-MS1##; 1=53 EUR, 10=51 EUR, 20=49 EUR",
+          "scenario_id": "S4600_CH4_EX13",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type de condition / Client / Article / Quantité échelonnée / Montant"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 13,
+          "page": 139,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH4_EX13",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type de condition / Client / Article / Quantité échelonnée / Montant"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH4_EX13",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "customer_reference": "5-23##",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-MS1##",
+            "quantity": 10,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDCL",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P10D",
+          "raw": "dans 10 jours"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "T-S50A##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "PRICED_BY",
+          "source_phrase": "condition PR00",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH4_EX13_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL",
+          "target_type": "PRICING_CONDITION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH4_EX13_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 13,
+          "page": 137,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 5-23##",
+          "scenario_id": "S4600_CH4_EX13",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 13,
+          "page": 139,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH4_EX13",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH4_EX13",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "condition_type": "K007",
+        "currency": "EUR",
+        "key_combination": {
+          "customer": "T-S50A##",
+          "distribution_channel": "10",
+          "material": null,
+          "sales_organization": "1010"
+        },
+        "pricing_unit": null,
+        "rate": null,
+        "scale_basis": "VALUE",
+        "scales": [
+          {
+            "amount": null,
+            "currency": null,
+            "from_quantity": null,
+            "pricing_unit": null,
+            "quantity_unit": null,
+            "rate": -1,
+            "rate_unit": "PERCENT",
+            "scale_basis": "VALUE",
+            "threshold": 100,
+            "threshold_currency": "EUR",
+            "threshold_unit": null
+          },
+          {
+            "amount": null,
+            "currency": null,
+            "from_quantity": null,
+            "pricing_unit": null,
+            "quantity_unit": null,
+            "rate": -2,
+            "rate_unit": "PERCENT",
+            "scale_basis": "VALUE",
+            "threshold": 500,
+            "threshold_currency": "EUR",
+            "threshold_unit": null
+          },
+          {
+            "amount": null,
+            "currency": null,
+            "from_quantity": null,
+            "pricing_unit": null,
+            "quantity_unit": null,
+            "rate": -3,
+            "rate_unit": "PERCENT",
+            "scale_basis": "VALUE",
+            "threshold": 1000,
+            "threshold_currency": "EUR",
+            "threshold_unit": null
+          }
+        ],
+        "valid_from": null,
+        "valid_to": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "FOR_CUSTOMER",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH4_EX14_PRICING_CONDITION_K007_CUSTOMER_VALUE_SCALE",
+      "object_type": "PRICING_CONDITION",
+      "placeholders": [
+        {
+          "field_path": "data.key_combination.customer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 14,
+          "page": 141,
+          "raw_excerpt": "K007; T-S50A##; 100 EUR=-1%, 500 EUR=-2%, 1000 EUR=-3%",
+          "scenario_id": "S4600_CH4_EX14",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type de condition / Client / Barème de valeurs / Pourcentage"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 14,
+          "page": 143,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH4_EX14",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type de condition / Client / Barème de valeurs / Pourcentage"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH4_EX14",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "customer_reference": "5-25##",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-MS1##",
+            "quantity": 10,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDCL",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P10D",
+          "raw": "dans 10 jours"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "T-S50A##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "PRICED_BY",
+          "source_phrase": "condition K007",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH4_EX14_PRICING_CONDITION_K007_CUSTOMER_VALUE_SCALE",
+          "target_type": "PRICING_CONDITION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH4_EX14_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 14,
+          "page": 141,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 5-25##",
+          "scenario_id": "S4600_CH4_EX14",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 14,
+          "page": 143,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH4_EX14",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH4_EX14",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "customer_reference": "##-Proposition",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-MS1##",
+            "quantity": 5,
+            "unit": "PC"
+          },
+          {
+            "line_id": "20",
+            "material": "T-MS2##",
+            "quantity": 5,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDCL",
+        "requested_delivery_date": null,
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "T-S50A##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS2##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH4_EX16_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[1].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 16,
+          "page": 155,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; ##-Proposition",
+          "scenario_id": "S4600_CH4_EX16",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 16,
+          "page": 157,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH4_EX16",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH4_EX16",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_type": null,
+        "items": [],
+        "planned_creation_date": null,
+        "planned_goods_issue_date": null,
+        "ship_to_party": null,
+        "shipping_point": "Z0##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "CREATED_FROM",
+          "source_phrase": "document créé à l'étape précédente",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH4_EX17_SALES_ORDER_STANDARD",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH4_EX17_OUTBOUND_DELIVERY_FROM_EX17_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "placeholders": [
+        {
+          "field_path": "data.shipping_point",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 17,
+          "page": 161,
+          "raw_excerpt": "Z0##; document créé à l'étape précédente",
+          "scenario_id": "S4600_CH4_EX17",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 17,
+          "page": 162,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH4_EX17",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH4_EX17",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": "COMPLETE",
+        "customer_reference": "3-9##",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-MS2##",
+            "net_weight": 20,
+            "net_weight_unit": "KG",
+            "quantity": 10,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDCL",
+        "requested_delivery_date": null,
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "T-S50A##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS2##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH4_EX17_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 17,
+          "page": 161,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 3-9##",
+          "scenario_id": "S4600_CH4_EX17",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 17,
+          "page": 162,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH4_EX17",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH4_EX17",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "account_assignment_group": "Domestic revenue",
+        "addresses": [
+          {
+            "city": "Hamburg",
+            "country": "DE",
+            "house_number": "##",
+            "language": "EN",
+            "postal_code": "20111",
+            "region": "HH",
+            "street": "Main street"
+          }
+        ],
+        "company_code": "1010",
+        "currency": "EUR",
+        "customer_pricing_procedure": "S",
+        "delivering_plant": "1010",
+        "grouping": "BPAB Num alpha ext (a-z; CUST/SUPL)",
+        "incoterms": "DAP",
+        "incoterms_location": "Hamburg",
+        "name": "Motos et autres",
+        "partner_functions": [
+          {
+            "partner": "T-S50A##",
+            "role": "SHIP_TO",
+            "source_exercise": 10
+          }
+        ],
+        "partner_id": "T-CUS##",
+        "payment_terms": "ZB00",
+        "reconciliation_account": "12100000",
+        "roles": [
+          "FLCU00",
+          "FLCU01"
+        ],
+        "sales_areas": [
+          "1010/10/00"
+        ],
+        "shipping_conditions": "## (+50) Standard",
+        "tax_classifications": [
+          {
+            "category": "TTX1",
+            "classification": "1"
+          }
+        ]
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH4_EX9_BUSINESS_PARTNER_T-CUS-GROUP",
+      "object_type": "BUSINESS_PARTNER",
+      "placeholders": [
+        {
+          "field_path": "data.partner_id",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.addresses[0].house_number",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.shipping_conditions",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.partner_functions[0].partner",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 9,
+          "page": 105,
+          "raw_excerpt": "T-CUS##; Motos et autres; FLCU00, FLCU01; 1010 / 10 / 00",
+          "scenario_id": "S4600_CH4_EX9",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Partenaire / Regroupement / Rôles / Adresse / Domaine commercial / Société"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4600",
+          "exercise": 9,
+          "page": 107,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH4_EX9",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Partenaire / Regroupement / Rôles / Adresse / Domaine commercial / Société"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH4_EX9",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "customer_reference": "6-1##",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-MS1##",
+            "quantity": 7,
+            "unit": "PC"
+          },
+          {
+            "line_id": "20",
+            "material": "T-MS2##",
+            "quantity": 8,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDCL",
+        "payment_terms": "ZB00",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P10D",
+          "raw": "dans 10 jours"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "T-S50B##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50B##",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH6_EX20_BUSINESS_PARTNER_T-S50B-GROUP",
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS2##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH5_EX18_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[1].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 5,
+          "course_code": "S4600",
+          "exercise": 18,
+          "page": 179,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50B##; 6-1##",
+          "scenario_id": "S4600_CH5_EX18",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "chapter": 5,
+          "course_code": "S4600",
+          "exercise": 18,
+          "page": 181,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH5_EX18",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH5_EX18",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "customer_reference": "6-4##",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-MS1##",
+            "quantity": 5,
+            "ship_to_party": "T-S50A##",
+            "unit": "PC"
+          },
+          {
+            "line_id": "20",
+            "material": "T-MS3##",
+            "quantity": 1,
+            "ship_to_party": "T-S50B##",
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDCL",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans 1 semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "T-S50A##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS3##",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH6_EX20_MATERIAL_T-MS3-GROUP",
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH5_EX19_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].ship_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[1].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[1].ship_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 5,
+          "course_code": "S4600",
+          "exercise": 19,
+          "page": 189,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 6-4##",
+          "scenario_id": "S4600_CH5_EX19",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "chapter": 5,
+          "course_code": "S4600",
+          "exercise": 19,
+          "page": 191,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH5_EX19",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH5_EX19",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "account_assignment_group": null,
+        "addresses": [],
+        "company_code": null,
+        "currency": null,
+        "customer_pricing_procedure": null,
+        "delivering_plant": "1010",
+        "grouping": null,
+        "incoterms": null,
+        "incoterms_location": null,
+        "name": null,
+        "partner_functions": [],
+        "partner_id": "T-S50B##",
+        "payment_terms": null,
+        "reconciliation_account": null,
+        "roles": [],
+        "sales_areas": [
+          "1010/10/00"
+        ],
+        "shipping_conditions": null,
+        "tax_classifications": []
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH6_EX20_BUSINESS_PARTNER_T-S50B-GROUP",
+      "object_type": "BUSINESS_PARTNER",
+      "placeholders": [
+        {
+          "field_path": "data.partner_id",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 6,
+          "course_code": "S4600",
+          "exercise": 20,
+          "page": 205,
+          "raw_excerpt": "T-S50B##; 1010 / 10 / 00",
+          "scenario_id": "S4600_CH6_EX20",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Fiche partenaire / division chargée de la livraison"
+        },
+        {
+          "chapter": 6,
+          "course_code": "S4600",
+          "exercise": 20,
+          "page": 207,
+          "raw_excerpt": "La division 1010 est saisie en tant que division chargée de la livraison",
+          "scenario_id": "S4600_CH6_EX20",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "division chargée de la livraison"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH6_EX20",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "availability_check": "02",
+        "base_unit": "PC",
+        "delivering_plant": "1020",
+        "description": null,
+        "distribution_channel": "10",
+        "industry_sector": null,
+        "item_category_group": null,
+        "material_id": "T-MS3##",
+        "material_type": null,
+        "minimum_order_quantity": null,
+        "minimum_order_unit": null,
+        "plants": [
+          "1010",
+          "1020"
+        ],
+        "sales_organization": "1010",
+        "sales_text": null,
+        "strategy_group": null,
+        "tax_classification": null
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH6_EX20_MATERIAL_T-MS3-GROUP",
+      "object_type": "MATERIAL",
+      "placeholders": [
+        {
+          "field_path": "data.material_id",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 6,
+          "course_code": "S4600",
+          "exercise": 20,
+          "page": 205,
+          "raw_excerpt": "T-MS3##; division 1010",
+          "scenario_id": "S4600_CH6_EX20",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Article / groupe de contrôle"
+        },
+        {
+          "chapter": 6,
+          "course_code": "S4600",
+          "exercise": 20,
+          "page": 206,
+          "raw_excerpt": "Le groupe de contrôle 02 est affecté",
+          "scenario_id": "S4600_CH6_EX20",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "groupe de contrôle"
+        },
+        {
+          "chapter": 6,
+          "course_code": "S4600",
+          "exercise": 20,
+          "page": 206,
+          "raw_excerpt": "La division 1020 est affectée comme division chargée de la livraison",
+          "scenario_id": "S4600_CH6_EX20",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "division chargée de la livraison"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH6_EX20",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "customer_reference": "7-6##",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-MS3##",
+            "quantity": 20,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDCL",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans 1 semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "T-S50A##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS3##",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH6_EX20_MATERIAL_T-MS3-GROUP",
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH6_EX21_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 6,
+          "course_code": "S4600",
+          "exercise": 21,
+          "page": 211,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 7-6##",
+          "scenario_id": "S4600_CH6_EX21",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "chapter": 6,
+          "course_code": "S4600",
+          "exercise": 21,
+          "page": 212,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH6_EX21",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH6_EX21",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "customer_reference": "7-7##",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-MS1##",
+            "quantity": 10,
+            "unit": "PC"
+          },
+          {
+            "line_id": "20",
+            "material": "T-MS2##",
+            "quantity": 10,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDCL",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans 1 semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "T-S50A##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS2##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH6_EX22_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[1].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 6,
+          "course_code": "S4600",
+          "exercise": 22,
+          "page": 215,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 7-7##",
+          "scenario_id": "S4600_CH6_EX22",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "chapter": 6,
+          "course_code": "S4600",
+          "exercise": 22,
+          "page": 217,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH6_EX22",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH6_EX22",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "customer_reference": "7-3##",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-MS3##",
+            "plant": "1020",
+            "quantity": 95,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDCL",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans 1 semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "T-S50B##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50B##",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH6_EX20_BUSINESS_PARTNER_T-S50B-GROUP",
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS3##",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH6_EX20_MATERIAL_T-MS3-GROUP",
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH6_EX23_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 6,
+          "course_code": "S4600",
+          "exercise": 23,
+          "page": 227,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50B##; 7-3##",
+          "scenario_id": "S4600_CH6_EX23",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "chapter": 6,
+          "course_code": "S4600",
+          "exercise": 23,
+          "page": 229,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH6_EX23",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH6_EX23",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "document_type": "DO",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-MS2##",
+            "quantity": 3,
+            "unit": "PC"
+          }
+        ],
+        "sold_to_party": "T-S50A##",
+        "valid_to": {
+          "kind": "RELATIVE",
+          "offset": null,
+          "raw": "fin de la semaine"
+        }
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS2##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH8_EX28_INQUIRY_DO",
+      "object_type": "INQUIRY",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 28,
+          "page": 271,
+          "raw_excerpt": "DO; T-S50A##; Date du jour + 3 semaines; T-MS2##; 3 pièces",
+          "scenario_id": "S4600_CH8_EX28",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type de demande d'offre / DateLivrSouh. / Article / Quantité"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 28,
+          "page": 273,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH8_EX28",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type de demande d'offre / DateLivrSouh. / Article / Quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH8_EX28",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "customer_reference": null,
+        "document_type": "OF",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-MS2##",
+            "quantity": 2,
+            "unit": "PC"
+          }
+        ],
+        "sold_to_party": "T-S50A##",
+        "valid_to": {
+          "kind": "RELATIVE",
+          "offset": null,
+          "raw": "fin de la semaine prochaine"
+        }
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "CREATED_FROM",
+          "source_phrase": "avec référence à la demande",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH8_EX28_INQUIRY_DO",
+          "target_type": "INQUIRY"
+        },
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS2##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH8_EX28_QUOTATION_OF",
+      "object_type": "QUOTATION",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 28,
+          "page": 271,
+          "raw_excerpt": "OF; aujourd'hui à fin de la semaine prochaine; 2 pièces",
+          "scenario_id": "S4600_CH8_EX28",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type d'offre / validité / quantité"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 28,
+          "page": 273,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH8_EX28",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type d'offre / validité / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH8_EX28",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "customer_reference": "8-9##",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-MS2##",
+            "quantity": 1,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDCL",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P3W",
+          "raw": "dans 3 semaines"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "T-S50A##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS2##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "CREATED_FROM",
+          "source_phrase": "avec référence à l'offre",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH8_EX28_QUOTATION_OF",
+          "target_type": "QUOTATION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH8_EX28_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 28,
+          "page": 271,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 8-9##",
+          "scenario_id": "S4600_CH8_EX28",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 28,
+          "page": 273,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH8_EX28",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 28,
+          "page": 272,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; 8-9##; dans 3 semaines; T-MS2##; 1 pièce",
+          "scenario_id": "S4600_CH8_EX28",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Commande avec référence à l'offre"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 28,
+          "page": 274,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH8_EX28",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Commande avec référence à l'offre"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH8_EX28",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_reference": null,
+        "items": [],
+        "movement_reference": null,
+        "posting_date": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "POSTED_FOR",
+          "source_phrase": "livraison créée précédemment",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH8_EX30_OUTBOUND_DELIVERY_FROM_EX30_ORDER",
+          "target_type": "OUTBOUND_DELIVERY"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH8_EX30_GOODS_ISSUE_FROM_DELIVERY",
+      "object_type": "GOODS_ISSUE",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 30,
+          "page": 283,
+          "raw_excerpt": "Enregistrer la sortie de marchandises pour la livraison créée précédemment",
+          "scenario_id": "S4600_CH8_EX30",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Sortie de marchandises / livraison précédente"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 30,
+          "page": 286,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH8_EX30",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Sortie de marchandises / livraison précédente"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH8_EX30",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "availability_check": null,
+        "base_unit": null,
+        "delivering_plant": "1010",
+        "description": null,
+        "distribution_channel": null,
+        "industry_sector": null,
+        "item_category_group": null,
+        "material_id": "T-F1##",
+        "material_type": null,
+        "minimum_order_quantity": null,
+        "minimum_order_unit": null,
+        "plants": [
+          "1010"
+        ],
+        "sales_organization": null,
+        "sales_text": null,
+        "strategy_group": "20",
+        "tax_classification": null
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH8_EX30_MATERIAL_T-F1-GROUP",
+      "object_type": "MATERIAL",
+      "placeholders": [
+        {
+          "field_path": "data.material_id",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 30,
+          "page": 283,
+          "raw_excerpt": "T-F1##; division 1010; groupe de stratégies 20",
+          "scenario_id": "S4600_CH8_EX30",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Article / division / groupe de stratégies"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 30,
+          "page": 286,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH8_EX30",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Article / division / groupe de stratégies"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH8_EX30",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_type": null,
+        "items": [],
+        "planned_creation_date": {
+          "kind": "RELATIVE",
+          "offset": "P3W",
+          "raw": "Date du jour + 3 semaines"
+        },
+        "planned_goods_issue_date": null,
+        "ship_to_party": null,
+        "shipping_point": "1010"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "CREATED_FROM",
+          "source_phrase": "document créé à l'étape précédente",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH8_EX30_SALES_ORDER_STANDARD",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH8_EX30_OUTBOUND_DELIVERY_FROM_EX30_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 30,
+          "page": 283,
+          "raw_excerpt": "1010; Date du jour + 3 semaines",
+          "scenario_id": "S4600_CH8_EX30",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 30,
+          "page": 286,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH8_EX30",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 30,
+          "page": 284,
+          "raw_excerpt": "1010; Date du jour + 3 semaines",
+          "scenario_id": "S4600_CH8_EX30",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 30,
+          "page": 289,
+          "raw_excerpt": "1010; Date du jour + 3 semaines",
+          "scenario_id": "S4600_CH8_EX30",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH8_EX30",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "customer_reference": "8-9##",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-F1##",
+            "quantity": 10,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDCL",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P2W",
+          "raw": "dans 2 semaines"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "T-S50A##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-F1##",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH8_EX30_MATERIAL_T-F1-GROUP",
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH8_EX30_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 30,
+          "page": 283,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 8-9##",
+          "scenario_id": "S4600_CH8_EX30",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 30,
+          "page": 286,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH8_EX30",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH8_EX30",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "billing_date": {
+          "kind": "RELATIVE",
+          "offset": "P14D",
+          "raw": "aujourd'hui + 14 jours"
+        },
+        "billing_plan": null,
+        "billing_subtype": "SERVICE_INVOICE",
+        "billing_type": null,
+        "down_payments": [],
+        "installment_payments": [],
+        "items": [],
+        "payer": null,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "document créé à l'étape précédente",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH8_EX31_SALES_ORDER_STANDARD",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH8_EX31_BILLING_SERVICE_FROM_ORDER",
+      "object_type": "BILLING",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 31,
+          "page": 293,
+          "raw_excerpt": "Créer le document de facturation avec référence au document précédent",
+          "scenario_id": "S4600_CH8_EX31",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 31,
+          "page": 295,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH8_EX31",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 31,
+          "page": 294,
+          "raw_excerpt": "aujourd'hui + 14 jours",
+          "scenario_id": "S4600_CH8_EX31",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Facture avec référence à la commande client"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 31,
+          "page": 296,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH8_EX31",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Facture avec référence à la commande client"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH8_EX31",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "availability_check": null,
+        "base_unit": "H",
+        "delivering_plant": "1010",
+        "description": null,
+        "distribution_channel": "10",
+        "industry_sector": null,
+        "item_category_group": "LEIS",
+        "material_id": "T-D1##",
+        "material_type": "DIEN",
+        "minimum_order_quantity": null,
+        "minimum_order_unit": null,
+        "plants": [
+          "1010"
+        ],
+        "sales_organization": "1010",
+        "sales_text": null,
+        "strategy_group": null,
+        "tax_classification": null
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH8_EX31_MATERIAL_T-D1-GROUP",
+      "object_type": "MATERIAL",
+      "placeholders": [
+        {
+          "field_path": "data.material_id",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 31,
+          "page": 293,
+          "raw_excerpt": "T-D1##; division 1010; organisation commerciale 1010; canal 10",
+          "scenario_id": "S4600_CH8_EX31",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Produit de service / type d'article / groupe de types de poste"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 31,
+          "page": 295,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH8_EX31",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Le type d'article DIEN; groupe de types de poste LEIS"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH8_EX31",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "customer_reference": "8-6##",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": "TAD",
+            "line_id": "10",
+            "material": "T-D1##",
+            "quantity": 3,
+            "unit": "H"
+          }
+        ],
+        "order_type": "CDCL",
+        "requested_delivery_date": null,
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "T-S50A##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-D1##",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH8_EX31_MATERIAL_T-D1-GROUP",
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH8_EX31_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 31,
+          "page": 293,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 8-6##",
+          "scenario_id": "S4600_CH8_EX31",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "chapter": 8,
+          "course_code": "S4600",
+          "exercise": 31,
+          "page": 295,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH8_EX31",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH8_EX31",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_subtype": "CREDIT_MEMO",
+        "billing_type": null,
+        "down_payments": [],
+        "installment_payments": [],
+        "items": [],
+        "payer": null,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "document créé à l'étape précédente",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH9_EX32_CREDIT_MEMO_REQUEST_DNC",
+          "target_type": "CREDIT_MEMO_REQUEST"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH9_EX32_BILLING_CREDIT_MEMO_FROM_REQUEST",
+      "object_type": "BILLING",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 32,
+          "page": 309,
+          "raw_excerpt": "Créer le document de facturation avec référence au document précédent",
+          "scenario_id": "S4600_CH9_EX32",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 32,
+          "page": 311,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH9_EX32",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 32,
+          "page": 310,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH9_EX32",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Avoir avec référence à la demande d'avoir"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 32,
+          "page": 314,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH9_EX32",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Créer l'avoir pour la demande d'avoir"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH9_EX32",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "billing_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "Date du jour + 1 semaine"
+        },
+        "billing_plan": null,
+        "billing_subtype": "STANDARD",
+        "billing_type": null,
+        "down_payments": [],
+        "installment_payments": [],
+        "items": [],
+        "payer": null,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "document créé à l'étape précédente",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH9_EX32_OUTBOUND_DELIVERY_FROM_EX32_ORDER",
+          "target_type": "OUTBOUND_DELIVERY"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH9_EX32_BILLING_STANDARD_FROM_DELIVERY",
+      "object_type": "BILLING",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 32,
+          "page": 309,
+          "raw_excerpt": "Créer le document de facturation avec référence au document précédent",
+          "scenario_id": "S4600_CH9_EX32",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 32,
+          "page": 311,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH9_EX32",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 32,
+          "page": 310,
+          "raw_excerpt": "Dates de facturation jusqu'au Date du jour + 1 semaine",
+          "scenario_id": "S4600_CH9_EX32",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Document de facturation avec référence à la livraison"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 32,
+          "page": 313,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH9_EX32",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Document de facturation avec référence à la livraison"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH9_EX32",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "document_type": "DNC",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-MS1##",
+            "quantity": 3,
+            "unit": "PC"
+          }
+        ],
+        "reason": "Endommagé lors du transport",
+        "reference_document": null,
+        "sold_to_party": "T-S50A##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "CREATED_FROM",
+          "source_phrase": "avec référence au document de facturation",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH9_EX32_BILLING_STANDARD_FROM_DELIVERY",
+          "target_type": "BILLING"
+        },
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH9_EX32_CREDIT_MEMO_REQUEST_DNC",
+      "object_type": "CREDIT_MEMO_REQUEST",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 32,
+          "page": 309,
+          "raw_excerpt": "DNC; Endommagé lors du transport; 3 phares",
+          "scenario_id": "S4600_CH9_EX32",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Motif / quantité"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 32,
+          "page": 311,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH9_EX32",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Motif / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH9_EX32",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_reference": null,
+        "items": [],
+        "movement_reference": null,
+        "posting_date": "Date du jour"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "POSTED_FOR",
+          "source_phrase": "livraison créée précédemment",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH9_EX32_OUTBOUND_DELIVERY_FROM_EX32_ORDER",
+          "target_type": "OUTBOUND_DELIVERY"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH9_EX32_GOODS_ISSUE_FROM_DELIVERY",
+      "object_type": "GOODS_ISSUE",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 32,
+          "page": 309,
+          "raw_excerpt": "Enregistrer la sortie de marchandises pour la livraison créée précédemment",
+          "scenario_id": "S4600_CH9_EX32",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Sortie de marchandises / livraison précédente"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 32,
+          "page": 311,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH9_EX32",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Sortie de marchandises / livraison précédente"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 32,
+          "page": 310,
+          "raw_excerpt": "livraison sortante qui vient d'être créée",
+          "scenario_id": "S4600_CH9_EX32",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Livraison créée / sortie de marchandises"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 32,
+          "page": 313,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH9_EX32",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Sortie de marchandises"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH9_EX32",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_type": null,
+        "items": [],
+        "planned_creation_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "Échue la semaine prochaine"
+        },
+        "planned_goods_issue_date": null,
+        "ship_to_party": null,
+        "shipping_point": "Z0##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "CREATED_FROM",
+          "source_phrase": "document créé à l'étape précédente",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH9_EX32_SALES_ORDER_STANDARD",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH9_EX32_OUTBOUND_DELIVERY_FROM_EX32_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "placeholders": [
+        {
+          "field_path": "data.shipping_point",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 32,
+          "page": 309,
+          "raw_excerpt": "Z0##; Échue la semaine prochaine",
+          "scenario_id": "S4600_CH9_EX32",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 32,
+          "page": 311,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH9_EX32",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH9_EX32",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "customer_reference": "9-1##",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-MS1##",
+            "quantity": 5,
+            "unit": "PC"
+          }
+        ],
+        "order_type": "CDCL",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans 1 semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "T-S50A##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH9_EX32_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 32,
+          "page": 309,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 9-1##",
+          "scenario_id": "S4600_CH9_EX32",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 32,
+          "page": 311,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH9_EX32",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH9_EX32",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_subtype": "CANCELLATION",
+        "billing_type": null,
+        "down_payments": [],
+        "installment_payments": [],
+        "items": [],
+        "payer": null,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "document créé à l'étape précédente",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH9_EX32_BILLING_CREDIT_MEMO_FROM_REQUEST",
+          "target_type": "BILLING"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH9_EX33_BILLING_CANCELLATION_OF_CREDIT_MEMO",
+      "object_type": "BILLING",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 33,
+          "page": 317,
+          "raw_excerpt": "Créer le document de facturation avec référence au document précédent",
+          "scenario_id": "S4600_CH9_EX33",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 33,
+          "page": 318,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH9_EX33",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Document de facturation / document de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH9_EX33",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "billing_date": null,
+        "billing_plan": null,
+        "billing_subtype": "CREDIT_MEMO",
+        "billing_type": null,
+        "down_payments": [],
+        "installment_payments": [],
+        "items": [],
+        "payer": null,
+        "reference_document": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BILLED_FROM",
+          "source_phrase": "document créé à l'étape précédente",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH9_EX34_RETURN_ORDER_RE",
+          "target_type": "RETURN_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH9_EX34_BILLING_CREDIT_MEMO_FROM_RETURN",
+      "object_type": "BILLING",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 34,
+          "page": 323,
+          "raw_excerpt": "Créer le document de facturation avec référence au document précédent",
+          "scenario_id": "S4600_CH9_EX34",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 34,
+          "page": 324,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH9_EX34",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 34,
+          "page": 325,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH9_EX34",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Avoir avec référence au document de retours"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH9_EX34",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_type": "RETURN",
+        "items": [],
+        "planned_creation_date": null,
+        "planned_goods_issue_date": null,
+        "ship_to_party": null,
+        "shipping_point": "Z0##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "CREATED_FROM",
+          "source_phrase": "document créé à l'étape précédente",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH9_EX34_RETURN_ORDER_RE",
+          "target_type": "RETURN_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH9_EX34_OUTBOUND_DELIVERY_RETURN_FROM_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "placeholders": [
+        {
+          "field_path": "data.shipping_point",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 34,
+          "page": 323,
+          "raw_excerpt": "Z0##; document créé à l'étape précédente",
+          "scenario_id": "S4600_CH9_EX34",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 34,
+          "page": 324,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH9_EX34",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 34,
+          "page": 325,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH9_EX34",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Livraison de retours"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH9_EX34",
+      "validation": {
+        "confidence": "LOW",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no extractable identifier"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical dependency is itself not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "document_type": "RE",
+        "items": [
+          {
+            "line_id": "10",
+            "material": "T-MS3##",
+            "plant": "1020",
+            "quantity": 3,
+            "unit": "PC"
+          }
+        ],
+        "reference_document": null,
+        "return_reason": "Écart quantité",
+        "sold_to_party": "T-S50A##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "T-S50A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": true,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "T-MS3##",
+          "status": "RESOLVED",
+          "target_id": "S4600_CH6_EX20_MATERIAL_T-MS3-GROUP",
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_CH9_EX34_RETURN_ORDER_RE",
+      "object_type": "RETURN_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 34,
+          "page": 323,
+          "raw_excerpt": "RE; Écart quantité; T-MS3##; 3 pièces; division 1020",
+          "scenario_id": "S4600_CH9_EX34",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Motif / Article / Quantité / Division"
+        },
+        {
+          "chapter": 9,
+          "course_code": "S4600",
+          "exercise": 34,
+          "page": 324,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH9_EX34",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Type commande client / Motif / Article / Quantité / Division"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4600_CH9_EX34",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "code": "10",
+        "description": null,
+        "sales_organization": "1010"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "BELONGS_TO",
+          "source_phrase": "Org. commerciale 1010",
+          "status": "RESOLVED",
+          "target_id": "S4600_SHARED_SALES_ORGANIZATION_1010",
+          "target_type": "SALES_ORGANIZATION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_SHARED_DISTRIBUTION_CHANNEL_10",
+      "object_type": "DISTRIBUTION_CHANNEL",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4600",
+          "exercise": 1,
+          "page": 21,
+          "raw_excerpt": "Org. commerciale 1010; Canal distrib. 10; Secteur d'activité 00",
+          "scenario_id": "S4600_CH1_EX1",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Org. commerciale / Canal distrib. / Secteur d'activité"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4600",
+          "exercise": 1,
+          "page": 22,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH1_EX1",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Org. commerciale / Canal distrib. / Secteur d'activité"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4600_CH1_EX1",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "distribution_channel": "10",
+        "sales_division": "00",
+        "sales_organization": "1010"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "USES",
+          "source_phrase": "Org. commerciale 1010",
+          "status": "RESOLVED",
+          "target_id": "S4600_SHARED_SALES_ORGANIZATION_1010",
+          "target_type": "SALES_ORGANIZATION"
+        },
+        {
+          "critical": true,
+          "relation": "USES",
+          "source_phrase": "Canal distrib. 10",
+          "status": "RESOLVED",
+          "target_id": "S4600_SHARED_DISTRIBUTION_CHANNEL_10",
+          "target_type": "DISTRIBUTION_CHANNEL"
+        },
+        {
+          "critical": true,
+          "relation": "USES",
+          "source_phrase": "Secteur d'activité 00",
+          "status": "RESOLVED",
+          "target_id": "S4600_SHARED_SALES_DIVISION_00",
+          "target_type": "SALES_DIVISION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_SHARED_SALES_AREA_1010_10_00",
+      "object_type": "SALES_AREA",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4600",
+          "exercise": 1,
+          "page": 21,
+          "raw_excerpt": "Org. commerciale 1010; Canal distrib. 10; Secteur d'activité 00",
+          "scenario_id": "S4600_CH1_EX1",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Org. commerciale / Canal distrib. / Secteur d'activité"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4600",
+          "exercise": 1,
+          "page": 22,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH1_EX1",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Org. commerciale / Canal distrib. / Secteur d'activité"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4600_CH1_EX1",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "code": "00",
+        "description": null
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_SHARED_SALES_DIVISION_00",
+      "object_type": "SALES_DIVISION",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4600",
+          "exercise": 1,
+          "page": 21,
+          "raw_excerpt": "Org. commerciale 1010; Canal distrib. 10; Secteur d'activité 00",
+          "scenario_id": "S4600_CH1_EX1",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Org. commerciale / Canal distrib. / Secteur d'activité"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4600",
+          "exercise": 1,
+          "page": 22,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH1_EX1",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Org. commerciale / Canal distrib. / Secteur d'activité"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4600_CH1_EX1",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "code": "1010",
+        "company_code": "1010",
+        "description": null
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "ASSIGNED_TO",
+          "source_phrase": "Société 1010",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "COMPANY_CODE"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4600_SHARED_SALES_ORGANIZATION_1010",
+      "object_type": "SALES_ORGANIZATION",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4600",
+          "exercise": 1,
+          "page": 21,
+          "raw_excerpt": "Org. commerciale 1010; Canal distrib. 10; Secteur d'activité 00",
+          "scenario_id": "S4600_CH1_EX1",
+          "section_type": "EXERCISE",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Org. commerciale / Canal distrib. / Secteur d'activité"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4600",
+          "exercise": 1,
+          "page": 22,
+          "raw_excerpt": null,
+          "scenario_id": "S4600_CH1_EX1",
+          "section_type": "SOLUTION",
+          "source_file": "P2W_S4600_FR_Col23.pdf",
+          "source_term": "Org. commerciale / Canal distrib. / Secteur d'activité"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4600_CH1_EX1",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    }
+  ]
+}

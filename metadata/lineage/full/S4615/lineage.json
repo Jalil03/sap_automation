@@ -1,0 +1,1120 @@
+{
+  "objects": [
+    {
+      "object_id": "S4615_SHARED_COMPANY_CODE_1010",
+      "scenario_id": "S4615_CH2_EX2",
+      "solution_enrichments": [
+        {
+          "page": 30,
+          "source_term": "Société affectée à l'organisation commerciale 1010"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 29,
+          "raw_excerpt": "1010",
+          "section_type": "EXERCISE",
+          "source_term": "Société affectée à l'organisation commerciale 1010"
+        },
+        {
+          "page": 30,
+          "raw_excerpt": "1010",
+          "section_type": "SOLUTION",
+          "source_term": "Société affectée à l'organisation commerciale 1010"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING",
+      "scenario_id": "S4615_CH3_EX3",
+      "solution_enrichments": [
+        {
+          "page": 43,
+          "source_term": "Type de facture par défaut pour commande/livraison Foire"
+        },
+        {
+          "page": 103,
+          "source_term": "Pilotage copie livraison vers facture"
+        },
+        {
+          "page": 148,
+          "source_term": "Données VBRK/VBRP"
+        },
+        {
+          "page": 241,
+          "source_term": "Numéro de référence / numéro d'affectation"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 41,
+          "raw_excerpt": "ZA## utilise ZF## pour la facturation liée à la commande ou à la livraison",
+          "section_type": "EXERCISE",
+          "source_term": "Type de facture par défaut pour commande/livraison Foire"
+        },
+        {
+          "page": 43,
+          "raw_excerpt": "ZA## utilise ZF## pour la facturation liée à la commande ou à la livraison",
+          "section_type": "SOLUTION",
+          "source_term": "Type de facture par défaut pour commande/livraison Foire"
+        },
+        {
+          "page": 103,
+          "raw_excerpt": "cible ZF##; source LF; poste TAN; détermination du prix H",
+          "section_type": "SOLUTION",
+          "source_term": "Pilotage copie livraison vers facture"
+        },
+        {
+          "page": 148,
+          "raw_excerpt": "cible ZF##; source LF; poste TAN; routine 3 Facture individuelle",
+          "section_type": "SOLUTION",
+          "source_term": "Données VBRK/VBRP"
+        },
+        {
+          "page": 241,
+          "raw_excerpt": "référence B (commande client); affectation E (facture actuelle)",
+          "section_type": "SOLUTION",
+          "source_term": "Numéro de référence / numéro d'affectation"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH1_EX1_BILLING_IMPORTED_A3",
+      "scenario_id": "S4615_CH1_EX1",
+      "solution_enrichments": [
+        {
+          "page": 16,
+          "source_term": "Commande d'achat / facture / modèle document / PR00 / secteur d'activité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 13,
+          "raw_excerpt": "##S4615-A3; facture importée; livraison non notée; PR00 1 400 EUR; secteur 03",
+          "section_type": "EXERCISE",
+          "source_term": "Commande d'achat / facture / modèle document / PR00 / secteur d'activité"
+        },
+        {
+          "page": 16,
+          "raw_excerpt": "pièce comptable créée; FI liquidé; PR00 1 400 EUR; secteur 03",
+          "section_type": "SOLUTION",
+          "source_term": "Commande d'achat / facture / modèle document / PR00 / secteur d'activité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH3_EX3_BILLING_F2_FROM_IMPORTED_DELIVERY",
+      "scenario_id": "S4615_CH3_EX3",
+      "solution_enrichments": [
+        {
+          "page": 43,
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 41,
+          "raw_excerpt": "F2; livraison de la commande d'achat ##S4615-A1",
+          "section_type": "EXERCISE",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "page": 43,
+          "raw_excerpt": "F2; livraison de la commande d'achat ##S4615-A1",
+          "section_type": "SOLUTION",
+          "source_term": "Type de facture / document de référence"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH3_EX3_SALES_ORDER_FAIR",
+      "scenario_id": "S4615_CH3_EX3",
+      "solution_enrichments": [
+        {
+          "page": 43,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 41,
+          "raw_excerpt": "ZA##; 1010/10/00; C615-A##; S4615-ZF##; P615-1##; 5 PC",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 43,
+          "raw_excerpt": "ZA##; 1010/10/00; C615-A##; S4615-ZF##; P615-1##; 5 PC",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH3_EX3_OUTBOUND_DELIVERY_FAIR",
+      "scenario_id": "S4615_CH3_EX3",
+      "solution_enrichments": [
+        {
+          "page": 43,
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 41,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 5 PC",
+          "section_type": "EXERCISE",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        },
+        {
+          "page": 43,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 5 PC",
+          "section_type": "SOLUTION",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH3_EX3_BILLING_FAIR",
+      "scenario_id": "S4615_CH3_EX3",
+      "solution_enrichments": [
+        {
+          "page": 43,
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 41,
+          "raw_excerpt": "ZF##; livraison de la commande Foire ##",
+          "section_type": "EXERCISE",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "page": 43,
+          "raw_excerpt": "ZF##; livraison de la commande Foire ##",
+          "section_type": "SOLUTION",
+          "source_term": "Type de facture / document de référence"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH4_EX4_BILLING_ORIGINAL_F2",
+      "scenario_id": "S4615_CH4_EX4",
+      "solution_enrichments": [
+        {
+          "page": 63,
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 61,
+          "raw_excerpt": "F2; commande portant la référence ##S4615-A4",
+          "section_type": "EXERCISE",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "page": 63,
+          "raw_excerpt": "F2; commande portant la référence ##S4615-A4",
+          "section_type": "SOLUTION",
+          "source_term": "Type de facture / document de référence"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH4_EX4_COPY_CONTROL_F2_TO_RK",
+      "scenario_id": "S4615_CH4_EX4",
+      "solution_enrichments": [
+        {
+          "page": 63,
+          "source_term": "Pilotage copie facture vers document de vente"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 61,
+          "raw_excerpt": "source F2; cible RK; poste TAN; propositions débit/crédit et détermination du prix",
+          "section_type": "EXERCISE",
+          "source_term": "Pilotage copie facture vers document de vente"
+        },
+        {
+          "page": 63,
+          "raw_excerpt": "source F2; cible RK; poste TAN; propositions débit/crédit et détermination du prix",
+          "section_type": "SOLUTION",
+          "source_term": "Pilotage copie facture vers document de vente"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH4_EX4_BILLING_CREDIT_MEMO",
+      "scenario_id": "S4615_CH4_EX4",
+      "solution_enrichments": [
+        {
+          "page": 63,
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 61,
+          "raw_excerpt": "type non indiqué; demande de correction de facture créée depuis la facture F2",
+          "section_type": "EXERCISE",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "page": 63,
+          "raw_excerpt": "type non indiqué; demande de correction de facture créée depuis la facture F2",
+          "section_type": "SOLUTION",
+          "source_term": "Type de facture / document de référence"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+      "scenario_id": "S4615_CH4_EX5",
+      "solution_enrichments": [
+        {
+          "page": 75,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 73,
+          "raw_excerpt": "BV; 1010/10/00; C615-D##; ##S4615-BV; P615-4##; 1 PC",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 75,
+          "raw_excerpt": "BV; 1010/10/00; C615-D##; ##S4615-BV; P615-4##; 1 PC",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH4_EX5_OUTBOUND_DELIVERY_CASH_SALE",
+      "scenario_id": "S4615_CH4_EX5",
+      "solution_enrichments": [
+        {
+          "page": 75,
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 73,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 1 PC",
+          "section_type": "EXERCISE",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        },
+        {
+          "page": 75,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 1 PC",
+          "section_type": "SOLUTION",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH4_EX5_BILLING_CASH_SALE",
+      "scenario_id": "S4615_CH4_EX5",
+      "solution_enrichments": [
+        {
+          "page": 75,
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 73,
+          "raw_excerpt": "BV; vente au comptant BV",
+          "section_type": "EXERCISE",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "page": 75,
+          "raw_excerpt": "BV; vente au comptant BV",
+          "section_type": "SOLUTION",
+          "source_term": "Type de facture / document de référence"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH4_EX5_SALES_ORDER_PRO_FORMA",
+      "scenario_id": "S4615_CH4_EX5",
+      "solution_enrichments": [
+        {
+          "page": 75,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 73,
+          "raw_excerpt": "CDLC; 1010/10/00; C615-A##; ##S4615-PF; P615-2##; 5 PC",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 75,
+          "raw_excerpt": "CDLC; 1010/10/00; C615-A##; ##S4615-PF; P615-2##; 5 PC",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH4_EX5_BILLING_PRO_FORMA",
+      "scenario_id": "S4615_CH4_EX5",
+      "solution_enrichments": [
+        {
+          "page": 75,
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 73,
+          "raw_excerpt": "F5; commande avant livraison",
+          "section_type": "EXERCISE",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "page": 75,
+          "raw_excerpt": "F5; commande avant livraison",
+          "section_type": "SOLUTION",
+          "source_term": "Type de facture / document de référence"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH5_EX6_BILLING_F1_OVERRIDE",
+      "scenario_id": "S4615_CH5_EX6",
+      "solution_enrichments": [
+        {
+          "page": 100,
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 97,
+          "raw_excerpt": "F1; livraison de la commande d'achat ##S4615-A5",
+          "section_type": "EXERCISE",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "page": 100,
+          "raw_excerpt": "F1; livraison de la commande d'achat ##S4615-A5",
+          "section_type": "SOLUTION",
+          "source_term": "Type de facture / document de référence"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH5_EX6_SALES_ORDER_FAIR_FREIGHT",
+      "scenario_id": "S4615_CH5_EX6",
+      "solution_enrichments": [
+        {
+          "page": 100,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 97,
+          "raw_excerpt": "ZA##; 1010/10/00; C615-D##; ##fret; P615-1##; 1 PC",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 100,
+          "raw_excerpt": "ZA##; 1010/10/00; C615-D##; ##fret; P615-1##; 1 PC",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH5_EX6_OUTBOUND_DELIVERY_FAIR_FREIGHT",
+      "scenario_id": "S4615_CH5_EX6",
+      "solution_enrichments": [
+        {
+          "page": 100,
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 97,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 1 PC",
+          "section_type": "EXERCISE",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        },
+        {
+          "page": 100,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 1 PC",
+          "section_type": "SOLUTION",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH5_EX6_BILLING_FAIR_FREIGHT",
+      "scenario_id": "S4615_CH5_EX6",
+      "solution_enrichments": [
+        {
+          "page": 100,
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 97,
+          "raw_excerpt": "ZF##; livraison Foire avec frais de transport",
+          "section_type": "EXERCISE",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "page": 100,
+          "raw_excerpt": "ZF##; livraison Foire avec frais de transport",
+          "section_type": "SOLUTION",
+          "source_term": "Type de facture / document de référence"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH6_EX7_SALES_ORDER_MONTH_END",
+      "scenario_id": "S4615_CH6_EX7",
+      "solution_enrichments": [
+        {
+          "page": 123,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 119,
+          "raw_excerpt": "CDLC; 1010/10/00; C615-B##; ##-mois; P615-2##; 2 PC",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 123,
+          "raw_excerpt": "CDLC; 1010/10/00; C615-B##; ##-mois; P615-2##; 2 PC",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH6_EX7_OUTBOUND_DELIVERY_MONTH_END",
+      "scenario_id": "S4615_CH6_EX7",
+      "solution_enrichments": [
+        {
+          "page": 123,
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 119,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 2 PC",
+          "section_type": "EXERCISE",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        },
+        {
+          "page": 123,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 2 PC",
+          "section_type": "SOLUTION",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH6_EX7_BILLING_MONTH_END",
+      "scenario_id": "S4615_CH6_EX7",
+      "solution_enrichments": [
+        {
+          "page": 123,
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 119,
+          "raw_excerpt": "type non indiqué; livraison facturée à la fin du mois",
+          "section_type": "EXERCISE",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "page": 123,
+          "raw_excerpt": "type non indiqué; livraison facturée à la fin du mois",
+          "section_type": "SOLUTION",
+          "source_term": "Type de facture / document de référence"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH6_EX7_SALES_ORDER_FIORI_APP_FINAL",
+      "scenario_id": "S4615_CH6_EX7",
+      "solution_enrichments": [
+        {
+          "page": 127,
+          "source_term": "Commande CDLC / référence / date / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 121,
+          "raw_excerpt": "CDLC; ##-app-1; dans une semaine; P-Service; quantité initiale 10 puis 8",
+          "section_type": "EXERCISE",
+          "source_term": "Commande CDLC / référence / date / article / quantité"
+        },
+        {
+          "page": 127,
+          "raw_excerpt": "CDLC; ##-app-1; dans une semaine; P-Service; quantité initiale 10 puis 8",
+          "section_type": "SOLUTION",
+          "source_term": "Commande CDLC / référence / date / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH6_EX7_BILLING_FIORI_APP_CANCELLED",
+      "scenario_id": "S4615_CH6_EX7",
+      "solution_enrichments": [
+        {
+          "page": 128,
+          "source_term": "Facture Fiori / statut / écriture comptable"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 121,
+          "raw_excerpt": "facture sauvegardée, À enregistrer, aucune écriture, puis annulée",
+          "section_type": "EXERCISE",
+          "source_term": "Facture Fiori / statut / écriture comptable"
+        },
+        {
+          "page": 128,
+          "raw_excerpt": "facture sauvegardée, À enregistrer, aucune écriture, puis annulée",
+          "section_type": "SOLUTION",
+          "source_term": "Facture Fiori / statut / écriture comptable"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH6_EX7_BILLING_FIORI_APP_POSTED",
+      "scenario_id": "S4615_CH6_EX7",
+      "solution_enrichments": [
+        {
+          "page": 129,
+          "source_term": "Nouvelle facture / quantité / écriture comptable"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 122,
+          "raw_excerpt": "quantité 8; facture sauvegardée puis enregistrée; écriture Non rapprochée",
+          "section_type": "EXERCISE",
+          "source_term": "Nouvelle facture / quantité / écriture comptable"
+        },
+        {
+          "page": 129,
+          "raw_excerpt": "quantité 8; facture sauvegardée puis enregistrée; écriture Non rapprochée",
+          "section_type": "SOLUTION",
+          "source_term": "Nouvelle facture / quantité / écriture comptable"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH7_EX9_BILLING_SPLIT_1",
+      "scenario_id": "S4615_CH7_EX9",
+      "solution_enrichments": [
+        {
+          "page": 147,
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 145,
+          "raw_excerpt": "F1; première livraison de l'échéancier",
+          "section_type": "EXERCISE",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "page": 147,
+          "raw_excerpt": "F1; première livraison de l'échéancier",
+          "section_type": "SOLUTION",
+          "source_term": "Type de facture / document de référence"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH7_EX9_BILLING_SPLIT_2",
+      "scenario_id": "S4615_CH7_EX9",
+      "solution_enrichments": [
+        {
+          "page": 147,
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 145,
+          "raw_excerpt": "F1; livraison liée à la commande ##S4615-A10",
+          "section_type": "EXERCISE",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "page": 147,
+          "raw_excerpt": "F1; livraison liée à la commande ##S4615-A10",
+          "section_type": "SOLUTION",
+          "source_term": "Type de facture / document de référence"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST_SOURCE_A11",
+      "scenario_id": "S4615_CH7_DEMO_INVOICE_LIST",
+      "solution_enrichments": [],
+      "source_to_canonical": [
+        {
+          "page": 152,
+          "raw_excerpt": "00S4615-A11 C615-GB00; 00S4615-A12 C615-GA00; payeur C615-GC00",
+          "section_type": "DEMONSTRATION",
+          "source_term": "Commande d'achat / client / payeur"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST_SOURCE_A12",
+      "scenario_id": "S4615_CH7_DEMO_INVOICE_LIST",
+      "solution_enrichments": [],
+      "source_to_canonical": [
+        {
+          "page": 152,
+          "raw_excerpt": "00S4615-A11 C615-GB00; 00S4615-A12 C615-GA00; payeur C615-GC00",
+          "section_type": "DEMONSTRATION",
+          "source_term": "Commande d'achat / client / payeur"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST",
+      "scenario_id": "S4615_CH7_DEMO_INVOICE_LIST",
+      "solution_enrichments": [],
+      "source_to_canonical": [
+        {
+          "page": 153,
+          "raw_excerpt": "liste sauvegardée pour C615-GC00 contenant les deux documents de facturation",
+          "section_type": "DEMONSTRATION",
+          "source_term": "Relevé de factures"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH8_EX10_BILLING_PERIODIC_FIRST_PERIOD",
+      "scenario_id": "S4615_CH8_EX10",
+      "solution_enrichments": [
+        {
+          "page": 175,
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 173,
+          "raw_excerpt": "type non indiqué; contrat de maintenance WV ##S6415-PB",
+          "section_type": "EXERCISE",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "page": 175,
+          "raw_excerpt": "type non indiqué; contrat de maintenance WV ##S6415-PB",
+          "section_type": "SOLUTION",
+          "source_term": "Type de facture / document de référence"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH8_EX11_SALES_ORDER_DOWN_PAYMENT",
+      "scenario_id": "S4615_CH8_EX11",
+      "solution_enrichments": [
+        {
+          "page": 192,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 189,
+          "raw_excerpt": "CDLC; 1010/10/00; C615-F##; ##S4615-AZ; P615-6##; 1 PC",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 192,
+          "raw_excerpt": "CDLC; 1010/10/00; C615-F##; ##S4615-AZ; P615-6##; 1 PC",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH8_EX11_BILLING_DOWN_PAYMENT_REQUEST",
+      "scenario_id": "S4615_CH8_EX11",
+      "solution_enrichments": [
+        {
+          "page": 192,
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 189,
+          "raw_excerpt": "FAZ; commande avec calendrier d'acompte",
+          "section_type": "EXERCISE",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "page": 192,
+          "raw_excerpt": "FAZ; commande avec calendrier d'acompte",
+          "section_type": "SOLUTION",
+          "source_term": "Type de facture / document de référence"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH8_EX11_PAYMENT_REFERENCE_DOWN_PAYMENT",
+      "scenario_id": "S4615_CH8_EX11",
+      "solution_enrichments": [
+        {
+          "page": 192,
+          "source_term": "Acompte / compte bancaire / code CGS / montant"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 189,
+          "raw_excerpt": "client C615-F##; compte 11100025; code A; montant acompte + TVA = 33000",
+          "section_type": "EXERCISE",
+          "source_term": "Acompte / compte bancaire / code CGS / montant"
+        },
+        {
+          "page": 192,
+          "raw_excerpt": "client C615-F##; compte 11100025; code A; montant acompte + TVA = 33000",
+          "section_type": "SOLUTION",
+          "source_term": "Acompte / compte bancaire / code CGS / montant"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH8_EX11_BILLING_FIRST_PARTIAL",
+      "scenario_id": "S4615_CH8_EX11",
+      "solution_enrichments": [
+        {
+          "page": 192,
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 189,
+          "raw_excerpt": "type non indiqué; première période de décompte",
+          "section_type": "EXERCISE",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "page": 192,
+          "raw_excerpt": "type non indiqué; première période de décompte",
+          "section_type": "SOLUTION",
+          "source_term": "Type de facture / document de référence"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_SALES_ORDER_INSTALLMENT",
+      "scenario_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS",
+      "solution_enrichments": [],
+      "source_to_canonical": [
+        {
+          "page": 200,
+          "raw_excerpt": "OR; 1010/10/00; C615-A00; 4712; R001; P615-100; 10 PC",
+          "section_type": "DEMONSTRATION",
+          "source_term": "Conditions de paiement / commande / article"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_OUTBOUND_DELIVERY_INSTALLMENT",
+      "scenario_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS",
+      "solution_enrichments": [],
+      "source_to_canonical": [
+        {
+          "page": 200,
+          "raw_excerpt": "OR; 1010/10/00; C615-A00; 4712; R001; P615-100; 10 PC",
+          "section_type": "DEMONSTRATION",
+          "source_term": "Conditions de paiement / commande / article"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_BILLING_INSTALLMENT",
+      "scenario_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS",
+      "solution_enrichments": [],
+      "source_to_canonical": [
+        {
+          "page": 200,
+          "raw_excerpt": "OR; 1010/10/00; C615-A00; 4712; R001; P615-100; 10 PC",
+          "section_type": "DEMONSTRATION",
+          "source_term": "Conditions de paiement / commande / article"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH9_EX12_ACCOUNT_DETERMINATION_AFFILIATED_REVENUE",
+      "scenario_id": "S4615_CH9_EX12",
+      "solution_enrichments": [
+        {
+          "page": 216,
+          "source_term": "Table 001 / application / type de condition / plan comptable / organisation commerciale / groupes d'imputation / clé / compte"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 213,
+          "raw_excerpt": "001; V; KOFI; YCOA; 1010; 80+##; 01; ERL; 49000000",
+          "section_type": "EXERCISE",
+          "source_term": "Table 001 / application / type de condition / plan comptable / organisation commerciale / groupes d'imputation / clé / compte"
+        },
+        {
+          "page": 216,
+          "raw_excerpt": "001; V; KOFI; YCOA; 1010; 80+##; 01; ERL; 49000000",
+          "section_type": "SOLUTION",
+          "source_term": "Table 001 / application / type de condition / plan comptable / organisation commerciale / groupes d'imputation / clé / compte"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH9_EX12_SALES_ORDER_ACCOUNT_DETERMINATION_TEST",
+      "scenario_id": "S4615_CH9_EX12",
+      "solution_enrichments": [
+        {
+          "page": 216,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 213,
+          "raw_excerpt": "CDLC; 1010/10/00; C615-B##; ##S4615-KO; P615-1##; 1 PC",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 216,
+          "raw_excerpt": "CDLC; 1010/10/00; C615-B##; ##S4615-KO; P615-1##; 1 PC",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH9_EX12_OUTBOUND_DELIVERY_ACCOUNT_DETERMINATION_TEST",
+      "scenario_id": "S4615_CH9_EX12",
+      "solution_enrichments": [
+        {
+          "page": 216,
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 213,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 1 PC",
+          "section_type": "EXERCISE",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        },
+        {
+          "page": 216,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 1 PC",
+          "section_type": "SOLUTION",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH9_EX12_BILLING_ACCOUNT_DETERMINATION_TEST",
+      "scenario_id": "S4615_CH9_EX12",
+      "solution_enrichments": [
+        {
+          "page": 216,
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 213,
+          "raw_excerpt": "type non indiqué; livraison de la commande ##S4615-KO",
+          "section_type": "EXERCISE",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "page": 216,
+          "raw_excerpt": "type non indiqué; livraison de la commande ##S4615-KO",
+          "section_type": "SOLUTION",
+          "source_term": "Type de facture / document de référence"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH10_EX13_SALES_ORDER_POSTING_BLOCK",
+      "scenario_id": "S4615_CH10_EX13",
+      "solution_enrichments": [
+        {
+          "page": 238,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 235,
+          "raw_excerpt": "ZA##; 1010/10/00; C615-A##; ##S4615-BS; P615-1##; 1 PC",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 238,
+          "raw_excerpt": "ZA##; 1010/10/00; C615-A##; ##S4615-BS; P615-1##; 1 PC",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH10_EX13_OUTBOUND_DELIVERY_POSTING_BLOCK",
+      "scenario_id": "S4615_CH10_EX13",
+      "solution_enrichments": [
+        {
+          "page": 238,
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 235,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 1 PC",
+          "section_type": "EXERCISE",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        },
+        {
+          "page": 238,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 1 PC",
+          "section_type": "SOLUTION",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH10_EX13_BILLING_POSTING_BLOCK",
+      "scenario_id": "S4615_CH10_EX13",
+      "solution_enrichments": [
+        {
+          "page": 238,
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 235,
+          "raw_excerpt": "ZF##; livraison de la commande Foire ##",
+          "section_type": "EXERCISE",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "page": 238,
+          "raw_excerpt": "ZF##; livraison de la commande Foire ##",
+          "section_type": "SOLUTION",
+          "source_term": "Type de facture / document de référence"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH10_EX13_SALES_ORDER_FI_REFERENCE",
+      "scenario_id": "S4615_CH10_EX13",
+      "solution_enrichments": [
+        {
+          "page": 238,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 235,
+          "raw_excerpt": "ZA##; 1010/10/00; C615-A##; ##S4615-Réf; P615-1##; 1 PC",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 238,
+          "raw_excerpt": "ZA##; 1010/10/00; C615-A##; ##S4615-Réf; P615-1##; 1 PC",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH10_EX13_OUTBOUND_DELIVERY_FI_REFERENCE",
+      "scenario_id": "S4615_CH10_EX13",
+      "solution_enrichments": [
+        {
+          "page": 238,
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 235,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 1 PC",
+          "section_type": "EXERCISE",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        },
+        {
+          "page": 238,
+          "raw_excerpt": "livraison de la commande précédente; 1010; 1 PC",
+          "section_type": "SOLUTION",
+          "source_term": "Livraison sortante / point d'expédition / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4615_CH10_EX13_BILLING_FI_REFERENCE",
+      "scenario_id": "S4615_CH10_EX13",
+      "solution_enrichments": [
+        {
+          "page": 238,
+          "source_term": "Type de facture / document de référence"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 235,
+          "raw_excerpt": "ZF##; livraison de la commande Foire ##",
+          "section_type": "EXERCISE",
+          "source_term": "Type de facture / document de référence"
+        },
+        {
+          "page": 238,
+          "raw_excerpt": "ZF##; livraison de la commande Foire ##",
+          "section_type": "SOLUTION",
+          "source_term": "Type de facture / document de référence"
+        }
+      ]
+    }
+  ]
+}

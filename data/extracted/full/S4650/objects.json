@@ -1,0 +1,2746 @@
+{
+  "objects": [
+    {
+      "blocking_reasons": [],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "code": "1010",
+        "company_code": null,
+        "description": null
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH1_EX1_SALES_ORGANIZATION_1010",
+      "object_type": "SALES_ORGANIZATION",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4650",
+          "exercise": 1,
+          "page": 17,
+          "raw_excerpt": "1010",
+          "scenario_id": "S4650_CH1_EX1",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Organisation commerciale"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4650",
+          "exercise": 1,
+          "page": 18,
+          "raw_excerpt": "1010",
+          "scenario_id": "S4650_CH1_EX1",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Organisation commerciale"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4650_CH1_EX1",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "code": "D# or E#",
+        "description": "Canal groupe ##",
+        "sales_organization": "1010"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "ASSIGNED_TO",
+          "source_phrase": "affecter à l'organisation commerciale 1010",
+          "status": "RESOLVED",
+          "target_id": "S4650_CH1_EX1_SALES_ORGANIZATION_1010",
+          "target_type": "SALES_ORGANIZATION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH1_EX1_DISTRIBUTION_CHANNEL_GROUP",
+      "object_type": "DISTRIBUTION_CHANNEL",
+      "placeholders": [
+        {
+          "field_path": "data.description",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4650",
+          "exercise": 1,
+          "page": 17,
+          "raw_excerpt": "D# ou E# selon groupe; Canal groupe ##",
+          "scenario_id": "S4650_CH1_EX1",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Canal de distribution / désignation"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4650",
+          "exercise": 1,
+          "page": 18,
+          "raw_excerpt": "D1-D0 pour groupes 01-10; E1-E0 pour groupes 11-20; Canal groupe ##",
+          "scenario_id": "S4650_CH1_EX1",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Canal de distribution / désignation"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH1_EX1",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "code": "00",
+        "description": null
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH1_EX1_SALES_DIVISION_00",
+      "object_type": "SALES_DIVISION",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4650",
+          "exercise": 1,
+          "page": 17,
+          "raw_excerpt": "00",
+          "scenario_id": "S4650_CH1_EX1",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Secteur d'activité"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4650",
+          "exercise": 1,
+          "page": 18,
+          "raw_excerpt": "00",
+          "scenario_id": "S4650_CH1_EX1",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Secteur d'activité"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4650_CH1_EX1",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "code": "03",
+        "description": null
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH1_EX1_SALES_DIVISION_03",
+      "object_type": "SALES_DIVISION",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4650",
+          "exercise": 1,
+          "page": 17,
+          "raw_excerpt": "03",
+          "scenario_id": "S4650_CH1_EX1",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Secteur d'activité"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4650",
+          "exercise": 1,
+          "page": 18,
+          "raw_excerpt": "03",
+          "scenario_id": "S4650_CH1_EX1",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Secteur d'activité"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4650_CH1_EX1",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "business_area_assignment_rule": "1",
+        "distribution_channel": "D# or E#",
+        "sales_division": "00",
+        "sales_organization": "1010"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "USES_SALES_ORGANIZATION",
+          "source_phrase": "1010",
+          "status": "RESOLVED",
+          "target_id": "S4650_CH1_EX1_SALES_ORGANIZATION_1010",
+          "target_type": "SALES_ORGANIZATION"
+        },
+        {
+          "critical": true,
+          "relation": "USES_DISTRIBUTION_CHANNEL",
+          "source_phrase": "canal créé",
+          "status": "RESOLVED",
+          "target_id": "S4650_CH1_EX1_DISTRIBUTION_CHANNEL_GROUP",
+          "target_type": "DISTRIBUTION_CHANNEL"
+        },
+        {
+          "critical": true,
+          "relation": "USES_SALES_DIVISION",
+          "source_phrase": "00",
+          "status": "RESOLVED",
+          "target_id": "S4650_CH1_EX1_SALES_DIVISION_00",
+          "target_type": "SALES_DIVISION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH1_EX1_SALES_AREA_GROUP_00",
+      "object_type": "SALES_AREA",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4650",
+          "exercise": 1,
+          "page": 17,
+          "raw_excerpt": "1010 / D# ou E# / 00; règle 1",
+          "scenario_id": "S4650_CH1_EX1",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Domaine commercial / règle d'affectation secteur d'activité"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4650",
+          "exercise": 1,
+          "page": 18,
+          "raw_excerpt": "1010 / D# ou E# / 00; règle 1",
+          "scenario_id": "S4650_CH1_EX1",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Domaine commercial / règle d'affectation secteur d'activité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH1_EX1",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "business_area_assignment_rule": "1",
+        "distribution_channel": "D# or E#",
+        "sales_division": "03",
+        "sales_organization": "1010"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "USES_SALES_ORGANIZATION",
+          "source_phrase": "1010",
+          "status": "RESOLVED",
+          "target_id": "S4650_CH1_EX1_SALES_ORGANIZATION_1010",
+          "target_type": "SALES_ORGANIZATION"
+        },
+        {
+          "critical": true,
+          "relation": "USES_DISTRIBUTION_CHANNEL",
+          "source_phrase": "canal créé",
+          "status": "RESOLVED",
+          "target_id": "S4650_CH1_EX1_DISTRIBUTION_CHANNEL_GROUP",
+          "target_type": "DISTRIBUTION_CHANNEL"
+        },
+        {
+          "critical": true,
+          "relation": "USES_SALES_DIVISION",
+          "source_phrase": "03",
+          "status": "RESOLVED",
+          "target_id": "S4650_CH1_EX1_SALES_DIVISION_03",
+          "target_type": "SALES_DIVISION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH1_EX1_SALES_AREA_GROUP_03",
+      "object_type": "SALES_AREA",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4650",
+          "exercise": 1,
+          "page": 17,
+          "raw_excerpt": "1010 / D# ou E# / 03; règle 1",
+          "scenario_id": "S4650_CH1_EX1",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Domaine commercial / règle d'affectation secteur d'activité"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4650",
+          "exercise": 1,
+          "page": 18,
+          "raw_excerpt": "1010 / D# ou E# / 03; règle 1",
+          "scenario_id": "S4650_CH1_EX1",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Domaine commercial / règle d'affectation secteur d'activité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH1_EX1",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "sales_organization": "1010",
+        "scope": [
+          "PRICING_CONDITIONS",
+          "CUSTOMER_MASTER",
+          "MATERIAL_MASTER"
+        ],
+        "source_distribution_channel": "10",
+        "source_sales_division": null,
+        "target_distribution_channel": "D# or E#",
+        "target_sales_division": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "TARGETS",
+          "source_phrase": "nouveau canal du groupe",
+          "status": "RESOLVED",
+          "target_id": "S4650_CH1_EX1_DISTRIBUTION_CHANNEL_GROUP",
+          "target_type": "DISTRIBUTION_CHANNEL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH1_EX2_SHARED_MASTER_DATA_ASSIGNMENT_CHANNEL_10",
+      "object_type": "SHARED_MASTER_DATA_ASSIGNMENT",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4650",
+          "exercise": 2,
+          "page": 27,
+          "raw_excerpt": "1010; source 10; cible D# ou E#; conditions, clients et articles",
+          "scenario_id": "S4650_CH1_EX2",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Canal de distribution commun"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4650",
+          "exercise": 2,
+          "page": 29,
+          "raw_excerpt": "1010; source 10; cible D# ou E#; conditions, clients et articles",
+          "scenario_id": "S4650_CH1_EX2",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Canal de distribution commun"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH1_EX2",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-2-2",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P650-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "CDCL",
+        "payment_terms": null,
+        "pricing_elements": [],
+        "processing_status": "SAVED",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C650-A##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C650-A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P650-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "USES_SHARED_MASTER_DATA",
+          "source_phrase": "accès au prix PR00 du canal 10",
+          "status": "RESOLVED",
+          "target_id": "S4650_CH1_EX2_SHARED_MASTER_DATA_ASSIGNMENT_CHANNEL_10",
+          "target_type": "SHARED_MASTER_DATA_ASSIGNMENT"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH1_EX2_SALES_ORDER_COMMON_MASTER_DATA_TEST",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4650",
+          "exercise": 2,
+          "page": 27,
+          "raw_excerpt": "CDCL; 1010/10/00; C650-A##; ##-2-2; P650-1##; 10",
+          "scenario_id": "S4650_CH1_EX2",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4650",
+          "exercise": 2,
+          "page": 29,
+          "raw_excerpt": "CDCL; 1010/10/00; C650-A##; ##-2-2; P650-1##; 10",
+          "scenario_id": "S4650_CH1_EX2",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH1_EX2",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "assignment_number_rule": null,
+        "billing_quantity_rule": null,
+        "copy_requirement": "002",
+        "data_transfer_routine": "951_VBAK",
+        "document_flow_update": null,
+        "grouping_requirement": null,
+        "header_data_transfer_routine": "951",
+        "item_data_transfer_routine": null,
+        "level": "HEADER",
+        "positive_negative_quantity": null,
+        "pricing_source": null,
+        "pricing_type": null,
+        "reference_number_rule": null,
+        "requirements": [
+          "002_DIFFERENT_CUSTOMER_ALLOWED"
+        ],
+        "source_document_type": "OF",
+        "source_item_category": null,
+        "target_document_type": "ZA##",
+        "target_item_category": null
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH2_EX3_COPY_CONTROL_OF_TO_ZA_GROUP",
+      "object_type": "COPY_CONTROL",
+      "placeholders": [
+        {
+          "field_path": "data.target_document_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4650",
+          "exercise": 3,
+          "page": 53,
+          "raw_excerpt": "OF -> ZA##; exigence 002; routine en-tête 951",
+          "scenario_id": "S4650_CH2_EX3",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Pilotage de la copie offre vers commande"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4650",
+          "exercise": 3,
+          "page": 58,
+          "raw_excerpt": "OF -> ZA##; exigence 002; routine en-tête 951",
+          "scenario_id": "S4650_CH2_EX3",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Pilotage de la copie offre vers commande"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH2_EX3",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "assignment_number_rule": null,
+        "billing_quantity_rule": null,
+        "copy_requirement": null,
+        "data_transfer_routine": null,
+        "document_flow_update": null,
+        "grouping_requirement": null,
+        "header_data_transfer_routine": null,
+        "item_data_transfer_routine": null,
+        "level": "HEADER_AND_ITEM",
+        "positive_negative_quantity": "BLANK",
+        "pricing_source": null,
+        "pricing_type": null,
+        "reference_number_rule": null,
+        "requirements": [
+          "DIFFERENT_CUSTOMER_ALLOWED"
+        ],
+        "source_document_type": "ZQ##",
+        "source_item_category": null,
+        "target_document_type": "OF",
+        "target_item_category": null
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH2_EX3_COPY_CONTROL_ZQ_GROUP_TO_OF",
+      "object_type": "COPY_CONTROL",
+      "placeholders": [
+        {
+          "field_path": "data.source_document_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4650",
+          "exercise": 3,
+          "page": 53,
+          "raw_excerpt": "ZQ## -> OF; client différent admis; quantité positive/négative vide",
+          "scenario_id": "S4650_CH2_EX3",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Pilotage de la copie offre de référence"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4650",
+          "exercise": 3,
+          "page": 58,
+          "raw_excerpt": "ZQ## -> OF; client différent admis; quantité positive/négative vide",
+          "scenario_id": "S4650_CH2_EX3",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Pilotage de la copie offre de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH2_EX3",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no canonical identifier"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-1-1.4",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P650-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": null,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "ZA##",
+        "payment_terms": null,
+        "pricing_elements": [],
+        "processing_status": "SAVED",
+        "requested_delivery_date": null,
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C650-B##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C650-B##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P650-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "CONTROLLED_BY",
+          "source_phrase": "OF vers ZA##",
+          "status": "RESOLVED",
+          "target_id": "S4650_CH2_EX3_COPY_CONTROL_OF_TO_ZA_GROUP",
+          "target_type": "COPY_CONTROL"
+        },
+        {
+          "critical": true,
+          "relation": "REFERENCES",
+          "source_phrase": "offre OF créée dans la tâche précédente",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "QUOTATION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_DIFFERENT_CUSTOMER",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.order_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4650",
+          "exercise": 3,
+          "page": 53,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-B##; ##-1-1.4; P650-1##; None",
+          "scenario_id": "S4650_CH2_EX3",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4650",
+          "exercise": 3,
+          "page": 58,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-B##; ##-1-1.4; P650-1##; None",
+          "scenario_id": "S4650_CH2_EX3",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH2_EX3",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no canonical identifier"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-1-2.6",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P650-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 4,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "ZA##",
+        "payment_terms": null,
+        "pricing_elements": [],
+        "processing_status": "SAVED",
+        "requested_delivery_date": null,
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C650-A##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C650-A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P650-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "CONTROLLED_BY",
+          "source_phrase": "OF vers ZA##",
+          "status": "RESOLVED",
+          "target_id": "S4650_CH2_EX3_COPY_CONTROL_OF_TO_ZA_GROUP",
+          "target_type": "COPY_CONTROL"
+        },
+        {
+          "critical": true,
+          "relation": "REFERENCES",
+          "source_phrase": "même offre OF",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "QUOTATION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_SAME_CUSTOMER",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.order_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4650",
+          "exercise": 3,
+          "page": 53,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-A##; ##-1-2.6; P650-1##; 4",
+          "scenario_id": "S4650_CH2_EX3",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4650",
+          "exercise": 3,
+          "page": 58,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-A##; ##-1-2.6; P650-1##; 4",
+          "scenario_id": "S4650_CH2_EX3",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4650",
+          "exercise": 6,
+          "page": 89,
+          "raw_excerpt": "commande avec référence ##-1-2.6",
+          "scenario_id": "S4650_CH3_EX6",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Commande créée précédemment"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4650",
+          "exercise": 6,
+          "page": 90,
+          "raw_excerpt": "objet VBBP; ID texte 0001",
+          "scenario_id": "S4650_CH3_EX6",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Source du texte article"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH2_EX3",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "assignment_number_rule": null,
+        "billing_quantity_rule": null,
+        "copy_requirement": "001_HEADER;101_ITEM",
+        "data_transfer_routine": null,
+        "document_flow_update": true,
+        "grouping_requirement": "051",
+        "header_data_transfer_routine": "001",
+        "item_data_transfer_routine": "699",
+        "level": "HEADER_AND_ITEM",
+        "positive_negative_quantity": null,
+        "pricing_source": null,
+        "pricing_type": null,
+        "reference_number_rule": null,
+        "requirements": [
+          "001_HEADER",
+          "101_ITEM"
+        ],
+        "source_document_type": "ZA##",
+        "source_item_category": null,
+        "target_document_type": "LF",
+        "target_item_category": "TAN"
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH2_EX4_COPY_CONTROL_ZA_GROUP_TO_LF",
+      "object_type": "COPY_CONTROL",
+      "placeholders": [
+        {
+          "field_path": "data.source_document_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4650",
+          "exercise": 4,
+          "page": 69,
+          "raw_excerpt": "ZA## -> LF; en-tête 001/051/001; poste TAN 101/699; flux mis à jour",
+          "scenario_id": "S4650_CH2_EX4",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Pilotage copie commande vers livraison"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4650",
+          "exercise": 4,
+          "page": 71,
+          "raw_excerpt": "ZA## -> LF; en-tête 001/051/001; poste TAN 101/699; flux mis à jour",
+          "scenario_id": "S4650_CH2_EX4",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Pilotage copie commande vers livraison"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH2_EX4",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no canonical identifier"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_type": "LF",
+        "items": [],
+        "planned_creation_date": {
+          "kind": "RELATIVE",
+          "offset": "P2W",
+          "raw": "aujourd'hui + 2 semaines"
+        },
+        "planned_goods_issue_date": null,
+        "ship_to_party": null,
+        "shipping_point": "1010",
+        "storage_location": null,
+        "system_representations": [],
+        "warehouse_number": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "CONTROLLED_BY",
+          "source_phrase": "ZA## vers LF",
+          "status": "RESOLVED",
+          "target_id": "S4650_CH2_EX4_COPY_CONTROL_ZA_GROUP_TO_LF",
+          "target_type": "COPY_CONTROL"
+        },
+        {
+          "critical": true,
+          "relation": "REFERENCES",
+          "source_phrase": "une des commandes créées précédemment",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH2_EX4_OUTBOUND_DELIVERY_HEADER_CONTROL_TEST",
+      "object_type": "OUTBOUND_DELIVERY",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4650",
+          "exercise": 4,
+          "page": 69,
+          "raw_excerpt": "commande créée précédemment; point d'expédition 1010; aujourd'hui + 2 semaines",
+          "scenario_id": "S4650_CH2_EX4",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Livraison sortante / point d'expédition / date de sélection"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4650",
+          "exercise": 4,
+          "page": 71,
+          "raw_excerpt": "commande créée précédemment; point d'expédition 1010; aujourd'hui + 2 semaines",
+          "scenario_id": "S4650_CH2_EX4",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Livraison sortante / point d'expédition / date de sélection"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH2_EX4",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no canonical identifier"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_type": "LF",
+        "items": [],
+        "planned_creation_date": {
+          "kind": "RELATIVE",
+          "offset": "P2W",
+          "raw": "aujourd'hui + 2 semaines"
+        },
+        "planned_goods_issue_date": null,
+        "ship_to_party": null,
+        "shipping_point": "1010",
+        "storage_location": null,
+        "system_representations": [],
+        "warehouse_number": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "CONTROLLED_BY",
+          "source_phrase": "ZA## vers LF",
+          "status": "RESOLVED",
+          "target_id": "S4650_CH2_EX4_COPY_CONTROL_ZA_GROUP_TO_LF",
+          "target_type": "COPY_CONTROL"
+        },
+        {
+          "critical": true,
+          "relation": "REFERENCES",
+          "source_phrase": "une des commandes créées précédemment",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH2_EX4_OUTBOUND_DELIVERY_ITEM_CONTROL_TEST",
+      "object_type": "OUTBOUND_DELIVERY",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4650",
+          "exercise": 4,
+          "page": 69,
+          "raw_excerpt": "commande créée précédemment; point d'expédition 1010; aujourd'hui + 2 semaines",
+          "scenario_id": "S4650_CH2_EX4",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Livraison sortante / point d'expédition / date de sélection"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4650",
+          "exercise": 4,
+          "page": 71,
+          "raw_excerpt": "commande créée précédemment; point d'expédition 1010; aujourd'hui + 2 semaines",
+          "scenario_id": "S4650_CH2_EX4",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Livraison sortante / point d'expédition / date de sélection"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH2_EX4",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "assignment_number_rule": null,
+        "billing_quantity_rule": null,
+        "copy_requirement": "003",
+        "data_transfer_routine": null,
+        "document_flow_update": null,
+        "grouping_requirement": null,
+        "header_data_transfer_routine": null,
+        "item_data_transfer_routine": null,
+        "level": "HEADER_AND_ITEM",
+        "positive_negative_quantity": null,
+        "pricing_source": "E_DELIVERY_OR_ORDER",
+        "pricing_type": "E",
+        "reference_number_rule": null,
+        "requirements": [
+          "003_DELIVERY_RELATED"
+        ],
+        "source_document_type": "LF",
+        "source_item_category": "TAN",
+        "target_document_type": "F2",
+        "target_item_category": null
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH2_EX5_COPY_CONTROL_LF_TO_F2",
+      "object_type": "COPY_CONTROL",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4650",
+          "exercise": 5,
+          "page": 75,
+          "raw_excerpt": "LF -> F2; exigence en-tête 003; poste TAN; source prix E",
+          "scenario_id": "S4650_CH2_EX5",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Pilotage copie livraison vers facture"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4650",
+          "exercise": 5,
+          "page": 76,
+          "raw_excerpt": "LF -> F2; exigence en-tête 003; poste TAN; source prix E",
+          "scenario_id": "S4650_CH2_EX5",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Pilotage copie livraison vers facture"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4650_CH2_EX5",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "access_sequence": null,
+        "all_languages": null,
+        "assigned_document_types": [
+          "ZA##"
+        ],
+        "assigned_item_categories": [],
+        "copy_reference_mode": null,
+        "description": "Material sales text determination result",
+        "level": "ITEM",
+        "procedure": null,
+        "requirement": null,
+        "source_text_id": "0001",
+        "source_text_object": "MATERIAL_SALES_TEXT",
+        "text_ids": [
+          "0001"
+        ],
+        "text_object": "VBBP"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "VERIFIES",
+          "source_phrase": "commande ##-1-2.6",
+          "status": "RESOLVED",
+          "target_id": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_SAME_CUSTOMER",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH3_EX6_TEXT_DETERMINATION_MATERIAL_SALES_TEXT",
+      "object_type": "TEXT_DETERMINATION",
+      "placeholders": [
+        {
+          "field_path": "data.assigned_document_types[0]",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 3,
+          "course_code": "S4650",
+          "exercise": 6,
+          "page": 89,
+          "raw_excerpt": "objet texte VBBP; ID 0001; texte de vente article",
+          "scenario_id": "S4650_CH3_EX6",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Origine du texte article"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4650",
+          "exercise": 6,
+          "page": 90,
+          "raw_excerpt": "objet texte VBBP; ID 0001; texte de vente article",
+          "scenario_id": "S4650_CH3_EX6",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Origine du texte article"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH3_EX6",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "access_sequence": "90##",
+        "all_languages": true,
+        "assigned_document_types": [
+          "ZA##"
+        ],
+        "assigned_item_categories": [],
+        "copy_reference_mode": "REFERENCE_COPY",
+        "description": "Texte en-tête–gr##",
+        "level": "HEADER",
+        "procedure": "50+##",
+        "requirement": "1",
+        "source_text_id": "Y001",
+        "source_text_object": "VBBK",
+        "text_ids": [
+          "Y001"
+        ],
+        "text_object": "VBBK"
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH3_EX7_TEXT_DETERMINATION_HEADER_GROUP",
+      "object_type": "TEXT_DETERMINATION",
+      "placeholders": [
+        {
+          "field_path": "data.procedure",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.access_sequence",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.description",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.assigned_document_types[0]",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 3,
+          "course_code": "S4650",
+          "exercise": 7,
+          "page": 109,
+          "raw_excerpt": "schéma 50+## copié de 01; séquence 90##; VBBK/Y001; exigence 1; ZA##",
+          "scenario_id": "S4650_CH3_EX7",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Schéma / séquence / ID texte en-tête"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4650",
+          "exercise": 7,
+          "page": 111,
+          "raw_excerpt": "schéma 50+## copié de 01; séquence 90##; VBBK/Y001; exigence 1; ZA##",
+          "scenario_id": "S4650_CH3_EX7",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Schéma / séquence / ID texte en-tête"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH3_EX7",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "UNRESOLVED_CRITICAL_DEPENDENCY",
+          "field_path": "dependencies",
+          "message": "A required source reference has no canonical identifier"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-2-4.3",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P650-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 1,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "ZA##",
+        "payment_terms": null,
+        "pricing_elements": [],
+        "processing_status": "SAVED",
+        "requested_delivery_date": null,
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C650-B##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C650-B##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P650-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "USES_TEXT_DETERMINATION",
+          "source_phrase": "texte en-tête copié",
+          "status": "RESOLVED",
+          "target_id": "S4650_CH3_EX7_TEXT_DETERMINATION_HEADER_GROUP",
+          "target_type": "TEXT_DETERMINATION"
+        },
+        {
+          "critical": true,
+          "relation": "REFERENCES",
+          "source_phrase": "offre OF ##-2-4.1",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "QUOTATION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH3_EX7_SALES_ORDER_HEADER_TEXT_FROM_QUOTATION",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.order_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 3,
+          "course_code": "S4650",
+          "exercise": 7,
+          "page": 109,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-B##; ##-2-4.3; P650-1##; 1",
+          "scenario_id": "S4650_CH3_EX7",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4650",
+          "exercise": 7,
+          "page": 111,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-B##; ##-2-4.3; P650-1##; 1",
+          "scenario_id": "S4650_CH3_EX7",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH3_EX7",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "account_assignment_group": null,
+        "addresses": [],
+        "company_code": null,
+        "currency": null,
+        "customer_pricing_procedure": null,
+        "delivering_plant": null,
+        "fax_number": "123456789",
+        "grouping": null,
+        "incoterms": null,
+        "incoterms_location": null,
+        "name": null,
+        "partner_functions": [],
+        "partner_id": "C650-A##",
+        "payment_terms": null,
+        "reconciliation_account": null,
+        "roles": [
+          "CUSTOMER",
+          "SOLD_TO_PARTY"
+        ],
+        "sales_areas": [
+          "1010/10/00"
+        ],
+        "shipping_conditions": null,
+        "tax_classifications": []
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH4_EX9_BUSINESS_PARTNER_C650_A_GROUP",
+      "object_type": "BUSINESS_PARTNER",
+      "placeholders": [
+        {
+          "field_path": "data.partner_id",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4650",
+          "exercise": 9,
+          "page": 137,
+          "raw_excerpt": "C650-A##; télécopie 123456789",
+          "scenario_id": "S4650_CH4_EX9",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Client / télécopie"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4650",
+          "exercise": 9,
+          "page": 139,
+          "raw_excerpt": "C650-A##; télécopie 123456789",
+          "scenario_id": "S4650_CH4_EX9",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Client / télécopie"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH4_EX9",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "access_sequence": "Z001",
+        "application_object_type": "SALES_DOCUMENT",
+        "channels": [
+          "FAX"
+        ],
+        "condition_records": [
+          {
+            "channel": "FAX",
+            "customer": "C650-A##",
+            "sales_organization": "1010",
+            "send_time": "3"
+          }
+        ],
+        "description": "Sales-order confirmation output",
+        "determination_rules": [
+          {
+            "sales_document_type": "ZA##"
+          }
+        ],
+        "form_template": null,
+        "framework": "NAST",
+        "key_combinations": [
+          {
+            "fields": [
+              "SALES_ORGANIZATION",
+              "DISTRIBUTION_CHANNEL",
+              "SALES_DIVISION",
+              "CUSTOMER"
+            ]
+          },
+          {
+            "fields": [
+              "SALES_ORGANIZATION",
+              "CUSTOMER"
+            ]
+          },
+          {
+            "fields": [
+              "SALES_DOCUMENT_TYPE"
+            ]
+          }
+        ],
+        "number_of_copies": null,
+        "output_types": [
+          "BA00"
+        ],
+        "partner_role": null,
+        "print_queue": null,
+        "procedure": "V10000",
+        "processing_routines": [],
+        "send_time": "3"
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH4_EX9_OUTPUT_DETERMINATION_BA00",
+      "object_type": "OUTPUT_DETERMINATION",
+      "placeholders": [
+        {
+          "field_path": "data.condition_records[0].customer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.determination_rules[0].sales_document_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4650",
+          "exercise": 9,
+          "page": 137,
+          "raw_excerpt": "V10000; BA00; Z001; 1010/C650-A##; FAX; date/heure 3",
+          "scenario_id": "S4650_CH4_EX9",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Détermination message BA00"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4650",
+          "exercise": 9,
+          "page": 139,
+          "raw_excerpt": "V10000; BA00; Z001; 1010/C650-A##; FAX; date/heure 3",
+          "scenario_id": "S4650_CH4_EX9",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Détermination message BA00"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH4_EX9",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-1-3",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P650-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "ZA##",
+        "payment_terms": null,
+        "pricing_elements": [],
+        "processing_status": "TESTED_SAVE_STATUS_AMBIGUOUS",
+        "requested_delivery_date": null,
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C650-A##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C650-A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P650-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "OUTPUT_BY",
+          "source_phrase": "BA00",
+          "status": "RESOLVED",
+          "target_id": "S4650_CH4_EX9_OUTPUT_DETERMINATION_BA00",
+          "target_type": "OUTPUT_DETERMINATION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH4_EX9_SALES_ORDER_BA00_OUTPUT_TEST",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.order_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4650",
+          "exercise": 9,
+          "page": 137,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-A##; ##-1-3; P650-1##; 10",
+          "scenario_id": "S4650_CH4_EX9",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4650",
+          "exercise": 9,
+          "page": 139,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-A##; ##-1-3; P650-1##; 10",
+          "scenario_id": "S4650_CH4_EX9",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH4_EX9",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "access_sequence": "0005",
+        "application_object_type": "OUTBOUND_DELIVERY",
+        "channels": [
+          "PRINT"
+        ],
+        "condition_records": [
+          {
+            "customer": "C650-A##",
+            "medium": "1",
+            "sales_organization": "1010",
+            "send_time": "3"
+          },
+          {
+            "customer": "C650-B##",
+            "medium": "1",
+            "sales_organization": "1010",
+            "send_time": "3"
+          }
+        ],
+        "description": "Special delivery note",
+        "determination_rules": [
+          {
+            "output_device": "LP01",
+            "shipping_point": "1010"
+          }
+        ],
+        "form_template": "LE_SHP_DELNOTE",
+        "framework": "NAST",
+        "key_combinations": [
+          {
+            "fields": [
+              "SALES_ORGANIZATION",
+              "CUSTOMER"
+            ]
+          }
+        ],
+        "number_of_copies": null,
+        "output_types": [
+          "ZLD0"
+        ],
+        "partner_role": null,
+        "print_queue": "LP01",
+        "procedure": "V10000",
+        "processing_routines": [
+          {
+            "form": "LE_SHP_DELNOTE",
+            "medium": "PRINT",
+            "program": "RLE_DELNOTE"
+          }
+        ],
+        "send_time": "3"
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH4_EX10_OUTPUT_DETERMINATION_ZLD0",
+      "object_type": "OUTPUT_DETERMINATION",
+      "placeholders": [
+        {
+          "field_path": "data.condition_records[0].customer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.condition_records[1].customer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4650",
+          "exercise": 10,
+          "page": 159,
+          "raw_excerpt": "ZLD0; V10000; séquence 0005; RLE_DELNOTE/LE_SHP_DELNOTE; LP01",
+          "scenario_id": "S4650_CH4_EX10",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Catégorie de message livraison"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4650",
+          "exercise": 10,
+          "page": 161,
+          "raw_excerpt": "ZLD0; V10000; séquence 0005; RLE_DELNOTE/LE_SHP_DELNOTE; LP01",
+          "scenario_id": "S4650_CH4_EX10",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Catégorie de message livraison"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH4_EX10",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-4-1",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P650-100",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "ZA##",
+        "payment_terms": null,
+        "pricing_elements": [],
+        "processing_status": "SAVED",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C650-A##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C650-A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P650-100",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "OUTPUT_CONTEXT",
+          "source_phrase": "livraison ZLD0",
+          "status": "RESOLVED",
+          "target_id": "S4650_CH4_EX10_OUTPUT_DETERMINATION_ZLD0",
+          "target_type": "OUTPUT_DETERMINATION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH4_EX10_SALES_ORDER_ZLD0_DELIVERY_SOURCE",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.order_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4650",
+          "exercise": 10,
+          "page": 159,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-A##; ##-4-1; P650-100; 10",
+          "scenario_id": "S4650_CH4_EX10",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4650",
+          "exercise": 10,
+          "page": 161,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-A##; ##-4-1; P650-100; 10",
+          "scenario_id": "S4650_CH4_EX10",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH4_EX10",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "delivery_type": null,
+        "items": [],
+        "planned_creation_date": {
+          "kind": "RELATIVE",
+          "offset": "NEXT_WEEK_END",
+          "raw": "fin de la semaine prochaine"
+        },
+        "planned_goods_issue_date": null,
+        "ship_to_party": null,
+        "shipping_point": "1010",
+        "storage_location": null,
+        "system_representations": [],
+        "warehouse_number": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "REFERENCES",
+          "source_phrase": "commande créée à l'étape précédente",
+          "status": "RESOLVED",
+          "target_id": "S4650_CH4_EX10_SALES_ORDER_ZLD0_DELIVERY_SOURCE",
+          "target_type": "SALES_ORDER"
+        },
+        {
+          "critical": true,
+          "relation": "OUTPUT_BY",
+          "source_phrase": "ZLD0",
+          "status": "RESOLVED",
+          "target_id": "S4650_CH4_EX10_OUTPUT_DETERMINATION_ZLD0",
+          "target_type": "OUTPUT_DETERMINATION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH4_EX10_OUTBOUND_DELIVERY_ZLD0_TEST",
+      "object_type": "OUTBOUND_DELIVERY",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4650",
+          "exercise": 10,
+          "page": 159,
+          "raw_excerpt": "commande précédente; point 1010; fin de la semaine prochaine; ZLD0",
+          "scenario_id": "S4650_CH4_EX10",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Livraison sortante / message ZLD0"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4650",
+          "exercise": 10,
+          "page": 161,
+          "raw_excerpt": "commande précédente; point 1010; fin de la semaine prochaine; ZLD0",
+          "scenario_id": "S4650_CH4_EX10",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Livraison sortante / message ZLD0"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH4_EX10",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "access_sequence": null,
+        "application_object_type": "SALES_DOCUMENT",
+        "channels": [
+          "PRINT"
+        ],
+        "condition_records": [],
+        "description": "Confirmation de commande Groupe ##",
+        "determination_rules": [
+          {
+            "document_category": "X",
+            "output_type": "ORDER_CONFIRMATION_##",
+            "sales_document_type": "ZA##",
+            "sales_organization": "1010_OPTIONAL",
+            "step": "OUTPUT_TYPE"
+          },
+          {
+            "exclusive": false,
+            "partner_role": "AG",
+            "step": "RECIPIENT"
+          },
+          {
+            "channel": "PRINT",
+            "exclusive": false,
+            "recipient": "C650-B##",
+            "step": "CHANNEL"
+          },
+          {
+            "confirmation_status": [
+              "C",
+              "BLANK"
+            ],
+            "relevant": true,
+            "step": "RELEVANCE"
+          }
+        ],
+        "form_template": "SD_SLS_ORDER_CONFIRM",
+        "framework": "NEW_OUTPUT_MANAGEMENT",
+        "key_combinations": [],
+        "number_of_copies": 1,
+        "output_types": [
+          "ORDER_CONFIRMATION_##"
+        ],
+        "partner_role": "AG",
+        "print_queue": "LP01",
+        "procedure": null,
+        "processing_routines": [],
+        "send_time": "1_IMMEDIATE"
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH4_EX11_OUTPUT_DETERMINATION_ORDER_CONFIRMATION_GROUP",
+      "object_type": "OUTPUT_DETERMINATION",
+      "placeholders": [
+        {
+          "field_path": "data.output_types[0]",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.description",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.determination_rules[0].sales_document_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.determination_rules[0].output_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.determination_rules[2].recipient",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4650",
+          "exercise": 11,
+          "page": 177,
+          "raw_excerpt": "ORDER_CONFIRMATION_##; SALES_DOCUMENT; ZA##; AG; C650-B##; PRINT; LP01; 1 copie",
+          "scenario_id": "S4650_CH4_EX11",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Nouvelle catégorie et règles de sortie"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4650",
+          "exercise": 11,
+          "page": 179,
+          "raw_excerpt": "ORDER_CONFIRMATION_##; SALES_DOCUMENT; ZA##; AG; C650-B##; PRINT; LP01; 1 copie",
+          "scenario_id": "S4650_CH4_EX11",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Nouvelle catégorie et règles de sortie"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH4_EX11",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "11-22-##",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P650-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "ZA##",
+        "payment_terms": null,
+        "pricing_elements": [],
+        "processing_status": "SAVED",
+        "requested_delivery_date": null,
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C650-B##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C650-B##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P650-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "OUTPUT_BY",
+          "source_phrase": "ORDER_CONFIRMATION_##",
+          "status": "RESOLVED",
+          "target_id": "S4650_CH4_EX11_OUTPUT_DETERMINATION_ORDER_CONFIRMATION_GROUP",
+          "target_type": "OUTPUT_DETERMINATION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH4_EX11_SALES_ORDER_NEW_OUTPUT_CONFIRMATION_TEST",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.order_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4650",
+          "exercise": 11,
+          "page": 177,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-B##; 11-22-##; P650-1##; 10",
+          "scenario_id": "S4650_CH4_EX11",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4650",
+          "exercise": 11,
+          "page": 179,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-B##; 11-22-##; P650-1##; 10",
+          "scenario_id": "S4650_CH4_EX11",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH4_EX11",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "configuration_family": "REPORT_LAYOUT",
+        "configuration_key": "S4650-##",
+        "description": "Groupe de mise en forme ##",
+        "settings": [
+          {
+            "field": "DELIVERY_BLOCK",
+            "visible": true
+          },
+          {
+            "field": "BILLING_BLOCK",
+            "visible": true
+          },
+          {
+            "initial_layout": true,
+            "user_specific": true
+          }
+        ],
+        "target_object": "SALES_ORDER_LIST"
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH5_EX12_EXTENSION_CONFIGURATION_SALES_ORDER_LIST_LAYOUT",
+      "object_type": "EXTENSION_CONFIGURATION",
+      "placeholders": [
+        {
+          "field_path": "data.configuration_key",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.description",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 5,
+          "course_code": "S4650",
+          "exercise": 12,
+          "page": 213,
+          "raw_excerpt": "S4650-##; Groupe de mise en forme ##; blocages livraison/facture; initiale; utilisateur",
+          "scenario_id": "S4650_CH5_EX12",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Mise en forme liste commandes"
+        },
+        {
+          "chapter": 5,
+          "course_code": "S4650",
+          "exercise": 12,
+          "page": 215,
+          "raw_excerpt": "S4650-##; Groupe de mise en forme ##; blocages livraison/facture; initiale; utilisateur",
+          "scenario_id": "S4650_CH5_EX12",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Mise en forme liste commandes"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH5_EX12",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "configuration_family": "MATERIAL_FIELD_SELECTION",
+        "configuration_key": "ZM##",
+        "description": "Field reference for material type YR##",
+        "settings": [
+          {
+            "copied_from": "ROH"
+          },
+          {
+            "canonical_term": "delivering_plant",
+            "field": "MVKE-DWERK"
+          },
+          {
+            "attribute": "REQUIRED",
+            "field_selection_group": "95"
+          },
+          {
+            "attribute": "OPTIONAL",
+            "comparison_material_type": "HAWA"
+          }
+        ],
+        "target_object": "MATERIAL_TYPE_YR##"
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4650_CH5_EX13_EXTENSION_CONFIGURATION_MATERIAL_FIELD_SELECTION",
+      "object_type": "EXTENSION_CONFIGURATION",
+      "placeholders": [
+        {
+          "field_path": "data.configuration_key",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.description",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.target_object",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 5,
+          "course_code": "S4650",
+          "exercise": 13,
+          "page": 235,
+          "raw_excerpt": "ZM## copié de ROH; type YR##; MVKE-DWERK; groupe 95; entrée obligatoire",
+          "scenario_id": "S4650_CH5_EX13",
+          "section_type": "EXERCISE",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Référence de zone / groupe / attribut"
+        },
+        {
+          "chapter": 5,
+          "course_code": "S4650",
+          "exercise": 13,
+          "page": 237,
+          "raw_excerpt": "ZM## copié de ROH; type YR##; MVKE-DWERK; groupe 95; entrée obligatoire",
+          "scenario_id": "S4650_CH5_EX13",
+          "section_type": "SOLUTION",
+          "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Référence de zone / groupe / attribut"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4650_CH5_EX13",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    }
+  ]
+}

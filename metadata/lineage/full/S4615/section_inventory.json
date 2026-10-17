@@ -1,0 +1,263 @@
+{
+  "demonstrations": [
+    {
+      "pages": [
+        152,
+        153
+      ],
+      "scenario_id": "S4615_CH7_DEMO_INVOICE_LIST"
+    },
+    {
+      "pages": [
+        199,
+        200
+      ],
+      "scenario_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS"
+    }
+  ],
+  "sections": [
+    {
+      "chapter": 1,
+      "decision": "EXTRACT",
+      "exercise": 1,
+      "exercise_page": 13,
+      "object_ids": [
+        "S4615_CH1_EX1_BILLING_IMPORTED_A3"
+      ],
+      "reason": "Concrete source-backed instance data.",
+      "scenario_id": "S4615_CH1_EX1",
+      "solution_page": 16
+    },
+    {
+      "chapter": 2,
+      "decision": "ENRICH_EXISTING",
+      "exercise": 2,
+      "exercise_page": 29,
+      "object_ids": [
+        "S4615_SHARED_COMPANY_CODE_1010"
+      ],
+      "reason": "Explicit evidence enriches a previously extracted object.",
+      "scenario_id": "S4615_CH2_EX2",
+      "solution_page": 30
+    },
+    {
+      "chapter": 3,
+      "decision": "EXTRACT",
+      "exercise": 3,
+      "exercise_page": 41,
+      "object_ids": [
+        "S4615_CH3_EX3_BILLING_F2_FROM_IMPORTED_DELIVERY",
+        "S4615_CH3_EX3_BILLING_FAIR",
+        "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING",
+        "S4615_CH3_EX3_OUTBOUND_DELIVERY_FAIR",
+        "S4615_CH3_EX3_SALES_ORDER_FAIR"
+      ],
+      "reason": "Concrete source-backed instance data.",
+      "scenario_id": "S4615_CH3_EX3",
+      "solution_page": 43
+    },
+    {
+      "chapter": 4,
+      "decision": "EXTRACT",
+      "exercise": 4,
+      "exercise_page": 61,
+      "object_ids": [
+        "S4615_CH4_EX4_BILLING_CREDIT_MEMO",
+        "S4615_CH4_EX4_BILLING_ORIGINAL_F2",
+        "S4615_CH4_EX4_COPY_CONTROL_F2_TO_RK"
+      ],
+      "reason": "Concrete source-backed instance data.",
+      "scenario_id": "S4615_CH4_EX4",
+      "solution_page": 63
+    },
+    {
+      "chapter": 4,
+      "decision": "EXTRACT",
+      "exercise": 5,
+      "exercise_page": 73,
+      "object_ids": [
+        "S4615_CH4_EX5_BILLING_CASH_SALE",
+        "S4615_CH4_EX5_BILLING_PRO_FORMA",
+        "S4615_CH4_EX5_OUTBOUND_DELIVERY_CASH_SALE",
+        "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+        "S4615_CH4_EX5_SALES_ORDER_PRO_FORMA"
+      ],
+      "reason": "Concrete source-backed instance data.",
+      "scenario_id": "S4615_CH4_EX5",
+      "solution_page": 75
+    },
+    {
+      "chapter": 5,
+      "decision": "EXTRACT",
+      "exercise": 6,
+      "exercise_page": 97,
+      "object_ids": [
+        "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING",
+        "S4615_CH5_EX6_BILLING_F1_OVERRIDE",
+        "S4615_CH5_EX6_BILLING_FAIR_FREIGHT",
+        "S4615_CH5_EX6_OUTBOUND_DELIVERY_FAIR_FREIGHT",
+        "S4615_CH5_EX6_SALES_ORDER_FAIR_FREIGHT"
+      ],
+      "reason": "Concrete source-backed instance data.",
+      "scenario_id": "S4615_CH5_EX6",
+      "solution_page": 100
+    },
+    {
+      "chapter": 6,
+      "decision": "EXTRACT",
+      "exercise": 7,
+      "exercise_page": 119,
+      "object_ids": [
+        "S4615_CH6_EX7_BILLING_FIORI_APP_CANCELLED",
+        "S4615_CH6_EX7_BILLING_FIORI_APP_POSTED",
+        "S4615_CH6_EX7_BILLING_MONTH_END",
+        "S4615_CH6_EX7_OUTBOUND_DELIVERY_MONTH_END",
+        "S4615_CH6_EX7_SALES_ORDER_FIORI_APP_FINAL",
+        "S4615_CH6_EX7_SALES_ORDER_MONTH_END"
+      ],
+      "reason": "Concrete source-backed instance data.",
+      "scenario_id": "S4615_CH6_EX7",
+      "solution_page": 123
+    },
+    {
+      "chapter": 7,
+      "decision": "SKIP",
+      "exercise": 8,
+      "exercise_page": 137,
+      "object_ids": [],
+      "reason": "Simulation only; no billing document saved.",
+      "scenario_id": "S4615_CH7_EX8",
+      "solution_page": 139
+    },
+    {
+      "chapter": 7,
+      "decision": "EXTRACT",
+      "exercise": 9,
+      "exercise_page": 145,
+      "object_ids": [
+        "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING",
+        "S4615_CH7_EX9_BILLING_SPLIT_1",
+        "S4615_CH7_EX9_BILLING_SPLIT_2"
+      ],
+      "reason": "Concrete source-backed instance data.",
+      "scenario_id": "S4615_CH7_EX9",
+      "solution_page": 147
+    },
+    {
+      "chapter": 8,
+      "decision": "EXTRACT",
+      "exercise": 10,
+      "exercise_page": 173,
+      "object_ids": [
+        "S4615_CH8_EX10_BILLING_PERIODIC_FIRST_PERIOD"
+      ],
+      "reason": "Concrete source-backed instance data.",
+      "scenario_id": "S4615_CH8_EX10",
+      "solution_page": 175
+    },
+    {
+      "chapter": 8,
+      "decision": "EXTRACT",
+      "exercise": 11,
+      "exercise_page": 189,
+      "object_ids": [
+        "S4615_CH8_EX11_BILLING_DOWN_PAYMENT_REQUEST",
+        "S4615_CH8_EX11_BILLING_FIRST_PARTIAL",
+        "S4615_CH8_EX11_PAYMENT_REFERENCE_DOWN_PAYMENT",
+        "S4615_CH8_EX11_SALES_ORDER_DOWN_PAYMENT"
+      ],
+      "reason": "Concrete source-backed instance data.",
+      "scenario_id": "S4615_CH8_EX11",
+      "solution_page": 192
+    },
+    {
+      "chapter": 9,
+      "decision": "EXTRACT",
+      "exercise": 12,
+      "exercise_page": 213,
+      "object_ids": [
+        "S4615_CH9_EX12_ACCOUNT_DETERMINATION_AFFILIATED_REVENUE",
+        "S4615_CH9_EX12_BILLING_ACCOUNT_DETERMINATION_TEST",
+        "S4615_CH9_EX12_OUTBOUND_DELIVERY_ACCOUNT_DETERMINATION_TEST",
+        "S4615_CH9_EX12_SALES_ORDER_ACCOUNT_DETERMINATION_TEST"
+      ],
+      "reason": "Concrete source-backed instance data.",
+      "scenario_id": "S4615_CH9_EX12",
+      "solution_page": 216
+    },
+    {
+      "chapter": 10,
+      "decision": "EXTRACT",
+      "exercise": 13,
+      "exercise_page": 235,
+      "object_ids": [
+        "S4615_CH10_EX13_BILLING_FI_REFERENCE",
+        "S4615_CH10_EX13_BILLING_POSTING_BLOCK",
+        "S4615_CH10_EX13_OUTBOUND_DELIVERY_FI_REFERENCE",
+        "S4615_CH10_EX13_OUTBOUND_DELIVERY_POSTING_BLOCK",
+        "S4615_CH10_EX13_SALES_ORDER_FI_REFERENCE",
+        "S4615_CH10_EX13_SALES_ORDER_POSTING_BLOCK",
+        "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING"
+      ],
+      "reason": "Concrete source-backed instance data.",
+      "scenario_id": "S4615_CH10_EX13",
+      "solution_page": 238
+    }
+  ],
+  "skipped_candidates": [
+    {
+      "candidate": "organizational navigation",
+      "pages": [
+        29,
+        32
+      ],
+      "reason": "UI/navigation review; no new in-scope instance beyond company code 1010.",
+      "scenario_id": "S4615_CH2_EX2"
+    },
+    {
+      "candidate": "three pre-existing due-list billings",
+      "pages": [
+        119,
+        126
+      ],
+      "reason": "Batch count is known but source deliveries and invoice identities are blank; no synthetic IDs were created.",
+      "scenario_id": "S4615_CH6_EX7"
+    },
+    {
+      "candidate": "simulated grouped invoice",
+      "pages": [
+        137,
+        140
+      ],
+      "reason": "Simulation explicitly not saved; retained as explanatory evidence only.",
+      "scenario_id": "S4615_CH7_EX8"
+    },
+    {
+      "candidate": "external billing document request",
+      "pages": [
+        155,
+        157
+      ],
+      "reason": "Reference-only demonstration and no approved canonical EBDR type.",
+      "scenario_id": "S4615_CH7_EBDR"
+    },
+    {
+      "candidate": "output determination",
+      "pages": [
+        249,
+        250
+      ],
+      "reason": "Appendix explains BRFplus/NAST channels but supplies no concrete rule instance.",
+      "scenario_id": "S4615_CH11_OUTPUT"
+    },
+    {
+      "candidate": "generic FI/CO postings",
+      "pages": [
+        261,
+        261
+      ],
+      "reason": "Theory example, not a separate business instance; FI/CO relationships are retained on qualifying billings.",
+      "scenario_id": "S4615_CH11_ACCOUNTING_EXAMPLE"
+    }
+  ]
+}

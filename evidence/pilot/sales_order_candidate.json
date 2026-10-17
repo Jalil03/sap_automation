@@ -1,0 +1,74 @@
+{
+  "blocking_reasons": [],
+  "classification": "TRANSACTION",
+  "data": {
+    "completeness_state": null,
+    "customer_reference": "4712",
+    "distribution_channel": "10",
+    "items": [
+      {
+        "item_category": null,
+        "line_id": "10",
+        "material": "P615-100",
+        "net_weight": null,
+        "net_weight_unit": null,
+        "plant": null,
+        "quantity": 10,
+        "route": null,
+        "ship_to_party": null,
+        "shipping_point": null,
+        "unit": "PC"
+      }
+    ],
+    "order_type": "OR",
+    "payment_terms": "R001",
+    "processing_status": null,
+    "requested_delivery_date": null,
+    "sales_division": "00",
+    "sales_organization": "1010",
+    "ship_to_party": null,
+    "sold_to_party": "C615-A00"
+  },
+  "dependencies": [
+    {
+      "critical": false,
+      "relation": "SOLD_TO_PARTY",
+      "source_phrase": "C615-A00",
+      "status": "UNRESOLVED",
+      "target_id": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "relation": "USES_MATERIAL",
+      "source_phrase": "P615-100",
+      "status": "UNRESOLVED",
+      "target_id": null,
+      "target_type": "MATERIAL"
+    }
+  ],
+  "lifecycle_status": "VALIDATED",
+  "object_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_SALES_ORDER_INSTALLMENT",
+  "object_type": "SALES_ORDER",
+  "placeholders": [],
+  "provenance": [
+    {
+      "chapter": 8,
+      "course_code": "S4615",
+      "exercise": null,
+      "page": 200,
+      "raw_excerpt": "OR; 1010/10/00; C615-A00; 4712; R001; P615-100; 10 PC",
+      "scenario_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS",
+      "section_type": "DEMONSTRATION",
+      "source_file": "S4615_FR_Col12_ILT_FV_Inst_A4.pdf",
+      "source_term": "Conditions de paiement / commande / article"
+    }
+  ],
+  "readiness_status": "READY",
+  "scenario_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS",
+  "validation": {
+    "confidence": "HIGH",
+    "issues": [],
+    "schema_valid": true
+  }
+}

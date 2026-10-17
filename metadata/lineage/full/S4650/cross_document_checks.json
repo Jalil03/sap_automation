@@ -1,0 +1,22 @@
+{
+  "assessment": "S4650 participant identifiers are course-local; no exact identifier joins a prior staged object.",
+  "explicit_cross_document_links": [],
+  "prior_stage_normalized_sha256": {
+    "S4600": "4b5b38be6c9a291db6ffbe010a87e8f73d670f25e346d23da0a157881d519319",
+    "S4610": "8e4a94dea69465af58c89b8c661dfa8ec41b719799d24e59cc588e413f661889",
+    "S4615": "a571a6d4794c1aadf4271a9e189dc3b092a129e65bc622022ac4c6f027345695",
+    "S4620": "40fc22acca1c462cfae84a276aa3ccd5b1707e6b98f5503a3cec7c4f86b88113"
+  },
+  "prior_stage_object_counts": {
+    "S4600": 54,
+    "S4610": 21,
+    "S4615": 48,
+    "S4620": 51
+  },
+  "return_delivery_issue": {
+    "assessment": "S4650 copy-control exercises concern standard quotation/order/delivery/billing flows and provide no explicit customer-return direction evidence.",
+    "s4600_object_id": "S4600_CH9_EX34_OUTBOUND_DELIVERY_RETURN_FROM_ORDER",
+    "s4650_evidence": null,
+    "status": "UNRESOLVED_CARRIED_FORWARD"
+  }
+}

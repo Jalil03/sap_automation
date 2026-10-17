@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Minimal API_SALES_ORDER_SRV A_SalesOrder create body",
+  "description": "Runtime-only minimal OData V2 write shape. This schema does not prove live authorization or transaction behavior.",
+  "type": "object",
+  "required": ["SalesOrderType", "SalesOrganization", "DistributionChannel", "OrganizationDivision", "SoldToParty", "PurchaseOrderByCustomer", "to_Item"],
+  "properties": {
+    "SalesOrderType": {"type": "string", "minLength": 1, "maxLength": 4},
+    "SalesOrganization": {"type": "string", "minLength": 1, "maxLength": 4},
+    "DistributionChannel": {"type": "string", "minLength": 1, "maxLength": 2},
+    "OrganizationDivision": {"type": "string", "minLength": 1, "maxLength": 2},
+    "SoldToParty": {"type": "string", "minLength": 1, "maxLength": 10},
+    "PurchaseOrderByCustomer": {"type": "string", "minLength": 1, "maxLength": 35},
+    "CustomerPurchaseOrderDate": {"type": "string", "pattern": "^/Date\\([0-9]+\\)/$"},
+    "to_Item": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["SalesOrderItem", "Material", "RequestedQuantity", "RequestedQuantityUnit"],
+        "properties": {
+          "SalesOrderItem": {"type": "string", "minLength": 1, "maxLength": 6},
+          "Material": {"type": "string", "minLength": 1, "maxLength": 40},
+          "RequestedQuantity": {"type": "string", "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$"},
+          "RequestedQuantityUnit": {"type": "string", "minLength": 1, "maxLength": 3}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,840 @@
+{
+  "edges": [
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH1_EX1_BILLING_IMPORTED_A3",
+      "source_phrase": "livraison ayant servi de modèle au document de facturation",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH3_EX3_BILLING_F2_FROM_IMPORTED_DELIVERY",
+      "source_phrase": "livraison de la commande d'achat ##S4615-A1",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH3_EX3_SALES_ORDER_FAIR",
+      "source_phrase": "C615-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH3_EX3_SALES_ORDER_FAIR",
+      "source_phrase": "P615-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "CREATED_FROM",
+      "source": "S4615_CH3_EX3_OUTBOUND_DELIVERY_FAIR",
+      "source_phrase": "commande client précédente",
+      "status": "RESOLVED",
+      "target": "S4615_CH3_EX3_SALES_ORDER_FAIR",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH3_EX3_BILLING_FAIR",
+      "source_phrase": "livraison de la commande Foire ##",
+      "status": "RESOLVED",
+      "target": "S4615_CH3_EX3_OUTBOUND_DELIVERY_FAIR",
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "relation": "CONTROLLED_BY",
+      "source": "S4615_CH3_EX3_BILLING_FAIR",
+      "source_phrase": "type par défaut ZF## pour ZA##",
+      "status": "RESOLVED",
+      "target": "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING",
+      "target_type": "COPY_CONTROL"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH4_EX4_BILLING_ORIGINAL_F2",
+      "source_phrase": "commande portant la référence ##S4615-A4",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH4_EX4_BILLING_CREDIT_MEMO",
+      "source_phrase": "demande de correction de facture créée depuis la facture F2",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "CREDIT_MEMO_REQUEST"
+    },
+    {
+      "critical": true,
+      "relation": "CORRECTS",
+      "source": "S4615_CH4_EX4_BILLING_CREDIT_MEMO",
+      "source_phrase": "facture F2 de référence",
+      "status": "RESOLVED",
+      "target": "S4615_CH4_EX4_BILLING_ORIGINAL_F2",
+      "target_type": "BILLING"
+    },
+    {
+      "critical": true,
+      "relation": "CONTROLLED_BY",
+      "source": "S4615_CH4_EX4_BILLING_CREDIT_MEMO",
+      "source_phrase": "F2 vers RK",
+      "status": "RESOLVED",
+      "target": "S4615_CH4_EX4_COPY_CONTROL_F2_TO_RK",
+      "target_type": "COPY_CONTROL"
+    },
+    {
+      "critical": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+      "source_phrase": "C615-D##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+      "source_phrase": "P615-4##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "CREATED_FROM",
+      "source": "S4615_CH4_EX5_OUTBOUND_DELIVERY_CASH_SALE",
+      "source_phrase": "commande client précédente",
+      "status": "RESOLVED",
+      "target": "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH4_EX5_BILLING_CASH_SALE",
+      "source_phrase": "vente au comptant BV",
+      "status": "RESOLVED",
+      "target": "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "DELIVERED_VIA",
+      "source": "S4615_CH4_EX5_BILLING_CASH_SALE",
+      "source_phrase": "livraison créée avec la commande",
+      "status": "RESOLVED",
+      "target": "S4615_CH4_EX5_OUTBOUND_DELIVERY_CASH_SALE",
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH4_EX5_SALES_ORDER_PRO_FORMA",
+      "source_phrase": "C615-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH4_EX5_SALES_ORDER_PRO_FORMA",
+      "source_phrase": "P615-2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH4_EX5_BILLING_PRO_FORMA",
+      "source_phrase": "commande avant livraison",
+      "status": "RESOLVED",
+      "target": "S4615_CH4_EX5_SALES_ORDER_PRO_FORMA",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH5_EX6_BILLING_F1_OVERRIDE",
+      "source_phrase": "livraison de la commande d'achat ##S4615-A5",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH5_EX6_SALES_ORDER_FAIR_FREIGHT",
+      "source_phrase": "C615-D##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH5_EX6_SALES_ORDER_FAIR_FREIGHT",
+      "source_phrase": "P615-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "CREATED_FROM",
+      "source": "S4615_CH5_EX6_OUTBOUND_DELIVERY_FAIR_FREIGHT",
+      "source_phrase": "commande client précédente",
+      "status": "RESOLVED",
+      "target": "S4615_CH5_EX6_SALES_ORDER_FAIR_FREIGHT",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH5_EX6_BILLING_FAIR_FREIGHT",
+      "source_phrase": "livraison Foire avec frais de transport",
+      "status": "RESOLVED",
+      "target": "S4615_CH5_EX6_OUTBOUND_DELIVERY_FAIR_FREIGHT",
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "relation": "CONTROLLED_BY",
+      "source": "S4615_CH5_EX6_BILLING_FAIR_FREIGHT",
+      "source_phrase": "ZF## / LF / TAN / type de prix H",
+      "status": "RESOLVED",
+      "target": "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING",
+      "target_type": "COPY_CONTROL"
+    },
+    {
+      "critical": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH6_EX7_SALES_ORDER_MONTH_END",
+      "source_phrase": "C615-B##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH6_EX7_SALES_ORDER_MONTH_END",
+      "source_phrase": "P615-2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "CREATED_FROM",
+      "source": "S4615_CH6_EX7_OUTBOUND_DELIVERY_MONTH_END",
+      "source_phrase": "commande client précédente",
+      "status": "RESOLVED",
+      "target": "S4615_CH6_EX7_SALES_ORDER_MONTH_END",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH6_EX7_BILLING_MONTH_END",
+      "source_phrase": "livraison facturée à la fin du mois",
+      "status": "RESOLVED",
+      "target": "S4615_CH6_EX7_OUTBOUND_DELIVERY_MONTH_END",
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH6_EX7_SALES_ORDER_FIORI_APP_FINAL",
+      "source_phrase": "C615-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH6_EX7_SALES_ORDER_FIORI_APP_FINAL",
+      "source_phrase": "P-Service",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH6_EX7_BILLING_FIORI_APP_CANCELLED",
+      "source_phrase": "commande ##-app-1 avant réduction de quantité",
+      "status": "RESOLVED",
+      "target": "S4615_CH6_EX7_SALES_ORDER_FIORI_APP_FINAL",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH6_EX7_BILLING_FIORI_APP_POSTED",
+      "source_phrase": "commande ##-app-1 modifiée à 8",
+      "status": "RESOLVED",
+      "target": "S4615_CH6_EX7_SALES_ORDER_FIORI_APP_FINAL",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH7_EX9_BILLING_SPLIT_1",
+      "source_phrase": "première livraison de l'échéancier",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH7_EX9_BILLING_SPLIT_2",
+      "source_phrase": "livraison liée à la commande ##S4615-A10",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST_SOURCE_A11",
+      "source_phrase": "commande 00S4615-A11 du client C615-GB00",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST_SOURCE_A12",
+      "source_phrase": "commande 00S4615-A12 du client C615-GA00",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "CONTAINS",
+      "source": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST",
+      "source_phrase": "document de facturation du relevé",
+      "status": "RESOLVED",
+      "target": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST_SOURCE_A11",
+      "target_type": "BILLING"
+    },
+    {
+      "critical": true,
+      "relation": "CONTAINS",
+      "source": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST",
+      "source_phrase": "document de facturation du relevé",
+      "status": "RESOLVED",
+      "target": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST_SOURCE_A12",
+      "target_type": "BILLING"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH8_EX10_BILLING_PERIODIC_FIRST_PERIOD",
+      "source_phrase": "contrat de maintenance WV ##S6415-PB",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "SALES_CONTRACT_REFERENCE"
+    },
+    {
+      "critical": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH8_EX11_SALES_ORDER_DOWN_PAYMENT",
+      "source_phrase": "C615-F##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH8_EX11_SALES_ORDER_DOWN_PAYMENT",
+      "source_phrase": "P615-6##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH8_EX11_BILLING_DOWN_PAYMENT_REQUEST",
+      "source_phrase": "commande avec calendrier d'acompte",
+      "status": "RESOLVED",
+      "target": "S4615_CH8_EX11_SALES_ORDER_DOWN_PAYMENT",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "SETTLES",
+      "source": "S4615_CH8_EX11_PAYMENT_REFERENCE_DOWN_PAYMENT",
+      "source_phrase": "demande d'acompte FAZ",
+      "status": "RESOLVED",
+      "target": "S4615_CH8_EX11_BILLING_DOWN_PAYMENT_REQUEST",
+      "target_type": "BILLING"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH8_EX11_BILLING_FIRST_PARTIAL",
+      "source_phrase": "première période de décompte",
+      "status": "RESOLVED",
+      "target": "S4615_CH8_EX11_SALES_ORDER_DOWN_PAYMENT",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "CLEARS",
+      "source": "S4615_CH8_EX11_BILLING_FIRST_PARTIAL",
+      "source_phrase": "acompte versé par le client",
+      "status": "RESOLVED",
+      "target": "S4615_CH8_EX11_PAYMENT_REFERENCE_DOWN_PAYMENT",
+      "target_type": "PAYMENT_REFERENCE"
+    },
+    {
+      "critical": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_SALES_ORDER_INSTALLMENT",
+      "source_phrase": "C615-A00",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_SALES_ORDER_INSTALLMENT",
+      "source_phrase": "P615-100",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "CREATED_FROM",
+      "source": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_OUTBOUND_DELIVERY_INSTALLMENT",
+      "source_phrase": "commande client précédente",
+      "status": "RESOLVED",
+      "target": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_SALES_ORDER_INSTALLMENT",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_BILLING_INSTALLMENT",
+      "source_phrase": "livraison de la commande 4712",
+      "status": "RESOLVED",
+      "target": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_OUTBOUND_DELIVERY_INSTALLMENT",
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "relation": "APPLIES_IN",
+      "source": "S4615_CH9_EX12_ACCOUNT_DETERMINATION_AFFILIATED_REVENUE",
+      "source_phrase": "société 1010",
+      "status": "RESOLVED",
+      "target": "S4615_SHARED_COMPANY_CODE_1010",
+      "target_type": "COMPANY_CODE"
+    },
+    {
+      "critical": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH9_EX12_SALES_ORDER_ACCOUNT_DETERMINATION_TEST",
+      "source_phrase": "C615-B##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH9_EX12_SALES_ORDER_ACCOUNT_DETERMINATION_TEST",
+      "source_phrase": "P615-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "CREATED_FROM",
+      "source": "S4615_CH9_EX12_OUTBOUND_DELIVERY_ACCOUNT_DETERMINATION_TEST",
+      "source_phrase": "commande client précédente",
+      "status": "RESOLVED",
+      "target": "S4615_CH9_EX12_SALES_ORDER_ACCOUNT_DETERMINATION_TEST",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH9_EX12_BILLING_ACCOUNT_DETERMINATION_TEST",
+      "source_phrase": "livraison de la commande ##S4615-KO",
+      "status": "RESOLVED",
+      "target": "S4615_CH9_EX12_OUTBOUND_DELIVERY_ACCOUNT_DETERMINATION_TEST",
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "relation": "ACCOUNT_DETERMINED_BY",
+      "source": "S4615_CH9_EX12_BILLING_ACCOUNT_DETERMINATION_TEST",
+      "source_phrase": "table 001 vers compte 49000000",
+      "status": "RESOLVED",
+      "target": "S4615_CH9_EX12_ACCOUNT_DETERMINATION_AFFILIATED_REVENUE",
+      "target_type": "ACCOUNT_DETERMINATION"
+    },
+    {
+      "critical": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH10_EX13_SALES_ORDER_POSTING_BLOCK",
+      "source_phrase": "C615-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH10_EX13_SALES_ORDER_POSTING_BLOCK",
+      "source_phrase": "P615-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "CREATED_FROM",
+      "source": "S4615_CH10_EX13_OUTBOUND_DELIVERY_POSTING_BLOCK",
+      "source_phrase": "commande client précédente",
+      "status": "RESOLVED",
+      "target": "S4615_CH10_EX13_SALES_ORDER_POSTING_BLOCK",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH10_EX13_BILLING_POSTING_BLOCK",
+      "source_phrase": "livraison de la commande Foire ##",
+      "status": "RESOLVED",
+      "target": "S4615_CH10_EX13_OUTBOUND_DELIVERY_POSTING_BLOCK",
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "relation": "CONTROLLED_BY",
+      "source": "S4615_CH10_EX13_BILLING_POSTING_BLOCK",
+      "source_phrase": "ZF##/LF avec référence B et affectation E",
+      "status": "RESOLVED",
+      "target": "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING",
+      "target_type": "COPY_CONTROL"
+    },
+    {
+      "critical": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH10_EX13_SALES_ORDER_FI_REFERENCE",
+      "source_phrase": "C615-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH10_EX13_SALES_ORDER_FI_REFERENCE",
+      "source_phrase": "P615-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "CREATED_FROM",
+      "source": "S4615_CH10_EX13_OUTBOUND_DELIVERY_FI_REFERENCE",
+      "source_phrase": "commande client précédente",
+      "status": "RESOLVED",
+      "target": "S4615_CH10_EX13_SALES_ORDER_FI_REFERENCE",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH10_EX13_BILLING_FI_REFERENCE",
+      "source_phrase": "livraison de la commande Foire ##",
+      "status": "RESOLVED",
+      "target": "S4615_CH10_EX13_OUTBOUND_DELIVERY_FI_REFERENCE",
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "relation": "CONTROLLED_BY",
+      "source": "S4615_CH10_EX13_BILLING_FI_REFERENCE",
+      "source_phrase": "ZF##/LF avec référence B et affectation E",
+      "status": "RESOLVED",
+      "target": "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING",
+      "target_type": "COPY_CONTROL"
+    }
+  ],
+  "nodes": [
+    {
+      "object_id": "S4615_SHARED_COMPANY_CODE_1010",
+      "object_type": "COMPANY_CODE",
+      "readiness_status": "READY"
+    },
+    {
+      "object_id": "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH1_EX1_BILLING_IMPORTED_A3",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH3_EX3_BILLING_F2_FROM_IMPORTED_DELIVERY",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH3_EX3_SALES_ORDER_FAIR",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH3_EX3_OUTBOUND_DELIVERY_FAIR",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH3_EX3_BILLING_FAIR",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH4_EX4_BILLING_ORIGINAL_F2",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH4_EX4_COPY_CONTROL_F2_TO_RK",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "READY"
+    },
+    {
+      "object_id": "S4615_CH4_EX4_BILLING_CREDIT_MEMO",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH4_EX5_OUTBOUND_DELIVERY_CASH_SALE",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH4_EX5_BILLING_CASH_SALE",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH4_EX5_SALES_ORDER_PRO_FORMA",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH4_EX5_BILLING_PRO_FORMA",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH5_EX6_BILLING_F1_OVERRIDE",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH5_EX6_SALES_ORDER_FAIR_FREIGHT",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH5_EX6_OUTBOUND_DELIVERY_FAIR_FREIGHT",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH5_EX6_BILLING_FAIR_FREIGHT",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH6_EX7_SALES_ORDER_MONTH_END",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH6_EX7_OUTBOUND_DELIVERY_MONTH_END",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH6_EX7_BILLING_MONTH_END",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH6_EX7_SALES_ORDER_FIORI_APP_FINAL",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH6_EX7_BILLING_FIORI_APP_CANCELLED",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH6_EX7_BILLING_FIORI_APP_POSTED",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH7_EX9_BILLING_SPLIT_1",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH7_EX9_BILLING_SPLIT_2",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST_SOURCE_A11",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST_SOURCE_A12",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH8_EX10_BILLING_PERIODIC_FIRST_PERIOD",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH8_EX11_SALES_ORDER_DOWN_PAYMENT",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH8_EX11_BILLING_DOWN_PAYMENT_REQUEST",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH8_EX11_PAYMENT_REFERENCE_DOWN_PAYMENT",
+      "object_type": "PAYMENT_REFERENCE",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH8_EX11_BILLING_FIRST_PARTIAL",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_SALES_ORDER_INSTALLMENT",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "READY"
+    },
+    {
+      "object_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_OUTBOUND_DELIVERY_INSTALLMENT",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "READY"
+    },
+    {
+      "object_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_BILLING_INSTALLMENT",
+      "object_type": "BILLING",
+      "readiness_status": "READY"
+    },
+    {
+      "object_id": "S4615_CH9_EX12_ACCOUNT_DETERMINATION_AFFILIATED_REVENUE",
+      "object_type": "ACCOUNT_DETERMINATION",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH9_EX12_SALES_ORDER_ACCOUNT_DETERMINATION_TEST",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH9_EX12_OUTBOUND_DELIVERY_ACCOUNT_DETERMINATION_TEST",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH9_EX12_BILLING_ACCOUNT_DETERMINATION_TEST",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH10_EX13_SALES_ORDER_POSTING_BLOCK",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH10_EX13_OUTBOUND_DELIVERY_POSTING_BLOCK",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH10_EX13_BILLING_POSTING_BLOCK",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH10_EX13_SALES_ORDER_FI_REFERENCE",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH10_EX13_OUTBOUND_DELIVERY_FI_REFERENCE",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4615_CH10_EX13_BILLING_FI_REFERENCE",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    }
+  ]
+}

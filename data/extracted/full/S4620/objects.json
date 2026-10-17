@@ -1,0 +1,5631 @@
+{
+  "objects": [
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "adjustment_percent": null,
+        "calculation_semantics": null,
+        "condition_type": "PR00",
+        "currency": "EUR",
+        "deletion_indicator": false,
+        "key_combination": {
+          "customer": null,
+          "customer_hierarchy_node": null,
+          "destination_country": null,
+          "distribution_channel": "10",
+          "incoterms": null,
+          "material": "P620-1##",
+          "promotion_reference": null,
+          "sales_deal_reference": null,
+          "sales_organization": "1010"
+        },
+        "maximum_order_count": null,
+        "maximum_quantity": null,
+        "maximum_quantity_unit": null,
+        "pricing_unit": 1,
+        "rate": 280,
+        "rate_unit": null,
+        "record_status": "ACTIVE",
+        "scale_basis": null,
+        "scales": [],
+        "source_operation": "CREATE",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH1_EX1_PRICING_CONDITION_PR00_MATERIAL",
+      "object_type": "PRICING_CONDITION",
+      "placeholders": [
+        {
+          "field_path": "data.key_combination.material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4620",
+          "exercise": 1,
+          "page": 19,
+          "raw_excerpt": "PR00; P620-1##; 1010; 10; 280 EUR; validité par défaut",
+          "scenario_id": "S4620_CH1_EX1",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "PR00 / article / organisation commerciale / canal / prix"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4620",
+          "exercise": 1,
+          "page": 23,
+          "raw_excerpt": "PR00; P620-1##; 1010; 10; 280 EUR; validité par défaut",
+          "scenario_id": "S4620_CH1_EX1",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "PR00 / article / organisation commerciale / canal / prix"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH1_EX1",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "adjustment_percent": null,
+        "calculation_semantics": null,
+        "condition_type": "PR00",
+        "currency": "EUR",
+        "deletion_indicator": false,
+        "key_combination": {
+          "customer": "C620-A##",
+          "customer_hierarchy_node": null,
+          "destination_country": null,
+          "distribution_channel": "10",
+          "incoterms": null,
+          "material": "P620-1##",
+          "promotion_reference": null,
+          "sales_deal_reference": null,
+          "sales_organization": "1010"
+        },
+        "maximum_order_count": null,
+        "maximum_quantity": null,
+        "maximum_quantity_unit": null,
+        "pricing_unit": null,
+        "rate": null,
+        "rate_unit": null,
+        "record_status": "ACTIVE",
+        "scale_basis": "QUANTITY",
+        "scales": [
+          {
+            "amount": 250,
+            "currency": "EUR",
+            "from_quantity": 1,
+            "pricing_unit": null,
+            "quantity_unit": "PC",
+            "rate": null,
+            "rate_unit": null,
+            "scale_basis": "QUANTITY",
+            "threshold": 1,
+            "threshold_currency": null,
+            "threshold_unit": "PC"
+          },
+          {
+            "amount": 240,
+            "currency": "EUR",
+            "from_quantity": 10,
+            "pricing_unit": null,
+            "quantity_unit": "PC",
+            "rate": null,
+            "rate_unit": null,
+            "scale_basis": "QUANTITY",
+            "threshold": 10,
+            "threshold_currency": null,
+            "threshold_unit": "PC"
+          },
+          {
+            "amount": 230,
+            "currency": "EUR",
+            "from_quantity": 100,
+            "pricing_unit": null,
+            "quantity_unit": "PC",
+            "rate": null,
+            "rate_unit": null,
+            "scale_basis": "QUANTITY",
+            "threshold": 100,
+            "threshold_currency": null,
+            "threshold_unit": "PC"
+          }
+        ],
+        "source_operation": "CREATE",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH1_EX1_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL_SCALE",
+      "object_type": "PRICING_CONDITION",
+      "placeholders": [
+        {
+          "field_path": "data.key_combination.customer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.key_combination.material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4620",
+          "exercise": 1,
+          "page": 19,
+          "raw_excerpt": "C620-A##; P620-1##; seuils 1/10/100 PC; 250/240/230 EUR",
+          "scenario_id": "S4620_CH1_EX1",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "PR00 / Client-article avec statut de validation / barème quantité"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4620",
+          "exercise": 1,
+          "page": 23,
+          "raw_excerpt": "C620-A##; P620-1##; seuils 1/10/100 PC; 250/240/230 EUR",
+          "scenario_id": "S4620_CH1_EX1",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "PR00 / Client-article avec statut de validation / barème quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH1_EX1",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "adjustment_percent": null,
+        "calculation_semantics": "DISCOUNT",
+        "condition_type": "K007",
+        "currency": null,
+        "deletion_indicator": false,
+        "key_combination": {
+          "customer": "C620-A##",
+          "customer_hierarchy_node": null,
+          "destination_country": null,
+          "distribution_channel": "10",
+          "incoterms": null,
+          "material": null,
+          "promotion_reference": null,
+          "sales_deal_reference": null,
+          "sales_organization": "1010"
+        },
+        "maximum_order_count": null,
+        "maximum_quantity": null,
+        "maximum_quantity_unit": null,
+        "pricing_unit": null,
+        "rate": null,
+        "rate_unit": "%",
+        "record_status": "ACTIVE",
+        "scale_basis": "VALUE",
+        "scales": [
+          {
+            "amount": null,
+            "currency": null,
+            "from_quantity": null,
+            "pricing_unit": null,
+            "quantity_unit": null,
+            "rate": 2,
+            "rate_unit": "%",
+            "scale_basis": "VALUE",
+            "threshold": 100,
+            "threshold_currency": "EUR",
+            "threshold_unit": null
+          },
+          {
+            "amount": null,
+            "currency": null,
+            "from_quantity": null,
+            "pricing_unit": null,
+            "quantity_unit": null,
+            "rate": 3,
+            "rate_unit": "%",
+            "scale_basis": "VALUE",
+            "threshold": 1000,
+            "threshold_currency": "EUR",
+            "threshold_unit": null
+          },
+          {
+            "amount": null,
+            "currency": null,
+            "from_quantity": null,
+            "pricing_unit": null,
+            "quantity_unit": null,
+            "rate": 5,
+            "rate_unit": "%",
+            "scale_basis": "VALUE",
+            "threshold": 5000,
+            "threshold_currency": "EUR",
+            "threshold_unit": null
+          }
+        ],
+        "source_operation": "CREATE",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH1_EX1_PRICING_CONDITION_K007_CUSTOMER_VALUE_SCALE",
+      "object_type": "PRICING_CONDITION",
+      "placeholders": [
+        {
+          "field_path": "data.key_combination.customer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4620",
+          "exercise": 1,
+          "page": 19,
+          "raw_excerpt": "C620-A##; seuils 100/1000/5000 EUR; déduction 2/3/5 %",
+          "scenario_id": "S4620_CH1_EX1",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "K007 / Client avec statut validation / barème valeur"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4620",
+          "exercise": 1,
+          "page": 23,
+          "raw_excerpt": "C620-A##; seuils 100/1000/5000 EUR; déduction 2/3/5 %",
+          "scenario_id": "S4620_CH1_EX1",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "K007 / Client avec statut validation / barème valeur"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH1_EX1",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "access_sequence": null,
+        "calculation_type": "A_PERCENTAGE",
+        "code": "K007",
+        "condition_update": null,
+        "copied_from_condition_type": null,
+        "description": "Déduction client",
+        "group_condition": null,
+        "manual_entry_rule": "D_NOT_MANUALLY_EDITABLE",
+        "plus_minus_rule": "DISCOUNT_ONLY",
+        "reference_base": "B_VALUE_SCALE",
+        "scale_control": null
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH1_EX2_CONDITION_TYPE_K007",
+      "object_type": "CONDITION_TYPE",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4620",
+          "exercise": 2,
+          "page": 31,
+          "raw_excerpt": "K007; A - En %; B - Barème valeurs",
+          "scenario_id": "S4620_CH1_EX2",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de condition K007 / règle de calcul / unité de référence"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4620",
+          "exercise": 2,
+          "page": 32,
+          "raw_excerpt": "K007; A - En %; B - Barème valeurs",
+          "scenario_id": "S4620_CH1_EX2",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de condition K007 / règle de calcul / unité de référence"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4620_CH1_EX2",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-1-2",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P620-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "CDCL",
+        "payment_terms": null,
+        "pricing_elements": [
+          {
+            "condition_type": "PR00",
+            "currency": "EUR",
+            "pricing_unit": 1,
+            "rate": 280,
+            "source": "AUTOMATIC"
+          }
+        ],
+        "processing_status": "SAVED",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C620-A##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C620-A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "PRICED_BY",
+          "source_phrase": "PR00 article créé à l'étape précédente",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH1_EX1_PRICING_CONDITION_PR00_MATERIAL",
+          "target_type": "PRICING_CONDITION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH1_EX1_SALES_ORDER_WITH_MATERIAL_PRICE",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4620",
+          "exercise": 1,
+          "page": 19,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-1-2; P620-1## 10 None",
+          "scenario_id": "S4620_CH1_EX1",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4620",
+          "exercise": 1,
+          "page": 23,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-1-2; P620-1## 10 None",
+          "scenario_id": "S4620_CH1_EX1",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH1_EX1",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-1-3",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P620-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "CDCL",
+        "payment_terms": null,
+        "pricing_elements": [
+          {
+            "condition_type": "PR00",
+            "currency": "EUR",
+            "rate": 240,
+            "source": "AUTOMATIC"
+          },
+          {
+            "calculation_semantics": "DISCOUNT",
+            "condition_type": "K007",
+            "rate": 3,
+            "rate_unit": "%",
+            "source": "AUTOMATIC"
+          }
+        ],
+        "processing_status": "SAVED",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C620-A##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C620-A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "PRICED_BY",
+          "source_phrase": "barème PR00 client/article",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH1_EX1_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL_SCALE",
+          "target_type": "PRICING_CONDITION"
+        },
+        {
+          "critical": true,
+          "relation": "DISCOUNTED_BY",
+          "source_phrase": "barème K007 client",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH1_EX1_PRICING_CONDITION_K007_CUSTOMER_VALUE_SCALE",
+          "target_type": "PRICING_CONDITION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH1_EX1_SALES_ORDER_WITH_SCALES",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4620",
+          "exercise": 1,
+          "page": 19,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-1-3; P620-1## 10 None",
+          "scenario_id": "S4620_CH1_EX1",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4620",
+          "exercise": 1,
+          "page": 23,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-1-3; P620-1## 10 None",
+          "scenario_id": "S4620_CH1_EX1",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH1_EX1",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-2-3",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P620-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "CDCL",
+        "payment_terms": null,
+        "pricing_elements": [
+          {
+            "condition_type": "RC00",
+            "currency": "EUR",
+            "rate": -10,
+            "rate_unit": "PER_PIECE",
+            "source": "MANUAL"
+          },
+          {
+            "calculation_semantics": "DISCOUNT",
+            "condition_type": "K007",
+            "rate": 10,
+            "rate_unit": "%",
+            "source": "MANUAL_OVERRIDE"
+          }
+        ],
+        "processing_status": "SAVED",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C620-A##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C620-A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": false,
+          "relation": "STARTS_FROM",
+          "source_phrase": "K007 automatique modifiée manuellement",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH1_EX1_PRICING_CONDITION_K007_CUSTOMER_VALUE_SCALE",
+          "target_type": "PRICING_CONDITION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH1_EX4_SALES_ORDER_MANUAL_ADJUSTMENT",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4620",
+          "exercise": 4,
+          "page": 51,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-2-3; P620-1## 10 None",
+          "scenario_id": "S4620_CH1_EX4",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4620",
+          "exercise": 4,
+          "page": 53,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-2-3; P620-1## 10 None",
+          "scenario_id": "S4620_CH1_EX4",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH1_EX4",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-2-4",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P620-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          },
+          {
+            "item_category": null,
+            "line_id": "20",
+            "material": "P620-2##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "CDCL",
+        "payment_terms": null,
+        "pricing_elements": [
+          {
+            "condition_type": "HB00",
+            "currency": null,
+            "level": "HEADER",
+            "rate": -100,
+            "source": "MANUAL"
+          },
+          {
+            "condition_type": "RB00",
+            "currency": null,
+            "level": "HEADER",
+            "rate": -100,
+            "source": "MANUAL"
+          }
+        ],
+        "processing_status": "SAVED",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C620-A##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C620-A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-2##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH1_EX5_SALES_ORDER_HEADER_CONDITIONS",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[1].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4620",
+          "exercise": 5,
+          "page": 57,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-2-4; P620-1## 10 None; P620-2## 10 None",
+          "scenario_id": "S4620_CH1_EX5",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4620",
+          "exercise": 5,
+          "page": 59,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-2-4; P620-1## 10 None; P620-2## 10 None",
+          "scenario_id": "S4620_CH1_EX5",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH1_EX5",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-2-5",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P620-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "CDCL",
+        "payment_terms": null,
+        "pricing_elements": [
+          {
+            "condition_type": "PR00",
+            "source": "AUTOMATIC"
+          },
+          {
+            "condition_type": "K007",
+            "source": "AUTOMATIC"
+          },
+          {
+            "condition_type": "RC00",
+            "currency": null,
+            "rate": -100,
+            "source": "MANUAL_REMOVED_BY_REPRICING_B"
+          }
+        ],
+        "processing_status": "SAVED",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C620-A##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C620-A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "PRICED_BY",
+          "source_phrase": "PR00",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH1_EX1_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL_SCALE",
+          "target_type": "PRICING_CONDITION"
+        },
+        {
+          "critical": true,
+          "relation": "DISCOUNTED_BY",
+          "source_phrase": "K007",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH1_EX1_PRICING_CONDITION_K007_CUSTOMER_VALUE_SCALE",
+          "target_type": "PRICING_CONDITION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH1_EX6_SALES_ORDER_REPRICING_TYPE_B",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 1,
+          "course_code": "S4620",
+          "exercise": 6,
+          "page": 63,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-2-5; P620-1## 10 None",
+          "scenario_id": "S4620_CH1_EX6",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 1,
+          "course_code": "S4620",
+          "exercise": 6,
+          "page": 66,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-2-5; P620-1## 10 None",
+          "scenario_id": "S4620_CH1_EX6",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH1_EX6",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "description": null,
+        "key_fields": [
+          "CUSTOMER",
+          "MATERIAL"
+        ],
+        "table_id": "305"
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH2_EX7_CONDITION_TABLE_305",
+      "object_type": "CONDITION_TABLE",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 7,
+          "page": 83,
+          "raw_excerpt": "PR02 utilise les tables 305, 306 et 304",
+          "scenario_id": "S4620_CH2_EX7",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Tables de conditions de la séquence PR02"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 7,
+          "page": 85,
+          "raw_excerpt": "PR02 utilise les tables 305, 306 et 304",
+          "scenario_id": "S4620_CH2_EX7",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Tables de conditions de la séquence PR02"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4620_CH2_EX7",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "description": null,
+        "key_fields": [
+          "PRICE_LIST_TYPE",
+          "CURRENCY",
+          "MATERIAL"
+        ],
+        "table_id": "306"
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH2_EX7_CONDITION_TABLE_306",
+      "object_type": "CONDITION_TABLE",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 7,
+          "page": 83,
+          "raw_excerpt": "PR02 utilise les tables 305, 306 et 304",
+          "scenario_id": "S4620_CH2_EX7",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Tables de conditions de la séquence PR02"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 7,
+          "page": 85,
+          "raw_excerpt": "PR02 utilise les tables 305, 306 et 304",
+          "scenario_id": "S4620_CH2_EX7",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Tables de conditions de la séquence PR02"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4620_CH2_EX7",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "description": null,
+        "key_fields": [
+          "PRICE_LIST_TYPE",
+          "MATERIAL"
+        ],
+        "table_id": "304"
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH2_EX7_CONDITION_TABLE_304",
+      "object_type": "CONDITION_TABLE",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 7,
+          "page": 83,
+          "raw_excerpt": "PR02 utilise les tables 305, 306 et 304",
+          "scenario_id": "S4620_CH2_EX7",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Tables de conditions de la séquence PR02"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 7,
+          "page": 85,
+          "raw_excerpt": "PR02 utilise les tables 305, 306 et 304",
+          "scenario_id": "S4620_CH2_EX7",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Tables de conditions de la séquence PR02"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4620_CH2_EX7",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "code": "PR02",
+        "condition_tables": [
+          "305",
+          "306",
+          "304"
+        ],
+        "description": null
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "USES_TABLE",
+          "source_phrase": "305",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH2_EX7_CONDITION_TABLE_305",
+          "target_type": "CONDITION_TABLE"
+        },
+        {
+          "critical": false,
+          "relation": "USES_TABLE",
+          "source_phrase": "306",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH2_EX7_CONDITION_TABLE_306",
+          "target_type": "CONDITION_TABLE"
+        },
+        {
+          "critical": false,
+          "relation": "USES_TABLE",
+          "source_phrase": "304",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH2_EX7_CONDITION_TABLE_304",
+          "target_type": "CONDITION_TABLE"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH2_EX7_ACCESS_SEQUENCE_PR02",
+      "object_type": "ACCESS_SEQUENCE",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 7,
+          "page": 83,
+          "raw_excerpt": "PR02; accès 10/20/30; tables 305/306/304",
+          "scenario_id": "S4620_CH2_EX7",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Séquence d'accès PR02 / tables de conditions"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 7,
+          "page": 85,
+          "raw_excerpt": "PR02; accès 10/20/30; tables 305/306/304",
+          "scenario_id": "S4620_CH2_EX7",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Séquence d'accès PR02 / tables de conditions"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4620_CH2_EX7",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "access_sequence": "PR02",
+        "calculation_type": null,
+        "code": "PR00",
+        "condition_update": null,
+        "copied_from_condition_type": null,
+        "description": "Prix",
+        "group_condition": null,
+        "manual_entry_rule": null,
+        "plus_minus_rule": null,
+        "reference_base": null,
+        "scale_control": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "USES_ACCESS_SEQUENCE",
+          "source_phrase": "PR02",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH2_EX7_ACCESS_SEQUENCE_PR02",
+          "target_type": "ACCESS_SEQUENCE"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH2_EX7_CONDITION_TYPE_PR00",
+      "object_type": "CONDITION_TYPE",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 7,
+          "page": 83,
+          "raw_excerpt": "PR00 utilise PR02",
+          "scenario_id": "S4620_CH2_EX7",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de condition PR00 / séquence d'accès"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 7,
+          "page": 85,
+          "raw_excerpt": "PR00 utilise PR02",
+          "scenario_id": "S4620_CH2_EX7",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de condition PR00 / séquence d'accès"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4620_CH2_EX7",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "code": "RVAA01",
+        "description": "Schéma standard",
+        "exclusion_groups": [],
+        "steps": []
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH2_EX7_PRICING_PROCEDURE_RVAA01",
+      "object_type": "PRICING_PROCEDURE",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 7,
+          "page": 83,
+          "raw_excerpt": "RVAA01",
+          "scenario_id": "S4620_CH2_EX7",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Schéma de calcul standard"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 7,
+          "page": 85,
+          "raw_excerpt": "RVAA01",
+          "scenario_id": "S4620_CH2_EX7",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Schéma de calcul standard"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4620_CH2_EX7",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "customer_pricing_procedure": "1",
+        "determination_context": "SALES_DOCUMENT",
+        "distribution_channel": "10",
+        "document_pricing_procedure": "A",
+        "pricing_procedure": "RVAA01",
+        "quick_entry_condition_type": null,
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "settlement_document_schema_group": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "DETERMINES",
+          "source_phrase": "RVAA01",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH2_EX7_PRICING_PROCEDURE_RVAA01",
+          "target_type": "PRICING_PROCEDURE"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH2_EX8_PRICING_PROCEDURE_DETERMINATION_RVAA01",
+      "object_type": "PRICING_PROCEDURE_DETERMINATION",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 8,
+          "page": 89,
+          "raw_excerpt": "1010/10/00; schéma document A; schéma client 1; RVAA01",
+          "scenario_id": "S4620_CH2_EX8",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Détermination du schéma de calcul"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 8,
+          "page": 91,
+          "raw_excerpt": "1010/10/00; schéma document A; schéma client 1; RVAA01",
+          "scenario_id": "S4620_CH2_EX8",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Détermination du schéma de calcul"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4620_CH2_EX8",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "description": "Org.comm./Incoterms/Pays dest. GR##",
+        "key_fields": [
+          "SALES_ORGANIZATION",
+          "INCOTERMS",
+          "DESTINATION_COUNTRY"
+        ],
+        "table_id": "7##"
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH2_EX9_CONDITION_TABLE_7_GROUP",
+      "object_type": "CONDITION_TABLE",
+      "placeholders": [
+        {
+          "field_path": "data.table_id",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.description",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 9,
+          "page": 93,
+          "raw_excerpt": "7##; organisation commerciale; Incoterms; pays destinataire",
+          "scenario_id": "S4620_CH2_EX9",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Table de conditions / zones"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 9,
+          "page": 98,
+          "raw_excerpt": "7##; organisation commerciale; Incoterms; pays destinataire",
+          "scenario_id": "S4620_CH2_EX9",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Table de conditions / zones"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH2_EX9",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "code": "ZA##",
+        "condition_tables": [
+          "7##"
+        ],
+        "description": "Séquence d'accès ##"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "USES_TABLE",
+          "source_phrase": "7##",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH2_EX9_CONDITION_TABLE_7_GROUP",
+          "target_type": "CONDITION_TABLE"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH2_EX9_ACCESS_SEQUENCE_ZA_GROUP",
+      "object_type": "ACCESS_SEQUENCE",
+      "placeholders": [
+        {
+          "field_path": "data.code",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.condition_tables[0]",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.description",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 9,
+          "page": 93,
+          "raw_excerpt": "ZA##; accès 10; table 7##",
+          "scenario_id": "S4620_CH2_EX9",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Séquence d'accès / accès / table"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 9,
+          "page": 98,
+          "raw_excerpt": "ZA##; accès 10; table 7##",
+          "scenario_id": "S4620_CH2_EX9",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Séquence d'accès / accès / table"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH2_EX9",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "access_sequence": "ZA##",
+        "calculation_type": null,
+        "code": "ZF##",
+        "condition_update": null,
+        "copied_from_condition_type": "KF00",
+        "description": "Fret-Gr##",
+        "group_condition": true,
+        "manual_entry_rule": null,
+        "plus_minus_rule": null,
+        "reference_base": "D_GROSS_WEIGHT_SCALE",
+        "scale_control": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "USES_ACCESS_SEQUENCE",
+          "source_phrase": "ZA##",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH2_EX9_ACCESS_SEQUENCE_ZA_GROUP",
+          "target_type": "ACCESS_SEQUENCE"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH2_EX9_CONDITION_TYPE_ZF_GROUP",
+      "object_type": "CONDITION_TYPE",
+      "placeholders": [
+        {
+          "field_path": "data.code",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.description",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.access_sequence",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 9,
+          "page": 93,
+          "raw_excerpt": "ZF##; Fret-Gr##; ZA##",
+          "scenario_id": "S4620_CH2_EX9",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de condition / description / séquence d'accès"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 9,
+          "page": 98,
+          "raw_excerpt": "ZF##; Fret-Gr##; ZA##",
+          "scenario_id": "S4620_CH2_EX9",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de condition / description / séquence d'accès"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 15,
+          "page": 174,
+          "raw_excerpt": "ZF## basé sur le poids brut de tous les postes",
+          "scenario_id": "S4620_CH4_EX15",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Base des frais de fret"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 15,
+          "page": 180,
+          "raw_excerpt": "ZF##; condition de groupe; unité de référence D - barème poids brut",
+          "scenario_id": "S4620_CH4_EX15",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Base des frais de fret"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH2_EX9",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "code": "Z##PRC",
+        "description": "Groupe##-Schéma",
+        "exclusion_groups": [
+          {
+            "comparison_procedure": "D",
+            "condition_types_1": [
+              "ZW##"
+            ],
+            "condition_types_2": [
+              "ZF##"
+            ],
+            "group_1": "Z1##",
+            "group_2": "Z2##",
+            "order": 10
+          }
+        ],
+        "steps": [
+          {
+            "condition_type": "ZW##",
+            "order": 1,
+            "position": "IMMEDIATELY_BEFORE_ZF"
+          },
+          {
+            "condition_type": "ZF##",
+            "order": 2,
+            "replaces": "KF00"
+          }
+        ]
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "USES_CONDITION_TYPE",
+          "source_phrase": "ZF##",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH2_EX9_CONDITION_TYPE_ZF_GROUP",
+          "target_type": "CONDITION_TYPE"
+        },
+        {
+          "critical": true,
+          "relation": "USES_CONDITION_TYPE",
+          "source_phrase": "ZW##",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH4_EX15_CONDITION_TYPE_ZW_GROUP",
+          "target_type": "CONDITION_TYPE"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH2_EX9_PRICING_PROCEDURE_Z_GROUP_PRC",
+      "object_type": "PRICING_PROCEDURE",
+      "placeholders": [
+        {
+          "field_path": "data.code",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.description",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.steps[0].condition_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.steps[1].condition_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.exclusion_groups[0].group_1",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.exclusion_groups[0].condition_types_1[0]",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.exclusion_groups[0].group_2",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.exclusion_groups[0].condition_types_2[0]",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 9,
+          "page": 93,
+          "raw_excerpt": "Z##PRC copié de RVAA01; KF00 remplacé par ZF##",
+          "scenario_id": "S4620_CH2_EX9",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Schéma de calcul / type de condition"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 9,
+          "page": 98,
+          "raw_excerpt": "Z##PRC copié de RVAA01; KF00 remplacé par ZF##",
+          "scenario_id": "S4620_CH2_EX9",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Schéma de calcul / type de condition"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 15,
+          "page": 174,
+          "raw_excerpt": "ZW## immédiatement avant ZF##",
+          "scenario_id": "S4620_CH4_EX15",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Ordre des types de conditions"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 15,
+          "page": 181,
+          "raw_excerpt": "Z##PRC contient ZW## avant ZF##",
+          "scenario_id": "S4620_CH4_EX15",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Schéma de calcul"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 16,
+          "page": 183,
+          "raw_excerpt": "Z1##/ZW## et Z2##/ZF##; comparaison D",
+          "scenario_id": "S4620_CH4_EX16",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Groupes d'exclusion"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 16,
+          "page": 186,
+          "raw_excerpt": "ordre 10; procédure D; groupes Z1## et Z2##",
+          "scenario_id": "S4620_CH4_EX16",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Exclusion dans Z##PRC"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH2_EX9",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "customer_pricing_procedure": "<YY>",
+        "determination_context": "SALES_DOCUMENT",
+        "distribution_channel": "10",
+        "document_pricing_procedure": "A",
+        "pricing_procedure": "Z##PRC",
+        "quick_entry_condition_type": "PR00",
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "settlement_document_schema_group": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "DETERMINES",
+          "source_phrase": "Z##PRC",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH2_EX9_PRICING_PROCEDURE_Z_GROUP_PRC",
+          "target_type": "PRICING_PROCEDURE"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH2_EX9_PRICING_PROCEDURE_DETERMINATION_Z_GROUP",
+      "object_type": "PRICING_PROCEDURE_DETERMINATION",
+      "placeholders": [
+        {
+          "field_path": "data.pricing_procedure",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 9,
+          "page": 93,
+          "raw_excerpt": "1010/10/00; schéma document A; schéma client <YY>; Z##PRC; saisie rapide PR00",
+          "scenario_id": "S4620_CH2_EX9",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Détermination du schéma de calcul personnalisée"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 9,
+          "page": 98,
+          "raw_excerpt": "1010/10/00; schéma document A; schéma client <YY>; Z##PRC; saisie rapide PR00",
+          "scenario_id": "S4620_CH2_EX9",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Détermination du schéma de calcul personnalisée"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH2_EX9",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "adjustment_percent": null,
+        "calculation_semantics": "FREIGHT",
+        "condition_type": "ZF##",
+        "currency": "EUR",
+        "deletion_indicator": false,
+        "key_combination": {
+          "customer": null,
+          "customer_hierarchy_node": null,
+          "destination_country": "DE",
+          "distribution_channel": null,
+          "incoterms": "EXW",
+          "material": null,
+          "promotion_reference": null,
+          "sales_deal_reference": null,
+          "sales_organization": "1010"
+        },
+        "maximum_order_count": null,
+        "maximum_quantity": null,
+        "maximum_quantity_unit": null,
+        "pricing_unit": null,
+        "rate": 10,
+        "rate_unit": null,
+        "record_status": "ACTIVE",
+        "scale_basis": null,
+        "scales": [],
+        "source_operation": "CREATE",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "USES_CONDITION_TYPE",
+          "source_phrase": "ZF##",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH2_EX9_CONDITION_TYPE_ZF_GROUP",
+          "target_type": "CONDITION_TYPE"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH2_EX9_PRICING_CONDITION_ZF_GROUP_FREIGHT",
+      "object_type": "PRICING_CONDITION",
+      "placeholders": [
+        {
+          "field_path": "data.condition_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 9,
+          "page": 93,
+          "raw_excerpt": "ZF##; 1010; EXW; DE; 10 EUR",
+          "scenario_id": "S4620_CH2_EX9",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Enregistrement de conditions de fret"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 9,
+          "page": 98,
+          "raw_excerpt": "ZF##; 1010; EXW; DE; 10 EUR",
+          "scenario_id": "S4620_CH2_EX9",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Enregistrement de conditions de fret"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH2_EX9",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-3-3",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P620-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "CDCL",
+        "payment_terms": null,
+        "pricing_elements": [],
+        "processing_status": "SAVED",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C620-A##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C620-A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "PRICED_BY",
+          "source_phrase": "ZF##",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH2_EX9_PRICING_CONDITION_ZF_GROUP_FREIGHT",
+          "target_type": "PRICING_CONDITION"
+        },
+        {
+          "critical": true,
+          "relation": "USES_PROCEDURE",
+          "source_phrase": "Z##PRC",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH2_EX9_PRICING_PROCEDURE_Z_GROUP_PRC",
+          "target_type": "PRICING_PROCEDURE"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH2_EX9_SALES_ORDER_CUSTOM_PRICING_MODEL",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 9,
+          "page": 93,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-3-3; P620-1## 10 None",
+          "scenario_id": "S4620_CH2_EX9",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 2,
+          "course_code": "S4620",
+          "exercise": 9,
+          "page": 98,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-3-3; P620-1## 10 None",
+          "scenario_id": "S4620_CH2_EX9",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH2_EX9",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "adjustment_percent": 5,
+        "calculation_semantics": null,
+        "condition_type": "PR00",
+        "currency": null,
+        "deletion_indicator": false,
+        "key_combination": {
+          "customer": null,
+          "customer_hierarchy_node": null,
+          "destination_country": null,
+          "distribution_channel": "10",
+          "incoterms": null,
+          "material": "P620-2##",
+          "promotion_reference": null,
+          "sales_deal_reference": null,
+          "sales_organization": "1010"
+        },
+        "maximum_order_count": null,
+        "maximum_quantity": null,
+        "maximum_quantity_unit": null,
+        "pricing_unit": null,
+        "rate": null,
+        "rate_unit": null,
+        "record_status": "ACTIVE",
+        "scale_basis": null,
+        "scales": [],
+        "source_operation": "COPY_WITH_REFERENCE",
+        "valid_from": {
+          "kind": "RELATIVE",
+          "offset": "NEXT_YEAR_START",
+          "raw": "01 janvier de l'année prochaine"
+        },
+        "valid_to": {
+          "kind": "RELATIVE",
+          "offset": "NEXT_YEAR_END",
+          "raw": "31 décembre de l'année prochaine"
+        }
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "COPIED_FROM",
+          "source_phrase": "enregistrement PR00 existant pour P620-2##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "PRICING_CONDITION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH3_EX12_PRICING_CONDITION_PR00_P620_2_NEXT_YEAR",
+      "object_type": "PRICING_CONDITION",
+      "placeholders": [
+        {
+          "field_path": "data.key_combination.material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 3,
+          "course_code": "S4620",
+          "exercise": 12,
+          "page": 147,
+          "raw_excerpt": "PR00 article P620-2##; année prochaine",
+          "scenario_id": "S4620_CH3_EX12",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Création avec référence / validité"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4620",
+          "exercise": 12,
+          "page": 148,
+          "raw_excerpt": "PR00 article P620-2##; année prochaine",
+          "scenario_id": "S4620_CH3_EX12",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Création avec référence / validité"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4620",
+          "exercise": 13,
+          "page": 151,
+          "raw_excerpt": "P620-2##; augmentation 5 %",
+          "scenario_id": "S4620_CH3_EX13",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Modification du montant"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4620",
+          "exercise": 13,
+          "page": 152,
+          "raw_excerpt": "P620-2##; pourcentage 5",
+          "scenario_id": "S4620_CH3_EX13",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Modification simultanée"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH3_EX12",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "adjustment_percent": 5,
+        "calculation_semantics": null,
+        "condition_type": "PR00",
+        "currency": null,
+        "deletion_indicator": false,
+        "key_combination": {
+          "customer": null,
+          "customer_hierarchy_node": null,
+          "destination_country": null,
+          "distribution_channel": "10",
+          "incoterms": null,
+          "material": "P620-3##",
+          "promotion_reference": null,
+          "sales_deal_reference": null,
+          "sales_organization": "1010"
+        },
+        "maximum_order_count": null,
+        "maximum_quantity": null,
+        "maximum_quantity_unit": null,
+        "pricing_unit": null,
+        "rate": null,
+        "rate_unit": null,
+        "record_status": "ACTIVE",
+        "scale_basis": null,
+        "scales": [],
+        "source_operation": "COPY_WITH_REFERENCE",
+        "valid_from": {
+          "kind": "RELATIVE",
+          "offset": "NEXT_YEAR_START",
+          "raw": "01 janvier de l'année prochaine"
+        },
+        "valid_to": {
+          "kind": "RELATIVE",
+          "offset": "NEXT_YEAR_END",
+          "raw": "31 décembre de l'année prochaine"
+        }
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "COPIED_FROM",
+          "source_phrase": "enregistrement PR00 existant pour P620-3##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "PRICING_CONDITION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH3_EX12_PRICING_CONDITION_PR00_P620_3_NEXT_YEAR",
+      "object_type": "PRICING_CONDITION",
+      "placeholders": [
+        {
+          "field_path": "data.key_combination.material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 3,
+          "course_code": "S4620",
+          "exercise": 12,
+          "page": 147,
+          "raw_excerpt": "PR00 article P620-3##; année prochaine",
+          "scenario_id": "S4620_CH3_EX12",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Création avec référence / validité"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4620",
+          "exercise": 12,
+          "page": 148,
+          "raw_excerpt": "PR00 article P620-3##; année prochaine",
+          "scenario_id": "S4620_CH3_EX12",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Création avec référence / validité"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4620",
+          "exercise": 13,
+          "page": 151,
+          "raw_excerpt": "P620-3##; augmentation 5 %",
+          "scenario_id": "S4620_CH3_EX13",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Modification du montant"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4620",
+          "exercise": 13,
+          "page": 152,
+          "raw_excerpt": "P620-3##; pourcentage 5",
+          "scenario_id": "S4620_CH3_EX13",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Modification simultanée"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH3_EX12",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "adjustment_percent": null,
+        "calculation_semantics": null,
+        "condition_type": "PR00",
+        "currency": "EUR",
+        "deletion_indicator": false,
+        "key_combination": {
+          "customer": "C620-B##",
+          "customer_hierarchy_node": null,
+          "destination_country": null,
+          "distribution_channel": "10",
+          "incoterms": null,
+          "material": "P620-1##",
+          "promotion_reference": null,
+          "sales_deal_reference": null,
+          "sales_organization": "1010"
+        },
+        "maximum_order_count": null,
+        "maximum_quantity": null,
+        "maximum_quantity_unit": null,
+        "pricing_unit": null,
+        "rate": null,
+        "rate_unit": null,
+        "record_status": "ACTIVE",
+        "scale_basis": "QUANTITY",
+        "scales": [
+          {
+            "amount": 250,
+            "currency": "EUR",
+            "from_quantity": 1,
+            "pricing_unit": null,
+            "quantity_unit": "PC",
+            "rate": null,
+            "rate_unit": null,
+            "scale_basis": "QUANTITY",
+            "threshold": 1,
+            "threshold_currency": null,
+            "threshold_unit": "PC"
+          },
+          {
+            "amount": 240,
+            "currency": "EUR",
+            "from_quantity": 10,
+            "pricing_unit": null,
+            "quantity_unit": "PC",
+            "rate": null,
+            "rate_unit": null,
+            "scale_basis": "QUANTITY",
+            "threshold": 10,
+            "threshold_currency": null,
+            "threshold_unit": "PC"
+          },
+          {
+            "amount": 230,
+            "currency": "EUR",
+            "from_quantity": 100,
+            "pricing_unit": null,
+            "quantity_unit": "PC",
+            "rate": null,
+            "rate_unit": null,
+            "scale_basis": "QUANTITY",
+            "threshold": 100,
+            "threshold_currency": null,
+            "threshold_unit": "PC"
+          }
+        ],
+        "source_operation": "COPY",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "COPIED_FROM",
+          "source_phrase": "condition de prix propre au client C620-A## et à l'article P620-1##",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH1_EX1_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL_SCALE",
+          "target_type": "PRICING_CONDITION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH3_EX14_PRICING_CONDITION_PR00_CUSTOMER_COPY",
+      "object_type": "PRICING_CONDITION",
+      "placeholders": [
+        {
+          "field_path": "data.key_combination.customer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.key_combination.material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 3,
+          "course_code": "S4620",
+          "exercise": 14,
+          "page": 155,
+          "raw_excerpt": "C620-A##/P620-1## vers C620-B##/P620-1##",
+          "scenario_id": "S4620_CH3_EX14",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Copie d'enregistrement client/article"
+        },
+        {
+          "chapter": 3,
+          "course_code": "S4620",
+          "exercise": 14,
+          "page": 156,
+          "raw_excerpt": "C620-A##/P620-1## vers C620-B##/P620-1##",
+          "scenario_id": "S4620_CH3_EX14",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Copie d'enregistrement client/article"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH3_EX14",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "access_sequence": "ZA##",
+        "calculation_type": "B_FIXED_AMOUNT",
+        "code": "ZW##",
+        "condition_update": null,
+        "copied_from_condition_type": "KF00",
+        "description": "Walldorf##—Parcel",
+        "group_condition": true,
+        "manual_entry_rule": null,
+        "plus_minus_rule": null,
+        "reference_base": "D_GROSS_WEIGHT_SCALE",
+        "scale_control": "UNRESTRICTED_NON_MONOTONIC"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "USES_ACCESS_SEQUENCE",
+          "source_phrase": "ZA##",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH2_EX9_ACCESS_SEQUENCE_ZA_GROUP",
+          "target_type": "ACCESS_SEQUENCE"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH4_EX15_CONDITION_TYPE_ZW_GROUP",
+      "object_type": "CONDITION_TYPE",
+      "placeholders": [
+        {
+          "field_path": "data.code",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.description",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.access_sequence",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 15,
+          "page": 173,
+          "raw_excerpt": "ZW##; Walldorf##—Parcel; ZA##; B montant fixe; condition de groupe; D barème poids brut",
+          "scenario_id": "S4620_CH4_EX15",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de condition / règle / condition de groupe / unité de référence"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 15,
+          "page": 177,
+          "raw_excerpt": "ZW##; Walldorf##—Parcel; ZA##; B montant fixe; condition de groupe; D barème poids brut",
+          "scenario_id": "S4620_CH4_EX15",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de condition / règle / condition de groupe / unité de référence"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH4_EX15",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "adjustment_percent": null,
+        "calculation_semantics": "FREIGHT_BY_GROSS_WEIGHT",
+        "condition_type": "ZW##",
+        "currency": "EUR",
+        "deletion_indicator": false,
+        "key_combination": {
+          "customer": null,
+          "customer_hierarchy_node": null,
+          "destination_country": "DE",
+          "distribution_channel": null,
+          "incoterms": "EXW",
+          "material": null,
+          "promotion_reference": null,
+          "sales_deal_reference": null,
+          "sales_organization": "1010"
+        },
+        "maximum_order_count": null,
+        "maximum_quantity": null,
+        "maximum_quantity_unit": null,
+        "pricing_unit": null,
+        "rate": null,
+        "rate_unit": null,
+        "record_status": "ACTIVE",
+        "scale_basis": "QUANTITY",
+        "scales": [
+          {
+            "amount": 8,
+            "currency": "EUR",
+            "from_quantity": 0,
+            "pricing_unit": null,
+            "quantity_unit": "KG",
+            "rate": null,
+            "rate_unit": null,
+            "scale_basis": "QUANTITY",
+            "threshold": 0,
+            "threshold_currency": null,
+            "threshold_unit": "KG"
+          },
+          {
+            "amount": 10,
+            "currency": "EUR",
+            "from_quantity": 0.5,
+            "pricing_unit": null,
+            "quantity_unit": "KG",
+            "rate": null,
+            "rate_unit": null,
+            "scale_basis": "QUANTITY",
+            "threshold": 0.5,
+            "threshold_currency": null,
+            "threshold_unit": "KG"
+          },
+          {
+            "amount": 12,
+            "currency": "EUR",
+            "from_quantity": 1,
+            "pricing_unit": null,
+            "quantity_unit": "KG",
+            "rate": null,
+            "rate_unit": null,
+            "scale_basis": "QUANTITY",
+            "threshold": 1,
+            "threshold_currency": null,
+            "threshold_unit": "KG"
+          },
+          {
+            "amount": 14,
+            "currency": "EUR",
+            "from_quantity": 2,
+            "pricing_unit": null,
+            "quantity_unit": "KG",
+            "rate": null,
+            "rate_unit": null,
+            "scale_basis": "QUANTITY",
+            "threshold": 2,
+            "threshold_currency": null,
+            "threshold_unit": "KG"
+          },
+          {
+            "amount": 16,
+            "currency": "EUR",
+            "from_quantity": 5,
+            "pricing_unit": null,
+            "quantity_unit": "KG",
+            "rate": null,
+            "rate_unit": null,
+            "scale_basis": "QUANTITY",
+            "threshold": 5,
+            "threshold_currency": null,
+            "threshold_unit": "KG"
+          },
+          {
+            "amount": 20,
+            "currency": "EUR",
+            "from_quantity": 10,
+            "pricing_unit": null,
+            "quantity_unit": "KG",
+            "rate": null,
+            "rate_unit": null,
+            "scale_basis": "QUANTITY",
+            "threshold": 10,
+            "threshold_currency": null,
+            "threshold_unit": "KG"
+          },
+          {
+            "amount": 30,
+            "currency": "EUR",
+            "from_quantity": 20,
+            "pricing_unit": null,
+            "quantity_unit": "KG",
+            "rate": null,
+            "rate_unit": null,
+            "scale_basis": "QUANTITY",
+            "threshold": 20,
+            "threshold_currency": null,
+            "threshold_unit": "KG"
+          },
+          {
+            "amount": 0,
+            "currency": "EUR",
+            "from_quantity": 30.001,
+            "pricing_unit": null,
+            "quantity_unit": "KG",
+            "rate": null,
+            "rate_unit": null,
+            "scale_basis": "QUANTITY",
+            "threshold": 30.001,
+            "threshold_currency": null,
+            "threshold_unit": "KG"
+          }
+        ],
+        "source_operation": "CREATE",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "USES_CONDITION_TYPE",
+          "source_phrase": "ZW##",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH4_EX15_CONDITION_TYPE_ZW_GROUP",
+          "target_type": "CONDITION_TYPE"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH4_EX15_PRICING_CONDITION_ZW_GROUP_WEIGHT_SCALE",
+      "object_type": "PRICING_CONDITION",
+      "placeholders": [
+        {
+          "field_path": "data.condition_type",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 15,
+          "page": 173,
+          "raw_excerpt": "0/0,5/1/2/5/10/20/30,001 KG; 8/10/12/14/16/20/30/0 EUR",
+          "scenario_id": "S4620_CH4_EX15",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Barème de poids brut ZW##"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 15,
+          "page": 177,
+          "raw_excerpt": "30,001 kg indique supérieur à 30 kg; montant 0 EUR",
+          "scenario_id": "S4620_CH4_EX15",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Barème de poids brut ZW##"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH4_EX15",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-5-1",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P620-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          },
+          {
+            "item_category": null,
+            "line_id": "20",
+            "material": "P620-3##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 5,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "CDCL",
+        "payment_terms": null,
+        "pricing_elements": [],
+        "processing_status": "SAVED",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C620-A##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C620-A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-3##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "PRICED_BY",
+          "source_phrase": "ZW##",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH4_EX15_PRICING_CONDITION_ZW_GROUP_WEIGHT_SCALE",
+          "target_type": "PRICING_CONDITION"
+        },
+        {
+          "critical": true,
+          "relation": "PRICED_BY",
+          "source_phrase": "ZF##",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH2_EX9_PRICING_CONDITION_ZF_GROUP_FREIGHT",
+          "target_type": "PRICING_CONDITION"
+        },
+        {
+          "critical": true,
+          "relation": "USES_PROCEDURE",
+          "source_phrase": "Z##PRC",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH2_EX9_PRICING_PROCEDURE_Z_GROUP_PRC",
+          "target_type": "PRICING_PROCEDURE"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH4_EX15_SALES_ORDER_WEIGHT_BASED_FREIGHT",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[1].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 15,
+          "page": 173,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-5-1; P620-1## 10 None; P620-3## 5 None",
+          "scenario_id": "S4620_CH4_EX15",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 15,
+          "page": 177,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-5-1; P620-1## 10 None; P620-3## 5 None",
+          "scenario_id": "S4620_CH4_EX15",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH4_EX15",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-5-2",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P620-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          },
+          {
+            "item_category": null,
+            "line_id": "20",
+            "material": "P620-3##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "CDCL",
+        "payment_terms": null,
+        "pricing_elements": [],
+        "processing_status": "SAVED",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C620-A##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C620-A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-3##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "PRICED_BY",
+          "source_phrase": "ZW##",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH4_EX15_PRICING_CONDITION_ZW_GROUP_WEIGHT_SCALE",
+          "target_type": "PRICING_CONDITION"
+        },
+        {
+          "critical": true,
+          "relation": "PRICED_BY",
+          "source_phrase": "ZF##",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH2_EX9_PRICING_CONDITION_ZF_GROUP_FREIGHT",
+          "target_type": "PRICING_CONDITION"
+        },
+        {
+          "critical": true,
+          "relation": "USES_PROCEDURE",
+          "source_phrase": "groupes d'exclusion Z1##/Z2##",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH2_EX9_PRICING_PROCEDURE_Z_GROUP_PRC",
+          "target_type": "PRICING_PROCEDURE"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH4_EX16_SALES_ORDER_FREIGHT_EXCLUSION",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[1].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 16,
+          "page": 183,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-5-2; P620-1## 10 None; P620-3## 10 None",
+          "scenario_id": "S4620_CH4_EX16",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 16,
+          "page": 185,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-5-2; P620-1## 10 None; P620-3## 10 None",
+          "scenario_id": "S4620_CH4_EX16",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH4_EX16",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "access_sequence": null,
+        "calculation_type": null,
+        "code": "K005",
+        "condition_update": true,
+        "copied_from_condition_type": null,
+        "description": "Déduction client-article",
+        "group_condition": null,
+        "manual_entry_rule": null,
+        "plus_minus_rule": "DISCOUNT_ONLY",
+        "reference_base": null,
+        "scale_control": null
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH4_EX17_CONDITION_TYPE_K005",
+      "object_type": "CONDITION_TYPE",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 17,
+          "page": 189,
+          "raw_excerpt": "K005; case MAJ conditions cochée",
+          "scenario_id": "S4620_CH4_EX17",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de condition K005 / MAJ conditions"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 17,
+          "page": 192,
+          "raw_excerpt": "K005; case MAJ conditions cochée",
+          "scenario_id": "S4620_CH4_EX17",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de condition K005 / MAJ conditions"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4620_CH4_EX17",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "adjustment_percent": null,
+        "calculation_semantics": "DISCOUNT",
+        "condition_type": "K005",
+        "currency": "EUR",
+        "deletion_indicator": true,
+        "key_combination": {
+          "customer": "C620-B##",
+          "customer_hierarchy_node": null,
+          "destination_country": null,
+          "distribution_channel": "10",
+          "incoterms": null,
+          "material": "P620-2##",
+          "promotion_reference": null,
+          "sales_deal_reference": null,
+          "sales_organization": "1010"
+        },
+        "maximum_order_count": 1,
+        "maximum_quantity": 15,
+        "maximum_quantity_unit": "PC",
+        "pricing_unit": null,
+        "rate": -100,
+        "rate_unit": null,
+        "record_status": "DELETED_AFTER_TEST",
+        "scale_basis": null,
+        "scales": [],
+        "source_operation": "CREATE",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH4_EX17_PRICING_CONDITION_K005_FIRST_ORDER",
+      "object_type": "PRICING_CONDITION",
+      "placeholders": [
+        {
+          "field_path": "data.key_combination.customer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.key_combination.material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 17,
+          "page": 189,
+          "raw_excerpt": "K005; C620-B##; P620-2##; -100 EUR; une commande puis limite 15 pièces; suppression activée",
+          "scenario_id": "S4620_CH4_EX17",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "K005 / montant / limite / code suppression"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 17,
+          "page": 192,
+          "raw_excerpt": "K005; C620-B##; P620-2##; -100 EUR; une commande puis limite 15 pièces; suppression activée",
+          "scenario_id": "S4620_CH4_EX17",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "K005 / montant / limite / code suppression"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH4_EX17",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-5-3-1",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P620-2##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "CDCL",
+        "payment_terms": null,
+        "pricing_elements": [],
+        "processing_status": "SAVED",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C620-B##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C620-B##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-2##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "PRICED_BY",
+          "source_phrase": "K005",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH4_EX17_PRICING_CONDITION_K005_FIRST_ORDER",
+          "target_type": "PRICING_CONDITION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH4_EX17_SALES_ORDER_FIRST_K005",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 17,
+          "page": 189,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-B##; ##-5-3-1; P620-2## 10 None",
+          "scenario_id": "S4620_CH4_EX17",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 17,
+          "page": 192,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-B##; ##-5-3-1; P620-2## 10 None",
+          "scenario_id": "S4620_CH4_EX17",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH4_EX17",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-5-3-2",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P620-2##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "CDCL",
+        "payment_terms": null,
+        "pricing_elements": [],
+        "processing_status": "SAVED",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C620-B##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C620-B##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-2##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "PRICED_BY",
+          "source_phrase": "K005",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH4_EX17_PRICING_CONDITION_K005_FIRST_ORDER",
+          "target_type": "PRICING_CONDITION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH4_EX17_SALES_ORDER_SECOND_K005",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 17,
+          "page": 189,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-B##; ##-5-3-2; P620-2## 10 None",
+          "scenario_id": "S4620_CH4_EX17",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 17,
+          "page": 192,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-B##; ##-5-3-2; P620-2## 10 None",
+          "scenario_id": "S4620_CH4_EX17",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH4_EX17",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-5-3-3",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P620-2##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 15,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "CDCL",
+        "payment_terms": null,
+        "pricing_elements": [],
+        "processing_status": "SAVED",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C620-B##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C620-B##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-2##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "PRICED_BY",
+          "source_phrase": "K005",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH4_EX17_PRICING_CONDITION_K005_FIRST_ORDER",
+          "target_type": "PRICING_CONDITION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH4_EX17_SALES_ORDER_QUANTITY_LIMIT_K005",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 17,
+          "page": 189,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-B##; ##-5-3-3; P620-2## 15 None",
+          "scenario_id": "S4620_CH4_EX17",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 4,
+          "course_code": "S4620",
+          "exercise": 17,
+          "page": 192,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-B##; ##-5-3-3; P620-2## 15 None",
+          "scenario_id": "S4620_CH4_EX17",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH4_EX17",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-6-1",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P620-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 1,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          },
+          {
+            "item_category": null,
+            "line_id": "20",
+            "material": "P620-2##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 2,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "CDLC",
+        "payment_terms": null,
+        "pricing_elements": [
+          {
+            "condition_type": "HM00",
+            "currency": "EUR",
+            "level": "HEADER",
+            "rate": 400,
+            "source": "MANUAL"
+          }
+        ],
+        "processing_status": "SAVED",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C620-A##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C620-A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-2##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH5_EX18_SALES_ORDER_HEADER_NET_VALUE",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[1].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 5,
+          "course_code": "S4620",
+          "exercise": 18,
+          "page": 217,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-A##; ##-6-1; P620-1## 1 None; P620-2## 2 None",
+          "scenario_id": "S4620_CH5_EX18",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 5,
+          "course_code": "S4620",
+          "exercise": 18,
+          "page": 223,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-A##; ##-6-1; P620-1## 1 None; P620-2## 2 None",
+          "scenario_id": "S4620_CH5_EX18",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH5_EX18",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-6-2",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P620-1##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "CDLC",
+        "payment_terms": null,
+        "pricing_elements": [
+          {
+            "condition_type": "PN00",
+            "currency": "EUR",
+            "rate": 200,
+            "rate_unit": "PER_PIECE",
+            "source": "MANUAL"
+          }
+        ],
+        "processing_status": "SAVED",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C620-A##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C620-A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-1##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH5_EX18_SALES_ORDER_ITEM_NET_PRICE",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 5,
+          "course_code": "S4620",
+          "exercise": 18,
+          "page": 217,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-A##; ##-6-2; P620-1## 10 None",
+          "scenario_id": "S4620_CH5_EX18",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 5,
+          "course_code": "S4620",
+          "exercise": 18,
+          "page": 223,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-A##; ##-6-2; P620-1## 10 None",
+          "scenario_id": "S4620_CH5_EX18",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH5_EX18",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "hierarchy_type": "CUSTOMER_PRICING_HIERARCHY",
+        "nodes": [
+          {
+            "description": "TOPCO Europe",
+            "node_id": "C620-ZE"
+          },
+          {
+            "description": "TOPCO Western Europe",
+            "node_id": "C620-ZEW",
+            "parent": "C620-ZE"
+          },
+          {
+            "customer": "C620-A##",
+            "parent": "C620-ZEW"
+          }
+        ],
+        "sales_area": {
+          "distribution_channel": "10",
+          "sales_division": "00",
+          "sales_organization": "1010"
+        },
+        "valid_from": null,
+        "valid_to": null
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH5_EX19_CUSTOMER_HIERARCHY_TOPCO_WESTERN_EUROPE",
+      "object_type": "CUSTOMER_HIERARCHY",
+      "placeholders": [
+        {
+          "field_path": "data.nodes[2].customer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 5,
+          "course_code": "S4620",
+          "exercise": 19,
+          "page": 231,
+          "raw_excerpt": "TOPCO; C620-ZEW Europe occidentale; C620-A##; 1010/10/00",
+          "scenario_id": "S4620_CH5_EX19",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Hiérarchie clients / affectation"
+        },
+        {
+          "chapter": 5,
+          "course_code": "S4620",
+          "exercise": 19,
+          "page": 233,
+          "raw_excerpt": "TOPCO; C620-ZEW Europe occidentale; C620-A##; 1010/10/00",
+          "scenario_id": "S4620_CH5_EX19",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Hiérarchie clients / affectation"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH5_EX19",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "adjustment_percent": null,
+        "calculation_semantics": "DISCOUNT",
+        "condition_type": "HI02",
+        "currency": "EUR",
+        "deletion_indicator": false,
+        "key_combination": {
+          "customer": null,
+          "customer_hierarchy_node": "C620-ZE",
+          "destination_country": null,
+          "distribution_channel": null,
+          "incoterms": null,
+          "material": "P620-2##",
+          "promotion_reference": null,
+          "sales_deal_reference": null,
+          "sales_organization": null
+        },
+        "maximum_order_count": null,
+        "maximum_quantity": null,
+        "maximum_quantity_unit": null,
+        "pricing_unit": null,
+        "rate": 50,
+        "rate_unit": null,
+        "record_status": "ACTIVE",
+        "scale_basis": null,
+        "scales": [],
+        "source_operation": "CREATE",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "APPLIES_TO_HIERARCHY",
+          "source_phrase": "C620-ZE",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH5_EX19_CUSTOMER_HIERARCHY_TOPCO_WESTERN_EUROPE",
+          "target_type": "CUSTOMER_HIERARCHY"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH5_EX19_PRICING_CONDITION_HI02_HIERARCHY_MATERIAL",
+      "object_type": "PRICING_CONDITION",
+      "placeholders": [
+        {
+          "field_path": "data.key_combination.material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 5,
+          "course_code": "S4620",
+          "exercise": 19,
+          "page": 231,
+          "raw_excerpt": "C620-ZE; P620-2##; remise forfaitaire 50 EUR",
+          "scenario_id": "S4620_CH5_EX19",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "HI02 hiérarchie/article"
+        },
+        {
+          "chapter": 5,
+          "course_code": "S4620",
+          "exercise": 19,
+          "page": 233,
+          "raw_excerpt": "C620-ZE; P620-2##; remise forfaitaire 50 EUR",
+          "scenario_id": "S4620_CH5_EX19",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "HI02 hiérarchie/article"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH5_EX19",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-6-5",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P620-2##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 1,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "CDLC",
+        "payment_terms": null,
+        "pricing_elements": [],
+        "processing_status": "SAVED",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C620-A##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C620-A##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-2##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "PRICED_BY",
+          "source_phrase": "HI02",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH5_EX19_PRICING_CONDITION_HI02_HIERARCHY_MATERIAL",
+          "target_type": "PRICING_CONDITION"
+        },
+        {
+          "critical": true,
+          "relation": "CUSTOMER_IN_HIERARCHY",
+          "source_phrase": "TOPCO",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH5_EX19_CUSTOMER_HIERARCHY_TOPCO_WESTERN_EUROPE",
+          "target_type": "CUSTOMER_HIERARCHY"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH5_EX19_SALES_ORDER_HIERARCHY_PRICING",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 5,
+          "course_code": "S4620",
+          "exercise": 19,
+          "page": 231,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-A##; ##-6-5; P620-2## 1 None",
+          "scenario_id": "S4620_CH5_EX19",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 5,
+          "course_code": "S4620",
+          "exercise": 19,
+          "page": 233,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-A##; ##-6-5; P620-2## 1 None",
+          "scenario_id": "S4620_CH5_EX19",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH5_EX19",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "adjustment_percent": null,
+        "calculation_semantics": "DISCOUNT",
+        "condition_type": "KA00",
+        "currency": null,
+        "deletion_indicator": false,
+        "key_combination": {
+          "customer": "C620-B##",
+          "customer_hierarchy_node": null,
+          "destination_country": null,
+          "distribution_channel": "10",
+          "incoterms": null,
+          "material": "P620-2##",
+          "promotion_reference": null,
+          "sales_deal_reference": null,
+          "sales_organization": "1010"
+        },
+        "maximum_order_count": null,
+        "maximum_quantity": null,
+        "maximum_quantity_unit": null,
+        "pricing_unit": null,
+        "rate": 10,
+        "rate_unit": "%",
+        "record_status": "ACTIVE",
+        "scale_basis": null,
+        "scales": [],
+        "source_operation": "CREATE",
+        "valid_from": null,
+        "valid_to": null
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH6_EX20_PRICING_CONDITION_KA00_SALES_DEAL",
+      "object_type": "PRICING_CONDITION",
+      "placeholders": [
+        {
+          "field_path": "data.key_combination.customer",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.key_combination.material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 6,
+          "course_code": "S4620",
+          "exercise": 20,
+          "page": 259,
+          "raw_excerpt": "KA00; action commerciale créée depuis promotion; C620-B##; P620-2##; 10 %",
+          "scenario_id": "S4620_CH6_EX20",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "KA00 / action commerciale / client / article / remise"
+        },
+        {
+          "chapter": 6,
+          "course_code": "S4620",
+          "exercise": 20,
+          "page": 262,
+          "raw_excerpt": "KA00; C620-B##; P620-2# (coquille d'un # dans la solution); remise 10 %",
+          "scenario_id": "S4620_CH6_EX20",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "KA00 / action commerciale / client / article / remise"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH6_EX20",
+      "validation": {
+        "confidence": "MEDIUM",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-9-2",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P620-2##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "CDLC",
+        "payment_terms": null,
+        "pricing_elements": [],
+        "processing_status": "SAVED",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C620-B##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C620-B##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-2##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": true,
+          "relation": "PRICED_BY",
+          "source_phrase": "KA00",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH6_EX20_PRICING_CONDITION_KA00_SALES_DEAL",
+          "target_type": "PRICING_CONDITION"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH6_EX20_SALES_ORDER_SALES_DEAL",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 6,
+          "course_code": "S4620",
+          "exercise": 20,
+          "page": 259,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-B##; ##-9-2; P620-2## 10 None",
+          "scenario_id": "S4620_CH6_EX20",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 6,
+          "course_code": "S4620",
+          "exercise": 20,
+          "page": 262,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-B##; ##-9-2; P620-2## 10 None",
+          "scenario_id": "S4620_CH6_EX20",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH6_EX20",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "code": "A10005",
+        "description": "Ristourne (DE)",
+        "exclusion_groups": [],
+        "steps": []
+      },
+      "dependencies": [],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH7_EX21_PRICING_PROCEDURE_A10005",
+      "object_type": "PRICING_PROCEDURE",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 7,
+          "course_code": "S4620",
+          "exercise": 21,
+          "page": 281,
+          "raw_excerpt": "A10005 - Ristourne (DE)",
+          "scenario_id": "S4620_CH7_EX21",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Schéma de calcul du document de décompte"
+        },
+        {
+          "chapter": 7,
+          "course_code": "S4620",
+          "exercise": 21,
+          "page": 283,
+          "raw_excerpt": "A10005 - Ristourne (DE)",
+          "scenario_id": "S4620_CH7_EX21",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Schéma de calcul du document de décompte"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4620_CH7_EX21",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [],
+      "classification": "CUSTOMIZING",
+      "data": {
+        "customer_pricing_procedure": null,
+        "determination_context": "SETTLEMENT_DOCUMENT",
+        "distribution_channel": null,
+        "document_pricing_procedure": null,
+        "pricing_procedure": "A10005",
+        "quick_entry_condition_type": null,
+        "sales_division": null,
+        "sales_organization": null,
+        "settlement_document_schema_group": "0S"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "DETERMINES",
+          "source_phrase": "A10005",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH7_EX21_PRICING_PROCEDURE_A10005",
+          "target_type": "PRICING_PROCEDURE"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH7_EX21_PRICING_PROCEDURE_DETERMINATION_SETTLEMENT",
+      "object_type": "PRICING_PROCEDURE_DETERMINATION",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 7,
+          "course_code": "S4620",
+          "exercise": 21,
+          "page": 281,
+          "raw_excerpt": "groupe de schémas 0S; schéma A10005",
+          "scenario_id": "S4620_CH7_EX21",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Détermination pour document de décompte"
+        },
+        {
+          "chapter": 7,
+          "course_code": "S4620",
+          "exercise": 21,
+          "page": 283,
+          "raw_excerpt": "groupe de schémas 0S; schéma A10005",
+          "scenario_id": "S4620_CH7_EX21",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Détermination pour document de décompte"
+        }
+      ],
+      "readiness_status": "READY",
+      "scenario_id": "S4620_CH7_EX21",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-9-1",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P620-3##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "CDLC",
+        "payment_terms": null,
+        "pricing_elements": [],
+        "processing_status": "SAVED",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C620-B##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C620-B##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-3##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH7_EX22_SALES_ORDER_BUSINESS_VOLUME_1",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 7,
+          "course_code": "S4620",
+          "exercise": 22,
+          "page": 295,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-B##; ##-9-1; P620-3## 10 None",
+          "scenario_id": "S4620_CH7_EX22",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 7,
+          "course_code": "S4620",
+          "exercise": 22,
+          "page": 297,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-B##; ##-9-1; P620-3## 10 None",
+          "scenario_id": "S4620_CH7_EX22",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH7_EX22",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-9-2",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P620-3##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "CDLC",
+        "payment_terms": null,
+        "pricing_elements": [],
+        "processing_status": "SAVED",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C620-B##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C620-B##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-3##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH7_EX22_SALES_ORDER_BUSINESS_VOLUME_2",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 7,
+          "course_code": "S4620",
+          "exercise": 22,
+          "page": 295,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-B##; ##-9-2; P620-3## 10 None",
+          "scenario_id": "S4620_CH7_EX22",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 7,
+          "course_code": "S4620",
+          "exercise": 22,
+          "page": 297,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-B##; ##-9-2; P620-3## 10 None",
+          "scenario_id": "S4620_CH7_EX22",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH7_EX22",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "MASTER_DATA",
+      "data": {
+        "business_partner": "C620-B##",
+        "business_volume_selection_criteria": [
+          {
+            "criterion": "0001_CUSTOMER",
+            "value": "C620-B##"
+          },
+          {
+            "criterion": "0009_MATERIAL",
+            "value": "P620-3##"
+          }
+        ],
+        "conditions": [
+          {
+            "calculation_rule": "QUANTITY",
+            "condition_type": "RES1",
+            "currency": "EUR",
+            "pricing_unit": 1,
+            "quantity_unit": "PC",
+            "rate": 10
+          },
+          {
+            "calculation_rule": "QUANTITY",
+            "condition_type": "REA1",
+            "currency": "EUR",
+            "pricing_unit": 1,
+            "quantity_unit": "PC",
+            "rate": -10
+          }
+        ],
+        "contract_id": null,
+        "contract_status": "VALIDATED_AND_SAVED",
+        "contract_type": "0S01_SALES_REBATE",
+        "sales_area": {
+          "distribution_channel": "10",
+          "sales_division": "00",
+          "sales_organization": "1010"
+        },
+        "settlement_material": null,
+        "settlement_schedule": [
+          {
+            "calendar": "AJ_ANNUAL_AGREEMENT",
+            "date": "31.12.AAAA",
+            "type": "FINAL"
+          }
+        ],
+        "valid_from": {
+          "kind": "RELATIVE",
+          "offset": "CURRENT_YEAR_START",
+          "raw": "01/01/AAAA (premier jour de l'année en cours)"
+        },
+        "valid_to": {
+          "kind": "RELATIVE",
+          "offset": "CURRENT_YEAR_END",
+          "raw": "31/12/AAAA (dernier jour de l'année en cours)"
+        }
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "BUSINESS_VOLUME_FROM",
+          "source_phrase": "factures issues des commandes créées à l'exercice 22",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH7_EX22_SALES_ORDER_BUSINESS_VOLUME_1",
+          "target_type": "SALES_ORDER"
+        },
+        {
+          "critical": false,
+          "relation": "BUSINESS_VOLUME_FROM",
+          "source_phrase": "factures issues des commandes créées à l'exercice 22",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH7_EX22_SALES_ORDER_BUSINESS_VOLUME_2",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH7_EX23_CONDITION_CONTRACT_SALES_REBATE",
+      "object_type": "CONDITION_CONTRACT",
+      "placeholders": [
+        {
+          "field_path": "data.business_partner",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.business_volume_selection_criteria[0].value",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.business_volume_selection_criteria[1].value",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 7,
+          "course_code": "S4620",
+          "exercise": 23,
+          "page": 301,
+          "raw_excerpt": "0S01; C620-B##; P620-3##; 01/01-31/12/AAAA; RES1 10 EUR/pce; REA1 -10 EUR/pce; AJ",
+          "scenario_id": "S4620_CH7_EX23",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Contrat de conditions / critères de CA / conditions / calendrier"
+        },
+        {
+          "chapter": 7,
+          "course_code": "S4620",
+          "exercise": 23,
+          "page": 303,
+          "raw_excerpt": "0S01; C620-B##; P620-3##; 01/01-31/12/AAAA; RES1 10 EUR/pce; REA1 -10 EUR/pce; AJ",
+          "scenario_id": "S4620_CH7_EX23",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Contrat de conditions / critères de CA / conditions / calendrier"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH7_EX23",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_metadata": [
+          {
+            "accounting_document_id": null,
+            "amount": -200,
+            "currency": "EUR",
+            "entry": "REBATE_ACCRUAL_PAYABLE"
+          }
+        ],
+        "amount": 200,
+        "business_volume": {
+          "order_count": 2,
+          "source": "PRIOR_BILLINGS"
+        },
+        "condition_contract": null,
+        "currency": "EUR",
+        "document_id": null,
+        "execution_type": "ACTUAL_RUN",
+        "settlement_date": {
+          "kind": "RELATIVE",
+          "offset": "P0D",
+          "raw": "date du jour"
+        },
+        "settlement_status": "CREATED",
+        "settlement_type": "DELTA_ACCRUAL"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SETTLES",
+          "source_phrase": "contrat créé à l'exercice précédent",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH7_EX23_CONDITION_CONTRACT_SALES_REBATE",
+          "target_type": "CONDITION_CONTRACT"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH7_EX24_SETTLEMENT_DOCUMENT_DELTA_ACCRUAL",
+      "object_type": "SETTLEMENT_DOCUMENT",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 7,
+          "course_code": "S4620",
+          "exercise": 24,
+          "page": 313,
+          "raw_excerpt": "date du jour; exécution réelle; 200 EUR",
+          "scenario_id": "S4620_CH7_EX24",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Provisions delta / date / montant"
+        },
+        {
+          "chapter": 7,
+          "course_code": "S4620",
+          "exercise": 24,
+          "page": 314,
+          "raw_excerpt": "date du jour; exécution réelle; 200 EUR",
+          "scenario_id": "S4620_CH7_EX24",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Provisions delta / date / montant"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH7_EX24",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_metadata": [
+          {
+            "accounting_document_id": null,
+            "amount": 200,
+            "currency": "EUR",
+            "entry": "CUSTOMER_CREDIT"
+          }
+        ],
+        "amount": 200,
+        "business_volume": {
+          "currency": null,
+          "quantity": 20,
+          "quantity_unit": "PC",
+          "rebate_volume": 5360,
+          "source_billing_count": 2
+        },
+        "condition_contract": null,
+        "currency": "EUR",
+        "document_id": null,
+        "execution_type": "ACTUAL_RUN",
+        "settlement_date": {
+          "kind": "RELATIVE",
+          "offset": "P0D",
+          "raw": "date du jour"
+        },
+        "settlement_status": "CREATED",
+        "settlement_type": "PARTIAL_SETTLEMENT_CREDIT"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SETTLES",
+          "source_phrase": "contrat de conditions",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH7_EX23_CONDITION_CONTRACT_SALES_REBATE",
+          "target_type": "CONDITION_CONTRACT"
+        },
+        {
+          "critical": true,
+          "relation": "FOLLOWS",
+          "source_phrase": "provisions delta déjà décomptées",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH7_EX24_SETTLEMENT_DOCUMENT_DELTA_ACCRUAL",
+          "target_type": "SETTLEMENT_DOCUMENT"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH7_EX25_SETTLEMENT_DOCUMENT_PARTIAL_CREDIT",
+      "object_type": "SETTLEMENT_DOCUMENT",
+      "placeholders": [],
+      "provenance": [
+        {
+          "chapter": 7,
+          "course_code": "S4620",
+          "exercise": 25,
+          "page": 317,
+          "raw_excerpt": "20 pièces; REBV 5 360; avoir net 200 EUR",
+          "scenario_id": "S4620_CH7_EX25",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Décompte partiel / volume d'affaires / montant"
+        },
+        {
+          "chapter": 7,
+          "course_code": "S4620",
+          "exercise": 25,
+          "page": 319,
+          "raw_excerpt": "20 pièces; REBV 5 360; avoir net 200 EUR",
+          "scenario_id": "S4620_CH7_EX25",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Décompte partiel / volume d'affaires / montant"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH7_EX25",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "completeness_state": null,
+        "customer_reference": "##-9-3",
+        "distribution_channel": "10",
+        "items": [
+          {
+            "item_category": null,
+            "line_id": "10",
+            "material": "P620-3##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 10,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          },
+          {
+            "item_category": null,
+            "line_id": "20",
+            "material": "P620-2##",
+            "net_weight": null,
+            "net_weight_unit": null,
+            "plant": null,
+            "quantity": 5,
+            "route": null,
+            "ship_to_party": null,
+            "shipping_point": null,
+            "unit": null
+          }
+        ],
+        "order_type": "CDLC",
+        "payment_terms": null,
+        "pricing_elements": [],
+        "processing_status": "SAVED",
+        "requested_delivery_date": {
+          "kind": "RELATIVE",
+          "offset": "P1W",
+          "raw": "dans une semaine"
+        },
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "ship_to_party": null,
+        "sold_to_party": "C620-B##"
+      },
+      "dependencies": [
+        {
+          "critical": false,
+          "relation": "SOLD_TO_PARTY",
+          "source_phrase": "C620-B##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "BUSINESS_PARTNER"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-3##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        },
+        {
+          "critical": false,
+          "relation": "USES_MATERIAL",
+          "source_phrase": "P620-2##",
+          "status": "UNRESOLVED",
+          "target_id": null,
+          "target_type": "MATERIAL"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH7_EX26_SALES_ORDER_ADDITIONAL_BUSINESS_VOLUME",
+      "object_type": "SALES_ORDER",
+      "placeholders": [
+        {
+          "field_path": "data.sold_to_party",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.customer_reference",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[0].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        },
+        {
+          "field_path": "data.items[1].material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 7,
+          "course_code": "S4620",
+          "exercise": 26,
+          "page": 323,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-B##; ##-9-3; P620-3## 10 None; P620-2## 5 None",
+          "scenario_id": "S4620_CH7_EX26",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "chapter": 7,
+          "course_code": "S4620",
+          "exercise": 26,
+          "page": 325,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-B##; ##-9-3; P620-3## 10 None; P620-2## 5 None",
+          "scenario_id": "S4620_CH7_EX26",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH7_EX26",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    },
+    {
+      "blocking_reasons": [
+        {
+          "code": "UNRESOLVED_MANDATORY_PLACEHOLDER",
+          "field_path": "data",
+          "message": "Participant-specific source placeholder remains unresolved"
+        },
+        {
+          "code": "DEPENDENCY_NOT_READY",
+          "field_path": "dependencies",
+          "message": "A resolved canonical prerequisite is not downstream-ready"
+        }
+      ],
+      "classification": "TRANSACTION",
+      "data": {
+        "accounting_metadata": [
+          {
+            "accounting_document_id": null,
+            "amount": 100,
+            "currency": "EUR",
+            "entry": "CUSTOMER_CREDIT"
+          }
+        ],
+        "amount": 100,
+        "business_volume": {
+          "eligible_material": "P620-3##",
+          "previously_settled_quantity": 20,
+          "quantity_unit": "PC",
+          "total_quantity": 30
+        },
+        "condition_contract": null,
+        "currency": "EUR",
+        "document_id": null,
+        "execution_type": "ACTUAL_RUN",
+        "settlement_date": {
+          "kind": "RELATIVE",
+          "offset": "CURRENT_YEAR_END",
+          "raw": "31.12.AAAA (date de fin de l'exercice)"
+        },
+        "settlement_status": "CREATED",
+        "settlement_type": "FINAL_SETTLEMENT_CREDIT"
+      },
+      "dependencies": [
+        {
+          "critical": true,
+          "relation": "SETTLES",
+          "source_phrase": "contrat de conditions",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH7_EX23_CONDITION_CONTRACT_SALES_REBATE",
+          "target_type": "CONDITION_CONTRACT"
+        },
+        {
+          "critical": true,
+          "relation": "FOLLOWS",
+          "source_phrase": "décompte partiel antérieur",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH7_EX25_SETTLEMENT_DOCUMENT_PARTIAL_CREDIT",
+          "target_type": "SETTLEMENT_DOCUMENT"
+        },
+        {
+          "critical": false,
+          "relation": "BUSINESS_VOLUME_FROM",
+          "source_phrase": "processus de vente supplémentaire",
+          "status": "RESOLVED",
+          "target_id": "S4620_CH7_EX26_SALES_ORDER_ADDITIONAL_BUSINESS_VOLUME",
+          "target_type": "SALES_ORDER"
+        }
+      ],
+      "lifecycle_status": "EXTRACTED",
+      "object_id": "S4620_CH7_EX27_SETTLEMENT_DOCUMENT_FINAL_CREDIT",
+      "object_type": "SETTLEMENT_DOCUMENT",
+      "placeholders": [
+        {
+          "field_path": "data.business_volume.eligible_material",
+          "mandatory": true,
+          "raw": "##",
+          "resolved": null,
+          "status": "UNRESOLVED"
+        }
+      ],
+      "provenance": [
+        {
+          "chapter": 7,
+          "course_code": "S4620",
+          "exercise": 27,
+          "page": 329,
+          "raw_excerpt": "31.12.AAAA; exécution réelle; avoir net 100 EUR",
+          "scenario_id": "S4620_CH7_EX27",
+          "section_type": "EXERCISE",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Décompte final / date / montant net"
+        },
+        {
+          "chapter": 7,
+          "course_code": "S4620",
+          "exercise": 27,
+          "page": 330,
+          "raw_excerpt": "31.12.AAAA; exécution réelle; avoir net 100 EUR",
+          "scenario_id": "S4620_CH7_EX27",
+          "section_type": "SOLUTION",
+          "source_file": "S4620_FR_Col12_ILT_FV_Inst_A4.pdf",
+          "source_term": "Décompte final / date / montant net"
+        }
+      ],
+      "readiness_status": "BLOCKED",
+      "scenario_id": "S4620_CH7_EX27",
+      "validation": {
+        "confidence": "HIGH",
+        "issues": [],
+        "schema_valid": true
+      }
+    }
+  ]
+}

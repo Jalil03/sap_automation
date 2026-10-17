@@ -1,0 +1,632 @@
+{
+  "objects": [
+    {
+      "object_id": "S4610_CH1_EX2_OUTBOUND_DELIVERY_EXISTING_BY_CUSTOMER_REFERENCE",
+      "scenario_id": "S4610_CH1_EX2",
+      "solution_enrichments": [
+        {
+          "page": 26,
+          "source_term": "Livraison sortante / document de référence / point d'expédition"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 25,
+          "raw_excerpt": "type non indiqué; point non indiqué",
+          "section_type": "EXERCISE",
+          "source_term": "Livraison sortante / document de référence / point d'expédition"
+        },
+        {
+          "page": 26,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Livraison sortante / document de référence / point d'expédition"
+        }
+      ]
+    },
+    {
+      "object_id": "S4610_CH2_EX3_SHIPPING_POINT_Y0-GROUP",
+      "scenario_id": "S4610_CH2_EX3",
+      "solution_enrichments": [
+        {
+          "page": 44,
+          "source_term": "Copie et affectation du point d'expédition"
+        },
+        {
+          "page": 94,
+          "source_term": "Condition d'expédition / groupe de chargement / division / point"
+        },
+        {
+          "page": 108,
+          "source_term": "Durées de travail"
+        },
+        {
+          "page": 130,
+          "source_term": "Détermination du magasin de prélèvement"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 41,
+          "raw_excerpt": "Y0##; ## Transp. express Hambourg",
+          "section_type": "EXERCISE",
+          "source_term": "Nouveau point d'expédition / description"
+        },
+        {
+          "page": 44,
+          "raw_excerpt": "Du point Z0## au point Y0##; affecté à la division 1010",
+          "section_type": "SOLUTION",
+          "source_term": "Copie et affectation du point d'expédition"
+        },
+        {
+          "page": 91,
+          "raw_excerpt": "Y0## pour marchandises express",
+          "section_type": "EXERCISE",
+          "source_term": "Détermination du point d'expédition"
+        },
+        {
+          "page": 94,
+          "raw_excerpt": "50+##; 0004; 1010; Y0##; autre point Z0##",
+          "section_type": "SOLUTION",
+          "source_term": "Condition d'expédition / groupe de chargement / division / point"
+        },
+        {
+          "page": 107,
+          "raw_excerpt": "Y0##; Durée travail 2-SHIFT; chargement 2:30; prélèvement/emballage 2:30",
+          "section_type": "EXERCISE",
+          "source_term": "Ordonnancement par point d'expédition"
+        },
+        {
+          "page": 108,
+          "raw_excerpt": "2-SHIFT; 2:30; 2:30",
+          "section_type": "SOLUTION",
+          "source_term": "Durées de travail"
+        },
+        {
+          "page": 130,
+          "raw_excerpt": "Y0## / 1010 / vide ou 70 -> 101C",
+          "section_type": "SOLUTION",
+          "source_term": "Détermination du magasin de prélèvement"
+        }
+      ]
+    },
+    {
+      "object_id": "S4610_CH2_EX3_SHIPPING_POINT_Z0-GROUP",
+      "scenario_id": "S4610_CH2_EX3",
+      "solution_enrichments": [
+        {
+          "page": 43,
+          "source_term": "Affectation point d'expédition à division"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 41,
+          "raw_excerpt": "Z0##",
+          "section_type": "EXERCISE",
+          "source_term": "Point d'expédition standard"
+        },
+        {
+          "page": 43,
+          "raw_excerpt": "Z0## est affecté à la division 1010",
+          "section_type": "SOLUTION",
+          "source_term": "Affectation point d'expédition à division"
+        }
+      ]
+    },
+    {
+      "object_id": "S4610_CH3_EX4_COPY_CONTROL_CDCL_TO_ZLGROUP",
+      "scenario_id": "S4610_CH3_EX4",
+      "solution_enrichments": [
+        {
+          "page": 70,
+          "source_term": "Pilotage de la copie"
+        },
+        {
+          "page": 72,
+          "source_term": "Pilotage de la copie au niveau poste"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 66,
+          "raw_excerpt": "Type de livraison ZL##; commande ZA## et commande standard CDCL",
+          "section_type": "EXERCISE",
+          "source_term": "Pilotage de la copie / type source / type cible"
+        },
+        {
+          "page": 70,
+          "raw_excerpt": "ZL## cible; ZA## et CDCL sources",
+          "section_type": "SOLUTION",
+          "source_term": "Pilotage de la copie"
+        },
+        {
+          "page": 72,
+          "raw_excerpt": "ZL## / ZA## / type poste ZA##",
+          "section_type": "SOLUTION",
+          "source_term": "Pilotage de la copie au niveau poste"
+        }
+      ]
+    },
+    {
+      "object_id": "S4610_CH3_EX4_COPY_CONTROL_ZAGROUP_TO_ZLGROUP",
+      "scenario_id": "S4610_CH3_EX4",
+      "solution_enrichments": [
+        {
+          "page": 70,
+          "source_term": "Pilotage de la copie"
+        },
+        {
+          "page": 72,
+          "source_term": "Pilotage de la copie au niveau poste"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 66,
+          "raw_excerpt": "Type de livraison ZL##; commande ZA## et commande standard CDCL",
+          "section_type": "EXERCISE",
+          "source_term": "Pilotage de la copie / type source / type cible"
+        },
+        {
+          "page": 70,
+          "raw_excerpt": "ZL## cible; ZA## et CDCL sources",
+          "section_type": "SOLUTION",
+          "source_term": "Pilotage de la copie"
+        },
+        {
+          "page": 72,
+          "raw_excerpt": "ZL## / ZA## / type poste ZA##",
+          "section_type": "SOLUTION",
+          "source_term": "Pilotage de la copie au niveau poste"
+        }
+      ]
+    },
+    {
+      "object_id": "S4610_CH3_EX4_OUTBOUND_DELIVERY_EXPRESS_FROM_ORDER",
+      "scenario_id": "S4610_CH3_EX4",
+      "solution_enrichments": [
+        {
+          "page": 69,
+          "source_term": "Livraison sortante / document de référence / point d'expédition"
+        },
+        {
+          "page": 74,
+          "source_term": "Type et postes de livraison sortante"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 65,
+          "raw_excerpt": "ZL##; point non indiqué",
+          "section_type": "EXERCISE",
+          "source_term": "Livraison sortante / document de référence / point d'expédition"
+        },
+        {
+          "page": 69,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Livraison sortante / document de référence / point d'expédition"
+        },
+        {
+          "page": 68,
+          "raw_excerpt": "ZL##; P610-2##",
+          "section_type": "EXERCISE",
+          "source_term": "Type et postes de livraison sortante"
+        },
+        {
+          "page": 74,
+          "raw_excerpt": "ZL##; poste DLN; magasin 101C",
+          "section_type": "SOLUTION",
+          "source_term": "Type et postes de livraison sortante"
+        }
+      ]
+    },
+    {
+      "object_id": "S4610_CH3_EX4_SALES_ORDER_ZA-GROUP",
+      "scenario_id": "S4610_CH3_EX4",
+      "solution_enrichments": [
+        {
+          "page": 69,
+          "source_term": "Type de commande / Donneur d'ordre / Réf. client / Date livr. req. / Article / Quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 65,
+          "raw_excerpt": "ZA##; C610-A##; ##-4-1; Date du lendemain; P610-1##; 12",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / Donneur d'ordre / Réf. client / Date livr. req. / Article / Quantité"
+        },
+        {
+          "page": 69,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / Donneur d'ordre / Réf. client / Date livr. req. / Article / Quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4610_CH4_EX7_SALES_ORDER_ZA-GROUP",
+      "scenario_id": "S4610_CH4_EX7",
+      "solution_enrichments": [
+        {
+          "page": 111,
+          "source_term": "Type de commande / Donneur d'ordre / Réf. client / Date livr. req. / Article / Quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 109,
+          "raw_excerpt": "ZA##; C610-B##; ##-5-1; Surlendemain; P610-3##; 15",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / Donneur d'ordre / Réf. client / Date livr. req. / Article / Quantité"
+        },
+        {
+          "page": 111,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / Donneur d'ordre / Réf. client / Date livr. req. / Article / Quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4610_CH5_EX10_OUTBOUND_DELIVERY_FROM_ORDER",
+      "scenario_id": "S4610_CH5_EX10",
+      "solution_enrichments": [
+        {
+          "page": 155,
+          "source_term": "Livraison sortante / document de référence / point d'expédition"
+        },
+        {
+          "page": 158,
+          "source_term": "Livraison avec référence à la commande / point d'expédition"
+        },
+        {
+          "page": 170,
+          "source_term": "Représentation EWM de la livraison sortante"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 153,
+          "raw_excerpt": "type non indiqué; Z0##",
+          "section_type": "EXERCISE",
+          "source_term": "Livraison sortante / document de référence / point d'expédition"
+        },
+        {
+          "page": 155,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Livraison sortante / document de référence / point d'expédition"
+        },
+        {
+          "page": 154,
+          "raw_excerpt": null,
+          "section_type": "EXERCISE",
+          "source_term": "Magasin / numéro de magasin / livraison"
+        },
+        {
+          "page": 158,
+          "raw_excerpt": "Z0##",
+          "section_type": "SOLUTION",
+          "source_term": "Livraison avec référence à la commande / point d'expédition"
+        },
+        {
+          "page": 170,
+          "raw_excerpt": "Livraison sortante - nouveau document",
+          "section_type": "SOLUTION",
+          "source_term": "Représentation EWM de la livraison sortante"
+        }
+      ]
+    },
+    {
+      "object_id": "S4610_CH5_EX10_SALES_ORDER_ZA-GROUP",
+      "scenario_id": "S4610_CH5_EX10",
+      "solution_enrichments": [
+        {
+          "page": 155,
+          "source_term": "Type de commande / Donneur d'ordre / Réf. client / Date livr. req. / Article / Quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 153,
+          "raw_excerpt": "ZA##; C610-A##; ##-5-1; dans 1 semaine; P610-5##; 10",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / Donneur d'ordre / Réf. client / Date livr. req. / Article / Quantité"
+        },
+        {
+          "page": 155,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / Donneur d'ordre / Réf. client / Date livr. req. / Article / Quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4610_CH5_EX11_WAREHOUSE_TASK_OUTBOUND",
+      "scenario_id": "S4610_CH5_EX11",
+      "solution_enrichments": [
+        {
+          "page": 164,
+          "source_term": "Tâche magasin / ordre de livraison sortante"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 163,
+          "raw_excerpt": "créer et confirmer la tâche magasin",
+          "section_type": "EXERCISE",
+          "source_term": "Tâche magasin / ordre de livraison sortante"
+        },
+        {
+          "page": 164,
+          "raw_excerpt": "Numéro de magasin 1010; tâche magasin confirmée",
+          "section_type": "SOLUTION",
+          "source_term": "Tâche magasin / ordre de livraison sortante"
+        }
+      ]
+    },
+    {
+      "object_id": "S4610_CH5_EX12_GOODS_ISSUE_FROM_EX10_DELIVERY",
+      "scenario_id": "S4610_CH5_EX12",
+      "solution_enrichments": [
+        {
+          "page": 170,
+          "source_term": "Sortie de marchandises / ordre de livraison sortante"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 169,
+          "raw_excerpt": "enregistrez la sortie de marchandises pour l'ordre de livraison sortante",
+          "section_type": "EXERCISE",
+          "source_term": "Sortie de marchandises / ordre de livraison sortante"
+        },
+        {
+          "page": 170,
+          "raw_excerpt": "StaGloMvmtStock est C",
+          "section_type": "SOLUTION",
+          "source_term": "Sortie de marchandises / ordre de livraison sortante"
+        }
+      ]
+    },
+    {
+      "object_id": "S4610_CH5_EX13_INBOUND_DELIVERY_FROM_PURCHASE_ORDER",
+      "scenario_id": "S4610_CH5_EX13",
+      "solution_enrichments": [
+        {
+          "page": 183,
+          "source_term": "Livraison entrante / commande d'achat / SAP EWM"
+        },
+        {
+          "page": 184,
+          "source_term": "Correspondance livraison entrante LE / EWM"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 179,
+          "raw_excerpt": "S610-A##; P610-2##; quantité 50; 1010 / 101D",
+          "section_type": "EXERCISE",
+          "source_term": "Livraison entrante / commande d'achat / SAP EWM"
+        },
+        {
+          "page": 183,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Livraison entrante / commande d'achat / SAP EWM"
+        },
+        {
+          "page": 184,
+          "raw_excerpt": "Document ERP utilisé pour retrouver la livraison entrante SAP EWM",
+          "section_type": "SOLUTION",
+          "source_term": "Correspondance livraison entrante LE / EWM"
+        }
+      ]
+    },
+    {
+      "object_id": "S4610_CH5_EX13_PURCHASE_ORDER_REFERENCE_EXTERNAL_PROCUREMENT",
+      "scenario_id": "S4610_CH5_EX13",
+      "solution_enrichments": [
+        {
+          "page": 182,
+          "source_term": "Commande d'achat / fournisseur / article / quantité / division / magasin"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 179,
+          "raw_excerpt": "S610-A##; P610-2##; 50; 1010; 101D",
+          "section_type": "EXERCISE",
+          "source_term": "Commande d'achat / fournisseur / article / quantité / division / magasin"
+        },
+        {
+          "page": 182,
+          "raw_excerpt": "Pilotage des conf. 0004 livraison entrante",
+          "section_type": "SOLUTION",
+          "source_term": "Commande d'achat / fournisseur / article / quantité / division / magasin"
+        }
+      ]
+    },
+    {
+      "object_id": "S4610_CH5_EX14_INBOUND_DELIVERY_FROM_PURCHASE_ORDER",
+      "scenario_id": "S4610_CH5_EX14",
+      "solution_enrichments": [
+        {
+          "page": 192,
+          "source_term": "Livraison entrante / commande d'achat / SAP EWM"
+        },
+        {
+          "page": 193,
+          "source_term": "Entrée de marchandises / tâche magasin"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 189,
+          "raw_excerpt": "S610-A##; P610-2##; quantité 10; 1010 / 101D",
+          "section_type": "EXERCISE",
+          "source_term": "Livraison entrante / commande d'achat / SAP EWM"
+        },
+        {
+          "page": 192,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Livraison entrante / commande d'achat / SAP EWM"
+        },
+        {
+          "page": 193,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Entrée de marchandises / tâche magasin"
+        }
+      ]
+    },
+    {
+      "object_id": "S4610_CH5_EX14_PURCHASE_ORDER_REFERENCE_EXTERNAL_PROCUREMENT",
+      "scenario_id": "S4610_CH5_EX14",
+      "solution_enrichments": [
+        {
+          "page": 192,
+          "source_term": "Commande d'achat / fournisseur / article / quantité / division / magasin"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 189,
+          "raw_excerpt": "S610-A##; P610-2##; 10; 1010; 101D",
+          "section_type": "EXERCISE",
+          "source_term": "Commande d'achat / fournisseur / article / quantité / division / magasin"
+        },
+        {
+          "page": 192,
+          "raw_excerpt": "Prix net 52; division 1010; magasin 101D",
+          "section_type": "SOLUTION",
+          "source_term": "Commande d'achat / fournisseur / article / quantité / division / magasin"
+        }
+      ]
+    },
+    {
+      "object_id": "S4610_CH5_EX14_WAREHOUSE_TASK_INBOUND",
+      "scenario_id": "S4610_CH5_EX14",
+      "solution_enrichments": [
+        {
+          "page": 193,
+          "source_term": "Tâche magasin pour livraison entrante"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 190,
+          "raw_excerpt": "créer et confirmer la tâche magasin",
+          "section_type": "EXERCISE",
+          "source_term": "Tâche magasin pour livraison entrante"
+        },
+        {
+          "page": 193,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Tâche magasin pour livraison entrante"
+        }
+      ]
+    },
+    {
+      "object_id": "S4610_SHARED_PLANT_1010",
+      "scenario_id": "S4610_CH2_EX3",
+      "solution_enrichments": [
+        {
+          "page": 43,
+          "source_term": "division"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 42,
+          "raw_excerpt": "même division que Z0##",
+          "section_type": "EXERCISE",
+          "source_term": "division affectée au point d'expédition"
+        },
+        {
+          "page": 43,
+          "raw_excerpt": "Z0## est affecté à la division 1010",
+          "section_type": "SOLUTION",
+          "source_term": "division"
+        }
+      ]
+    },
+    {
+      "object_id": "S4610_SHARED_STORAGE_LOCATION_101C",
+      "scenario_id": "S4610_CH4_EX8",
+      "solution_enrichments": [
+        {
+          "page": 130,
+          "source_term": "Point d'expédition / Division / Condition de stockage / Magasin"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 128,
+          "raw_excerpt": "Y0##; 1010; <Non renseigné> ou 70; 101C",
+          "section_type": "EXERCISE",
+          "source_term": "Point d'expédition / Division / Condition de stockage / Magasin"
+        },
+        {
+          "page": 130,
+          "raw_excerpt": "modifier le magasin 101S par 101C",
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition / Division / Condition de stockage / Magasin"
+        }
+      ]
+    },
+    {
+      "object_id": "S4610_SHARED_STORAGE_LOCATION_101D",
+      "scenario_id": "S4610_CH5_EX13",
+      "solution_enrichments": [
+        {
+          "page": 181,
+          "source_term": "Division / Magasin"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 179,
+          "raw_excerpt": "1010; 101D",
+          "section_type": "EXERCISE",
+          "source_term": "Division / Magasin"
+        },
+        {
+          "page": 181,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Division / Magasin"
+        }
+      ]
+    },
+    {
+      "object_id": "S4610_SHARED_WAREHOUSE_NUMBER_1010",
+      "scenario_id": "S4610_CH5_EX11",
+      "solution_enrichments": [
+        {
+          "page": 164,
+          "source_term": "Numéro de magasin"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 163,
+          "raw_excerpt": "1010",
+          "section_type": "EXERCISE",
+          "source_term": "Numéro de magasin"
+        },
+        {
+          "page": 164,
+          "raw_excerpt": "Numéro de magasin 1010",
+          "section_type": "SOLUTION",
+          "source_term": "Numéro de magasin"
+        }
+      ]
+    }
+  ]
+}

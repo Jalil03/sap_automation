@@ -1,0 +1,23 @@
+{
+  "CustomerPaymentTerms": "R001",
+  "DistributionChannel": "10",
+  "OrganizationDivision": "00",
+  "PurchaseOrderByCustomer": "4712",
+  "SalesOrderType": "OR",
+  "SalesOrganization": "1010",
+  "SoldToParty": "C615-A00",
+  "to_Item": [
+    {
+      "Material": "P615-100",
+      "RequestedQuantity": 10,
+      "RequestedQuantityUnit": "PC",
+      "SalesOrderItem": "10"
+    }
+  ],
+  "to_Partner": [
+    {
+      "Customer": "C615-A00",
+      "PartnerFunction": "DO"
+    }
+  ]
+}

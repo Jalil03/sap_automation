@@ -1,0 +1,814 @@
+{
+  "classification_contract": [
+    "BOOK_CONFIRMED",
+    "DERIVED_FROM_TRAINING_FAMILY",
+    "SAP_CONFIRMED",
+    "UNKNOWN"
+  ],
+  "common_environment_status": "BLOCKED_NEEDS_HUMAN_DECISION",
+  "customer_status": "BLOCKED_NEEDS_SOURCE",
+  "exact_target": {
+    "company_code": "1010",
+    "customer": "C615-D00",
+    "customer_reference": "00S4615-BV",
+    "distribution_channel": "10",
+    "product": "P615-400",
+    "quantity": 1,
+    "sales_area": "1010/10/00",
+    "sales_division": "00",
+    "sales_order_type": "BV",
+    "sales_organization": "1010",
+    "training_user": "S4615-00",
+    "unit": "PC"
+  },
+  "execution_policy": {
+    "default_mode": "DRY_RUN",
+    "exists_behavior": "SKIP",
+    "protected_sales_order": "148",
+    "sequence": [
+      "check",
+      "prepare",
+      "validate",
+      "write",
+      "readback"
+    ],
+    "stop_conditions": [
+      "UNEXPECTED_POPUP",
+      "TRANSPORT_REQUIRED",
+      "UNKNOWN_MANDATORY_VALUE"
+    ],
+    "transport_release": "NEVER_AUTOMATIC",
+    "write_gate": "--execute"
+  },
+  "facts": {
+    "additional_seed_facts": [
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "precreated_training_data_mechanism",
+        "value": "CATT import"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "customer_families",
+        "value": [
+          "C615-A##",
+          "C615-B##",
+          "C615-C##",
+          "C615-D##",
+          "C615-F##"
+        ]
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "product_families",
+        "value": [
+          "P615-1##",
+          "P615-2##",
+          "P615-4##",
+          "P615-5##",
+          "P615-6##"
+        ]
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "customer_freight_condition_type",
+        "value": "KF00"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "customer_freight_sales_area",
+        "value": "1010/10/00"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "customer_freight_incoterms",
+        "value": "CFR/##"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "customer_freight_rate",
+        "value": "10 EUR per 1 KG"
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "customer_freight_required_by_golden_flow",
+        "value": null
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "standard_item_category",
+        "value": "TAN"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "billing_types",
+        "value": [
+          "F2",
+          "F5",
+          "F8",
+          "G2",
+          "BV",
+          "SV"
+        ]
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "pricing_condition_types",
+        "value": [
+          "PR00",
+          "KF00"
+        ]
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "account_determination_procedure",
+        "value": "KOFI00"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "account_determination_condition_type",
+        "value": "KOFI"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "account_determination_table",
+        "value": "001"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "revenue_account_key",
+        "value": "ERL"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "freight_account_key",
+        "value": "ERF"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "account_determination_example_gl",
+        "value": "41000000"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "account_determination_second_example_gl",
+        "value": "49000000"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "material_account_assignment_group_example",
+        "value": "01"
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "golden_flow_account_assignment_values",
+        "value": null
+      }
+    ],
+    "common_environment": [
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "company_code",
+        "value": "1010"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "sales_organization",
+        "value": "1010"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "sales_org_company_assignment",
+        "value": "1010->1010"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "distribution_channel",
+        "value": "10"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "sales_division",
+        "value": "00"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "sales_area",
+        "value": "1010/10/00"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "shipping_point",
+        "value": "1010"
+      },
+      {
+        "classification": "SAP_CONFIRMED",
+        "evidence": "data/provisioning/phase5_prepare_1010.json",
+        "field": "company_code_live_state",
+        "value": "MISSING"
+      },
+      {
+        "classification": "SAP_CONFIRMED",
+        "evidence": "data/requirements/training_environment_requirements.json",
+        "field": "sales_organization_live_state",
+        "value": "MISSING"
+      },
+      {
+        "classification": "SAP_CONFIRMED",
+        "evidence": "data/requirements/training_environment_requirements.json",
+        "field": "distribution_channel_live_state",
+        "value": "EXISTS"
+      },
+      {
+        "classification": "SAP_CONFIRMED",
+        "evidence": "data/requirements/training_environment_requirements.json",
+        "field": "sales_division_live_state",
+        "value": "EXISTS"
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/provisioning/phase5_prepare_1010.json",
+        "field": "sales_org_company_assignment_live_state",
+        "value": "UNKNOWN"
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/provisioning/phase5_prepare_1010.json",
+        "field": "distribution_channel_assignment_live_state",
+        "value": "UNKNOWN"
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/provisioning/phase5_prepare_1010.json",
+        "field": "division_assignment_live_state",
+        "value": "UNKNOWN"
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "company_code_name",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "company_code_city",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "company_code_country",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "company_code_currency",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "company_code_language",
+        "value": null
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "company_code_chart_of_accounts",
+        "value": "INT"
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "sales_organization_description",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "sales_organization_statistics_currency",
+        "value": null
+      }
+    ],
+    "customer": [
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "customer_template",
+        "value": "C615-D##"
+      },
+      {
+        "classification": "DERIVED_FROM_TRAINING_FAMILY",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "customer",
+        "value": "C615-D00"
+      },
+      {
+        "classification": "SAP_CONFIRMED",
+        "evidence": "data/requirements/training_environment_requirements.json",
+        "field": "customer_live_state",
+        "value": "MISSING"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "customer_sales_area",
+        "value": "1010/10/00"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "incoterms",
+        "value": "CFR"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "incoterms_location_template",
+        "value": "##"
+      },
+      {
+        "classification": "DERIVED_FROM_TRAINING_FAMILY",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "incoterms_location",
+        "value": "00"
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "customer_name",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "customer_address",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "bp_grouping",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "customer_roles",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "reconciliation_account",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "payment_terms",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "customer_currency",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "shipping_conditions",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "delivering_plant",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "account_assignment_group",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "customer_pricing_procedure",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "tax_classifications",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "partner_functions",
+        "value": null
+      }
+    ],
+    "golden_transaction": [
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "sales_order_type",
+        "value": "BV"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "customer_reference_template",
+        "value": "##S4615-BV"
+      },
+      {
+        "classification": "DERIVED_FROM_TRAINING_FAMILY",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "customer_reference",
+        "value": "00S4615-BV"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "billing_type",
+        "value": "BV"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "cancellation_billing_type",
+        "value": "SV"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "output_type",
+        "value": "RD03"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "delivery_created_on_cash_sale_save",
+        "value": true
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "pgi_required_before_real_billing",
+        "value": true
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "billing_reference",
+        "value": "sales_order"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "billing_pricing",
+        "value": "NO_NEW_PRICING_DETERMINATION"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "accounting_readback",
+        "value": "cash + domestic revenue + output VAT"
+      }
+    ],
+    "product": [
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "product_template",
+        "value": "P615-4##"
+      },
+      {
+        "classification": "DERIVED_FROM_TRAINING_FAMILY",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "product",
+        "value": "P615-400"
+      },
+      {
+        "classification": "SAP_CONFIRMED",
+        "evidence": "data/requirements/training_environment_requirements.json",
+        "field": "product_live_state",
+        "value": "MISSING"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "ordered_quantity",
+        "value": 1
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "order_unit",
+        "value": "PC"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "semantic_product_kind",
+        "value": "bicycle / stock product"
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "product_description",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "material_type",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "industry_sector",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "base_unit",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "plants",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "product_delivering_plant",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "item_category_group",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "product_tax_classification",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "availability_check",
+        "value": null
+      },
+      {
+        "classification": "UNKNOWN",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "alternative_unit_conversions",
+        "value": null
+      }
+    ],
+    "source_identity": [
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "course",
+        "value": "S4615 - Facturation dans SAP S/4HANA Sales"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "course_version",
+        "value": "12"
+      },
+      {
+        "classification": "BOOK_CONFIRMED",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "training_user_template",
+        "value": "S4615-##"
+      },
+      {
+        "classification": "DERIVED_FROM_TRAINING_FAMILY",
+        "evidence": "data/books/S4615/S4615_provisioning_facts.md",
+        "field": "training_user",
+        "value": "S4615-00"
+      }
+    ]
+  },
+  "final_human_decisions": [
+    "Company Code 1010: approved manual creation source and name/city/country/currency/language; chart of accounts is INT from the Book.",
+    "Sales Org 1010: approved manual creation source, description, and statistics currency.",
+    "Customer C615-D00: approve same-family template evidence or provide grouping/name/address/roles/company-code and sales-area mandatory values.",
+    "Product P615-400: approve same-family template evidence or provide material type/industry/base UoM/plant/sales/logistics/valuation/tax values and PC conversion if PC is not base UoM.",
+    "Customizing transport ownership/request must be supplied; release remains manual and is never automatic.",
+    "Delivery, PGI, BV billing, and accounting readback need live read/write contracts before execution beyond the sales-order checkpoint."
+  ],
+  "mode": "DRY_RUN_PREPARE",
+  "primary_source": {
+    "path": "data/books/S4615/S4615_provisioning_facts.md",
+    "sha256": "eba51ff3b649dfdb063400853157e17043851e300af4b62e25b98e2c6380918b"
+  },
+  "product_status": "BLOCKED_NEEDS_SOURCE",
+  "resolution_id": "S4615_USER00_FINAL_BLOCKER_RESOLUTION",
+  "s4615_status": "BLOCKED_NOT_EXECUTION_READY",
+  "same_family_read_only_inspections": [
+    {
+      "allowed_method": "GET_READ_ONLY",
+      "captured_repository_result": "NOT_CAPTURED",
+      "classification": "UNKNOWN",
+      "purpose": "customer root/company/sales-area template evidence",
+      "required_phase5_fields": [
+        "grouping",
+        "name",
+        "roles",
+        "addresses",
+        "reconciliation_account",
+        "payment_terms",
+        "currency",
+        "shipping_conditions",
+        "delivering_plant",
+        "incoterms",
+        "incoterms_location",
+        "account_assignment_group",
+        "customer_pricing_procedure",
+        "tax_classifications",
+        "partner_functions"
+      ],
+      "resolved_fields": {},
+      "target": "C615-A00",
+      "usage": "EVIDENCE_TEMPLATE_ONLY_NEVER_SUBSTITUTE"
+    },
+    {
+      "allowed_method": "GET_READ_ONLY",
+      "captured_repository_result": "NOT_CAPTURED",
+      "classification": "UNKNOWN",
+      "purpose": "customer root/company/sales-area template evidence",
+      "required_phase5_fields": [
+        "grouping",
+        "name",
+        "roles",
+        "addresses",
+        "reconciliation_account",
+        "payment_terms",
+        "currency",
+        "shipping_conditions",
+        "delivering_plant",
+        "incoterms",
+        "incoterms_location",
+        "account_assignment_group",
+        "customer_pricing_procedure",
+        "tax_classifications",
+        "partner_functions"
+      ],
+      "resolved_fields": {},
+      "target": "C615-B00",
+      "usage": "EVIDENCE_TEMPLATE_ONLY_NEVER_SUBSTITUTE"
+    },
+    {
+      "allowed_method": "GET_READ_ONLY",
+      "captured_repository_result": "NOT_CAPTURED",
+      "classification": "UNKNOWN",
+      "purpose": "product root/sales/plant/UoM template evidence",
+      "required_phase5_fields": [
+        "description",
+        "material_type",
+        "industry_sector",
+        "base_unit",
+        "plants",
+        "delivering_plant",
+        "item_category_group",
+        "tax_classification",
+        "availability_check",
+        "alternative_units"
+      ],
+      "resolved_fields": {},
+      "target": "P615-100",
+      "usage": "EVIDENCE_TEMPLATE_ONLY_NEVER_SUBSTITUTE"
+    },
+    {
+      "allowed_method": "GET_READ_ONLY",
+      "captured_repository_result": "NOT_CAPTURED",
+      "classification": "UNKNOWN",
+      "purpose": "product root/sales/plant/UoM template evidence",
+      "required_phase5_fields": [
+        "description",
+        "material_type",
+        "industry_sector",
+        "base_unit",
+        "plants",
+        "delivering_plant",
+        "item_category_group",
+        "tax_classification",
+        "availability_check",
+        "alternative_units"
+      ],
+      "resolved_fields": {},
+      "target": "P615-200",
+      "usage": "EVIDENCE_TEMPLATE_ONLY_NEVER_SUBSTITUTE"
+    }
+  ],
+  "sap_live_read_performed": false,
+  "sap_write_performed": false,
+  "secondary_source_read": false,
+  "source_artifacts": [
+    {
+      "path": "data/requirements/training_environment_requirements.json",
+      "sha256": "eb37a270687416179a52f59dd89b6078d4700771bc1443379ad80cfcabb842bb"
+    },
+    {
+      "path": "data/provisioning/phase5_prepare_1010.json",
+      "sha256": "05d0c53630c1843d2dab05cfeeb97bd8c7d28945672dbaf41f906339e364541e"
+    }
+  ],
+  "workflow": [
+    {
+      "order": 1,
+      "stage": "COMMON_ENV",
+      "status": "BLOCKED_NEEDS_HUMAN_DECISION"
+    },
+    {
+      "order": 2,
+      "stage": "CUSTOMER_C615_D00",
+      "status": "BLOCKED_NEEDS_SOURCE"
+    },
+    {
+      "order": 3,
+      "stage": "PRODUCT_P615_400",
+      "status": "BLOCKED_NEEDS_SOURCE"
+    },
+    {
+      "order": 4,
+      "stage": "PRECHECKS",
+      "status": "PENDING_DEPENDENCIES"
+    },
+    {
+      "order": 5,
+      "stage": "ANTI_DUPLICATE_00S4615_BV",
+      "status": "PENDING_DEPENDENCIES"
+    },
+    {
+      "order": 6,
+      "stage": "BV_CASH_SALE",
+      "status": "PENDING_DEPENDENCIES"
+    },
+    {
+      "order": 7,
+      "stage": "VERIFY_AUTO_CREATED_DELIVERY",
+      "status": "CONTRACT_REQUIRED"
+    },
+    {
+      "order": 8,
+      "stage": "PGI",
+      "status": "CONTRACT_REQUIRED"
+    },
+    {
+      "order": 9,
+      "stage": "BILLING_BV",
+      "status": "CONTRACT_REQUIRED"
+    },
+    {
+      "order": 10,
+      "stage": "ACCOUNTING_READBACK",
+      "status": "CONTRACT_REQUIRED"
+    }
+  ]
+}

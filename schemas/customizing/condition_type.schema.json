@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CONDITION_TYPE",
+  "allOf": [
+    {
+      "$ref": "../common/canonical_object.schema.json"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "object_type": {
+      "const": "CONDITION_TYPE"
+    },
+    "classification": {
+      "const": "CUSTOMIZING"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "calculation_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "access_sequence": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reference_base": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "group_condition": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "plus_minus_rule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "manual_entry_rule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "condition_update": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "scale_control": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "copied_from_condition_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

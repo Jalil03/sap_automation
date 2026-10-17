@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "contract_version": "1.0.0",
+  "evidence_file": "evidence/sap_live/odata/API_SALES_ORDER_SRV.metadata.xml",
+  "evidence_sha256": "219aec8ef003541bb3b619c3000789a3397afc199caae85d8dc23b0ed83db5b8",
+  "odata_version": "2.0",
+  "external_service_name": "API_SALES_ORDER_SRV",
+  "technical_registration_name": "ZAPI_SALES_ORDER_SRV",
+  "technical_name_present_in_metadata": false,
+  "root_entity_set": "A_SalesOrder",
+  "entity_sets": {
+    "A_SalesOrder": "API_SALES_ORDER_SRV.A_SalesOrderType",
+    "A_SalesOrderItem": "API_SALES_ORDER_SRV.A_SalesOrderItemType",
+    "A_SalesOrderHeaderPartner": "API_SALES_ORDER_SRV.A_SalesOrderHeaderPartnerType",
+    "A_SalesOrderItemPartner": "API_SALES_ORDER_SRV.A_SalesOrderItemPartnerType",
+    "A_SalesOrderScheduleLine": "API_SALES_ORDER_SRV.A_SalesOrderScheduleLineType"
+  },
+  "navigation_contract": {
+    "A_SalesOrderType": {
+      "to_Item": {"target_type": "API_SALES_ORDER_SRV.A_SalesOrderItemType", "multiplicity": "*"},
+      "to_Partner": {"target_type": "API_SALES_ORDER_SRV.A_SalesOrderHeaderPartnerType", "multiplicity": "*"}
+    },
+    "A_SalesOrderItemType": {
+      "to_Partner": {"target_type": "API_SALES_ORDER_SRV.A_SalesOrderItemPartnerType", "multiplicity": "*"},
+      "to_ScheduleLine": {"target_type": "API_SALES_ORDER_SRV.A_SalesOrderScheduleLineType", "multiplicity": "*"}
+    }
+  },
+  "property_contract": {
+    "A_SalesOrderType": {
+      "SalesOrderType": ["Edm.String", 4, true, true, true],
+      "SalesOrganization": ["Edm.String", 4, true, true, true],
+      "DistributionChannel": ["Edm.String", 2, true, true, true],
+      "OrganizationDivision": ["Edm.String", 2, true, true, true],
+      "SoldToParty": ["Edm.String", 10, true, true, true],
+      "PurchaseOrderByCustomer": ["Edm.String", 35, true, true, true],
+      "CustomerPaymentTerms": ["Edm.String", 4, true, true, true],
+      "RequestedDeliveryDate": ["Edm.DateTime", null, true, true, true]
+    },
+    "A_SalesOrderItemType": {
+      "SalesOrderItem": ["Edm.String", 6, false, true, true],
+      "Material": ["Edm.String", 40, true, true, true],
+      "RequestedQuantity": ["Edm.Decimal", null, true, true, true],
+      "RequestedQuantityUnit": ["Edm.String", 3, true, true, true],
+      "ProductionPlant": ["Edm.String", 4, true, true, true],
+      "ShippingPoint": ["Edm.String", 4, true, true, true],
+      "SalesOrderItemCategory": ["Edm.String", 4, true, true, true],
+      "ItemNetWeight": ["Edm.Decimal", null, true, false, false],
+      "ItemWeightUnit": ["Edm.String", 3, true, false, false]
+    },
+    "A_SalesOrderHeaderPartnerType": {
+      "PartnerFunction": ["Edm.String", 2, false, true, true],
+      "Customer": ["Edm.String", 10, true, true, true]
+    },
+    "A_SalesOrderItemPartnerType": {
+      "PartnerFunction": ["Edm.String", 2, false, true, true],
+      "Customer": ["Edm.String", 10, true, true, true]
+    },
+    "A_SalesOrderScheduleLineType": {
+      "ScheduleLine": ["Edm.String", 4, false, true, true],
+      "RequestedDeliveryDate": ["Edm.DateTime", null, true, true, true],
+      "OrderQuantityUnit": ["Edm.String", 3, true, true, true],
+      "ScheduleLineOrderQuantity": ["Edm.Decimal", null, true, true, true]
+    }
+  },
+  "field_assessment": {
+    "order_type": {"classification": "MATCH", "sap_path": "SalesOrderType"},
+    "sales_organization": {"classification": "MATCH", "sap_path": "SalesOrganization"},
+    "distribution_channel": {"classification": "MATCH", "sap_path": "DistributionChannel"},
+    "sales_division": {"classification": "MATCH", "sap_path": "OrganizationDivision"},
+    "sold_to_party": {"classification": "MATCH", "sap_path": "SoldToParty"},
+    "ship_to_party": {"classification": "MISMATCH", "former_sap_path": "ShipToParty", "correction": "UNSUPPORTED_PENDING_PARTNER_SEMANTICS"},
+    "customer_reference": {"classification": "MATCH", "sap_path": "PurchaseOrderByCustomer"},
+    "requested_delivery_date": {"classification": "RUNTIME_ONLY", "sap_path": "RequestedDeliveryDate"},
+    "items[].line_id": {"classification": "MATCH", "sap_path": "to_Item[].SalesOrderItem"},
+    "items[].material": {"classification": "MATCH", "sap_path": "to_Item[].Material"},
+    "items[].quantity": {"classification": "MATCH", "sap_path": "to_Item[].RequestedQuantity"},
+    "items[].unit": {"classification": "MATCH", "sap_path": "to_Item[].RequestedQuantityUnit"},
+    "items[].plant": {"classification": "MATCH", "sap_path": "to_Item[].ProductionPlant"},
+    "items[].ship_to_party": {"classification": "MISMATCH", "former_sap_path": "to_Item[].ShipToParty", "correction": "UNSUPPORTED_PENDING_PARTNER_SEMANTICS"},
+    "items[].shipping_point": {"classification": "MATCH", "sap_path": "to_Item[].ShippingPoint"},
+    "items[].route": {"classification": "MISMATCH", "former_sap_path": "to_Item[].Route", "correction": "UNSUPPORTED_ABSENT_FROM_METADATA"},
+    "items[].net_weight": {"classification": "MISMATCH", "former_sap_path": "to_Item[].NetWeight", "correction": "UNSUPPORTED_LIVE_FIELD_NON_CREATABLE"},
+    "items[].net_weight_unit": {"classification": "MISMATCH", "former_sap_path": "to_Item[].WeightUnit", "correction": "UNSUPPORTED_LIVE_FIELD_NON_CREATABLE"},
+    "items[].item_category": {"classification": "MATCH", "sap_path": "to_Item[].SalesOrderItemCategory"},
+    "payment_terms": {"classification": "MATCH", "sap_path": "CustomerPaymentTerms"},
+    "processing_status": {"classification": "NOT_VERIFIED", "reason": "Canonical observed-state semantics were not matched to a writable live property."},
+    "completeness_state": {"classification": "NOT_VERIFIED", "reason": "Canonical observed-state semantics were not matched to a writable live property."},
+    "pricing_elements": {"classification": "NOT_VERIFIED", "reason": "Navigation exists, but writable deep-insert behavior is not proven by OData V2 metadata."}
+  }
+}

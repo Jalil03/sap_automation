@@ -1,0 +1,301 @@
+{
+  "blockers": [
+    {
+      "depends_on": [],
+      "missing_values": [
+        "approved_company_code_source_or_complete_manual_definition",
+        "required_company_code_customizing_values"
+      ],
+      "status": "BLOCKED_NEEDS_SOURCE",
+      "step_id": "COMPANY_CODE_1010"
+    },
+    {
+      "depends_on": [
+        "COMPANY_CODE_1010"
+      ],
+      "missing_values": [
+        "approved_sales_organization_source_or_complete_manual_definition",
+        "required_sales_organization_customizing_values"
+      ],
+      "status": "BLOCKED_NEEDS_SOURCE",
+      "step_id": "SALES_ORGANIZATION_1010"
+    },
+    {
+      "depends_on": [
+        "COMPANY_CODE_1010",
+        "SALES_ORGANIZATION_1010"
+      ],
+      "missing_values": [],
+      "status": "BLOCKED_DEPENDENCY",
+      "step_id": "SALES_ORG_1010_TO_COMPANY_CODE_1010"
+    },
+    {
+      "depends_on": [
+        "SALES_ORGANIZATION_1010"
+      ],
+      "missing_values": [],
+      "status": "BLOCKED_DEPENDENCY",
+      "step_id": "DISTRIBUTION_CHANNEL_10_TO_SALES_ORG_1010"
+    },
+    {
+      "depends_on": [
+        "SALES_ORGANIZATION_1010",
+        "DISTRIBUTION_CHANNEL_10_TO_SALES_ORG_1010"
+      ],
+      "missing_values": [],
+      "status": "BLOCKED_DEPENDENCY",
+      "step_id": "DIVISION_00_TO_SALES_ORG_1010"
+    }
+  ],
+  "execution_performed": false,
+  "mode": "PREPARE",
+  "ordered_steps": [
+    {
+      "current_state": "MISSING",
+      "depends_on": [],
+      "evidence": [
+        {
+          "conclusion": "MISSING",
+          "found_row": null,
+          "program": "SAPL0ORG",
+          "sap_total_entries": 112,
+          "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+          "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001",
+          "target_field": "BUKRS",
+          "target_value": "1010",
+          "transaction": "V_T001",
+          "unique_rows_read": 112,
+          "visited_scroll_positions": [
+            0,
+            20,
+            40,
+            60,
+            80,
+            100,
+            111
+          ]
+        },
+        {
+          "requirement_id": "REQ_COMPANY_CODE_8131EAD50CED",
+          "source": "data/requirements/training_environment_requirements.json",
+          "source_books": [
+            "S4600",
+            "S4610",
+            "S4615",
+            "S4650"
+          ]
+        }
+      ],
+      "missing_values": [
+        "approved_company_code_source_or_complete_manual_definition",
+        "required_company_code_customizing_values"
+      ],
+      "order": 1,
+      "required_action": "PREPARE_CREATE_COMPANY_CODE",
+      "source_candidates": [],
+      "status": "BLOCKED_NEEDS_SOURCE",
+      "step_id": "COMPANY_CODE_1010",
+      "target": {
+        "company_code": "1010",
+        "type": "COMPANY_CODE"
+      }
+    },
+    {
+      "current_state": "MISSING",
+      "depends_on": [
+        "COMPANY_CODE_1010"
+      ],
+      "evidence": [
+        {
+          "known_status": "MISSING",
+          "requirement_id": "REQ_SALES_ORGANIZATION_017B33085362",
+          "source": "data/requirements/training_environment_requirements.json",
+          "source_books": [
+            "S4600",
+            "S4610",
+            "S4615",
+            "S4620",
+            "S4650"
+          ]
+        },
+        {
+          "discovery_status": "DISCOVERED",
+          "meaning": "maintenance screen discovered; existence is sourced from Phase 4 live evidence",
+          "source": "runtime/sap_discovery/phase4c/discovery_summary.json"
+        }
+      ],
+      "missing_values": [
+        "approved_sales_organization_source_or_complete_manual_definition",
+        "required_sales_organization_customizing_values"
+      ],
+      "order": 2,
+      "required_action": "PREPARE_CREATE_SALES_ORGANIZATION",
+      "source_candidates": [],
+      "status": "BLOCKED_NEEDS_SOURCE",
+      "step_id": "SALES_ORGANIZATION_1010",
+      "target": {
+        "sales_organization": "1010",
+        "type": "SALES_ORGANIZATION"
+      }
+    },
+    {
+      "current_state": "UNKNOWN",
+      "depends_on": [
+        "COMPANY_CODE_1010",
+        "SALES_ORGANIZATION_1010"
+      ],
+      "evidence": [
+        {
+          "discovery_status": "DISCOVERED",
+          "meaning": "exact IMG activity reached; assignment row/value was not verified",
+          "source": "runtime/sap_discovery/phase4c/discovery_summary.json"
+        }
+      ],
+      "missing_values": [],
+      "order": 3,
+      "required_action": "READ_VALIDATE_THEN_PREPARE_ASSIGNMENT_IF_MISSING",
+      "source_candidates": [
+        {
+          "company_code": "1010",
+          "kind": "SOURCE_BACKED_TARGET_VALUES",
+          "requirement_ids": [
+            "REQ_SALES_ORGANIZATION_017B33085362",
+            "REQ_COMPANY_CODE_8131EAD50CED"
+          ],
+          "sales_organization": "1010"
+        }
+      ],
+      "status": "BLOCKED_DEPENDENCY",
+      "step_id": "SALES_ORG_1010_TO_COMPANY_CODE_1010",
+      "target": {
+        "company_code": "1010",
+        "sales_organization": "1010",
+        "type": "SALES_ORG_COMPANY_CODE_ASSIGNMENT"
+      }
+    },
+    {
+      "current_state": "UNKNOWN",
+      "depends_on": [
+        "SALES_ORGANIZATION_1010"
+      ],
+      "evidence": [
+        {
+          "distribution_channel_status": "EXISTS",
+          "requirement_id": "REQ_DISTRIBUTION_CHANNEL_9411C41EC990",
+          "source": "data/requirements/training_environment_requirements.json"
+        },
+        {
+          "discovery_status": "DISCOVERED",
+          "meaning": "exact IMG activity reached; assignment row/value was not verified",
+          "source": "runtime/sap_discovery/phase4c/discovery_summary.json"
+        }
+      ],
+      "missing_values": [],
+      "order": 4,
+      "required_action": "READ_VALIDATE_THEN_PREPARE_ASSIGNMENT_IF_MISSING",
+      "source_candidates": [
+        {
+          "distribution_channel": "10",
+          "kind": "SOURCE_BACKED_TARGET_VALUES",
+          "requirement_ids": [
+            "REQ_DISTRIBUTION_CHANNEL_9411C41EC990",
+            "REQ_SALES_ORGANIZATION_017B33085362"
+          ],
+          "sales_organization": "1010"
+        }
+      ],
+      "status": "BLOCKED_DEPENDENCY",
+      "step_id": "DISTRIBUTION_CHANNEL_10_TO_SALES_ORG_1010",
+      "target": {
+        "distribution_channel": "10",
+        "sales_organization": "1010",
+        "type": "DISTRIBUTION_CHANNEL_SALES_ORG_ASSIGNMENT"
+      }
+    },
+    {
+      "current_state": "UNKNOWN",
+      "depends_on": [
+        "SALES_ORGANIZATION_1010",
+        "DISTRIBUTION_CHANNEL_10_TO_SALES_ORG_1010"
+      ],
+      "evidence": [
+        {
+          "requirement_id": "REQ_SALES_DIVISION_12DB1A50F04D",
+          "sales_division_status": "EXISTS",
+          "source": "data/requirements/training_environment_requirements.json"
+        },
+        {
+          "discovery_status": "DISCOVERED",
+          "meaning": "exact IMG activity reached; assignment row/value was not verified",
+          "source": "runtime/sap_discovery/phase4c/discovery_summary.json"
+        },
+        {
+          "phase4b_boundary": "Exact composite used by the order and customer extension.",
+          "sales_area": "1010/10/00",
+          "sales_area_requirement_id": "REQ_SALES_AREA_2D070605D0FF",
+          "source": "data/requirements/golden_book_s4615_ch4_ex5_provisioning.json"
+        }
+      ],
+      "missing_values": [],
+      "order": 5,
+      "required_action": "READ_VALIDATE_THEN_PREPARE_ASSIGNMENT_IF_MISSING",
+      "source_candidates": [
+        {
+          "kind": "SOURCE_BACKED_TARGET_VALUES",
+          "requirement_ids": [
+            "REQ_SALES_DIVISION_12DB1A50F04D",
+            "REQ_SALES_ORGANIZATION_017B33085362",
+            "REQ_SALES_AREA_2D070605D0FF"
+          ],
+          "sales_area": "1010/10/00",
+          "sales_division": "00",
+          "sales_organization": "1010"
+        }
+      ],
+      "status": "BLOCKED_DEPENDENCY",
+      "step_id": "DIVISION_00_TO_SALES_ORG_1010",
+      "target": {
+        "sales_division": "00",
+        "sales_organization": "1010",
+        "type": "DIVISION_SALES_ORG_ASSIGNMENT"
+      }
+    }
+  ],
+  "overall_status": "BLOCKED",
+  "plan_id": "PHASE5_PREPARE_1010",
+  "safety": {
+    "allowed": [
+      "READ_LOCAL_ARTIFACTS",
+      "PREPARE_PLAN"
+    ],
+    "automatic_template_selection": false,
+    "forbidden": [
+      "SAP_CONNECTION",
+      "SAVE",
+      "CREATE",
+      "COPY",
+      "DELETE",
+      "TRANSPORT"
+    ],
+    "prohibited_automatic_template": "1710"
+  },
+  "sap_connection_performed": false,
+  "source_artifacts": [
+    {
+      "path": "data/requirements/training_environment_requirements.json",
+      "sha256": "eb37a270687416179a52f59dd89b6078d4700771bc1443379ad80cfcabb842bb"
+    },
+    {
+      "path": "data/requirements/golden_book_s4615_ch4_ex5_provisioning.json",
+      "sha256": "82f1a5e91ff1214e55ad791fa4fb5080de8b5c5f6a79c200bfd545fc5d6a9e11"
+    },
+    {
+      "path": "runtime/sap_discovery/phase4c/discovery_summary.json",
+      "sha256": "eb7b59662aa379459452950c9aad634df5c92c4dc56da3784dbf24d0308470da"
+    },
+    {
+      "path": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+      "sha256": "71e8503cc16fa6e5e75df3c77af36d27d28d4aed804b705be716297be55e5fcf"
+    }
+  ]
+}

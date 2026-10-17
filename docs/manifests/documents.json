@@ -1,0 +1,9 @@
+{
+  "documents": [
+    {"course_code":"S4600","actual_filename":"P2W_S4600_FR_Col23.pdf","logical_name":"S4600","version":"23","edition_type":"PARTICIPANT","language":"fr","page_count":353,"checksum":"sha256:a783e489c8e041381b1c4107d45b205511bc7c26cfcbd033ec0ca6355424f258","source_path":"docs/source/P2W_S4600_FR_Col23.pdf"},
+    {"course_code":"S4610","actual_filename":"S4610_FR_Col12_ILT_FV_Inst_A4.pdf","logical_name":"S4610","version":"12","edition_type":"INSTRUCTOR","language":"fr","page_count":202,"checksum":"sha256:a00a302c4a948f7dbd32ad952ca4dedbb94ac3c5e92d3ea03982f42cf959d6be","source_path":"docs/source/S4610_FR_Col12_ILT_FV_Inst_A4.pdf"},
+    {"course_code":"S4615","actual_filename":"S4615_FR_Col12_ILT_FV_Inst_A4.pdf","logical_name":"S4615","version":"12","edition_type":"INSTRUCTOR","language":"fr","page_count":263,"checksum":"sha256:c43431aca0d15add006a5872ac721ef7ffd16e89520195a47b47d7f98ac387d9","source_path":"docs/source/S4615_FR_Col12_ILT_FV_Inst_A4.pdf"},
+    {"course_code":"S4620","actual_filename":"S4620_FR_Col12_ILT_FV_Inst_A4.pdf","logical_name":"S4620","version":"12","edition_type":"INSTRUCTOR","language":"fr","page_count":351,"checksum":"sha256:8433ee1c05da24062bf849672b66bd3857e71608198b8ca127fc5a8500f2bae1","source_path":"docs/source/S4620_FR_Col12_ILT_FV_Inst_A4.pdf"},
+    {"course_code":"S4650","actual_filename":"S4650_FR_Col12_ILT_FV_Inst_A4.pdf","logical_name":"S4650","version":"12","edition_type":"INSTRUCTOR","language":"fr","page_count":267,"checksum":"sha256:e5601257121ad731d45297c784e25f1306cf6d8a51f215005df2b73db50efa4c","source_path":"docs/source/S4650_FR_Col12_ILT_FV_Inst_A4.pdf"}
+  ]
+}

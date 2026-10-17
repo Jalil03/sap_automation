@@ -1,0 +1,1032 @@
+{
+  "edges": [
+    {
+      "critical": true,
+      "relation": "CREATED_FROM",
+      "source": "S4600_CH10_EX35_OUTBOUND_DELIVERY_FROM_RESOLVED_ORDER",
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH10_EX35_SALES_ORDER_STANDARD",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH10_EX35_SALES_ORDER_STANDARD",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH10_EX35_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH3_EX3_SALES_ORDER_STANDARD",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH3_EX3_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH3_EX3_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "CREATED_FROM",
+      "source": "S4600_CH3_EX5_OUTBOUND_DELIVERY_FROM_EX3",
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH3_EX3_SALES_ORDER_STANDARD",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "POSTED_FOR",
+      "source": "S4600_CH3_EX6_GOODS_ISSUE_FROM_DELIVERY",
+      "source_phrase": "livraison créée précédemment",
+      "status": "RESOLVED",
+      "target": "S4600_CH3_EX5_OUTBOUND_DELIVERY_FROM_EX3",
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4600_CH3_EX7_BILLING_STANDARD_FROM_EX5",
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH3_EX5_OUTBOUND_DELIVERY_FROM_EX3",
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "relation": "SETTLES",
+      "source": "S4600_CH3_EX8_PAYMENT_REFERENCE_FOR_EX7",
+      "source_phrase": "document de facturation",
+      "status": "RESOLVED",
+      "target": "S4600_CH3_EX7_BILLING_STANDARD_FROM_EX5",
+      "target_type": "BILLING"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH4_EX10_SALES_ORDER_STANDARD",
+      "source_phrase": "T-CUS##",
+      "status": "RESOLVED",
+      "target": "S4600_CH4_EX9_BUSINESS_PARTNER_T-CUS-GROUP",
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "SHIP_TO_PARTY",
+      "source": "S4600_CH4_EX10_SALES_ORDER_STANDARD",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH4_EX10_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "FOR_MATERIAL",
+      "source": "S4600_CH4_EX11_PRICING_CONDITION_PR00_T-MS4",
+      "source_phrase": "T-MS4##",
+      "status": "RESOLVED",
+      "target": "S4600_CH4_EX11_MATERIAL_T-MS4-GROUP",
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH4_EX11_SALES_ORDER_STANDARD",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH4_EX11_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS4##",
+      "status": "RESOLVED",
+      "target": "S4600_CH4_EX11_MATERIAL_T-MS4-GROUP",
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "PRICED_BY",
+      "source": "S4600_CH4_EX11_SALES_ORDER_STANDARD",
+      "source_phrase": "Prix de vente 35 EUR",
+      "status": "RESOLVED",
+      "target": "S4600_CH4_EX11_PRICING_CONDITION_PR00_T-MS4",
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": true,
+      "relation": "FOR_CUSTOMER",
+      "source": "S4600_CH4_EX12_CUSTOMER_MATERIAL_INFO_T-S50A_T-MS1",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "FOR_MATERIAL",
+      "source": "S4600_CH4_EX12_CUSTOMER_MATERIAL_INFO_T-S50A_T-MS1",
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "CREATED_FROM",
+      "source": "S4600_CH4_EX12_OUTBOUND_DELIVERY_FROM_EX12_ORDER",
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH4_EX12_SALES_ORDER_STANDARD",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH4_EX12_SALES_ORDER_STANDARD",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH4_EX12_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "FOR_CUSTOMER",
+      "source": "S4600_CH4_EX13_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "FOR_MATERIAL",
+      "source": "S4600_CH4_EX13_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL",
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH4_EX13_SALES_ORDER_STANDARD",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH4_EX13_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "PRICED_BY",
+      "source": "S4600_CH4_EX13_SALES_ORDER_STANDARD",
+      "source_phrase": "condition PR00",
+      "status": "RESOLVED",
+      "target": "S4600_CH4_EX13_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL",
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": true,
+      "relation": "FOR_CUSTOMER",
+      "source": "S4600_CH4_EX14_PRICING_CONDITION_K007_CUSTOMER_VALUE_SCALE",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH4_EX14_SALES_ORDER_STANDARD",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH4_EX14_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "PRICED_BY",
+      "source": "S4600_CH4_EX14_SALES_ORDER_STANDARD",
+      "source_phrase": "condition K007",
+      "status": "RESOLVED",
+      "target": "S4600_CH4_EX14_PRICING_CONDITION_K007_CUSTOMER_VALUE_SCALE",
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH4_EX16_SALES_ORDER_STANDARD",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH4_EX16_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH4_EX16_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "CREATED_FROM",
+      "source": "S4600_CH4_EX17_OUTBOUND_DELIVERY_FROM_EX17_ORDER",
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH4_EX17_SALES_ORDER_STANDARD",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH4_EX17_SALES_ORDER_STANDARD",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH4_EX17_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH5_EX18_SALES_ORDER_STANDARD",
+      "source_phrase": "T-S50B##",
+      "status": "RESOLVED",
+      "target": "S4600_CH6_EX20_BUSINESS_PARTNER_T-S50B-GROUP",
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH5_EX18_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH5_EX18_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH5_EX19_SALES_ORDER_STANDARD",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH5_EX19_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH5_EX19_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS3##",
+      "status": "RESOLVED",
+      "target": "S4600_CH6_EX20_MATERIAL_T-MS3-GROUP",
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH6_EX21_SALES_ORDER_STANDARD",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH6_EX21_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS3##",
+      "status": "RESOLVED",
+      "target": "S4600_CH6_EX20_MATERIAL_T-MS3-GROUP",
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH6_EX22_SALES_ORDER_STANDARD",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH6_EX22_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH6_EX22_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH6_EX23_SALES_ORDER_STANDARD",
+      "source_phrase": "T-S50B##",
+      "status": "RESOLVED",
+      "target": "S4600_CH6_EX20_BUSINESS_PARTNER_T-S50B-GROUP",
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH6_EX23_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS3##",
+      "status": "RESOLVED",
+      "target": "S4600_CH6_EX20_MATERIAL_T-MS3-GROUP",
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH8_EX28_INQUIRY_DO",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH8_EX28_INQUIRY_DO",
+      "source_phrase": "T-MS2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "CREATED_FROM",
+      "source": "S4600_CH8_EX28_QUOTATION_OF",
+      "source_phrase": "avec référence à la demande",
+      "status": "RESOLVED",
+      "target": "S4600_CH8_EX28_INQUIRY_DO",
+      "target_type": "INQUIRY"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH8_EX28_QUOTATION_OF",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH8_EX28_QUOTATION_OF",
+      "source_phrase": "T-MS2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH8_EX28_SALES_ORDER_STANDARD",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH8_EX28_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "CREATED_FROM",
+      "source": "S4600_CH8_EX28_SALES_ORDER_STANDARD",
+      "source_phrase": "avec référence à l'offre",
+      "status": "RESOLVED",
+      "target": "S4600_CH8_EX28_QUOTATION_OF",
+      "target_type": "QUOTATION"
+    },
+    {
+      "critical": true,
+      "relation": "POSTED_FOR",
+      "source": "S4600_CH8_EX30_GOODS_ISSUE_FROM_DELIVERY",
+      "source_phrase": "livraison créée précédemment",
+      "status": "RESOLVED",
+      "target": "S4600_CH8_EX30_OUTBOUND_DELIVERY_FROM_EX30_ORDER",
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "relation": "CREATED_FROM",
+      "source": "S4600_CH8_EX30_OUTBOUND_DELIVERY_FROM_EX30_ORDER",
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH8_EX30_SALES_ORDER_STANDARD",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH8_EX30_SALES_ORDER_STANDARD",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH8_EX30_SALES_ORDER_STANDARD",
+      "source_phrase": "T-F1##",
+      "status": "RESOLVED",
+      "target": "S4600_CH8_EX30_MATERIAL_T-F1-GROUP",
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4600_CH8_EX31_BILLING_SERVICE_FROM_ORDER",
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH8_EX31_SALES_ORDER_STANDARD",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH8_EX31_SALES_ORDER_STANDARD",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH8_EX31_SALES_ORDER_STANDARD",
+      "source_phrase": "T-D1##",
+      "status": "RESOLVED",
+      "target": "S4600_CH8_EX31_MATERIAL_T-D1-GROUP",
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4600_CH9_EX32_BILLING_CREDIT_MEMO_FROM_REQUEST",
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH9_EX32_CREDIT_MEMO_REQUEST_DNC",
+      "target_type": "CREDIT_MEMO_REQUEST"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4600_CH9_EX32_BILLING_STANDARD_FROM_DELIVERY",
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH9_EX32_OUTBOUND_DELIVERY_FROM_EX32_ORDER",
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "relation": "CREATED_FROM",
+      "source": "S4600_CH9_EX32_CREDIT_MEMO_REQUEST_DNC",
+      "source_phrase": "avec référence au document de facturation",
+      "status": "RESOLVED",
+      "target": "S4600_CH9_EX32_BILLING_STANDARD_FROM_DELIVERY",
+      "target_type": "BILLING"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH9_EX32_CREDIT_MEMO_REQUEST_DNC",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH9_EX32_CREDIT_MEMO_REQUEST_DNC",
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "POSTED_FOR",
+      "source": "S4600_CH9_EX32_GOODS_ISSUE_FROM_DELIVERY",
+      "source_phrase": "livraison créée précédemment",
+      "status": "RESOLVED",
+      "target": "S4600_CH9_EX32_OUTBOUND_DELIVERY_FROM_EX32_ORDER",
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "relation": "CREATED_FROM",
+      "source": "S4600_CH9_EX32_OUTBOUND_DELIVERY_FROM_EX32_ORDER",
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH9_EX32_SALES_ORDER_STANDARD",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH9_EX32_SALES_ORDER_STANDARD",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH9_EX32_SALES_ORDER_STANDARD",
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4600_CH9_EX33_BILLING_CANCELLATION_OF_CREDIT_MEMO",
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH9_EX32_BILLING_CREDIT_MEMO_FROM_REQUEST",
+      "target_type": "BILLING"
+    },
+    {
+      "critical": true,
+      "relation": "BILLED_FROM",
+      "source": "S4600_CH9_EX34_BILLING_CREDIT_MEMO_FROM_RETURN",
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH9_EX34_RETURN_ORDER_RE",
+      "target_type": "RETURN_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "CREATED_FROM",
+      "source": "S4600_CH9_EX34_OUTBOUND_DELIVERY_RETURN_FROM_ORDER",
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH9_EX34_RETURN_ORDER_RE",
+      "target_type": "RETURN_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH9_EX34_RETURN_ORDER_RE",
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH9_EX34_RETURN_ORDER_RE",
+      "source_phrase": "T-MS3##",
+      "status": "RESOLVED",
+      "target": "S4600_CH6_EX20_MATERIAL_T-MS3-GROUP",
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "BELONGS_TO",
+      "source": "S4600_SHARED_DISTRIBUTION_CHANNEL_10",
+      "source_phrase": "Org. commerciale 1010",
+      "status": "RESOLVED",
+      "target": "S4600_SHARED_SALES_ORGANIZATION_1010",
+      "target_type": "SALES_ORGANIZATION"
+    },
+    {
+      "critical": true,
+      "relation": "USES",
+      "source": "S4600_SHARED_SALES_AREA_1010_10_00",
+      "source_phrase": "Org. commerciale 1010",
+      "status": "RESOLVED",
+      "target": "S4600_SHARED_SALES_ORGANIZATION_1010",
+      "target_type": "SALES_ORGANIZATION"
+    },
+    {
+      "critical": true,
+      "relation": "USES",
+      "source": "S4600_SHARED_SALES_AREA_1010_10_00",
+      "source_phrase": "Canal distrib. 10",
+      "status": "RESOLVED",
+      "target": "S4600_SHARED_DISTRIBUTION_CHANNEL_10",
+      "target_type": "DISTRIBUTION_CHANNEL"
+    },
+    {
+      "critical": true,
+      "relation": "USES",
+      "source": "S4600_SHARED_SALES_AREA_1010_10_00",
+      "source_phrase": "Secteur d'activité 00",
+      "status": "RESOLVED",
+      "target": "S4600_SHARED_SALES_DIVISION_00",
+      "target_type": "SALES_DIVISION"
+    },
+    {
+      "critical": false,
+      "relation": "ASSIGNED_TO",
+      "source": "S4600_SHARED_SALES_ORGANIZATION_1010",
+      "source_phrase": "Société 1010",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "COMPANY_CODE"
+    }
+  ],
+  "nodes": [
+    {
+      "object_id": "S4600_CH10_EX35_OUTBOUND_DELIVERY_FROM_RESOLVED_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH10_EX35_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH3_EX3_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH3_EX5_OUTBOUND_DELIVERY_FROM_EX3",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH3_EX5_SHIPPING_POINT_Z0-GROUP",
+      "object_type": "SHIPPING_POINT",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH3_EX6_GOODS_ISSUE_FROM_DELIVERY",
+      "object_type": "GOODS_ISSUE",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH3_EX7_BILLING_STANDARD_FROM_EX5",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH3_EX8_PAYMENT_REFERENCE_FOR_EX7",
+      "object_type": "PAYMENT_REFERENCE",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH4_EX10_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH4_EX11_MATERIAL_T-MS4-GROUP",
+      "object_type": "MATERIAL",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH4_EX11_PRICING_CONDITION_PR00_T-MS4",
+      "object_type": "PRICING_CONDITION",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH4_EX11_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH4_EX12_CUSTOMER_MATERIAL_INFO_T-S50A_T-MS1",
+      "object_type": "CUSTOMER_MATERIAL_INFO",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH4_EX12_OUTBOUND_DELIVERY_FROM_EX12_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH4_EX12_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH4_EX13_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL",
+      "object_type": "PRICING_CONDITION",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH4_EX13_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH4_EX14_PRICING_CONDITION_K007_CUSTOMER_VALUE_SCALE",
+      "object_type": "PRICING_CONDITION",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH4_EX14_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH4_EX16_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH4_EX17_OUTBOUND_DELIVERY_FROM_EX17_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH4_EX17_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH4_EX9_BUSINESS_PARTNER_T-CUS-GROUP",
+      "object_type": "BUSINESS_PARTNER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH5_EX18_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH5_EX19_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH6_EX20_BUSINESS_PARTNER_T-S50B-GROUP",
+      "object_type": "BUSINESS_PARTNER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH6_EX20_MATERIAL_T-MS3-GROUP",
+      "object_type": "MATERIAL",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH6_EX21_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH6_EX22_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH6_EX23_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH8_EX28_INQUIRY_DO",
+      "object_type": "INQUIRY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH8_EX28_QUOTATION_OF",
+      "object_type": "QUOTATION",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH8_EX28_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH8_EX30_GOODS_ISSUE_FROM_DELIVERY",
+      "object_type": "GOODS_ISSUE",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH8_EX30_MATERIAL_T-F1-GROUP",
+      "object_type": "MATERIAL",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH8_EX30_OUTBOUND_DELIVERY_FROM_EX30_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH8_EX30_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH8_EX31_BILLING_SERVICE_FROM_ORDER",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH8_EX31_MATERIAL_T-D1-GROUP",
+      "object_type": "MATERIAL",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH8_EX31_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH9_EX32_BILLING_CREDIT_MEMO_FROM_REQUEST",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH9_EX32_BILLING_STANDARD_FROM_DELIVERY",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH9_EX32_CREDIT_MEMO_REQUEST_DNC",
+      "object_type": "CREDIT_MEMO_REQUEST",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH9_EX32_GOODS_ISSUE_FROM_DELIVERY",
+      "object_type": "GOODS_ISSUE",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH9_EX32_OUTBOUND_DELIVERY_FROM_EX32_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH9_EX32_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH9_EX33_BILLING_CANCELLATION_OF_CREDIT_MEMO",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH9_EX34_BILLING_CREDIT_MEMO_FROM_RETURN",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH9_EX34_OUTBOUND_DELIVERY_RETURN_FROM_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_CH9_EX34_RETURN_ORDER_RE",
+      "object_type": "RETURN_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4600_SHARED_DISTRIBUTION_CHANNEL_10",
+      "object_type": "DISTRIBUTION_CHANNEL",
+      "readiness_status": "READY"
+    },
+    {
+      "object_id": "S4600_SHARED_SALES_AREA_1010_10_00",
+      "object_type": "SALES_AREA",
+      "readiness_status": "READY"
+    },
+    {
+      "object_id": "S4600_SHARED_SALES_DIVISION_00",
+      "object_type": "SALES_DIVISION",
+      "readiness_status": "READY"
+    },
+    {
+      "object_id": "S4600_SHARED_SALES_ORGANIZATION_1010",
+      "object_type": "SALES_ORGANIZATION",
+      "readiness_status": "READY"
+    }
+  ]
+}

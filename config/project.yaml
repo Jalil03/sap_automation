@@ -1,0 +1,6 @@
+project:
+  name: sap-sales-data-platform
+  phase: phase-1-canonical-data-preparation
+  sap_integration_enabled: false
+source_manifest: docs/manifests/documents.json
+expected_logical_documents: [S4600, S4610, S4615, S4620, S4650]

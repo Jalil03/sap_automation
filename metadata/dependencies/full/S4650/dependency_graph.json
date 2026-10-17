@@ -1,0 +1,502 @@
+{
+  "edges": [
+    {
+      "critical": true,
+      "relation": "ASSIGNED_TO",
+      "source": "S4650_CH1_EX1_DISTRIBUTION_CHANNEL_GROUP",
+      "source_phrase": "affecter à l'organisation commerciale 1010",
+      "status": "RESOLVED",
+      "target": "S4650_CH1_EX1_SALES_ORGANIZATION_1010",
+      "target_type": "SALES_ORGANIZATION"
+    },
+    {
+      "critical": true,
+      "relation": "USES_SALES_ORGANIZATION",
+      "source": "S4650_CH1_EX1_SALES_AREA_GROUP_00",
+      "source_phrase": "1010",
+      "status": "RESOLVED",
+      "target": "S4650_CH1_EX1_SALES_ORGANIZATION_1010",
+      "target_type": "SALES_ORGANIZATION"
+    },
+    {
+      "critical": true,
+      "relation": "USES_DISTRIBUTION_CHANNEL",
+      "source": "S4650_CH1_EX1_SALES_AREA_GROUP_00",
+      "source_phrase": "canal créé",
+      "status": "RESOLVED",
+      "target": "S4650_CH1_EX1_DISTRIBUTION_CHANNEL_GROUP",
+      "target_type": "DISTRIBUTION_CHANNEL"
+    },
+    {
+      "critical": true,
+      "relation": "USES_SALES_DIVISION",
+      "source": "S4650_CH1_EX1_SALES_AREA_GROUP_00",
+      "source_phrase": "00",
+      "status": "RESOLVED",
+      "target": "S4650_CH1_EX1_SALES_DIVISION_00",
+      "target_type": "SALES_DIVISION"
+    },
+    {
+      "critical": true,
+      "relation": "USES_SALES_ORGANIZATION",
+      "source": "S4650_CH1_EX1_SALES_AREA_GROUP_03",
+      "source_phrase": "1010",
+      "status": "RESOLVED",
+      "target": "S4650_CH1_EX1_SALES_ORGANIZATION_1010",
+      "target_type": "SALES_ORGANIZATION"
+    },
+    {
+      "critical": true,
+      "relation": "USES_DISTRIBUTION_CHANNEL",
+      "source": "S4650_CH1_EX1_SALES_AREA_GROUP_03",
+      "source_phrase": "canal créé",
+      "status": "RESOLVED",
+      "target": "S4650_CH1_EX1_DISTRIBUTION_CHANNEL_GROUP",
+      "target_type": "DISTRIBUTION_CHANNEL"
+    },
+    {
+      "critical": true,
+      "relation": "USES_SALES_DIVISION",
+      "source": "S4650_CH1_EX1_SALES_AREA_GROUP_03",
+      "source_phrase": "03",
+      "status": "RESOLVED",
+      "target": "S4650_CH1_EX1_SALES_DIVISION_03",
+      "target_type": "SALES_DIVISION"
+    },
+    {
+      "critical": true,
+      "relation": "TARGETS",
+      "source": "S4650_CH1_EX2_SHARED_MASTER_DATA_ASSIGNMENT_CHANNEL_10",
+      "source_phrase": "nouveau canal du groupe",
+      "status": "RESOLVED",
+      "target": "S4650_CH1_EX1_DISTRIBUTION_CHANNEL_GROUP",
+      "target_type": "DISTRIBUTION_CHANNEL"
+    },
+    {
+      "critical": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4650_CH1_EX2_SALES_ORDER_COMMON_MASTER_DATA_TEST",
+      "source_phrase": "C650-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4650_CH1_EX2_SALES_ORDER_COMMON_MASTER_DATA_TEST",
+      "source_phrase": "P650-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "USES_SHARED_MASTER_DATA",
+      "source": "S4650_CH1_EX2_SALES_ORDER_COMMON_MASTER_DATA_TEST",
+      "source_phrase": "accès au prix PR00 du canal 10",
+      "status": "RESOLVED",
+      "target": "S4650_CH1_EX2_SHARED_MASTER_DATA_ASSIGNMENT_CHANNEL_10",
+      "target_type": "SHARED_MASTER_DATA_ASSIGNMENT"
+    },
+    {
+      "critical": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_DIFFERENT_CUSTOMER",
+      "source_phrase": "C650-B##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_DIFFERENT_CUSTOMER",
+      "source_phrase": "P650-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "CONTROLLED_BY",
+      "source": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_DIFFERENT_CUSTOMER",
+      "source_phrase": "OF vers ZA##",
+      "status": "RESOLVED",
+      "target": "S4650_CH2_EX3_COPY_CONTROL_OF_TO_ZA_GROUP",
+      "target_type": "COPY_CONTROL"
+    },
+    {
+      "critical": true,
+      "relation": "REFERENCES",
+      "source": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_DIFFERENT_CUSTOMER",
+      "source_phrase": "offre OF créée dans la tâche précédente",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "QUOTATION"
+    },
+    {
+      "critical": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_SAME_CUSTOMER",
+      "source_phrase": "C650-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_SAME_CUSTOMER",
+      "source_phrase": "P650-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "CONTROLLED_BY",
+      "source": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_SAME_CUSTOMER",
+      "source_phrase": "OF vers ZA##",
+      "status": "RESOLVED",
+      "target": "S4650_CH2_EX3_COPY_CONTROL_OF_TO_ZA_GROUP",
+      "target_type": "COPY_CONTROL"
+    },
+    {
+      "critical": true,
+      "relation": "REFERENCES",
+      "source": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_SAME_CUSTOMER",
+      "source_phrase": "même offre OF",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "QUOTATION"
+    },
+    {
+      "critical": true,
+      "relation": "CONTROLLED_BY",
+      "source": "S4650_CH2_EX4_OUTBOUND_DELIVERY_HEADER_CONTROL_TEST",
+      "source_phrase": "ZA## vers LF",
+      "status": "RESOLVED",
+      "target": "S4650_CH2_EX4_COPY_CONTROL_ZA_GROUP_TO_LF",
+      "target_type": "COPY_CONTROL"
+    },
+    {
+      "critical": true,
+      "relation": "REFERENCES",
+      "source": "S4650_CH2_EX4_OUTBOUND_DELIVERY_HEADER_CONTROL_TEST",
+      "source_phrase": "une des commandes créées précédemment",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "CONTROLLED_BY",
+      "source": "S4650_CH2_EX4_OUTBOUND_DELIVERY_ITEM_CONTROL_TEST",
+      "source_phrase": "ZA## vers LF",
+      "status": "RESOLVED",
+      "target": "S4650_CH2_EX4_COPY_CONTROL_ZA_GROUP_TO_LF",
+      "target_type": "COPY_CONTROL"
+    },
+    {
+      "critical": true,
+      "relation": "REFERENCES",
+      "source": "S4650_CH2_EX4_OUTBOUND_DELIVERY_ITEM_CONTROL_TEST",
+      "source_phrase": "une des commandes créées précédemment",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "VERIFIES",
+      "source": "S4650_CH3_EX6_TEXT_DETERMINATION_MATERIAL_SALES_TEXT",
+      "source_phrase": "commande ##-1-2.6",
+      "status": "RESOLVED",
+      "target": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_SAME_CUSTOMER",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4650_CH3_EX7_SALES_ORDER_HEADER_TEXT_FROM_QUOTATION",
+      "source_phrase": "C650-B##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4650_CH3_EX7_SALES_ORDER_HEADER_TEXT_FROM_QUOTATION",
+      "source_phrase": "P650-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "USES_TEXT_DETERMINATION",
+      "source": "S4650_CH3_EX7_SALES_ORDER_HEADER_TEXT_FROM_QUOTATION",
+      "source_phrase": "texte en-tête copié",
+      "status": "RESOLVED",
+      "target": "S4650_CH3_EX7_TEXT_DETERMINATION_HEADER_GROUP",
+      "target_type": "TEXT_DETERMINATION"
+    },
+    {
+      "critical": true,
+      "relation": "REFERENCES",
+      "source": "S4650_CH3_EX7_SALES_ORDER_HEADER_TEXT_FROM_QUOTATION",
+      "source_phrase": "offre OF ##-2-4.1",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "QUOTATION"
+    },
+    {
+      "critical": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4650_CH4_EX9_SALES_ORDER_BA00_OUTPUT_TEST",
+      "source_phrase": "C650-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4650_CH4_EX9_SALES_ORDER_BA00_OUTPUT_TEST",
+      "source_phrase": "P650-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "OUTPUT_BY",
+      "source": "S4650_CH4_EX9_SALES_ORDER_BA00_OUTPUT_TEST",
+      "source_phrase": "BA00",
+      "status": "RESOLVED",
+      "target": "S4650_CH4_EX9_OUTPUT_DETERMINATION_BA00",
+      "target_type": "OUTPUT_DETERMINATION"
+    },
+    {
+      "critical": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4650_CH4_EX10_SALES_ORDER_ZLD0_DELIVERY_SOURCE",
+      "source_phrase": "C650-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4650_CH4_EX10_SALES_ORDER_ZLD0_DELIVERY_SOURCE",
+      "source_phrase": "P650-100",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "OUTPUT_CONTEXT",
+      "source": "S4650_CH4_EX10_SALES_ORDER_ZLD0_DELIVERY_SOURCE",
+      "source_phrase": "livraison ZLD0",
+      "status": "RESOLVED",
+      "target": "S4650_CH4_EX10_OUTPUT_DETERMINATION_ZLD0",
+      "target_type": "OUTPUT_DETERMINATION"
+    },
+    {
+      "critical": true,
+      "relation": "REFERENCES",
+      "source": "S4650_CH4_EX10_OUTBOUND_DELIVERY_ZLD0_TEST",
+      "source_phrase": "commande créée à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4650_CH4_EX10_SALES_ORDER_ZLD0_DELIVERY_SOURCE",
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "relation": "OUTPUT_BY",
+      "source": "S4650_CH4_EX10_OUTBOUND_DELIVERY_ZLD0_TEST",
+      "source_phrase": "ZLD0",
+      "status": "RESOLVED",
+      "target": "S4650_CH4_EX10_OUTPUT_DETERMINATION_ZLD0",
+      "target_type": "OUTPUT_DETERMINATION"
+    },
+    {
+      "critical": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4650_CH4_EX11_SALES_ORDER_NEW_OUTPUT_CONFIRMATION_TEST",
+      "source_phrase": "C650-B##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4650_CH4_EX11_SALES_ORDER_NEW_OUTPUT_CONFIRMATION_TEST",
+      "source_phrase": "P650-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "relation": "OUTPUT_BY",
+      "source": "S4650_CH4_EX11_SALES_ORDER_NEW_OUTPUT_CONFIRMATION_TEST",
+      "source_phrase": "ORDER_CONFIRMATION_##",
+      "status": "RESOLVED",
+      "target": "S4650_CH4_EX11_OUTPUT_DETERMINATION_ORDER_CONFIRMATION_GROUP",
+      "target_type": "OUTPUT_DETERMINATION"
+    }
+  ],
+  "nodes": [
+    {
+      "object_id": "S4650_CH1_EX1_SALES_ORGANIZATION_1010",
+      "object_type": "SALES_ORGANIZATION",
+      "readiness_status": "READY"
+    },
+    {
+      "object_id": "S4650_CH1_EX1_DISTRIBUTION_CHANNEL_GROUP",
+      "object_type": "DISTRIBUTION_CHANNEL",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH1_EX1_SALES_DIVISION_00",
+      "object_type": "SALES_DIVISION",
+      "readiness_status": "READY"
+    },
+    {
+      "object_id": "S4650_CH1_EX1_SALES_DIVISION_03",
+      "object_type": "SALES_DIVISION",
+      "readiness_status": "READY"
+    },
+    {
+      "object_id": "S4650_CH1_EX1_SALES_AREA_GROUP_00",
+      "object_type": "SALES_AREA",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH1_EX1_SALES_AREA_GROUP_03",
+      "object_type": "SALES_AREA",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH1_EX2_SHARED_MASTER_DATA_ASSIGNMENT_CHANNEL_10",
+      "object_type": "SHARED_MASTER_DATA_ASSIGNMENT",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH1_EX2_SALES_ORDER_COMMON_MASTER_DATA_TEST",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH2_EX3_COPY_CONTROL_OF_TO_ZA_GROUP",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH2_EX3_COPY_CONTROL_ZQ_GROUP_TO_OF",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_DIFFERENT_CUSTOMER",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_SAME_CUSTOMER",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH2_EX4_COPY_CONTROL_ZA_GROUP_TO_LF",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH2_EX4_OUTBOUND_DELIVERY_HEADER_CONTROL_TEST",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH2_EX4_OUTBOUND_DELIVERY_ITEM_CONTROL_TEST",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH2_EX5_COPY_CONTROL_LF_TO_F2",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "READY"
+    },
+    {
+      "object_id": "S4650_CH3_EX6_TEXT_DETERMINATION_MATERIAL_SALES_TEXT",
+      "object_type": "TEXT_DETERMINATION",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH3_EX7_TEXT_DETERMINATION_HEADER_GROUP",
+      "object_type": "TEXT_DETERMINATION",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH3_EX7_SALES_ORDER_HEADER_TEXT_FROM_QUOTATION",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH4_EX9_BUSINESS_PARTNER_C650_A_GROUP",
+      "object_type": "BUSINESS_PARTNER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH4_EX9_OUTPUT_DETERMINATION_BA00",
+      "object_type": "OUTPUT_DETERMINATION",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH4_EX9_SALES_ORDER_BA00_OUTPUT_TEST",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH4_EX10_OUTPUT_DETERMINATION_ZLD0",
+      "object_type": "OUTPUT_DETERMINATION",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH4_EX10_SALES_ORDER_ZLD0_DELIVERY_SOURCE",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH4_EX10_OUTBOUND_DELIVERY_ZLD0_TEST",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH4_EX11_OUTPUT_DETERMINATION_ORDER_CONFIRMATION_GROUP",
+      "object_type": "OUTPUT_DETERMINATION",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH4_EX11_SALES_ORDER_NEW_OUTPUT_CONFIRMATION_TEST",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH5_EX12_EXTENSION_CONFIGURATION_SALES_ORDER_LIST_LAYOUT",
+      "object_type": "EXTENSION_CONFIGURATION",
+      "readiness_status": "BLOCKED"
+    },
+    {
+      "object_id": "S4650_CH5_EX13_EXTENSION_CONFIGURATION_MATERIAL_FIELD_SELECTION",
+      "object_type": "EXTENSION_CONFIGURATION",
+      "readiness_status": "BLOCKED"
+    }
+  ]
+}

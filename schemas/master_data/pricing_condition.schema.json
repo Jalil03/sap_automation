@@ -1,0 +1,304 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PRICING_CONDITION",
+  "allOf": [
+    {
+      "$ref": "../common/canonical_object.schema.json"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "object_type": {
+      "const": "PRICING_CONDITION"
+    },
+    "classification": {
+      "const": "MASTER_DATA"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "condition_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "key_combination": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "sales_organization": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "distribution_channel": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "customer": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "material": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "incoterms": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "destination_country": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "customer_hierarchy_node": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "promotion_reference": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "sales_deal_reference": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "valid_from": {
+          "type": [
+            "object",
+            "string",
+            "null"
+          ],
+          "properties": {
+            "kind": {
+              "type": "string"
+            },
+            "raw": {
+              "type": "string"
+            },
+            "offset": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "valid_to": {
+          "type": [
+            "object",
+            "string",
+            "null"
+          ],
+          "properties": {
+            "kind": {
+              "type": "string"
+            },
+            "raw": {
+              "type": "string"
+            },
+            "offset": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "rate": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pricing_unit": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "scales": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "anyOf": [
+              {
+                "required": [
+                  "scale_basis",
+                  "threshold"
+                ]
+              },
+              {
+                "required": [
+                  "from_quantity",
+                  "quantity_unit",
+                  "amount",
+                  "currency"
+                ]
+              }
+            ],
+            "properties": {
+              "scale_basis": {
+                "enum": [
+                  "QUANTITY",
+                  "VALUE"
+                ]
+              },
+              "threshold": {
+                "type": "number"
+              },
+              "threshold_unit": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "threshold_currency": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "amount": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "currency": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "rate": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "rate_unit": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "pricing_unit": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "from_quantity": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "quantity_unit": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "scale_basis": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rate_unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "calculation_semantics": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "record_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_operation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "adjustment_percent": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "maximum_order_count": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "maximum_quantity": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "maximum_quantity_unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "deletion_indicator": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

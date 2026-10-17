@@ -1,0 +1,1166 @@
+{
+  "registry_version": "1.0.0",
+  "phase": "2A",
+  "generated_by": "scripts/audit_sap_interfaces.py",
+  "source_policy": "LOCAL_INVENTORY_EXACT_MATCH_ONLY",
+  "sap_connection_performed": false,
+  "mapper_implemented": false,
+  "inputs": {
+    "canonical_objects": {
+      "path": "data/validated/canonical_objects.json",
+      "sha256": "cb26afeda023743c862479c32664d981889c825c9aa15f2c293b32b119dd9b36"
+    },
+    "odata_inventory": {
+      "path": "inputs/sap_inventory/odata_services.xlsx",
+      "sha256": "8deab52ad06342a9e8e93e38180be4f32acabe0b8f2107e6bbeeddef89f6c7ab"
+    },
+    "rfc_inventory": {
+      "path": "inputs/sap_inventory/rfc_remote_functions.xlsx",
+      "sha256": "cacb0a632ecc3e9e16aacb53abe8a191ff5eb6cc6f4f0e6944d44c4fab3dd66d"
+    },
+    "taxonomy": {
+      "path": "taxonomy/object_types.yaml",
+      "sha256": "de03e75d3200baf2002437990dec53c53f994801a0a84418801751d6644885be"
+    },
+    "schema_index": {
+      "path": "schemas/index.json",
+      "sha256": "984070673bba0733fc3005dc9fd9bbe472ee7dd34b199060d123923896b60efb"
+    }
+  },
+  "allowed_candidate_classifications": [
+    "ODATA",
+    "STANDARD_BAPI",
+    "RFC_FUNCTION",
+    "LOOKUP_ONLY",
+    "NO_INTERFACE_FOUND",
+    "NO_EXECUTION_REQUIRED"
+  ],
+  "object_types": {
+    "ACCESS_SEQUENCE": {
+      "canonical_classification": "CUSTOMIZING",
+      "canonical_object_count": 2,
+      "ready_count": 1,
+      "blocked_count": 1,
+      "resolution": "UNRESOLVED",
+      "candidates": [
+        {
+          "classification": "NO_INTERFACE_FOUND",
+          "inventory": null,
+          "exact_name": null,
+          "operation": "NONE",
+          "evidence_basis": "No object-specific candidate was found in either supplied inventory."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "NO_INTERFACE_FOUND",
+        "inventory": null,
+        "exact_name": null,
+        "operation": "NONE",
+        "evidence_basis": "No object-specific candidate was found in either supplied inventory."
+      }
+    },
+    "ACCOUNT_DETERMINATION": {
+      "canonical_classification": "CUSTOMIZING",
+      "canonical_object_count": 1,
+      "ready_count": 0,
+      "blocked_count": 1,
+      "resolution": "UNRESOLVED",
+      "candidates": [
+        {
+          "classification": "NO_INTERFACE_FOUND",
+          "inventory": null,
+          "exact_name": null,
+          "operation": "NONE",
+          "evidence_basis": "No object-specific candidate was found in either supplied inventory."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "NO_INTERFACE_FOUND",
+        "inventory": null,
+        "exact_name": null,
+        "operation": "NONE",
+        "evidence_basis": "No object-specific candidate was found in either supplied inventory."
+      }
+    },
+    "BILLING": {
+      "canonical_classification": "TRANSACTION",
+      "canonical_object_count": 30,
+      "ready_count": 1,
+      "blocked_count": 29,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "ODATA",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_BILLING_DOCUMENT_SRV",
+          "operation": "MAINTAIN",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+          "external_name": "API_BILLING_DOCUMENT_SRV",
+          "version": "1"
+        },
+        {
+          "classification": "STANDARD_BAPI",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "BAPI_BILLINGDOC_CREATEMULTIPLE",
+          "operation": "CREATE",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "ODATA",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_BILLING_DOCUMENT_SRV",
+        "operation": "MAINTAIN",
+        "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+        "external_name": "API_BILLING_DOCUMENT_SRV",
+        "version": "1"
+      }
+    },
+    "BUSINESS_PARTNER": {
+      "canonical_classification": "MASTER_DATA",
+      "canonical_object_count": 3,
+      "ready_count": 0,
+      "blocked_count": 3,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "ODATA",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_BUSINESS_PARTNER",
+          "operation": "MAINTAIN",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+          "external_name": "API_BUSINESS_PARTNER",
+          "version": "1"
+        },
+        {
+          "classification": "STANDARD_BAPI",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "BAPI_BUPA_CREATE_FROM_DATA",
+          "operation": "CREATE",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "ODATA",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_BUSINESS_PARTNER",
+        "operation": "MAINTAIN",
+        "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+        "external_name": "API_BUSINESS_PARTNER",
+        "version": "1"
+      }
+    },
+    "COMPANY_CODE": {
+      "canonical_classification": "REFERENCE_DATA",
+      "canonical_object_count": 1,
+      "ready_count": 1,
+      "blocked_count": 0,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "LOOKUP_ONLY",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_COMPANYCODE_SRV",
+          "operation": "LOOKUP",
+          "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup.",
+          "external_name": "API_COMPANYCODE_SRV",
+          "version": "1"
+        },
+        {
+          "classification": "LOOKUP_ONLY",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "BAPI_COMPANYCODE_GETDETAIL",
+          "operation": "LOOKUP",
+          "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "LOOKUP_ONLY",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_COMPANYCODE_SRV",
+        "operation": "LOOKUP",
+        "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup.",
+        "external_name": "API_COMPANYCODE_SRV",
+        "version": "1"
+      }
+    },
+    "CONDITION_CONTRACT": {
+      "canonical_classification": "MASTER_DATA",
+      "canonical_object_count": 1,
+      "ready_count": 0,
+      "blocked_count": 1,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "STANDARD_BAPI",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "BAPI_CONDITION_CONTRACT_CREATE",
+          "operation": "CREATE",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used."
+        },
+        {
+          "classification": "STANDARD_BAPI",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "BAPI_CONDITION_CONTRACT_CHANGE",
+          "operation": "UPDATE",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "STANDARD_BAPI",
+        "inventory": "rfc_remote_functions.xlsx",
+        "exact_name": "BAPI_CONDITION_CONTRACT_CREATE",
+        "operation": "CREATE",
+        "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used."
+      }
+    },
+    "CONDITION_TABLE": {
+      "canonical_classification": "CUSTOMIZING",
+      "canonical_object_count": 4,
+      "ready_count": 3,
+      "blocked_count": 1,
+      "resolution": "UNRESOLVED",
+      "candidates": [
+        {
+          "classification": "NO_INTERFACE_FOUND",
+          "inventory": null,
+          "exact_name": null,
+          "operation": "NONE",
+          "evidence_basis": "No object-specific candidate was found in either supplied inventory."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "NO_INTERFACE_FOUND",
+        "inventory": null,
+        "exact_name": null,
+        "operation": "NONE",
+        "evidence_basis": "No object-specific candidate was found in either supplied inventory."
+      }
+    },
+    "CONDITION_TYPE": {
+      "canonical_classification": "CUSTOMIZING",
+      "canonical_object_count": 5,
+      "ready_count": 3,
+      "blocked_count": 2,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "LOOKUP_ONLY",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_SLSPRICINGCONDITIONTYPE_SRV",
+          "operation": "LOOKUP",
+          "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup.",
+          "external_name": "API_SLSPRICINGCONDITIONTYPE_SRV",
+          "version": "1"
+        }
+      ],
+      "preferred_interface": {
+        "classification": "LOOKUP_ONLY",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_SLSPRICINGCONDITIONTYPE_SRV",
+        "operation": "LOOKUP",
+        "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup.",
+        "external_name": "API_SLSPRICINGCONDITIONTYPE_SRV",
+        "version": "1"
+      }
+    },
+    "COPY_CONTROL": {
+      "canonical_classification": "CUSTOMIZING",
+      "canonical_object_count": 8,
+      "ready_count": 2,
+      "blocked_count": 6,
+      "resolution": "UNRESOLVED",
+      "candidates": [
+        {
+          "classification": "NO_INTERFACE_FOUND",
+          "inventory": null,
+          "exact_name": null,
+          "operation": "NONE",
+          "evidence_basis": "No object-specific candidate was found in either supplied inventory."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "NO_INTERFACE_FOUND",
+        "inventory": null,
+        "exact_name": null,
+        "operation": "NONE",
+        "evidence_basis": "No object-specific candidate was found in either supplied inventory."
+      }
+    },
+    "CREDIT_MEMO_REQUEST": {
+      "canonical_classification": "TRANSACTION",
+      "canonical_object_count": 1,
+      "ready_count": 0,
+      "blocked_count": 1,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "ODATA",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_CREDIT_MEMO_REQUEST_SRV",
+          "operation": "MAINTAIN",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+          "external_name": "API_CREDIT_MEMO_REQUEST_SRV",
+          "version": "1"
+        }
+      ],
+      "preferred_interface": {
+        "classification": "ODATA",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_CREDIT_MEMO_REQUEST_SRV",
+        "operation": "MAINTAIN",
+        "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+        "external_name": "API_CREDIT_MEMO_REQUEST_SRV",
+        "version": "1"
+      }
+    },
+    "CUSTOMER_HIERARCHY": {
+      "canonical_classification": "MASTER_DATA",
+      "canonical_object_count": 1,
+      "ready_count": 0,
+      "blocked_count": 1,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "STANDARD_BAPI",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "BAPI_CUSTOMER_HIERARCHIE_INS",
+          "operation": "CREATE",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used."
+        },
+        {
+          "classification": "STANDARD_BAPI",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "BAPI_CUSTOMER_HIERARCHIE_UPD",
+          "operation": "UPDATE",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "STANDARD_BAPI",
+        "inventory": "rfc_remote_functions.xlsx",
+        "exact_name": "BAPI_CUSTOMER_HIERARCHIE_INS",
+        "operation": "CREATE",
+        "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used."
+      }
+    },
+    "CUSTOMER_MATERIAL_INFO": {
+      "canonical_classification": "MASTER_DATA",
+      "canonical_object_count": 1,
+      "ready_count": 0,
+      "blocked_count": 1,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "ODATA",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_CUSTOMER_MATERIAL_SRV",
+          "operation": "MAINTAIN",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+          "external_name": "API_CUSTOMER_MATERIAL_SRV",
+          "version": "1"
+        },
+        {
+          "classification": "LOOKUP_ONLY",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "BAPI_CUSTMATINFO_GETDETAILM",
+          "operation": "LOOKUP",
+          "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "ODATA",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_CUSTOMER_MATERIAL_SRV",
+        "operation": "MAINTAIN",
+        "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+        "external_name": "API_CUSTOMER_MATERIAL_SRV",
+        "version": "1"
+      }
+    },
+    "DISTRIBUTION_CHANNEL": {
+      "canonical_classification": "CUSTOMIZING",
+      "canonical_object_count": 2,
+      "ready_count": 1,
+      "blocked_count": 1,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "LOOKUP_ONLY",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_DISTRIBUTIONCHANNEL_SRV",
+          "operation": "LOOKUP",
+          "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup.",
+          "external_name": "API_DISTRIBUTIONCHANNEL_SRV",
+          "version": "1"
+        }
+      ],
+      "preferred_interface": {
+        "classification": "LOOKUP_ONLY",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_DISTRIBUTIONCHANNEL_SRV",
+        "operation": "LOOKUP",
+        "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup.",
+        "external_name": "API_DISTRIBUTIONCHANNEL_SRV",
+        "version": "1"
+      }
+    },
+    "EXTENSION_CONFIGURATION": {
+      "canonical_classification": "CUSTOMIZING",
+      "canonical_object_count": 2,
+      "ready_count": 0,
+      "blocked_count": 2,
+      "resolution": "UNRESOLVED",
+      "candidates": [
+        {
+          "classification": "NO_INTERFACE_FOUND",
+          "inventory": null,
+          "exact_name": null,
+          "operation": "NONE",
+          "evidence_basis": "No object-specific candidate was found in either supplied inventory."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "NO_INTERFACE_FOUND",
+        "inventory": null,
+        "exact_name": null,
+        "operation": "NONE",
+        "evidence_basis": "No object-specific candidate was found in either supplied inventory."
+      }
+    },
+    "GOODS_ISSUE": {
+      "canonical_classification": "TRANSACTION",
+      "canonical_object_count": 4,
+      "ready_count": 0,
+      "blocked_count": 4,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "STANDARD_BAPI",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "BAPI_GOODSMVT_CREATE",
+          "operation": "POST",
+          "evidence_basis": "Exact goods-movement posting BAPI; goods issue is a goods-movement operation."
+        },
+        {
+          "classification": "ODATA",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_MATERIAL_DOCUMENT_SRV",
+          "operation": "POST",
+          "evidence_basis": "Exact material-document API; goods issue produces a material document.",
+          "external_name": "API_MATERIAL_DOCUMENT_SRV",
+          "version": "1"
+        }
+      ],
+      "preferred_interface": {
+        "classification": "STANDARD_BAPI",
+        "inventory": "rfc_remote_functions.xlsx",
+        "exact_name": "BAPI_GOODSMVT_CREATE",
+        "operation": "POST",
+        "evidence_basis": "Exact goods-movement posting BAPI; goods issue is a goods-movement operation."
+      }
+    },
+    "INBOUND_DELIVERY": {
+      "canonical_classification": "TRANSACTION",
+      "canonical_object_count": 2,
+      "ready_count": 0,
+      "blocked_count": 2,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "ODATA",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_INBOUND_DELIVERY_SRV",
+          "operation": "MAINTAIN",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+          "external_name": "API_INBOUND_DELIVERY_SRV",
+          "version": "2"
+        },
+        {
+          "classification": "ODATA",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_INBOUND_DELIVERY_SRV",
+          "operation": "MAINTAIN",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+          "external_name": "API_INBOUND_DELIVERY_SRV",
+          "version": "1"
+        }
+      ],
+      "preferred_interface": {
+        "classification": "ODATA",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_INBOUND_DELIVERY_SRV",
+        "operation": "MAINTAIN",
+        "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+        "external_name": "API_INBOUND_DELIVERY_SRV",
+        "version": "2"
+      }
+    },
+    "INQUIRY": {
+      "canonical_classification": "TRANSACTION",
+      "canonical_object_count": 1,
+      "ready_count": 0,
+      "blocked_count": 1,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "ODATA",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_SALES_INQUIRY_SRV",
+          "operation": "MAINTAIN",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+          "external_name": "API_SALES_INQUIRY_SRV",
+          "version": "1"
+        },
+        {
+          "classification": "STANDARD_BAPI",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "BAPI_INQUIRY_CREATEFROMDATA2",
+          "operation": "CREATE",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "ODATA",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_SALES_INQUIRY_SRV",
+        "operation": "MAINTAIN",
+        "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+        "external_name": "API_SALES_INQUIRY_SRV",
+        "version": "1"
+      }
+    },
+    "MATERIAL": {
+      "canonical_classification": "MASTER_DATA",
+      "canonical_object_count": 4,
+      "ready_count": 0,
+      "blocked_count": 4,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "STANDARD_BAPI",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "BAPI_MATERIAL_SAVEDATA",
+          "operation": "MAINTAIN",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used."
+        },
+        {
+          "classification": "ODATA",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_PRODUCT_SRV",
+          "operation": "MAINTAIN",
+          "evidence_basis": "Exact product API; material is represented as product in this inventory.",
+          "external_name": "API_PRODUCT_SRV",
+          "version": "1"
+        }
+      ],
+      "preferred_interface": {
+        "classification": "STANDARD_BAPI",
+        "inventory": "rfc_remote_functions.xlsx",
+        "exact_name": "BAPI_MATERIAL_SAVEDATA",
+        "operation": "MAINTAIN",
+        "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used."
+      }
+    },
+    "OUTBOUND_DELIVERY": {
+      "canonical_classification": "TRANSACTION",
+      "canonical_object_count": 21,
+      "ready_count": 1,
+      "blocked_count": 20,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "ODATA",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_OUTBOUND_DELIVERY_SRV",
+          "operation": "MAINTAIN",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+          "external_name": "API_OUTBOUND_DELIVERY_SRV",
+          "version": "2"
+        },
+        {
+          "classification": "ODATA",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_OUTBOUND_DELIVERY_SRV",
+          "operation": "MAINTAIN",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+          "external_name": "API_OUTBOUND_DELIVERY_SRV",
+          "version": "1"
+        },
+        {
+          "classification": "STANDARD_BAPI",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "BAPI_OUTB_DELIVERY_CREATE_SLS",
+          "operation": "CREATE_FROM_SALES_ORDER",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "ODATA",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_OUTBOUND_DELIVERY_SRV",
+        "operation": "MAINTAIN",
+        "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+        "external_name": "API_OUTBOUND_DELIVERY_SRV",
+        "version": "2"
+      }
+    },
+    "OUTPUT_DETERMINATION": {
+      "canonical_classification": "CUSTOMIZING",
+      "canonical_object_count": 3,
+      "ready_count": 0,
+      "blocked_count": 3,
+      "resolution": "UNRESOLVED",
+      "candidates": [
+        {
+          "classification": "NO_INTERFACE_FOUND",
+          "inventory": null,
+          "exact_name": null,
+          "operation": "NONE",
+          "evidence_basis": "No object-specific candidate was found in either supplied inventory."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "NO_INTERFACE_FOUND",
+        "inventory": null,
+        "exact_name": null,
+        "operation": "NONE",
+        "evidence_basis": "No object-specific candidate was found in either supplied inventory."
+      }
+    },
+    "PAYMENT_REFERENCE": {
+      "canonical_classification": "REFERENCE_DATA",
+      "canonical_object_count": 2,
+      "ready_count": 0,
+      "blocked_count": 2,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "NO_EXECUTION_REQUIRED",
+          "inventory": null,
+          "exact_name": null,
+          "operation": "REFERENCE_ONLY",
+          "evidence_basis": "The canonical object records a dependency/reference and must not trigger a posting."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "NO_EXECUTION_REQUIRED",
+        "inventory": null,
+        "exact_name": null,
+        "operation": "REFERENCE_ONLY",
+        "evidence_basis": "The canonical object records a dependency/reference and must not trigger a posting."
+      }
+    },
+    "PLANT": {
+      "canonical_classification": "REFERENCE_DATA",
+      "canonical_object_count": 1,
+      "ready_count": 1,
+      "blocked_count": 0,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "LOOKUP_ONLY",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_PLANT_SRV",
+          "operation": "LOOKUP",
+          "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup.",
+          "external_name": "API_PLANT_SRV",
+          "version": "1"
+        }
+      ],
+      "preferred_interface": {
+        "classification": "LOOKUP_ONLY",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_PLANT_SRV",
+        "operation": "LOOKUP",
+        "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup.",
+        "external_name": "API_PLANT_SRV",
+        "version": "1"
+      }
+    },
+    "PRICING_CONDITION": {
+      "canonical_classification": "MASTER_DATA",
+      "canonical_object_count": 14,
+      "ready_count": 0,
+      "blocked_count": 14,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "ODATA",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZSD_PRICING_CONDITIONRECORD_SRV",
+          "operation": "MAINTAIN",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+          "external_name": "SD_PRICING_CONDITIONRECORD_SRV",
+          "version": "1"
+        }
+      ],
+      "preferred_interface": {
+        "classification": "ODATA",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZSD_PRICING_CONDITIONRECORD_SRV",
+        "operation": "MAINTAIN",
+        "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+        "external_name": "SD_PRICING_CONDITIONRECORD_SRV",
+        "version": "1"
+      }
+    },
+    "PRICING_PROCEDURE": {
+      "canonical_classification": "CUSTOMIZING",
+      "canonical_object_count": 3,
+      "ready_count": 2,
+      "blocked_count": 1,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "LOOKUP_ONLY",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_SLSPRICINGPROCEDURE_SRV",
+          "operation": "LOOKUP",
+          "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup.",
+          "external_name": "API_SLSPRICINGPROCEDURE_SRV",
+          "version": "1"
+        }
+      ],
+      "preferred_interface": {
+        "classification": "LOOKUP_ONLY",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_SLSPRICINGPROCEDURE_SRV",
+        "operation": "LOOKUP",
+        "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup.",
+        "external_name": "API_SLSPRICINGPROCEDURE_SRV",
+        "version": "1"
+      }
+    },
+    "PRICING_PROCEDURE_DETERMINATION": {
+      "canonical_classification": "CUSTOMIZING",
+      "canonical_object_count": 3,
+      "ready_count": 2,
+      "blocked_count": 1,
+      "resolution": "UNRESOLVED",
+      "candidates": [
+        {
+          "classification": "NO_INTERFACE_FOUND",
+          "inventory": null,
+          "exact_name": null,
+          "operation": "NONE",
+          "evidence_basis": "No object-specific candidate was found in either supplied inventory."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "NO_INTERFACE_FOUND",
+        "inventory": null,
+        "exact_name": null,
+        "operation": "NONE",
+        "evidence_basis": "No object-specific candidate was found in either supplied inventory."
+      }
+    },
+    "PURCHASE_ORDER_REFERENCE": {
+      "canonical_classification": "REFERENCE_DATA",
+      "canonical_object_count": 2,
+      "ready_count": 0,
+      "blocked_count": 2,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "LOOKUP_ONLY",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_PURCHASEORDER_PROCESS_SRV",
+          "operation": "LOOKUP",
+          "evidence_basis": "Exact purchase-order service, restricted to reference validation for this canonical type.",
+          "external_name": "API_PURCHASEORDER_PROCESS_SRV",
+          "version": "1"
+        }
+      ],
+      "preferred_interface": {
+        "classification": "LOOKUP_ONLY",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_PURCHASEORDER_PROCESS_SRV",
+        "operation": "LOOKUP",
+        "evidence_basis": "Exact purchase-order service, restricted to reference validation for this canonical type.",
+        "external_name": "API_PURCHASEORDER_PROCESS_SRV",
+        "version": "1"
+      }
+    },
+    "QUOTATION": {
+      "canonical_classification": "TRANSACTION",
+      "canonical_object_count": 1,
+      "ready_count": 0,
+      "blocked_count": 1,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "ODATA",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_SALES_QUOTATION_SRV",
+          "operation": "MAINTAIN",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+          "external_name": "API_SALES_QUOTATION_SRV",
+          "version": "1"
+        },
+        {
+          "classification": "STANDARD_BAPI",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "BAPI_QUOTATION_CREATEFROMDATA2",
+          "operation": "CREATE",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "ODATA",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_SALES_QUOTATION_SRV",
+        "operation": "MAINTAIN",
+        "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+        "external_name": "API_SALES_QUOTATION_SRV",
+        "version": "1"
+      }
+    },
+    "RETURN_ORDER": {
+      "canonical_classification": "TRANSACTION",
+      "canonical_object_count": 1,
+      "ready_count": 0,
+      "blocked_count": 1,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "ODATA",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_CUSTOMER_RETURN_SRV",
+          "operation": "MAINTAIN",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+          "external_name": "API_CUSTOMER_RETURN_SRV",
+          "version": "1"
+        },
+        {
+          "classification": "STANDARD_BAPI",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "BAPI_CUSTOMERRETURN_CREATE",
+          "operation": "CREATE",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "ODATA",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_CUSTOMER_RETURN_SRV",
+        "operation": "MAINTAIN",
+        "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+        "external_name": "API_CUSTOMER_RETURN_SRV",
+        "version": "1"
+      }
+    },
+    "SALES_AREA": {
+      "canonical_classification": "CUSTOMIZING",
+      "canonical_object_count": 3,
+      "ready_count": 1,
+      "blocked_count": 2,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "LOOKUP_ONLY",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "BAPI_SALES_AREAS_GET",
+          "operation": "LOOKUP",
+          "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "LOOKUP_ONLY",
+        "inventory": "rfc_remote_functions.xlsx",
+        "exact_name": "BAPI_SALES_AREAS_GET",
+        "operation": "LOOKUP",
+        "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup."
+      }
+    },
+    "SALES_DIVISION": {
+      "canonical_classification": "CUSTOMIZING",
+      "canonical_object_count": 2,
+      "ready_count": 2,
+      "blocked_count": 0,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "LOOKUP_ONLY",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_DIVISION_SRV",
+          "operation": "LOOKUP",
+          "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup.",
+          "external_name": "API_DIVISION_SRV",
+          "version": "1"
+        },
+        {
+          "classification": "LOOKUP_ONLY",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "BAPI_DIVISION_GET_DETAIL",
+          "operation": "LOOKUP",
+          "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "LOOKUP_ONLY",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_DIVISION_SRV",
+        "operation": "LOOKUP",
+        "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup.",
+        "external_name": "API_DIVISION_SRV",
+        "version": "1"
+      }
+    },
+    "SALES_ORDER": {
+      "canonical_classification": "TRANSACTION",
+      "canonical_object_count": 57,
+      "ready_count": 1,
+      "blocked_count": 56,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "ODATA",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_SALES_ORDER_SRV",
+          "operation": "MAINTAIN",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+          "external_name": "API_SALES_ORDER_SRV",
+          "version": "1"
+        },
+        {
+          "classification": "STANDARD_BAPI",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "BAPI_SALESORDER_CREATEFROMDAT2",
+          "operation": "CREATE",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "ODATA",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_SALES_ORDER_SRV",
+        "operation": "MAINTAIN",
+        "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+        "external_name": "API_SALES_ORDER_SRV",
+        "version": "1"
+      }
+    },
+    "SALES_ORGANIZATION": {
+      "canonical_classification": "CUSTOMIZING",
+      "canonical_object_count": 1,
+      "ready_count": 1,
+      "blocked_count": 0,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "LOOKUP_ONLY",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_SALESORGANIZATION_SRV",
+          "operation": "LOOKUP",
+          "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup.",
+          "external_name": "API_SALESORGANIZATION_SRV",
+          "version": "1"
+        },
+        {
+          "classification": "LOOKUP_ONLY",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "BAPI_SALESORG_GET_DETAIL",
+          "operation": "LOOKUP",
+          "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "LOOKUP_ONLY",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_SALESORGANIZATION_SRV",
+        "operation": "LOOKUP",
+        "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup.",
+        "external_name": "API_SALESORGANIZATION_SRV",
+        "version": "1"
+      }
+    },
+    "SETTLEMENT_DOCUMENT": {
+      "canonical_classification": "TRANSACTION",
+      "canonical_object_count": 3,
+      "ready_count": 0,
+      "blocked_count": 3,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "STANDARD_BAPI",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "BAPI_CONDITION_CONTRACT_SETTLE",
+          "operation": "SETTLE",
+          "evidence_basis": "Exact condition-contract settlement BAPI matching the source scenario."
+        },
+        {
+          "classification": "RFC_FUNCTION",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "WB2R_SETTLEMENT_RFC",
+          "operation": "SETTLE",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "STANDARD_BAPI",
+        "inventory": "rfc_remote_functions.xlsx",
+        "exact_name": "BAPI_CONDITION_CONTRACT_SETTLE",
+        "operation": "SETTLE",
+        "evidence_basis": "Exact condition-contract settlement BAPI matching the source scenario."
+      }
+    },
+    "SHARED_MASTER_DATA_ASSIGNMENT": {
+      "canonical_classification": "CUSTOMIZING",
+      "canonical_object_count": 1,
+      "ready_count": 0,
+      "blocked_count": 1,
+      "resolution": "UNRESOLVED",
+      "candidates": [
+        {
+          "classification": "NO_INTERFACE_FOUND",
+          "inventory": null,
+          "exact_name": null,
+          "operation": "NONE",
+          "evidence_basis": "No object-specific candidate was found in either supplied inventory."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "NO_INTERFACE_FOUND",
+        "inventory": null,
+        "exact_name": null,
+        "operation": "NONE",
+        "evidence_basis": "No object-specific candidate was found in either supplied inventory."
+      }
+    },
+    "SHIPPING_POINT": {
+      "canonical_classification": "CUSTOMIZING",
+      "canonical_object_count": 3,
+      "ready_count": 0,
+      "blocked_count": 3,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "LOOKUP_ONLY",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "/SMERP/MM_CTSHIPPINGPOINT_GET",
+          "operation": "LOOKUP",
+          "evidence_basis": "Exact shipping-point lookup; specialized RFC, not a standard BAPI."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "LOOKUP_ONLY",
+        "inventory": "rfc_remote_functions.xlsx",
+        "exact_name": "/SMERP/MM_CTSHIPPINGPOINT_GET",
+        "operation": "LOOKUP",
+        "evidence_basis": "Exact shipping-point lookup; specialized RFC, not a standard BAPI."
+      }
+    },
+    "STORAGE_LOCATION": {
+      "canonical_classification": "REFERENCE_DATA",
+      "canonical_object_count": 2,
+      "ready_count": 2,
+      "blocked_count": 0,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "LOOKUP_ONLY",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_STORAGELOCATION_SRV",
+          "operation": "LOOKUP",
+          "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup.",
+          "external_name": "API_STORAGELOCATION_SRV",
+          "version": "1"
+        }
+      ],
+      "preferred_interface": {
+        "classification": "LOOKUP_ONLY",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_STORAGELOCATION_SRV",
+        "operation": "LOOKUP",
+        "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup.",
+        "external_name": "API_STORAGELOCATION_SRV",
+        "version": "1"
+      }
+    },
+    "TEXT_DETERMINATION": {
+      "canonical_classification": "CUSTOMIZING",
+      "canonical_object_count": 2,
+      "ready_count": 0,
+      "blocked_count": 2,
+      "resolution": "UNRESOLVED",
+      "candidates": [
+        {
+          "classification": "NO_INTERFACE_FOUND",
+          "inventory": null,
+          "exact_name": null,
+          "operation": "NONE",
+          "evidence_basis": "No object-specific candidate was found in either supplied inventory."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "NO_INTERFACE_FOUND",
+        "inventory": null,
+        "exact_name": null,
+        "operation": "NONE",
+        "evidence_basis": "No object-specific candidate was found in either supplied inventory."
+      }
+    },
+    "WAREHOUSE_NUMBER": {
+      "canonical_classification": "REFERENCE_DATA",
+      "canonical_object_count": 1,
+      "ready_count": 1,
+      "blocked_count": 0,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "LOOKUP_ONLY",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_WAREHOUSE",
+          "operation": "LOOKUP",
+          "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup.",
+          "external_name": "API_WAREHOUSE",
+          "version": "1"
+        }
+      ],
+      "preferred_interface": {
+        "classification": "LOOKUP_ONLY",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_WAREHOUSE",
+        "operation": "LOOKUP",
+        "evidence_basis": "Exact reference/customizing interface restricted to validation or lookup.",
+        "external_name": "API_WAREHOUSE",
+        "version": "1"
+      }
+    },
+    "WAREHOUSE_TASK": {
+      "canonical_classification": "TRANSACTION",
+      "canonical_object_count": 2,
+      "ready_count": 0,
+      "blocked_count": 2,
+      "resolution": "RESOLVED",
+      "candidates": [
+        {
+          "classification": "ODATA",
+          "inventory": "odata_services.xlsx",
+          "exact_name": "ZAPI_WAREHOUSE_ORDER_TASK",
+          "operation": "MAINTAIN",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+          "external_name": "API_WAREHOUSE_ORDER_TASK",
+          "version": "1"
+        },
+        {
+          "classification": "RFC_FUNCTION",
+          "inventory": "rfc_remote_functions.xlsx",
+          "exact_name": "/SCWM/TO_CREATE",
+          "operation": "CREATE",
+          "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used."
+        }
+      ],
+      "preferred_interface": {
+        "classification": "ODATA",
+        "inventory": "odata_services.xlsx",
+        "exact_name": "ZAPI_WAREHOUSE_ORDER_TASK",
+        "operation": "MAINTAIN",
+        "evidence_basis": "Exact object-specific inventory name; no generic name-only fallback used.",
+        "external_name": "API_WAREHOUSE_ORDER_TASK",
+        "version": "1"
+      }
+    }
+  }
+}

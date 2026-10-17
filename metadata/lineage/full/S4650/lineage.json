@@ -1,0 +1,716 @@
+{
+  "objects": [
+    {
+      "object_id": "S4650_CH1_EX1_SALES_ORGANIZATION_1010",
+      "scenario_id": "S4650_CH1_EX1",
+      "solution_enrichments": [
+        {
+          "page": 18,
+          "source_term": "Organisation commerciale"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 17,
+          "raw_excerpt": "1010",
+          "section_type": "EXERCISE",
+          "source_term": "Organisation commerciale"
+        },
+        {
+          "page": 18,
+          "raw_excerpt": "1010",
+          "section_type": "SOLUTION",
+          "source_term": "Organisation commerciale"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH1_EX1_DISTRIBUTION_CHANNEL_GROUP",
+      "scenario_id": "S4650_CH1_EX1",
+      "solution_enrichments": [
+        {
+          "page": 18,
+          "source_term": "Canal de distribution / désignation"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 17,
+          "raw_excerpt": "D# ou E# selon groupe; Canal groupe ##",
+          "section_type": "EXERCISE",
+          "source_term": "Canal de distribution / désignation"
+        },
+        {
+          "page": 18,
+          "raw_excerpt": "D1-D0 pour groupes 01-10; E1-E0 pour groupes 11-20; Canal groupe ##",
+          "section_type": "SOLUTION",
+          "source_term": "Canal de distribution / désignation"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH1_EX1_SALES_DIVISION_00",
+      "scenario_id": "S4650_CH1_EX1",
+      "solution_enrichments": [
+        {
+          "page": 18,
+          "source_term": "Secteur d'activité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 17,
+          "raw_excerpt": "00",
+          "section_type": "EXERCISE",
+          "source_term": "Secteur d'activité"
+        },
+        {
+          "page": 18,
+          "raw_excerpt": "00",
+          "section_type": "SOLUTION",
+          "source_term": "Secteur d'activité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH1_EX1_SALES_DIVISION_03",
+      "scenario_id": "S4650_CH1_EX1",
+      "solution_enrichments": [
+        {
+          "page": 18,
+          "source_term": "Secteur d'activité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 17,
+          "raw_excerpt": "03",
+          "section_type": "EXERCISE",
+          "source_term": "Secteur d'activité"
+        },
+        {
+          "page": 18,
+          "raw_excerpt": "03",
+          "section_type": "SOLUTION",
+          "source_term": "Secteur d'activité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH1_EX1_SALES_AREA_GROUP_00",
+      "scenario_id": "S4650_CH1_EX1",
+      "solution_enrichments": [
+        {
+          "page": 18,
+          "source_term": "Domaine commercial / règle d'affectation secteur d'activité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 17,
+          "raw_excerpt": "1010 / D# ou E# / 00; règle 1",
+          "section_type": "EXERCISE",
+          "source_term": "Domaine commercial / règle d'affectation secteur d'activité"
+        },
+        {
+          "page": 18,
+          "raw_excerpt": "1010 / D# ou E# / 00; règle 1",
+          "section_type": "SOLUTION",
+          "source_term": "Domaine commercial / règle d'affectation secteur d'activité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH1_EX1_SALES_AREA_GROUP_03",
+      "scenario_id": "S4650_CH1_EX1",
+      "solution_enrichments": [
+        {
+          "page": 18,
+          "source_term": "Domaine commercial / règle d'affectation secteur d'activité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 17,
+          "raw_excerpt": "1010 / D# ou E# / 03; règle 1",
+          "section_type": "EXERCISE",
+          "source_term": "Domaine commercial / règle d'affectation secteur d'activité"
+        },
+        {
+          "page": 18,
+          "raw_excerpt": "1010 / D# ou E# / 03; règle 1",
+          "section_type": "SOLUTION",
+          "source_term": "Domaine commercial / règle d'affectation secteur d'activité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH1_EX2_SHARED_MASTER_DATA_ASSIGNMENT_CHANNEL_10",
+      "scenario_id": "S4650_CH1_EX2",
+      "solution_enrichments": [
+        {
+          "page": 29,
+          "source_term": "Canal de distribution commun"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 27,
+          "raw_excerpt": "1010; source 10; cible D# ou E#; conditions, clients et articles",
+          "section_type": "EXERCISE",
+          "source_term": "Canal de distribution commun"
+        },
+        {
+          "page": 29,
+          "raw_excerpt": "1010; source 10; cible D# ou E#; conditions, clients et articles",
+          "section_type": "SOLUTION",
+          "source_term": "Canal de distribution commun"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH1_EX2_SALES_ORDER_COMMON_MASTER_DATA_TEST",
+      "scenario_id": "S4650_CH1_EX2",
+      "solution_enrichments": [
+        {
+          "page": 29,
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 27,
+          "raw_excerpt": "CDCL; 1010/10/00; C650-A##; ##-2-2; P650-1##; 10",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 29,
+          "raw_excerpt": "CDCL; 1010/10/00; C650-A##; ##-2-2; P650-1##; 10",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH2_EX3_COPY_CONTROL_OF_TO_ZA_GROUP",
+      "scenario_id": "S4650_CH2_EX3",
+      "solution_enrichments": [
+        {
+          "page": 58,
+          "source_term": "Pilotage de la copie offre vers commande"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 53,
+          "raw_excerpt": "OF -> ZA##; exigence 002; routine en-tête 951",
+          "section_type": "EXERCISE",
+          "source_term": "Pilotage de la copie offre vers commande"
+        },
+        {
+          "page": 58,
+          "raw_excerpt": "OF -> ZA##; exigence 002; routine en-tête 951",
+          "section_type": "SOLUTION",
+          "source_term": "Pilotage de la copie offre vers commande"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH2_EX3_COPY_CONTROL_ZQ_GROUP_TO_OF",
+      "scenario_id": "S4650_CH2_EX3",
+      "solution_enrichments": [
+        {
+          "page": 58,
+          "source_term": "Pilotage de la copie offre de référence"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 53,
+          "raw_excerpt": "ZQ## -> OF; client différent admis; quantité positive/négative vide",
+          "section_type": "EXERCISE",
+          "source_term": "Pilotage de la copie offre de référence"
+        },
+        {
+          "page": 58,
+          "raw_excerpt": "ZQ## -> OF; client différent admis; quantité positive/négative vide",
+          "section_type": "SOLUTION",
+          "source_term": "Pilotage de la copie offre de référence"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_DIFFERENT_CUSTOMER",
+      "scenario_id": "S4650_CH2_EX3",
+      "solution_enrichments": [
+        {
+          "page": 58,
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 53,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-B##; ##-1-1.4; P650-1##; None",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 58,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-B##; ##-1-1.4; P650-1##; None",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_SAME_CUSTOMER",
+      "scenario_id": "S4650_CH2_EX3",
+      "solution_enrichments": [
+        {
+          "page": 58,
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 90,
+          "source_term": "Source du texte article"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 53,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-A##; ##-1-2.6; P650-1##; 4",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 58,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-A##; ##-1-2.6; P650-1##; 4",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 89,
+          "raw_excerpt": "commande avec référence ##-1-2.6",
+          "section_type": "EXERCISE",
+          "source_term": "Commande créée précédemment"
+        },
+        {
+          "page": 90,
+          "raw_excerpt": "objet VBBP; ID texte 0001",
+          "section_type": "SOLUTION",
+          "source_term": "Source du texte article"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH2_EX4_COPY_CONTROL_ZA_GROUP_TO_LF",
+      "scenario_id": "S4650_CH2_EX4",
+      "solution_enrichments": [
+        {
+          "page": 71,
+          "source_term": "Pilotage copie commande vers livraison"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 69,
+          "raw_excerpt": "ZA## -> LF; en-tête 001/051/001; poste TAN 101/699; flux mis à jour",
+          "section_type": "EXERCISE",
+          "source_term": "Pilotage copie commande vers livraison"
+        },
+        {
+          "page": 71,
+          "raw_excerpt": "ZA## -> LF; en-tête 001/051/001; poste TAN 101/699; flux mis à jour",
+          "section_type": "SOLUTION",
+          "source_term": "Pilotage copie commande vers livraison"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH2_EX4_OUTBOUND_DELIVERY_HEADER_CONTROL_TEST",
+      "scenario_id": "S4650_CH2_EX4",
+      "solution_enrichments": [
+        {
+          "page": 71,
+          "source_term": "Livraison sortante / point d'expédition / date de sélection"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 69,
+          "raw_excerpt": "commande créée précédemment; point d'expédition 1010; aujourd'hui + 2 semaines",
+          "section_type": "EXERCISE",
+          "source_term": "Livraison sortante / point d'expédition / date de sélection"
+        },
+        {
+          "page": 71,
+          "raw_excerpt": "commande créée précédemment; point d'expédition 1010; aujourd'hui + 2 semaines",
+          "section_type": "SOLUTION",
+          "source_term": "Livraison sortante / point d'expédition / date de sélection"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH2_EX4_OUTBOUND_DELIVERY_ITEM_CONTROL_TEST",
+      "scenario_id": "S4650_CH2_EX4",
+      "solution_enrichments": [
+        {
+          "page": 71,
+          "source_term": "Livraison sortante / point d'expédition / date de sélection"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 69,
+          "raw_excerpt": "commande créée précédemment; point d'expédition 1010; aujourd'hui + 2 semaines",
+          "section_type": "EXERCISE",
+          "source_term": "Livraison sortante / point d'expédition / date de sélection"
+        },
+        {
+          "page": 71,
+          "raw_excerpt": "commande créée précédemment; point d'expédition 1010; aujourd'hui + 2 semaines",
+          "section_type": "SOLUTION",
+          "source_term": "Livraison sortante / point d'expédition / date de sélection"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH2_EX5_COPY_CONTROL_LF_TO_F2",
+      "scenario_id": "S4650_CH2_EX5",
+      "solution_enrichments": [
+        {
+          "page": 76,
+          "source_term": "Pilotage copie livraison vers facture"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 75,
+          "raw_excerpt": "LF -> F2; exigence en-tête 003; poste TAN; source prix E",
+          "section_type": "EXERCISE",
+          "source_term": "Pilotage copie livraison vers facture"
+        },
+        {
+          "page": 76,
+          "raw_excerpt": "LF -> F2; exigence en-tête 003; poste TAN; source prix E",
+          "section_type": "SOLUTION",
+          "source_term": "Pilotage copie livraison vers facture"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH3_EX6_TEXT_DETERMINATION_MATERIAL_SALES_TEXT",
+      "scenario_id": "S4650_CH3_EX6",
+      "solution_enrichments": [
+        {
+          "page": 90,
+          "source_term": "Origine du texte article"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 89,
+          "raw_excerpt": "objet texte VBBP; ID 0001; texte de vente article",
+          "section_type": "EXERCISE",
+          "source_term": "Origine du texte article"
+        },
+        {
+          "page": 90,
+          "raw_excerpt": "objet texte VBBP; ID 0001; texte de vente article",
+          "section_type": "SOLUTION",
+          "source_term": "Origine du texte article"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH3_EX7_TEXT_DETERMINATION_HEADER_GROUP",
+      "scenario_id": "S4650_CH3_EX7",
+      "solution_enrichments": [
+        {
+          "page": 111,
+          "source_term": "Schéma / séquence / ID texte en-tête"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 109,
+          "raw_excerpt": "schéma 50+## copié de 01; séquence 90##; VBBK/Y001; exigence 1; ZA##",
+          "section_type": "EXERCISE",
+          "source_term": "Schéma / séquence / ID texte en-tête"
+        },
+        {
+          "page": 111,
+          "raw_excerpt": "schéma 50+## copié de 01; séquence 90##; VBBK/Y001; exigence 1; ZA##",
+          "section_type": "SOLUTION",
+          "source_term": "Schéma / séquence / ID texte en-tête"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH3_EX7_SALES_ORDER_HEADER_TEXT_FROM_QUOTATION",
+      "scenario_id": "S4650_CH3_EX7",
+      "solution_enrichments": [
+        {
+          "page": 111,
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 109,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-B##; ##-2-4.3; P650-1##; 1",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 111,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-B##; ##-2-4.3; P650-1##; 1",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH4_EX9_BUSINESS_PARTNER_C650_A_GROUP",
+      "scenario_id": "S4650_CH4_EX9",
+      "solution_enrichments": [
+        {
+          "page": 139,
+          "source_term": "Client / télécopie"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 137,
+          "raw_excerpt": "C650-A##; télécopie 123456789",
+          "section_type": "EXERCISE",
+          "source_term": "Client / télécopie"
+        },
+        {
+          "page": 139,
+          "raw_excerpt": "C650-A##; télécopie 123456789",
+          "section_type": "SOLUTION",
+          "source_term": "Client / télécopie"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH4_EX9_OUTPUT_DETERMINATION_BA00",
+      "scenario_id": "S4650_CH4_EX9",
+      "solution_enrichments": [
+        {
+          "page": 139,
+          "source_term": "Détermination message BA00"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 137,
+          "raw_excerpt": "V10000; BA00; Z001; 1010/C650-A##; FAX; date/heure 3",
+          "section_type": "EXERCISE",
+          "source_term": "Détermination message BA00"
+        },
+        {
+          "page": 139,
+          "raw_excerpt": "V10000; BA00; Z001; 1010/C650-A##; FAX; date/heure 3",
+          "section_type": "SOLUTION",
+          "source_term": "Détermination message BA00"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH4_EX9_SALES_ORDER_BA00_OUTPUT_TEST",
+      "scenario_id": "S4650_CH4_EX9",
+      "solution_enrichments": [
+        {
+          "page": 139,
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 137,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-A##; ##-1-3; P650-1##; 10",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 139,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-A##; ##-1-3; P650-1##; 10",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH4_EX10_OUTPUT_DETERMINATION_ZLD0",
+      "scenario_id": "S4650_CH4_EX10",
+      "solution_enrichments": [
+        {
+          "page": 161,
+          "source_term": "Catégorie de message livraison"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 159,
+          "raw_excerpt": "ZLD0; V10000; séquence 0005; RLE_DELNOTE/LE_SHP_DELNOTE; LP01",
+          "section_type": "EXERCISE",
+          "source_term": "Catégorie de message livraison"
+        },
+        {
+          "page": 161,
+          "raw_excerpt": "ZLD0; V10000; séquence 0005; RLE_DELNOTE/LE_SHP_DELNOTE; LP01",
+          "section_type": "SOLUTION",
+          "source_term": "Catégorie de message livraison"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH4_EX10_SALES_ORDER_ZLD0_DELIVERY_SOURCE",
+      "scenario_id": "S4650_CH4_EX10",
+      "solution_enrichments": [
+        {
+          "page": 161,
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 159,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-A##; ##-4-1; P650-100; 10",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 161,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-A##; ##-4-1; P650-100; 10",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH4_EX10_OUTBOUND_DELIVERY_ZLD0_TEST",
+      "scenario_id": "S4650_CH4_EX10",
+      "solution_enrichments": [
+        {
+          "page": 161,
+          "source_term": "Livraison sortante / message ZLD0"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 159,
+          "raw_excerpt": "commande précédente; point 1010; fin de la semaine prochaine; ZLD0",
+          "section_type": "EXERCISE",
+          "source_term": "Livraison sortante / message ZLD0"
+        },
+        {
+          "page": 161,
+          "raw_excerpt": "commande précédente; point 1010; fin de la semaine prochaine; ZLD0",
+          "section_type": "SOLUTION",
+          "source_term": "Livraison sortante / message ZLD0"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH4_EX11_OUTPUT_DETERMINATION_ORDER_CONFIRMATION_GROUP",
+      "scenario_id": "S4650_CH4_EX11",
+      "solution_enrichments": [
+        {
+          "page": 179,
+          "source_term": "Nouvelle catégorie et règles de sortie"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 177,
+          "raw_excerpt": "ORDER_CONFIRMATION_##; SALES_DOCUMENT; ZA##; AG; C650-B##; PRINT; LP01; 1 copie",
+          "section_type": "EXERCISE",
+          "source_term": "Nouvelle catégorie et règles de sortie"
+        },
+        {
+          "page": 179,
+          "raw_excerpt": "ORDER_CONFIRMATION_##; SALES_DOCUMENT; ZA##; AG; C650-B##; PRINT; LP01; 1 copie",
+          "section_type": "SOLUTION",
+          "source_term": "Nouvelle catégorie et règles de sortie"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH4_EX11_SALES_ORDER_NEW_OUTPUT_CONFIRMATION_TEST",
+      "scenario_id": "S4650_CH4_EX11",
+      "solution_enrichments": [
+        {
+          "page": 179,
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 177,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-B##; 11-22-##; P650-1##; 10",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 179,
+          "raw_excerpt": "ZA##; 1010/10/00; C650-B##; 11-22-##; P650-1##; 10",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH5_EX12_EXTENSION_CONFIGURATION_SALES_ORDER_LIST_LAYOUT",
+      "scenario_id": "S4650_CH5_EX12",
+      "solution_enrichments": [
+        {
+          "page": 215,
+          "source_term": "Mise en forme liste commandes"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 213,
+          "raw_excerpt": "S4650-##; Groupe de mise en forme ##; blocages livraison/facture; initiale; utilisateur",
+          "section_type": "EXERCISE",
+          "source_term": "Mise en forme liste commandes"
+        },
+        {
+          "page": 215,
+          "raw_excerpt": "S4650-##; Groupe de mise en forme ##; blocages livraison/facture; initiale; utilisateur",
+          "section_type": "SOLUTION",
+          "source_term": "Mise en forme liste commandes"
+        }
+      ]
+    },
+    {
+      "object_id": "S4650_CH5_EX13_EXTENSION_CONFIGURATION_MATERIAL_FIELD_SELECTION",
+      "scenario_id": "S4650_CH5_EX13",
+      "solution_enrichments": [
+        {
+          "page": 237,
+          "source_term": "Référence de zone / groupe / attribut"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 235,
+          "raw_excerpt": "ZM## copié de ROH; type YR##; MVKE-DWERK; groupe 95; entrée obligatoire",
+          "section_type": "EXERCISE",
+          "source_term": "Référence de zone / groupe / attribut"
+        },
+        {
+          "page": 237,
+          "raw_excerpt": "ZM## copié de ROH; type YR##; MVKE-DWERK; groupe 95; entrée obligatoire",
+          "section_type": "SOLUTION",
+          "source_term": "Référence de zone / groupe / attribut"
+        }
+      ]
+    }
+  ]
+}

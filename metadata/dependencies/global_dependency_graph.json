@@ -1,0 +1,6644 @@
+{
+  "cross_document_resolutions": [
+    {
+      "relation": "ASSIGNED_TO",
+      "resolution_basis": "Exact non-placeholder company_code 1010",
+      "source_object_id": "S4600_SHARED_SALES_ORGANIZATION_1010",
+      "target_object_id": "S4615_SHARED_COMPANY_CODE_1010"
+    }
+  ],
+  "edges": [
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4600_CH10_EX35_OUTBOUND_DELIVERY_FROM_RESOLVED_ORDER",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH10_EX35_SALES_ORDER_STANDARD",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH10_EX35_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH10_EX35_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH3_EX3_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH3_EX3_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH3_EX3_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4600_CH3_EX5_OUTBOUND_DELIVERY_FROM_EX3",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH3_EX3_SALES_ORDER_STANDARD",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "POSTED_FOR",
+      "source": "S4600_CH3_EX6_GOODS_ISSUE_FROM_DELIVERY",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "livraison créée précédemment",
+      "status": "RESOLVED",
+      "target": "S4600_CH3_EX5_OUTBOUND_DELIVERY_FROM_EX3",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4600_CH3_EX7_BILLING_STANDARD_FROM_EX5",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH3_EX5_OUTBOUND_DELIVERY_FROM_EX3",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SETTLES",
+      "source": "S4600_CH3_EX8_PAYMENT_REFERENCE_FOR_EX7",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "document de facturation",
+      "status": "RESOLVED",
+      "target": "S4600_CH3_EX7_BILLING_STANDARD_FROM_EX5",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "BILLING"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SHIP_TO_PARTY",
+      "source": "S4600_CH4_EX10_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH4_EX10_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-CUS##",
+      "status": "RESOLVED",
+      "target": "S4600_CH4_EX9_BUSINESS_PARTNER_T-CUS-GROUP",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH4_EX10_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "FOR_MATERIAL",
+      "source": "S4600_CH4_EX11_PRICING_CONDITION_PR00_T-MS4",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS4##",
+      "status": "RESOLVED",
+      "target": "S4600_CH4_EX11_MATERIAL_T-MS4-GROUP",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "PRICED_BY",
+      "source": "S4600_CH4_EX11_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "Prix de vente 35 EUR",
+      "status": "RESOLVED",
+      "target": "S4600_CH4_EX11_PRICING_CONDITION_PR00_T-MS4",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH4_EX11_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH4_EX11_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS4##",
+      "status": "RESOLVED",
+      "target": "S4600_CH4_EX11_MATERIAL_T-MS4-GROUP",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "FOR_CUSTOMER",
+      "source": "S4600_CH4_EX12_CUSTOMER_MATERIAL_INFO_T-S50A_T-MS1",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "FOR_MATERIAL",
+      "source": "S4600_CH4_EX12_CUSTOMER_MATERIAL_INFO_T-S50A_T-MS1",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4600_CH4_EX12_OUTBOUND_DELIVERY_FROM_EX12_ORDER",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH4_EX12_SALES_ORDER_STANDARD",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH4_EX12_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH4_EX12_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "FOR_CUSTOMER",
+      "source": "S4600_CH4_EX13_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "FOR_MATERIAL",
+      "source": "S4600_CH4_EX13_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "PRICED_BY",
+      "source": "S4600_CH4_EX13_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "condition PR00",
+      "status": "RESOLVED",
+      "target": "S4600_CH4_EX13_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH4_EX13_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH4_EX13_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "FOR_CUSTOMER",
+      "source": "S4600_CH4_EX14_PRICING_CONDITION_K007_CUSTOMER_VALUE_SCALE",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "PRICED_BY",
+      "source": "S4600_CH4_EX14_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "condition K007",
+      "status": "RESOLVED",
+      "target": "S4600_CH4_EX14_PRICING_CONDITION_K007_CUSTOMER_VALUE_SCALE",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH4_EX14_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH4_EX14_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH4_EX16_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH4_EX16_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH4_EX16_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4600_CH4_EX17_OUTBOUND_DELIVERY_FROM_EX17_ORDER",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH4_EX17_SALES_ORDER_STANDARD",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH4_EX17_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH4_EX17_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH5_EX18_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50B##",
+      "status": "RESOLVED",
+      "target": "S4600_CH6_EX20_BUSINESS_PARTNER_T-S50B-GROUP",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH5_EX18_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH5_EX18_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH5_EX19_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH5_EX19_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH5_EX19_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS3##",
+      "status": "RESOLVED",
+      "target": "S4600_CH6_EX20_MATERIAL_T-MS3-GROUP",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH6_EX21_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH6_EX21_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS3##",
+      "status": "RESOLVED",
+      "target": "S4600_CH6_EX20_MATERIAL_T-MS3-GROUP",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH6_EX22_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH6_EX22_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH6_EX22_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH6_EX23_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50B##",
+      "status": "RESOLVED",
+      "target": "S4600_CH6_EX20_BUSINESS_PARTNER_T-S50B-GROUP",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH6_EX23_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS3##",
+      "status": "RESOLVED",
+      "target": "S4600_CH6_EX20_MATERIAL_T-MS3-GROUP",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH8_EX28_INQUIRY_DO",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH8_EX28_INQUIRY_DO",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4600_CH8_EX28_QUOTATION_OF",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "avec référence à la demande",
+      "status": "RESOLVED",
+      "target": "S4600_CH8_EX28_INQUIRY_DO",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "INQUIRY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH8_EX28_QUOTATION_OF",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH8_EX28_QUOTATION_OF",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4600_CH8_EX28_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "avec référence à l'offre",
+      "status": "RESOLVED",
+      "target": "S4600_CH8_EX28_QUOTATION_OF",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "QUOTATION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH8_EX28_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH8_EX28_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "POSTED_FOR",
+      "source": "S4600_CH8_EX30_GOODS_ISSUE_FROM_DELIVERY",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "livraison créée précédemment",
+      "status": "RESOLVED",
+      "target": "S4600_CH8_EX30_OUTBOUND_DELIVERY_FROM_EX30_ORDER",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4600_CH8_EX30_OUTBOUND_DELIVERY_FROM_EX30_ORDER",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH8_EX30_SALES_ORDER_STANDARD",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH8_EX30_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH8_EX30_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-F1##",
+      "status": "RESOLVED",
+      "target": "S4600_CH8_EX30_MATERIAL_T-F1-GROUP",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4600_CH8_EX31_BILLING_SERVICE_FROM_ORDER",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH8_EX31_SALES_ORDER_STANDARD",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH8_EX31_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH8_EX31_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-D1##",
+      "status": "RESOLVED",
+      "target": "S4600_CH8_EX31_MATERIAL_T-D1-GROUP",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4600_CH9_EX32_BILLING_CREDIT_MEMO_FROM_REQUEST",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH9_EX32_CREDIT_MEMO_REQUEST_DNC",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "CREDIT_MEMO_REQUEST"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4600_CH9_EX32_BILLING_STANDARD_FROM_DELIVERY",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH9_EX32_OUTBOUND_DELIVERY_FROM_EX32_ORDER",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4600_CH9_EX32_CREDIT_MEMO_REQUEST_DNC",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "avec référence au document de facturation",
+      "status": "RESOLVED",
+      "target": "S4600_CH9_EX32_BILLING_STANDARD_FROM_DELIVERY",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "BILLING"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH9_EX32_CREDIT_MEMO_REQUEST_DNC",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH9_EX32_CREDIT_MEMO_REQUEST_DNC",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "POSTED_FOR",
+      "source": "S4600_CH9_EX32_GOODS_ISSUE_FROM_DELIVERY",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "livraison créée précédemment",
+      "status": "RESOLVED",
+      "target": "S4600_CH9_EX32_OUTBOUND_DELIVERY_FROM_EX32_ORDER",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4600_CH9_EX32_OUTBOUND_DELIVERY_FROM_EX32_ORDER",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH9_EX32_SALES_ORDER_STANDARD",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH9_EX32_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH9_EX32_SALES_ORDER_STANDARD",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4600_CH9_EX33_BILLING_CANCELLATION_OF_CREDIT_MEMO",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH9_EX32_BILLING_CREDIT_MEMO_FROM_REQUEST",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "BILLING"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4600_CH9_EX34_BILLING_CREDIT_MEMO_FROM_RETURN",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH9_EX34_RETURN_ORDER_RE",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "RETURN_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4600_CH9_EX34_OUTBOUND_DELIVERY_RETURN_FROM_ORDER",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "document créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4600_CH9_EX34_RETURN_ORDER_RE",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "RETURN_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4600_CH9_EX34_RETURN_ORDER_RE",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-S50A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4600_CH9_EX34_RETURN_ORDER_RE",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "T-MS3##",
+      "status": "RESOLVED",
+      "target": "S4600_CH6_EX20_MATERIAL_T-MS3-GROUP",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BELONGS_TO",
+      "source": "S4600_SHARED_DISTRIBUTION_CHANNEL_10",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "Org. commerciale 1010",
+      "status": "RESOLVED",
+      "target": "S4600_SHARED_SALES_ORGANIZATION_1010",
+      "target_courses": [
+        "S4600",
+        "S4650"
+      ],
+      "target_type": "SALES_ORGANIZATION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES",
+      "source": "S4600_SHARED_SALES_AREA_1010_10_00",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "Canal distrib. 10",
+      "status": "RESOLVED",
+      "target": "S4600_SHARED_DISTRIBUTION_CHANNEL_10",
+      "target_courses": [
+        "S4600"
+      ],
+      "target_type": "DISTRIBUTION_CHANNEL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES",
+      "source": "S4600_SHARED_SALES_AREA_1010_10_00",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "Secteur d'activité 00",
+      "status": "RESOLVED",
+      "target": "S4600_SHARED_SALES_DIVISION_00",
+      "target_courses": [
+        "S4600",
+        "S4650"
+      ],
+      "target_type": "SALES_DIVISION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES",
+      "source": "S4600_SHARED_SALES_AREA_1010_10_00",
+      "source_courses": [
+        "S4600"
+      ],
+      "source_phrase": "Org. commerciale 1010",
+      "status": "RESOLVED",
+      "target": "S4600_SHARED_SALES_ORGANIZATION_1010",
+      "target_courses": [
+        "S4600",
+        "S4650"
+      ],
+      "target_type": "SALES_ORGANIZATION"
+    },
+    {
+      "critical": false,
+      "cross_document": true,
+      "relation": "ASSIGNED_TO",
+      "source": "S4600_SHARED_SALES_ORGANIZATION_1010",
+      "source_courses": [
+        "S4600",
+        "S4650"
+      ],
+      "source_phrase": "Société 1010",
+      "status": "RESOLVED",
+      "target": "S4615_SHARED_COMPANY_CODE_1010",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "COMPANY_CODE"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4610_CH1_EX2_OUTBOUND_DELIVERY_EXISTING_BY_CUSTOMER_REFERENCE",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "commande client portant la référence S4610",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "ASSIGNED_TO",
+      "source": "S4610_CH2_EX3_SHIPPING_POINT_Y0-GROUP",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "division 1010",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_PLANT_1010",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "PLANT"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "COPIED_FROM",
+      "source": "S4610_CH2_EX3_SHIPPING_POINT_Y0-GROUP",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "copier Z0## vers Y0##",
+      "status": "RESOLVED",
+      "target": "S4610_CH2_EX3_SHIPPING_POINT_Z0-GROUP",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "SHIPPING_POINT"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "DETERMINES",
+      "source": "S4610_CH2_EX3_SHIPPING_POINT_Y0-GROUP",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "magasin 101C",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_STORAGE_LOCATION_101C",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "STORAGE_LOCATION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "ASSIGNED_TO",
+      "source": "S4610_CH2_EX3_SHIPPING_POINT_Z0-GROUP",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "division 1010",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_PLANT_1010",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "PLANT"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4610_CH3_EX4_OUTBOUND_DELIVERY_EXPRESS_FROM_ORDER",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "commande client précédente",
+      "status": "RESOLVED",
+      "target": "S4610_CH3_EX4_SALES_ORDER_ZA-GROUP",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "PICKS_FROM",
+      "source": "S4610_CH3_EX4_OUTBOUND_DELIVERY_EXPRESS_FROM_ORDER",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "101C",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_STORAGE_LOCATION_101C",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "STORAGE_LOCATION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4610_CH3_EX4_SALES_ORDER_ZA-GROUP",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "C610-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4610_CH3_EX4_SALES_ORDER_ZA-GROUP",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "P610-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "DETERMINES_SHIPPING_POINT",
+      "source": "S4610_CH4_EX7_SALES_ORDER_ZA-GROUP",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "Y0##",
+      "status": "RESOLVED",
+      "target": "S4610_CH2_EX3_SHIPPING_POINT_Y0-GROUP",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "SHIPPING_POINT"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4610_CH4_EX7_SALES_ORDER_ZA-GROUP",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "C610-B##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4610_CH4_EX7_SALES_ORDER_ZA-GROUP",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "P610-3##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4610_CH5_EX10_OUTBOUND_DELIVERY_FROM_ORDER",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "commande client précédente",
+      "status": "RESOLVED",
+      "target": "S4610_CH5_EX10_SALES_ORDER_ZA-GROUP",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "PROCESSED_AT",
+      "source": "S4610_CH5_EX10_OUTBOUND_DELIVERY_FROM_ORDER",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "Z0##",
+      "status": "RESOLVED",
+      "target": "S4610_CH2_EX3_SHIPPING_POINT_Z0-GROUP",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "SHIPPING_POINT"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4610_CH5_EX10_SALES_ORDER_ZA-GROUP",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "C610-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4610_CH5_EX10_SALES_ORDER_ZA-GROUP",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "P610-5##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FOR",
+      "source": "S4610_CH5_EX11_WAREHOUSE_TASK_OUTBOUND",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "votre livraison sortante",
+      "status": "RESOLVED",
+      "target": "S4610_CH5_EX10_OUTBOUND_DELIVERY_FROM_ORDER",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "EXECUTED_IN",
+      "source": "S4610_CH5_EX11_WAREHOUSE_TASK_OUTBOUND",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "numéro de magasin 1010",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_WAREHOUSE_NUMBER_1010",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "WAREHOUSE_NUMBER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "AFTER_WAREHOUSE_TASK",
+      "source": "S4610_CH5_EX12_GOODS_ISSUE_FROM_EX10_DELIVERY",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "exercice précédent",
+      "status": "RESOLVED",
+      "target": "S4610_CH5_EX11_WAREHOUSE_TASK_OUTBOUND",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "WAREHOUSE_TASK"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "POSTED_FOR",
+      "source": "S4610_CH5_EX12_GOODS_ISSUE_FROM_EX10_DELIVERY",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "livraison de l'exercice précédent",
+      "status": "RESOLVED",
+      "target": "S4610_CH5_EX10_OUTBOUND_DELIVERY_FROM_ORDER",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4610_CH5_EX13_INBOUND_DELIVERY_FROM_PURCHASE_ORDER",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "commande d'achat précédente",
+      "status": "RESOLVED",
+      "target": "S4610_CH5_EX13_PURCHASE_ORDER_REFERENCE_EXTERNAL_PROCUREMENT",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "PURCHASE_ORDER_REFERENCE"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "PROCESSED_IN",
+      "source": "S4610_CH5_EX13_INBOUND_DELIVERY_FROM_PURCHASE_ORDER",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "numéro de magasin 1010",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_WAREHOUSE_NUMBER_1010",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "WAREHOUSE_NUMBER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "RECEIVED_AT",
+      "source": "S4610_CH5_EX13_INBOUND_DELIVERY_FROM_PURCHASE_ORDER",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "division 1010",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_PLANT_1010",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "PLANT"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "STORED_AT",
+      "source": "S4610_CH5_EX13_INBOUND_DELIVERY_FROM_PURCHASE_ORDER",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "magasin 101D",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_STORAGE_LOCATION_101D",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "STORAGE_LOCATION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "RECEIVED_AT",
+      "source": "S4610_CH5_EX13_PURCHASE_ORDER_REFERENCE_EXTERNAL_PROCUREMENT",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "division 1010",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_PLANT_1010",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "PLANT"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "STORED_AT",
+      "source": "S4610_CH5_EX13_PURCHASE_ORDER_REFERENCE_EXTERNAL_PROCUREMENT",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "magasin 101D",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_STORAGE_LOCATION_101D",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "STORAGE_LOCATION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SUPPLIED_BY",
+      "source": "S4610_CH5_EX13_PURCHASE_ORDER_REFERENCE_EXTERNAL_PROCUREMENT",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "S610-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4610_CH5_EX13_PURCHASE_ORDER_REFERENCE_EXTERNAL_PROCUREMENT",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "P610-2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4610_CH5_EX14_INBOUND_DELIVERY_FROM_PURCHASE_ORDER",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "commande d'achat précédente",
+      "status": "RESOLVED",
+      "target": "S4610_CH5_EX14_PURCHASE_ORDER_REFERENCE_EXTERNAL_PROCUREMENT",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "PURCHASE_ORDER_REFERENCE"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "PROCESSED_IN",
+      "source": "S4610_CH5_EX14_INBOUND_DELIVERY_FROM_PURCHASE_ORDER",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "numéro de magasin 1010",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_WAREHOUSE_NUMBER_1010",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "WAREHOUSE_NUMBER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "RECEIVED_AT",
+      "source": "S4610_CH5_EX14_INBOUND_DELIVERY_FROM_PURCHASE_ORDER",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "division 1010",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_PLANT_1010",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "PLANT"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "STORED_AT",
+      "source": "S4610_CH5_EX14_INBOUND_DELIVERY_FROM_PURCHASE_ORDER",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "magasin 101D",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_STORAGE_LOCATION_101D",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "STORAGE_LOCATION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "RECEIVED_AT",
+      "source": "S4610_CH5_EX14_PURCHASE_ORDER_REFERENCE_EXTERNAL_PROCUREMENT",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "division 1010",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_PLANT_1010",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "PLANT"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "STORED_AT",
+      "source": "S4610_CH5_EX14_PURCHASE_ORDER_REFERENCE_EXTERNAL_PROCUREMENT",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "magasin 101D",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_STORAGE_LOCATION_101D",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "STORAGE_LOCATION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SUPPLIED_BY",
+      "source": "S4610_CH5_EX14_PURCHASE_ORDER_REFERENCE_EXTERNAL_PROCUREMENT",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "S610-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4610_CH5_EX14_PURCHASE_ORDER_REFERENCE_EXTERNAL_PROCUREMENT",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "P610-2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FOR",
+      "source": "S4610_CH5_EX14_WAREHOUSE_TASK_INBOUND",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "livraison entrante",
+      "status": "RESOLVED",
+      "target": "S4610_CH5_EX14_INBOUND_DELIVERY_FROM_PURCHASE_ORDER",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "INBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "EXECUTED_IN",
+      "source": "S4610_CH5_EX14_WAREHOUSE_TASK_INBOUND",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "numéro de magasin 1010",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_WAREHOUSE_NUMBER_1010",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "WAREHOUSE_NUMBER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BELONGS_TO",
+      "source": "S4610_SHARED_STORAGE_LOCATION_101C",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "division 1010",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_PLANT_1010",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "PLANT"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BELONGS_TO",
+      "source": "S4610_SHARED_STORAGE_LOCATION_101D",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "division 1010",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_PLANT_1010",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "PLANT"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SERVES",
+      "source": "S4610_SHARED_WAREHOUSE_NUMBER_1010",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "division 1010",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_PLANT_1010",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "PLANT"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SERVES",
+      "source": "S4610_SHARED_WAREHOUSE_NUMBER_1010",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "magasin 101C",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_STORAGE_LOCATION_101C",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "STORAGE_LOCATION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SERVES",
+      "source": "S4610_SHARED_WAREHOUSE_NUMBER_1010",
+      "source_courses": [
+        "S4610"
+      ],
+      "source_phrase": "magasin 101D",
+      "status": "RESOLVED",
+      "target": "S4610_SHARED_STORAGE_LOCATION_101D",
+      "target_courses": [
+        "S4610"
+      ],
+      "target_type": "STORAGE_LOCATION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH10_EX13_BILLING_FI_REFERENCE",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "livraison de la commande Foire ##",
+      "status": "RESOLVED",
+      "target": "S4615_CH10_EX13_OUTBOUND_DELIVERY_FI_REFERENCE",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CONTROLLED_BY",
+      "source": "S4615_CH10_EX13_BILLING_FI_REFERENCE",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "ZF##/LF avec référence B et affectation E",
+      "status": "RESOLVED",
+      "target": "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "COPY_CONTROL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH10_EX13_BILLING_POSTING_BLOCK",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "livraison de la commande Foire ##",
+      "status": "RESOLVED",
+      "target": "S4615_CH10_EX13_OUTBOUND_DELIVERY_POSTING_BLOCK",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CONTROLLED_BY",
+      "source": "S4615_CH10_EX13_BILLING_POSTING_BLOCK",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "ZF##/LF avec référence B et affectation E",
+      "status": "RESOLVED",
+      "target": "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "COPY_CONTROL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4615_CH10_EX13_OUTBOUND_DELIVERY_FI_REFERENCE",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "commande client précédente",
+      "status": "RESOLVED",
+      "target": "S4615_CH10_EX13_SALES_ORDER_FI_REFERENCE",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4615_CH10_EX13_OUTBOUND_DELIVERY_POSTING_BLOCK",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "commande client précédente",
+      "status": "RESOLVED",
+      "target": "S4615_CH10_EX13_SALES_ORDER_POSTING_BLOCK",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH10_EX13_SALES_ORDER_FI_REFERENCE",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "C615-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH10_EX13_SALES_ORDER_FI_REFERENCE",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "P615-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH10_EX13_SALES_ORDER_POSTING_BLOCK",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "C615-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH10_EX13_SALES_ORDER_POSTING_BLOCK",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "P615-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH1_EX1_BILLING_IMPORTED_A3",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "livraison ayant servi de modèle au document de facturation",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH3_EX3_BILLING_F2_FROM_IMPORTED_DELIVERY",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "livraison de la commande d'achat ##S4615-A1",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH3_EX3_BILLING_FAIR",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "livraison de la commande Foire ##",
+      "status": "RESOLVED",
+      "target": "S4615_CH3_EX3_OUTBOUND_DELIVERY_FAIR",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CONTROLLED_BY",
+      "source": "S4615_CH3_EX3_BILLING_FAIR",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "type par défaut ZF## pour ZA##",
+      "status": "RESOLVED",
+      "target": "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "COPY_CONTROL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4615_CH3_EX3_OUTBOUND_DELIVERY_FAIR",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "commande client précédente",
+      "status": "RESOLVED",
+      "target": "S4615_CH3_EX3_SALES_ORDER_FAIR",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH3_EX3_SALES_ORDER_FAIR",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "C615-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH3_EX3_SALES_ORDER_FAIR",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "P615-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH4_EX4_BILLING_CREDIT_MEMO",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "demande de correction de facture créée depuis la facture F2",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "CREDIT_MEMO_REQUEST"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CONTROLLED_BY",
+      "source": "S4615_CH4_EX4_BILLING_CREDIT_MEMO",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "F2 vers RK",
+      "status": "RESOLVED",
+      "target": "S4615_CH4_EX4_COPY_CONTROL_F2_TO_RK",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "COPY_CONTROL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CORRECTS",
+      "source": "S4615_CH4_EX4_BILLING_CREDIT_MEMO",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "facture F2 de référence",
+      "status": "RESOLVED",
+      "target": "S4615_CH4_EX4_BILLING_ORIGINAL_F2",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "BILLING"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH4_EX4_BILLING_ORIGINAL_F2",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "commande portant la référence ##S4615-A4",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH4_EX5_BILLING_CASH_SALE",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "vente au comptant BV",
+      "status": "RESOLVED",
+      "target": "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "DELIVERED_VIA",
+      "source": "S4615_CH4_EX5_BILLING_CASH_SALE",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "livraison créée avec la commande",
+      "status": "RESOLVED",
+      "target": "S4615_CH4_EX5_OUTBOUND_DELIVERY_CASH_SALE",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH4_EX5_BILLING_PRO_FORMA",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "commande avant livraison",
+      "status": "RESOLVED",
+      "target": "S4615_CH4_EX5_SALES_ORDER_PRO_FORMA",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4615_CH4_EX5_OUTBOUND_DELIVERY_CASH_SALE",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "commande client précédente",
+      "status": "RESOLVED",
+      "target": "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "C615-D##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "P615-4##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH4_EX5_SALES_ORDER_PRO_FORMA",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "C615-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH4_EX5_SALES_ORDER_PRO_FORMA",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "P615-2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH5_EX6_BILLING_F1_OVERRIDE",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "livraison de la commande d'achat ##S4615-A5",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH5_EX6_BILLING_FAIR_FREIGHT",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "livraison Foire avec frais de transport",
+      "status": "RESOLVED",
+      "target": "S4615_CH5_EX6_OUTBOUND_DELIVERY_FAIR_FREIGHT",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CONTROLLED_BY",
+      "source": "S4615_CH5_EX6_BILLING_FAIR_FREIGHT",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "ZF## / LF / TAN / type de prix H",
+      "status": "RESOLVED",
+      "target": "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "COPY_CONTROL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4615_CH5_EX6_OUTBOUND_DELIVERY_FAIR_FREIGHT",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "commande client précédente",
+      "status": "RESOLVED",
+      "target": "S4615_CH5_EX6_SALES_ORDER_FAIR_FREIGHT",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH5_EX6_SALES_ORDER_FAIR_FREIGHT",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "C615-D##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH5_EX6_SALES_ORDER_FAIR_FREIGHT",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "P615-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH6_EX7_BILLING_FIORI_APP_CANCELLED",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "commande ##-app-1 avant réduction de quantité",
+      "status": "RESOLVED",
+      "target": "S4615_CH6_EX7_SALES_ORDER_FIORI_APP_FINAL",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH6_EX7_BILLING_FIORI_APP_POSTED",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "commande ##-app-1 modifiée à 8",
+      "status": "RESOLVED",
+      "target": "S4615_CH6_EX7_SALES_ORDER_FIORI_APP_FINAL",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH6_EX7_BILLING_MONTH_END",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "livraison facturée à la fin du mois",
+      "status": "RESOLVED",
+      "target": "S4615_CH6_EX7_OUTBOUND_DELIVERY_MONTH_END",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4615_CH6_EX7_OUTBOUND_DELIVERY_MONTH_END",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "commande client précédente",
+      "status": "RESOLVED",
+      "target": "S4615_CH6_EX7_SALES_ORDER_MONTH_END",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH6_EX7_SALES_ORDER_FIORI_APP_FINAL",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "C615-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH6_EX7_SALES_ORDER_FIORI_APP_FINAL",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "P-Service",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH6_EX7_SALES_ORDER_MONTH_END",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "C615-B##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH6_EX7_SALES_ORDER_MONTH_END",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "P615-2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CONTAINS",
+      "source": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "document de facturation du relevé",
+      "status": "RESOLVED",
+      "target": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST_SOURCE_A11",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "BILLING"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CONTAINS",
+      "source": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "document de facturation du relevé",
+      "status": "RESOLVED",
+      "target": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST_SOURCE_A12",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "BILLING"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST_SOURCE_A11",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "commande 00S4615-A11 du client C615-GB00",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST_SOURCE_A12",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "commande 00S4615-A12 du client C615-GA00",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH7_EX9_BILLING_SPLIT_1",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "première livraison de l'échéancier",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH7_EX9_BILLING_SPLIT_2",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "livraison liée à la commande ##S4615-A10",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_BILLING_INSTALLMENT",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "livraison de la commande 4712",
+      "status": "RESOLVED",
+      "target": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_OUTBOUND_DELIVERY_INSTALLMENT",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_OUTBOUND_DELIVERY_INSTALLMENT",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "commande client précédente",
+      "status": "RESOLVED",
+      "target": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_SALES_ORDER_INSTALLMENT",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_SALES_ORDER_INSTALLMENT",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "C615-A00",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_SALES_ORDER_INSTALLMENT",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "P615-100",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH8_EX10_BILLING_PERIODIC_FIRST_PERIOD",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "contrat de maintenance WV ##S6415-PB",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "SALES_CONTRACT_REFERENCE"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH8_EX11_BILLING_DOWN_PAYMENT_REQUEST",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "commande avec calendrier d'acompte",
+      "status": "RESOLVED",
+      "target": "S4615_CH8_EX11_SALES_ORDER_DOWN_PAYMENT",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH8_EX11_BILLING_FIRST_PARTIAL",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "première période de décompte",
+      "status": "RESOLVED",
+      "target": "S4615_CH8_EX11_SALES_ORDER_DOWN_PAYMENT",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CLEARS",
+      "source": "S4615_CH8_EX11_BILLING_FIRST_PARTIAL",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "acompte versé par le client",
+      "status": "RESOLVED",
+      "target": "S4615_CH8_EX11_PAYMENT_REFERENCE_DOWN_PAYMENT",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "PAYMENT_REFERENCE"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SETTLES",
+      "source": "S4615_CH8_EX11_PAYMENT_REFERENCE_DOWN_PAYMENT",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "demande d'acompte FAZ",
+      "status": "RESOLVED",
+      "target": "S4615_CH8_EX11_BILLING_DOWN_PAYMENT_REQUEST",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "BILLING"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH8_EX11_SALES_ORDER_DOWN_PAYMENT",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "C615-F##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH8_EX11_SALES_ORDER_DOWN_PAYMENT",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "P615-6##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "APPLIES_IN",
+      "source": "S4615_CH9_EX12_ACCOUNT_DETERMINATION_AFFILIATED_REVENUE",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "société 1010",
+      "status": "RESOLVED",
+      "target": "S4615_SHARED_COMPANY_CODE_1010",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "COMPANY_CODE"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "ACCOUNT_DETERMINED_BY",
+      "source": "S4615_CH9_EX12_BILLING_ACCOUNT_DETERMINATION_TEST",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "table 001 vers compte 49000000",
+      "status": "RESOLVED",
+      "target": "S4615_CH9_EX12_ACCOUNT_DETERMINATION_AFFILIATED_REVENUE",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "ACCOUNT_DETERMINATION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "BILLED_FROM",
+      "source": "S4615_CH9_EX12_BILLING_ACCOUNT_DETERMINATION_TEST",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "livraison de la commande ##S4615-KO",
+      "status": "RESOLVED",
+      "target": "S4615_CH9_EX12_OUTBOUND_DELIVERY_ACCOUNT_DETERMINATION_TEST",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "OUTBOUND_DELIVERY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CREATED_FROM",
+      "source": "S4615_CH9_EX12_OUTBOUND_DELIVERY_ACCOUNT_DETERMINATION_TEST",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "commande client précédente",
+      "status": "RESOLVED",
+      "target": "S4615_CH9_EX12_SALES_ORDER_ACCOUNT_DETERMINATION_TEST",
+      "target_courses": [
+        "S4615"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4615_CH9_EX12_SALES_ORDER_ACCOUNT_DETERMINATION_TEST",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "C615-B##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4615_CH9_EX12_SALES_ORDER_ACCOUNT_DETERMINATION_TEST",
+      "source_courses": [
+        "S4615"
+      ],
+      "source_phrase": "P615-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "PRICED_BY",
+      "source": "S4620_CH1_EX1_SALES_ORDER_WITH_MATERIAL_PRICE",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "PR00 article créé à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4620_CH1_EX1_PRICING_CONDITION_PR00_MATERIAL",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4620_CH1_EX1_SALES_ORDER_WITH_MATERIAL_PRICE",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "C620-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH1_EX1_SALES_ORDER_WITH_MATERIAL_PRICE",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "DISCOUNTED_BY",
+      "source": "S4620_CH1_EX1_SALES_ORDER_WITH_SCALES",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "barème K007 client",
+      "status": "RESOLVED",
+      "target": "S4620_CH1_EX1_PRICING_CONDITION_K007_CUSTOMER_VALUE_SCALE",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "PRICED_BY",
+      "source": "S4620_CH1_EX1_SALES_ORDER_WITH_SCALES",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "barème PR00 client/article",
+      "status": "RESOLVED",
+      "target": "S4620_CH1_EX1_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL_SCALE",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4620_CH1_EX1_SALES_ORDER_WITH_SCALES",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "C620-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH1_EX1_SALES_ORDER_WITH_SCALES",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4620_CH1_EX4_SALES_ORDER_MANUAL_ADJUSTMENT",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "C620-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "STARTS_FROM",
+      "source": "S4620_CH1_EX4_SALES_ORDER_MANUAL_ADJUSTMENT",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "K007 automatique modifiée manuellement",
+      "status": "RESOLVED",
+      "target": "S4620_CH1_EX1_PRICING_CONDITION_K007_CUSTOMER_VALUE_SCALE",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH1_EX4_SALES_ORDER_MANUAL_ADJUSTMENT",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4620_CH1_EX5_SALES_ORDER_HEADER_CONDITIONS",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "C620-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH1_EX5_SALES_ORDER_HEADER_CONDITIONS",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH1_EX5_SALES_ORDER_HEADER_CONDITIONS",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "DISCOUNTED_BY",
+      "source": "S4620_CH1_EX6_SALES_ORDER_REPRICING_TYPE_B",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "K007",
+      "status": "RESOLVED",
+      "target": "S4620_CH1_EX1_PRICING_CONDITION_K007_CUSTOMER_VALUE_SCALE",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "PRICED_BY",
+      "source": "S4620_CH1_EX6_SALES_ORDER_REPRICING_TYPE_B",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "PR00",
+      "status": "RESOLVED",
+      "target": "S4620_CH1_EX1_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL_SCALE",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4620_CH1_EX6_SALES_ORDER_REPRICING_TYPE_B",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "C620-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH1_EX6_SALES_ORDER_REPRICING_TYPE_B",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_TABLE",
+      "source": "S4620_CH2_EX7_ACCESS_SEQUENCE_PR02",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "304",
+      "status": "RESOLVED",
+      "target": "S4620_CH2_EX7_CONDITION_TABLE_304",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "CONDITION_TABLE"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_TABLE",
+      "source": "S4620_CH2_EX7_ACCESS_SEQUENCE_PR02",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "305",
+      "status": "RESOLVED",
+      "target": "S4620_CH2_EX7_CONDITION_TABLE_305",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "CONDITION_TABLE"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_TABLE",
+      "source": "S4620_CH2_EX7_ACCESS_SEQUENCE_PR02",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "306",
+      "status": "RESOLVED",
+      "target": "S4620_CH2_EX7_CONDITION_TABLE_306",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "CONDITION_TABLE"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_ACCESS_SEQUENCE",
+      "source": "S4620_CH2_EX7_CONDITION_TYPE_PR00",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "PR02",
+      "status": "RESOLVED",
+      "target": "S4620_CH2_EX7_ACCESS_SEQUENCE_PR02",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "ACCESS_SEQUENCE"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "DETERMINES",
+      "source": "S4620_CH2_EX8_PRICING_PROCEDURE_DETERMINATION_RVAA01",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "RVAA01",
+      "status": "RESOLVED",
+      "target": "S4620_CH2_EX7_PRICING_PROCEDURE_RVAA01",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_PROCEDURE"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_TABLE",
+      "source": "S4620_CH2_EX9_ACCESS_SEQUENCE_ZA_GROUP",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "7##",
+      "status": "RESOLVED",
+      "target": "S4620_CH2_EX9_CONDITION_TABLE_7_GROUP",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "CONDITION_TABLE"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_ACCESS_SEQUENCE",
+      "source": "S4620_CH2_EX9_CONDITION_TYPE_ZF_GROUP",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "ZA##",
+      "status": "RESOLVED",
+      "target": "S4620_CH2_EX9_ACCESS_SEQUENCE_ZA_GROUP",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "ACCESS_SEQUENCE"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_CONDITION_TYPE",
+      "source": "S4620_CH2_EX9_PRICING_CONDITION_ZF_GROUP_FREIGHT",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "ZF##",
+      "status": "RESOLVED",
+      "target": "S4620_CH2_EX9_CONDITION_TYPE_ZF_GROUP",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "CONDITION_TYPE"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "DETERMINES",
+      "source": "S4620_CH2_EX9_PRICING_PROCEDURE_DETERMINATION_Z_GROUP",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "Z##PRC",
+      "status": "RESOLVED",
+      "target": "S4620_CH2_EX9_PRICING_PROCEDURE_Z_GROUP_PRC",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_PROCEDURE"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_CONDITION_TYPE",
+      "source": "S4620_CH2_EX9_PRICING_PROCEDURE_Z_GROUP_PRC",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "ZF##",
+      "status": "RESOLVED",
+      "target": "S4620_CH2_EX9_CONDITION_TYPE_ZF_GROUP",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "CONDITION_TYPE"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_CONDITION_TYPE",
+      "source": "S4620_CH2_EX9_PRICING_PROCEDURE_Z_GROUP_PRC",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "ZW##",
+      "status": "RESOLVED",
+      "target": "S4620_CH4_EX15_CONDITION_TYPE_ZW_GROUP",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "CONDITION_TYPE"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "PRICED_BY",
+      "source": "S4620_CH2_EX9_SALES_ORDER_CUSTOM_PRICING_MODEL",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "ZF##",
+      "status": "RESOLVED",
+      "target": "S4620_CH2_EX9_PRICING_CONDITION_ZF_GROUP_FREIGHT",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4620_CH2_EX9_SALES_ORDER_CUSTOM_PRICING_MODEL",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "C620-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH2_EX9_SALES_ORDER_CUSTOM_PRICING_MODEL",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_PROCEDURE",
+      "source": "S4620_CH2_EX9_SALES_ORDER_CUSTOM_PRICING_MODEL",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "Z##PRC",
+      "status": "RESOLVED",
+      "target": "S4620_CH2_EX9_PRICING_PROCEDURE_Z_GROUP_PRC",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_PROCEDURE"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "COPIED_FROM",
+      "source": "S4620_CH3_EX12_PRICING_CONDITION_PR00_P620_2_NEXT_YEAR",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "enregistrement PR00 existant pour P620-2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "COPIED_FROM",
+      "source": "S4620_CH3_EX12_PRICING_CONDITION_PR00_P620_3_NEXT_YEAR",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "enregistrement PR00 existant pour P620-3##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "COPIED_FROM",
+      "source": "S4620_CH3_EX14_PRICING_CONDITION_PR00_CUSTOMER_COPY",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "condition de prix propre au client C620-A## et à l'article P620-1##",
+      "status": "RESOLVED",
+      "target": "S4620_CH1_EX1_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL_SCALE",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_ACCESS_SEQUENCE",
+      "source": "S4620_CH4_EX15_CONDITION_TYPE_ZW_GROUP",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "ZA##",
+      "status": "RESOLVED",
+      "target": "S4620_CH2_EX9_ACCESS_SEQUENCE_ZA_GROUP",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "ACCESS_SEQUENCE"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_CONDITION_TYPE",
+      "source": "S4620_CH4_EX15_PRICING_CONDITION_ZW_GROUP_WEIGHT_SCALE",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "ZW##",
+      "status": "RESOLVED",
+      "target": "S4620_CH4_EX15_CONDITION_TYPE_ZW_GROUP",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "CONDITION_TYPE"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "PRICED_BY",
+      "source": "S4620_CH4_EX15_SALES_ORDER_WEIGHT_BASED_FREIGHT",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "ZF##",
+      "status": "RESOLVED",
+      "target": "S4620_CH2_EX9_PRICING_CONDITION_ZF_GROUP_FREIGHT",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "PRICED_BY",
+      "source": "S4620_CH4_EX15_SALES_ORDER_WEIGHT_BASED_FREIGHT",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "ZW##",
+      "status": "RESOLVED",
+      "target": "S4620_CH4_EX15_PRICING_CONDITION_ZW_GROUP_WEIGHT_SCALE",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4620_CH4_EX15_SALES_ORDER_WEIGHT_BASED_FREIGHT",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "C620-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH4_EX15_SALES_ORDER_WEIGHT_BASED_FREIGHT",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH4_EX15_SALES_ORDER_WEIGHT_BASED_FREIGHT",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-3##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_PROCEDURE",
+      "source": "S4620_CH4_EX15_SALES_ORDER_WEIGHT_BASED_FREIGHT",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "Z##PRC",
+      "status": "RESOLVED",
+      "target": "S4620_CH2_EX9_PRICING_PROCEDURE_Z_GROUP_PRC",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_PROCEDURE"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "PRICED_BY",
+      "source": "S4620_CH4_EX16_SALES_ORDER_FREIGHT_EXCLUSION",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "ZF##",
+      "status": "RESOLVED",
+      "target": "S4620_CH2_EX9_PRICING_CONDITION_ZF_GROUP_FREIGHT",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "PRICED_BY",
+      "source": "S4620_CH4_EX16_SALES_ORDER_FREIGHT_EXCLUSION",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "ZW##",
+      "status": "RESOLVED",
+      "target": "S4620_CH4_EX15_PRICING_CONDITION_ZW_GROUP_WEIGHT_SCALE",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4620_CH4_EX16_SALES_ORDER_FREIGHT_EXCLUSION",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "C620-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH4_EX16_SALES_ORDER_FREIGHT_EXCLUSION",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH4_EX16_SALES_ORDER_FREIGHT_EXCLUSION",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-3##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_PROCEDURE",
+      "source": "S4620_CH4_EX16_SALES_ORDER_FREIGHT_EXCLUSION",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "groupes d'exclusion Z1##/Z2##",
+      "status": "RESOLVED",
+      "target": "S4620_CH2_EX9_PRICING_PROCEDURE_Z_GROUP_PRC",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_PROCEDURE"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "PRICED_BY",
+      "source": "S4620_CH4_EX17_SALES_ORDER_FIRST_K005",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "K005",
+      "status": "RESOLVED",
+      "target": "S4620_CH4_EX17_PRICING_CONDITION_K005_FIRST_ORDER",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4620_CH4_EX17_SALES_ORDER_FIRST_K005",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "C620-B##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH4_EX17_SALES_ORDER_FIRST_K005",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "PRICED_BY",
+      "source": "S4620_CH4_EX17_SALES_ORDER_QUANTITY_LIMIT_K005",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "K005",
+      "status": "RESOLVED",
+      "target": "S4620_CH4_EX17_PRICING_CONDITION_K005_FIRST_ORDER",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4620_CH4_EX17_SALES_ORDER_QUANTITY_LIMIT_K005",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "C620-B##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH4_EX17_SALES_ORDER_QUANTITY_LIMIT_K005",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "PRICED_BY",
+      "source": "S4620_CH4_EX17_SALES_ORDER_SECOND_K005",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "K005",
+      "status": "RESOLVED",
+      "target": "S4620_CH4_EX17_PRICING_CONDITION_K005_FIRST_ORDER",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4620_CH4_EX17_SALES_ORDER_SECOND_K005",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "C620-B##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH4_EX17_SALES_ORDER_SECOND_K005",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4620_CH5_EX18_SALES_ORDER_HEADER_NET_VALUE",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "C620-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH5_EX18_SALES_ORDER_HEADER_NET_VALUE",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH5_EX18_SALES_ORDER_HEADER_NET_VALUE",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4620_CH5_EX18_SALES_ORDER_ITEM_NET_PRICE",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "C620-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH5_EX18_SALES_ORDER_ITEM_NET_PRICE",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "APPLIES_TO_HIERARCHY",
+      "source": "S4620_CH5_EX19_PRICING_CONDITION_HI02_HIERARCHY_MATERIAL",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "C620-ZE",
+      "status": "RESOLVED",
+      "target": "S4620_CH5_EX19_CUSTOMER_HIERARCHY_TOPCO_WESTERN_EUROPE",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "CUSTOMER_HIERARCHY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CUSTOMER_IN_HIERARCHY",
+      "source": "S4620_CH5_EX19_SALES_ORDER_HIERARCHY_PRICING",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "TOPCO",
+      "status": "RESOLVED",
+      "target": "S4620_CH5_EX19_CUSTOMER_HIERARCHY_TOPCO_WESTERN_EUROPE",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "CUSTOMER_HIERARCHY"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "PRICED_BY",
+      "source": "S4620_CH5_EX19_SALES_ORDER_HIERARCHY_PRICING",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "HI02",
+      "status": "RESOLVED",
+      "target": "S4620_CH5_EX19_PRICING_CONDITION_HI02_HIERARCHY_MATERIAL",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4620_CH5_EX19_SALES_ORDER_HIERARCHY_PRICING",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "C620-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH5_EX19_SALES_ORDER_HIERARCHY_PRICING",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "PRICED_BY",
+      "source": "S4620_CH6_EX20_SALES_ORDER_SALES_DEAL",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "KA00",
+      "status": "RESOLVED",
+      "target": "S4620_CH6_EX20_PRICING_CONDITION_KA00_SALES_DEAL",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_CONDITION"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4620_CH6_EX20_SALES_ORDER_SALES_DEAL",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "C620-B##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH6_EX20_SALES_ORDER_SALES_DEAL",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "DETERMINES",
+      "source": "S4620_CH7_EX21_PRICING_PROCEDURE_DETERMINATION_SETTLEMENT",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "A10005",
+      "status": "RESOLVED",
+      "target": "S4620_CH7_EX21_PRICING_PROCEDURE_A10005",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "PRICING_PROCEDURE"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4620_CH7_EX22_SALES_ORDER_BUSINESS_VOLUME_1",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "C620-B##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH7_EX22_SALES_ORDER_BUSINESS_VOLUME_1",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-3##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4620_CH7_EX22_SALES_ORDER_BUSINESS_VOLUME_2",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "C620-B##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH7_EX22_SALES_ORDER_BUSINESS_VOLUME_2",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-3##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "BUSINESS_VOLUME_FROM",
+      "source": "S4620_CH7_EX23_CONDITION_CONTRACT_SALES_REBATE",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "factures issues des commandes créées à l'exercice 22",
+      "status": "RESOLVED",
+      "target": "S4620_CH7_EX22_SALES_ORDER_BUSINESS_VOLUME_1",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "BUSINESS_VOLUME_FROM",
+      "source": "S4620_CH7_EX23_CONDITION_CONTRACT_SALES_REBATE",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "factures issues des commandes créées à l'exercice 22",
+      "status": "RESOLVED",
+      "target": "S4620_CH7_EX22_SALES_ORDER_BUSINESS_VOLUME_2",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SETTLES",
+      "source": "S4620_CH7_EX24_SETTLEMENT_DOCUMENT_DELTA_ACCRUAL",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "contrat créé à l'exercice précédent",
+      "status": "RESOLVED",
+      "target": "S4620_CH7_EX23_CONDITION_CONTRACT_SALES_REBATE",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "CONDITION_CONTRACT"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "FOLLOWS",
+      "source": "S4620_CH7_EX25_SETTLEMENT_DOCUMENT_PARTIAL_CREDIT",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "provisions delta déjà décomptées",
+      "status": "RESOLVED",
+      "target": "S4620_CH7_EX24_SETTLEMENT_DOCUMENT_DELTA_ACCRUAL",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "SETTLEMENT_DOCUMENT"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SETTLES",
+      "source": "S4620_CH7_EX25_SETTLEMENT_DOCUMENT_PARTIAL_CREDIT",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "contrat de conditions",
+      "status": "RESOLVED",
+      "target": "S4620_CH7_EX23_CONDITION_CONTRACT_SALES_REBATE",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "CONDITION_CONTRACT"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4620_CH7_EX26_SALES_ORDER_ADDITIONAL_BUSINESS_VOLUME",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "C620-B##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH7_EX26_SALES_ORDER_ADDITIONAL_BUSINESS_VOLUME",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-3##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4620_CH7_EX26_SALES_ORDER_ADDITIONAL_BUSINESS_VOLUME",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "P620-2##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "BUSINESS_VOLUME_FROM",
+      "source": "S4620_CH7_EX27_SETTLEMENT_DOCUMENT_FINAL_CREDIT",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "processus de vente supplémentaire",
+      "status": "RESOLVED",
+      "target": "S4620_CH7_EX26_SALES_ORDER_ADDITIONAL_BUSINESS_VOLUME",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "FOLLOWS",
+      "source": "S4620_CH7_EX27_SETTLEMENT_DOCUMENT_FINAL_CREDIT",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "décompte partiel antérieur",
+      "status": "RESOLVED",
+      "target": "S4620_CH7_EX25_SETTLEMENT_DOCUMENT_PARTIAL_CREDIT",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "SETTLEMENT_DOCUMENT"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "SETTLES",
+      "source": "S4620_CH7_EX27_SETTLEMENT_DOCUMENT_FINAL_CREDIT",
+      "source_courses": [
+        "S4620"
+      ],
+      "source_phrase": "contrat de conditions",
+      "status": "RESOLVED",
+      "target": "S4620_CH7_EX23_CONDITION_CONTRACT_SALES_REBATE",
+      "target_courses": [
+        "S4620"
+      ],
+      "target_type": "CONDITION_CONTRACT"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "ASSIGNED_TO",
+      "source": "S4650_CH1_EX1_DISTRIBUTION_CHANNEL_GROUP",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "affecter à l'organisation commerciale 1010",
+      "status": "RESOLVED",
+      "target": "S4600_SHARED_SALES_ORGANIZATION_1010",
+      "target_courses": [
+        "S4600",
+        "S4650"
+      ],
+      "target_type": "SALES_ORGANIZATION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_DISTRIBUTION_CHANNEL",
+      "source": "S4650_CH1_EX1_SALES_AREA_GROUP_00",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "canal créé",
+      "status": "RESOLVED",
+      "target": "S4650_CH1_EX1_DISTRIBUTION_CHANNEL_GROUP",
+      "target_courses": [
+        "S4650"
+      ],
+      "target_type": "DISTRIBUTION_CHANNEL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_SALES_DIVISION",
+      "source": "S4650_CH1_EX1_SALES_AREA_GROUP_00",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "00",
+      "status": "RESOLVED",
+      "target": "S4600_SHARED_SALES_DIVISION_00",
+      "target_courses": [
+        "S4600",
+        "S4650"
+      ],
+      "target_type": "SALES_DIVISION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_SALES_ORGANIZATION",
+      "source": "S4650_CH1_EX1_SALES_AREA_GROUP_00",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "1010",
+      "status": "RESOLVED",
+      "target": "S4600_SHARED_SALES_ORGANIZATION_1010",
+      "target_courses": [
+        "S4600",
+        "S4650"
+      ],
+      "target_type": "SALES_ORGANIZATION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_DISTRIBUTION_CHANNEL",
+      "source": "S4650_CH1_EX1_SALES_AREA_GROUP_03",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "canal créé",
+      "status": "RESOLVED",
+      "target": "S4650_CH1_EX1_DISTRIBUTION_CHANNEL_GROUP",
+      "target_courses": [
+        "S4650"
+      ],
+      "target_type": "DISTRIBUTION_CHANNEL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_SALES_DIVISION",
+      "source": "S4650_CH1_EX1_SALES_AREA_GROUP_03",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "03",
+      "status": "RESOLVED",
+      "target": "S4650_CH1_EX1_SALES_DIVISION_03",
+      "target_courses": [
+        "S4650"
+      ],
+      "target_type": "SALES_DIVISION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_SALES_ORGANIZATION",
+      "source": "S4650_CH1_EX1_SALES_AREA_GROUP_03",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "1010",
+      "status": "RESOLVED",
+      "target": "S4600_SHARED_SALES_ORGANIZATION_1010",
+      "target_courses": [
+        "S4600",
+        "S4650"
+      ],
+      "target_type": "SALES_ORGANIZATION"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4650_CH1_EX2_SALES_ORDER_COMMON_MASTER_DATA_TEST",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "C650-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4650_CH1_EX2_SALES_ORDER_COMMON_MASTER_DATA_TEST",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "P650-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_SHARED_MASTER_DATA",
+      "source": "S4650_CH1_EX2_SALES_ORDER_COMMON_MASTER_DATA_TEST",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "accès au prix PR00 du canal 10",
+      "status": "RESOLVED",
+      "target": "S4650_CH1_EX2_SHARED_MASTER_DATA_ASSIGNMENT_CHANNEL_10",
+      "target_courses": [
+        "S4650"
+      ],
+      "target_type": "SHARED_MASTER_DATA_ASSIGNMENT"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "TARGETS",
+      "source": "S4650_CH1_EX2_SHARED_MASTER_DATA_ASSIGNMENT_CHANNEL_10",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "nouveau canal du groupe",
+      "status": "RESOLVED",
+      "target": "S4650_CH1_EX1_DISTRIBUTION_CHANNEL_GROUP",
+      "target_courses": [
+        "S4650"
+      ],
+      "target_type": "DISTRIBUTION_CHANNEL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CONTROLLED_BY",
+      "source": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_DIFFERENT_CUSTOMER",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "OF vers ZA##",
+      "status": "RESOLVED",
+      "target": "S4650_CH2_EX3_COPY_CONTROL_OF_TO_ZA_GROUP",
+      "target_courses": [
+        "S4650"
+      ],
+      "target_type": "COPY_CONTROL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "REFERENCES",
+      "source": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_DIFFERENT_CUSTOMER",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "offre OF créée dans la tâche précédente",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "QUOTATION"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_DIFFERENT_CUSTOMER",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "C650-B##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_DIFFERENT_CUSTOMER",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "P650-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CONTROLLED_BY",
+      "source": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_SAME_CUSTOMER",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "OF vers ZA##",
+      "status": "RESOLVED",
+      "target": "S4650_CH2_EX3_COPY_CONTROL_OF_TO_ZA_GROUP",
+      "target_courses": [
+        "S4650"
+      ],
+      "target_type": "COPY_CONTROL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "REFERENCES",
+      "source": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_SAME_CUSTOMER",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "même offre OF",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "QUOTATION"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_SAME_CUSTOMER",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "C650-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_SAME_CUSTOMER",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "P650-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CONTROLLED_BY",
+      "source": "S4650_CH2_EX4_OUTBOUND_DELIVERY_HEADER_CONTROL_TEST",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "ZA## vers LF",
+      "status": "RESOLVED",
+      "target": "S4650_CH2_EX4_COPY_CONTROL_ZA_GROUP_TO_LF",
+      "target_courses": [
+        "S4650"
+      ],
+      "target_type": "COPY_CONTROL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "REFERENCES",
+      "source": "S4650_CH2_EX4_OUTBOUND_DELIVERY_HEADER_CONTROL_TEST",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "une des commandes créées précédemment",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "CONTROLLED_BY",
+      "source": "S4650_CH2_EX4_OUTBOUND_DELIVERY_ITEM_CONTROL_TEST",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "ZA## vers LF",
+      "status": "RESOLVED",
+      "target": "S4650_CH2_EX4_COPY_CONTROL_ZA_GROUP_TO_LF",
+      "target_courses": [
+        "S4650"
+      ],
+      "target_type": "COPY_CONTROL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "REFERENCES",
+      "source": "S4650_CH2_EX4_OUTBOUND_DELIVERY_ITEM_CONTROL_TEST",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "une des commandes créées précédemment",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "VERIFIES",
+      "source": "S4650_CH3_EX6_TEXT_DETERMINATION_MATERIAL_SALES_TEXT",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "commande ##-1-2.6",
+      "status": "RESOLVED",
+      "target": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_SAME_CUSTOMER",
+      "target_courses": [
+        "S4650"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "REFERENCES",
+      "source": "S4650_CH3_EX7_SALES_ORDER_HEADER_TEXT_FROM_QUOTATION",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "offre OF ##-2-4.1",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "QUOTATION"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4650_CH3_EX7_SALES_ORDER_HEADER_TEXT_FROM_QUOTATION",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "C650-B##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4650_CH3_EX7_SALES_ORDER_HEADER_TEXT_FROM_QUOTATION",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "P650-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "USES_TEXT_DETERMINATION",
+      "source": "S4650_CH3_EX7_SALES_ORDER_HEADER_TEXT_FROM_QUOTATION",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "texte en-tête copié",
+      "status": "RESOLVED",
+      "target": "S4650_CH3_EX7_TEXT_DETERMINATION_HEADER_GROUP",
+      "target_courses": [
+        "S4650"
+      ],
+      "target_type": "TEXT_DETERMINATION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "OUTPUT_BY",
+      "source": "S4650_CH4_EX10_OUTBOUND_DELIVERY_ZLD0_TEST",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "ZLD0",
+      "status": "RESOLVED",
+      "target": "S4650_CH4_EX10_OUTPUT_DETERMINATION_ZLD0",
+      "target_courses": [
+        "S4650"
+      ],
+      "target_type": "OUTPUT_DETERMINATION"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "REFERENCES",
+      "source": "S4650_CH4_EX10_OUTBOUND_DELIVERY_ZLD0_TEST",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "commande créée à l'étape précédente",
+      "status": "RESOLVED",
+      "target": "S4650_CH4_EX10_SALES_ORDER_ZLD0_DELIVERY_SOURCE",
+      "target_courses": [
+        "S4650"
+      ],
+      "target_type": "SALES_ORDER"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "OUTPUT_CONTEXT",
+      "source": "S4650_CH4_EX10_SALES_ORDER_ZLD0_DELIVERY_SOURCE",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "livraison ZLD0",
+      "status": "RESOLVED",
+      "target": "S4650_CH4_EX10_OUTPUT_DETERMINATION_ZLD0",
+      "target_courses": [
+        "S4650"
+      ],
+      "target_type": "OUTPUT_DETERMINATION"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4650_CH4_EX10_SALES_ORDER_ZLD0_DELIVERY_SOURCE",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "C650-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4650_CH4_EX10_SALES_ORDER_ZLD0_DELIVERY_SOURCE",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "P650-100",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "OUTPUT_BY",
+      "source": "S4650_CH4_EX11_SALES_ORDER_NEW_OUTPUT_CONFIRMATION_TEST",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "ORDER_CONFIRMATION_##",
+      "status": "RESOLVED",
+      "target": "S4650_CH4_EX11_OUTPUT_DETERMINATION_ORDER_CONFIRMATION_GROUP",
+      "target_courses": [
+        "S4650"
+      ],
+      "target_type": "OUTPUT_DETERMINATION"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4650_CH4_EX11_SALES_ORDER_NEW_OUTPUT_CONFIRMATION_TEST",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "C650-B##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4650_CH4_EX11_SALES_ORDER_NEW_OUTPUT_CONFIRMATION_TEST",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "P650-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    },
+    {
+      "critical": true,
+      "cross_document": false,
+      "relation": "OUTPUT_BY",
+      "source": "S4650_CH4_EX9_SALES_ORDER_BA00_OUTPUT_TEST",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "BA00",
+      "status": "RESOLVED",
+      "target": "S4650_CH4_EX9_OUTPUT_DETERMINATION_BA00",
+      "target_courses": [
+        "S4650"
+      ],
+      "target_type": "OUTPUT_DETERMINATION"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "SOLD_TO_PARTY",
+      "source": "S4650_CH4_EX9_SALES_ORDER_BA00_OUTPUT_TEST",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "C650-A##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "BUSINESS_PARTNER"
+    },
+    {
+      "critical": false,
+      "cross_document": false,
+      "relation": "USES_MATERIAL",
+      "source": "S4650_CH4_EX9_SALES_ORDER_BA00_OUTPUT_TEST",
+      "source_courses": [
+        "S4650"
+      ],
+      "source_phrase": "P650-1##",
+      "status": "UNRESOLVED",
+      "target": null,
+      "target_courses": [],
+      "target_type": "MATERIAL"
+    }
+  ],
+  "nodes": [
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH10_EX35_OUTBOUND_DELIVERY_FROM_RESOLVED_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH10_EX35_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH3_EX3_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH3_EX5_OUTBOUND_DELIVERY_FROM_EX3",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4600_CH3_EX5_SHIPPING_POINT_Z0-GROUP",
+      "object_type": "SHIPPING_POINT",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH3_EX6_GOODS_ISSUE_FROM_DELIVERY",
+      "object_type": "GOODS_ISSUE",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH3_EX7_BILLING_STANDARD_FROM_EX5",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "REFERENCE_DATA",
+      "object_id": "S4600_CH3_EX8_PAYMENT_REFERENCE_FOR_EX7",
+      "object_type": "PAYMENT_REFERENCE",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH4_EX10_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4600_CH4_EX11_MATERIAL_T-MS4-GROUP",
+      "object_type": "MATERIAL",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4600_CH4_EX11_PRICING_CONDITION_PR00_T-MS4",
+      "object_type": "PRICING_CONDITION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH4_EX11_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4600_CH4_EX12_CUSTOMER_MATERIAL_INFO_T-S50A_T-MS1",
+      "object_type": "CUSTOMER_MATERIAL_INFO",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH4_EX12_OUTBOUND_DELIVERY_FROM_EX12_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH4_EX12_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4600_CH4_EX13_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL",
+      "object_type": "PRICING_CONDITION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH4_EX13_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4600_CH4_EX14_PRICING_CONDITION_K007_CUSTOMER_VALUE_SCALE",
+      "object_type": "PRICING_CONDITION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH4_EX14_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH4_EX16_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH4_EX17_OUTBOUND_DELIVERY_FROM_EX17_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH4_EX17_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4600_CH4_EX9_BUSINESS_PARTNER_T-CUS-GROUP",
+      "object_type": "BUSINESS_PARTNER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH5_EX18_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH5_EX19_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4600_CH6_EX20_BUSINESS_PARTNER_T-S50B-GROUP",
+      "object_type": "BUSINESS_PARTNER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4600_CH6_EX20_MATERIAL_T-MS3-GROUP",
+      "object_type": "MATERIAL",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH6_EX21_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH6_EX22_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH6_EX23_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH8_EX28_INQUIRY_DO",
+      "object_type": "INQUIRY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH8_EX28_QUOTATION_OF",
+      "object_type": "QUOTATION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH8_EX28_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH8_EX30_GOODS_ISSUE_FROM_DELIVERY",
+      "object_type": "GOODS_ISSUE",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4600_CH8_EX30_MATERIAL_T-F1-GROUP",
+      "object_type": "MATERIAL",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH8_EX30_OUTBOUND_DELIVERY_FROM_EX30_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH8_EX30_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH8_EX31_BILLING_SERVICE_FROM_ORDER",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4600_CH8_EX31_MATERIAL_T-D1-GROUP",
+      "object_type": "MATERIAL",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH8_EX31_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH9_EX32_BILLING_CREDIT_MEMO_FROM_REQUEST",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH9_EX32_BILLING_STANDARD_FROM_DELIVERY",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH9_EX32_CREDIT_MEMO_REQUEST_DNC",
+      "object_type": "CREDIT_MEMO_REQUEST",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH9_EX32_GOODS_ISSUE_FROM_DELIVERY",
+      "object_type": "GOODS_ISSUE",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH9_EX32_OUTBOUND_DELIVERY_FROM_EX32_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH9_EX32_SALES_ORDER_STANDARD",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH9_EX33_BILLING_CANCELLATION_OF_CREDIT_MEMO",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH9_EX34_BILLING_CREDIT_MEMO_FROM_RETURN",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH9_EX34_OUTBOUND_DELIVERY_RETURN_FROM_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4600_CH9_EX34_RETURN_ORDER_RE",
+      "object_type": "RETURN_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4600_SHARED_DISTRIBUTION_CHANNEL_10",
+      "object_type": "DISTRIBUTION_CHANNEL",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4600_SHARED_SALES_AREA_1010_10_00",
+      "object_type": "SALES_AREA",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4600"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4600_SHARED_SALES_DIVISION_00",
+      "object_type": "SALES_DIVISION",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4600",
+        "S4650"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4600_SHARED_SALES_ORGANIZATION_1010",
+      "object_type": "SALES_ORGANIZATION",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4600",
+        "S4650"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4610_CH1_EX2_OUTBOUND_DELIVERY_EXISTING_BY_CUSTOMER_REFERENCE",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4610_CH2_EX3_SHIPPING_POINT_Y0-GROUP",
+      "object_type": "SHIPPING_POINT",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4610_CH2_EX3_SHIPPING_POINT_Z0-GROUP",
+      "object_type": "SHIPPING_POINT",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4610_CH3_EX4_COPY_CONTROL_CDCL_TO_ZLGROUP",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4610_CH3_EX4_COPY_CONTROL_ZAGROUP_TO_ZLGROUP",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4610_CH3_EX4_OUTBOUND_DELIVERY_EXPRESS_FROM_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4610_CH3_EX4_SALES_ORDER_ZA-GROUP",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4610_CH4_EX7_SALES_ORDER_ZA-GROUP",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4610_CH5_EX10_OUTBOUND_DELIVERY_FROM_ORDER",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4610_CH5_EX10_SALES_ORDER_ZA-GROUP",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4610_CH5_EX11_WAREHOUSE_TASK_OUTBOUND",
+      "object_type": "WAREHOUSE_TASK",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4610_CH5_EX12_GOODS_ISSUE_FROM_EX10_DELIVERY",
+      "object_type": "GOODS_ISSUE",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4610_CH5_EX13_INBOUND_DELIVERY_FROM_PURCHASE_ORDER",
+      "object_type": "INBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "REFERENCE_DATA",
+      "object_id": "S4610_CH5_EX13_PURCHASE_ORDER_REFERENCE_EXTERNAL_PROCUREMENT",
+      "object_type": "PURCHASE_ORDER_REFERENCE",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4610_CH5_EX14_INBOUND_DELIVERY_FROM_PURCHASE_ORDER",
+      "object_type": "INBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "REFERENCE_DATA",
+      "object_id": "S4610_CH5_EX14_PURCHASE_ORDER_REFERENCE_EXTERNAL_PROCUREMENT",
+      "object_type": "PURCHASE_ORDER_REFERENCE",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4610_CH5_EX14_WAREHOUSE_TASK_INBOUND",
+      "object_type": "WAREHOUSE_TASK",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "REFERENCE_DATA",
+      "object_id": "S4610_SHARED_PLANT_1010",
+      "object_type": "PLANT",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "REFERENCE_DATA",
+      "object_id": "S4610_SHARED_STORAGE_LOCATION_101C",
+      "object_type": "STORAGE_LOCATION",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "REFERENCE_DATA",
+      "object_id": "S4610_SHARED_STORAGE_LOCATION_101D",
+      "object_type": "STORAGE_LOCATION",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "REFERENCE_DATA",
+      "object_id": "S4610_SHARED_WAREHOUSE_NUMBER_1010",
+      "object_type": "WAREHOUSE_NUMBER",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4610"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH10_EX13_BILLING_FI_REFERENCE",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH10_EX13_BILLING_POSTING_BLOCK",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH10_EX13_OUTBOUND_DELIVERY_FI_REFERENCE",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH10_EX13_OUTBOUND_DELIVERY_POSTING_BLOCK",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH10_EX13_SALES_ORDER_FI_REFERENCE",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH10_EX13_SALES_ORDER_POSTING_BLOCK",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH1_EX1_BILLING_IMPORTED_A3",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH3_EX3_BILLING_F2_FROM_IMPORTED_DELIVERY",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH3_EX3_BILLING_FAIR",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4615_CH3_EX3_COPY_CONTROL_FAIR_BILLING",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH3_EX3_OUTBOUND_DELIVERY_FAIR",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH3_EX3_SALES_ORDER_FAIR",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH4_EX4_BILLING_CREDIT_MEMO",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH4_EX4_BILLING_ORIGINAL_F2",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4615_CH4_EX4_COPY_CONTROL_F2_TO_RK",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH4_EX5_BILLING_CASH_SALE",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH4_EX5_BILLING_PRO_FORMA",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH4_EX5_OUTBOUND_DELIVERY_CASH_SALE",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH4_EX5_SALES_ORDER_PRO_FORMA",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH5_EX6_BILLING_F1_OVERRIDE",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH5_EX6_BILLING_FAIR_FREIGHT",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH5_EX6_OUTBOUND_DELIVERY_FAIR_FREIGHT",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH5_EX6_SALES_ORDER_FAIR_FREIGHT",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH6_EX7_BILLING_FIORI_APP_CANCELLED",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH6_EX7_BILLING_FIORI_APP_POSTED",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH6_EX7_BILLING_MONTH_END",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH6_EX7_OUTBOUND_DELIVERY_MONTH_END",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH6_EX7_SALES_ORDER_FIORI_APP_FINAL",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH6_EX7_SALES_ORDER_MONTH_END",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST_SOURCE_A11",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH7_DEMO_INVOICE_LIST_BILLING_INVOICE_LIST_SOURCE_A12",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH7_EX9_BILLING_SPLIT_1",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH7_EX9_BILLING_SPLIT_2",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_BILLING_INSTALLMENT",
+      "object_type": "BILLING",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_OUTBOUND_DELIVERY_INSTALLMENT",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH8_DEMO_INSTALLMENT_PAYMENTS_SALES_ORDER_INSTALLMENT",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH8_EX10_BILLING_PERIODIC_FIRST_PERIOD",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH8_EX11_BILLING_DOWN_PAYMENT_REQUEST",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH8_EX11_BILLING_FIRST_PARTIAL",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "REFERENCE_DATA",
+      "object_id": "S4615_CH8_EX11_PAYMENT_REFERENCE_DOWN_PAYMENT",
+      "object_type": "PAYMENT_REFERENCE",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH8_EX11_SALES_ORDER_DOWN_PAYMENT",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4615_CH9_EX12_ACCOUNT_DETERMINATION_AFFILIATED_REVENUE",
+      "object_type": "ACCOUNT_DETERMINATION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH9_EX12_BILLING_ACCOUNT_DETERMINATION_TEST",
+      "object_type": "BILLING",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH9_EX12_OUTBOUND_DELIVERY_ACCOUNT_DETERMINATION_TEST",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4615_CH9_EX12_SALES_ORDER_ACCOUNT_DETERMINATION_TEST",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "REFERENCE_DATA",
+      "object_id": "S4615_SHARED_COMPANY_CODE_1010",
+      "object_type": "COMPANY_CODE",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4615"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4620_CH1_EX1_PRICING_CONDITION_K007_CUSTOMER_VALUE_SCALE",
+      "object_type": "PRICING_CONDITION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4620_CH1_EX1_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL_SCALE",
+      "object_type": "PRICING_CONDITION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4620_CH1_EX1_PRICING_CONDITION_PR00_MATERIAL",
+      "object_type": "PRICING_CONDITION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH1_EX1_SALES_ORDER_WITH_MATERIAL_PRICE",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH1_EX1_SALES_ORDER_WITH_SCALES",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4620_CH1_EX2_CONDITION_TYPE_K007",
+      "object_type": "CONDITION_TYPE",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH1_EX4_SALES_ORDER_MANUAL_ADJUSTMENT",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH1_EX5_SALES_ORDER_HEADER_CONDITIONS",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH1_EX6_SALES_ORDER_REPRICING_TYPE_B",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4620_CH2_EX7_ACCESS_SEQUENCE_PR02",
+      "object_type": "ACCESS_SEQUENCE",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4620_CH2_EX7_CONDITION_TABLE_304",
+      "object_type": "CONDITION_TABLE",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4620_CH2_EX7_CONDITION_TABLE_305",
+      "object_type": "CONDITION_TABLE",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4620_CH2_EX7_CONDITION_TABLE_306",
+      "object_type": "CONDITION_TABLE",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4620_CH2_EX7_CONDITION_TYPE_PR00",
+      "object_type": "CONDITION_TYPE",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4620_CH2_EX7_PRICING_PROCEDURE_RVAA01",
+      "object_type": "PRICING_PROCEDURE",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4620_CH2_EX8_PRICING_PROCEDURE_DETERMINATION_RVAA01",
+      "object_type": "PRICING_PROCEDURE_DETERMINATION",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4620_CH2_EX9_ACCESS_SEQUENCE_ZA_GROUP",
+      "object_type": "ACCESS_SEQUENCE",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4620_CH2_EX9_CONDITION_TABLE_7_GROUP",
+      "object_type": "CONDITION_TABLE",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4620_CH2_EX9_CONDITION_TYPE_ZF_GROUP",
+      "object_type": "CONDITION_TYPE",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4620_CH2_EX9_PRICING_CONDITION_ZF_GROUP_FREIGHT",
+      "object_type": "PRICING_CONDITION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4620_CH2_EX9_PRICING_PROCEDURE_DETERMINATION_Z_GROUP",
+      "object_type": "PRICING_PROCEDURE_DETERMINATION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4620_CH2_EX9_PRICING_PROCEDURE_Z_GROUP_PRC",
+      "object_type": "PRICING_PROCEDURE",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH2_EX9_SALES_ORDER_CUSTOM_PRICING_MODEL",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4620_CH3_EX12_PRICING_CONDITION_PR00_P620_2_NEXT_YEAR",
+      "object_type": "PRICING_CONDITION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4620_CH3_EX12_PRICING_CONDITION_PR00_P620_3_NEXT_YEAR",
+      "object_type": "PRICING_CONDITION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4620_CH3_EX14_PRICING_CONDITION_PR00_CUSTOMER_COPY",
+      "object_type": "PRICING_CONDITION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4620_CH4_EX15_CONDITION_TYPE_ZW_GROUP",
+      "object_type": "CONDITION_TYPE",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4620_CH4_EX15_PRICING_CONDITION_ZW_GROUP_WEIGHT_SCALE",
+      "object_type": "PRICING_CONDITION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH4_EX15_SALES_ORDER_WEIGHT_BASED_FREIGHT",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH4_EX16_SALES_ORDER_FREIGHT_EXCLUSION",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4620_CH4_EX17_CONDITION_TYPE_K005",
+      "object_type": "CONDITION_TYPE",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4620_CH4_EX17_PRICING_CONDITION_K005_FIRST_ORDER",
+      "object_type": "PRICING_CONDITION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH4_EX17_SALES_ORDER_FIRST_K005",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH4_EX17_SALES_ORDER_QUANTITY_LIMIT_K005",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH4_EX17_SALES_ORDER_SECOND_K005",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH5_EX18_SALES_ORDER_HEADER_NET_VALUE",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH5_EX18_SALES_ORDER_ITEM_NET_PRICE",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4620_CH5_EX19_CUSTOMER_HIERARCHY_TOPCO_WESTERN_EUROPE",
+      "object_type": "CUSTOMER_HIERARCHY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4620_CH5_EX19_PRICING_CONDITION_HI02_HIERARCHY_MATERIAL",
+      "object_type": "PRICING_CONDITION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH5_EX19_SALES_ORDER_HIERARCHY_PRICING",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4620_CH6_EX20_PRICING_CONDITION_KA00_SALES_DEAL",
+      "object_type": "PRICING_CONDITION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH6_EX20_SALES_ORDER_SALES_DEAL",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4620_CH7_EX21_PRICING_PROCEDURE_A10005",
+      "object_type": "PRICING_PROCEDURE",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4620_CH7_EX21_PRICING_PROCEDURE_DETERMINATION_SETTLEMENT",
+      "object_type": "PRICING_PROCEDURE_DETERMINATION",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH7_EX22_SALES_ORDER_BUSINESS_VOLUME_1",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH7_EX22_SALES_ORDER_BUSINESS_VOLUME_2",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4620_CH7_EX23_CONDITION_CONTRACT_SALES_REBATE",
+      "object_type": "CONDITION_CONTRACT",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH7_EX24_SETTLEMENT_DOCUMENT_DELTA_ACCRUAL",
+      "object_type": "SETTLEMENT_DOCUMENT",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH7_EX25_SETTLEMENT_DOCUMENT_PARTIAL_CREDIT",
+      "object_type": "SETTLEMENT_DOCUMENT",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH7_EX26_SALES_ORDER_ADDITIONAL_BUSINESS_VOLUME",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4620_CH7_EX27_SETTLEMENT_DOCUMENT_FINAL_CREDIT",
+      "object_type": "SETTLEMENT_DOCUMENT",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4620"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4650_CH1_EX1_DISTRIBUTION_CHANNEL_GROUP",
+      "object_type": "DISTRIBUTION_CHANNEL",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4650_CH1_EX1_SALES_AREA_GROUP_00",
+      "object_type": "SALES_AREA",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4650_CH1_EX1_SALES_AREA_GROUP_03",
+      "object_type": "SALES_AREA",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4650_CH1_EX1_SALES_DIVISION_03",
+      "object_type": "SALES_DIVISION",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4650_CH1_EX2_SALES_ORDER_COMMON_MASTER_DATA_TEST",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4650_CH1_EX2_SHARED_MASTER_DATA_ASSIGNMENT_CHANNEL_10",
+      "object_type": "SHARED_MASTER_DATA_ASSIGNMENT",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4650_CH2_EX3_COPY_CONTROL_OF_TO_ZA_GROUP",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4650_CH2_EX3_COPY_CONTROL_ZQ_GROUP_TO_OF",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_DIFFERENT_CUSTOMER",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_SAME_CUSTOMER",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4650_CH2_EX4_COPY_CONTROL_ZA_GROUP_TO_LF",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4650_CH2_EX4_OUTBOUND_DELIVERY_HEADER_CONTROL_TEST",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4650_CH2_EX4_OUTBOUND_DELIVERY_ITEM_CONTROL_TEST",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4650_CH2_EX5_COPY_CONTROL_LF_TO_F2",
+      "object_type": "COPY_CONTROL",
+      "readiness_status": "READY",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4650_CH3_EX6_TEXT_DETERMINATION_MATERIAL_SALES_TEXT",
+      "object_type": "TEXT_DETERMINATION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4650_CH3_EX7_SALES_ORDER_HEADER_TEXT_FROM_QUOTATION",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4650_CH3_EX7_TEXT_DETERMINATION_HEADER_GROUP",
+      "object_type": "TEXT_DETERMINATION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4650_CH4_EX10_OUTBOUND_DELIVERY_ZLD0_TEST",
+      "object_type": "OUTBOUND_DELIVERY",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4650_CH4_EX10_OUTPUT_DETERMINATION_ZLD0",
+      "object_type": "OUTPUT_DETERMINATION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4650_CH4_EX10_SALES_ORDER_ZLD0_DELIVERY_SOURCE",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4650_CH4_EX11_OUTPUT_DETERMINATION_ORDER_CONFIRMATION_GROUP",
+      "object_type": "OUTPUT_DETERMINATION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4650_CH4_EX11_SALES_ORDER_NEW_OUTPUT_CONFIRMATION_TEST",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "MASTER_DATA",
+      "object_id": "S4650_CH4_EX9_BUSINESS_PARTNER_C650_A_GROUP",
+      "object_type": "BUSINESS_PARTNER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4650_CH4_EX9_OUTPUT_DETERMINATION_BA00",
+      "object_type": "OUTPUT_DETERMINATION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "TRANSACTION",
+      "object_id": "S4650_CH4_EX9_SALES_ORDER_BA00_OUTPUT_TEST",
+      "object_type": "SALES_ORDER",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4650_CH5_EX12_EXTENSION_CONFIGURATION_SALES_ORDER_LIST_LAYOUT",
+      "object_type": "EXTENSION_CONFIGURATION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    },
+    {
+      "classification": "CUSTOMIZING",
+      "object_id": "S4650_CH5_EX13_EXTENSION_CONFIGURATION_MATERIAL_FIELD_SELECTION",
+      "object_type": "EXTENSION_CONFIGURATION",
+      "readiness_status": "BLOCKED",
+      "source_courses": [
+        "S4650"
+      ]
+    }
+  ],
+  "summary": {
+    "cross_document_resolved": 1,
+    "edge_count": 319,
+    "node_count": 201,
+    "resolved": 169,
+    "unresolved": 150
+  }
+}

@@ -1,0 +1,805 @@
+{
+  "analysis_id": "PHASE5A_SOURCE_ANALYSIS_1010",
+  "automatic_selection": null,
+  "live_constraints": {
+    "allowed_actions": [
+      "STATUS",
+      "INSPECT"
+    ],
+    "forbidden_actions": [
+      "SAVE",
+      "CREATE",
+      "COPY",
+      "DELETE",
+      "NEW_ENTRIES",
+      "TRANSPORT",
+      "SET_TEXT",
+      "POST",
+      "PATCH",
+      "PUT",
+      "RFC",
+      "BAPI_WRITE"
+    ],
+    "operator_navigation_required": true
+  },
+  "live_read_only_required": true,
+  "live_reason": "Summary snapshots expose only identifiers and some descriptions; detail attributes, mandatory-field behavior, country/currency fit, and assignment context are not observable.",
+  "mode": "READ_ONLY_SOURCE_ANALYSIS",
+  "objects": {
+    "COMPANY_CODE_1010": {
+      "candidates": [
+        {
+          "automatically_selected": false,
+          "candidate_id": "AE01",
+          "confidence": "MEDIUM",
+          "evidence": {
+            "fields": [
+              "company_code",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "company_code": "AE01",
+            "description": "Country Template AE"
+          },
+          "rank_tier": 1,
+          "ranking_basis": "Observed description explicitly identifies a country template.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "AR01",
+          "confidence": "MEDIUM",
+          "evidence": {
+            "fields": [
+              "company_code",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "company_code": "AR01",
+            "description": "Country Template AR"
+          },
+          "rank_tier": 1,
+          "ranking_basis": "Observed description explicitly identifies a country template.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "AT01",
+          "confidence": "MEDIUM",
+          "evidence": {
+            "fields": [
+              "company_code",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "company_code": "AT01",
+            "description": "Country Template AT"
+          },
+          "rank_tier": 1,
+          "ranking_basis": "Observed description explicitly identifies a country template.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "AU01",
+          "confidence": "MEDIUM",
+          "evidence": {
+            "fields": [
+              "company_code",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "company_code": "AU01",
+            "description": "Country Template AU"
+          },
+          "rank_tier": 1,
+          "ranking_basis": "Observed description explicitly identifies a country template.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "BE01",
+          "confidence": "MEDIUM",
+          "evidence": {
+            "fields": [
+              "company_code",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "company_code": "BE01",
+            "description": "Country Template BE"
+          },
+          "rank_tier": 1,
+          "ranking_basis": "Observed description explicitly identifies a country template.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "BR01",
+          "confidence": "MEDIUM",
+          "evidence": {
+            "fields": [
+              "company_code",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "company_code": "BR01",
+            "description": "Country Template BR"
+          },
+          "rank_tier": 1,
+          "ranking_basis": "Observed description explicitly identifies a country template.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "CH01",
+          "confidence": "MEDIUM",
+          "evidence": {
+            "fields": [
+              "company_code",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "company_code": "CH01",
+            "description": "Country Template CH"
+          },
+          "rank_tier": 1,
+          "ranking_basis": "Observed description explicitly identifies a country template.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "CL01",
+          "confidence": "MEDIUM",
+          "evidence": {
+            "fields": [
+              "company_code",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "company_code": "CL01",
+            "description": "Country Template CL"
+          },
+          "rank_tier": 1,
+          "ranking_basis": "Observed description explicitly identifies a country template.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "1710",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "company_code",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001"
+          },
+          "notes": "1710 is observed but explicitly not a default template.",
+          "observed_attributes": {
+            "company_code": "1710",
+            "description": "Company Code 1710"
+          },
+          "rank_tier": 2,
+          "ranking_basis": "Existing described Company Code, but no evidence that it is a reusable template.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "2000",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "company_code",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "company_code": "2000",
+            "description": "BETA ENERGY LTD"
+          },
+          "rank_tier": 2,
+          "ranking_basis": "Existing described Company Code, but no evidence that it is a reusable template.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "3000",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "company_code",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "company_code": "3000",
+            "description": "GAMMA SERVICES INC"
+          },
+          "rank_tier": 2,
+          "ranking_basis": "Existing described Company Code, but no evidence that it is a reusable template.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "4000",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "company_code",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "company_code": "4000",
+            "description": "DELTA JV OIL PARTNERS"
+          },
+          "rank_tier": 2,
+          "ranking_basis": "Existing described Company Code, but no evidence that it is a reusable template.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "ATS0",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "company_code",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "company_code": "ATS0",
+            "description": "Papirus france"
+          },
+          "rank_tier": 2,
+          "ranking_basis": "Existing described Company Code, but no evidence that it is a reusable template.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "BRCI",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "company_code",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "company_code": "BRCI",
+            "description": "BRASSIVOIRE"
+          },
+          "rank_tier": 2,
+          "ranking_basis": "Existing described Company Code, but no evidence that it is a reusable template.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "BRCO",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "company_code",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "company_code": "BRCO",
+            "description": "BRASCO"
+          },
+          "rank_tier": 2,
+          "ranking_basis": "Existing described Company Code, but no evidence that it is a reusable template.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "BRLI",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "company_code",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "company_code": "BRLI",
+            "description": "BRALIMA"
+          },
+          "rank_tier": 2,
+          "ranking_basis": "Existing described Company Code, but no evidence that it is a reusable template.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "CA01",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "company_code",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "company_code": "CA01",
+            "description": "EMC-Filiale Canadienne"
+          },
+          "rank_tier": 2,
+          "ranking_basis": "Existing described Company Code, but no evidence that it is a reusable template.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "CA02",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "company_code",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "company_code": "CA02",
+            "description": "CAN Tech Solutions LTd."
+          },
+          "rank_tier": 2,
+          "ranking_basis": "Existing described Company Code, but no evidence that it is a reusable template.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "CAN1",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "company_code",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "company_code": "CAN1",
+            "description": "CAN Tech Solutions LTd."
+          },
+          "rank_tier": 2,
+          "ranking_basis": "Existing described Company Code, but no evidence that it is a reusable template.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "CAVA",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "company_code",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_T001"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "company_code": "CAVA",
+            "description": "CAVANO LTD"
+          },
+          "rank_tier": 2,
+          "ranking_basis": "Existing described Company Code, but no evidence that it is a reusable template.",
+          "suitability": "NOT_DETERMINED"
+        }
+      ],
+      "current_state": "MISSING",
+      "fields_requiring_live_contract_confirmation": [
+        "all additional fields exposed by the V_T001 detail screen",
+        "which fields are mandatory in TEST 600"
+      ],
+      "known_target_values": {
+        "company_code": "1010"
+      },
+      "missing_required_values": [
+        {
+          "field": "approved_source_candidate_or_manual_creation_decision",
+          "status": "BLOCKED_NEEDS_SOURCE"
+        },
+        {
+          "field": "company_name",
+          "status": "BLOCKED_NEEDS_VALUE"
+        },
+        {
+          "field": "city",
+          "status": "BLOCKED_NEEDS_VALUE"
+        },
+        {
+          "field": "country",
+          "status": "BLOCKED_NEEDS_VALUE"
+        },
+        {
+          "field": "currency",
+          "status": "BLOCKED_NEEDS_VALUE"
+        },
+        {
+          "field": "language",
+          "status": "BLOCKED_NEEDS_VALUE"
+        }
+      ],
+      "status": "BLOCKED_NEEDS_SOURCE"
+    },
+    "SALES_ORGANIZATION_1010": {
+      "candidates": [
+        {
+          "automatically_selected": false,
+          "candidate_id": "13OC",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "sales_organization",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/020_sales_organization.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_TVKO"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "description": "Org. Cciale WA11",
+            "sales_organization": "13OC"
+          },
+          "rank_tier": 1,
+          "ranking_basis": "Description is observable, but no template designation or target-fit attributes are available.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "14OC",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "sales_organization",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/020_sales_organization.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_TVKO"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "description": "14_Org_Cciale",
+            "sales_organization": "14OC"
+          },
+          "rank_tier": 1,
+          "ranking_basis": "Description is observable, but no template designation or target-fit attributes are available.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "CI10",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "sales_organization",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/020_sales_organization.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_TVKO"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "description": "DEFRAN CI",
+            "sales_organization": "CI10"
+          },
+          "rank_tier": 1,
+          "ranking_basis": "Description is observable, but no template designation or target-fit attributes are available.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "CM10",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "sales_organization",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/020_sales_organization.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_TVKO"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "description": "DEFRAN CM",
+            "sales_organization": "CM10"
+          },
+          "rank_tier": 1,
+          "ranking_basis": "Description is observable, but no template designation or target-fit attributes are available.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "FR00",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "sales_organization",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/020_sales_organization.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_TVKO"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "description": "Org. Cciale WA11",
+            "sales_organization": "FR00"
+          },
+          "rank_tier": 1,
+          "ranking_basis": "Description is observable, but no template designation or target-fit attributes are available.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "FR10",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "sales_organization",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/020_sales_organization.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_TVKO"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "description": "Org. Cciale WA11",
+            "sales_organization": "FR10"
+          },
+          "rank_tier": 1,
+          "ranking_basis": "Description is observable, but no template designation or target-fit attributes are available.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "GN10",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "sales_organization",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/020_sales_organization.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_TVKO"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "description": "DEFRAN GN",
+            "sales_organization": "GN10"
+          },
+          "rank_tier": 1,
+          "ranking_basis": "Description is observable, but no template designation or target-fit attributes are available.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "SCSO",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "sales_organization",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/020_sales_organization.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_TVKO"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "description": "SALES ORG SCHIBA SAC",
+            "sales_organization": "SCSO"
+          },
+          "rank_tier": 1,
+          "ranking_basis": "Description is observable, but no template designation or target-fit attributes are available.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "W100",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "sales_organization",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/020_sales_organization.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_TVKO"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "description": "Org. Cciale WA11",
+            "sales_organization": "W100"
+          },
+          "rank_tier": 1,
+          "ranking_basis": "Description is observable, but no template designation or target-fit attributes are available.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "0001",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "sales_organization",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/020_sales_organization.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_TVKO"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "description": null,
+            "sales_organization": "0001"
+          },
+          "rank_tier": 2,
+          "ranking_basis": "Only the identifier is observable; no template designation or comparable attributes are available.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "0003",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "sales_organization",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/020_sales_organization.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_TVKO"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "description": null,
+            "sales_organization": "0003"
+          },
+          "rank_tier": 2,
+          "ranking_basis": "Only the identifier is observable; no template designation or comparable attributes are available.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "1710",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "sales_organization",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/020_sales_organization.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_TVKO"
+          },
+          "notes": "1710 is observed but explicitly not a default template.",
+          "observed_attributes": {
+            "description": null,
+            "sales_organization": "1710"
+          },
+          "rank_tier": 2,
+          "ranking_basis": "Only the identifier is observable; no template designation or comparable attributes are available.",
+          "suitability": "NOT_DETERMINED"
+        },
+        {
+          "automatically_selected": false,
+          "candidate_id": "CD10",
+          "confidence": "LOW",
+          "evidence": {
+            "fields": [
+              "sales_organization",
+              "description"
+            ],
+            "source": "runtime/sap_discovery/phase4c/snapshots/020_sales_organization.json",
+            "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL0ORGTCTRL_V_TVKO"
+          },
+          "notes": null,
+          "observed_attributes": {
+            "description": null,
+            "sales_organization": "CD10"
+          },
+          "rank_tier": 2,
+          "ranking_basis": "Only the identifier is observable; no template designation or comparable attributes are available.",
+          "suitability": "NOT_DETERMINED"
+        }
+      ],
+      "current_state": "MISSING",
+      "fields_requiring_live_contract_confirmation": [
+        "all additional fields exposed by the V_TVKO detail screen",
+        "which fields are mandatory in TEST 600"
+      ],
+      "known_target_values": {
+        "sales_organization": "1010"
+      },
+      "missing_required_values": [
+        {
+          "field": "approved_source_candidate_or_manual_creation_decision",
+          "status": "BLOCKED_NEEDS_SOURCE"
+        },
+        {
+          "field": "description",
+          "status": "BLOCKED_NEEDS_VALUE"
+        },
+        {
+          "field": "statistics_currency",
+          "status": "BLOCKED_NEEDS_VALUE"
+        }
+      ],
+      "status": "BLOCKED_NEEDS_SOURCE"
+    }
+  },
+  "ranking_scope": "evidence completeness only; not functional suitability",
+  "sap_connection_performed": false,
+  "source_artifacts": [
+    {
+      "path": "runtime/sap_discovery/phase4c/snapshots/008_company_code.json",
+      "sha256": "71e8503cc16fa6e5e75df3c77af36d27d28d4aed804b705be716297be55e5fcf"
+    },
+    {
+      "path": "runtime/sap_discovery/phase4c/snapshots/020_sales_organization.json",
+      "sha256": "d0607fb6a5664c5ff28d3e156a00be4f8c91f1244e288ffcd547d56c6177fbd8"
+    },
+    {
+      "path": "data/provisioning/phase5_prepare_1010.json",
+      "sha256": "05d0c53630c1843d2dab05cfeeb97bd8c7d28945672dbaf41f906339e364541e"
+    }
+  ]
+}

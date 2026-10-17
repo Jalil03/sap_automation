@@ -1,0 +1,49 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Environment / credentials
+.env
+.env.*
+*.env
+credentials*
+secrets*
+config/local*
+config/credentials*
+
+# SAP runtime
+runtime/
+logs/
+snapshots/
+
+# IDE
+.vscode/
+.idea/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Generated files
+*.log
+*.tmp
+# Temporary / runtime state
+tmp/
+var/
+
+# Original SAP training documents
+docs/source/*.pdf
+
+# Live SAP evidence
+evidence/sap_live/
+
+# Local SAP inventory / discovery files
+inputs/sap_inventory/
+
+# Local DBs
+*.sqlite
+*.sqlite3
+*.db

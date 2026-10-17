@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BUSINESS_PARTNER",
+  "allOf": [
+    {
+      "$ref": "../common/canonical_object.schema.json"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "object_type": {
+      "const": "BUSINESS_PARTNER"
+    },
+    "classification": {
+      "const": "MASTER_DATA"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "partner_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sales_areas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "grouping": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "addresses": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "shipping_conditions": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "delivering_plant": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "incoterms": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "incoterms_location": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "payment_terms": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "account_assignment_group": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "customer_pricing_procedure": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tax_classifications": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "company_code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reconciliation_account": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "partner_functions": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "fax_number": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

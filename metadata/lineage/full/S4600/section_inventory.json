@@ -1,0 +1,481 @@
+{
+  "sections": [
+    {
+      "chapter": 1,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 1,
+      "exercise_page": 21,
+      "object_ids": [
+        "S4600_SHARED_DISTRIBUTION_CHANNEL_10",
+        "S4600_SHARED_SALES_AREA_1010_10_00",
+        "S4600_SHARED_SALES_DIVISION_00",
+        "S4600_SHARED_SALES_ORGANIZATION_1010"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH1_EX1",
+      "solution_page": 22
+    },
+    {
+      "chapter": 2,
+      "decision": "SKIP",
+      "exercise": 2,
+      "exercise_page": 39,
+      "object_ids": [],
+      "reason": "Theory-only organizational questions; no concrete instance.",
+      "scenario_id": "S4600_CH2_EX2",
+      "solution_page": 42
+    },
+    {
+      "chapter": 3,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 3,
+      "exercise_page": 57,
+      "object_ids": [
+        "S4600_CH3_EX3_SALES_ORDER_STANDARD"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH3_EX3",
+      "solution_page": 58
+    },
+    {
+      "chapter": 3,
+      "decision": "VERIFY_ONLY",
+      "exercise": 4,
+      "exercise_page": 63,
+      "object_ids": [
+        "S4600_CH3_EX3_SALES_ORDER_STANDARD"
+      ],
+      "reason": "Display/solution evidence enriches Exercise 3; no duplicate object created.",
+      "scenario_id": "S4600_CH3_EX4",
+      "solution_page": 64
+    },
+    {
+      "chapter": 3,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 5,
+      "exercise_page": 71,
+      "object_ids": [
+        "S4600_CH3_EX5_OUTBOUND_DELIVERY_FROM_EX3",
+        "S4600_CH3_EX5_SHIPPING_POINT_Z0-GROUP"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH3_EX5",
+      "solution_page": 72
+    },
+    {
+      "chapter": 3,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 6,
+      "exercise_page": 79,
+      "object_ids": [
+        "S4600_CH3_EX6_GOODS_ISSUE_FROM_DELIVERY"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH3_EX6",
+      "solution_page": 80
+    },
+    {
+      "chapter": 3,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 7,
+      "exercise_page": 87,
+      "object_ids": [
+        "S4600_CH3_EX7_BILLING_STANDARD_FROM_EX5"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH3_EX7",
+      "solution_page": 88
+    },
+    {
+      "chapter": 3,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 8,
+      "exercise_page": 91,
+      "object_ids": [
+        "S4600_CH3_EX8_PAYMENT_REFERENCE_FOR_EX7"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH3_EX8",
+      "solution_page": 92
+    },
+    {
+      "chapter": 4,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 9,
+      "exercise_page": 105,
+      "object_ids": [
+        "S4600_CH4_EX9_BUSINESS_PARTNER_T-CUS-GROUP"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH4_EX9",
+      "solution_page": 107
+    },
+    {
+      "chapter": 4,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 10,
+      "exercise_page": 111,
+      "object_ids": [
+        "S4600_CH4_EX10_SALES_ORDER_STANDARD"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH4_EX10",
+      "solution_page": 113
+    },
+    {
+      "chapter": 4,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 11,
+      "exercise_page": 119,
+      "object_ids": [
+        "S4600_CH4_EX11_MATERIAL_T-MS4-GROUP",
+        "S4600_CH4_EX11_PRICING_CONDITION_PR00_T-MS4",
+        "S4600_CH4_EX11_SALES_ORDER_STANDARD"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH4_EX11",
+      "solution_page": 121
+    },
+    {
+      "chapter": 4,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 12,
+      "exercise_page": 129,
+      "object_ids": [
+        "S4600_CH4_EX12_CUSTOMER_MATERIAL_INFO_T-S50A_T-MS1",
+        "S4600_CH4_EX12_OUTBOUND_DELIVERY_FROM_EX12_ORDER",
+        "S4600_CH4_EX12_SALES_ORDER_STANDARD"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH4_EX12",
+      "solution_page": 131
+    },
+    {
+      "chapter": 4,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 13,
+      "exercise_page": 137,
+      "object_ids": [
+        "S4600_CH4_EX13_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL",
+        "S4600_CH4_EX13_SALES_ORDER_STANDARD"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH4_EX13",
+      "solution_page": 139
+    },
+    {
+      "chapter": 4,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 14,
+      "exercise_page": 141,
+      "object_ids": [
+        "S4600_CH4_EX14_PRICING_CONDITION_K007_CUSTOMER_VALUE_SCALE",
+        "S4600_CH4_EX14_SALES_ORDER_STANDARD"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH4_EX14",
+      "solution_page": 143
+    },
+    {
+      "chapter": 4,
+      "decision": "SKIP",
+      "exercise": 15,
+      "exercise_page": 145,
+      "object_ids": [],
+      "reason": "Condition-context explanation only; no condition record instance.",
+      "scenario_id": "S4600_CH4_EX15",
+      "solution_page": 146
+    },
+    {
+      "chapter": 4,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 16,
+      "exercise_page": 155,
+      "object_ids": [
+        "S4600_CH4_EX16_SALES_ORDER_STANDARD"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH4_EX16",
+      "solution_page": 157
+    },
+    {
+      "chapter": 4,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 17,
+      "exercise_page": 161,
+      "object_ids": [
+        "S4600_CH4_EX17_OUTBOUND_DELIVERY_FROM_EX17_ORDER",
+        "S4600_CH4_EX17_SALES_ORDER_STANDARD"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH4_EX17",
+      "solution_page": 162
+    },
+    {
+      "chapter": 5,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 18,
+      "exercise_page": 179,
+      "object_ids": [
+        "S4600_CH5_EX18_SALES_ORDER_STANDARD"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH5_EX18",
+      "solution_page": 181
+    },
+    {
+      "chapter": 5,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 19,
+      "exercise_page": 189,
+      "object_ids": [
+        "S4600_CH5_EX19_SALES_ORDER_STANDARD"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH5_EX19",
+      "solution_page": 191
+    },
+    {
+      "chapter": 6,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 20,
+      "exercise_page": 205,
+      "object_ids": [
+        "S4600_CH6_EX20_BUSINESS_PARTNER_T-S50B-GROUP",
+        "S4600_CH6_EX20_MATERIAL_T-MS3-GROUP"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH6_EX20",
+      "solution_page": 206
+    },
+    {
+      "chapter": 6,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 21,
+      "exercise_page": 211,
+      "object_ids": [
+        "S4600_CH6_EX21_SALES_ORDER_STANDARD"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH6_EX21",
+      "solution_page": 212
+    },
+    {
+      "chapter": 6,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 22,
+      "exercise_page": 215,
+      "object_ids": [
+        "S4600_CH6_EX22_SALES_ORDER_STANDARD"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH6_EX22",
+      "solution_page": 217
+    },
+    {
+      "chapter": 6,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 23,
+      "exercise_page": 227,
+      "object_ids": [
+        "S4600_CH6_EX23_SALES_ORDER_STANDARD"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH6_EX23",
+      "solution_page": 229
+    },
+    {
+      "chapter": 6,
+      "decision": "SKIP",
+      "exercise": 24,
+      "exercise_page": 233,
+      "object_ids": [],
+      "reason": "Availability-control theory only; no new instance.",
+      "scenario_id": "S4600_CH6_EX24",
+      "solution_page": 234
+    },
+    {
+      "chapter": 7,
+      "decision": "SKIP",
+      "exercise": 25,
+      "exercise_page": 249,
+      "object_ids": [],
+      "reason": "Participant-run mass deliveries have blank count and identifiers; cardinality cannot be inferred.",
+      "scenario_id": "S4600_CH7_EX25",
+      "solution_page": 250
+    },
+    {
+      "chapter": 7,
+      "decision": "SKIP",
+      "exercise": 26,
+      "exercise_page": 253,
+      "object_ids": [],
+      "reason": "Mass goods issues refer to the indeterminate Exercise 25 delivery set.",
+      "scenario_id": "S4600_CH7_EX26",
+      "solution_page": 254
+    },
+    {
+      "chapter": 7,
+      "decision": "SKIP",
+      "exercise": 27,
+      "exercise_page": 259,
+      "object_ids": [],
+      "reason": "Participant-run mass billing count and identifiers are blank; no pseudo-instances created.",
+      "scenario_id": "S4600_CH7_EX27",
+      "solution_page": 261
+    },
+    {
+      "chapter": 8,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 28,
+      "exercise_page": 271,
+      "object_ids": [
+        "S4600_CH8_EX28_INQUIRY_DO",
+        "S4600_CH8_EX28_QUOTATION_OF",
+        "S4600_CH8_EX28_SALES_ORDER_STANDARD"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH8_EX28",
+      "solution_page": 273
+    },
+    {
+      "chapter": 8,
+      "decision": "SKIP",
+      "exercise": 29,
+      "exercise_page": 277,
+      "object_ids": [],
+      "reason": "Presales comparison questions only; no new instance.",
+      "scenario_id": "S4600_CH8_EX29",
+      "solution_page": 278
+    },
+    {
+      "chapter": 8,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 30,
+      "exercise_page": 283,
+      "object_ids": [
+        "S4600_CH8_EX30_GOODS_ISSUE_FROM_DELIVERY",
+        "S4600_CH8_EX30_MATERIAL_T-F1-GROUP",
+        "S4600_CH8_EX30_OUTBOUND_DELIVERY_FROM_EX30_ORDER",
+        "S4600_CH8_EX30_SALES_ORDER_STANDARD"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH8_EX30",
+      "solution_page": 286
+    },
+    {
+      "chapter": 8,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 31,
+      "exercise_page": 293,
+      "object_ids": [
+        "S4600_CH8_EX31_BILLING_SERVICE_FROM_ORDER",
+        "S4600_CH8_EX31_MATERIAL_T-D1-GROUP",
+        "S4600_CH8_EX31_SALES_ORDER_STANDARD"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH8_EX31",
+      "solution_page": 295
+    },
+    {
+      "chapter": 9,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 32,
+      "exercise_page": 309,
+      "object_ids": [
+        "S4600_CH9_EX32_BILLING_CREDIT_MEMO_FROM_REQUEST",
+        "S4600_CH9_EX32_BILLING_STANDARD_FROM_DELIVERY",
+        "S4600_CH9_EX32_CREDIT_MEMO_REQUEST_DNC",
+        "S4600_CH9_EX32_GOODS_ISSUE_FROM_DELIVERY",
+        "S4600_CH9_EX32_OUTBOUND_DELIVERY_FROM_EX32_ORDER",
+        "S4600_CH9_EX32_SALES_ORDER_STANDARD"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH9_EX32",
+      "solution_page": 311
+    },
+    {
+      "chapter": 9,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 33,
+      "exercise_page": 317,
+      "object_ids": [
+        "S4600_CH9_EX33_BILLING_CANCELLATION_OF_CREDIT_MEMO"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH9_EX33",
+      "solution_page": 318
+    },
+    {
+      "chapter": 9,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 34,
+      "exercise_page": 323,
+      "object_ids": [
+        "S4600_CH9_EX34_BILLING_CREDIT_MEMO_FROM_RETURN",
+        "S4600_CH9_EX34_OUTBOUND_DELIVERY_RETURN_FROM_ORDER",
+        "S4600_CH9_EX34_RETURN_ORDER_RE"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH9_EX34",
+      "solution_page": 324
+    },
+    {
+      "chapter": 10,
+      "decision": "EXTRACT_OR_ENRICH",
+      "exercise": 35,
+      "exercise_page": 337,
+      "object_ids": [
+        "S4600_CH10_EX35_OUTBOUND_DELIVERY_FROM_RESOLVED_ORDER",
+        "S4600_CH10_EX35_SALES_ORDER_STANDARD"
+      ],
+      "reason": "Concrete instance data or unambiguous verification evidence.",
+      "scenario_id": "S4600_CH10_EX35",
+      "solution_page": 338
+    },
+    {
+      "chapter": 10,
+      "decision": "SKIP",
+      "exercise": 36,
+      "exercise_page": 347,
+      "object_ids": [],
+      "reason": "Analytical UI procedure; no canonical business-object instance.",
+      "scenario_id": "S4600_CH10_EX36",
+      "solution_page": 348
+    }
+  ],
+  "skipped_candidates": [
+    {
+      "exercise": 2,
+      "reason": "Theory-only organizational questions; no concrete instance."
+    },
+    {
+      "exercise": 15,
+      "reason": "Condition-context explanation only; no condition record instance."
+    },
+    {
+      "exercise": 24,
+      "reason": "Availability-control theory only; no new instance."
+    },
+    {
+      "exercise": 25,
+      "reason": "Participant-run mass deliveries have blank count and identifiers; cardinality cannot be inferred."
+    },
+    {
+      "exercise": 26,
+      "reason": "Mass goods issues refer to the indeterminate Exercise 25 delivery set."
+    },
+    {
+      "exercise": 27,
+      "reason": "Participant-run mass billing count and identifiers are blank; no pseudo-instances created."
+    },
+    {
+      "exercise": 29,
+      "reason": "Presales comparison questions only; no new instance."
+    },
+    {
+      "exercise": 36,
+      "reason": "Analytical UI procedure; no canonical business-object instance."
+    }
+  ]
+}

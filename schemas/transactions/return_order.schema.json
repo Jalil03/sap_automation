@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RETURN_ORDER",
+  "allOf": [
+    {
+      "$ref": "../common/canonical_object.schema.json"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "object_type": {
+      "const": "RETURN_ORDER"
+    },
+    "classification": {
+      "const": "TRANSACTION"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "document_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sold_to_party": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "return_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reference_document": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

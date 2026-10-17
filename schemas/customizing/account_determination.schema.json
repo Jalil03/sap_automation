@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ACCOUNT_DETERMINATION",
+  "allOf": [
+    {
+      "$ref": "../common/canonical_object.schema.json"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "object_type": {
+      "const": "ACCOUNT_DETERMINATION"
+    },
+    "classification": {
+      "const": "CUSTOMIZING"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "chart_of_accounts": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "account_key": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "general_ledger_account": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "application": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "condition_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "account_determination_procedure": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "access_sequence": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "condition_table": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sales_organization": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "customer_account_assignment_group": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "material_account_assignment_group": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

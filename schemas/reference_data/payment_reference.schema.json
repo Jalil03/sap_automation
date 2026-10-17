@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PAYMENT_REFERENCE",
+  "allOf": [
+    {
+      "$ref": "../common/canonical_object.schema.json"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "object_type": {
+      "const": "PAYMENT_REFERENCE"
+    },
+    "classification": {
+      "const": "REFERENCE_DATA"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "reference_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "payer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "billing_reference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "amount": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "payment_date": {
+          "type": [
+            "object",
+            "string",
+            "null"
+          ],
+          "properties": {
+            "kind": {
+              "type": "string"
+            },
+            "raw": {
+              "type": "string"
+            },
+            "offset": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "bank_account": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "special_gl_indicator": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "payment_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

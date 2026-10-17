@@ -1,0 +1,41 @@
+{
+  "version": "1.0.0",
+  "scenario": "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+  "probes": [
+    {
+      "name": "CUSTOMER",
+      "status": "CONFIRMED",
+      "path_template": "/sap/opu/odata/sap/API_BUSINESS_PARTNER/A_Customer?$filter=Customer eq '{CUSTOMER}'&$select=Customer&$top=1"
+    },
+    {
+      "name": "MATERIAL",
+      "status": "CONFIRMED",
+      "path_template": "/sap/opu/odata/sap/API_PRODUCT_SRV/A_Product?$filter=Product eq '{MATERIAL}'&$select=Product&$top=1"
+    },
+    {
+      "name": "SALES_ORGANIZATION",
+      "status": "CONFIRMED",
+      "path_template": "/sap/opu/odata/sap/API_SALESORGANIZATION_SRV/A_SalesOrganization?$filter=SalesOrganization eq '{SALES_ORGANIZATION}'&$select=SalesOrganization&$top=1"
+    },
+    {
+      "name": "DISTRIBUTION_CHANNEL",
+      "status": "CONFIRMED",
+      "path_template": "/sap/opu/odata/sap/API_DISTRIBUTIONCHANNEL_SRV/A_DistributionChannel?$filter=DistributionChannel eq '{DISTRIBUTION_CHANNEL}'&$select=DistributionChannel&$top=1"
+    },
+    {
+      "name": "ORGANIZATION_DIVISION",
+      "status": "CONFIRMED",
+      "path_template": "/sap/opu/odata/sap/API_DIVISION_SRV/A_Division?$filter=Division eq '{ORGANIZATION_DIVISION}'&$select=Division&$top=1"
+    },
+    {
+      "name": "SALES_ORDER_TYPE",
+      "status": "CONFIRMED",
+      "path_template": "/sap/opu/odata/sap/API_SALESORDERTYPE_SRV/A_SalesOrderType?$filter=SalesDocumentType eq '{SALES_ORDER_TYPE}'&$select=SalesDocumentType&$top=1"
+    },
+    {
+      "name": "UNIT_OF_MEASURE",
+      "status": "CONFIRMED",
+      "path_template": "/sap/opu/odata/sap/API_PRODUCT_SRV/A_ProductUnitsOfMeasure?$filter=Product eq '{MATERIAL}' and AlternativeUnit eq '{UNIT_OF_MEASURE}'&$select=Product,AlternativeUnit&$top=1"
+    }
+  ]
+}

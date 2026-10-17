@@ -1,0 +1,14 @@
+{
+  "scenario_id": "S4615_CH4_EX5",
+  "primary_object_id": "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+  "training_user_template": "S4615-##",
+  "chapter_title": "Types de documents de facturation spéciaux",
+  "exercise_title": "Créer une facture de vente au comptant et une facture pro forma",
+  "workflow_object_ids": [
+    "S4615_CH4_EX5_SALES_ORDER_CASH_SALE",
+    "S4615_CH4_EX5_OUTBOUND_DELIVERY_CASH_SALE",
+    "S4615_CH4_EX5_BILLING_CASH_SALE",
+    "S4615_CH4_EX5_SALES_ORDER_PRO_FORMA",
+    "S4615_CH4_EX5_BILLING_PRO_FORMA"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SHIPPING_POINT",
+  "allOf": [
+    {
+      "$ref": "../common/canonical_object.schema.json"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "object_type": {
+      "const": "SHIPPING_POINT"
+    },
+    "classification": {
+      "const": "CUSTOMIZING"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "plant": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "determination_rules": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "working_times": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "loading_time": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pick_pack_time": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

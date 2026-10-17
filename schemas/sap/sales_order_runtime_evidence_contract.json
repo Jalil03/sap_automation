@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "contract_version": "1.0.0",
+  "scope": "CAPTURED_ODATA_V2_GET_EVIDENCE_ONLY",
+  "service": "API_SALES_ORDER_SRV",
+  "evidence": {
+    "sales_order_sample.json": {
+      "sha256": "40c5ef78f97932672f62a835bbb6c2e5ce4495e1ac7bfae3d681cbb8743f3e37",
+      "entity_set": "A_SalesOrder",
+      "record_count": 1
+    },
+    "sales_order_partners_sample.json": {
+      "sha256": "1aabc27a657ef79e7a096f48446a2bdf8b7eaa46a5297665d80009d272cace93",
+      "entity_set": "A_SalesOrderHeaderPartner",
+      "record_count": 4
+    },
+    "sales_order_items_sample.json": {
+      "sha256": "b60b8ab958824b8269030d0416cf11915a6307b8f74d359a63d176f281ef648f",
+      "entity_set": "A_SalesOrderItem",
+      "record_count": 1
+    },
+    "sales_order_schedule_lines_sample.json": {
+      "sha256": "325f9442c7492e9db678593cd05fd2eafcfd6f8e6f4c669c81645f0f7be262b0",
+      "entity_set": "A_SalesOrderScheduleLine",
+      "record_count": 2
+    }
+  },
+  "observed_identity": {
+    "SalesOrder": "1",
+    "SalesOrderItem": "10",
+    "ScheduleLine": ["1", "2"],
+    "key_primitive": "quoted Edm.String",
+    "composite_key_order": ["SalesOrder", "SalesOrderItem", "ScheduleLine"]
+  },
+  "observed_partner_values": {
+    "PartnerFunction": ["DO", "PY", "RF", "RM"],
+    "Customer": ["17100002"],
+    "business_semantics_verified": false
+  },
+  "observed_json_representations": {
+    "Edm.String": "JSON string",
+    "Edm.Decimal": "JSON string in captured OData V2 responses",
+    "Edm.DateTime_non_null": "/Date(milliseconds)/ JSON string",
+    "Edm.DateTime_nullable": "JSON null observed",
+    "etag": "weak ETag string observed on root only"
+  },
+  "assessments": {
+    "external_service_name": {"classification": "RUNTIME_CONFIRMED", "evidence": "All entity URIs use /sap/opu/odata/sap/API_SALES_ORDER_SRV/."},
+    "root_entity_set": {"classification": "RUNTIME_CONFIRMED", "evidence": "Root URI contains A_SalesOrder('1')."},
+    "root_entity_type": {"classification": "RUNTIME_CONFIRMED", "evidence": "__metadata.type is API_SALES_ORDER_SRV.A_SalesOrderType."},
+    "sales_order_key_format": {"classification": "RUNTIME_CONFIRMED", "evidence": "SalesOrder is an unpadded JSON string and a quoted Edm.String URI key."},
+    "item_composite_key_format": {"classification": "RUNTIME_CONFIRMED", "evidence": "URI uses named quoted SalesOrder and SalesOrderItem keys."},
+    "schedule_composite_key_format": {"classification": "RUNTIME_CONFIRMED", "evidence": "URI uses named quoted SalesOrder, SalesOrderItem, and ScheduleLine keys."},
+    "sales_order_to_partner": {"classification": "RUNTIME_CONFIRMED", "evidence": "Metadata navigation exists and captured partner entity keys reference SalesOrder '1'."},
+    "sales_order_to_item": {"classification": "RUNTIME_CONFIRMED", "evidence": "Metadata navigation exists and captured item entity key references SalesOrder '1'."},
+    "item_to_schedule_line": {"classification": "RUNTIME_CONFIRMED", "evidence": "Metadata navigation exists and captured schedule-line records reference SalesOrder '1'/item '10'."},
+    "header_returned_field_names": {"classification": "RUNTIME_CONFIRMED", "evidence": "All selected header fields exactly match metadata property names."},
+    "item_returned_field_names": {"classification": "RUNTIME_CONFIRMED", "evidence": "All selected item fields exactly match metadata property names."},
+    "partner_returned_field_names": {"classification": "RUNTIME_CONFIRMED", "evidence": "PartnerFunction and Customer exactly match metadata property names."},
+    "schedule_returned_field_names": {"classification": "RUNTIME_CONFIRMED", "evidence": "All selected schedule-line fields exactly match metadata property names."},
+    "decimal_get_representation": {"classification": "RUNTIME_CONFIRMED", "evidence": "RequestedQuantity and ScheduleLineOrderQuantity are JSON strings."},
+    "unit_get_representation": {"classification": "RUNTIME_CONFIRMED", "evidence": "RequestedQuantityUnit and OrderQuantityUnit are JSON strings; observed value is '289'."},
+    "datetime_get_representation": {"classification": "RUNTIME_CONFIRMED", "evidence": "Non-null RequestedDeliveryDate uses /Date(1756857600000)/."},
+    "nullable_datetime_behavior": {"classification": "RUNTIME_CONFIRMED", "evidence": "A nullable RequestedDeliveryDate is returned as JSON null."},
+    "root_etag": {"classification": "RUNTIME_CONFIRMED", "evidence": "Root __metadata contains a weak ETag."},
+    "child_etag_behavior": {"classification": "NOT_VERIFIED", "evidence": "No child sample contains an ETag; absence does not prove child entities never expose one."},
+    "partner_function_codes": {"classification": "RUNTIME_CONFIRMED", "evidence": "Observed codes are RM, DO, RF, and PY."},
+    "partner_business_semantics": {"classification": "NOT_VERIFIED", "evidence": "Neither metadata nor captures define the meanings of the observed codes."},
+    "deep_insert_structure": {"classification": "METADATA_ONLY", "evidence": "Navigation properties exist, but the captures are separate GET collections and prove no nested POST behavior."},
+    "entity_write_capabilities": {"classification": "METADATA_ONLY", "evidence": "Metadata does not disable CRUD; GET captures prove read behavior only."},
+    "write_quantity_representation": {"classification": "NOT_VERIFIED", "evidence": "GET decimal strings do not establish whether POST accepts JSON numbers, strings, or both."},
+    "write_date_representation": {"classification": "NOT_VERIFIED", "evidence": "GET /Date(...)/ serialization does not establish the accepted POST representation."},
+    "canonical_unit_translation": {"classification": "NOT_VERIFIED", "evidence": "Observed unit '289' is not enough to infer translation from canonical values such as 'PC'."},
+    "write_authorization": {"classification": "NOT_VERIFIED", "evidence": "No write request was made."},
+    "transaction_behavior": {"classification": "NOT_VERIFIED", "evidence": "No transaction was executed."},
+    "idempotency": {"classification": "NOT_VERIFIED", "evidence": "No repeated write operation was executed."},
+    "metadata_runtime_field_consistency": {"classification": "MATCH", "evidence": "Every returned business field and entity type exists in the metadata with compatible nullability and EDM type."}
+  }
+}

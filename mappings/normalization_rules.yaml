@@ -1,0 +1,11 @@
+rules:
+  preserve_leading_zeros: true
+  preserve_placeholders: true
+  preserve_original_source_term: true
+  trim_whitespace: true
+  normalize_empty_to_null: true
+  relative_dates: preserve_semantics
+  forbidden_canonical_fields: [division]
+  french_disambiguation:
+    "secteur d'activité": sales_division
+    "division": plant

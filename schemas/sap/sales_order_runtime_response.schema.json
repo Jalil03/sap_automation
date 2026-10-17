@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Captured API_SALES_ORDER_SRV OData V2 read-response shapes",
+  "description": "Strict schemas for the supplied Phase 3A.2 GET evidence only. They make no write-payload or authorization claim.",
+  "$defs": {
+    "metadata": {
+      "type": "object",
+      "required": ["id", "uri", "type"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "uri": {"type": "string", "minLength": 1},
+        "type": {"type": "string", "pattern": "^API_SALES_ORDER_SRV\\.A_SalesOrder"},
+        "etag": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "root_record": {
+      "type": "object",
+      "required": ["__metadata", "SalesOrder", "SalesOrderType", "SalesOrganization", "DistributionChannel", "OrganizationDivision", "SoldToParty"],
+      "properties": {
+        "__metadata": {"$ref": "#/$defs/metadata"},
+        "SalesOrder": {"type": "string", "minLength": 1, "maxLength": 10},
+        "SalesOrderType": {"type": "string", "minLength": 1, "maxLength": 4},
+        "SalesOrganization": {"type": "string", "minLength": 1, "maxLength": 4},
+        "DistributionChannel": {"type": "string", "minLength": 1, "maxLength": 2},
+        "OrganizationDivision": {"type": "string", "minLength": 1, "maxLength": 2},
+        "SoldToParty": {"type": "string", "minLength": 1, "maxLength": 10}
+      },
+      "additionalProperties": false
+    },
+    "partner_record": {
+      "type": "object",
+      "required": ["__metadata", "PartnerFunction", "Customer"],
+      "properties": {
+        "__metadata": {"$ref": "#/$defs/metadata"},
+        "PartnerFunction": {"type": "string", "minLength": 1, "maxLength": 2},
+        "Customer": {"type": "string", "minLength": 1, "maxLength": 10}
+      },
+      "additionalProperties": false
+    },
+    "item_record": {
+      "type": "object",
+      "required": ["__metadata", "SalesOrderItem", "Material", "RequestedQuantity", "RequestedQuantityUnit", "ProductionPlant", "ShippingPoint"],
+      "properties": {
+        "__metadata": {"$ref": "#/$defs/metadata"},
+        "SalesOrderItem": {"type": "string", "minLength": 1, "maxLength": 6},
+        "Material": {"type": "string", "minLength": 1, "maxLength": 40},
+        "RequestedQuantity": {"type": "string", "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$"},
+        "RequestedQuantityUnit": {"type": "string", "minLength": 1, "maxLength": 3},
+        "ProductionPlant": {"type": "string", "minLength": 1, "maxLength": 4},
+        "ShippingPoint": {"type": "string", "minLength": 1, "maxLength": 4}
+      },
+      "additionalProperties": false
+    },
+    "schedule_line_record": {
+      "type": "object",
+      "required": ["__metadata", "SalesOrder", "SalesOrderItem", "ScheduleLine", "RequestedDeliveryDate", "OrderQuantityUnit", "ScheduleLineOrderQuantity"],
+      "properties": {
+        "__metadata": {"$ref": "#/$defs/metadata"},
+        "SalesOrder": {"type": "string", "minLength": 1, "maxLength": 10},
+        "SalesOrderItem": {"type": "string", "minLength": 1, "maxLength": 6},
+        "ScheduleLine": {"type": "string", "minLength": 1, "maxLength": 4},
+        "RequestedDeliveryDate": {"type": ["string", "null"], "pattern": "^/Date\\([0-9]+(?:[+-][0-9]{4})?\\)/$"},
+        "OrderQuantityUnit": {"type": "string", "minLength": 1, "maxLength": 3},
+        "ScheduleLineOrderQuantity": {"type": "string", "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$"}
+      },
+      "additionalProperties": false
+    },
+    "root_response": {"$ref": "#/$defs/envelope_root"},
+    "partner_response": {"$ref": "#/$defs/envelope_partner"},
+    "item_response": {"$ref": "#/$defs/envelope_item"},
+    "schedule_line_response": {"$ref": "#/$defs/envelope_schedule_line"},
+    "envelope_root": {"type": "object", "required": ["d"], "properties": {"d": {"type": "object", "required": ["results"], "properties": {"results": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/root_record"}}}, "additionalProperties": false}}, "additionalProperties": false},
+    "envelope_partner": {"type": "object", "required": ["d"], "properties": {"d": {"type": "object", "required": ["results"], "properties": {"results": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/partner_record"}}}, "additionalProperties": false}}, "additionalProperties": false},
+    "envelope_item": {"type": "object", "required": ["d"], "properties": {"d": {"type": "object", "required": ["results"], "properties": {"results": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/item_record"}}}, "additionalProperties": false}}, "additionalProperties": false},
+    "envelope_schedule_line": {"type": "object", "required": ["d"], "properties": {"d": {"type": "object", "required": ["results"], "properties": {"results": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/schedule_line_record"}}}, "additionalProperties": false}}, "additionalProperties": false}
+  }
+}

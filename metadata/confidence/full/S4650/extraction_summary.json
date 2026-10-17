@@ -1,0 +1,51 @@
+{
+  "classification_counts": {
+    "CUSTOMIZING": 18,
+    "MASTER_DATA": 1,
+    "TRANSACTION": 10
+  },
+  "confidence_counts": {
+    "HIGH": 23,
+    "MEDIUM": 6
+  },
+  "counts_by_type": {
+    "BUSINESS_PARTNER": 1,
+    "COPY_CONTROL": 4,
+    "DISTRIBUTION_CHANNEL": 1,
+    "EXTENSION_CONFIGURATION": 2,
+    "OUTBOUND_DELIVERY": 3,
+    "OUTPUT_DETERMINATION": 3,
+    "SALES_AREA": 2,
+    "SALES_DIVISION": 2,
+    "SALES_ORDER": 7,
+    "SALES_ORGANIZATION": 1,
+    "SHARED_MASTER_DATA_ASSIGNMENT": 1,
+    "TEXT_DETERMINATION": 2
+  },
+  "dependency_edge_count": 39,
+  "object_count": 29,
+  "objects_with_placeholders": 19,
+  "placeholder_count": 50,
+  "readiness_counts": {
+    "BLOCKED": 25,
+    "READY": 4
+  },
+  "schema_invalid_count": 0,
+  "schema_valid_count": 29,
+  "source": {
+    "copy_control_term_page_count": 50,
+    "exercise_count": 13,
+    "extension_term_page_count": 56,
+    "logical_name": "S4650",
+    "output_term_page_count": 88,
+    "page_count": 267,
+    "sha256": "e5601257121ad731d45297c784e25f1306cf6d8a51f215005df2b73db50efa4c",
+    "solution_count": 13,
+    "source_file": "S4650_FR_Col12_ILT_FV_Inst_A4.pdf"
+  },
+  "source_pages_processed": [
+    1,
+    267
+  ],
+  "unresolved_dependency_count": 19
+}

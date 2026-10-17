@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TEXT_DETERMINATION",
+  "allOf": [
+    {
+      "$ref": "../common/canonical_object.schema.json"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "object_type": {
+      "const": "TEXT_DETERMINATION"
+    },
+    "classification": {
+      "const": "CUSTOMIZING"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "procedure": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "text_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "access_sequence": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "level": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "text_object": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_text_object": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_text_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "assigned_document_types": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "assigned_item_categories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "copy_reference_mode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "all_languages": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "requirement": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

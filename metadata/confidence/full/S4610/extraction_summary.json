@@ -1,0 +1,49 @@
+{
+  "classification_counts": {
+    "CUSTOMIZING": 4,
+    "REFERENCE_DATA": 6,
+    "TRANSACTION": 11
+  },
+  "confidence_counts": {
+    "HIGH": 15,
+    "LOW": 1,
+    "MEDIUM": 5
+  },
+  "counts_by_type": {
+    "COPY_CONTROL": 2,
+    "GOODS_ISSUE": 1,
+    "INBOUND_DELIVERY": 2,
+    "OUTBOUND_DELIVERY": 3,
+    "PLANT": 1,
+    "PURCHASE_ORDER_REFERENCE": 2,
+    "SALES_ORDER": 3,
+    "SHIPPING_POINT": 2,
+    "STORAGE_LOCATION": 2,
+    "WAREHOUSE_NUMBER": 1,
+    "WAREHOUSE_TASK": 2
+  },
+  "dependency_edge_count": 43,
+  "object_count": 21,
+  "objects_with_placeholders": 13,
+  "placeholder_count": 42,
+  "readiness_counts": {
+    "BLOCKED": 17,
+    "READY": 4
+  },
+  "schema_invalid_count": 0,
+  "schema_valid_count": 21,
+  "source": {
+    "exercise_count": 14,
+    "logical_name": "S4610",
+    "page_count": 202,
+    "sha256": "a00a302c4a948f7dbd32ad952ca4dedbb94ac3c5e92d3ea03982f42cf959d6be",
+    "solution_count": 14,
+    "source_file": "S4610_FR_Col12_ILT_FV_Inst_A4.pdf",
+    "table_marker_count": 47
+  },
+  "source_pages_processed": [
+    1,
+    202
+  ],
+  "unresolved_dependency_count": 11
+}

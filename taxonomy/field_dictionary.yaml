@@ -1,0 +1,19 @@
+canonical_fields:
+  object_id: Stable protocol-independent identifier.
+  object_type: Controlled type from taxonomy/object_types.yaml.
+  classification: CUSTOMIZING, MASTER_DATA, TRANSACTION, or REFERENCE_DATA.
+  provenance: One or more source references; an EXERCISE reference is primary over its SOLUTION.
+  lifecycle_status: RAW, EXTRACTED, NORMALIZED, VALIDATED, or REJECTED.
+  readiness_status: READY or BLOCKED for downstream mapping.
+  blocking_reasons: Structured reasons why a valid object is not ready.
+  dependencies: Explicit edges to canonical objects or external references.
+  placeholders: Symbolic values and their resolution status.
+  validation: Schema and policy validation metadata.
+  scenario_id: Deterministic <COURSE>_CH<chapter>_EX<exercise> identifier.
+business_fields:
+  sales_division: SAP SD product-line concept; French "secteur d'activité".
+  plant: SAP logistical plant concept; commonly French "division".
+  billing_subtype: Includes STANDARD, PRO_FORMA_INVOICE, and INVOICE_LIST.
+  billing_plan: Nested billing schedule, not a top-level Phase 1A object.
+  down_payments: Nested down-payment structures.
+  installment_payments: Nested installment structures.

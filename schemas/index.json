@@ -1,0 +1,158 @@
+{
+  "SALES_ORGANIZATION": {
+    "classification": "CUSTOMIZING",
+    "schema": "schemas/customizing/sales_organization.schema.json"
+  },
+  "DISTRIBUTION_CHANNEL": {
+    "classification": "CUSTOMIZING",
+    "schema": "schemas/customizing/distribution_channel.schema.json"
+  },
+  "SALES_DIVISION": {
+    "classification": "CUSTOMIZING",
+    "schema": "schemas/customizing/sales_division.schema.json"
+  },
+  "SALES_AREA": {
+    "classification": "CUSTOMIZING",
+    "schema": "schemas/customizing/sales_area.schema.json"
+  },
+  "SHIPPING_POINT": {
+    "classification": "CUSTOMIZING",
+    "schema": "schemas/customizing/shipping_point.schema.json"
+  },
+  "CONDITION_TYPE": {
+    "classification": "CUSTOMIZING",
+    "schema": "schemas/customizing/condition_type.schema.json"
+  },
+  "CONDITION_TABLE": {
+    "classification": "CUSTOMIZING",
+    "schema": "schemas/customizing/condition_table.schema.json"
+  },
+  "ACCESS_SEQUENCE": {
+    "classification": "CUSTOMIZING",
+    "schema": "schemas/customizing/access_sequence.schema.json"
+  },
+  "PRICING_PROCEDURE": {
+    "classification": "CUSTOMIZING",
+    "schema": "schemas/customizing/pricing_procedure.schema.json"
+  },
+  "PRICING_PROCEDURE_DETERMINATION": {
+    "classification": "CUSTOMIZING",
+    "schema": "schemas/customizing/pricing_procedure_determination.schema.json"
+  },
+  "ACCOUNT_DETERMINATION": {
+    "classification": "CUSTOMIZING",
+    "schema": "schemas/customizing/account_determination.schema.json"
+  },
+  "COPY_CONTROL": {
+    "classification": "CUSTOMIZING",
+    "schema": "schemas/customizing/copy_control.schema.json"
+  },
+  "TEXT_DETERMINATION": {
+    "classification": "CUSTOMIZING",
+    "schema": "schemas/customizing/text_determination.schema.json"
+  },
+  "OUTPUT_DETERMINATION": {
+    "classification": "CUSTOMIZING",
+    "schema": "schemas/customizing/output_determination.schema.json"
+  },
+  "SHARED_MASTER_DATA_ASSIGNMENT": {
+    "classification": "CUSTOMIZING",
+    "schema": "schemas/customizing/shared_master_data_assignment.schema.json"
+  },
+  "EXTENSION_CONFIGURATION": {
+    "classification": "CUSTOMIZING",
+    "schema": "schemas/customizing/extension_configuration.schema.json"
+  },
+  "BUSINESS_PARTNER": {
+    "classification": "MASTER_DATA",
+    "schema": "schemas/master_data/business_partner.schema.json"
+  },
+  "MATERIAL": {
+    "classification": "MASTER_DATA",
+    "schema": "schemas/master_data/material.schema.json"
+  },
+  "CUSTOMER_MATERIAL_INFO": {
+    "classification": "MASTER_DATA",
+    "schema": "schemas/master_data/customer_material_info.schema.json"
+  },
+  "PRICING_CONDITION": {
+    "classification": "MASTER_DATA",
+    "schema": "schemas/master_data/pricing_condition.schema.json"
+  },
+  "CUSTOMER_HIERARCHY": {
+    "classification": "MASTER_DATA",
+    "schema": "schemas/master_data/customer_hierarchy.schema.json"
+  },
+  "CONDITION_CONTRACT": {
+    "classification": "MASTER_DATA",
+    "schema": "schemas/master_data/condition_contract.schema.json"
+  },
+  "INQUIRY": {
+    "classification": "TRANSACTION",
+    "schema": "schemas/transactions/inquiry.schema.json"
+  },
+  "QUOTATION": {
+    "classification": "TRANSACTION",
+    "schema": "schemas/transactions/quotation.schema.json"
+  },
+  "SALES_ORDER": {
+    "classification": "TRANSACTION",
+    "schema": "schemas/transactions/sales_order.schema.json"
+  },
+  "CREDIT_MEMO_REQUEST": {
+    "classification": "TRANSACTION",
+    "schema": "schemas/transactions/credit_memo_request.schema.json"
+  },
+  "RETURN_ORDER": {
+    "classification": "TRANSACTION",
+    "schema": "schemas/transactions/return_order.schema.json"
+  },
+  "OUTBOUND_DELIVERY": {
+    "classification": "TRANSACTION",
+    "schema": "schemas/transactions/outbound_delivery.schema.json"
+  },
+  "INBOUND_DELIVERY": {
+    "classification": "TRANSACTION",
+    "schema": "schemas/transactions/inbound_delivery.schema.json"
+  },
+  "GOODS_ISSUE": {
+    "classification": "TRANSACTION",
+    "schema": "schemas/transactions/goods_issue.schema.json"
+  },
+  "WAREHOUSE_TASK": {
+    "classification": "TRANSACTION",
+    "schema": "schemas/transactions/warehouse_task.schema.json"
+  },
+  "BILLING": {
+    "classification": "TRANSACTION",
+    "schema": "schemas/transactions/billing.schema.json"
+  },
+  "SETTLEMENT_DOCUMENT": {
+    "classification": "TRANSACTION",
+    "schema": "schemas/transactions/settlement_document.schema.json"
+  },
+  "COMPANY_CODE": {
+    "classification": "REFERENCE_DATA",
+    "schema": "schemas/reference_data/company_code.schema.json"
+  },
+  "PLANT": {
+    "classification": "REFERENCE_DATA",
+    "schema": "schemas/reference_data/plant.schema.json"
+  },
+  "STORAGE_LOCATION": {
+    "classification": "REFERENCE_DATA",
+    "schema": "schemas/reference_data/storage_location.schema.json"
+  },
+  "WAREHOUSE_NUMBER": {
+    "classification": "REFERENCE_DATA",
+    "schema": "schemas/reference_data/warehouse_number.schema.json"
+  },
+  "PURCHASE_ORDER_REFERENCE": {
+    "classification": "REFERENCE_DATA",
+    "schema": "schemas/reference_data/purchase_order_reference.schema.json"
+  },
+  "PAYMENT_REFERENCE": {
+    "classification": "REFERENCE_DATA",
+    "schema": "schemas/reference_data/payment_reference.schema.json"
+  }
+}

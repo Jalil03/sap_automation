@@ -1,0 +1,428 @@
+{
+  "sections": [
+    {
+      "chapter": 1,
+      "decision": "EXTRACT",
+      "exercise": 1,
+      "exercise_page": 19,
+      "object_ids": [
+        "S4620_CH1_EX1_PRICING_CONDITION_K007_CUSTOMER_VALUE_SCALE",
+        "S4620_CH1_EX1_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL_SCALE",
+        "S4620_CH1_EX1_PRICING_CONDITION_PR00_MATERIAL",
+        "S4620_CH1_EX1_SALES_ORDER_WITH_MATERIAL_PRICE",
+        "S4620_CH1_EX1_SALES_ORDER_WITH_SCALES"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH1_EX1",
+      "solution_page": 23
+    },
+    {
+      "chapter": 1,
+      "decision": "EXTRACT",
+      "exercise": 2,
+      "exercise_page": 31,
+      "object_ids": [
+        "S4620_CH1_EX2_CONDITION_TYPE_K007"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH1_EX2",
+      "solution_page": 32
+    },
+    {
+      "chapter": 1,
+      "decision": "SKIP",
+      "exercise": 3,
+      "exercise_page": 49,
+      "object_ids": [],
+      "reason": "Theory questions only.",
+      "scenario_id": "S4620_CH1_EX3",
+      "solution_page": 50
+    },
+    {
+      "chapter": 1,
+      "decision": "EXTRACT",
+      "exercise": 4,
+      "exercise_page": 51,
+      "object_ids": [
+        "S4620_CH1_EX4_SALES_ORDER_MANUAL_ADJUSTMENT"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH1_EX4",
+      "solution_page": 53
+    },
+    {
+      "chapter": 1,
+      "decision": "EXTRACT",
+      "exercise": 5,
+      "exercise_page": 57,
+      "object_ids": [
+        "S4620_CH1_EX5_SALES_ORDER_HEADER_CONDITIONS"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH1_EX5",
+      "solution_page": 59
+    },
+    {
+      "chapter": 1,
+      "decision": "EXTRACT",
+      "exercise": 6,
+      "exercise_page": 63,
+      "object_ids": [
+        "S4620_CH1_EX6_SALES_ORDER_REPRICING_TYPE_B"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH1_EX6",
+      "solution_page": 66
+    },
+    {
+      "chapter": 2,
+      "decision": "EXTRACT",
+      "exercise": 7,
+      "exercise_page": 83,
+      "object_ids": [
+        "S4620_CH2_EX7_ACCESS_SEQUENCE_PR02",
+        "S4620_CH2_EX7_CONDITION_TABLE_304",
+        "S4620_CH2_EX7_CONDITION_TABLE_305",
+        "S4620_CH2_EX7_CONDITION_TABLE_306",
+        "S4620_CH2_EX7_CONDITION_TYPE_PR00",
+        "S4620_CH2_EX7_PRICING_PROCEDURE_RVAA01"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH2_EX7",
+      "solution_page": 85
+    },
+    {
+      "chapter": 2,
+      "decision": "EXTRACT",
+      "exercise": 8,
+      "exercise_page": 89,
+      "object_ids": [
+        "S4620_CH2_EX8_PRICING_PROCEDURE_DETERMINATION_RVAA01"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH2_EX8",
+      "solution_page": 91
+    },
+    {
+      "chapter": 2,
+      "decision": "EXTRACT",
+      "exercise": 9,
+      "exercise_page": 93,
+      "object_ids": [
+        "S4620_CH2_EX9_ACCESS_SEQUENCE_ZA_GROUP",
+        "S4620_CH2_EX9_CONDITION_TABLE_7_GROUP",
+        "S4620_CH2_EX9_CONDITION_TYPE_ZF_GROUP",
+        "S4620_CH2_EX9_PRICING_CONDITION_ZF_GROUP_FREIGHT",
+        "S4620_CH2_EX9_PRICING_PROCEDURE_DETERMINATION_Z_GROUP",
+        "S4620_CH2_EX9_PRICING_PROCEDURE_Z_GROUP_PRC",
+        "S4620_CH2_EX9_SALES_ORDER_CUSTOM_PRICING_MODEL"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH2_EX9",
+      "solution_page": 98
+    },
+    {
+      "chapter": 3,
+      "decision": "SKIP",
+      "exercise": 10,
+      "exercise_page": 127,
+      "object_ids": [],
+      "reason": "UI/report menu only.",
+      "scenario_id": "S4620_CH3_EX10",
+      "solution_page": 129
+    },
+    {
+      "chapter": 3,
+      "decision": "SKIP",
+      "exercise": 11,
+      "exercise_page": 133,
+      "object_ids": [],
+      "reason": "Condition-list reporting only.",
+      "scenario_id": "S4620_CH3_EX11",
+      "solution_page": 135
+    },
+    {
+      "chapter": 3,
+      "decision": "EXTRACT",
+      "exercise": 12,
+      "exercise_page": 147,
+      "object_ids": [
+        "S4620_CH3_EX12_PRICING_CONDITION_PR00_P620_2_NEXT_YEAR",
+        "S4620_CH3_EX12_PRICING_CONDITION_PR00_P620_3_NEXT_YEAR"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH3_EX12",
+      "solution_page": 148
+    },
+    {
+      "chapter": 3,
+      "decision": "ENRICH_EXISTING",
+      "exercise": 13,
+      "exercise_page": 151,
+      "object_ids": [
+        "S4620_CH3_EX12_PRICING_CONDITION_PR00_P620_2_NEXT_YEAR",
+        "S4620_CH3_EX12_PRICING_CONDITION_PR00_P620_3_NEXT_YEAR"
+      ],
+      "reason": "Adds 5% adjustment evidence to Exercise 12 records.",
+      "scenario_id": "S4620_CH3_EX13",
+      "solution_page": 152
+    },
+    {
+      "chapter": 3,
+      "decision": "EXTRACT",
+      "exercise": 14,
+      "exercise_page": 155,
+      "object_ids": [
+        "S4620_CH3_EX14_PRICING_CONDITION_PR00_CUSTOMER_COPY"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH3_EX14",
+      "solution_page": 156
+    },
+    {
+      "chapter": 4,
+      "decision": "EXTRACT",
+      "exercise": 15,
+      "exercise_page": 173,
+      "object_ids": [
+        "S4620_CH2_EX9_CONDITION_TYPE_ZF_GROUP",
+        "S4620_CH2_EX9_PRICING_PROCEDURE_Z_GROUP_PRC",
+        "S4620_CH4_EX15_CONDITION_TYPE_ZW_GROUP",
+        "S4620_CH4_EX15_PRICING_CONDITION_ZW_GROUP_WEIGHT_SCALE",
+        "S4620_CH4_EX15_SALES_ORDER_WEIGHT_BASED_FREIGHT"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH4_EX15",
+      "solution_page": 177
+    },
+    {
+      "chapter": 4,
+      "decision": "EXTRACT",
+      "exercise": 16,
+      "exercise_page": 183,
+      "object_ids": [
+        "S4620_CH2_EX9_PRICING_PROCEDURE_Z_GROUP_PRC",
+        "S4620_CH4_EX16_SALES_ORDER_FREIGHT_EXCLUSION"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH4_EX16",
+      "solution_page": 185
+    },
+    {
+      "chapter": 4,
+      "decision": "EXTRACT",
+      "exercise": 17,
+      "exercise_page": 189,
+      "object_ids": [
+        "S4620_CH4_EX17_CONDITION_TYPE_K005",
+        "S4620_CH4_EX17_PRICING_CONDITION_K005_FIRST_ORDER",
+        "S4620_CH4_EX17_SALES_ORDER_FIRST_K005",
+        "S4620_CH4_EX17_SALES_ORDER_QUANTITY_LIMIT_K005",
+        "S4620_CH4_EX17_SALES_ORDER_SECOND_K005"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH4_EX17",
+      "solution_page": 192
+    },
+    {
+      "chapter": 5,
+      "decision": "EXTRACT",
+      "exercise": 18,
+      "exercise_page": 217,
+      "object_ids": [
+        "S4620_CH5_EX18_SALES_ORDER_HEADER_NET_VALUE",
+        "S4620_CH5_EX18_SALES_ORDER_ITEM_NET_PRICE"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH5_EX18",
+      "solution_page": 223
+    },
+    {
+      "chapter": 5,
+      "decision": "EXTRACT",
+      "exercise": 19,
+      "exercise_page": 231,
+      "object_ids": [
+        "S4620_CH5_EX19_CUSTOMER_HIERARCHY_TOPCO_WESTERN_EUROPE",
+        "S4620_CH5_EX19_PRICING_CONDITION_HI02_HIERARCHY_MATERIAL",
+        "S4620_CH5_EX19_SALES_ORDER_HIERARCHY_PRICING"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH5_EX19",
+      "solution_page": 233
+    },
+    {
+      "chapter": 6,
+      "decision": "EXTRACT",
+      "exercise": 20,
+      "exercise_page": 259,
+      "object_ids": [
+        "S4620_CH6_EX20_PRICING_CONDITION_KA00_SALES_DEAL",
+        "S4620_CH6_EX20_SALES_ORDER_SALES_DEAL"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH6_EX20",
+      "solution_page": 262
+    },
+    {
+      "chapter": 7,
+      "decision": "EXTRACT",
+      "exercise": 21,
+      "exercise_page": 281,
+      "object_ids": [
+        "S4620_CH7_EX21_PRICING_PROCEDURE_A10005",
+        "S4620_CH7_EX21_PRICING_PROCEDURE_DETERMINATION_SETTLEMENT"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH7_EX21",
+      "solution_page": 283
+    },
+    {
+      "chapter": 7,
+      "decision": "EXTRACT",
+      "exercise": 22,
+      "exercise_page": 295,
+      "object_ids": [
+        "S4620_CH7_EX22_SALES_ORDER_BUSINESS_VOLUME_1",
+        "S4620_CH7_EX22_SALES_ORDER_BUSINESS_VOLUME_2"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH7_EX22",
+      "solution_page": 297
+    },
+    {
+      "chapter": 7,
+      "decision": "EXTRACT",
+      "exercise": 23,
+      "exercise_page": 301,
+      "object_ids": [
+        "S4620_CH7_EX23_CONDITION_CONTRACT_SALES_REBATE"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH7_EX23",
+      "solution_page": 303
+    },
+    {
+      "chapter": 7,
+      "decision": "EXTRACT",
+      "exercise": 24,
+      "exercise_page": 313,
+      "object_ids": [
+        "S4620_CH7_EX24_SETTLEMENT_DOCUMENT_DELTA_ACCRUAL"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH7_EX24",
+      "solution_page": 314
+    },
+    {
+      "chapter": 7,
+      "decision": "EXTRACT",
+      "exercise": 25,
+      "exercise_page": 317,
+      "object_ids": [
+        "S4620_CH7_EX25_SETTLEMENT_DOCUMENT_PARTIAL_CREDIT"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH7_EX25",
+      "solution_page": 319
+    },
+    {
+      "chapter": 7,
+      "decision": "EXTRACT",
+      "exercise": 26,
+      "exercise_page": 323,
+      "object_ids": [
+        "S4620_CH7_EX26_SALES_ORDER_ADDITIONAL_BUSINESS_VOLUME"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH7_EX26",
+      "solution_page": 325
+    },
+    {
+      "chapter": 7,
+      "decision": "EXTRACT",
+      "exercise": 27,
+      "exercise_page": 329,
+      "object_ids": [
+        "S4620_CH7_EX27_SETTLEMENT_DOCUMENT_FINAL_CREDIT"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4620_CH7_EX27",
+      "solution_page": 330
+    }
+  ],
+  "skipped_candidates": [
+    {
+      "candidate": "condition-technique terminology",
+      "pages": [
+        49,
+        50
+      ],
+      "reason": "Concept questions only; no additional record beyond explicit objects in Exercises 7-9.",
+      "scenario_id": "S4620_CH1_EX3"
+    },
+    {
+      "candidate": "F1/F2 copy control and billing",
+      "pages": [
+        63,
+        69
+      ],
+      "reason": "COPY_CONTROL/BILLING are outside S4620 coverage; billing was saved but its identifier is blank.",
+      "scenario_id": "S4620_CH1_EX6"
+    },
+    {
+      "candidate": "condition-list menu and variant",
+      "pages": [
+        127,
+        138
+      ],
+      "reason": "UI/reporting configuration has no approved S4620 canonical type.",
+      "scenario_id": "S4620_CH3_EX10"
+    },
+    {
+      "candidate": "condition list definition",
+      "pages": [
+        133,
+        145
+      ],
+      "reason": "Reporting/list definition is not a condition record or approved canonical type.",
+      "scenario_id": "S4620_CH3_EX11"
+    },
+    {
+      "candidate": "promotion, sales deal, delivery, billing",
+      "pages": [
+        259,
+        266
+      ],
+      "reason": "Promotion/sales-deal types are absent from the taxonomy; delivery/billing are outside S4620 coverage. KA00 and the sales order are retained.",
+      "scenario_id": "S4620_CH6_EX20"
+    },
+    {
+      "candidate": "deliveries and billing documents",
+      "pages": [
+        295,
+        300
+      ],
+      "reason": "Outside S4620 coverage and generated identifiers are blank; source orders are retained as settlement-volume dependencies.",
+      "scenario_id": "S4620_CH7_EX22"
+    },
+    {
+      "candidate": "delivery and billing",
+      "pages": [
+        323,
+        326
+      ],
+      "reason": "Outside S4620 coverage and generated identifiers are blank; the explicit sales order is retained.",
+      "scenario_id": "S4620_CH7_EX26"
+    },
+    {
+      "candidate": "optional alternate condition contract",
+      "pages": [
+        332,
+        334
+      ],
+      "reason": "Instructor-only optional English demonstration marked 'When in doubt leave it out'; it is not a completed participant instance.",
+      "scenario_id": "S4620_CH7_OPTIONAL_DEMO_CONTRACT"
+    }
+  ]
+}

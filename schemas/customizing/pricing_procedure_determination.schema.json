@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PRICING_PROCEDURE_DETERMINATION",
+  "allOf": [
+    {
+      "$ref": "../common/canonical_object.schema.json"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "object_type": {
+      "const": "PRICING_PROCEDURE_DETERMINATION"
+    },
+    "classification": {
+      "const": "CUSTOMIZING"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "sales_organization": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "distribution_channel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sales_division": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "document_pricing_procedure": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "customer_pricing_procedure": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pricing_procedure": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "quick_entry_condition_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "determination_context": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "settlement_document_schema_group": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

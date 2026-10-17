@@ -1,0 +1,237 @@
+{
+  "document_coverage": {
+    "chapters_processed": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "exercise_solution_pairs": 13,
+    "pages_processed": [
+      1,
+      267
+    ]
+  },
+  "sections": [
+    {
+      "chapter": 1,
+      "decision": "EXTRACT",
+      "exercise": 1,
+      "exercise_page": 17,
+      "object_ids": [
+        "S4650_CH1_EX1_DISTRIBUTION_CHANNEL_GROUP",
+        "S4650_CH1_EX1_SALES_AREA_GROUP_00",
+        "S4650_CH1_EX1_SALES_AREA_GROUP_03",
+        "S4650_CH1_EX1_SALES_DIVISION_00",
+        "S4650_CH1_EX1_SALES_DIVISION_03",
+        "S4650_CH1_EX1_SALES_ORGANIZATION_1010"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4650_CH1_EX1",
+      "solution_page": 18
+    },
+    {
+      "chapter": 1,
+      "decision": "EXTRACT",
+      "exercise": 2,
+      "exercise_page": 27,
+      "object_ids": [
+        "S4650_CH1_EX2_SALES_ORDER_COMMON_MASTER_DATA_TEST",
+        "S4650_CH1_EX2_SHARED_MASTER_DATA_ASSIGNMENT_CHANNEL_10"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4650_CH1_EX2",
+      "solution_page": 29
+    },
+    {
+      "chapter": 2,
+      "decision": "EXTRACT",
+      "exercise": 3,
+      "exercise_page": 53,
+      "object_ids": [
+        "S4650_CH2_EX3_COPY_CONTROL_OF_TO_ZA_GROUP",
+        "S4650_CH2_EX3_COPY_CONTROL_ZQ_GROUP_TO_OF",
+        "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_DIFFERENT_CUSTOMER",
+        "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_SAME_CUSTOMER"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4650_CH2_EX3",
+      "solution_page": 58
+    },
+    {
+      "chapter": 2,
+      "decision": "EXTRACT",
+      "exercise": 4,
+      "exercise_page": 69,
+      "object_ids": [
+        "S4650_CH2_EX4_COPY_CONTROL_ZA_GROUP_TO_LF",
+        "S4650_CH2_EX4_OUTBOUND_DELIVERY_HEADER_CONTROL_TEST",
+        "S4650_CH2_EX4_OUTBOUND_DELIVERY_ITEM_CONTROL_TEST"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4650_CH2_EX4",
+      "solution_page": 71
+    },
+    {
+      "chapter": 2,
+      "decision": "EXTRACT",
+      "exercise": 5,
+      "exercise_page": 75,
+      "object_ids": [
+        "S4650_CH2_EX5_COPY_CONTROL_LF_TO_F2"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4650_CH2_EX5",
+      "solution_page": 76
+    },
+    {
+      "chapter": 3,
+      "decision": "EXTRACT_AND_ENRICH",
+      "exercise": 6,
+      "exercise_page": 89,
+      "object_ids": [
+        "S4650_CH2_EX3_SALES_ORDER_FROM_QUOTATION_SAME_CUSTOMER",
+        "S4650_CH3_EX6_TEXT_DETERMINATION_MATERIAL_SALES_TEXT"
+      ],
+      "reason": "Extracts determination evidence and enriches the Exercise 3 order.",
+      "scenario_id": "S4650_CH3_EX6",
+      "solution_page": 90
+    },
+    {
+      "chapter": 3,
+      "decision": "EXTRACT",
+      "exercise": 7,
+      "exercise_page": 109,
+      "object_ids": [
+        "S4650_CH3_EX7_SALES_ORDER_HEADER_TEXT_FROM_QUOTATION",
+        "S4650_CH3_EX7_TEXT_DETERMINATION_HEADER_GROUP"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4650_CH3_EX7",
+      "solution_page": 111
+    },
+    {
+      "chapter": 3,
+      "decision": "SKIP",
+      "exercise": 8,
+      "exercise_page": 117,
+      "object_ids": [],
+      "reason": "Standard-text creation is not text-determination configuration.",
+      "scenario_id": "S4650_CH3_EX8",
+      "solution_page": 118
+    },
+    {
+      "chapter": 4,
+      "decision": "EXTRACT",
+      "exercise": 9,
+      "exercise_page": 137,
+      "object_ids": [
+        "S4650_CH4_EX9_BUSINESS_PARTNER_C650_A_GROUP",
+        "S4650_CH4_EX9_OUTPUT_DETERMINATION_BA00",
+        "S4650_CH4_EX9_SALES_ORDER_BA00_OUTPUT_TEST"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4650_CH4_EX9",
+      "solution_page": 139
+    },
+    {
+      "chapter": 4,
+      "decision": "EXTRACT",
+      "exercise": 10,
+      "exercise_page": 159,
+      "object_ids": [
+        "S4650_CH4_EX10_OUTBOUND_DELIVERY_ZLD0_TEST",
+        "S4650_CH4_EX10_OUTPUT_DETERMINATION_ZLD0",
+        "S4650_CH4_EX10_SALES_ORDER_ZLD0_DELIVERY_SOURCE"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4650_CH4_EX10",
+      "solution_page": 161
+    },
+    {
+      "chapter": 4,
+      "decision": "EXTRACT",
+      "exercise": 11,
+      "exercise_page": 177,
+      "object_ids": [
+        "S4650_CH4_EX11_OUTPUT_DETERMINATION_ORDER_CONFIRMATION_GROUP",
+        "S4650_CH4_EX11_SALES_ORDER_NEW_OUTPUT_CONFIRMATION_TEST"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4650_CH4_EX11",
+      "solution_page": 179
+    },
+    {
+      "chapter": 5,
+      "decision": "EXTRACT",
+      "exercise": 12,
+      "exercise_page": 213,
+      "object_ids": [
+        "S4650_CH5_EX12_EXTENSION_CONFIGURATION_SALES_ORDER_LIST_LAYOUT"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4650_CH5_EX12",
+      "solution_page": 215
+    },
+    {
+      "chapter": 5,
+      "decision": "EXTRACT",
+      "exercise": 13,
+      "exercise_page": 235,
+      "object_ids": [
+        "S4650_CH5_EX13_EXTENSION_CONFIGURATION_MATERIAL_FIELD_SELECTION"
+      ],
+      "reason": "Concrete source-backed instance or configuration record.",
+      "scenario_id": "S4650_CH5_EX13",
+      "solution_page": 237
+    }
+  ],
+  "skipped_candidates": [
+    {
+      "candidate": "instructor demonstration datasets",
+      "pages": [
+        23,
+        26
+      ],
+      "reason": "Instructor-only examples verify the same shared-channel semantics; participant exercises remain primary.",
+      "scenario_id": "S4650_CH1_DEMONSTRATION_COMMON_CHANNEL"
+    },
+    {
+      "candidate": "quotation instances",
+      "pages": [
+        53,
+        67
+      ],
+      "reason": "QUOTATION is not in S4650 reviewed coverage; only dependencies are retained.",
+      "scenario_id": "S4650_CH2_EX3"
+    },
+    {
+      "candidate": "standard text element",
+      "pages": [
+        117,
+        119
+      ],
+      "reason": "A reusable standard text is not a text-determination configuration object.",
+      "scenario_id": "S4650_CH3_EX8"
+    },
+    {
+      "candidate": "extension techniques, append fields, and reserve-field demonstrations",
+      "pages": [
+        193,
+        212
+      ],
+      "reason": "Theory and instructor navigation are not participant configuration records; explicit exercise configurations are retained.",
+      "scenario_id": "S4650_CH5_EXTENSION_THEORY"
+    },
+    {
+      "candidate": "VOFM, user exits, BTE, BAdI and enhancement framework",
+      "pages": [
+        243,
+        260
+      ],
+      "reason": "Conceptual/reference content and inspection procedures provide no saved canonical configuration instance.",
+      "scenario_id": "S4650_CH5_CLASSIC_AND_ENHANCEMENT_FRAMEWORK"
+    }
+  ]
+}

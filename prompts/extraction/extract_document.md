@@ -1,0 +1,1 @@
+Extract one source document using the relevant skills. Preserve page-level provenance, distinguish instructions from business data, classify objects, and write only to `data/extracted/`. Do not normalize or validate in this step.

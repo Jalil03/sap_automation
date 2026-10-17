@@ -1,0 +1,1528 @@
+{
+  "objects": [
+    {
+      "enrichments": [
+        {
+          "page": 338,
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "page": 339,
+          "section_type": "SOLUTION",
+          "source_term": "Créer livraison"
+        }
+      ],
+      "object_id": "S4600_CH10_EX35_OUTBOUND_DELIVERY_FROM_RESOLVED_ORDER",
+      "scenario_id": "S4600_CH10_EX35",
+      "source_to_canonical": [
+        {
+          "page": 337,
+          "raw_excerpt": "Z0##; document créé à l'étape précédente",
+          "section_type": "EXERCISE",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "page": 338,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "page": 339,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Créer livraison"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 338,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "object_id": "S4600_CH10_EX35_SALES_ORDER_STANDARD",
+      "scenario_id": "S4600_CH10_EX35",
+      "source_to_canonical": [
+        {
+          "page": 337,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 658–##",
+          "section_type": "EXERCISE",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 338,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 58,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 65,
+          "section_type": "SOLUTION",
+          "source_term": "Statut de traitement global"
+        }
+      ],
+      "object_id": "S4600_CH3_EX3_SALES_ORDER_STANDARD",
+      "scenario_id": "S4600_CH3_EX3",
+      "source_to_canonical": [
+        {
+          "page": 57,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 4-2##",
+          "section_type": "EXERCISE",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 58,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 65,
+          "raw_excerpt": "Le statut doit être En cours",
+          "section_type": "SOLUTION",
+          "source_term": "Statut de traitement global"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 72,
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        }
+      ],
+      "object_id": "S4600_CH3_EX5_OUTBOUND_DELIVERY_FROM_EX3",
+      "scenario_id": "S4600_CH3_EX5",
+      "source_to_canonical": [
+        {
+          "page": 71,
+          "raw_excerpt": "Z0##; Échue la semaine prochaine",
+          "section_type": "EXERCISE",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "page": 72,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 72,
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition"
+        }
+      ],
+      "object_id": "S4600_CH3_EX5_SHIPPING_POINT_Z0-GROUP",
+      "scenario_id": "S4600_CH3_EX5",
+      "source_to_canonical": [
+        {
+          "page": 71,
+          "raw_excerpt": "Point d'expédition Z0##",
+          "section_type": "EXERCISE",
+          "source_term": "Point d'expédition"
+        },
+        {
+          "page": 72,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 80,
+          "section_type": "SOLUTION",
+          "source_term": "Sortie de marchandises / livraison précédente"
+        }
+      ],
+      "object_id": "S4600_CH3_EX6_GOODS_ISSUE_FROM_DELIVERY",
+      "scenario_id": "S4600_CH3_EX6",
+      "source_to_canonical": [
+        {
+          "page": 79,
+          "raw_excerpt": "Enregistrer la sortie de marchandises pour la livraison créée précédemment",
+          "section_type": "EXERCISE",
+          "source_term": "Sortie de marchandises / livraison précédente"
+        },
+        {
+          "page": 80,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Sortie de marchandises / livraison précédente"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 88,
+          "section_type": "SOLUTION",
+          "source_term": "Document de facturation / document de référence"
+        }
+      ],
+      "object_id": "S4600_CH3_EX7_BILLING_STANDARD_FROM_EX5",
+      "scenario_id": "S4600_CH3_EX7",
+      "source_to_canonical": [
+        {
+          "page": 87,
+          "raw_excerpt": "Créer le document de facturation avec référence au document précédent",
+          "section_type": "EXERCISE",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "page": 88,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Document de facturation / document de référence"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 92,
+          "section_type": "SOLUTION",
+          "source_term": "1276 - 38,28 = 1237,72"
+        }
+      ],
+      "object_id": "S4600_CH3_EX8_PAYMENT_REFERENCE_FOR_EX7",
+      "scenario_id": "S4600_CH3_EX8",
+      "source_to_canonical": [
+        {
+          "page": 91,
+          "raw_excerpt": "1010; DZ; 11100000; montant calculé; EUR; T-S50A##",
+          "section_type": "EXERCISE",
+          "source_term": "Société / Type d'écriture / Compte général / Montant / Devise / Client"
+        },
+        {
+          "page": 92,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "1276 - 38,28 = 1237,72"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 113,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "object_id": "S4600_CH4_EX10_SALES_ORDER_STANDARD",
+      "scenario_id": "S4600_CH4_EX10",
+      "source_to_canonical": [
+        {
+          "page": 111,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-CUS##; 5-9##",
+          "section_type": "EXERCISE",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 113,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 121,
+          "section_type": "SOLUTION",
+          "source_term": "Article / secteur industriel / type d'article / description / quantité minimale"
+        }
+      ],
+      "object_id": "S4600_CH4_EX11_MATERIAL_T-MS4-GROUP",
+      "scenario_id": "S4600_CH4_EX11",
+      "source_to_canonical": [
+        {
+          "page": 119,
+          "raw_excerpt": "T-MS4##; Commerce; Produits négociables; Phare standard; 10 pièces",
+          "section_type": "EXERCISE",
+          "source_term": "Article / secteur industriel / type d'article / description / quantité minimale"
+        },
+        {
+          "page": 121,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Article / secteur industriel / type d'article / description / quantité minimale"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 121,
+          "section_type": "SOLUTION",
+          "source_term": "Prix de vente"
+        }
+      ],
+      "object_id": "S4600_CH4_EX11_PRICING_CONDITION_PR00_T-MS4",
+      "scenario_id": "S4600_CH4_EX11",
+      "source_to_canonical": [
+        {
+          "page": 119,
+          "raw_excerpt": "Prix de vente 35 EUR à partir de quantité 1",
+          "section_type": "EXERCISE",
+          "source_term": "Prix de vente"
+        },
+        {
+          "page": 121,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Prix de vente"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 121,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "object_id": "S4600_CH4_EX11_SALES_ORDER_STANDARD",
+      "scenario_id": "S4600_CH4_EX11",
+      "source_to_canonical": [
+        {
+          "page": 119,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 5-13##",
+          "section_type": "EXERCISE",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 121,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 131,
+          "section_type": "SOLUTION",
+          "source_term": "Client / Article / Référence article client / Description"
+        }
+      ],
+      "object_id": "S4600_CH4_EX12_CUSTOMER_MATERIAL_INFO_T-S50A_T-MS1",
+      "scenario_id": "S4600_CH4_EX12",
+      "source_to_canonical": [
+        {
+          "page": 129,
+          "raw_excerpt": "T-S50A##; T-MS1##; K-MS-##; Phare Premium",
+          "section_type": "EXERCISE",
+          "source_term": "Client / Article / Référence article client / Description"
+        },
+        {
+          "page": 131,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Client / Article / Référence article client / Description"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 131,
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "page": 132,
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        }
+      ],
+      "object_id": "S4600_CH4_EX12_OUTBOUND_DELIVERY_FROM_EX12_ORDER",
+      "scenario_id": "S4600_CH4_EX12",
+      "source_to_canonical": [
+        {
+          "page": 129,
+          "raw_excerpt": "Z0##; Échue la semaine prochaine",
+          "section_type": "EXERCISE",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "page": 131,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "page": 130,
+          "raw_excerpt": "Z0##; Échue la semaine prochaine",
+          "section_type": "EXERCISE",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "page": 132,
+          "raw_excerpt": "Z0##; Échue la semaine prochaine",
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 131,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "object_id": "S4600_CH4_EX12_SALES_ORDER_STANDARD",
+      "scenario_id": "S4600_CH4_EX12",
+      "source_to_canonical": [
+        {
+          "page": 129,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 5-19##",
+          "section_type": "EXERCISE",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 131,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 139,
+          "section_type": "SOLUTION",
+          "source_term": "Type de condition / Client / Article / Quantité échelonnée / Montant"
+        }
+      ],
+      "object_id": "S4600_CH4_EX13_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL",
+      "scenario_id": "S4600_CH4_EX13",
+      "source_to_canonical": [
+        {
+          "page": 137,
+          "raw_excerpt": "PR00; 1010 / 10; T-S50A##; T-MS1##; 1=53 EUR, 10=51 EUR, 20=49 EUR",
+          "section_type": "EXERCISE",
+          "source_term": "Type de condition / Client / Article / Quantité échelonnée / Montant"
+        },
+        {
+          "page": 139,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type de condition / Client / Article / Quantité échelonnée / Montant"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 139,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "object_id": "S4600_CH4_EX13_SALES_ORDER_STANDARD",
+      "scenario_id": "S4600_CH4_EX13",
+      "source_to_canonical": [
+        {
+          "page": 137,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 5-23##",
+          "section_type": "EXERCISE",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 139,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 143,
+          "section_type": "SOLUTION",
+          "source_term": "Type de condition / Client / Barème de valeurs / Pourcentage"
+        }
+      ],
+      "object_id": "S4600_CH4_EX14_PRICING_CONDITION_K007_CUSTOMER_VALUE_SCALE",
+      "scenario_id": "S4600_CH4_EX14",
+      "source_to_canonical": [
+        {
+          "page": 141,
+          "raw_excerpt": "K007; T-S50A##; 100 EUR=-1%, 500 EUR=-2%, 1000 EUR=-3%",
+          "section_type": "EXERCISE",
+          "source_term": "Type de condition / Client / Barème de valeurs / Pourcentage"
+        },
+        {
+          "page": 143,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type de condition / Client / Barème de valeurs / Pourcentage"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 143,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "object_id": "S4600_CH4_EX14_SALES_ORDER_STANDARD",
+      "scenario_id": "S4600_CH4_EX14",
+      "source_to_canonical": [
+        {
+          "page": 141,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 5-25##",
+          "section_type": "EXERCISE",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 143,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 157,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "object_id": "S4600_CH4_EX16_SALES_ORDER_STANDARD",
+      "scenario_id": "S4600_CH4_EX16",
+      "source_to_canonical": [
+        {
+          "page": 155,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; ##-Proposition",
+          "section_type": "EXERCISE",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 157,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 162,
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        }
+      ],
+      "object_id": "S4600_CH4_EX17_OUTBOUND_DELIVERY_FROM_EX17_ORDER",
+      "scenario_id": "S4600_CH4_EX17",
+      "source_to_canonical": [
+        {
+          "page": 161,
+          "raw_excerpt": "Z0##; document créé à l'étape précédente",
+          "section_type": "EXERCISE",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "page": 162,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 162,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "object_id": "S4600_CH4_EX17_SALES_ORDER_STANDARD",
+      "scenario_id": "S4600_CH4_EX17",
+      "source_to_canonical": [
+        {
+          "page": 161,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 3-9##",
+          "section_type": "EXERCISE",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 162,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 107,
+          "section_type": "SOLUTION",
+          "source_term": "Partenaire / Regroupement / Rôles / Adresse / Domaine commercial / Société"
+        }
+      ],
+      "object_id": "S4600_CH4_EX9_BUSINESS_PARTNER_T-CUS-GROUP",
+      "scenario_id": "S4600_CH4_EX9",
+      "source_to_canonical": [
+        {
+          "page": 105,
+          "raw_excerpt": "T-CUS##; Motos et autres; FLCU00, FLCU01; 1010 / 10 / 00",
+          "section_type": "EXERCISE",
+          "source_term": "Partenaire / Regroupement / Rôles / Adresse / Domaine commercial / Société"
+        },
+        {
+          "page": 107,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Partenaire / Regroupement / Rôles / Adresse / Domaine commercial / Société"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 181,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "object_id": "S4600_CH5_EX18_SALES_ORDER_STANDARD",
+      "scenario_id": "S4600_CH5_EX18",
+      "source_to_canonical": [
+        {
+          "page": 179,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50B##; 6-1##",
+          "section_type": "EXERCISE",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 181,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 191,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "object_id": "S4600_CH5_EX19_SALES_ORDER_STANDARD",
+      "scenario_id": "S4600_CH5_EX19",
+      "source_to_canonical": [
+        {
+          "page": 189,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 6-4##",
+          "section_type": "EXERCISE",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 191,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 207,
+          "section_type": "SOLUTION",
+          "source_term": "division chargée de la livraison"
+        }
+      ],
+      "object_id": "S4600_CH6_EX20_BUSINESS_PARTNER_T-S50B-GROUP",
+      "scenario_id": "S4600_CH6_EX20",
+      "source_to_canonical": [
+        {
+          "page": 205,
+          "raw_excerpt": "T-S50B##; 1010 / 10 / 00",
+          "section_type": "EXERCISE",
+          "source_term": "Fiche partenaire / division chargée de la livraison"
+        },
+        {
+          "page": 207,
+          "raw_excerpt": "La division 1010 est saisie en tant que division chargée de la livraison",
+          "section_type": "SOLUTION",
+          "source_term": "division chargée de la livraison"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 206,
+          "section_type": "SOLUTION",
+          "source_term": "groupe de contrôle"
+        },
+        {
+          "page": 206,
+          "section_type": "SOLUTION",
+          "source_term": "division chargée de la livraison"
+        }
+      ],
+      "object_id": "S4600_CH6_EX20_MATERIAL_T-MS3-GROUP",
+      "scenario_id": "S4600_CH6_EX20",
+      "source_to_canonical": [
+        {
+          "page": 205,
+          "raw_excerpt": "T-MS3##; division 1010",
+          "section_type": "EXERCISE",
+          "source_term": "Article / groupe de contrôle"
+        },
+        {
+          "page": 206,
+          "raw_excerpt": "Le groupe de contrôle 02 est affecté",
+          "section_type": "SOLUTION",
+          "source_term": "groupe de contrôle"
+        },
+        {
+          "page": 206,
+          "raw_excerpt": "La division 1020 est affectée comme division chargée de la livraison",
+          "section_type": "SOLUTION",
+          "source_term": "division chargée de la livraison"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 212,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "object_id": "S4600_CH6_EX21_SALES_ORDER_STANDARD",
+      "scenario_id": "S4600_CH6_EX21",
+      "source_to_canonical": [
+        {
+          "page": 211,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 7-6##",
+          "section_type": "EXERCISE",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 212,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 217,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "object_id": "S4600_CH6_EX22_SALES_ORDER_STANDARD",
+      "scenario_id": "S4600_CH6_EX22",
+      "source_to_canonical": [
+        {
+          "page": 215,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 7-7##",
+          "section_type": "EXERCISE",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 217,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 229,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "object_id": "S4600_CH6_EX23_SALES_ORDER_STANDARD",
+      "scenario_id": "S4600_CH6_EX23",
+      "source_to_canonical": [
+        {
+          "page": 227,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50B##; 7-3##",
+          "section_type": "EXERCISE",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 229,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 273,
+          "section_type": "SOLUTION",
+          "source_term": "Type de demande d'offre / DateLivrSouh. / Article / Quantité"
+        }
+      ],
+      "object_id": "S4600_CH8_EX28_INQUIRY_DO",
+      "scenario_id": "S4600_CH8_EX28",
+      "source_to_canonical": [
+        {
+          "page": 271,
+          "raw_excerpt": "DO; T-S50A##; Date du jour + 3 semaines; T-MS2##; 3 pièces",
+          "section_type": "EXERCISE",
+          "source_term": "Type de demande d'offre / DateLivrSouh. / Article / Quantité"
+        },
+        {
+          "page": 273,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type de demande d'offre / DateLivrSouh. / Article / Quantité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 273,
+          "section_type": "SOLUTION",
+          "source_term": "Type d'offre / validité / quantité"
+        }
+      ],
+      "object_id": "S4600_CH8_EX28_QUOTATION_OF",
+      "scenario_id": "S4600_CH8_EX28",
+      "source_to_canonical": [
+        {
+          "page": 271,
+          "raw_excerpt": "OF; aujourd'hui à fin de la semaine prochaine; 2 pièces",
+          "section_type": "EXERCISE",
+          "source_term": "Type d'offre / validité / quantité"
+        },
+        {
+          "page": 273,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type d'offre / validité / quantité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 273,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 274,
+          "section_type": "SOLUTION",
+          "source_term": "Commande avec référence à l'offre"
+        }
+      ],
+      "object_id": "S4600_CH8_EX28_SALES_ORDER_STANDARD",
+      "scenario_id": "S4600_CH8_EX28",
+      "source_to_canonical": [
+        {
+          "page": 271,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 8-9##",
+          "section_type": "EXERCISE",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 273,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 272,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; 8-9##; dans 3 semaines; T-MS2##; 1 pièce",
+          "section_type": "EXERCISE",
+          "source_term": "Commande avec référence à l'offre"
+        },
+        {
+          "page": 274,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Commande avec référence à l'offre"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 286,
+          "section_type": "SOLUTION",
+          "source_term": "Sortie de marchandises / livraison précédente"
+        }
+      ],
+      "object_id": "S4600_CH8_EX30_GOODS_ISSUE_FROM_DELIVERY",
+      "scenario_id": "S4600_CH8_EX30",
+      "source_to_canonical": [
+        {
+          "page": 283,
+          "raw_excerpt": "Enregistrer la sortie de marchandises pour la livraison créée précédemment",
+          "section_type": "EXERCISE",
+          "source_term": "Sortie de marchandises / livraison précédente"
+        },
+        {
+          "page": 286,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Sortie de marchandises / livraison précédente"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 286,
+          "section_type": "SOLUTION",
+          "source_term": "Article / division / groupe de stratégies"
+        }
+      ],
+      "object_id": "S4600_CH8_EX30_MATERIAL_T-F1-GROUP",
+      "scenario_id": "S4600_CH8_EX30",
+      "source_to_canonical": [
+        {
+          "page": 283,
+          "raw_excerpt": "T-F1##; division 1010; groupe de stratégies 20",
+          "section_type": "EXERCISE",
+          "source_term": "Article / division / groupe de stratégies"
+        },
+        {
+          "page": 286,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Article / division / groupe de stratégies"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 286,
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "page": 289,
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        }
+      ],
+      "object_id": "S4600_CH8_EX30_OUTBOUND_DELIVERY_FROM_EX30_ORDER",
+      "scenario_id": "S4600_CH8_EX30",
+      "source_to_canonical": [
+        {
+          "page": 283,
+          "raw_excerpt": "1010; Date du jour + 3 semaines",
+          "section_type": "EXERCISE",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "page": 286,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "page": 284,
+          "raw_excerpt": "1010; Date du jour + 3 semaines",
+          "section_type": "EXERCISE",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "page": 289,
+          "raw_excerpt": "1010; Date du jour + 3 semaines",
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 286,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "object_id": "S4600_CH8_EX30_SALES_ORDER_STANDARD",
+      "scenario_id": "S4600_CH8_EX30",
+      "source_to_canonical": [
+        {
+          "page": 283,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 8-9##",
+          "section_type": "EXERCISE",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 286,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 295,
+          "section_type": "SOLUTION",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "page": 296,
+          "section_type": "SOLUTION",
+          "source_term": "Facture avec référence à la commande client"
+        }
+      ],
+      "object_id": "S4600_CH8_EX31_BILLING_SERVICE_FROM_ORDER",
+      "scenario_id": "S4600_CH8_EX31",
+      "source_to_canonical": [
+        {
+          "page": 293,
+          "raw_excerpt": "Créer le document de facturation avec référence au document précédent",
+          "section_type": "EXERCISE",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "page": 295,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "page": 294,
+          "raw_excerpt": "aujourd'hui + 14 jours",
+          "section_type": "EXERCISE",
+          "source_term": "Facture avec référence à la commande client"
+        },
+        {
+          "page": 296,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Facture avec référence à la commande client"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 295,
+          "section_type": "SOLUTION",
+          "source_term": "Le type d'article DIEN; groupe de types de poste LEIS"
+        }
+      ],
+      "object_id": "S4600_CH8_EX31_MATERIAL_T-D1-GROUP",
+      "scenario_id": "S4600_CH8_EX31",
+      "source_to_canonical": [
+        {
+          "page": 293,
+          "raw_excerpt": "T-D1##; division 1010; organisation commerciale 1010; canal 10",
+          "section_type": "EXERCISE",
+          "source_term": "Produit de service / type d'article / groupe de types de poste"
+        },
+        {
+          "page": 295,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Le type d'article DIEN; groupe de types de poste LEIS"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 295,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "object_id": "S4600_CH8_EX31_SALES_ORDER_STANDARD",
+      "scenario_id": "S4600_CH8_EX31",
+      "source_to_canonical": [
+        {
+          "page": 293,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 8-6##",
+          "section_type": "EXERCISE",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 295,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 311,
+          "section_type": "SOLUTION",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "page": 314,
+          "section_type": "SOLUTION",
+          "source_term": "Créer l'avoir pour la demande d'avoir"
+        }
+      ],
+      "object_id": "S4600_CH9_EX32_BILLING_CREDIT_MEMO_FROM_REQUEST",
+      "scenario_id": "S4600_CH9_EX32",
+      "source_to_canonical": [
+        {
+          "page": 309,
+          "raw_excerpt": "Créer le document de facturation avec référence au document précédent",
+          "section_type": "EXERCISE",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "page": 311,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "page": 310,
+          "raw_excerpt": null,
+          "section_type": "EXERCISE",
+          "source_term": "Avoir avec référence à la demande d'avoir"
+        },
+        {
+          "page": 314,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Créer l'avoir pour la demande d'avoir"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 311,
+          "section_type": "SOLUTION",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "page": 313,
+          "section_type": "SOLUTION",
+          "source_term": "Document de facturation avec référence à la livraison"
+        }
+      ],
+      "object_id": "S4600_CH9_EX32_BILLING_STANDARD_FROM_DELIVERY",
+      "scenario_id": "S4600_CH9_EX32",
+      "source_to_canonical": [
+        {
+          "page": 309,
+          "raw_excerpt": "Créer le document de facturation avec référence au document précédent",
+          "section_type": "EXERCISE",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "page": 311,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "page": 310,
+          "raw_excerpt": "Dates de facturation jusqu'au Date du jour + 1 semaine",
+          "section_type": "EXERCISE",
+          "source_term": "Document de facturation avec référence à la livraison"
+        },
+        {
+          "page": 313,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Document de facturation avec référence à la livraison"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 311,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Motif / quantité"
+        }
+      ],
+      "object_id": "S4600_CH9_EX32_CREDIT_MEMO_REQUEST_DNC",
+      "scenario_id": "S4600_CH9_EX32",
+      "source_to_canonical": [
+        {
+          "page": 309,
+          "raw_excerpt": "DNC; Endommagé lors du transport; 3 phares",
+          "section_type": "EXERCISE",
+          "source_term": "Type commande client / Motif / quantité"
+        },
+        {
+          "page": 311,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Motif / quantité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 311,
+          "section_type": "SOLUTION",
+          "source_term": "Sortie de marchandises / livraison précédente"
+        },
+        {
+          "page": 313,
+          "section_type": "SOLUTION",
+          "source_term": "Sortie de marchandises"
+        }
+      ],
+      "object_id": "S4600_CH9_EX32_GOODS_ISSUE_FROM_DELIVERY",
+      "scenario_id": "S4600_CH9_EX32",
+      "source_to_canonical": [
+        {
+          "page": 309,
+          "raw_excerpt": "Enregistrer la sortie de marchandises pour la livraison créée précédemment",
+          "section_type": "EXERCISE",
+          "source_term": "Sortie de marchandises / livraison précédente"
+        },
+        {
+          "page": 311,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Sortie de marchandises / livraison précédente"
+        },
+        {
+          "page": 310,
+          "raw_excerpt": "livraison sortante qui vient d'être créée",
+          "section_type": "EXERCISE",
+          "source_term": "Livraison créée / sortie de marchandises"
+        },
+        {
+          "page": 313,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Sortie de marchandises"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 311,
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        }
+      ],
+      "object_id": "S4600_CH9_EX32_OUTBOUND_DELIVERY_FROM_EX32_ORDER",
+      "scenario_id": "S4600_CH9_EX32",
+      "source_to_canonical": [
+        {
+          "page": 309,
+          "raw_excerpt": "Z0##; Échue la semaine prochaine",
+          "section_type": "EXERCISE",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "page": 311,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 311,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ],
+      "object_id": "S4600_CH9_EX32_SALES_ORDER_STANDARD",
+      "scenario_id": "S4600_CH9_EX32",
+      "source_to_canonical": [
+        {
+          "page": 309,
+          "raw_excerpt": "CDCL; 1010 / 10 / 00; T-S50A##; 9-1##",
+          "section_type": "EXERCISE",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        },
+        {
+          "page": 311,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Organisation commerciale / Canal distribution / Secteur d'activité / Donneur d'ordre / Réf. client / Article / Quantité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 318,
+          "section_type": "SOLUTION",
+          "source_term": "Document de facturation / document de référence"
+        }
+      ],
+      "object_id": "S4600_CH9_EX33_BILLING_CANCELLATION_OF_CREDIT_MEMO",
+      "scenario_id": "S4600_CH9_EX33",
+      "source_to_canonical": [
+        {
+          "page": 317,
+          "raw_excerpt": "Créer le document de facturation avec référence au document précédent",
+          "section_type": "EXERCISE",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "page": 318,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Document de facturation / document de référence"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 324,
+          "section_type": "SOLUTION",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "page": 325,
+          "section_type": "SOLUTION",
+          "source_term": "Avoir avec référence au document de retours"
+        }
+      ],
+      "object_id": "S4600_CH9_EX34_BILLING_CREDIT_MEMO_FROM_RETURN",
+      "scenario_id": "S4600_CH9_EX34",
+      "source_to_canonical": [
+        {
+          "page": 323,
+          "raw_excerpt": "Créer le document de facturation avec référence au document précédent",
+          "section_type": "EXERCISE",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "page": 324,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Document de facturation / document de référence"
+        },
+        {
+          "page": 325,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Avoir avec référence au document de retours"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 324,
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "page": 325,
+          "section_type": "SOLUTION",
+          "source_term": "Livraison de retours"
+        }
+      ],
+      "object_id": "S4600_CH9_EX34_OUTBOUND_DELIVERY_RETURN_FROM_ORDER",
+      "scenario_id": "S4600_CH9_EX34",
+      "source_to_canonical": [
+        {
+          "page": 323,
+          "raw_excerpt": "Z0##; document créé à l'étape précédente",
+          "section_type": "EXERCISE",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "page": 324,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Point d'expédition / Date de création planifiée"
+        },
+        {
+          "page": 325,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Livraison de retours"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 324,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Motif / Article / Quantité / Division"
+        }
+      ],
+      "object_id": "S4600_CH9_EX34_RETURN_ORDER_RE",
+      "scenario_id": "S4600_CH9_EX34",
+      "source_to_canonical": [
+        {
+          "page": 323,
+          "raw_excerpt": "RE; Écart quantité; T-MS3##; 3 pièces; division 1020",
+          "section_type": "EXERCISE",
+          "source_term": "Type commande client / Motif / Article / Quantité / Division"
+        },
+        {
+          "page": 324,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Type commande client / Motif / Article / Quantité / Division"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 22,
+          "section_type": "SOLUTION",
+          "source_term": "Org. commerciale / Canal distrib. / Secteur d'activité"
+        }
+      ],
+      "object_id": "S4600_SHARED_DISTRIBUTION_CHANNEL_10",
+      "scenario_id": "S4600_CH1_EX1",
+      "source_to_canonical": [
+        {
+          "page": 21,
+          "raw_excerpt": "Org. commerciale 1010; Canal distrib. 10; Secteur d'activité 00",
+          "section_type": "EXERCISE",
+          "source_term": "Org. commerciale / Canal distrib. / Secteur d'activité"
+        },
+        {
+          "page": 22,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Org. commerciale / Canal distrib. / Secteur d'activité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 22,
+          "section_type": "SOLUTION",
+          "source_term": "Org. commerciale / Canal distrib. / Secteur d'activité"
+        }
+      ],
+      "object_id": "S4600_SHARED_SALES_AREA_1010_10_00",
+      "scenario_id": "S4600_CH1_EX1",
+      "source_to_canonical": [
+        {
+          "page": 21,
+          "raw_excerpt": "Org. commerciale 1010; Canal distrib. 10; Secteur d'activité 00",
+          "section_type": "EXERCISE",
+          "source_term": "Org. commerciale / Canal distrib. / Secteur d'activité"
+        },
+        {
+          "page": 22,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Org. commerciale / Canal distrib. / Secteur d'activité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 22,
+          "section_type": "SOLUTION",
+          "source_term": "Org. commerciale / Canal distrib. / Secteur d'activité"
+        }
+      ],
+      "object_id": "S4600_SHARED_SALES_DIVISION_00",
+      "scenario_id": "S4600_CH1_EX1",
+      "source_to_canonical": [
+        {
+          "page": 21,
+          "raw_excerpt": "Org. commerciale 1010; Canal distrib. 10; Secteur d'activité 00",
+          "section_type": "EXERCISE",
+          "source_term": "Org. commerciale / Canal distrib. / Secteur d'activité"
+        },
+        {
+          "page": 22,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Org. commerciale / Canal distrib. / Secteur d'activité"
+        }
+      ]
+    },
+    {
+      "enrichments": [
+        {
+          "page": 22,
+          "section_type": "SOLUTION",
+          "source_term": "Org. commerciale / Canal distrib. / Secteur d'activité"
+        }
+      ],
+      "object_id": "S4600_SHARED_SALES_ORGANIZATION_1010",
+      "scenario_id": "S4600_CH1_EX1",
+      "source_to_canonical": [
+        {
+          "page": 21,
+          "raw_excerpt": "Org. commerciale 1010; Canal distrib. 10; Secteur d'activité 00",
+          "section_type": "EXERCISE",
+          "source_term": "Org. commerciale / Canal distrib. / Secteur d'activité"
+        },
+        {
+          "page": 22,
+          "raw_excerpt": null,
+          "section_type": "SOLUTION",
+          "source_term": "Org. commerciale / Canal distrib. / Secteur d'activité"
+        }
+      ]
+    }
+  ]
+}

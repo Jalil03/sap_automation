@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "COPY_CONTROL",
+  "allOf": [
+    {
+      "$ref": "../common/canonical_object.schema.json"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "object_type": {
+      "const": "COPY_CONTROL"
+    },
+    "classification": {
+      "const": "CUSTOMIZING"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "source_document_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "target_document_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "level": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_item_category": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pricing_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "data_transfer_routine": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reference_number_rule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "assignment_number_rule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "billing_quantity_rule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "positive_negative_quantity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "target_item_category": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "copy_requirement": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "grouping_requirement": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "header_data_transfer_routine": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "item_data_transfer_routine": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "document_flow_update": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "pricing_source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

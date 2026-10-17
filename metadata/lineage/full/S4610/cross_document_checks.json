@@ -1,0 +1,22 @@
+{
+  "potential_entity_matches": [
+    {
+      "match_key": "SHIPPING_POINT.code=Z0##",
+      "s4600_object_ids": [
+        "S4600_CH3_EX5_SHIPPING_POINT_Z0-GROUP"
+      ],
+      "s4610_object_id": "S4610_CH2_EX3_SHIPPING_POINT_Z0-GROUP",
+      "status": "POTENTIAL_MATCH_UNRESOLVED_PLACEHOLDER"
+    }
+  ],
+  "return_delivery_issue": {
+    "assessment": "S4610 names supplier returns but does not classify the S4600 customer-return delivery direction.",
+    "s4600_object_id": "S4600_CH9_EX34_OUTBOUND_DELIVERY_RETURN_FROM_ORDER",
+    "s4610_evidence": {
+      "page": 21,
+      "source_term": "Retours fournisseur"
+    },
+    "status": "UNRESOLVED_CARRIED_FORWARD"
+  },
+  "s4600_normalized_sha256": "4b5b38be6c9a291db6ffbe010a87e8f73d670f25e346d23da0a157881d519319"
+}

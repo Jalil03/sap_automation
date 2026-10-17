@@ -1,0 +1,360 @@
+{
+  "seed_id": "S4615_CONTROLLED_MINIMAL_TRAINING_SEED",
+  "version": 1,
+  "mode": "DRY_RUN_DEFAULT",
+  "canonical_immutable": true,
+  "execution_policy": {
+    "sequence": [
+      "check",
+      "prepare",
+      "validate",
+      "write",
+      "readback"
+    ],
+    "write_gate": "--execute",
+    "exists_behavior": "SKIP",
+    "transport_release": "NEVER_AUTOMATIC",
+    "protected_sales_order": "148"
+  },
+  "operations": {
+    "COMPANY_CODE_1010": {
+      "target": {
+        "company_code": "1010"
+      },
+      "fields": {
+        "creation_strategy": {
+          "value": "TECHNICAL_TEMPLATE_COPY",
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "technical_template": {
+          "value": "BE01",
+          "provenance": "TECHNICAL_TEMPLATE"
+        },
+        "company_name": {
+          "value": "S4615 Training Company",
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "city": {
+          "value": null,
+          "provenance": "TECHNICAL_TEMPLATE",
+          "resolution": "INHERIT_ONLY_IF_SAP_REQUIRED"
+        },
+        "country": {
+          "value": "BE",
+          "provenance": "TECHNICAL_TEMPLATE",
+          "resolution": "INHERIT_ONLY_IF_SAP_REQUIRED"
+        },
+        "currency": {
+          "value": "EUR",
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "language": {
+          "value": "EN",
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "chart_of_accounts": {
+          "value": "CABE",
+          "provenance": "SAP_CONFIRMED"
+        }
+      }
+    },
+    "SALES_ORGANIZATION_1010": {
+      "target": {
+        "sales_organization": "1010"
+      },
+      "fields": {
+        "creation_strategy": {
+          "value": "TECHNICAL_TEMPLATE_COPY",
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "technical_template": {
+          "value": "1710",
+          "provenance": "TECHNICAL_TEMPLATE"
+        },
+        "description": {
+          "value": "S4615 Training",
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "statistics_currency": {
+          "value": "EUR",
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "intercompany_customer": {
+          "value": null,
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "purchasing_organization": {
+          "value": null,
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "purchasing_group": {
+          "value": null,
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "purchasing_order_type": {
+          "value": null,
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "rebate_active": {
+          "value": null,
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "address_text": {
+          "value": null,
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "letter_header_text": {
+          "value": null,
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "footer_text": {
+          "value": null,
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "sales_org_calendar": {
+          "value": null,
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "greeting_text": {
+          "value": null,
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "standard_text": {
+          "value": null,
+          "provenance": "PROJECT_DEFAULT"
+        }
+      }
+    },
+    "SALES_ORG_1010_TO_COMPANY_CODE_1010": {
+      "target": {
+        "sales_organization": "1010",
+        "company_code": "1010"
+      },
+      "fields": {}
+    },
+    "DISTRIBUTION_CHANNEL_10_TO_SALES_ORG_1010": {
+      "target": {
+        "distribution_channel": "10",
+        "sales_organization": "1010"
+      },
+      "fields": {}
+    },
+    "DIVISION_00_TO_SALES_ORG_1010": {
+      "target": {
+        "sales_division": "00",
+        "sales_organization": "1010"
+      },
+      "fields": {}
+    },
+    "CUSTOMER_C615_D00": {
+      "target": {
+        "partner_id": "C615-D00",
+        "sap_partner_id": "1000000114",
+        "company_code": "1010",
+        "sales_area": "1010/10/00"
+      },
+      "template_policy": {
+        "kind": "EXISTING_GENERIC_CUSTOMER",
+        "template_id": "17100002",
+        "provenance": "TECHNICAL_TEMPLATE",
+        "identity_copy_forbidden": true,
+        "organizational_id_copy_forbidden": true
+      },
+      "fields": {
+        "creation_strategy": {
+          "value": "TECHNICAL_TEMPLATE_COPY",
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "technical_template": {
+          "value": "17100002",
+          "provenance": "TECHNICAL_TEMPLATE"
+        },
+        "grouping": {
+          "value": null,
+          "provenance": "TECHNICAL_TEMPLATE",
+          "resolution": "INHERIT_MANDATORY_FROM_TECHNICAL_TEMPLATE"
+        },
+        "name": {
+          "value": "S4615 Training Customer 00",
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "roles": {
+          "value": null,
+          "provenance": "TECHNICAL_TEMPLATE",
+          "resolution": "INHERIT_MANDATORY_FROM_TECHNICAL_TEMPLATE"
+        },
+        "addresses": {
+          "value": null,
+          "provenance": "TECHNICAL_TEMPLATE",
+          "resolution": "INHERIT_MANDATORY_FROM_TECHNICAL_TEMPLATE"
+        },
+        "reconciliation_account": {
+          "value": "400000",
+          "provenance": "SAP_CONFIRMED"
+        },
+        "payment_terms": {
+          "value": "0004",
+          "provenance": "TECHNICAL_TEMPLATE",
+          "resolution": "INHERIT_MANDATORY_FROM_TECHNICAL_TEMPLATE"
+        },
+        "currency": {
+          "value": "EUR",
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "shipping_conditions": {
+          "value": "01",
+          "provenance": "TECHNICAL_TEMPLATE",
+          "resolution": "INHERIT_MANDATORY_FROM_TECHNICAL_TEMPLATE"
+        },
+        "delivering_plant": {
+          "value": null,
+          "provenance": "PROJECT_DEFAULT",
+          "resolution": "DERIVE_1010_COMPATIBLE_DEPENDENCY"
+        },
+        "incoterms": {
+          "value": "CFR",
+          "provenance": "BOOK_CONFIRMED"
+        },
+        "incoterms_location": {
+          "value": "00",
+          "provenance": "BOOK_CONFIRMED"
+        },
+        "account_assignment_group": {
+          "value": "01",
+          "provenance": "TECHNICAL_TEMPLATE",
+          "resolution": "INHERIT_MANDATORY_FROM_TECHNICAL_TEMPLATE"
+        },
+        "customer_pricing_procedure": {
+          "value": "02",
+          "provenance": "TECHNICAL_TEMPLATE",
+          "resolution": "INHERIT_MANDATORY_FROM_TECHNICAL_TEMPLATE"
+        },
+        "tax_classifications": {
+          "value": null,
+          "provenance": "TECHNICAL_TEMPLATE",
+          "resolution": "INHERIT_MANDATORY_FROM_TECHNICAL_TEMPLATE"
+        },
+        "partner_functions": {
+          "value": null,
+          "provenance": "TECHNICAL_TEMPLATE",
+          "resolution": "INHERIT_MANDATORY_FROM_TECHNICAL_TEMPLATE"
+        }
+      }
+    },
+    "PRODUCT_P615_400": {
+      "target": {
+        "material_id": "P615-400",
+        "sales_organization": "1010",
+        "distribution_channel": "10",
+        "unit": "PC"
+      },
+      "template_policy": {
+        "kind": "EXISTING_STOCK_MATERIAL",
+        "template_id": "FG228",
+        "provenance": "TECHNICAL_TEMPLATE",
+        "identity_copy_forbidden": true
+      },
+      "fields": {
+        "creation_strategy": {
+          "value": "TECHNICAL_TEMPLATE_COPY",
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "technical_template": {
+          "value": "FG228",
+          "provenance": "TECHNICAL_TEMPLATE"
+        },
+        "description": {
+          "value": "S4615 Training Product 400",
+          "provenance": "PROJECT_DEFAULT"
+        },
+        "material_type": {
+          "value": "FERT",
+          "provenance": "TECHNICAL_TEMPLATE",
+          "resolution": "INHERIT_MANDATORY_FROM_TECHNICAL_TEMPLATE"
+        },
+        "industry_sector": {
+          "value": "M",
+          "provenance": "TECHNICAL_TEMPLATE",
+          "resolution": "INHERIT_MANDATORY_FROM_TECHNICAL_TEMPLATE"
+        },
+        "base_unit": {
+          "value": "PC",
+          "provenance": "BOOK_CONFIRMED"
+        },
+        "plants": {
+          "value": [
+            "1710"
+          ],
+          "provenance": "SAP_CONFIRMED"
+        },
+        "delivering_plant": {
+          "value": "1710",
+          "provenance": "SAP_CONFIRMED"
+        },
+        "item_category_group": {
+          "value": "CB04",
+          "provenance": "TECHNICAL_TEMPLATE",
+          "resolution": "INHERIT_MANDATORY_FROM_TECHNICAL_TEMPLATE"
+        },
+        "product_group": {
+          "value": "L004",
+          "provenance": "TECHNICAL_TEMPLATE"
+        },
+        "sales_division": {
+          "value": "00",
+          "provenance": "TECHNICAL_TEMPLATE"
+        },
+        "account_determination_product_group": {
+          "value": "03",
+          "provenance": "TECHNICAL_TEMPLATE"
+        },
+        "tax_classification": {
+          "value": null,
+          "provenance": "TECHNICAL_TEMPLATE",
+          "resolution": "INHERIT_MANDATORY_FROM_TECHNICAL_TEMPLATE"
+        },
+        "availability_check": {
+          "value": "SP",
+          "provenance": "TECHNICAL_TEMPLATE",
+          "resolution": "INHERIT_MANDATORY_FROM_TECHNICAL_TEMPLATE"
+        },
+        "alternative_units": {
+          "value": [],
+          "provenance": "PROJECT_DEFAULT"
+        }
+      }
+    }
+  },
+  "secondary_dependencies": {
+    "policy": "CHECK_THEN_CREATE_IF_MISSING",
+    "target_compatibility": "1010",
+    "technical_template_selection": "CLOSEST_WORKING_TEMPLATE",
+    "discovery_phase": "FORBIDDEN",
+    "dependencies": [
+      "PLANT",
+      "SHIPPING_POINT"
+    ]
+  },
+  "book_process": {
+    "training_user": {
+      "value": "S4615-00",
+      "provenance": "BOOK_CONFIRMED"
+    },
+    "sales_order_type": {
+      "value": "BV",
+      "provenance": "BOOK_CONFIRMED"
+    },
+    "customer_reference": {
+      "value": "00S4615-BV",
+      "provenance": "BOOK_CONFIRMED"
+    },
+    "quantity": {
+      "value": 1,
+      "provenance": "BOOK_CONFIRMED"
+    },
+    "unit": {
+      "value": "PC",
+      "provenance": "BOOK_CONFIRMED"
+    }
+  }
+}

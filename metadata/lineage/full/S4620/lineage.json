@@ -1,0 +1,1308 @@
+{
+  "objects": [
+    {
+      "object_id": "S4620_CH1_EX1_PRICING_CONDITION_PR00_MATERIAL",
+      "scenario_id": "S4620_CH1_EX1",
+      "solution_enrichments": [
+        {
+          "page": 23,
+          "source_term": "PR00 / article / organisation commerciale / canal / prix"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 19,
+          "raw_excerpt": "PR00; P620-1##; 1010; 10; 280 EUR; validité par défaut",
+          "section_type": "EXERCISE",
+          "source_term": "PR00 / article / organisation commerciale / canal / prix"
+        },
+        {
+          "page": 23,
+          "raw_excerpt": "PR00; P620-1##; 1010; 10; 280 EUR; validité par défaut",
+          "section_type": "SOLUTION",
+          "source_term": "PR00 / article / organisation commerciale / canal / prix"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH1_EX1_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL_SCALE",
+      "scenario_id": "S4620_CH1_EX1",
+      "solution_enrichments": [
+        {
+          "page": 23,
+          "source_term": "PR00 / Client-article avec statut de validation / barème quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 19,
+          "raw_excerpt": "C620-A##; P620-1##; seuils 1/10/100 PC; 250/240/230 EUR",
+          "section_type": "EXERCISE",
+          "source_term": "PR00 / Client-article avec statut de validation / barème quantité"
+        },
+        {
+          "page": 23,
+          "raw_excerpt": "C620-A##; P620-1##; seuils 1/10/100 PC; 250/240/230 EUR",
+          "section_type": "SOLUTION",
+          "source_term": "PR00 / Client-article avec statut de validation / barème quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH1_EX1_PRICING_CONDITION_K007_CUSTOMER_VALUE_SCALE",
+      "scenario_id": "S4620_CH1_EX1",
+      "solution_enrichments": [
+        {
+          "page": 23,
+          "source_term": "K007 / Client avec statut validation / barème valeur"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 19,
+          "raw_excerpt": "C620-A##; seuils 100/1000/5000 EUR; déduction 2/3/5 %",
+          "section_type": "EXERCISE",
+          "source_term": "K007 / Client avec statut validation / barème valeur"
+        },
+        {
+          "page": 23,
+          "raw_excerpt": "C620-A##; seuils 100/1000/5000 EUR; déduction 2/3/5 %",
+          "section_type": "SOLUTION",
+          "source_term": "K007 / Client avec statut validation / barème valeur"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH1_EX2_CONDITION_TYPE_K007",
+      "scenario_id": "S4620_CH1_EX2",
+      "solution_enrichments": [
+        {
+          "page": 32,
+          "source_term": "Type de condition K007 / règle de calcul / unité de référence"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 31,
+          "raw_excerpt": "K007; A - En %; B - Barème valeurs",
+          "section_type": "EXERCISE",
+          "source_term": "Type de condition K007 / règle de calcul / unité de référence"
+        },
+        {
+          "page": 32,
+          "raw_excerpt": "K007; A - En %; B - Barème valeurs",
+          "section_type": "SOLUTION",
+          "source_term": "Type de condition K007 / règle de calcul / unité de référence"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH1_EX1_SALES_ORDER_WITH_MATERIAL_PRICE",
+      "scenario_id": "S4620_CH1_EX1",
+      "solution_enrichments": [
+        {
+          "page": 23,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 19,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-1-2; P620-1## 10 None",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 23,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-1-2; P620-1## 10 None",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH1_EX1_SALES_ORDER_WITH_SCALES",
+      "scenario_id": "S4620_CH1_EX1",
+      "solution_enrichments": [
+        {
+          "page": 23,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 19,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-1-3; P620-1## 10 None",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 23,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-1-3; P620-1## 10 None",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH1_EX4_SALES_ORDER_MANUAL_ADJUSTMENT",
+      "scenario_id": "S4620_CH1_EX4",
+      "solution_enrichments": [
+        {
+          "page": 53,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 51,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-2-3; P620-1## 10 None",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 53,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-2-3; P620-1## 10 None",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH1_EX5_SALES_ORDER_HEADER_CONDITIONS",
+      "scenario_id": "S4620_CH1_EX5",
+      "solution_enrichments": [
+        {
+          "page": 59,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 57,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-2-4; P620-1## 10 None; P620-2## 10 None",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 59,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-2-4; P620-1## 10 None; P620-2## 10 None",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH1_EX6_SALES_ORDER_REPRICING_TYPE_B",
+      "scenario_id": "S4620_CH1_EX6",
+      "solution_enrichments": [
+        {
+          "page": 66,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 63,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-2-5; P620-1## 10 None",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 66,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-2-5; P620-1## 10 None",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH2_EX7_CONDITION_TABLE_305",
+      "scenario_id": "S4620_CH2_EX7",
+      "solution_enrichments": [
+        {
+          "page": 85,
+          "source_term": "Tables de conditions de la séquence PR02"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 83,
+          "raw_excerpt": "PR02 utilise les tables 305, 306 et 304",
+          "section_type": "EXERCISE",
+          "source_term": "Tables de conditions de la séquence PR02"
+        },
+        {
+          "page": 85,
+          "raw_excerpt": "PR02 utilise les tables 305, 306 et 304",
+          "section_type": "SOLUTION",
+          "source_term": "Tables de conditions de la séquence PR02"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH2_EX7_CONDITION_TABLE_306",
+      "scenario_id": "S4620_CH2_EX7",
+      "solution_enrichments": [
+        {
+          "page": 85,
+          "source_term": "Tables de conditions de la séquence PR02"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 83,
+          "raw_excerpt": "PR02 utilise les tables 305, 306 et 304",
+          "section_type": "EXERCISE",
+          "source_term": "Tables de conditions de la séquence PR02"
+        },
+        {
+          "page": 85,
+          "raw_excerpt": "PR02 utilise les tables 305, 306 et 304",
+          "section_type": "SOLUTION",
+          "source_term": "Tables de conditions de la séquence PR02"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH2_EX7_CONDITION_TABLE_304",
+      "scenario_id": "S4620_CH2_EX7",
+      "solution_enrichments": [
+        {
+          "page": 85,
+          "source_term": "Tables de conditions de la séquence PR02"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 83,
+          "raw_excerpt": "PR02 utilise les tables 305, 306 et 304",
+          "section_type": "EXERCISE",
+          "source_term": "Tables de conditions de la séquence PR02"
+        },
+        {
+          "page": 85,
+          "raw_excerpt": "PR02 utilise les tables 305, 306 et 304",
+          "section_type": "SOLUTION",
+          "source_term": "Tables de conditions de la séquence PR02"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH2_EX7_ACCESS_SEQUENCE_PR02",
+      "scenario_id": "S4620_CH2_EX7",
+      "solution_enrichments": [
+        {
+          "page": 85,
+          "source_term": "Séquence d'accès PR02 / tables de conditions"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 83,
+          "raw_excerpt": "PR02; accès 10/20/30; tables 305/306/304",
+          "section_type": "EXERCISE",
+          "source_term": "Séquence d'accès PR02 / tables de conditions"
+        },
+        {
+          "page": 85,
+          "raw_excerpt": "PR02; accès 10/20/30; tables 305/306/304",
+          "section_type": "SOLUTION",
+          "source_term": "Séquence d'accès PR02 / tables de conditions"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH2_EX7_CONDITION_TYPE_PR00",
+      "scenario_id": "S4620_CH2_EX7",
+      "solution_enrichments": [
+        {
+          "page": 85,
+          "source_term": "Type de condition PR00 / séquence d'accès"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 83,
+          "raw_excerpt": "PR00 utilise PR02",
+          "section_type": "EXERCISE",
+          "source_term": "Type de condition PR00 / séquence d'accès"
+        },
+        {
+          "page": 85,
+          "raw_excerpt": "PR00 utilise PR02",
+          "section_type": "SOLUTION",
+          "source_term": "Type de condition PR00 / séquence d'accès"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH2_EX7_PRICING_PROCEDURE_RVAA01",
+      "scenario_id": "S4620_CH2_EX7",
+      "solution_enrichments": [
+        {
+          "page": 85,
+          "source_term": "Schéma de calcul standard"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 83,
+          "raw_excerpt": "RVAA01",
+          "section_type": "EXERCISE",
+          "source_term": "Schéma de calcul standard"
+        },
+        {
+          "page": 85,
+          "raw_excerpt": "RVAA01",
+          "section_type": "SOLUTION",
+          "source_term": "Schéma de calcul standard"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH2_EX8_PRICING_PROCEDURE_DETERMINATION_RVAA01",
+      "scenario_id": "S4620_CH2_EX8",
+      "solution_enrichments": [
+        {
+          "page": 91,
+          "source_term": "Détermination du schéma de calcul"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 89,
+          "raw_excerpt": "1010/10/00; schéma document A; schéma client 1; RVAA01",
+          "section_type": "EXERCISE",
+          "source_term": "Détermination du schéma de calcul"
+        },
+        {
+          "page": 91,
+          "raw_excerpt": "1010/10/00; schéma document A; schéma client 1; RVAA01",
+          "section_type": "SOLUTION",
+          "source_term": "Détermination du schéma de calcul"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH2_EX9_CONDITION_TABLE_7_GROUP",
+      "scenario_id": "S4620_CH2_EX9",
+      "solution_enrichments": [
+        {
+          "page": 98,
+          "source_term": "Table de conditions / zones"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 93,
+          "raw_excerpt": "7##; organisation commerciale; Incoterms; pays destinataire",
+          "section_type": "EXERCISE",
+          "source_term": "Table de conditions / zones"
+        },
+        {
+          "page": 98,
+          "raw_excerpt": "7##; organisation commerciale; Incoterms; pays destinataire",
+          "section_type": "SOLUTION",
+          "source_term": "Table de conditions / zones"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH2_EX9_ACCESS_SEQUENCE_ZA_GROUP",
+      "scenario_id": "S4620_CH2_EX9",
+      "solution_enrichments": [
+        {
+          "page": 98,
+          "source_term": "Séquence d'accès / accès / table"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 93,
+          "raw_excerpt": "ZA##; accès 10; table 7##",
+          "section_type": "EXERCISE",
+          "source_term": "Séquence d'accès / accès / table"
+        },
+        {
+          "page": 98,
+          "raw_excerpt": "ZA##; accès 10; table 7##",
+          "section_type": "SOLUTION",
+          "source_term": "Séquence d'accès / accès / table"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH2_EX9_CONDITION_TYPE_ZF_GROUP",
+      "scenario_id": "S4620_CH2_EX9",
+      "solution_enrichments": [
+        {
+          "page": 98,
+          "source_term": "Type de condition / description / séquence d'accès"
+        },
+        {
+          "page": 180,
+          "source_term": "Base des frais de fret"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 93,
+          "raw_excerpt": "ZF##; Fret-Gr##; ZA##",
+          "section_type": "EXERCISE",
+          "source_term": "Type de condition / description / séquence d'accès"
+        },
+        {
+          "page": 98,
+          "raw_excerpt": "ZF##; Fret-Gr##; ZA##",
+          "section_type": "SOLUTION",
+          "source_term": "Type de condition / description / séquence d'accès"
+        },
+        {
+          "page": 174,
+          "raw_excerpt": "ZF## basé sur le poids brut de tous les postes",
+          "section_type": "EXERCISE",
+          "source_term": "Base des frais de fret"
+        },
+        {
+          "page": 180,
+          "raw_excerpt": "ZF##; condition de groupe; unité de référence D - barème poids brut",
+          "section_type": "SOLUTION",
+          "source_term": "Base des frais de fret"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH2_EX9_PRICING_PROCEDURE_Z_GROUP_PRC",
+      "scenario_id": "S4620_CH2_EX9",
+      "solution_enrichments": [
+        {
+          "page": 98,
+          "source_term": "Schéma de calcul / type de condition"
+        },
+        {
+          "page": 181,
+          "source_term": "Schéma de calcul"
+        },
+        {
+          "page": 186,
+          "source_term": "Exclusion dans Z##PRC"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 93,
+          "raw_excerpt": "Z##PRC copié de RVAA01; KF00 remplacé par ZF##",
+          "section_type": "EXERCISE",
+          "source_term": "Schéma de calcul / type de condition"
+        },
+        {
+          "page": 98,
+          "raw_excerpt": "Z##PRC copié de RVAA01; KF00 remplacé par ZF##",
+          "section_type": "SOLUTION",
+          "source_term": "Schéma de calcul / type de condition"
+        },
+        {
+          "page": 174,
+          "raw_excerpt": "ZW## immédiatement avant ZF##",
+          "section_type": "EXERCISE",
+          "source_term": "Ordre des types de conditions"
+        },
+        {
+          "page": 181,
+          "raw_excerpt": "Z##PRC contient ZW## avant ZF##",
+          "section_type": "SOLUTION",
+          "source_term": "Schéma de calcul"
+        },
+        {
+          "page": 183,
+          "raw_excerpt": "Z1##/ZW## et Z2##/ZF##; comparaison D",
+          "section_type": "EXERCISE",
+          "source_term": "Groupes d'exclusion"
+        },
+        {
+          "page": 186,
+          "raw_excerpt": "ordre 10; procédure D; groupes Z1## et Z2##",
+          "section_type": "SOLUTION",
+          "source_term": "Exclusion dans Z##PRC"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH2_EX9_PRICING_PROCEDURE_DETERMINATION_Z_GROUP",
+      "scenario_id": "S4620_CH2_EX9",
+      "solution_enrichments": [
+        {
+          "page": 98,
+          "source_term": "Détermination du schéma de calcul personnalisée"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 93,
+          "raw_excerpt": "1010/10/00; schéma document A; schéma client <YY>; Z##PRC; saisie rapide PR00",
+          "section_type": "EXERCISE",
+          "source_term": "Détermination du schéma de calcul personnalisée"
+        },
+        {
+          "page": 98,
+          "raw_excerpt": "1010/10/00; schéma document A; schéma client <YY>; Z##PRC; saisie rapide PR00",
+          "section_type": "SOLUTION",
+          "source_term": "Détermination du schéma de calcul personnalisée"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH2_EX9_PRICING_CONDITION_ZF_GROUP_FREIGHT",
+      "scenario_id": "S4620_CH2_EX9",
+      "solution_enrichments": [
+        {
+          "page": 98,
+          "source_term": "Enregistrement de conditions de fret"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 93,
+          "raw_excerpt": "ZF##; 1010; EXW; DE; 10 EUR",
+          "section_type": "EXERCISE",
+          "source_term": "Enregistrement de conditions de fret"
+        },
+        {
+          "page": 98,
+          "raw_excerpt": "ZF##; 1010; EXW; DE; 10 EUR",
+          "section_type": "SOLUTION",
+          "source_term": "Enregistrement de conditions de fret"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH2_EX9_SALES_ORDER_CUSTOM_PRICING_MODEL",
+      "scenario_id": "S4620_CH2_EX9",
+      "solution_enrichments": [
+        {
+          "page": 98,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 93,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-3-3; P620-1## 10 None",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 98,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-3-3; P620-1## 10 None",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH3_EX12_PRICING_CONDITION_PR00_P620_2_NEXT_YEAR",
+      "scenario_id": "S4620_CH3_EX12",
+      "solution_enrichments": [
+        {
+          "page": 148,
+          "source_term": "Création avec référence / validité"
+        },
+        {
+          "page": 152,
+          "source_term": "Modification simultanée"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 147,
+          "raw_excerpt": "PR00 article P620-2##; année prochaine",
+          "section_type": "EXERCISE",
+          "source_term": "Création avec référence / validité"
+        },
+        {
+          "page": 148,
+          "raw_excerpt": "PR00 article P620-2##; année prochaine",
+          "section_type": "SOLUTION",
+          "source_term": "Création avec référence / validité"
+        },
+        {
+          "page": 151,
+          "raw_excerpt": "P620-2##; augmentation 5 %",
+          "section_type": "EXERCISE",
+          "source_term": "Modification du montant"
+        },
+        {
+          "page": 152,
+          "raw_excerpt": "P620-2##; pourcentage 5",
+          "section_type": "SOLUTION",
+          "source_term": "Modification simultanée"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH3_EX12_PRICING_CONDITION_PR00_P620_3_NEXT_YEAR",
+      "scenario_id": "S4620_CH3_EX12",
+      "solution_enrichments": [
+        {
+          "page": 148,
+          "source_term": "Création avec référence / validité"
+        },
+        {
+          "page": 152,
+          "source_term": "Modification simultanée"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 147,
+          "raw_excerpt": "PR00 article P620-3##; année prochaine",
+          "section_type": "EXERCISE",
+          "source_term": "Création avec référence / validité"
+        },
+        {
+          "page": 148,
+          "raw_excerpt": "PR00 article P620-3##; année prochaine",
+          "section_type": "SOLUTION",
+          "source_term": "Création avec référence / validité"
+        },
+        {
+          "page": 151,
+          "raw_excerpt": "P620-3##; augmentation 5 %",
+          "section_type": "EXERCISE",
+          "source_term": "Modification du montant"
+        },
+        {
+          "page": 152,
+          "raw_excerpt": "P620-3##; pourcentage 5",
+          "section_type": "SOLUTION",
+          "source_term": "Modification simultanée"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH3_EX14_PRICING_CONDITION_PR00_CUSTOMER_COPY",
+      "scenario_id": "S4620_CH3_EX14",
+      "solution_enrichments": [
+        {
+          "page": 156,
+          "source_term": "Copie d'enregistrement client/article"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 155,
+          "raw_excerpt": "C620-A##/P620-1## vers C620-B##/P620-1##",
+          "section_type": "EXERCISE",
+          "source_term": "Copie d'enregistrement client/article"
+        },
+        {
+          "page": 156,
+          "raw_excerpt": "C620-A##/P620-1## vers C620-B##/P620-1##",
+          "section_type": "SOLUTION",
+          "source_term": "Copie d'enregistrement client/article"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH4_EX15_CONDITION_TYPE_ZW_GROUP",
+      "scenario_id": "S4620_CH4_EX15",
+      "solution_enrichments": [
+        {
+          "page": 177,
+          "source_term": "Type de condition / règle / condition de groupe / unité de référence"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 173,
+          "raw_excerpt": "ZW##; Walldorf##—Parcel; ZA##; B montant fixe; condition de groupe; D barème poids brut",
+          "section_type": "EXERCISE",
+          "source_term": "Type de condition / règle / condition de groupe / unité de référence"
+        },
+        {
+          "page": 177,
+          "raw_excerpt": "ZW##; Walldorf##—Parcel; ZA##; B montant fixe; condition de groupe; D barème poids brut",
+          "section_type": "SOLUTION",
+          "source_term": "Type de condition / règle / condition de groupe / unité de référence"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH4_EX15_PRICING_CONDITION_ZW_GROUP_WEIGHT_SCALE",
+      "scenario_id": "S4620_CH4_EX15",
+      "solution_enrichments": [
+        {
+          "page": 177,
+          "source_term": "Barème de poids brut ZW##"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 173,
+          "raw_excerpt": "0/0,5/1/2/5/10/20/30,001 KG; 8/10/12/14/16/20/30/0 EUR",
+          "section_type": "EXERCISE",
+          "source_term": "Barème de poids brut ZW##"
+        },
+        {
+          "page": 177,
+          "raw_excerpt": "30,001 kg indique supérieur à 30 kg; montant 0 EUR",
+          "section_type": "SOLUTION",
+          "source_term": "Barème de poids brut ZW##"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH4_EX15_SALES_ORDER_WEIGHT_BASED_FREIGHT",
+      "scenario_id": "S4620_CH4_EX15",
+      "solution_enrichments": [
+        {
+          "page": 177,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 173,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-5-1; P620-1## 10 None; P620-3## 5 None",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 177,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-5-1; P620-1## 10 None; P620-3## 5 None",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH4_EX16_SALES_ORDER_FREIGHT_EXCLUSION",
+      "scenario_id": "S4620_CH4_EX16",
+      "solution_enrichments": [
+        {
+          "page": 185,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 183,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-5-2; P620-1## 10 None; P620-3## 10 None",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 185,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-A##; ##-5-2; P620-1## 10 None; P620-3## 10 None",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH4_EX17_CONDITION_TYPE_K005",
+      "scenario_id": "S4620_CH4_EX17",
+      "solution_enrichments": [
+        {
+          "page": 192,
+          "source_term": "Type de condition K005 / MAJ conditions"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 189,
+          "raw_excerpt": "K005; case MAJ conditions cochée",
+          "section_type": "EXERCISE",
+          "source_term": "Type de condition K005 / MAJ conditions"
+        },
+        {
+          "page": 192,
+          "raw_excerpt": "K005; case MAJ conditions cochée",
+          "section_type": "SOLUTION",
+          "source_term": "Type de condition K005 / MAJ conditions"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH4_EX17_PRICING_CONDITION_K005_FIRST_ORDER",
+      "scenario_id": "S4620_CH4_EX17",
+      "solution_enrichments": [
+        {
+          "page": 192,
+          "source_term": "K005 / montant / limite / code suppression"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 189,
+          "raw_excerpt": "K005; C620-B##; P620-2##; -100 EUR; une commande puis limite 15 pièces; suppression activée",
+          "section_type": "EXERCISE",
+          "source_term": "K005 / montant / limite / code suppression"
+        },
+        {
+          "page": 192,
+          "raw_excerpt": "K005; C620-B##; P620-2##; -100 EUR; une commande puis limite 15 pièces; suppression activée",
+          "section_type": "SOLUTION",
+          "source_term": "K005 / montant / limite / code suppression"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH4_EX17_SALES_ORDER_FIRST_K005",
+      "scenario_id": "S4620_CH4_EX17",
+      "solution_enrichments": [
+        {
+          "page": 192,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 189,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-B##; ##-5-3-1; P620-2## 10 None",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 192,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-B##; ##-5-3-1; P620-2## 10 None",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH4_EX17_SALES_ORDER_SECOND_K005",
+      "scenario_id": "S4620_CH4_EX17",
+      "solution_enrichments": [
+        {
+          "page": 192,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 189,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-B##; ##-5-3-2; P620-2## 10 None",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 192,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-B##; ##-5-3-2; P620-2## 10 None",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH4_EX17_SALES_ORDER_QUANTITY_LIMIT_K005",
+      "scenario_id": "S4620_CH4_EX17",
+      "solution_enrichments": [
+        {
+          "page": 192,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 189,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-B##; ##-5-3-3; P620-2## 15 None",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 192,
+          "raw_excerpt": "CDCL; 1010/10/00; C620-B##; ##-5-3-3; P620-2## 15 None",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH5_EX18_SALES_ORDER_HEADER_NET_VALUE",
+      "scenario_id": "S4620_CH5_EX18",
+      "solution_enrichments": [
+        {
+          "page": 223,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 217,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-A##; ##-6-1; P620-1## 1 None; P620-2## 2 None",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 223,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-A##; ##-6-1; P620-1## 1 None; P620-2## 2 None",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH5_EX18_SALES_ORDER_ITEM_NET_PRICE",
+      "scenario_id": "S4620_CH5_EX18",
+      "solution_enrichments": [
+        {
+          "page": 223,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 217,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-A##; ##-6-2; P620-1## 10 None",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 223,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-A##; ##-6-2; P620-1## 10 None",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH5_EX19_CUSTOMER_HIERARCHY_TOPCO_WESTERN_EUROPE",
+      "scenario_id": "S4620_CH5_EX19",
+      "solution_enrichments": [
+        {
+          "page": 233,
+          "source_term": "Hiérarchie clients / affectation"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 231,
+          "raw_excerpt": "TOPCO; C620-ZEW Europe occidentale; C620-A##; 1010/10/00",
+          "section_type": "EXERCISE",
+          "source_term": "Hiérarchie clients / affectation"
+        },
+        {
+          "page": 233,
+          "raw_excerpt": "TOPCO; C620-ZEW Europe occidentale; C620-A##; 1010/10/00",
+          "section_type": "SOLUTION",
+          "source_term": "Hiérarchie clients / affectation"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH5_EX19_PRICING_CONDITION_HI02_HIERARCHY_MATERIAL",
+      "scenario_id": "S4620_CH5_EX19",
+      "solution_enrichments": [
+        {
+          "page": 233,
+          "source_term": "HI02 hiérarchie/article"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 231,
+          "raw_excerpt": "C620-ZE; P620-2##; remise forfaitaire 50 EUR",
+          "section_type": "EXERCISE",
+          "source_term": "HI02 hiérarchie/article"
+        },
+        {
+          "page": 233,
+          "raw_excerpt": "C620-ZE; P620-2##; remise forfaitaire 50 EUR",
+          "section_type": "SOLUTION",
+          "source_term": "HI02 hiérarchie/article"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH5_EX19_SALES_ORDER_HIERARCHY_PRICING",
+      "scenario_id": "S4620_CH5_EX19",
+      "solution_enrichments": [
+        {
+          "page": 233,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 231,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-A##; ##-6-5; P620-2## 1 None",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 233,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-A##; ##-6-5; P620-2## 1 None",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH6_EX20_PRICING_CONDITION_KA00_SALES_DEAL",
+      "scenario_id": "S4620_CH6_EX20",
+      "solution_enrichments": [
+        {
+          "page": 262,
+          "source_term": "KA00 / action commerciale / client / article / remise"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 259,
+          "raw_excerpt": "KA00; action commerciale créée depuis promotion; C620-B##; P620-2##; 10 %",
+          "section_type": "EXERCISE",
+          "source_term": "KA00 / action commerciale / client / article / remise"
+        },
+        {
+          "page": 262,
+          "raw_excerpt": "KA00; C620-B##; P620-2# (coquille d'un # dans la solution); remise 10 %",
+          "section_type": "SOLUTION",
+          "source_term": "KA00 / action commerciale / client / article / remise"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH6_EX20_SALES_ORDER_SALES_DEAL",
+      "scenario_id": "S4620_CH6_EX20",
+      "solution_enrichments": [
+        {
+          "page": 262,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 259,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-B##; ##-9-2; P620-2## 10 None",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 262,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-B##; ##-9-2; P620-2## 10 None",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH7_EX21_PRICING_PROCEDURE_A10005",
+      "scenario_id": "S4620_CH7_EX21",
+      "solution_enrichments": [
+        {
+          "page": 283,
+          "source_term": "Schéma de calcul du document de décompte"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 281,
+          "raw_excerpt": "A10005 - Ristourne (DE)",
+          "section_type": "EXERCISE",
+          "source_term": "Schéma de calcul du document de décompte"
+        },
+        {
+          "page": 283,
+          "raw_excerpt": "A10005 - Ristourne (DE)",
+          "section_type": "SOLUTION",
+          "source_term": "Schéma de calcul du document de décompte"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH7_EX21_PRICING_PROCEDURE_DETERMINATION_SETTLEMENT",
+      "scenario_id": "S4620_CH7_EX21",
+      "solution_enrichments": [
+        {
+          "page": 283,
+          "source_term": "Détermination pour document de décompte"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 281,
+          "raw_excerpt": "groupe de schémas 0S; schéma A10005",
+          "section_type": "EXERCISE",
+          "source_term": "Détermination pour document de décompte"
+        },
+        {
+          "page": 283,
+          "raw_excerpt": "groupe de schémas 0S; schéma A10005",
+          "section_type": "SOLUTION",
+          "source_term": "Détermination pour document de décompte"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH7_EX22_SALES_ORDER_BUSINESS_VOLUME_1",
+      "scenario_id": "S4620_CH7_EX22",
+      "solution_enrichments": [
+        {
+          "page": 297,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 295,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-B##; ##-9-1; P620-3## 10 None",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 297,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-B##; ##-9-1; P620-3## 10 None",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH7_EX22_SALES_ORDER_BUSINESS_VOLUME_2",
+      "scenario_id": "S4620_CH7_EX22",
+      "solution_enrichments": [
+        {
+          "page": 297,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 295,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-B##; ##-9-2; P620-3## 10 None",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 297,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-B##; ##-9-2; P620-3## 10 None",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH7_EX23_CONDITION_CONTRACT_SALES_REBATE",
+      "scenario_id": "S4620_CH7_EX23",
+      "solution_enrichments": [
+        {
+          "page": 303,
+          "source_term": "Contrat de conditions / critères de CA / conditions / calendrier"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 301,
+          "raw_excerpt": "0S01; C620-B##; P620-3##; 01/01-31/12/AAAA; RES1 10 EUR/pce; REA1 -10 EUR/pce; AJ",
+          "section_type": "EXERCISE",
+          "source_term": "Contrat de conditions / critères de CA / conditions / calendrier"
+        },
+        {
+          "page": 303,
+          "raw_excerpt": "0S01; C620-B##; P620-3##; 01/01-31/12/AAAA; RES1 10 EUR/pce; REA1 -10 EUR/pce; AJ",
+          "section_type": "SOLUTION",
+          "source_term": "Contrat de conditions / critères de CA / conditions / calendrier"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH7_EX24_SETTLEMENT_DOCUMENT_DELTA_ACCRUAL",
+      "scenario_id": "S4620_CH7_EX24",
+      "solution_enrichments": [
+        {
+          "page": 314,
+          "source_term": "Provisions delta / date / montant"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 313,
+          "raw_excerpt": "date du jour; exécution réelle; 200 EUR",
+          "section_type": "EXERCISE",
+          "source_term": "Provisions delta / date / montant"
+        },
+        {
+          "page": 314,
+          "raw_excerpt": "date du jour; exécution réelle; 200 EUR",
+          "section_type": "SOLUTION",
+          "source_term": "Provisions delta / date / montant"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH7_EX25_SETTLEMENT_DOCUMENT_PARTIAL_CREDIT",
+      "scenario_id": "S4620_CH7_EX25",
+      "solution_enrichments": [
+        {
+          "page": 319,
+          "source_term": "Décompte partiel / volume d'affaires / montant"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 317,
+          "raw_excerpt": "20 pièces; REBV 5 360; avoir net 200 EUR",
+          "section_type": "EXERCISE",
+          "source_term": "Décompte partiel / volume d'affaires / montant"
+        },
+        {
+          "page": 319,
+          "raw_excerpt": "20 pièces; REBV 5 360; avoir net 200 EUR",
+          "section_type": "SOLUTION",
+          "source_term": "Décompte partiel / volume d'affaires / montant"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH7_EX26_SALES_ORDER_ADDITIONAL_BUSINESS_VOLUME",
+      "scenario_id": "S4620_CH7_EX26",
+      "solution_enrichments": [
+        {
+          "page": 325,
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 323,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-B##; ##-9-3; P620-3## 10 None; P620-2## 5 None",
+          "section_type": "EXERCISE",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        },
+        {
+          "page": 325,
+          "raw_excerpt": "CDLC; 1010/10/00; C620-B##; ##-9-3; P620-3## 10 None; P620-2## 5 None",
+          "section_type": "SOLUTION",
+          "source_term": "Type de commande / domaine commercial / donneur d'ordre / référence client / article / quantité"
+        }
+      ]
+    },
+    {
+      "object_id": "S4620_CH7_EX27_SETTLEMENT_DOCUMENT_FINAL_CREDIT",
+      "scenario_id": "S4620_CH7_EX27",
+      "solution_enrichments": [
+        {
+          "page": 330,
+          "source_term": "Décompte final / date / montant net"
+        }
+      ],
+      "source_to_canonical": [
+        {
+          "page": 329,
+          "raw_excerpt": "31.12.AAAA; exécution réelle; avoir net 100 EUR",
+          "section_type": "EXERCISE",
+          "source_term": "Décompte final / date / montant net"
+        },
+        {
+          "page": 330,
+          "raw_excerpt": "31.12.AAAA; exécution réelle; avoir net 100 EUR",
+          "section_type": "SOLUTION",
+          "source_term": "Décompte final / date / montant net"
+        }
+      ]
+    }
+  ]
+}
