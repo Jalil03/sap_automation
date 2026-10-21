@@ -1,0 +1,13 @@
+{
+  "operations": {
+    "HEADER": {
+      "detail": "Fresh VTFLC re-entry, exact header values observed",
+      "status": "VERIFIED"
+    },
+    "ITEM": {
+      "detail": "Fresh VTFLC re-entry, exact TAN values observed",
+      "status": "VERIFIED"
+    }
+  },
+  "workflow_id": "S4615_VTFLC_ZF01_LF_TAN"
+}

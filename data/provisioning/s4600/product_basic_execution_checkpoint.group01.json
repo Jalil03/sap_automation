@@ -1,0 +1,17 @@
+{
+  "operations": {
+    "S4600_PRODUCT_T_D101_BASIC_ROOT": {
+      "detail": "MM01 Basic Data saved once and independently read back through API_PRODUCT_SRV as 90000132; status={'text': \"L'article 90000132 est créé\", 'message_type': 'S'}",
+      "status": "VERIFIED"
+    },
+    "S4600_PRODUCT_T_MS101_BASIC_ROOT": {
+      "detail": "MM01 Basic Data saved once and independently read back through API_PRODUCT_SRV as 60000445; status={'text': \"L'article 60000445 est créé\", 'message_type': 'S'}",
+      "status": "VERIFIED"
+    },
+    "S4600_PRODUCT_T_MS201_BASIC_ROOT": {
+      "detail": "MM01 Basic Data saved once and independently read back through API_PRODUCT_SRV as 60000446; status={'text': \"L'article 60000446 est créé\", 'message_type': 'S'}",
+      "status": "VERIFIED"
+    }
+  },
+  "workflow_id": "S4600_GROUP01_PRODUCT_BASIC"
+}

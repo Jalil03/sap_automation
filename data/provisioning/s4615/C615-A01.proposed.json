@@ -1,0 +1,87 @@
+{
+  "proposal_version": 1,
+  "status": "BLOCKED_ADMIN_CONFIRMATION",
+  "not_for_sap_execution": true,
+  "course": "S4615",
+  "scenario_id": "S4615_CH3_EX3",
+  "training_user_code": "01",
+  "object_type": "BUSINESS_PARTNER",
+  "logical_id": "C615-A01",
+  "original_book_template": "C615-A##",
+  "sap_business_partner_id": "ADMIN_CONFIRMATION_REQUIRED",
+  "reference_policy": {
+    "structural_reference": "17100002",
+    "copy_reference_identity": false,
+    "excluded_functional_template": "C615-D00 / 1000000114",
+    "source": "reports/s4615_cross_org_template_search.md"
+  },
+  "ready_fields": {
+    "training_name": {
+      "value": "S4615 Training Customer A01",
+      "provenance": "PROJECT_PROPOSAL",
+      "note": "Proposed label only; not a Book value or confirmed legal name."
+    },
+    "business_partner_roles": {
+      "value": ["FLCU00", "FLCU01"],
+      "provenance": "SAP_VERIFIED_STRUCTURAL_REFERENCE:17100002"
+    },
+    "company_code": {
+      "value": "1010",
+      "provenance": "SAP_VERIFIED_ENVIRONMENT"
+    },
+    "sales_area": {
+      "sales_organization": "1010",
+      "distribution_channel": "10",
+      "sales_division": "00",
+      "provenance": "BOOK_AND_SAP_VERIFIED_ENVIRONMENT"
+    },
+    "sales_currency": {
+      "value": "EUR",
+      "provenance": "USER_DIRECTIVE_EUROPEAN_TRAINING_PROPOSAL",
+      "note": "Proposed target currency, not copied from 17100002 (USD)."
+    },
+    "partner_function_structure": {
+      "value": [
+        {"partner_function": "DO", "partner": "RUNTIME_BP_ID_FOR_C615-A01"},
+        {"partner_function": "RF", "partner": "RUNTIME_BP_ID_FOR_C615-A01"},
+        {"partner_function": "PY", "partner": "RUNTIME_BP_ID_FOR_C615-A01"},
+        {"partner_function": "RM", "partner": "RUNTIME_BP_ID_FOR_C615-A01"}
+      ],
+      "provenance": "SAP_VERIFIED_STRUCTURAL_REFERENCE:17100002",
+      "note": "Proposed self-reference structure; exact partner assignments require validation before write."
+    }
+  },
+  "admin_confirmation_fields": {
+    "bp_grouping_and_number_assignment": "ADMIN_CONFIRMATION_REQUIRED",
+    "customer_account_group": "ADMIN_CONFIRMATION_REQUIRED",
+    "address": {
+      "placeholder_label": "EUROPEAN_TRAINING_ADDRESS",
+      "street": "ADMIN_CONFIRMATION_REQUIRED",
+      "postal_code": "ADMIN_CONFIRMATION_REQUIRED",
+      "city": "ADMIN_CONFIRMATION_REQUIRED",
+      "country_code": "ADMIN_CONFIRMATION_REQUIRED",
+      "language": "ADMIN_CONFIRMATION_REQUIRED"
+    },
+    "reconciliation_account_for_1010": "ADMIN_CONFIRMATION_REQUIRED",
+    "payment_terms": "ADMIN_CONFIRMATION_REQUIRED",
+    "shipping_condition": "ADMIN_CONFIRMATION_REQUIRED",
+    "delivering_plant": "ADMIN_CONFIRMATION_REQUIRED",
+    "incoterms_classification": "ADMIN_CONFIRMATION_REQUIRED",
+    "incoterms_location": "ADMIN_CONFIRMATION_REQUIRED",
+    "customer_account_assignment_group": "ADMIN_CONFIRMATION_REQUIRED",
+    "customer_pricing_procedure": "ADMIN_CONFIRMATION_REQUIRED",
+    "country_specific_tax_classifications": "ADMIN_CONFIRMATION_REQUIRED",
+    "partner_function_assignments": "ADMIN_CONFIRMATION_REQUIRED"
+  },
+  "provenance": [
+    "data/validated/canonical_objects.json:S4615_CH3_EX3_SALES_ORDER_FAIR",
+    "data/books/S4615/S4615_provisioning_facts.md",
+    "reports/s4615_cross_org_template_search.md"
+  ],
+  "guardrails": [
+    "Keep canonical C615-A## unchanged; 01 is a runtime training-code resolution.",
+    "Never copy 17100002 identity, company 1710, USD, Palo Alto, EXW or US/UTXJ/1 into the target.",
+    "Do not treat C615-D00 / 1000000114 as a functional template.",
+    "No SAP write is authorized by this proposal."
+  ]
+}

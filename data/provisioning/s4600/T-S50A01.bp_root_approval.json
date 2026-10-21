@@ -1,0 +1,19 @@
+{
+  "S4600_T_S50A01_BP_ROOT": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ",
+    "operation": "S4600_T_S50A01_BP_ROOT",
+    "allow_write": true,
+    "approved_by": "REQUESTING_USER_SELF_ATTESTED",
+    "authorization_evidence": "USER_CONFIRMED_EXACT_SCOPED_AUTHORIZATION_IN_CONVERSATION",
+    "approval_scopes": [
+      "TRAINING_DATA_OWNER_NEW_DATASET",
+      "CUSTOMER_MASTER_OWNER",
+      "TRAINING_MASTER_DATA_BP_ROOT"
+    ],
+    "target_fingerprint": "b682e33a5a4b227124fc75d6bd6e09f294053f91e8970934d4eb605ecf401325",
+    "limit": "ONE_BP_ROOT_POST_ONLY",
+    "approved_on": "2026-10-19"
+  }
+}

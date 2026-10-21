@@ -1,0 +1,30 @@
+{
+  "mode": "CONTROLLED_FIRST_WRITE",
+  "workflow_id": "S4615_VTFLC_ZF01_LF_TAN",
+  "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+  "operation_scopes": {"S4615_VTFLC_ZF01_LF_TAN": "ORG_CUSTOMIZING"},
+  "route_evidence": {
+    "S4615_VTFLC_ZF01_LF_TAN": "VTFLC SAPL080W screens 110-113; live F2/LF/TAN evidence runtime/sap_gui_responses/8bc488ef-c86c-4bbc-acb9-10d589cc784c.json; blank forms f4ccb962-925c-46c8-81e0-0ff477af99c2.json and 2ba4462d-9d95-463c-a866-b7b49835fe22.json; save guarded by exact live control"
+  },
+  "sensitive_approvals": {
+    "S4615_VTFLC_ZF01_LF_TAN": {
+      "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+      "operation": "S4615_VTFLC_ZF01_LF_TAN",
+      "scope": "ORG_CUSTOMIZING",
+      "approved_by": "REQUESTING_USER_SELF_ATTESTED",
+      "authorization_evidence": "User's current FINAL APPROVAL FOR ZF01/LF/TAN and preceding conditional approval; shared impact acknowledged; VOFA excluded"
+    }
+  },
+  "approval": {
+    "workflow_id": "S4615_VTFLC_ZF01_LF_TAN",
+    "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+    "approved_by": "REQUESTING_USER_SELF_ATTESTED",
+    "authorization_evidence": "User expressly approves exact ZF01<-LF/TAN fields in A4H/600/ABDELJ; use A4HK908422 only if valid",
+    "operations": ["S4615_VTFLC_ZF01_LF_TAN"],
+    "scopes": ["ORG_CUSTOMIZING"],
+    "target_fingerprints": {
+      "S4615_VTFLC_ZF01_LF_TAN": "fd1d053294bb6ac9b7ddcde3b596c538e7bf61eb9048b3cf235e02a29479645e"
+    }
+  },
+  "excluded_scope": ["VOFA_RFBFK", "OTHER_COPY_CONTROL", "FI_MM", "MATERIAL_LEDGER", "FINSC", "GLOBAL_CURRENCY", "STOCK_MOVEMENT", "PGI", "TRANSPORT_RELEASE"]
+}

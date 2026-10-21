@@ -1,0 +1,25 @@
+{
+  "checkpoint_version": "1.0",
+  "book": "S4600",
+  "training_group": "01",
+  "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+  "captured_on": "2026-10-19",
+  "phase": "PRE_WRITE_APPROVAL_GATE",
+  "status": "NO_GO_FOR_SAP_WRITE",
+  "sap_write_attempts": 0,
+  "created_objects": [],
+  "verified_existing_objects": [],
+  "identity_mappings_added": [],
+  "fresh_read_evidence": "runtime/sap_reads/s4600_bootstrap_group01.json",
+  "execution_manifest": "data/provisioning/s4600/bootstrap_execution_manifest.group01.json",
+  "blocked_targets": {
+    "T-S50A01": "UNRESOLVED_IDENTITY",
+    "T-S50B01": "NEEDS_ADMIN_DECISION",
+    "T-MS101": "NEEDS_MISSING_DATA",
+    "T-MS201": "NEEDS_MISSING_DATA",
+    "T-MS301": "NEEDS_ADMIN_DECISION",
+    "T-F101": "NEEDS_ADMIN_DECISION",
+    "T-D101": "NEEDS_MISSING_DATA"
+  },
+  "resume_rule": "Do not write from this checkpoint. Regenerate exact target/value fingerprints only after the missing identity, data, dependency and contract evidence is supplied; then request a new explicit write approval."
+}

@@ -1,5 +1,38 @@
 {
   "mappings": {
+    "C615-A01": {
+      "evidence": {
+        "company_code": "1010",
+        "company_readback": "EXISTS_400000_0004",
+        "entity_set": "A_BusinessPartner",
+        "language_metadata_nullable": true,
+        "observed_language": "",
+        "optional_field_mismatches": {
+          "Language": {
+            "expected": "EN",
+            "observed": ""
+          }
+        },
+        "partner_functions_readback": "DO_RF_PY_RM_SELF_REFERENCE",
+        "root_readback": "EXISTS",
+        "sales_area": "1010/10/00",
+        "sales_area_readback": "EXISTS",
+        "scope": "BP_ROOT_AND_CUSTOMER_EXTENSIONS",
+        "service": "API_BUSINESS_PARTNER",
+        "source_attempt": "data/provisioning/s4615/C615-A01.bp_root_attempt.json",
+        "verified_fields": [
+          "BusinessPartner",
+          "BusinessPartnerCategory",
+          "BusinessPartnerGrouping",
+          "OrganizationBPName1",
+          "SearchTerm1"
+        ]
+      },
+      "logical_id": "C615-A01",
+      "object_type": "BUSINESS_PARTNER",
+      "sap_id": "1000000115",
+      "status": "LIVE_VERIFIED"
+    },
     "C615-D00": {
       "evidence": {
         "company_code": "1010",
@@ -11,6 +44,30 @@
       "logical_id": "C615-D00",
       "object_type": "BUSINESS_PARTNER",
       "sap_id": "1000000114",
+      "status": "LIVE_VERIFIED"
+    },
+    "P615-101": {
+      "evidence": {
+        "accounting_view": "NOT_CREATED",
+        "creation_route": "MM01_BASIC_DATA_1_2",
+        "description_readback": "EXISTS_FR",
+        "plant_view": "NOT_CREATED",
+        "root_readback": "EXISTS",
+        "sales_view": "NOT_CREATED",
+        "scope": "BASIC_ROOT_ONLY",
+        "service": "API_PRODUCT_SRV",
+        "verified_fields": [
+          "Product",
+          "ProductType",
+          "IndustrySector",
+          "BaseUnit",
+          "Division",
+          "ProductDescription"
+        ]
+      },
+      "logical_id": "P615-101",
+      "object_type": "MATERIAL",
+      "sap_id": "10000289",
       "status": "LIVE_VERIFIED"
     },
     "P615-400": {
@@ -29,6 +86,89 @@
       "logical_id": "P615-400",
       "object_type": "MATERIAL",
       "sap_id": "10000287",
+      "status": "LIVE_VERIFIED"
+    },
+    "T-D101": {
+      "evidence": {
+        "description_readback": "EXISTS",
+        "payload": {
+          "BaseUnit": "H",
+          "Division": "00",
+          "IndustrySector": "W",
+          "ProductDescription": "Service de maintenance S4600",
+          "ProductType": "DIEN"
+        },
+        "root_readback": "EXISTS",
+        "service": "API_PRODUCT_SRV"
+      },
+      "logical_id": "T-D101",
+      "object_type": "MATERIAL",
+      "sap_id": "90000132",
+      "scope": "PRODUCT_BASIC_ONLY",
+      "status": "LIVE_VERIFIED",
+      "target_fingerprint": "8f8693d3f551e5bc3c039b75fb59b65ba9f277e3180bb54d3de8ba867111cac0"
+    },
+    "T-MS101": {
+      "evidence": {
+        "description_readback": "EXISTS",
+        "payload": {
+          "BaseUnit": "PC",
+          "Division": "00",
+          "IndustrySector": "W",
+          "ProductDescription": "Phare automobile S4600",
+          "ProductType": "HAWA"
+        },
+        "root_readback": "EXISTS",
+        "service": "API_PRODUCT_SRV"
+      },
+      "logical_id": "T-MS101",
+      "object_type": "MATERIAL",
+      "sap_id": "60000445",
+      "scope": "PRODUCT_BASIC_ONLY",
+      "status": "LIVE_VERIFIED",
+      "target_fingerprint": "fa083806edf4ac75763ec608894d40f1bac438cf3223465fae981d1a420fcc38"
+    },
+    "T-MS201": {
+      "evidence": {
+        "description_readback": "EXISTS",
+        "payload": {
+          "BaseUnit": "PC",
+          "Division": "00",
+          "IndustrySector": "W",
+          "ProductDescription": "Accessoire automobile S4600",
+          "ProductType": "HAWA"
+        },
+        "root_readback": "EXISTS",
+        "service": "API_PRODUCT_SRV"
+      },
+      "logical_id": "T-MS201",
+      "object_type": "MATERIAL",
+      "sap_id": "60000446",
+      "scope": "PRODUCT_BASIC_ONLY",
+      "status": "LIVE_VERIFIED",
+      "target_fingerprint": "f4f210ecfed61f0bc72f3fd91a3b8a26288222ccf3a608e7a554be886394185c"
+    },
+    "T-S50A01": {
+      "evidence": {
+        "entity_set": "A_BusinessPartner",
+        "root_readback": "EXISTS",
+        "scope": "BP_ROOT_AND_STANDARD_ADDRESS",
+        "service": "API_BUSINESS_PARTNER",
+        "target_fingerprint": "b682e33a5a4b227124fc75d6bd6e09f294053f91e8970934d4eb605ecf401325",
+        "verified_fields": [
+          "BusinessPartner",
+          "BusinessPartnerCategory",
+          "BusinessPartnerGrouping",
+          "OrganizationBPName1",
+          "SearchTerm1"
+        ],
+        "standard_address_readback": "EXISTS_CURRENT_XXDEFAULT",
+        "standard_address_id": "1584",
+        "standard_address_fingerprint": "60af943bd3ce670d8c4b3ae0b372e301615fcfe20cbd91a6b7b3ee23fbac8f1d"
+      },
+      "logical_id": "T-S50A01",
+      "object_type": "BUSINESS_PARTNER",
+      "sap_id": "1000000116",
       "status": "LIVE_VERIFIED"
     }
   },

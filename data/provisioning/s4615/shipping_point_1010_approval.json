@@ -1,0 +1,35 @@
+{
+  "mode": "CONTROLLED_FIRST_WRITE",
+  "workflow_id": "S4615_SHIPPING_POINT_1010",
+  "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+  "operation_scopes": {"S4615_SHIPPING_POINT_1010": "ORG_CUSTOMIZING"},
+  "route_evidence": {
+    "S4615_SHIPPING_POINT_1010": "OVXD SAPLV03B 500/510; runtime/sap_gui_responses/c4134a1a-8cb1-4a2f-8fc6-dc32daa0ffc3.json and cfea9a18-4116-4142-b5c1-86b52d9403e1.json"
+  },
+  "sensitive_approvals": {
+    "S4615_SHIPPING_POINT_1010": {
+      "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+      "operation": "S4615_SHIPPING_POINT_1010",
+      "scope": "ORG_CUSTOMIZING",
+      "approved_by": "REQUESTING_USER_SELF_ATTESTED",
+      "authorization_evidence": "Current S4615 request explicitly authorizes creation of shipping point 1010 only"
+    }
+  },
+  "approval": {
+    "workflow_id": "S4615_SHIPPING_POINT_1010",
+    "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+    "approved_by": "REQUESTING_USER_SELF_ATTESTED",
+    "authorization_evidence": "Current S4615 request explicitly authorizes creation of shipping point 1010 only; OVXD access observed but SAVE permission unproven",
+    "operations": ["S4615_SHIPPING_POINT_1010"],
+    "scopes": ["ORG_CUSTOMIZING"],
+    "target_fingerprints": {
+      "S4615_SHIPPING_POINT_1010": "9212430ac6e2422448b34b53d5dc30272a06e33c74893150cc572973844ebf91"
+    }
+  },
+  "values_provenance": {
+    "shipping_point": "BOOK_CONFIRMED",
+    "description": "PROJECT_DEFAULT: follows observed TVST descriptions for 0001 and 1710",
+    "transport_request": "EXISTING_S4615_CUSTOMIZING_REQUEST: A4HK908422"
+  },
+  "excluded_scope": ["PLANT", "VALUATION", "FI_MM", "MATERIAL_LEDGER", "GLOBAL_CURRENCY", "DELETE", "TRANSPORT_RELEASE"]
+}

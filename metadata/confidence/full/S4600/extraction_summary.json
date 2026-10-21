@@ -37,14 +37,14 @@
   "schema_invalid_count": 0,
   "schema_valid_count": 54,
   "source": {
-    "demonstration_heading_count": 1,
+    "demonstration_heading_count": 0,
     "exercise_count": 36,
     "logical_name": "S4600",
     "page_count": 353,
     "sha256": "a783e489c8e041381b1c4107d45b205511bc7c26cfcbd033ec0ca6355424f258",
     "solution_count": 36,
     "source_file": "P2W_S4600_FR_Col23.pdf",
-    "table_marker_count": 113
+    "table_marker_count": 107
   },
   "source_pages_processed": [
     1,

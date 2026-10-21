@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "recorded_on": "2026-10-19",
+  "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+  "book": "S4600_BOOK_00",
+  "training_group": "01",
+  "authorization": {
+    "granted_by": "REQUESTING_USER",
+    "mode": "WORKFLOW_LEVEL_TRAINING_DATA_AUTHORIZATION",
+    "authorized_objects": ["T-S50A01", "T-D101", "T-MS101", "T-MS201"],
+    "authorized_operations": [
+      "create an absent BP root only with the exact approved payload",
+      "create absent product Basic Data only with complete exact mandatory values"
+    ],
+    "conditions": [
+      "fresh anti-duplicate check",
+      "complete target-specific payload",
+      "required independent owner approvals when applicable",
+      "fingerprint-bound scoped write approval",
+      "independent readback",
+      "no retry after an ambiguous write"
+    ],
+    "excluded": [
+      "recreation of an existing object",
+      "plant",
+      "warehouse",
+      "FI/MM",
+      "valuation",
+      "stock",
+      "shared customizing",
+      "S4615",
+      "S4650"
+    ]
+  },
+  "independent_owner_approvals": {
+    "status": "NOT_ATTESTED_BY_THIS_AUTHORIZATION",
+    "rule": "Do not represent the requesting user's workflow authorization as a separate training-data-owner, customer-master-owner, product-master-owner, FI, MM or tax approval."
+  },
+  "execution_result": {
+    "T-S50A01": "SKIPPED_EXISTING_VERIFIED_1000000116",
+    "T-D101": "BLOCKED_INCOMPLETE_BASIC_PAYLOAD_AND_UNRESOLVED_IDENTITY",
+    "T-MS101": "BLOCKED_INCOMPLETE_BASIC_PAYLOAD_AND_UNRESOLVED_IDENTITY",
+    "T-MS201": "BLOCKED_INCOMPLETE_BASIC_PAYLOAD_AND_UNRESOLVED_IDENTITY"
+  }
+}

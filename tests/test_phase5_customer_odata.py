@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.run_phase5_customer_odata import customer_payloads, load_operation, persist_mapping
+from src.provisioning.sap_api_backend import customer_payloads, load_operation, persist_mapping
 
 
 ROOT = Path(__file__).resolve().parents[1]

@@ -1,0 +1,8 @@
+{
+  "operation": "ENSURE_BP_STANDARD_ADDRESS",
+  "logical_id": "C615-A01",
+  "sap_id": "1000000115",
+  "status": "VERIFIED",
+  "retry_allowed": false,
+  "address_id": "1581"
+}

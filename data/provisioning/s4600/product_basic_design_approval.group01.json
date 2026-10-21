@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "prepared_on": "2026-10-19",
+  "workflow_id": "S4600_GROUP01_PRODUCT_BASIC",
+  "mode": "PREPARED_STOP_BEFORE_WRITE",
+  "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+  "design_authority": {
+    "approved_by": "REQUESTING_USER_SELF_ATTESTED_TRAINING_DATA_OWNER",
+    "scope": "TRAINING_DATA_OWNER_NEW_DATASET",
+    "evidence": "User declared a new S4600 group-01 training dataset and approved the proposed descriptions, product types and base units as design values, not Book facts."
+  },
+  "industry_sector_decision": {
+    "value": "W",
+    "classification": "VALIDATED_TRAINING_CONVENTION_NOT_BOOK_FACT",
+    "evidence": [
+      "A4H/600 contains multiple DIEN products with BaseUnit H and IndustrySector W.",
+      "All five targeted installed HAWA examples returned IndustrySector W.",
+      "IndustrySector 1 is also installed for one DIEN/H course product, but is less aligned with the automotive maintenance/trading dataset."
+    ]
+  },
+  "collision_evidence": {
+    "captured_on": "2026-10-19",
+    "method": "API_PRODUCT_SRV exact literal key, exact ProductOldID and exact ProductDescription GET",
+    "T-D101": {"literal_key": "HTTP_404", "old_id_matches": 0, "exact_description_matches": 0},
+    "T-MS101": {"literal_key": "HTTP_404", "old_id_matches": 0, "exact_description_matches": 0},
+    "T-MS201": {"literal_key": "HTTP_404", "old_id_matches": 0, "exact_description_matches": 0},
+    "limit": "Bounded exact searches do not exclude an unlabelled internal product; repeat immediately before each write."
+  },
+  "mandatory_basic_fields": ["ProductType", "IndustrySector", "ProductDescription", "BaseUnit", "Division"],
+  "operations": {
+    "S4600_PRODUCT_T_D101_BASIC_ROOT": {
+      "target": {"logical_product_id": "T-D101", "sap_product_id": null},
+      "payload": {
+        "ProductType": "DIEN",
+        "IndustrySector": "W",
+        "ProductDescription": "Service de maintenance S4600",
+        "BaseUnit": "H",
+        "Division": "00"
+      },
+      "target_fingerprint": "8f8693d3f551e5bc3c039b75fb59b65ba9f277e3180bb54d3de8ba867111cac0",
+      "validation": {
+        "ProductType_BaseUnit": "LIVE_COMBINATION_EXISTS",
+        "IndustrySector": "LIVE_DIEN_H_CONVENTION",
+        "Description": "USER_APPROVED_TRAINING_DESIGN",
+        "Division": "BOOK_GROUNDED_00"
+      },
+      "approval_scopes_evidenced": ["TRAINING_DATA_OWNER_NEW_DATASET"],
+      "pending_approval_scopes": ["TRAINING_MASTER_DATA_PRODUCT_BASIC"],
+      "allow_write": false
+    },
+    "S4600_PRODUCT_T_MS101_BASIC_ROOT": {
+      "target": {"logical_product_id": "T-MS101", "sap_product_id": null},
+      "payload": {
+        "ProductType": "HAWA",
+        "IndustrySector": "W",
+        "ProductDescription": "Phare automobile S4600",
+        "BaseUnit": "PC",
+        "Division": "00"
+      },
+      "target_fingerprint": "fa083806edf4ac75763ec608894d40f1bac438cf3223465fae981d1a420fcc38",
+      "validation": {
+        "ProductType": "LIVE_INSTALLED",
+        "BaseUnit": "LIVE_INSTALLED",
+        "ProductType_BaseUnit": "MM01_NON_SAVING_PREFLIGHT_VALIDATED",
+        "IndustrySector": "LIVE_HAWA_CONVENTION",
+        "Description": "USER_APPROVED_TRAINING_DESIGN",
+        "Division": "BOOK_GROUNDED_00"
+      },
+      "approval_scopes_evidenced": ["TRAINING_DATA_OWNER_NEW_DATASET"],
+      "pending_approval_scopes": ["TRAINING_MASTER_DATA_PRODUCT_BASIC"],
+      "allow_write": false
+    },
+    "S4600_PRODUCT_T_MS201_BASIC_ROOT": {
+      "target": {"logical_product_id": "T-MS201", "sap_product_id": null},
+      "payload": {
+        "ProductType": "HAWA",
+        "IndustrySector": "W",
+        "ProductDescription": "Accessoire automobile S4600",
+        "BaseUnit": "PC",
+        "Division": "00"
+      },
+      "target_fingerprint": "f4f210ecfed61f0bc72f3fd91a3b8a26288222ccf3a608e7a554be886394185c",
+      "validation": {
+        "ProductType": "LIVE_INSTALLED",
+        "BaseUnit": "LIVE_INSTALLED",
+        "ProductType_BaseUnit": "MM01_NON_SAVING_PREFLIGHT_VALIDATED",
+        "IndustrySector": "LIVE_HAWA_CONVENTION",
+        "Description": "USER_APPROVED_TRAINING_DESIGN",
+        "Division": "BOOK_GROUNDED_00"
+      },
+      "approval_scopes_evidenced": ["TRAINING_DATA_OWNER_NEW_DATASET"],
+      "pending_approval_scopes": ["TRAINING_MASTER_DATA_PRODUCT_BASIC"],
+      "allow_write": false
+    }
+  },
+  "execution_gate": {
+    "sap_write_authorized": false,
+    "required_confirmation": "Approve IndustrySector W for all three products, explicitly accept HAWA/PC as the new training design for T-MS101/T-MS201, and grant TRAINING_MASTER_DATA_PRODUCT_BASIC for the three exact fingerprints.",
+    "excluded": ["sales", "plant", "warehouse", "accounting", "valuation", "stock", "customizing"]
+  }
+}

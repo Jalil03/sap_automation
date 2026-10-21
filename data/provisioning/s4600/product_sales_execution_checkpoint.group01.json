@@ -1,0 +1,13 @@
+{
+  "operations": {
+    "S4600_PRODUCT_T_D101_SALES_1010_10": {
+      "detail": "AmbiguousTransportError",
+      "status": "AMBIGUOUS"
+    },
+    "S4600_PRODUCT_T_MS101_SALES_1010_10": {
+      "detail": "{\"correlation_id\": \"8DC6789C69B40030E006AB47B5D8D314\", \"http_status\": 400, \"sap_code\": \"MG/172\", \"sap_message\": \"La classification des taxes n'a pas \\u00e9t\\u00e9 g\\u00e9r\\u00e9e de fa\\u00e7on compl\\u00e8te\"}",
+      "status": "REJECTED"
+    }
+  },
+  "workflow_id": "S4600_GROUP01_PRODUCT_SALES"
+}

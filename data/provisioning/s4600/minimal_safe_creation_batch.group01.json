@@ -1,0 +1,188 @@
+{
+  "manifest_version": "1.0",
+  "book": "S4600",
+  "training_group": "01",
+  "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+  "mode": "PREPARE_ONLY_NO_SAP_WRITE",
+  "prepared_on": "2026-10-19",
+  "targets": ["T-MS101", "T-MS201", "T-D101", "T-S50A01", "T-S50B01"],
+  "identity_gate": "Every target is a Book-preloaded object with unresolved SAP identity. No create is permitted until the training-data owner explicitly approves a new dataset for the exact logical ID.",
+  "reused_evidence": [
+    "data/books/S4600/S4600_EXERCISES.md",
+    "data/provisioning/s4600/master_data_manifest.group01.json",
+    "data/provisioning/s4600/bootstrap_execution_manifest.group01.json",
+    "runtime/sap_reads/s4600_bootstrap_group01.json",
+    "data/provisioning/phase5_identity_mappings.json",
+    "data/provisioning/s4615/C615-A01.bp_root_attempt.json",
+    "data/provisioning/s4615/P615-101.basic_root_checkpoint.json"
+  ],
+  "not_repeated": "No live duplicate search was repeated for this focused preparation.",
+  "contracts": {
+    "bp_root_minimum": {
+      "route": "API_BUSINESS_PARTNER/A_BusinessPartner with SAP-generated internal ID",
+      "mandatory_fields": ["BusinessPartnerGrouping", "BusinessPartnerCategory", "OrganizationBPName1", "SearchTerm1"],
+      "optional_at_root": ["Language"],
+      "not_in_root_batch": ["address", "FLCU00/FLCU01 roles", "A_Customer", "company code", "sales area", "partner functions", "tax"],
+      "reuse_limit": "The one-shot route is structurally proven in A4H/600 but must be target-scoped, fingerprinted and tested for S4600 before approval."
+    },
+    "product_basic_root_minimum": {
+      "route": "MM01 Basic Data 1/2 with SAP-generated material ID and API_PRODUCT_SRV readback",
+      "mandatory_fields": ["ProductType", "IndustrySector", "ProductDescription", "BaseUnit", "Division"],
+      "not_in_basic_batch": ["sales view", "item-category-group extension", "tax", "plant", "MRP", "accounting", "valuation", "stock"],
+      "reuse_limit": "The observed route is hard-scoped to P615-101 today and must be adapted, fingerprinted and tested for each S4600 target before approval."
+    }
+  },
+  "priority": ["T-S50A01", "T-D101", "T-MS101", "T-MS201", "T-S50B01"],
+  "priority_reason": "T-S50A01 already has an exact Book name; T-D101 already has an exact material type. The remaining targets need progressively more owner-supplied descriptive/master values. Priority does not waive the unresolved-identity gate.",
+  "objects": [
+    {
+      "logical_id": "T-S50A01",
+      "object_type": "BUSINESS_PARTNER",
+      "creation_scope": "BP_ROOT_ONLY",
+      "book_values": {
+        "OrganizationBPName1": {"value": "Motormarkt Heidelberg", "source": "Book pages 87-88"},
+        "future_sales_area": {"value": "1010/10/00", "source": "Book pages 57-58", "excluded_from_this_payload": true}
+      },
+      "payload_template": {
+        "BusinessPartnerGrouping": null,
+        "BusinessPartnerCategory": null,
+        "OrganizationBPName1": "Motormarkt Heidelberg",
+        "SearchTerm1": "T-S50A01"
+      },
+      "derived_values": {
+        "SearchTerm1": {"source": "Exact resolved Book logical ID", "owner": "TRAINING_DATA_OWNER"}
+      },
+      "missing_decisions": [
+        {"field": "new_dataset_identity", "owner": "TRAINING_DATA_OWNER", "decision": "Approve creation as a new internally numbered dataset after reviewing the unresolved-identity evidence"},
+        {"field": "BusinessPartnerGrouping", "owner": "TRAINING_DATA_OWNER + CUSTOMER_MASTER_OWNER", "proposed_source": "Use an installed internal-number organization grouping; BPAB is a same-environment proven candidate but is not pre-approved for S4600"},
+        {"field": "BusinessPartnerCategory", "owner": "TRAINING_DATA_OWNER + CUSTOMER_MASTER_OWNER", "proposed_source": "Approve organization category 2 for this customer; do not infer it silently"}
+      ],
+      "training_team_can_supply": ["new-dataset decision", "approved organization name", "logical SearchTerm marker", "approved installed grouping/category choice"],
+      "views_remaining_after_root": ["address", "customer roles/root", "sales area", "partner functions", "company/FI", "tax", "plant-dependent shipping"],
+      "can_create_after_approval": "YES_BP_ROOT_ONLY after all three decisions and target-scoped contract validation",
+      "required_approval": ["TRAINING_DATA_OWNER_NEW_DATASET", "CUSTOMER_MASTER_OWNER", "TRAINING_MASTER_DATA_BP_ROOT"]
+    },
+    {
+      "logical_id": "T-D101",
+      "object_type": "MATERIAL",
+      "creation_scope": "PRODUCT_BASIC_ROOT_ONLY",
+      "book_values": {
+        "ProductType": {"value": "DIEN", "source": "Book exercise 31, pages 293/295"},
+        "Division": {"value": "00", "source": "Book sales area 1010/10/00"},
+        "future_order_unit": {"value": "H", "source": "Book exercise 31", "excluded_from_this_payload": true},
+        "future_item_category_group": {"value": "LEIS", "source": "Book exercise 31", "excluded_from_this_payload": true},
+        "future_sales_area": {"value": "1010/10", "source": "Book exercise 31", "excluded_from_this_payload": true}
+      },
+      "payload_template": {
+        "ProductType": "DIEN",
+        "IndustrySector": null,
+        "ProductDescription": null,
+        "BaseUnit": null,
+        "Division": "00"
+      },
+      "missing_decisions": [
+        {"field": "new_dataset_identity", "owner": "TRAINING_DATA_OWNER", "decision": "Approve a new internally numbered dataset for T-D101"},
+        {"field": "IndustrySector", "owner": "TRAINING_DATA_OWNER", "proposed_source": "Choose an installed code consistent with the Book service product; no code is stated by the Book"},
+        {"field": "ProductDescription", "owner": "TRAINING_DATA_OWNER", "proposed_source": "Provide the exact training description"},
+        {"field": "BaseUnit", "owner": "TRAINING_DATA_OWNER", "proposed_source": "Approve the base unit; Book order unit H is not automatically the base unit"}
+      ],
+      "training_team_can_supply": ["new-dataset decision", "service description", "installed industry code", "base-unit decision"],
+      "views_remaining_after_root": ["LEIS/item-category behavior", "sales 1010/10", "order unit H if distinct", "tax", "price", "plant 1010", "billing/copy-control validation"],
+      "can_create_after_approval": "YES_BASIC_ROOT_ONLY after the four decisions and target-scoped MM01 contract validation",
+      "required_approval": ["TRAINING_DATA_OWNER_NEW_DATASET", "TRAINING_MASTER_DATA_PRODUCT_BASIC"]
+    },
+    {
+      "logical_id": "T-MS101",
+      "object_type": "MATERIAL",
+      "creation_scope": "PRODUCT_BASIC_ROOT_ONLY",
+      "book_values": {
+        "Division": {"value": "00", "source": "Book sales area 1010/10/00"},
+        "family_description": {"value": "phare", "source": "Book exercise 11", "note": "Family meaning only; not accepted as the exact ProductDescription"},
+        "future_order_unit": {"value": "PC", "source": "Book exercises 3/13", "excluded_from_this_payload": true},
+        "future_sales_area": {"value": "1010/10", "source": "Book exercises 3/13", "excluded_from_this_payload": true},
+        "future_plant": {"value": "1010", "source": "Book exercise 5", "excluded_from_this_payload": true}
+      },
+      "payload_template": {
+        "ProductType": null,
+        "IndustrySector": null,
+        "ProductDescription": null,
+        "BaseUnit": null,
+        "Division": "00"
+      },
+      "missing_decisions": [
+        {"field": "new_dataset_identity", "owner": "TRAINING_DATA_OWNER", "decision": "Approve a new internally numbered dataset for T-MS101"},
+        {"field": "ProductType", "owner": "TRAINING_DATA_OWNER", "proposed_source": "Provide the installed product type matching the preloaded sellable headlamp; do not infer it from T-MS401"},
+        {"field": "IndustrySector", "owner": "TRAINING_DATA_OWNER", "proposed_source": "Provide an installed code"},
+        {"field": "ProductDescription", "owner": "TRAINING_DATA_OWNER", "proposed_source": "Provide the exact description; 'phare' alone is only family evidence"},
+        {"field": "BaseUnit", "owner": "TRAINING_DATA_OWNER", "proposed_source": "Approve the base unit; order unit PC is not silently reused"}
+      ],
+      "training_team_can_supply": ["new-dataset decision", "product semantics/description", "installed product type and industry", "base-unit decision"],
+      "views_remaining_after_root": ["sales 1010/10", "order unit PC", "item category", "tax", "plant 1010", "accounting/valuation", "stock", "PR00/K007"],
+      "can_create_after_approval": "YES_BASIC_ROOT_ONLY after the five decisions and target-scoped MM01 contract validation",
+      "required_approval": ["TRAINING_DATA_OWNER_NEW_DATASET", "TRAINING_MASTER_DATA_PRODUCT_BASIC"]
+    },
+    {
+      "logical_id": "T-MS201",
+      "object_type": "MATERIAL",
+      "creation_scope": "PRODUCT_BASIC_ROOT_ONLY",
+      "book_values": {
+        "Division": {"value": "00", "source": "Book sales area 1010/10/00"},
+        "future_order_unit": {"value": "PC", "source": "Book exercise 3", "excluded_from_this_payload": true},
+        "future_sales_area": {"value": "1010/10", "source": "Book exercise 3", "excluded_from_this_payload": true}
+      },
+      "payload_template": {
+        "ProductType": null,
+        "IndustrySector": null,
+        "ProductDescription": null,
+        "BaseUnit": null,
+        "Division": "00"
+      },
+      "missing_decisions": [
+        {"field": "new_dataset_identity", "owner": "TRAINING_DATA_OWNER", "decision": "Approve a new internally numbered dataset for T-MS201"},
+        {"field": "ProductType", "owner": "TRAINING_DATA_OWNER", "proposed_source": "Provide the installed product type"},
+        {"field": "IndustrySector", "owner": "TRAINING_DATA_OWNER", "proposed_source": "Provide an installed code"},
+        {"field": "ProductDescription", "owner": "TRAINING_DATA_OWNER", "proposed_source": "Provide the exact training description"},
+        {"field": "BaseUnit", "owner": "TRAINING_DATA_OWNER", "proposed_source": "Approve the base unit; order unit PC is not silently reused"}
+      ],
+      "training_team_can_supply": ["new-dataset decision", "product semantics/description", "installed product type and industry", "base-unit decision"],
+      "views_remaining_after_root": ["sales 1010/10", "order unit PC", "item category/schedule line", "tax", "plant/logistics", "accounting/valuation", "stock/pricing"],
+      "can_create_after_approval": "YES_BASIC_ROOT_ONLY after the five decisions and target-scoped MM01 contract validation",
+      "required_approval": ["TRAINING_DATA_OWNER_NEW_DATASET", "TRAINING_MASTER_DATA_PRODUCT_BASIC"]
+    },
+    {
+      "logical_id": "T-S50B01",
+      "object_type": "BUSINESS_PARTNER",
+      "creation_scope": "BP_ROOT_ONLY",
+      "book_values": {
+        "future_sales_area": {"value": "1010/10/00", "source": "Book exercise 20", "excluded_from_this_payload": true},
+        "future_delivering_plant": {"value": "1010", "source": "Book exercise 20", "excluded_from_this_payload": true}
+      },
+      "payload_template": {
+        "BusinessPartnerGrouping": null,
+        "BusinessPartnerCategory": null,
+        "OrganizationBPName1": null,
+        "SearchTerm1": "T-S50B01"
+      },
+      "derived_values": {
+        "SearchTerm1": {"source": "Exact resolved Book logical ID", "owner": "TRAINING_DATA_OWNER"}
+      },
+      "missing_decisions": [
+        {"field": "new_dataset_identity", "owner": "TRAINING_DATA_OWNER", "decision": "Approve creation as a new internally numbered dataset"},
+        {"field": "BusinessPartnerGrouping", "owner": "TRAINING_DATA_OWNER + CUSTOMER_MASTER_OWNER", "proposed_source": "Approve an installed internal-number organization grouping"},
+        {"field": "BusinessPartnerCategory", "owner": "TRAINING_DATA_OWNER + CUSTOMER_MASTER_OWNER", "proposed_source": "Approve the BP category"},
+        {"field": "OrganizationBPName1", "owner": "TRAINING_DATA_OWNER", "proposed_source": "Provide the exact Book-compatible training organization name"}
+      ],
+      "training_team_can_supply": ["new-dataset decision", "organization name", "logical SearchTerm marker", "approved installed grouping/category choice"],
+      "views_remaining_after_root": ["address", "customer roles/root", "sales area", "shipping conditions", "partner functions", "company/FI", "tax", "delivering plant 1010"],
+      "can_create_after_approval": "YES_BP_ROOT_ONLY after all four decisions and target-scoped contract validation",
+      "required_approval": ["TRAINING_DATA_OWNER_NEW_DATASET", "CUSTOMER_MASTER_OWNER", "TRAINING_MASTER_DATA_BP_ROOT"]
+    }
+  ],
+  "current_gate": {
+    "sap_writes_authorized": false,
+    "ready_now": [],
+    "next_candidate": "T-S50A01 BP root",
+    "next_candidate_reason": "It has the fewest unresolved Book data fields, but still requires explicit new-dataset, grouping and category decisions.",
+    "prohibited": ["plant changes", "FI/MM", "valuation", "stock", "tax defaults", "sales extensions with unresolved mandatory fields"]
+  }
+}

@@ -1,0 +1,392 @@
+{
+  "spec_version": "1.0",
+  "course_code": "S4615",
+  "target": {
+    "logical_id": "P615-101",
+    "object_type": "MATERIAL",
+    "group": "01",
+    "placeholder_resolution": {
+      "source_value": "P615-1##",
+      "group_value": "01",
+      "resolved_value": "P615-101",
+      "source_type": "DERIVED",
+      "source_reference": "data/books/S4615/S4615_provisioning_facts.md#Training-master-data-families; group 01 is the requested context",
+      "confidence": "HIGH"
+    }
+  },
+  "readiness": {
+    "classification": "BLOCKED",
+    "sap_write_performed": false,
+    "reason": "The current API_PRODUCT_SRV backend deliberately blocks A_Product root POST because the installed service rejected it. The adapter is allowlisted only for PRODUCT_P615_400, and there is no verified P615-101 mapping. Required product attributes and the product-specific PC association are not established by the Book or verified SAP evidence.",
+    "missing_fields": [
+      "sap_product_id",
+      "description",
+      "material_type",
+      "industry_sector",
+      "base_unit",
+      "product_group",
+      "plants",
+      "delivering_plant",
+      "item_category_group",
+      "tax_classification",
+      "availability_check",
+      "alternative_units"
+    ],
+    "book_scenario_blockers": [
+      "product_unit_of_measure_association"
+    ],
+    "implementation_blockers": [
+      "No API route or seed operation is defined for P615-101; the backend allowlist only accepts PRODUCT_P615_400.",
+      "SapApiBackend.provision returns provisioning_blocked for product root creation; it does not POST A_Product.",
+      "The Book's PC order unit does not establish P615-101's base unit or product-specific unit-of-measure association.",
+      "No target mapping or target-specific verified product attributes are present."
+    ]
+  },
+  "book_usage": [
+    {
+      "scenario_id": "S4615_CH3_EX3",
+      "canonical_object_ids": [
+        "S4615_CH3_EX3_SALES_ORDER_FAIR",
+        "S4615_CH3_EX3_OUTBOUND_DELIVERY_FAIR",
+        "S4615_CH3_EX3_BILLING_FAIR"
+      ],
+      "pages": [41, 43],
+      "usage": "Sales order, delivery, and billing use P615-1## for 5 PC."
+    },
+    {
+      "scenario_id": "S4615_CH5_EX6",
+      "canonical_object_ids": [
+        "S4615_CH5_EX6_SALES_ORDER_FAIR_FREIGHT",
+        "S4615_CH5_EX6_OUTBOUND_DELIVERY_FAIR_FREIGHT",
+        "S4615_CH5_EX6_BILLING_FAIR_FREIGHT",
+        "S4615_CH5_EX6_BILLING_F1_OVERRIDE"
+      ],
+      "pages": [97, 100],
+      "usage": "Product is used in the freight exercise and subsequent billing workflow; quantity/unit details remain those recorded in the canonical objects."
+    },
+    {
+      "scenario_id": "S4615_CH9_EX12",
+      "canonical_object_ids": [
+        "S4615_CH9_EX12_SALES_ORDER_ACCOUNT_DETERMINATION_TEST",
+        "S4615_CH9_EX12_OUTBOUND_DELIVERY_ACCOUNT_DETERMINATION_TEST"
+      ],
+      "pages": [213, 216],
+      "usage": "Sales order and delivery use P615-1## at 1 PC."
+    },
+    {
+      "scenario_id": "S4615_CH10_EX13",
+      "canonical_object_ids": [
+        "S4615_CH10_EX13_SALES_ORDER_POSTING_BLOCK",
+        "S4615_CH10_EX13_OUTBOUND_DELIVERY_POSTING_BLOCK",
+        "S4615_CH10_EX13_SALES_ORDER_FI_REFERENCE",
+        "S4615_CH10_EX13_OUTBOUND_DELIVERY_FI_REFERENCE"
+      ],
+      "pages": [235, 238, 241],
+      "usage": "Sales order and delivery steps use P615-1## at 1 PC in the posting-block and FI-reference exercises."
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "S4615_CH3_EX3_SALES_ORDER_FAIR",
+      "relation": "USES_MATERIAL",
+      "source_phrase": "P615-1##",
+      "status": "UNRESOLVED",
+      "target_id_after_group_resolution": "P615-101"
+    },
+    {
+      "source": "S4615_CH5_EX6_SALES_ORDER_FAIR_FREIGHT",
+      "relation": "USES_MATERIAL",
+      "source_phrase": "P615-1##",
+      "status": "UNRESOLVED",
+      "target_id_after_group_resolution": "P615-101"
+    },
+    {
+      "source": "S4615_CH9_EX12_SALES_ORDER_ACCOUNT_DETERMINATION_TEST",
+      "relation": "USES_MATERIAL",
+      "source_phrase": "P615-1##",
+      "status": "UNRESOLVED",
+      "target_id_after_group_resolution": "P615-101"
+    },
+    {
+      "source": "S4615_CH10_EX13_SALES_ORDER_POSTING_BLOCK",
+      "relation": "USES_MATERIAL",
+      "source_phrase": "P615-1##",
+      "status": "UNRESOLVED",
+      "target_id_after_group_resolution": "P615-101"
+    },
+    {
+      "source": "S4615_CH10_EX13_SALES_ORDER_FI_REFERENCE",
+      "relation": "USES_MATERIAL",
+      "source_phrase": "P615-1##",
+      "status": "UNRESOLVED",
+      "target_id_after_group_resolution": "P615-101"
+    }
+  ],
+  "minimum_creation_contract": {
+    "service": "API_PRODUCT_SRV",
+    "supported_target_by_current_backend": false,
+    "product_root_creation_supported": false,
+    "root_create_behavior": "SapApiBackend.provision returns provisioning_blocked because A_Product POST is not creatable on the installed API_PRODUCT_SRV.",
+    "root_payload_fields_if_a_supported_create_path_is_added": [
+      "Product",
+      "ProductType",
+      "IndustrySector",
+      "BaseUnit",
+      "Division",
+      "ItemCategoryGroup",
+      "ProductGroup"
+    ],
+    "phase5_decision_fields_required": [
+      "description",
+      "material_type",
+      "industry_sector",
+      "base_unit",
+      "plants",
+      "delivering_plant",
+      "item_category_group",
+      "tax_classification",
+      "availability_check",
+      "alternative_units"
+    ],
+    "scenario_extension_requirements": [
+      "sales organization 1010 / distribution channel 10",
+      "product-specific sales and plant views adequate for order/delivery",
+      "product-specific order-unit association for PC"
+    ],
+    "source_reference": [
+      "src/provisioning/sap_api_backend.py#API_OPERATIONS",
+      "src/provisioning/sap_api_backend.py#root_payload",
+      "src/provisioning/sap_api_backend.py#SapApiBackend.provision",
+      "src/provisioning/phase5.py#REQUIRED_DECISION_FIELDS"
+    ]
+  },
+  "fields": [
+    {
+      "name": "logical_product_id",
+      "value": "P615-101",
+      "source_type": "DERIVED",
+      "source_reference": "data/books/S4615/S4615_full_clean.md; canonical placeholder P615-1## resolved with group 01",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": true,
+      "requirement_basis": "logical identity"
+    },
+    {
+      "name": "group",
+      "value": "01",
+      "source_type": "DERIVED",
+      "source_reference": "Requested group context; substitution policy in data/books/S4615/S4615_provisioning_facts.md",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": true,
+      "requirement_basis": "placeholder resolution"
+    },
+    {
+      "name": "sap_product_id",
+      "value": null,
+      "api_field": "Product",
+      "source_type": "MISSING",
+      "source_reference": "data/provisioning/phase5_identity_mappings.json has no P615-101 mapping; reports/sap_training_environment_current_state.md says P615-101 was not created",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": true,
+      "requirement_basis": "API product identity/readback; no SAP ID is inferred from the logical ID"
+    },
+    {
+      "name": "description",
+      "value": null,
+      "source_type": "MISSING",
+      "source_reference": "data/books/S4615/S4615_provisioning_facts.md#P615-4-product-facts states product description is not supplied; no P615-101-specific description is recorded",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "Phase 5 decision contract"
+    },
+    {
+      "name": "material_type",
+      "value": null,
+      "api_field": "ProductType",
+      "source_type": "MISSING",
+      "source_reference": "data/books/S4615/S4615_provisioning_facts.md#P615-4-product-facts; no P615-101 type or approved same-family source is recorded",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "root payload and Phase 5 decision contract"
+    },
+    {
+      "name": "industry_sector",
+      "value": null,
+      "api_field": "IndustrySector",
+      "source_type": "MISSING",
+      "source_reference": "data/books/S4615/S4615_provisioning_facts.md#P615-4-product-facts; no P615-101 industry sector is recorded",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "root payload and Phase 5 decision contract"
+    },
+    {
+      "name": "base_unit",
+      "value": null,
+      "api_field": "BaseUnit",
+      "source_type": "MISSING",
+      "source_reference": "The Book documents order unit PC for P615-1## but does not establish the P615-101 base unit; REQ_PRODUCT_UNIT_OF_MEASURE_6A96CF240FB0 remains UNKNOWN",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "root payload; order unit is not assumed to equal base unit"
+    },
+    {
+      "name": "order_unit",
+      "value": "PC",
+      "source_type": "BOOK_VALUE",
+      "source_reference": "data/normalized/full/S4615/objects.json fields data.items[].unit for S4615_CH3_EX3, S4615_CH5_EX6, S4615_CH9_EX12, and S4615_CH10_EX13; Book pages 41-43, 97-100, 213-216, 235-241",
+      "confidence": "HIGH",
+      "required_for_creation": false,
+      "required_for_book_scenario": true,
+      "requirement_basis": "documented transaction order unit"
+    },
+    {
+      "name": "product_unit_of_measure_association",
+      "value": null,
+      "source_type": "MISSING",
+      "source_reference": "data/requirements/training_environment_requirements.json#REQ_PRODUCT_UNIT_OF_MEASURE_6A96CF240FB0 has status UNKNOWN; its evidence explicitly says another product's PC association does not prove this association",
+      "confidence": "HIGH",
+      "required_for_creation": false,
+      "required_for_book_scenario": true,
+      "requirement_basis": "P615-101 must accept the documented PC order unit"
+    },
+    {
+      "name": "sales_organization",
+      "value": "1010",
+      "source_type": "BOOK_VALUE",
+      "source_reference": "data/normalized/full/S4615/objects.json data.sales_organization for S4615_CH3_EX3 and other target sales-order scenarios; common organization verified in reports/sap_training_environment_current_state.md",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": true,
+      "requirement_basis": "product sales-area extension"
+    },
+    {
+      "name": "distribution_channel",
+      "value": "10",
+      "source_type": "BOOK_VALUE",
+      "source_reference": "data/normalized/full/S4615/objects.json data.distribution_channel for S4615_CH3_EX3 and other target sales-order scenarios; common organization verified in reports/sap_training_environment_current_state.md",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": true,
+      "requirement_basis": "product sales-area extension"
+    },
+    {
+      "name": "sales_division",
+      "value": "00",
+      "api_field": "Division",
+      "source_type": "BOOK_VALUE",
+      "source_reference": "data/normalized/full/S4615/objects.json data.sales_division for S4615_CH3_EX3 and other target sales-order scenarios; verified in reports/sap_training_environment_current_state.md",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": true,
+      "requirement_basis": "Use canonical sales_division; API root payload key is Division"
+    },
+    {
+      "name": "item_category_group",
+      "value": null,
+      "api_field": "ItemCategoryGroup",
+      "source_type": "MISSING",
+      "source_reference": "data/books/S4615/S4615_provisioning_facts.md#P615-4-product-facts; Book item category TAN is not an item-category-group value and no P615-101 value is evidenced",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "root payload and Phase 5 decision contract"
+    },
+    {
+      "name": "product_group",
+      "value": null,
+      "api_field": "ProductGroup",
+      "source_type": "MISSING",
+      "source_reference": "src/provisioning/sap_api_backend.py#root_payload includes ProductGroup; no P615-101 product group is supplied by the Book or verified environment",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "root payload"
+    },
+    {
+      "name": "plants",
+      "value": null,
+      "source_type": "MISSING",
+      "source_reference": "data/books/S4615/S4615_provisioning_facts.md#P615-4-product-facts says plant extension values are not supplied; P615-400 plant 1710 is explicitly excluded as a template",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": true,
+      "requirement_basis": "Phase 5 decision contract and delivery scenarios"
+    },
+    {
+      "name": "delivering_plant",
+      "value": null,
+      "source_type": "MISSING",
+      "source_reference": "data/books/S4615/S4615_provisioning_facts.md#P615-4-product-facts; no P615-101 plant assignment is evidenced",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": true,
+      "requirement_basis": "Phase 5 decision contract and delivery scenarios"
+    },
+    {
+      "name": "tax_classification",
+      "value": null,
+      "source_type": "MISSING",
+      "source_reference": "data/books/S4615/S4615_provisioning_facts.md#P615-4-product-facts lists tax classifications as unspecified; no P615-101 value is available",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "Phase 5 decision contract"
+    },
+    {
+      "name": "availability_check",
+      "value": null,
+      "source_type": "MISSING",
+      "source_reference": "No P615-101 availability-check value in the Book, requirements, seed, or verified identity mappings; P615-400 evidence is excluded",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "Phase 5 decision contract"
+    },
+    {
+      "name": "alternative_units",
+      "value": null,
+      "source_type": "MISSING",
+      "source_reference": "The Book records PC transaction units but no P615-101 alternative-unit list or conversion; an empty list would be an unsupported assertion",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "Phase 5 decision contract; do not infer no alternatives"
+    },
+    {
+      "name": "accounting_and_valuation_views",
+      "value": null,
+      "source_type": "MISSING",
+      "source_reference": "No P615-101-specific accounting/valuation evidence is present in source artifacts; P615-400 is explicitly not a functional template",
+      "confidence": "MEDIUM",
+      "required_for_creation": false,
+      "required_for_book_scenario": false,
+      "requirement_basis": "technical qualification required; the current API root payload does not define these fields"
+    }
+  ],
+  "excluded_as_templates": [
+    {
+      "logical_id": "P615-400",
+      "sap_id": "10000287",
+      "reason": "Explicitly excluded by the task; its Accounting/valuation views are absent and its values do not establish functional equivalence for P615-101."
+    }
+  ],
+  "source_inventory": [
+    "data/books/S4615/S4615_full_clean.md",
+    "data/extracted/full/S4615/objects.json",
+    "data/normalized/full/S4615/objects.json",
+    "metadata/dependencies/full/S4615/dependency_graph.json",
+    "data/requirements/training_environment_requirements.json",
+    "config/s4615_training_seed.yaml",
+    "data/provisioning/phase5_identity_mappings.json",
+    "mappings/sap/interface_registry.yaml",
+    "src/provisioning/sap_api_backend.py",
+    "src/provisioning/phase5.py",
+    "reports/sap_training_environment_current_state.md"
+  ]
+}

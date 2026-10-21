@@ -39,14 +39,33 @@ READ_ACTIONS = {
     "FIND_S4615_BILLING_TYPE",
     "DISPLAY_S4615_F2_REFERENCE",
     "DISPLAY_S4615_ZF01",
+    "READ_S4615_ZF01_ACCOUNTING_BLOCK",
     "FIND_S4615_SALES_TYPE",
     "DISPLAY_S4615_SALES_REFERENCE",
+    "DISPLAY_S4600_CDCL_REFERENCE",
     "FIND_S4650_BILLING_COPY_HEADER",
     "DISPLAY_S4650_BILLING_COPY_HEADER",
+    "FIND_S4615_ZF01_LF_COPY_HEADER",
+    "DISPLAY_S4615_ZF01_LF_COPY_HEADER",
+    "INSPECT_S4615_VTFLC_NEW_HEADER_FORM",
+    "READ_S4615_F2_LF_HEADER_OPTIONS",
+    "INSPECT_S4615_VTFLC_NEW_ITEM_FORM",
+    "INSPECT_S4615_VTFLC_NEW_TARGET_ITEM_FORM",
     "OPEN_S4650_BILLING_COPY_ITEMS",
     "DISPLAY_S4650_BILLING_COPY_TAN",
     "LOOKUP_S4650_PRODUCT",
     "FIND_TABLE_VALUE",
+    "OPEN_S4615_CUSTOMIZING_READ",
+    "INSPECT_S4615_CUSTOMIZING",
+    "READ_S4615_CUSTOMIZING_TABLE",
+    "SCAN_S4615_CUSTOMIZING",
+    "INSPECT_BP_STANDARD_ADDRESS",
+    "INSPECT_S4600_T_S50A01_BP_ADDRESS",
+    "POSITION_S4600_T_S50A01_BP",
+    "OPEN_S4600_T_S50A01_BP",
+    "CONFIRM_OPEN_S4600_T_S50A01_BP",
+    "READ_PHASE5_CHANGE_LOG",
+    "READ_PHASE5_TRANSPORT_OVERVIEW",
 }
 EXECUTE_ACTIONS = {"PHASE5_OPERATION"}
 ALLOWED_ACTIONS = READ_ACTIONS | EXECUTE_ACTIONS
@@ -61,9 +80,16 @@ PHASE5_OPERATIONS = {
     "VOV4_ITEM_CATEGORY_DETERMINATION",
     "S4615_BILLING_TYPE_ZF01",
     "S4615_SALES_TYPE_ZA01",
+    "ENSURE_BP_STANDARD_ADDRESS",
+    "S4600_T_S50A01_BP_ADDRESS",
+    "S4615_PRODUCT_P101_BASIC_ROOT",
+    "S4615_SHIPPING_POINT_1010",
+    "S4615_SHIPPING_POINT_1010_BE",
+    "S4615_VTFLC_ZF01_LF_TAN",
+    "S4615_ZF01_ACCOUNTING_BLOCK",
 }
-PHASE5_PHASES = {"LOOKUP", "PROVISION", "READBACK", "COPY_DIALOG_INSPECT"}
-ALLOWED_TRANSACTIONS = {"SPRO", "MM02", "VOFA", "VOV8"}
+PHASE5_PHASES = {"LOOKUP", "PROVISION", "READBACK", "COPY_DIALOG_INSPECT", "FORM_INSPECT", "RECONCILE", "RECONCILE_CONFIRM", "MM01_INITIAL_PREPARE", "MM01_VIEWS_PREPARE", "MM01_BASIC1_PREPARE"}
+ALLOWED_TRANSACTIONS = {"BP", "SPRO", "MM01", "MM02", "VOFA", "VOV8", "VTFLC", "/IWFND/ERROR_LOG", "SCU3", "SE09"}
 NAVIGATION_OPERATIONS = {
     "PRESS_SAFE_BUTTON",
     "SELECT_TREE_NODE",
@@ -135,12 +161,18 @@ def validate_request(payload: Any) -> dict[str, Any]:
             raise ProtocolError("Phase5 target must be a non-empty object")
         if not isinstance(values, dict):
             raise ProtocolError("Phase5 values must be an object")
-        if phase != "PROVISION" and values:
+        if phase in {"MM01_INITIAL_PREPARE", "MM01_VIEWS_PREPARE", "MM01_BASIC1_PREPARE"} and operation != "S4615_PRODUCT_P101_BASIC_ROOT":
+            raise ProtocolError("MM01 preparation is limited to P615-101 basic root")
+        if phase not in {"PROVISION", "MM01_INITIAL_PREPARE", "MM01_VIEWS_PREPARE", "MM01_BASIC1_PREPARE"} and values:
             raise ProtocolError(f"{phase} does not accept write values")
         if phase == "COPY_DIALOG_INSPECT" and operation not in {"COMPANY_CODE_1010", "S4615_BILLING_TYPE_ZF01", "S4615_SALES_TYPE_ZA01"}:
             raise ProtocolError(
                 "COPY_DIALOG_INSPECT is only allowlisted for COMPANY_CODE_1010 or S4615_BILLING_TYPE_ZF01"
             )
+        if phase == "FORM_INSPECT" and operation != "S4615_SHIPPING_POINT_1010":
+            raise ProtocolError("FORM_INSPECT is limited to S4615 shipping point 1010")
+        if phase in {"RECONCILE", "RECONCILE_CONFIRM"} and operation not in {"S4615_SHIPPING_POINT_1010", "S4615_SHIPPING_POINT_1010_BE"}:
+            raise ProtocolError("Shipping reconciliation is limited to S4615 shipping point 1010")
         params = {
             "operation": operation,
             "phase": phase,
@@ -154,6 +186,37 @@ def validate_request(payload: Any) -> dict[str, Any]:
         if transaction not in ALLOWED_TRANSACTIONS:
             raise ProtocolError(f"transaction is not allowlisted: {transaction}")
         params = {"transaction": transaction}
+    elif action in {"INSPECT_BP_STANDARD_ADDRESS", "INSPECT_S4600_T_S50A01_BP_ADDRESS", "POSITION_S4600_T_S50A01_BP", "OPEN_S4600_T_S50A01_BP", "CONFIRM_OPEN_S4600_T_S50A01_BP"}:
+        if params:
+            raise ProtocolError("BP address inspection takes no parameters")
+    elif action == "READ_PHASE5_CHANGE_LOG":
+        if (set(params) != {"table", "date"}
+                or (params["table"], params["date"]) not in {
+                    ("FINSC_001A", "14.10.2026"),
+                    ("FINSC_001A", "16.10.2026"),
+                    ("T000", "14.10.2026"),
+                }):
+            raise ProtocolError("Change-log read is limited to exact FINSC/T000 audit dates")
+        params = {"table": params["table"], "date": params["date"]}
+    elif action == "READ_PHASE5_TRANSPORT_OVERVIEW":
+        if params:
+            raise ProtocolError("SE09 transport overview read takes no parameters")
+    elif action == "OPEN_S4615_CUSTOMIZING_READ":
+        if set(params) != {"transaction"} or params["transaction"] not in {"SE16N", "OVL2", "OVXD"}:
+            raise ProtocolError("S4615 read-only navigation is limited to SE16N, OVL2 and OVXD")
+        params = {"transaction": params["transaction"]}
+    elif action == "INSPECT_S4615_CUSTOMIZING":
+        if set(params) != {"object"} or params["object"] not in {"T001W", "T001K", "TVKWZ", "TVSWZ", "TVST", "OVL2"}:
+            raise ProtocolError("S4615 read-only inspection requires one exact allowlisted object")
+        params = {"object": params["object"]}
+    elif action == "READ_S4615_CUSTOMIZING_TABLE":
+        if set(params) != {"table"} or params["table"] not in {"T000", "T001W", "T001K", "TVKWZ", "TVSWZ", "TVST"}:
+            raise ProtocolError("S4615 SE16N read is limited to exact allowlisted customizing tables")
+        params = {"table": params["table"]}
+    elif action == "SCAN_S4615_CUSTOMIZING":
+        if set(params) != {"object"} or params["object"] not in {"T000", "T001W", "T001K", "TVKWZ", "TVSWZ", "TVST", "OVL2"}:
+            raise ProtocolError("S4615 scan is limited to exact allowlisted objects")
+        params = {"object": params["object"]}
     elif action == "NAVIGATE":
         required = {"control_id", "expected_type", "expected_text", "navigation_operation"}
         allowed = required | {"node_key", "expected_transaction", "item_column"}
@@ -337,15 +400,42 @@ def validate_request(payload: Any) -> dict[str, Any]:
         if expected["sales_order_type"] not in {"CS", "BV", "ZA01"} or params != expected:
             raise ProtocolError("DISPLAY_S4615_SALES_REFERENCE requires exact VOV8 CS/BV/ZA01 display contract")
         params = dict(expected)
+    elif action == "DISPLAY_S4600_CDCL_REFERENCE":
+        expected = {"transaction": "VOV8", "program": "SAPL080O", "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL080OTCTRL_V_TVAK", "sales_order_type": "CDCL", "detail_button_id": "/app/con[0]/ses[0]/wnd[0]/tbar[1]/btn[38]"}
+        if params != expected:
+            raise ProtocolError("DISPLAY_S4600_CDCL_REFERENCE requires exact VOV8 CDCL display contract")
+        params = dict(expected)
     elif action == "FIND_S4650_BILLING_COPY_HEADER":
         expected = {"transaction": "VTFLC", "program": "SAPL080W", "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL080WTCTRL_V_TVCPFLK", "billing_type": "F2", "delivery_type": "LF"}
         if params != expected:
             raise ProtocolError("FIND_S4650_BILLING_COPY_HEADER requires exact VTFLC F2/LF target")
         params = dict(expected)
+    elif action == "FIND_S4615_ZF01_LF_COPY_HEADER":
+        expected = {"transaction": "VTFLC", "program": "SAPL080W", "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL080WTCTRL_V_TVCPFLK", "billing_type": "ZF01", "delivery_type": "LF"}
+        if params != expected:
+            raise ProtocolError("FIND_S4615_ZF01_LF_COPY_HEADER requires exact VTFLC ZF01/LF target")
+        params = dict(expected)
+    elif action == "INSPECT_S4615_VTFLC_NEW_HEADER_FORM":
+        if params:
+            raise ProtocolError("VTFLC new-header form inspection takes no parameters")
+    elif action == "READ_S4615_F2_LF_HEADER_OPTIONS":
+        if params:
+            raise ProtocolError("F2/LF header-options read takes no parameters")
+    elif action == "INSPECT_S4615_VTFLC_NEW_ITEM_FORM":
+        if params:
+            raise ProtocolError("VTFLC new-item form inspection takes no parameters")
+    elif action == "INSPECT_S4615_VTFLC_NEW_TARGET_ITEM_FORM":
+        if params:
+            raise ProtocolError("VTFLC target-item form inspection takes no parameters")
     elif action == "DISPLAY_S4650_BILLING_COPY_HEADER":
         expected = {"transaction": "VTFLC", "program": "SAPL080W", "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL080WTCTRL_V_TVCPFLK", "billing_type": "F2", "delivery_type": "LF", "detail_button_id": "/app/con[0]/ses[0]/wnd[0]/tbar[1]/btn[38]"}
         if params != expected:
             raise ProtocolError("DISPLAY_S4650_BILLING_COPY_HEADER requires exact F2/LF detail contract")
+        params = dict(expected)
+    elif action == "DISPLAY_S4615_ZF01_LF_COPY_HEADER":
+        expected = {"transaction": "VTFLC", "program": "SAPL080W", "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL080WTCTRL_V_TVCPFLK", "billing_type": "ZF01", "delivery_type": "LF", "detail_button_id": "/app/con[0]/ses[0]/wnd[0]/tbar[1]/btn[38]"}
+        if params != expected:
+            raise ProtocolError("DISPLAY_S4615_ZF01_LF_COPY_HEADER requires exact ZF01/LF detail contract")
         params = dict(expected)
     elif action == "OPEN_S4650_BILLING_COPY_ITEMS":
         expected = {"transaction": "VTFLC", "program": "SAPL080W", "screen": "110", "tree_id": "/app/con[0]/ses[0]/wnd[0]/shellcont/shell", "node_key": "02", "node_text": "Poste", "column": "Column1"}

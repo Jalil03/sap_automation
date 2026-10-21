@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "prepared_on": "2026-10-19",
+  "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+  "mode": "PREPARE_ONLY_NO_SAP_WRITE",
+  "superseded_live_state_by": "data/provisioning/s4600/T-S50A01.customer_extension_proposal.json",
+  "target": {
+    "logical_id": "T-S50A01",
+    "sap_id": "1000000116",
+    "root_status": "LIVE_VERIFIED",
+    "root_scope": "BP_ROOT_AND_STANDARD_ADDRESS",
+    "do_not_recreate": true
+  },
+  "fresh_read_state": {
+    "business_partner": "EXISTS",
+    "standard_address": "EXISTS_CURRENT_XXDEFAULT_1584",
+    "roles": {"FLCU00": "MISSING", "FLCU01": "MISSING"},
+    "customer_root": "MISSING",
+    "company_1010": "MISSING",
+    "sales_area_1010_10_00": "MISSING",
+    "partner_functions": "MISSING",
+    "sales_area_tax": "MISSING"
+  },
+  "book_confirmed_values": {
+    "OrganizationBPName1": "Motormarkt Heidelberg",
+    "sales_area": {
+      "SalesOrganization": "1010",
+      "DistributionChannel": "10",
+      "Division": "00"
+    }
+  },
+  "technical_values_supported_in_a4h_600": {
+    "customer_roles": ["FLCU00", "FLCU01"],
+    "company_code": "1010",
+    "sales_area": "1010/10/00",
+    "currency_context": "EUR",
+    "reference_customer_1000000115": {
+      "purpose": "environment compatibility evidence only; not an authorization to copy",
+      "company": {
+        "ReconciliationAccount": "400000",
+        "PaymentTerms": "0004",
+        "CustomerAccountGroup": "CUST"
+      },
+      "sales": {
+        "Currency": "EUR",
+        "ShippingCondition": "01",
+        "SupplyingPlant": "",
+        "CustomerPricingProcedure": "02",
+        "CustomerAccountAssignmentGroup": "01",
+        "IncotermsClassification": "CFR",
+        "IncotermsLocation1": "Bruxelles",
+        "CustomerPaymentTerms": "0004",
+        "CustomerAccountGroup": "CUST"
+      },
+      "partner_functions": ["DO", "RF", "PY", "RM"],
+      "tax_rows": 0
+    }
+  },
+  "missing_target_values": {
+    "address": [
+      "StreetName",
+      "HouseNumber decision (value or intentionally blank)",
+      "PostalCode",
+      "CityName",
+      "Country",
+      "Region decision (value or intentionally blank)",
+      "Language"
+    ],
+    "company": ["ReconciliationAccount", "PaymentTerms", "CustomerAccountGroup decision"],
+    "sales_area": [
+      "Currency",
+      "ShippingCondition",
+      "CustomerPricingProcedure",
+      "CustomerAccountAssignmentGroup",
+      "IncotermsClassification",
+      "IncotermsLocation1",
+      "CustomerPaymentTerms",
+      "CustomerAccountGroup decision"
+    ],
+    "partner_functions": [
+      "approve exact functions and self-reference target",
+      "PartnerCounter",
+      "DefaultPartner"
+    ],
+    "tax": ["DepartureCountry", "CustomerTaxCategory", "CustomerTaxClassification"]
+  },
+  "administrator_or_owner_decisions": {
+    "TRAINING_DATA_OWNER": ["exact T-S50A01 address", "permission to extend existing BP 1000000116"],
+    "CUSTOMER_MASTER_OWNER": ["FLCU00/FLCU01", "exact SD defaults", "exact partner-function set"],
+    "FI_OWNER": ["company-code extension", "reconciliation account", "payment terms"],
+    "TAX_OWNER": ["departure country", "tax category", "tax classification"],
+    "SAP_ADMIN": [
+      "plant 1010 remains missing; it is not required for a sales-area record if SupplyingPlant is deliberately left blank, but delivery/ATP exercises remain blocked"
+    ]
+  },
+  "api_contracts": {
+    "A_BusinessPartnerAddress": "metadata creatable; prior standard-address execution used the proven GUI route, so OData POST is not yet a proven write route",
+    "A_BusinessPartnerRole": "POST and exact readback proven in A4H/600",
+    "A_Customer": "not creatable directly; must appear after customer-role processing and be independently read back",
+    "A_CustomerCompany": "POST and exact readback proven in A4H/600; FI approval required",
+    "A_CustomerSalesArea": "POST and exact readback proven in A4H/600",
+    "A_CustSalesPartnerFunc": "entity is creatable in installed metadata; target-specific sequential POST contract is not yet live-proven",
+    "A_CustomerSalesAreaTax": "entity is creatable in installed metadata; target-specific sequential POST contract is not yet live-proven"
+  },
+  "idempotent_sequence": [
+    {
+      "step": 1,
+      "operation": "ENSURE_STANDARD_ADDRESS",
+      "state": "EXISTS_VERIFIED_ADDRESS_1584",
+      "lookup": "A_BusinessPartnerAddress + current XXDEFAULT usage",
+      "readback": "generated AddressID, exact approved fields, current XXDEFAULT usage"
+    },
+    {
+      "step": 2,
+      "operation": "ENSURE_ROLE_FLCU00",
+      "state": "READY_FOR_EXPLICIT_APPROVAL",
+      "payload_known": {"BusinessPartner": "1000000116", "BusinessPartnerRole": "FLCU00"},
+      "readback": "exact A_BusinessPartnerRole key plus A_Customer('1000000116')"
+    },
+    {
+      "step": 3,
+      "operation": "ENSURE_ROLE_FLCU01",
+      "state": "READY_AFTER_FLCU00_AND_EXPLICIT_APPROVAL",
+      "payload_known": {"BusinessPartner": "1000000116", "BusinessPartnerRole": "FLCU01"},
+      "readback": "exact A_BusinessPartnerRole key plus A_Customer('1000000116')"
+    },
+    {
+      "step": 4,
+      "operation": "ENSURE_SALES_AREA_1010_10_00",
+      "state": "BLOCKED_MISSING_SD_VALUES_AND_APPROVAL",
+      "readback": "exact A_CustomerSalesArea composite key and every approved field"
+    },
+    {
+      "step": 5,
+      "operation": "ENSURE_PARTNER_FUNCTIONS",
+      "state": "BLOCKED_MISSING_VALUES_AND_UNPROVEN_TARGET_WRITE_CONTRACT",
+      "readback": "one exact composite-key GET per approved function"
+    },
+    {
+      "step": 6,
+      "operation": "ENSURE_SALES_AREA_TAX",
+      "state": "BLOCKED_MISSING_TAX_DECISION_AND_UNPROVEN_TARGET_WRITE_CONTRACT",
+      "readback": "exact tax composite key and classification"
+    },
+    {
+      "step": 7,
+      "operation": "ENSURE_COMPANY_1010",
+      "state": "BLOCKED_MISSING_FI_VALUES_AND_SEPARATE_FI_APPROVAL",
+      "readback": "exact A_CustomerCompany key and every approved FI field"
+    }
+  ],
+  "recovery": {
+    "before_each_write": "fresh exact lookup; EXISTS with matching values is a no-op; conflicting values block",
+    "ambiguous_outcome": "do not retry; reconcile through a fresh independent exact-key GET",
+    "sap_error": "stop that branch and checkpoint the SAP error; continue only independent approved branches",
+    "rollback": "no automatic DELETE; freeze later extensions and require an approved correction or deactivation plan"
+  },
+  "decision": "NO_GO_FOR_SAP_WRITE",
+  "next_write_candidate": "FLCU00 then FLCU01 only, after exact fingerprint-bound TRAINING_MASTER_DATA_CUSTOMER_ROLES approval"
+}

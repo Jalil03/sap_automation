@@ -1,0 +1,455 @@
+{
+  "spec_version": "1.0",
+  "course_code": "S4615",
+  "target": {
+    "logical_id": "C615-A01",
+    "object_type": "BUSINESS_PARTNER",
+    "group": "01",
+    "placeholder_resolution": {
+      "source_value": "C615-A##",
+      "group_value": "01",
+      "resolved_value": "C615-A01",
+      "source_type": "DERIVED",
+      "source_reference": "data/books/S4615/S4615_provisioning_facts.md#Training-master-data-families; group 01 is the requested context",
+      "confidence": "HIGH"
+    }
+  },
+  "readiness": {
+    "classification": "ADMIN_REQUIRED",
+    "sap_write_performed": false,
+    "reason": "The current API_BUSINESS_PARTNER backend cannot create a Business Partner root and its only allowlisted customer operation is CUSTOMER_C615_D00. It requires an existing A_Customer root before posting company-code and sales-area extensions. C615-A01 has no verified SAP mapping, and required customer creation/extension values are missing.",
+    "missing_fields": [
+      "existing_customer_root.sap_partner_id",
+      "business_partner_grouping",
+      "name",
+      "addresses",
+      "roles",
+      "reconciliation_account",
+      "payment_terms",
+      "currency",
+      "shipping_conditions",
+      "delivering_plant",
+      "incoterms",
+      "incoterms_location",
+      "account_assignment_group",
+      "customer_pricing_procedure",
+      "tax_classifications",
+      "partner_functions"
+    ],
+    "implementation_blockers": [
+      "No API route or seed operation is defined for C615-A01; the backend allowlist only accepts CUSTOMER_C615_D00.",
+      "The customer backend does not create the Business Partner root; it requires an existing A_Customer entity.",
+      "No target mapping or target-specific verified master-data values are present."
+    ]
+  },
+  "book_usage": [
+    {
+      "scenario_id": "S4615_CH1_EX1",
+      "canonical_object_ids": [
+        "S4615_CH1_EX1_BILLING_IMPORTED_A3"
+      ],
+      "pages": [13, 16],
+      "usage": "Payer reference in the imported billing-document exercise."
+    },
+    {
+      "scenario_id": "S4615_CH3_EX3",
+      "canonical_object_ids": [
+        "S4615_CH3_EX3_SALES_ORDER_FAIR",
+        "S4615_CH3_EX3_BILLING_FAIR"
+      ],
+      "pages": [41, 43],
+      "usage": "Sold-to party and billing payer; the order also uses P615-1##."
+    },
+    {
+      "scenario_id": "S4615_CH4_EX4",
+      "canonical_object_ids": [
+        "S4615_CH4_EX4_BILLING_ORIGINAL_F2",
+        "S4615_CH4_EX4_BILLING_CREDIT_MEMO"
+      ],
+      "pages": [61, 63],
+      "usage": "Customer reference in the original invoice and credit-memo exercise."
+    },
+    {
+      "scenario_id": "S4615_CH4_EX5",
+      "canonical_object_ids": [
+        "S4615_CH4_EX5_SALES_ORDER_PRO_FORMA",
+        "S4615_CH4_EX5_BILLING_PRO_FORMA"
+      ],
+      "pages": [73, 75],
+      "usage": "Sold-to party and payer; the order uses P615-2##, not P615-1##."
+    },
+    {
+      "scenario_id": "S4615_CH6_EX7",
+      "canonical_object_ids": [
+        "S4615_CH6_EX7_SALES_ORDER_FIORI_APP_FINAL",
+        "S4615_CH6_EX7_BILLING_FIORI_APP_CANCELLED",
+        "S4615_CH6_EX7_BILLING_FIORI_APP_POSTED"
+      ],
+      "pages": [121, 127, 128, 129],
+      "usage": "Sold-to party and payer across the Fiori sales-order and billing steps."
+    },
+    {
+      "scenario_id": "S4615_CH10_EX13",
+      "canonical_object_ids": [
+        "S4615_CH10_EX13_SALES_ORDER_POSTING_BLOCK",
+        "S4615_CH10_EX13_BILLING_POSTING_BLOCK",
+        "S4615_CH10_EX13_SALES_ORDER_FI_REFERENCE",
+        "S4615_CH10_EX13_BILLING_FI_REFERENCE"
+      ],
+      "pages": [235, 238, 241],
+      "usage": "Sold-to party and payer in the posting-block and FI-reference exercises."
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "S4615_CH3_EX3_SALES_ORDER_FAIR",
+      "relation": "SOLD_TO_PARTY",
+      "source_phrase": "C615-A##",
+      "status": "UNRESOLVED",
+      "target_id_after_group_resolution": "C615-A01"
+    },
+    {
+      "source": "S4615_CH4_EX5_SALES_ORDER_PRO_FORMA",
+      "relation": "SOLD_TO_PARTY",
+      "source_phrase": "C615-A##",
+      "status": "UNRESOLVED",
+      "target_id_after_group_resolution": "C615-A01"
+    },
+    {
+      "source": "S4615_CH6_EX7_SALES_ORDER_FIORI_APP_FINAL",
+      "relation": "SOLD_TO_PARTY",
+      "source_phrase": "C615-A##",
+      "status": "UNRESOLVED",
+      "target_id_after_group_resolution": "C615-A01"
+    },
+    {
+      "source": "S4615_CH10_EX13_SALES_ORDER_POSTING_BLOCK",
+      "relation": "SOLD_TO_PARTY",
+      "source_phrase": "C615-A##",
+      "status": "UNRESOLVED",
+      "target_id_after_group_resolution": "C615-A01"
+    },
+    {
+      "source": "S4615_CH10_EX13_SALES_ORDER_FI_REFERENCE",
+      "relation": "SOLD_TO_PARTY",
+      "source_phrase": "C615-A##",
+      "status": "UNRESOLVED",
+      "target_id_after_group_resolution": "C615-A01"
+    }
+  ],
+  "minimum_creation_contract": {
+    "service": "API_BUSINESS_PARTNER",
+    "supported_target_by_current_backend": false,
+    "root_business_partner_creation_supported": false,
+    "precondition": "An existing A_Customer root with a verified SAP customer identifier is required before extension POSTs.",
+    "company_entity": "A_CustomerCompany",
+    "company_payload_fields": [
+      "Customer",
+      "CompanyCode",
+      "ReconciliationAccount",
+      "PaymentTerms",
+      "CustomerAccountGroup"
+    ],
+    "sales_area_entity": "A_CustomerSalesArea",
+    "sales_area_payload_fields": [
+      "Customer",
+      "SalesOrganization",
+      "DistributionChannel",
+      "Division",
+      "Currency",
+      "CustomerAccountAssignmentGroup",
+      "CustomerPricingProcedure",
+      "CustomerAccountGroup",
+      "IncotermsClassification",
+      "IncotermsLocation1",
+      "ShippingCondition",
+      "CustomerPaymentTerms"
+    ],
+    "phase5_decision_fields_required": [
+      "grouping",
+      "name",
+      "roles",
+      "addresses",
+      "reconciliation_account",
+      "payment_terms",
+      "currency",
+      "shipping_conditions",
+      "delivering_plant",
+      "incoterms",
+      "incoterms_location",
+      "account_assignment_group",
+      "customer_pricing_procedure",
+      "tax_classifications",
+      "partner_functions"
+    ],
+    "source_reference": [
+      "src/provisioning/sap_api_backend.py#API_OPERATIONS",
+      "src/provisioning/sap_api_backend.py#customer_payloads",
+      "src/provisioning/sap_api_backend.py#SapApiBackend._customer_rows",
+      "src/provisioning/sap_api_backend.py#SapApiBackend.provision",
+      "src/provisioning/phase5.py#REQUIRED_DECISION_FIELDS"
+    ]
+  },
+  "fields": [
+    {
+      "name": "logical_customer_id",
+      "value": "C615-A01",
+      "source_type": "DERIVED",
+      "source_reference": "data/books/S4615/S4615_full_clean.md; canonical placeholder C615-A## resolved with group 01",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": true,
+      "requirement_basis": "logical identity"
+    },
+    {
+      "name": "group",
+      "value": "01",
+      "source_type": "DERIVED",
+      "source_reference": "Requested group context; substitution policy in data/books/S4615/S4615_provisioning_facts.md",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": true,
+      "requirement_basis": "placeholder resolution"
+    },
+    {
+      "name": "existing_customer_root.sap_partner_id",
+      "value": null,
+      "source_type": "MISSING",
+      "source_reference": "data/provisioning/phase5_identity_mappings.json has no C615-A01 mapping; reports/sap_training_environment_current_state.md says C615-A01 was not created",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": true,
+      "requirement_basis": "API_BUSINESS_PARTNER existing A_Customer root precondition"
+    },
+    {
+      "name": "business_partner_grouping",
+      "value": null,
+      "source_type": "MISSING",
+      "source_reference": "data/books/S4615/S4615_provisioning_facts.md#Customer-values-not-supplied-by-the-Book; no target-specific mapping or approved source",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "BP root creation; not provided by the extension payload"
+    },
+    {
+      "name": "name",
+      "value": null,
+      "source_type": "MISSING",
+      "source_reference": "data/books/S4615/S4615_provisioning_facts.md#Customer-values-not-supplied-by-the-Book; no C615-A01 name is recorded",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "BP root creation"
+    },
+    {
+      "name": "addresses",
+      "value": null,
+      "source_type": "MISSING",
+      "source_reference": "data/books/S4615/S4615_provisioning_facts.md#Customer-values-not-supplied-by-the-Book; no C615-A01 address is recorded",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "BP root creation"
+    },
+    {
+      "name": "roles",
+      "value": null,
+      "source_type": "MISSING",
+      "source_reference": "data/books/S4615/S4615_provisioning_facts.md#Customer-values-not-supplied-by-the-Book; target customer role assignments are not recorded",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": true,
+      "requirement_basis": "customer must be usable as sold-to/payer"
+    },
+    {
+      "name": "company_code",
+      "value": "1010",
+      "source_type": "BOOK_VALUE",
+      "source_reference": "data/books/S4615/S4615_provisioning_facts.md#Common-organizational-environment; common environment 1010 is also verified in reports/sap_training_environment_current_state.md",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": true,
+      "requirement_basis": "CompanyCode for company extension"
+    },
+    {
+      "name": "sales_organization",
+      "value": "1010",
+      "source_type": "BOOK_VALUE",
+      "source_reference": "data/books/S4615/S4615_provisioning_facts.md#Common-organizational-environment; verified in reports/sap_training_environment_current_state.md",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": true,
+      "requirement_basis": "sales-area extension"
+    },
+    {
+      "name": "distribution_channel",
+      "value": "10",
+      "source_type": "BOOK_VALUE",
+      "source_reference": "data/books/S4615/S4615_provisioning_facts.md#Common-organizational-environment; verified in reports/sap_training_environment_current_state.md",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": true,
+      "requirement_basis": "sales-area extension"
+    },
+    {
+      "name": "sales_division",
+      "value": "00",
+      "api_field": "Division",
+      "source_type": "BOOK_VALUE",
+      "source_reference": "data/books/S4615/S4615_provisioning_facts.md#Common-organizational-environment; verified in reports/sap_training_environment_current_state.md",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": true,
+      "requirement_basis": "sales-area extension; canonical key is sales_division"
+    },
+    {
+      "name": "customer_account_group",
+      "value": "CUST",
+      "api_fields": ["CustomerAccountGroup"],
+      "source_type": "DERIVED",
+      "source_reference": "src/provisioning/sap_api_backend.py#customer_payloads hard-codes CUST in company and sales payloads; not independently SAP-verified",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "current API payload constant; compatibility still requires validation"
+    },
+    {
+      "name": "reconciliation_account",
+      "value": null,
+      "api_field": "ReconciliationAccount",
+      "source_type": "MISSING",
+      "source_reference": "src/provisioning/sap_api_backend.py#customer_payloads includes this field; no C615-A01-specific value in Book, requirements, seed, or identity mappings",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "company extension payload and Phase 5 decision contract"
+    },
+    {
+      "name": "payment_terms",
+      "value": null,
+      "api_fields": ["PaymentTerms", "CustomerPaymentTerms"],
+      "source_type": "MISSING",
+      "source_reference": "src/provisioning/sap_api_backend.py#customer_payloads includes both fields; no C615-A01-specific value in Book, requirements, seed, or identity mappings",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "company and sales-area extension payload"
+    },
+    {
+      "name": "currency",
+      "value": null,
+      "api_field": "Currency",
+      "source_type": "MISSING",
+      "source_reference": "src/provisioning/sap_api_backend.py#customer_payloads includes Currency; no C615-A01-specific customer currency is provided",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "sales-area extension payload"
+    },
+    {
+      "name": "account_assignment_group",
+      "value": null,
+      "api_field": "CustomerAccountAssignmentGroup",
+      "source_type": "MISSING",
+      "source_reference": "src/provisioning/sap_api_backend.py#customer_payloads includes this field; training_environment_requirements.json has no resolved C615-A01 value",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "sales-area extension payload"
+    },
+    {
+      "name": "customer_pricing_procedure",
+      "value": null,
+      "api_field": "CustomerPricingProcedure",
+      "source_type": "MISSING",
+      "source_reference": "src/provisioning/sap_api_backend.py#customer_payloads includes this field; no C615-A01-specific value is evidenced",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "sales-area extension payload"
+    },
+    {
+      "name": "shipping_conditions",
+      "value": null,
+      "api_field": "ShippingCondition",
+      "source_type": "MISSING",
+      "source_reference": "src/provisioning/sap_api_backend.py#customer_payloads includes this field; no C615-A01-specific value is evidenced",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "sales-area extension payload and Phase 5 decision contract"
+    },
+    {
+      "name": "delivering_plant",
+      "value": null,
+      "source_type": "MISSING",
+      "source_reference": "src/provisioning/phase5.py#REQUIRED_DECISION_FIELDS requires a resolved delivering_plant; no approved A01-specific value is recorded",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "Phase 5 decision validation"
+    },
+    {
+      "name": "incoterms",
+      "value": null,
+      "api_field": "IncotermsClassification",
+      "source_type": "MISSING",
+      "source_reference": "src/provisioning/sap_api_backend.py#customer_payloads includes this field; Book CFR/## evidence is for C615-D##, not C615-A##",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "sales-area extension payload"
+    },
+    {
+      "name": "incoterms_location",
+      "value": null,
+      "api_field": "IncotermsLocation1",
+      "source_type": "MISSING",
+      "source_reference": "src/provisioning/sap_api_backend.py#customer_payloads includes this field; no C615-A01-specific value is evidenced",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": false,
+      "requirement_basis": "sales-area extension payload"
+    },
+    {
+      "name": "tax_classifications",
+      "value": null,
+      "source_type": "MISSING",
+      "source_reference": "src/provisioning/phase5.py#REQUIRED_DECISION_FIELDS requires this decision; no C615-A01-specific tax data is provided",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": true,
+      "requirement_basis": "Phase 5 decision validation; no tax code or classification inferred"
+    },
+    {
+      "name": "partner_functions",
+      "value": null,
+      "source_type": "MISSING",
+      "source_reference": "src/provisioning/phase5.py#REQUIRED_DECISION_FIELDS requires this decision; target partner functions are not documented",
+      "confidence": "HIGH",
+      "required_for_creation": true,
+      "required_for_book_scenario": true,
+      "requirement_basis": "Phase 5 decision validation and sold-to/payer usability"
+    }
+  ],
+  "excluded_as_templates": [
+    {
+      "logical_id": "C615-D00",
+      "sap_id": "1000000114",
+      "reason": "Explicitly excluded by the task; its values do not establish functional equivalence for C615-A01."
+    }
+  ],
+  "source_inventory": [
+    "data/books/S4615/S4615_full_clean.md",
+    "data/extracted/full/S4615/objects.json",
+    "data/normalized/full/S4615/objects.json",
+    "metadata/dependencies/full/S4615/dependency_graph.json",
+    "data/requirements/training_environment_requirements.json",
+    "config/s4615_training_seed.yaml",
+    "data/provisioning/phase5_identity_mappings.json",
+    "mappings/sap/interface_registry.yaml",
+    "src/provisioning/sap_api_backend.py",
+    "src/provisioning/phase5.py",
+    "reports/sap_training_environment_current_state.md"
+  ]
+}

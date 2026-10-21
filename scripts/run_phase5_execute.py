@@ -13,6 +13,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from src.provisioning.phase5 import Phase5ProvisioningEngine, load_backend, load_decisions, load_seed
+from src.provisioning.execution_policy import ExecutionCheckpoint, TrainingExecutionPolicy
 
 
 def parser() -> argparse.ArgumentParser:
@@ -24,6 +25,8 @@ def parser() -> argparse.ArgumentParser:
     source.add_argument("--decision-file")
     source.add_argument("--seed-file")
     value.add_argument("--backend-factory", help="Explicit module:function SAP backend factory")
+    value.add_argument("--execution-policy", type=Path, help="Scoped workflow approval and operation routes")
+    value.add_argument("--checkpoint", type=Path, help="Durable one-shot write checkpoint")
     value.add_argument(
         "--include-book-data",
         action="store_true",
@@ -35,16 +38,24 @@ def parser() -> argparse.ArgumentParser:
 def main(argv: list[str] | None = None) -> int:
     args = parser().parse_args(argv)
     try:
+        if bool(args.execution_policy) != bool(args.checkpoint):
+            raise ValueError("--execution-policy and --checkpoint must be supplied together")
+        policy = (
+            TrainingExecutionPolicy.from_document(json.loads(args.execution_policy.read_text(encoding="utf-8")))
+            if args.execution_policy else None
+        )
+        checkpoint = ExecutionCheckpoint(args.checkpoint, policy.workflow_id) if policy else None
         if args.execute:
             if not (args.decision_file or args.seed_file) or not args.backend_factory:
                 raise ValueError("--execute requires --decision-file/--seed-file and --backend-factory")
-            phrase = (
-                "EXECUTE PHASE5 S4615 1010 INCLUDING BOOK DATA"
-                if args.include_book_data
-                else "EXECUTE PHASE5 COMMON 1010"
-            )
-            if input(f"Type exactly '{phrase}' to authorize provisioning: ") != phrase:
-                raise ValueError("Execution confirmation failed")
+            if policy is None:
+                phrase = (
+                    "EXECUTE PHASE5 S4615 1010 INCLUDING BOOK DATA"
+                    if args.include_book_data
+                    else "EXECUTE PHASE5 COMMON 1010"
+                )
+                if input(f"Type exactly '{phrase}' to authorize provisioning: ") != phrase:
+                    raise ValueError("Execution confirmation failed")
         engine = Phase5ProvisioningEngine(
             backend=load_backend(args.backend_factory),
             decisions=(
@@ -52,6 +63,8 @@ def main(argv: list[str] | None = None) -> int:
                 else load_decisions(args.decision_file)
             ),
             execute=args.execute,
+            execution_policy=policy,
+            checkpoint=checkpoint,
         )
         result = engine.plan(include_book_data=args.include_book_data)
         print(json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True))

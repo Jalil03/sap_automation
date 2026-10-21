@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "operation": "S4600_T_S50A01_BP_ADDRESS",
+  "logical_id": "T-S50A01",
+  "existing_business_partner": "1000000116",
+  "approved_by": "REQUESTING_USER_SELF_ATTESTED",
+  "approval_scopes_evidenced": [
+    "CUSTOMER_MASTER_OWNER",
+    "TRAINING_MASTER_DATA_BP_ADDRESS"
+  ],
+  "approved_scope": [
+    "BP_ADDRESS"
+  ],
+  "step_authorizations": {
+    "BP_ADDRESS": {
+      "execute": true,
+      "approved_at_utc": "2026-10-20T15:14:05.8726110Z"
+    }
+  },
+  "proposed_values": {
+    "address": {
+      "StreetName": "1 Schulungsstrasse S4600",
+      "PostalCode": "69115",
+      "CityName": "Heidelberg",
+      "Country": "DE",
+      "Language": "EN"
+    }
+  },
+  "target_fingerprint": "60af943bd3ce670d8c4b3ae0b372e301615fcfe20cbd91a6b7b3ee23fbac8f1d",
+  "authorization_evidence": "User explicitly replied 'd'accord j'approuve' after presentation of the exact T-S50A01 BP_ADDRESS values and scope.",
+  "maximum_writes": 1,
+  "excluded_scopes": [
+    "BP_ROLES",
+    "CUSTOMER_ROOT",
+    "COMPANY_CODE",
+    "SALES_AREA",
+    "PARTNER_FUNCTIONS",
+    "TAX",
+    "FI_MM",
+    "PLANT",
+    "CUSTOMIZING"
+  ],
+  "verified_state": "EXISTS_CURRENT_XXDEFAULT",
+  "verified_address_id": "1584"
+}

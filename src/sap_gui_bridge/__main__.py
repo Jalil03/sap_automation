@@ -32,8 +32,19 @@ def parser() -> argparse.ArgumentParser:
     request_sub = request.add_subparsers(dest="request_action", required=True)
     request_sub.add_parser("status")
     request_sub.add_parser("inspect")
+    request_sub.add_parser("inspect-bp-address")
     request_sub.add_parser("read-status-bar")
     request_sub.add_parser("read-screen")
+    request_sub.add_parser("read-zf01-accounting-block")
+    request_sub.add_parser("inspect-zf01-lf-new-header-form")
+    request_sub.add_parser("read-f2-lf-header-options")
+    request_sub.add_parser("inspect-vtflc-new-item-form")
+    request_sub.add_parser("inspect-vtflc-new-target-item-form")
+    request_sub.add_parser("find-zf01-lf-copy-header")
+    request_sub.add_parser("display-zf01-lf-copy-header")
+    request_sub.add_parser("open-billing-copy-items")
+    request_sub.add_parser("display-billing-copy-tan")
+    request_sub.add_parser("display-s4600-cdcl")
     request_navigate = request_sub.add_parser("navigate")
     request_navigate.add_argument("--operation", required=True)
     request_navigate.add_argument("--control-id", required=True)
@@ -44,6 +55,14 @@ def parser() -> argparse.ArgumentParser:
     request_navigate.add_argument("--item-column")
     request_open = request_sub.add_parser("open")
     request_open.add_argument("transaction")
+    read_customizing = request_sub.add_parser("open-s4615-customizing")
+    read_customizing.add_argument("transaction", choices=("SE16N", "OVL2", "OVXD"))
+    inspect_customizing = request_sub.add_parser("inspect-s4615-customizing")
+    inspect_customizing.add_argument("object", choices=("T001W", "T001K", "TVKWZ", "TVSWZ", "TVST", "OVL2"))
+    read_table = request_sub.add_parser("read-s4615-table")
+    read_table.add_argument("table", choices=("T000", "T001W", "T001K", "TVKWZ", "TVSWZ", "TVST"))
+    scan_customizing = request_sub.add_parser("scan-s4615-customizing")
+    scan_customizing.add_argument("object", choices=("T000", "T001W", "T001K", "TVKWZ", "TVSWZ", "TVST", "OVL2"))
     wait = sub.add_parser("wait")
     wait.add_argument("request_id")
     wait.add_argument("--timeout", type=float, default=60.0)
@@ -57,10 +76,48 @@ def main(argv: list[str] | None = None) -> int:
             action, params = "STATUS", {}
         elif args.request_action == "inspect":
             action, params = "INSPECT", {}
+        elif args.request_action == "inspect-bp-address":
+            action, params = "INSPECT_BP_STANDARD_ADDRESS", {}
         elif args.request_action == "read-status-bar":
             action, params = "READ_STATUS_BAR", {}
         elif args.request_action == "read-screen":
             action, params = "READ_SCREEN", {}
+        elif args.request_action == "read-zf01-accounting-block":
+            action, params = "READ_S4615_ZF01_ACCOUNTING_BLOCK", {}
+        elif args.request_action == "inspect-zf01-lf-new-header-form":
+            action, params = "INSPECT_S4615_VTFLC_NEW_HEADER_FORM", {}
+        elif args.request_action == "read-f2-lf-header-options":
+            action, params = "READ_S4615_F2_LF_HEADER_OPTIONS", {}
+        elif args.request_action == "inspect-vtflc-new-item-form":
+            action, params = "INSPECT_S4615_VTFLC_NEW_ITEM_FORM", {}
+        elif args.request_action == "inspect-vtflc-new-target-item-form":
+            action, params = "INSPECT_S4615_VTFLC_NEW_TARGET_ITEM_FORM", {}
+        elif args.request_action in {"find-zf01-lf-copy-header", "display-zf01-lf-copy-header"}:
+            action = ("FIND_S4615_ZF01_LF_COPY_HEADER" if args.request_action.startswith("find")
+                      else "DISPLAY_S4615_ZF01_LF_COPY_HEADER")
+            params = {
+                "transaction": "VTFLC", "program": "SAPL080W",
+                "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL080WTCTRL_V_TVCPFLK",
+                "billing_type": "ZF01", "delivery_type": "LF",
+            }
+            if action.startswith("DISPLAY"):
+                params["detail_button_id"] = "/app/con[0]/ses[0]/wnd[0]/tbar[1]/btn[38]"
+        elif args.request_action == "open-billing-copy-items":
+            action = "OPEN_S4650_BILLING_COPY_ITEMS"
+            params = {"transaction": "VTFLC", "program": "SAPL080W", "screen": "110",
+                      "tree_id": "/app/con[0]/ses[0]/wnd[0]/shellcont/shell",
+                      "node_key": "02", "node_text": "Poste", "column": "Column1"}
+        elif args.request_action == "display-billing-copy-tan":
+            action = "DISPLAY_S4650_BILLING_COPY_TAN"
+            params = {"transaction": "VTFLC", "program": "SAPL080W", "screen": "112",
+                      "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL080WTCTRL_V_TVCPFLP",
+                      "item_category": "TAN", "detail_button_id": "/app/con[0]/ses[0]/wnd[0]/tbar[1]/btn[38]"}
+        elif args.request_action == "display-s4600-cdcl":
+            action = "DISPLAY_S4600_CDCL_REFERENCE"
+            params = {"transaction": "VOV8", "program": "SAPL080O",
+                      "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL080OTCTRL_V_TVAK",
+                      "sales_order_type": "CDCL",
+                      "detail_button_id": "/app/con[0]/ses[0]/wnd[0]/tbar[1]/btn[38]"}
         elif args.request_action == "navigate":
             params = {
                 "control_id": args.control_id,
@@ -77,6 +134,14 @@ def main(argv: list[str] | None = None) -> int:
             action = "NAVIGATE"
         elif args.request_action == "open":
             action, params = "OPEN_TRANSACTION", {"transaction": args.transaction}
+        elif args.request_action == "open-s4615-customizing":
+            action, params = "OPEN_S4615_CUSTOMIZING_READ", {"transaction": args.transaction}
+        elif args.request_action == "inspect-s4615-customizing":
+            action, params = "INSPECT_S4615_CUSTOMIZING", {"object": args.object}
+        elif args.request_action == "read-s4615-table":
+            action, params = "READ_S4615_CUSTOMIZING_TABLE", {"table": args.table}
+        elif args.request_action == "scan-s4615-customizing":
+            action, params = "SCAN_S4615_CUSTOMIZING", {"object": args.object}
         else:
             raise SapGuiBridgeError(
                 f"Unsupported request action: {args.request_action!r}"

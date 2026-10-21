@@ -1,0 +1,37 @@
+{
+  "operations": {
+    "ENSURE_BP_STANDARD_ADDRESS": {
+      "detail": "1581",
+      "status": "VERIFIED"
+    },
+    "ENSURE_C615_A01_COMPANY_1010": {
+      "detail": "1010/400000/0004",
+      "status": "VERIFIED"
+    },
+    "ENSURE_C615_A01_PARTNER_FUNCTIONS": {
+      "detail": "GET confirmed DO, RF, PY, RM self-reference to 1000000115; PartnerCounter 0",
+      "status": "SKIPPED_EXISTS"
+    },
+    "ENSURE_C615_A01_SALES_AREA_1010_10_00": {
+      "detail": "1010/10/00",
+      "status": "VERIFIED"
+    },
+    "ENSURE_FLCU00_ROLE_AFTER_ADDRESS": {
+      "detail": "R1/084",
+      "status": "REJECTED"
+    },
+    "ENSURE_FLCU00_ROLE_AFTER_LOCK_RELEASE": {
+      "detail": "FLCU00",
+      "status": "VERIFIED"
+    },
+    "ENSURE_FLCU01_ROLE": {
+      "detail": "R1/084",
+      "status": "REJECTED"
+    },
+    "ENSURE_FLCU01_ROLE_AFTER_LOCK_RELEASE": {
+      "detail": "FLCU01",
+      "status": "VERIFIED"
+    }
+  },
+  "workflow_id": "S4615_CUSTOMER_A01"
+}

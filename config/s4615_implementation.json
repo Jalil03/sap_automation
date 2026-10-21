@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "mode": "DRY_RUN_DEFAULT",
+  "canonical_immutable": true,
+  "sap_identity": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+  "audit_source": "reports/s4615_plant_customizing_audit.md",
+  "operations": [
+    {
+      "id": "S4615_TRAINING_PLANT",
+      "target": {"plant": null, "company_code": "1010"},
+      "values": {"plant": null, "company_code": "1010", "valuation_area": null, "currency": "EUR", "fi_mm_profile": null, "approved_source": null},
+      "required_fields": ["plant", "company_code", "valuation_area", "currency", "fi_mm_profile", "approved_source"],
+      "depends_on": [],
+      "audit_state": "MISSING",
+      "read_evidence": ["T001W", "T001K"],
+      "preferred_interface": "API_PLANT_SRV:LOOKUP_ONLY",
+      "write_route": "UNPROVEN",
+      "required_approval": "FI_MM_AND_TRAINING_ENV_OWNER"
+    },
+    {
+      "id": "S4615_SALES_CHANNEL_PLANT",
+      "target": {"sales_organization": "1010", "distribution_channel": "10", "plant": null},
+      "values": {"sales_organization": "1010", "distribution_channel": "10", "plant": null},
+      "required_fields": ["sales_organization", "distribution_channel", "plant"],
+      "depends_on": ["S4615_TRAINING_PLANT"],
+      "audit_state": "MISSING",
+      "read_evidence": ["TVKWZ"],
+      "preferred_interface": "SAP_GUI_CUSTOMIZING",
+      "write_route": "UNPROVEN",
+      "required_approval": "SD_CUSTOMIZING_OWNER"
+    },
+    {
+      "id": "S4615_PLANT_SHIPPING_POINT",
+      "target": {"plant": null, "shipping_point": "1010"},
+      "values": {"plant": null, "shipping_point": "1010"},
+      "required_fields": ["plant", "shipping_point"],
+      "depends_on": ["S4615_TRAINING_PLANT"],
+      "audit_state": "MISSING",
+      "read_evidence": ["TVSWZ"],
+      "preferred_interface": "SAP_GUI_CUSTOMIZING",
+      "write_route": "UNPROVEN",
+      "required_approval": "LE_CUSTOMIZING_OWNER"
+    },
+    {
+      "id": "S4615_OVL2_DETERMINATION",
+      "target": {"shipping_condition": null, "loading_group": null, "plant": null, "shipping_point": "1010"},
+      "values": {"shipping_condition": null, "loading_group": null, "plant": null, "shipping_point": "1010"},
+      "required_fields": ["shipping_condition", "loading_group", "plant", "shipping_point"],
+      "depends_on": ["S4615_SALES_CHANNEL_PLANT", "S4615_PLANT_SHIPPING_POINT"],
+      "audit_state": "MISSING",
+      "read_evidence": ["OVL2/V_TVSTZ"],
+      "preferred_interface": "SAP_GUI_CUSTOMIZING",
+      "write_route": "UNPROVEN",
+      "required_approval": "LE_CUSTOMIZING_OWNER"
+    },
+    {
+      "id": "S4615_CUSTOMER_BP_ROOT",
+      "target": {"logical_id": "C615-A01", "sap_partner_id": null},
+      "values": {"logical_id": "C615-A01", "bp_grouping": "BPAB", "bp_category": "2", "training_name": "S4615 Training Customer A01", "duplicate_key": "C615-A01", "country": "BE", "language": "EN", "sales_currency": "EUR"},
+      "value_provenance": {"logical_id": "BOOK_TEMPLATE_RESOLVED_01", "bp_grouping": "SAP_CONFIRMED_INTERNAL_NUMBERING_FOR_ORGANIZATION", "bp_category": "SAP_CONFIRMED_ORGANIZATION", "training_name": "USER_PROJECT_DECISION", "duplicate_key": "DERIVED_FROM_LOGICAL_ID", "country": "USER_PROJECT_DECISION", "language": "USER_PROJECT_DECISION", "sales_currency": "USER_PROJECT_DECISION"},
+      "numbering_evidence": "docs/phase5/CURRENT_STATE.md: BPAB/category 2 generated BP 1000000114; C615-A01 remains a separate logical ID",
+      "sap_authorization_evidence": {"source": "USER_REPORTED_SU01D_PROFILES", "system": "A4H", "client": "600", "user": "ABDELJ", "profiles": ["SAP_ALL", "SAP_SYSTEM"], "assessment": "STRONG_BROAD_SAP_AUTHORIZATION_EVIDENCE", "api_post_success_proven": false, "customer_master_owner_approval": null},
+      "required_fields": ["logical_id", "bp_grouping", "bp_category", "training_name", "duplicate_key"],
+      "depends_on": [],
+      "audit_state": "UNKNOWN",
+      "read_evidence": ["API_BUSINESS_PARTNER", "schemas/sap/core_mapping_contracts.json"],
+      "preferred_interface": "API_BUSINESS_PARTNER",
+      "write_route": "UNPROVEN_BP_ROOT",
+      "required_approval": "CUSTOMER_MASTER_OWNER"
+    },
+    {
+      "id": "S4615_CUSTOMER_A01",
+      "target": {"logical_id": "C615-A01", "sap_partner_id": null, "company_code": "1010", "sales_area": "1010/10/00"},
+      "values": {"logical_id": "C615-A01", "sap_partner_id": null, "company_code": "1010", "sales_area": "1010/10/00", "bp_grouping": null, "approved_address": null, "reconciliation_account": null, "payment_terms": null, "shipping_condition": null, "pricing_procedure": null, "tax_classification": null},
+      "required_fields": ["logical_id", "company_code", "sales_area", "bp_grouping", "approved_address", "reconciliation_account", "payment_terms", "shipping_condition", "pricing_procedure", "tax_classification"],
+      "depends_on": ["S4615_CUSTOMER_BP_ROOT"],
+      "audit_state": "UNKNOWN",
+      "read_evidence": ["API_BUSINESS_PARTNER", "data/provisioning/s4615/C615-A01.proposed.json"],
+      "preferred_interface": "API_BUSINESS_PARTNER",
+      "write_route": "UNPROVEN_BP_ROOT",
+      "required_approval": "CUSTOMER_MASTER_AND_TAX_OWNER"
+    },
+    {
+      "id": "S4615_PRODUCT_P101",
+      "target": {"logical_id": "P615-101", "sap_product_id": null, "sales_organization": "1010", "distribution_channel": "10", "plant": null},
+      "values": {"logical_id": "P615-101", "sap_material_id": null, "description": "S4615 Training Product 101", "sales_organization": "1010", "distribution_channel": "10", "sales_division": "00", "sales_order_unit": "PC", "plant": null, "base_unit": "PC", "material_type": "FERT", "industry_sector": "M", "be_mwst_classification": null, "valuation_class": null, "price_control": null, "price_determination": null, "standard_price": null, "valuation_currency": null},
+      "required_fields": ["logical_id", "sales_organization", "distribution_channel", "plant", "base_unit", "material_type", "industry_sector", "be_mwst_classification", "valuation_class", "price_control", "price_determination", "standard_price", "valuation_currency"],
+      "depends_on": ["S4615_TRAINING_PLANT"],
+      "audit_state": "UNKNOWN",
+      "read_evidence": ["API_PRODUCT_SRV", "data/provisioning/s4615/P615-101.proposed.json"],
+      "preferred_interface": "BAPI_MATERIAL_SAVEDATA:NOT_VALIDATED;SAP_GUI_FALLBACK",
+      "write_route": "UNPROVEN_PRODUCT_CREATE",
+      "required_approval": "FI_MM_PRODUCT_AND_TAX_OWNER"
+    }
+  ]
+}

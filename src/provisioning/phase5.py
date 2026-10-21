@@ -13,6 +13,8 @@ from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Any, Protocol
 
+from .execution_policy import ExecutionCheckpoint, TrainingExecutionPolicy
+
 
 ROOT = Path(__file__).resolve().parents[2]
 PREPARE_PATH = ROOT / "data/provisioning/phase5_prepare_1010.json"
@@ -109,6 +111,10 @@ class EvidenceBackend:
 
     def readback(self, operation: str, target: dict[str, Any]) -> dict[str, Any] | None:
         return None
+
+
+class RecoverableReadError(RuntimeError):
+    """A backend-confirmed transient READ failure; no write was attempted."""
 
 
 @dataclass
@@ -263,12 +269,18 @@ class Phase5ProvisioningEngine:
         backend: ProvisioningBackend,
         decisions: dict[str, Any] | None = None,
         execute: bool = False,
+        execution_policy: TrainingExecutionPolicy | None = None,
+        checkpoint: ExecutionCheckpoint | None = None,
     ) -> None:
         self.backend = backend
         self.decisions = decisions or {}
         self.execute = execute
+        self.execution_policy = execution_policy
+        self.checkpoint = checkpoint
         if execute and not backend.writable:
             raise ValueError("--execute requires an explicitly writable provisioning backend")
+        if execution_policy is not None and checkpoint is not None and checkpoint.workflow_id != execution_policy.workflow_id:
+            raise ValueError("Execution policy and checkpoint workflow mismatch")
 
     @staticmethod
     def _targets() -> dict[str, dict[str, Any]]:
@@ -298,15 +310,37 @@ class Phase5ProvisioningEngine:
         operation: str,
         *,
         dependencies: list[ProvisioningResult] | None = None,
+        target_override: dict[str, Any] | None = None,
+        required_override: tuple[str, ...] | None = None,
     ) -> ProvisioningResult:
-        target = self._targets()[operation]
-        before = self.backend.lookup(operation, target)
+        target = target_override if target_override is not None else self._targets()[operation]
+        try:
+            before = self.backend.lookup(operation, target)
+        except RecoverableReadError:
+            # One retry is safe only when the backend certifies that this was
+            # a read-only failure. Never retry provision() automatically.
+            try:
+                before = self.backend.lookup(operation, target)
+            except Exception as error:
+                return ProvisioningResult(
+                    operation, target, "UNKNOWN", "STOP", "BLOCKED_LIVE_READ_REQUIRED",
+                    blockers=[{"code": "LOOKUP_FAILED", "detail": str(error)}],
+                )
+        except Exception as error:
+            if self.execution_policy is None:
+                raise
+            return ProvisioningResult(
+                operation, target, "UNKNOWN", "STOP", "BLOCKED_LIVE_READ_REQUIRED",
+                blockers=[{"code": "LOOKUP_FAILED", "detail": str(error)}],
+            )
         if before not in {"EXISTS", "MISSING", "UNKNOWN"}:
             return ProvisioningResult(
                 operation, target, "UNKNOWN", "STOP", "BLOCKED",
                 blockers=[{"code": "INVALID_LOOKUP_STATE", "detail": str(before)}],
             )
         if before == "EXISTS":
+            if self.execute and self.checkpoint is not None:
+                self.checkpoint.record(operation, "SKIPPED_EXISTS")
             return ProvisioningResult(operation, target, before, "SKIP", "SKIPPED_EXISTS", checks=["check_before_create"])
         if before == "UNKNOWN" and self.execute:
             return ProvisioningResult(
@@ -319,8 +353,16 @@ class Phase5ProvisioningEngine:
                 }],
             )
         decision = self.decisions.get(operation, {})
-        required = REQUIRED_DECISION_FIELDS.get(operation, ())
+        required = required_override if required_override is not None else REQUIRED_DECISION_FIELDS.get(operation, ())
         missing = _missing(operation, decision, required)
+        if required_override is not None:
+            missing = list(dict.fromkeys(missing + [
+                name for name in required
+                if decision.get(name) is None or (
+                    isinstance(decision.get(name), str)
+                    and ("##" in decision[name] or decision[name].startswith("ADMIN_CONFIRMATION_REQUIRED"))
+                )
+            ]))
         if before == "MISSING" and missing:
             return ProvisioningResult(
                 operation, target, before, "PREPARE", "BLOCKED_NEEDS_VALUE",
@@ -334,13 +376,16 @@ class Phase5ProvisioningEngine:
                 checks=["check_before_create", "values_complete"],
                 blockers=[{"code": "INVALID_DECISION", "detail": error} for error in decision_errors],
             )
+        satisfied_dependencies = {"SKIPPED_EXISTS", "PROVISIONED_VERIFIED"}
+        if not self.execute:
+            satisfied_dependencies.update({
+                "WOULD_PROVISION", "DEFERRED_READ_CHECK",
+                "WOULD_PROVISION_AFTER_COMMON_ENV",
+            })
         blocked_dependencies = [
             dependency.operation
             for dependency in dependencies or []
-            if dependency.status not in {
-                "SKIPPED_EXISTS", "PROVISIONED_VERIFIED", "WOULD_PROVISION",
-                "DEFERRED_READ_CHECK", "WOULD_PROVISION_AFTER_COMMON_ENV",
-            }
+            if dependency.status not in satisfied_dependencies
         ]
         if blocked_dependencies:
             return ProvisioningResult(
@@ -397,7 +442,30 @@ class Phase5ProvisioningEngine:
             for key, value in decision.items()
             if not key.startswith("_") and not (value is None and key in deferred)
         }
-        write_result = self.backend.provision(operation, target, write_values)
+        if self.execution_policy is not None:
+            try:
+                self.execution_policy.authorize(operation, target, write_values)
+                if self.checkpoint is None:
+                    raise ValueError("Autonomous execution requires a durable checkpoint")
+                self.checkpoint.before_write(operation)
+            except ValueError as error:
+                return ProvisioningResult(
+                    operation, target, before, "STOP", "BLOCKED_APPROVAL_OR_ROUTE",
+                    checks=["check_before_create", "write_not_attempted"],
+                    blockers=[{"code": "EXECUTION_GATE", "detail": str(error)}],
+                )
+        try:
+            write_result = self.backend.provision(operation, target, write_values)
+        except Exception as error:
+            if self.execution_policy is None:
+                raise
+            if self.checkpoint is not None:
+                self.checkpoint.record(operation, "AMBIGUOUS", detail=type(error).__name__)
+            return ProvisioningResult(
+                operation, target, before, "STOP", "BLOCKED_AMBIGUOUS_WRITE",
+                checks=["check_before_create", "write_attempted", "no_automatic_retry"],
+                blockers=[{"code": "WRITE_OUTCOME_UNKNOWN", "detail": str(error)}],
+            )
         if not isinstance(write_result, dict):
             return ProvisioningResult(
                 operation, target, before, "STOP", "BLOCKED_WRITE_RESPONSE",
@@ -408,6 +476,8 @@ class Phase5ProvisioningEngine:
                 }],
             )
         if write_result.get("provisioning_blocked"):
+            if self.checkpoint is not None:
+                self.checkpoint.record(operation, "READ_BLOCKED", detail="backend rejected write before attempt")
             return ProvisioningResult(
                 operation, target, before, "STOP", "BLOCKED_UNSUPPORTED_PROVISIONING",
                 checks=["check_before_create", "write_not_attempted", "gui_contract_missing"],
@@ -435,6 +505,8 @@ class Phase5ProvisioningEngine:
                 }],
             )
         if write_result.get("ambiguous_save"):
+            if self.checkpoint is not None:
+                self.checkpoint.record(operation, "AMBIGUOUS", detail="save outcome unknown")
             return ProvisioningResult(
                 operation, target, before, "STOP", "BLOCKED_AMBIGUOUS_SAVE",
                 checks=["check_before_create", "write_attempted", "no_automatic_retry"],
@@ -445,11 +517,15 @@ class Phase5ProvisioningEngine:
             )
         readback = self.backend.readback(operation, target)
         if not readback:
+            if self.checkpoint is not None:
+                self.checkpoint.record(operation, "AMBIGUOUS", detail="independent readback failed")
             return ProvisioningResult(
                 operation, target, before, "PROVISION", "BLOCKED_READBACK",
                 checks=["check_before_create", "write_attempted", "readback_failed"],
                 blockers=[{"code": "READBACK_FAILED", "detail": operation}],
             )
+        if self.checkpoint is not None:
+            self.checkpoint.record(operation, "VERIFIED")
         return ProvisioningResult(
             operation, target, before, "PROVISION", "PROVISIONED_VERIFIED",
             checks=[
@@ -457,6 +533,20 @@ class Phase5ProvisioningEngine:
                 "write_once", "readback_verified",
             ],
             readback=readback,
+        )
+
+    def ensure_operation(
+        self,
+        operation: str,
+        target: dict[str, Any],
+        required_fields: tuple[str, ...],
+        *,
+        dependencies: list[ProvisioningResult] | None = None,
+    ) -> ProvisioningResult:
+        """Use the same Phase 5 lifecycle for an explicitly specified operation."""
+        return self._ensure(
+            operation, dependencies=dependencies,
+            target_override=target, required_override=required_fields,
         )
 
     def ensure_company_code(self) -> ProvisioningResult:

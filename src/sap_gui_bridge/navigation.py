@@ -1667,7 +1667,7 @@ def find_s4615_sales_type(session: SapGuiSession, params: dict[str, Any], *, tim
 def display_s4615_sales_reference(session: SapGuiSession, params: dict[str, Any], *, timeout_seconds: float = 10.0, poll_seconds: float = 0.05) -> dict[str, Any]:
     target = params.get("sales_order_type")
     expected = {"transaction": "VOV8", "program": "SAPL080O", "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL080OTCTRL_V_TVAK", "sales_order_type": target, "detail_button_id": "/app/con[0]/ses[0]/wnd[0]/tbar[1]/btn[38]"}
-    if target not in {"CS", "BV", "ZA01"} or params != expected:
+    if target not in {"CS", "BV", "ZA01", "CDCL"} or params != expected:
         raise ActionBlockedError("VOV8 sales reference contract mismatch")
     session.validate_identity()
     if str(session.identity.get("transaction") or "").upper() != "VOV8" or str(getattr(session.raw.Info, "Program", "") or "").upper() != "SAPL080O":
@@ -1718,6 +1718,10 @@ def display_s4615_sales_reference(session: SapGuiSession, params: dict[str, Any]
     if len(scanned_rows) != row_count:
         raise ActionBlockedError("VOV8 sales reference selection scan incomplete")
     if found is None or found_position is None:
+        if target == "CDCL":
+            session.audit("DISPLAY_S4600_CDCL_REFERENCE", control_id=expected["table_id"], control_text="read-only complete VOV8 scan", value={"reference": target, "result": "CONFIRMED_NOT_FOUND", "row_count": row_count, "rows_read": len(scanned_rows), "visited_scroll_positions": sorted(visited)})
+            return {"reference": target, "result": "CONFIRMED_NOT_FOUND", "row_count": row_count,
+                    "rows_read": len(scanned_rows), "visited_scroll_positions": sorted(visited)}
         raise ActionBlockedError(f"VOV8 sales reference {target} not found")
     table = session.find(expected["table_id"])
     if int(table.VerticalScrollbar.Position) != found_position:
@@ -1734,7 +1738,8 @@ def display_s4615_sales_reference(session: SapGuiSession, params: dict[str, Any]
     button = session.find(expected["detail_button_id"])
     if _control_value(button, "Id") != expected["detail_button_id"] or _control_value(button, "Type") != "GuiButton" or "Détail" not in str(_control_value(button, "Tooltip") or ""):
         raise ActionBlockedError("VOV8 sales reference detail button mismatch")
-    session.audit("DISPLAY_S4615_SALES_REFERENCE", control_id=expected["detail_button_id"], control_text="Détail", value={"reference": target, "row": found, "cleared_selection_rows": selected_rows})
+    audit_action = "DISPLAY_S4600_CDCL_REFERENCE" if target == "CDCL" else "DISPLAY_S4615_SALES_REFERENCE"
+    session.audit(audit_action, control_id=expected["detail_button_id"], control_text="Détail", value={"reference": target, "row": found, "cleared_selection_rows": selected_rows})
     button.press()
     snapshot = _wait_for_screen(session, timeout_seconds, poll_seconds)
     if snapshot.get("popups"):
@@ -1806,8 +1811,10 @@ def display_s4615_f2_reference(session: SapGuiSession, params: dict[str, Any], *
 
 def find_s4650_billing_copy_header(session: SapGuiSession, params: dict[str, Any], *, timeout_seconds: float = 10.0, poll_seconds: float = 0.05) -> dict[str, Any]:
     expected = {"transaction": "VTFLC", "program": "SAPL080W", "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL080WTCTRL_V_TVCPFLK", "billing_type": "F2", "delivery_type": "LF"}
+    if params.get("billing_type") == "ZF01":
+        expected = {**expected, "billing_type": "ZF01"}
     if params != expected:
-        raise ActionBlockedError("FIND_S4650_BILLING_COPY_HEADER context mismatch")
+        raise ActionBlockedError("FIND_BILLING_COPY_HEADER context mismatch")
     session.validate_identity()
     if str(session.identity.get("transaction") or "").upper() != expected["transaction"] or str(getattr(session.raw.Info, "Program", "") or "").upper() != expected["program"]:
         raise ActionBlockedError("FIND_S4650_BILLING_COPY_HEADER requires exact VTFLC header view")
@@ -1818,7 +1825,7 @@ def find_s4650_billing_copy_header(session: SapGuiSession, params: dict[str, Any
     maximum = int(table.VerticalScrollbar.Maximum)
     if row_count < 0 or row_count > 1000 or visible_count <= 0:
         raise ActionBlockedError("FIND_S4650_BILLING_COPY_HEADER dimensions are unsafe")
-    session.audit("FIND_S4650_BILLING_COPY_HEADER", control_id=expected["table_id"], control_text="read-only VTFLC F2/LF lookup", value={"row_count": row_count})
+    session.audit("FIND_S4615_ZF01_LF_COPY_HEADER" if expected["billing_type"] == "ZF01" else "FIND_S4650_BILLING_COPY_HEADER", control_id=expected["table_id"], control_text="read-only exact VTFLC header lookup", value={"row_count": row_count})
     observed: dict[int, tuple[str, str]] = {}
     positions: list[int] = []
     position = 0
@@ -1845,7 +1852,7 @@ def find_s4650_billing_copy_header(session: SapGuiSession, params: dict[str, Any
                     raise ActionBlockedError(f"VTFLC {field} cell mismatch at row {absolute_row}")
                 values.append(str(_control_value(cell, "Text") or "").strip())
             observed[absolute_row] = tuple(values)
-            if observed[absolute_row] == ("F2", "LF"):
+            if observed[absolute_row] == (expected["billing_type"], "LF"):
                 found_row = absolute_row
                 break
         if found_row is not None or len(observed) >= row_count or actual >= maximum:
@@ -1866,8 +1873,10 @@ def find_s4650_billing_copy_header(session: SapGuiSession, params: dict[str, Any
 
 def display_s4650_billing_copy_header(session: SapGuiSession, params: dict[str, Any]) -> dict[str, Any]:
     expected = {"transaction": "VTFLC", "program": "SAPL080W", "table_id": "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL080WTCTRL_V_TVCPFLK", "billing_type": "F2", "delivery_type": "LF", "detail_button_id": "/app/con[0]/ses[0]/wnd[0]/tbar[1]/btn[38]"}
+    if params.get("billing_type") == "ZF01":
+        expected = {**expected, "billing_type": "ZF01"}
     if params != expected:
-        raise ActionBlockedError("DISPLAY_S4650_BILLING_COPY_HEADER context mismatch")
+        raise ActionBlockedError("DISPLAY_BILLING_COPY_HEADER context mismatch")
     session.validate_identity()
     if str(session.identity.get("transaction") or "").upper() != "VTFLC" or str(getattr(session.raw.Info, "Program", "") or "").upper() != "SAPL080W":
         raise ActionBlockedError("DISPLAY_S4650_BILLING_COPY_HEADER requires VTFLC header view")
@@ -1885,10 +1894,10 @@ def display_s4650_billing_copy_header(session: SapGuiSession, params: dict[str, 
             except Exception:
                 continue
             values.append(str(_control_value(cell, "Text") or "").strip())
-        if values == ["F2", "LF"]:
+        if values == [expected["billing_type"], "LF"]:
             matches.append(position + relative_row)
     if len(matches) != 1:
-        raise ActionBlockedError("DISPLAY_S4650_BILLING_COPY_HEADER exact F2/LF row is not unique and visible")
+        raise ActionBlockedError("DISPLAY_BILLING_COPY_HEADER exact row is not unique and visible")
     button = session.find(expected["detail_button_id"])
     if _control_value(button, "Type") != "GuiButton" or not _observed_exact_text(_control_value(button, "Tooltip"), "D\u00e9tail   (Ctrl+Maj+F2)") or not callable(getattr(button, "press", None)):
         raise ActionBlockedError("DISPLAY_S4650_BILLING_COPY_HEADER detail button mismatch")
@@ -1898,7 +1907,7 @@ def display_s4650_billing_copy_header(session: SapGuiSession, params: dict[str, 
     row = get_row(matches[0])
     if not hasattr(row, "Selected"):
         raise ActionBlockedError("DISPLAY_S4650_BILLING_COPY_HEADER selected property missing")
-    session.audit("DISPLAY_S4650_BILLING_COPY_HEADER", control_id=expected["table_id"], control_text="read-only exact F2/LF detail", value={"row": matches[0]})
+    session.audit("DISPLAY_S4615_ZF01_LF_COPY_HEADER" if expected["billing_type"] == "ZF01" else "DISPLAY_S4650_BILLING_COPY_HEADER", control_id=expected["table_id"], control_text="read-only exact billing copy header detail", value={"row": matches[0]})
     row.Selected = True
     button.press()
     session.validate_identity()
@@ -2563,6 +2572,18 @@ def _is_tree(control: Any, control_type: str) -> bool:
     return control_type == "GuiShell" and "tree" in subtype.casefold()
 
 
+def _is_mm01_basic_tab_exception(operation: str, control_id: str, tab_text: str, snapshot: dict[str, Any]) -> bool:
+    """Allow only the observed Basic Data 2 tab despite MM01's 'Créer' title."""
+    return (
+        operation == "SELECT_TAB"
+        and control_id == "/app/con[0]/ses[0]/wnd[0]/usr/tabsTABSPR1/tabpSP02"
+        and tab_text == " Données de base 2"
+        and (snapshot.get("transaction"), snapshot.get("program"), str(snapshot.get("screen_number")))
+        == ("MM01", "SAPLMGMM", "4004")
+        and not snapshot.get("popups")
+    )
+
+
 def _is_company_code_display_exception(
     session: SapGuiSession,
     operation: str,
@@ -2936,6 +2957,7 @@ def navigate(
     sales_division_display_exception = _is_sales_division_display_exception(
         session, operation, control_id, node_key, comparison_text, before
     )
+    mm01_basic_tab_exception = _is_mm01_basic_tab_exception(operation, control_id, comparison_text, before)
     vtflc_item_display_exception = (
         operation in {"SELECT_TREE_NODE", "DOUBLE_CLICK_TREE_NODE"}
         and control_id == "/app/con[0]/ses[0]/wnd[0]/shellcont/shell"
@@ -2959,7 +2981,9 @@ def navigate(
             )
         )
     )
-    if vtflc_item_display_exception:
+    if mm01_basic_tab_exception:
+        _assert_safe_context(actual_text, comparison_text, tooltip, status_text)
+    elif vtflc_item_display_exception:
         _assert_safe_context(actual_text, tooltip, status_text)
     elif read_only_exception:
         _assert_safe_context(actual_text, tooltip, window_title, status_text)

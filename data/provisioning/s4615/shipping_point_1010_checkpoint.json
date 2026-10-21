@@ -1,0 +1,9 @@
+{
+  "operations": {
+    "S4615_SHIPPING_POINT_1010": {
+      "detail": "Address and transport were cancelled without confirmation; fresh OVXD re-entry and SE16N TVST readback show 19/19 entries with no 1010; no retry authorized",
+      "status": "REJECTED"
+    }
+  },
+  "workflow_id": "S4615_SHIPPING_POINT_1010"
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "operation_group": "S4600_T_S50A01_CUSTOMER_ROLES",
+  "logical_id": "T-S50A01",
+  "existing_business_partner": "1000000116",
+  "approved_by": "REQUESTING_USER_SELF_ATTESTED",
+  "approval_scope": "TRAINING_MASTER_DATA_CUSTOMER_ROLES",
+  "approved_at_utc": "2026-10-20T15:29:08.7321712Z",
+  "authorization_evidence": "User replied 'j'approuve' to the exact request naming BP 1000000116, roles FLCU00/FLCU01 and the two displayed fingerprints.",
+  "operations": {
+    "FLCU00": {
+      "operation": "S4600_T_S50A01_FLCU00_ROLE",
+      "execute": true,
+      "payload": {
+        "BusinessPartner": "1000000116",
+        "BusinessPartnerRole": "FLCU00"
+      },
+      "fingerprint": "1491887c1881ff8e9e355a1249c480b1a4668acf3deb0526769bea4c5724bca3"
+    },
+    "FLCU01": {
+      "operation": "S4600_T_S50A01_FLCU01_ROLE",
+      "execute": true,
+      "payload": {
+        "BusinessPartner": "1000000116",
+        "BusinessPartnerRole": "FLCU01"
+      },
+      "fingerprint": "59c0cb06d723852449d6b8b9ed9cdcad72c32b991d4e9d3bbf587bee72ed9fbf"
+    }
+  },
+  "maximum_posts": 2,
+  "sequence": ["FLCU00", "FLCU01"],
+  "excluded_scopes": [
+    "CUSTOMER_COMPANY",
+    "CUSTOMER_SALES_AREA",
+    "PARTNER_FUNCTIONS",
+    "TAX",
+    "FI_MM",
+    "PLANT",
+    "CUSTOMIZING"
+  ]
+}

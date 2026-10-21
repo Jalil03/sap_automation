@@ -1,0 +1,131 @@
+{
+  "manifest_version":"1.0",
+  "book":"S4615",
+  "training_group":"01",
+  "mode":"PREPARE_ONLY",
+  "execution_authorized":false,
+  "canonical_data_modified":false,
+  "environment":{"system":"A4H","client":"600","user":"ABDELJ"},
+  "sources":{
+    "book":"data/books/S4615/S4615_full_clean.md",
+    "compact_facts":"data/books/S4615/S4615_provisioning_facts.md",
+    "canonical":"data/validated/canonical_objects.json",
+    "mappings":"data/provisioning/phase5_identity_mappings.json",
+    "progress":"books/S4615/S4615_PROGRESS.md"
+  },
+  "policy":{
+    "source_templates_preserved":true,
+    "placeholder_resolution":"Replace ## with 01 only in runtime values; 80+## is arithmetic 81, not a string substitution.",
+    "no_automatic_reference_copy":true,
+    "no_creation_in_this_run":true,
+    "approval_scope":"Existing A01/D00 approvals do not cover B01/C01/E01/F01 or new materials. Book values are requirements, not FI/tax approvals.",
+    "exercise_deltas":"Prepare modifications that the exercise asks the learner to perform, but do not preapply them as bootstrap defaults.",
+    "null_means":"UNRESOLVED, never a generated SAP ID or execution default",
+    "lifecycle":["LOOKUP","PREPARE","VALIDATE","APPROVAL","CREATE_OR_EXTEND","INDEPENDENT_READBACK"]
+  },
+  "shared_book_requirements":{
+    "company_code":"1010","sales_organization":"1010","distribution_channel":"10","sales_division":"00","shipping_point":"1010",
+    "plant":null,"valuation_area":null,
+    "provenance":"BOOK_CONFIRMED except null plant/valuation, which the Book does not establish for these targets"
+  },
+  "verified_existing_context":{
+    "C615-A01":{"sap_id":"1000000115","scope":"BP_ROOT_AND_CUSTOMER_EXTENSIONS","source":"data/provisioning/phase5_identity_mappings.json"},
+    "P615-101":{"sap_id":"10000289","scope":"BASIC_ROOT_ONLY","source":"data/provisioning/s4615/P615-101.basic_root_checkpoint.json"},
+    "shipping_point_1010":{"status":"CREATED_AND_VERIFIED","source":"data/provisioning/s4615/shipping_point_1010_be_checkpoint.json"},
+    "copy_control_ZF01_LF_TAN":{"status":"CREATED_AND_VERIFIED","source":"data/provisioning/s4615/vtflc_zf01_lf_tan_checkpoint.json"},
+    "ZF01_RFBFK":{"value":true,"status":"CREATED_AND_VERIFIED","source":"data/provisioning/s4615/zf01_accounting_block_checkpoint.json"},
+    "template_policy":"These verified objects are context only; no customer FI/tax or product valuation value is inherited automatically. P615-400/10000287 is excluded as a template."
+  },
+  "shared_customer_missing_values":["installed BP numbering/grouping","approved name and current standard address","roles and partner schema","reconciliation account and scoped FI approval","payment terms","sales currency","customer pricing procedure","shipping conditions","incoterms where required","account assignment group","tax applicability/classification"],
+  "shared_product_missing_values":["installed material numbering","description","material type/industry","base unit and PC conversion if necessary","item category group and sales billing behavior","tax requirements","plant/logistics only where required","account determination/valuation only where required"],
+  "objects":[
+    {
+      "logical_id_template":"C615-B##","logical_id":"C615-B01","object_type":"BUSINESS_PARTNER","origin":"BOOK_PRE_SUPPLIED",
+      "verified_sap_mapping":null,"sap_state":"UNKNOWN_NO_VERIFIED_GROUP01_MAPPING",
+      "book_values":{"company_code":"1010","sales_area":"1010/10/00"},
+      "exercise_deltas":[
+        {"exercise":7,"field_semantics":"billing dates calendar","book_value":"AM","expected_behavior":"month-end billing","odata_read_property":"A_CustomerSalesArea.InvoiceDate","installed_calendar_rules_status":"NOT_VERIFIED","source":"S4615_full_clean.md lines 3477-3488 / solution 7"},
+        {"exercise":12,"field_semantics":"customer account assignment group","template":"80+##","resolved_value":"81","description_template":"Groupe ##","description":"Groupe 01","approval":"CUSTOMER_FI_AND_SD_ACCOUNT_DETERMINATION","do_not_preapply":true}
+      ],
+      "missing_required_values":["shared_customer_missing_values","existing source deliveries and invoice for exercise 7/12","AM calendar validity and rules","installed group 81 and account determination compatibility"],
+      "approvals_required":["TRAINING_MASTER_DATA","CUSTOMER_FI_VALUES","CUSTOMER_TAX_VALUES_IF_REQUIRED","BILLING_CALENDAR_CHANGE","EX12_ACCOUNT_DETERMINATION_CHANGE"],
+      "exercise_dependencies":[7,12],
+      "source":{"canonical_object_ids":["S4615_CH6_EX7_SALES_ORDER_MONTH_END","S4615_CH9_EX12_ACCOUNT_DETERMINATION_AFFILIATED_REVENUE"],"book_pages":[119,123,213,216]},
+      "readiness":"BLOCKED_NEEDS_MASTER_DATA_VALUES_AND_APPROVALS"
+    },
+    {
+      "logical_id_template":"C615-C##","logical_id":"C615-C01","object_type":"BUSINESS_PARTNER","origin":"BOOK_PRE_SUPPLIED",
+      "verified_sap_mapping":null,"sap_state":"UNKNOWN_NO_VERIFIED_GROUP01_MAPPING",
+      "book_values":{"company_code":"1010","sales_area":"1010/10/00"},
+      "scenario_requirements":{"billing_type":"F1","initial_simulation":"two deliveries with identical billing header data combine into one invoice with four items","later_behavior":"split analysis and individual billing"},
+      "missing_required_values":["shared_customer_missing_values","two eligible source deliveries and their exact header/item data","installed F1 grouping and item-number increment settings"],
+      "approvals_required":["TRAINING_MASTER_DATA","CUSTOMER_FI_VALUES","CUSTOMER_TAX_VALUES_IF_REQUIRED"],
+      "exercise_dependencies":[8,9],
+      "source":{"canonical_object_ids":["S4615_CH7_EX9_BILLING_SPLIT_1","S4615_CH7_EX9_BILLING_SPLIT_2"],"book_pages":[137,139,140,145,147]},
+      "readiness":"BLOCKED_NEEDS_MASTER_DATA_AND_SOURCE_DOCUMENTS"
+    },
+    {
+      "logical_id_template":"C615-E##","logical_id":"C615-E01","object_type":"BUSINESS_PARTNER","origin":"BOOK_PRE_SUPPLIED",
+      "verified_sap_mapping":null,"sap_state":"UNKNOWN_NO_VERIFIED_GROUP01_MAPPING",
+      "book_values":{"company_code":"1010","sales_area":"1010/10/00"},
+      "scenario_requirements":{"document_type":"WV","product":"P615-501","billing":"periodic maintenance contract","billing_plan_type":"02","billing_date_category":"01"},
+      "missing_required_values":["shared_customer_missing_values","periodic service price/condition record","billing plan dates and installed contract determination"],
+      "approvals_required":["TRAINING_MASTER_DATA","CUSTOMER_FI_VALUES","CUSTOMER_TAX_VALUES_IF_REQUIRED"],
+      "exercise_dependencies":[10],
+      "source":{"canonical_object_ids":["S4615_CH8_EX10_BILLING_PERIODIC_FIRST_PERIOD"],"book_pages":[173,175]},
+      "readiness":"BLOCKED_NEEDS_CUSTOMER_AND_SERVICE_CONTRACT_DATA"
+    },
+    {
+      "logical_id_template":"C615-F##","logical_id":"C615-F01","object_type":"BUSINESS_PARTNER","origin":"BOOK_PRE_SUPPLIED",
+      "verified_sap_mapping":null,"sap_state":"UNKNOWN_NO_VERIFIED_GROUP01_MAPPING",
+      "book_values":{"company_code":"1010","sales_area":"1010/10/00"},
+      "scenario_requirements":{"product":"P615-601","reference_template":"##S4615-AZ","reference":"01S4615-AZ","down_payment_request_type":"FAZ","payment_special_gl_indicator":"A","payment_bank_account_book":"11100025","note":"The payment bank account is a transactional requirement, not the customer reconciliation account."},
+      "missing_required_values":["shared_customer_missing_values","milestone/down-payment plan and amounts/currency","FI validation of special G/L and payment account","approved payment/posting scope"],
+      "approvals_required":["TRAINING_MASTER_DATA","CUSTOMER_FI_VALUES","CUSTOMER_TAX_VALUES_IF_REQUIRED","DOWN_PAYMENT_AND_FI_POSTING_SEPARATE"],
+      "exercise_dependencies":[11],
+      "source":{"canonical_object_ids":["S4615_CH8_EX11_SALES_ORDER_DOWN_PAYMENT","S4615_CH8_EX11_PAYMENT_REFERENCE_DOWN_PAYMENT"],"book_pages":[189,192]},
+      "readiness":"BLOCKED_NEEDS_MASTER_DATA_AND_FI_DECISIONS"
+    },
+    {
+      "logical_id_template":"P615-2##","logical_id":"P615-201","object_type":"MATERIAL","origin":"BOOK_PRE_SUPPLIED",
+      "verified_sap_mapping":null,"sap_state":"UNKNOWN_NO_VERIFIED_GROUP01_MAPPING",
+      "book_values":{"sales_organization":"1010","distribution_channel":"10","sales_division_context":"00","order_unit":"PC"},
+      "scenario_quantities":[{"exercise":5,"quantity":5,"unit":"PC","flow":"order-related F5 pro forma before delivery"},{"exercise":7,"quantity":2,"unit":"PC","flow":"delivery/picking/PGI/month-end billing"}],
+      "base_unit":null,"plant":null,"valuation_area":null,
+      "missing_required_values":["shared_product_missing_values","verified root identity","sales view and pro-forma item determination","plant/stock/valuation for exercise 7 only","price condition records"],
+      "approvals_required":["TRAINING_MASTER_DATA","PRODUCT_TAX_VALUES_IF_REQUIRED","MM_VALUATION_AND_STOCK_SEPARATE_IF_REQUIRED"],
+      "exercise_dependencies":[5,7],
+      "source":{"canonical_object_ids":["S4615_CH4_EX5_SALES_ORDER_PRO_FORMA","S4615_CH6_EX7_SALES_ORDER_MONTH_END"],"book_pages":[73,75,119,123]},
+      "readiness":"BLOCKED_NEEDS_PRODUCT_DATA; PRO_FORMA_BRANCH_DOES_NOT_REQUIRE_PGI"
+    },
+    {
+      "logical_id_template":"P615-5##","logical_id":"P615-501","object_type":"MATERIAL","origin":"BOOK_PRE_SUPPLIED",
+      "verified_sap_mapping":null,"sap_state":"UNKNOWN_NO_VERIFIED_GROUP01_MAPPING",
+      "book_values":{"sales_organization":"1010","distribution_channel":"10","sales_division_context":"00"},
+      "scenario_requirements":{"document_type":"WV","customer":"C615-E01","item_category":"WVN","billing_plan_type":"02","date_category":"01","pricing_condition":"PPSV","calculation_type":"M"},
+      "live_support":{"PPSV_calculation_type":"M","access_sequence":"PPPV","evidence":"targeted GET API_SLSPRICINGPROCEDURE_SRV/A_SlsPricingConditionType, 2026-10-19"},
+      "base_unit":null,"plant":null,"valuation_area":null,
+      "missing_required_values":["shared_product_missing_values","service/maintenance product definition and installed item-category-group determination","target unit from exact exercise table","PPSV amount/currency/validity","billing-plan date rules"],
+      "approvals_required":["TRAINING_MASTER_DATA","PRODUCT_TAX_VALUES_IF_REQUIRED","SERVICE_PRICE_CONDITION"],
+      "exercise_dependencies":[10],
+      "source":{"canonical_object_ids":["S4615_CH8_EX10_BILLING_PERIODIC_FIRST_PERIOD"],"book_pages":[173,175],"note":"Instructor example uses P615-500 and 1 PC; do not silently convert that demo into a confirmed group-01 target base unit."},
+      "readiness":"BLOCKED_NEEDS_SERVICE_MASTER_DATA; PLANT_OR_PGI_NOT_ASSUMED"
+    },
+    {
+      "logical_id_template":"P615-6##","logical_id":"P615-601","object_type":"MATERIAL","origin":"BOOK_PRE_SUPPLIED",
+      "verified_sap_mapping":null,"sap_state":"UNKNOWN_NO_VERIFIED_GROUP01_MAPPING",
+      "book_values":{"sales_organization":"1010","distribution_channel":"10","sales_division_context":"00","order_unit":"PC","exercise_order_quantity":1},
+      "base_unit":null,"plant":null,"valuation_area":null,
+      "scenario_requirements":{"customer":"C615-F01","billing":"down payment and milestone/partial billing","down_payment_clearing_condition":"AZWR"},
+      "missing_required_values":["shared_product_missing_values","installed item/billing-plan determination","price/currency and milestone dates/percentages","tax and accounting prerequisites"],
+      "approvals_required":["TRAINING_MASTER_DATA","PRODUCT_TAX_VALUES_IF_REQUIRED","FI_DOWN_PAYMENT_CONFIGURATION_IF_REQUIRED","MM_VALUATION_IF_REQUIRED"],
+      "exercise_dependencies":[11],
+      "source":{"canonical_object_ids":["S4615_CH8_EX11_SALES_ORDER_DOWN_PAYMENT","S4615_CH8_EX11_BILLING_FIRST_PARTIAL"],"book_pages":[189,192]},
+      "readiness":"BLOCKED_NEEDS_PRODUCT_AND_BILLING_PLAN_DATA"
+    }
+  ],
+  "cross_source_decisions_required":[
+    {"topic":"chart_of_accounts","book_values":["INT","YCOA"],"verified_environment":"CABE for company 1010 in existing evidence","required_action":"FI owner must explicitly approve the target account mapping; do not apply YCOA/INT automatically."},
+    {"topic":"standard_order_type","book_prose":"CDCL","canonical_raw_value":"CDLC","required_action":"Resolve the installed key and source spelling/language discrepancy before any payload; no guessed OR conversion."}
+  ]
+}

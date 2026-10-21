@@ -1,0 +1,1 @@
+{"operation": "ENSURE_C615_A01_COMPANY_1010", "target": {"logical_id": "C615-A01", "sap_id": "1000000115", "company_code": "1010"}, "status": "VERIFIED", "retry_allowed": false}

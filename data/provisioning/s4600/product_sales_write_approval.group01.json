@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "approved_on": "2026-10-19",
+  "workflow_id": "S4600_GROUP01_PRODUCT_SALES",
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "operation_scope": "TRAINING_MASTER_DATA_PRODUCT_SALES",
+  "approval_status": "APPROVED",
+  "approved_by": "REQUESTING_USER_SELF_ATTESTED_TRAINING_DATA_OWNER",
+  "authorization_evidence": "User explicitly approved the 1010/10 sales extensions, exact ItemCategoryGroup values and three exact fingerprints in the current conversation.",
+  "allow_write": true,
+  "operations": {
+    "S4600_PRODUCT_T_D101_SALES_1010_10": {
+      "target": {"logical_product_id": "T-D101", "sap_id": "90000132", "sales_area": "1010/10"},
+      "payload": {"Product": "90000132", "ProductSalesOrg": "1010", "ProductDistributionChnl": "10", "ItemCategoryGroup": "LEIS"},
+      "target_fingerprint": "de162331194b2dbf52bc08b15f8fdc2b6430de91192775bebbe21db6c535d356",
+      "allow_write": true,
+      "limit": "ONE_A_PRODUCT_SALES_DELIVERY_POST_ONLY"
+    },
+    "S4600_PRODUCT_T_MS101_SALES_1010_10": {
+      "target": {"logical_product_id": "T-MS101", "sap_id": "60000445", "sales_area": "1010/10"},
+      "payload": {"Product": "60000445", "ProductSalesOrg": "1010", "ProductDistributionChnl": "10", "ItemCategoryGroup": "NORM"},
+      "target_fingerprint": "574d84319b4c81c92d036576addea6a840b5f79add35d6a9cc29c81c7f0b9545",
+      "allow_write": true,
+      "limit": "ONE_A_PRODUCT_SALES_DELIVERY_POST_ONLY"
+    },
+    "S4600_PRODUCT_T_MS201_SALES_1010_10": {
+      "target": {"logical_product_id": "T-MS201", "sap_id": "60000446", "sales_area": "1010/10"},
+      "payload": {"Product": "60000446", "ProductSalesOrg": "1010", "ProductDistributionChnl": "10", "ItemCategoryGroup": "NORM"},
+      "target_fingerprint": "5b887944b7905dc2e4cbdedd27b25e760a74e5ee5e853d76d98a9f17fd56009b",
+      "allow_write": true,
+      "limit": "ONE_A_PRODUCT_SALES_DELIVERY_POST_ONLY"
+    }
+  },
+  "excluded_scope": [
+    "PRODUCT_TAX",
+    "PLANT",
+    "FI_MM",
+    "ACCOUNTING",
+    "VALUATION",
+    "WAREHOUSE",
+    "STOCK",
+    "CUSTOMIZING"
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "prepared_on": "2026-10-19",
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "mode": "PREPARE_ONLY_NO_SAP_WRITE",
+  "verified_mappings": {
+    "T-S50A01": {"sap_id": "1000000116", "status": "LIVE_VERIFIED", "do_not_recreate": true},
+    "T-D101": {"sap_id": "90000132", "status": "LIVE_VERIFIED", "do_not_recreate": true},
+    "T-MS101": {"sap_id": "60000445", "status": "LIVE_VERIFIED", "do_not_recreate": true},
+    "T-MS201": {"sap_id": "60000446", "status": "LIVE_VERIFIED", "do_not_recreate": true}
+  },
+  "live_state": {
+    "customer_1000000116": {
+      "bp_root": "EXISTS",
+      "standard_address": "MISSING",
+      "FLCU00": "MISSING",
+      "FLCU01": "MISSING",
+      "customer_root": "MISSING",
+      "sales_area_1010_10_00": "MISSING",
+      "partner_functions": "MISSING",
+      "tax": "MISSING"
+    },
+    "product_sales_delivery_1010_10": {
+      "90000132": "MISSING",
+      "60000445": "MISSING",
+      "60000446": "MISSING"
+    },
+    "product_sales_tax": {
+      "90000132": "MISSING",
+      "60000445": "MISSING",
+      "60000446": "MISSING"
+    }
+  },
+  "installed_contracts": {
+    "A_BusinessPartnerRole": {
+      "creatable": true,
+      "mandatory": ["BusinessPartner", "BusinessPartnerRole"],
+      "route_status": "LIVE_PROVEN_IN_A4H_600"
+    },
+    "A_CustomerSalesArea": {
+      "creatable": true,
+      "mandatory": ["Customer", "SalesOrganization", "DistributionChannel", "Division"],
+      "route_status": "LIVE_PROVEN_IN_A4H_600"
+    },
+    "A_CustSalesPartnerFunc": {
+      "creatable": true,
+      "mandatory": ["Customer", "SalesOrganization", "DistributionChannel", "Division", "PartnerCounter", "PartnerFunction"],
+      "route_status": "METADATA_PROVEN_TARGET_WRITE_NOT_YET_PROVEN"
+    },
+    "A_CustomerSalesAreaTax": {
+      "creatable": true,
+      "mandatory": ["Customer", "SalesOrganization", "DistributionChannel", "Division", "DepartureCountry", "CustomerTaxCategory"],
+      "route_status": "METADATA_PROVEN_TARGET_WRITE_NOT_YET_PROVEN"
+    },
+    "A_ProductSalesDelivery": {
+      "creatable": true,
+      "mandatory": ["Product", "ProductSalesOrg", "ProductDistributionChnl"],
+      "route_status": "METADATA_PROVEN_CONTROLLED_FIRST_WRITE_REQUIRED"
+    },
+    "A_ProductSalesTax": {
+      "creatable": true,
+      "mandatory": ["Product", "Country", "TaxCategory", "TaxClassification"],
+      "route_status": "METADATA_PROVEN_SEPARATE_TAX_APPROVAL_REQUIRED"
+    }
+  },
+  "objects": {
+    "T-S50A01": {
+      "status": "BLOCKED_BY_DEPENDENCIES_AND_MISSING_VALUES",
+      "target": {"BusinessPartner": "1000000116", "SalesOrganization": "1010", "DistributionChannel": "10", "Division": "00"},
+      "book_values": {"SalesOrganization": "1010", "DistributionChannel": "10", "Division": "00"},
+      "missing": [
+        "exact standard address",
+        "approval and creation of FLCU01/customer root",
+        "exact CustomerAccountGroup decision for the customer root",
+        "Currency",
+        "ShippingCondition",
+        "CustomerPricingProcedure",
+        "CustomerAccountAssignmentGroup",
+        "IncotermsClassification",
+        "IncotermsLocation1",
+        "CustomerPaymentTerms",
+        "exact mandatory partner functions with PartnerCounter and DefaultPartner",
+        "tax decision if tax records are required"
+      ],
+      "excluded": ["company-code/FI extension", "reconciliation account", "plant assignment"]
+    },
+    "T-D101": {
+      "status": "READY_FOR_SCOPED_PRODUCT_SALES_APPROVAL",
+      "operation": "S4600_PRODUCT_T_D101_SALES_1010_10",
+      "target": {"logical_product_id": "T-D101", "sap_id": "90000132", "sales_area": "1010/10"},
+      "payload": {
+        "Product": "90000132",
+        "ProductSalesOrg": "1010",
+        "ProductDistributionChnl": "10",
+        "ItemCategoryGroup": "LEIS"
+      },
+      "target_fingerprint": "de162331194b2dbf52bc08b15f8fdc2b6430de91192775bebbe21db6c535d356",
+      "approval_required": "TRAINING_MASTER_DATA_PRODUCT_SALES",
+      "approval_status": "NOT_GRANTED",
+      "independent_readback": "exact A_ProductSalesDelivery composite key and payload fields",
+      "remaining_for_end_to_end_sale": ["separate exact product tax decision and approval"],
+      "excluded": ["SupplyingPlant", "plant view", "valuation", "accounting", "stock"]
+    },
+    "T-MS101": {
+      "status": "PROPOSED_CANDIDATE_REQUIRES_OWNER_CONFIRMATION",
+      "operation": "S4600_PRODUCT_T_MS101_SALES_1010_10",
+      "target": {"logical_product_id": "T-MS101", "sap_id": "60000445", "sales_area": "1010/10"},
+      "proposed_payload": {"Product": "60000445", "ProductSalesOrg": "1010", "ProductDistributionChnl": "10", "ItemCategoryGroup": "NORM"},
+      "target_fingerprint_if_norm_confirmed": "574d84319b4c81c92d036576addea6a840b5f79add35d6a9cc29c81c7f0b9545",
+      "candidate_evidence": "NORM is the only nonblank ItemCategoryGroup found in the bounded installed HAWA/W root and sales-delivery evidence; no 1010/10 equivalent was found and selection is not authorized.",
+      "missing": ["explicit Product Master owner confirmation of NORM", "TRAINING_MASTER_DATA_PRODUCT_SALES approval for the exact fingerprint", "exact product tax Country/TaxCategory/TaxClassification"],
+      "excluded": ["SupplyingPlant", "plant view", "valuation", "accounting", "stock"]
+    },
+    "T-MS201": {
+      "status": "PROPOSED_CANDIDATE_REQUIRES_OWNER_CONFIRMATION",
+      "operation": "S4600_PRODUCT_T_MS201_SALES_1010_10",
+      "target": {"logical_product_id": "T-MS201", "sap_id": "60000446", "sales_area": "1010/10"},
+      "proposed_payload": {"Product": "60000446", "ProductSalesOrg": "1010", "ProductDistributionChnl": "10", "ItemCategoryGroup": "NORM"},
+      "target_fingerprint_if_norm_confirmed": "5b887944b7905dc2e4cbdedd27b25e760a74e5ee5e853d76d98a9f17fd56009b",
+      "candidate_evidence": "NORM is the only nonblank ItemCategoryGroup found in the bounded installed HAWA/W root and sales-delivery evidence; no 1010/10 equivalent was found and selection is not authorized.",
+      "missing": ["explicit Product Master owner confirmation of NORM", "TRAINING_MASTER_DATA_PRODUCT_SALES approval for the exact fingerprint", "exact product tax Country/TaxCategory/TaxClassification"],
+      "excluded": ["SupplyingPlant", "plant view", "valuation", "accounting", "stock"]
+    }
+  }
+}

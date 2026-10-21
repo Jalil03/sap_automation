@@ -1,0 +1,22 @@
+{
+  "mode": "CONTROLLED_FIRST_WRITE",
+  "workflow_id": "S4615_PRODUCT_P101_BASIC_ROOT",
+  "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+  "operation_scopes": {"S4615_PRODUCT_P101_BASIC_ROOT": "TRAINING_MASTER_DATA"},
+  "route_evidence": {
+    "S4615_PRODUCT_P101_BASIC_ROOT": "MM01 SAPLMGMM/4004 live Basic Data 1/2 controls; runtime/sap_gui_responses/35c44b3c-ddf2-443a-a1cd-b20c2ac0d881.json"
+  },
+  "sensitive_approvals": {},
+  "approval": {
+    "workflow_id": "S4615_PRODUCT_P101_BASIC_ROOT",
+    "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+    "approved_by": "REQUESTING_USER_SELF_ATTESTED",
+    "authorization_evidence": "User authorized P615-101 Basic Data creation; SU01D SAP_ALL/SAP_SYSTEM is access evidence, not proof MM01 SAVE succeeds",
+    "operations": ["S4615_PRODUCT_P101_BASIC_ROOT"],
+    "scopes": ["TRAINING_MASTER_DATA"],
+    "target_fingerprints": {
+      "S4615_PRODUCT_P101_BASIC_ROOT": "533dcb653247f4d86071fa7df08f0adb9168d981d69f2ba0a126e384ea48e72c"
+    }
+  },
+  "excluded_scope": ["PLANT", "SALES_EXTENSION", "ACCOUNTING", "VALUATION", "MATERIAL_LEDGER", "GLOBAL_CURRENCY"]
+}

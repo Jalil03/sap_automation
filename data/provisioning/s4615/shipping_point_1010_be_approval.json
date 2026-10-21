@@ -1,0 +1,30 @@
+{
+  "mode": "CONTROLLED_FIRST_WRITE",
+  "workflow_id": "S4615_SHIPPING_POINT_1010_BE",
+  "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+  "operation_scopes": {"S4615_SHIPPING_POINT_1010_BE": "ORG_CUSTOMIZING"},
+  "route_evidence": {
+    "S4615_SHIPPING_POINT_1010_BE": "OVXD SAPLV03B 500/510; address SAPLSZA1 201; transport SAPLSTRD 300; runtime/sap_gui_responses/c4134a1a-8cb1-4a2f-8fc6-dc32daa0ffc3.json, fa622834-1f05-4bec-8e46-9227806a0d31.json, 6654accc-2ec7-403d-8b63-70db8147d8d6.json"
+  },
+  "sensitive_approvals": {
+    "S4615_SHIPPING_POINT_1010_BE": {
+      "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+      "operation": "S4615_SHIPPING_POINT_1010_BE",
+      "scope": "ORG_CUSTOMIZING",
+      "approved_by": "REQUESTING_USER_SELF_ATTESTED",
+      "authorization_evidence": "Current request expressly approves a new shipping point 1010 attempt with country BE and transport A4HK908422; previous attempt rejected"
+    }
+  },
+  "approval": {
+    "workflow_id": "S4615_SHIPPING_POINT_1010_BE",
+    "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+    "approved_by": "REQUESTING_USER_SELF_ATTESTED",
+    "authorization_evidence": "Current request expressly approves a new controlled OVXD creation of shipping point 1010 in A4H/600/ABDELJ",
+    "operations": ["S4615_SHIPPING_POINT_1010_BE"],
+    "scopes": ["ORG_CUSTOMIZING"],
+    "target_fingerprints": {
+      "S4615_SHIPPING_POINT_1010_BE": "707166103132975332dbf354ba588778cdf89851d8d283bc341d5275c15f666d"
+    }
+  },
+  "excluded_scope": ["PLANT", "VALUATION", "FI_MM", "MATERIAL_LEDGER", "GLOBAL_CURRENCY", "DELETE", "TRANSPORT_RELEASE"]
+}

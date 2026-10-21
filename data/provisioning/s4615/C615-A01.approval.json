@@ -1,0 +1,15 @@
+{
+  "S4615_CUSTOMER_BP_ROOT": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ",
+    "operation": "S4615_CUSTOMER_BP_ROOT",
+    "allow_write": true,
+    "approved_by": "REQUESTING_USER_SELF_ATTESTED",
+    "authorization_evidence": "USER_REPORTED_SU01D_SAP_ALL_AND_SAP_SYSTEM_A4H_600_ABDELJ",
+    "approval_scopes": ["CUSTOMER_MASTER_OWNER"],
+    "target_fingerprint": "fe0f560224b7c9ec3212ae6a40d553ed5b5dc36d3f36fa2f9ea91740a51f16ee",
+    "limit": "ONE_BP_ROOT_POST_ONLY",
+    "approval_basis": "User explicitly approved one C615-A01 BP-root creation in this conversation"
+  }
+}

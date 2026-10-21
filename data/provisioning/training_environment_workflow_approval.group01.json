@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "approved_on": "2026-10-20",
+  "workflow_id": "TRAINING_ENVIRONMENT_BOOTSTRAP_GROUP01",
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "books": [
+    "S4600_BOOK_00",
+    "S4615"
+  ],
+  "mode": "AUTONOMOUS_TRAINING_PREPARATION_AND_SCOPED_MASTER_DATA",
+  "approval_status": "APPROVED_BY_REQUESTING_USER",
+  "authorization_evidence": "The user confirmed launching the previously described split workflow: create safe training master data ourselves, preserve existing objects, and defer plant/FI/MM/tax/EWM decisions to their owners.",
+  "permitted_scope": [
+    "READ_ONLY_SAP_DISCOVERY",
+    "LOCAL_MANIFEST_PAYLOAD_FINGERPRINT_AND_CHECKPOINT_UPDATES",
+    "EXACT_TRAINING_BP_CUSTOMER_GENERAL_OR_SALES_WRITES_AFTER_ALL_MANDATORY_VALUES_AND_OPERATION_FINGERPRINT_ARE_VALID",
+    "EXACT_PRODUCT_BASIC_OR_SALES_WRITES_AFTER_ALL_MANDATORY_VALUES_AND_OPERATION_FINGERPRINT_ARE_VALID"
+  ],
+  "approval_reuse_rule": "This workflow approval removes the need for another general go-ahead, but never replaces the exact fingerprint approval or a separate named owner decision when a payload contains new identity, tax, FI, plant, valuation, stock, EWM or shared-customizing values.",
+  "excluded_scope": [
+    "TAX_DECISIONS",
+    "FI_MM_AND_ACCOUNTING",
+    "PLANT_AND_VALUATION_AREA",
+    "MATERIAL_LEDGER",
+    "WAREHOUSE_AND_EWM",
+    "STOCK_AND_PGI",
+    "GLOBAL_OR_SHARED_CUSTOMIZING_WITHOUT_EXACT_APPROVAL",
+    "TRANSPORT_RELEASE",
+    "EXERCISE_OUTPUT_PRECREATION",
+    "DUPLICATE_OR_BLIND_RETRY"
+  ],
+  "source_manifest": "data/provisioning/training_environment_bootstrap.group01.json",
+  "change_tracking": {
+    "ledger": "data/provisioning/training_change_ledger.group01.json",
+    "require_timestamped_entry_for_every_future_write_or_attempt": true
+  }
+}

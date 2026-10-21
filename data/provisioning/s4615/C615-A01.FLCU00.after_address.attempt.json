@@ -1,0 +1,1 @@
+{"logical_id": "C615-A01", "sap_id": "1000000115", "role": "FLCU00", "status": "POST_REJECTED_HTTP_400", "sap_error": {"http_status": 400, "sap_code": "R1/084", "sap_message": "Le partenaire 1000000115 est actuellement trait\u00e9 par ABDELJ.", "correlation_id": "8DC6789C69B40050E006A99F0D6FA7EC"}, "retry_allowed": false}

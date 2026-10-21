@@ -1,0 +1,9 @@
+{
+  "operation": "S4600_T_S50A01_BP_ADDRESS",
+  "logical_id": "T-S50A01",
+  "sap_id": "1000000116",
+  "target_fingerprint": "60af943bd3ce670d8c4b3ae0b372e301615fcfe20cbd91a6b7b3ee23fbac8f1d",
+  "status": "VERIFIED",
+  "retry_allowed": false,
+  "address_id": "1584"
+}

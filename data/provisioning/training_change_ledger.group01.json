@@ -1,0 +1,321 @@
+{
+  "current_summary": {
+    "latest_event_id": "READ-20261020-014",
+    "sap_objects_created_since_bootstrap_launch": [],
+    "sap_objects_extended_since_bootstrap_launch": [],
+    "sap_writes_since_bootstrap_launch": 1
+  },
+  "environment": {
+    "canonical_timestamp_timezone": "UTC",
+    "client": "600",
+    "display_timezone": "Africa/Casablanca",
+    "system": "A4H",
+    "technical_user": "ABDELJ"
+  },
+  "events": [
+    {
+      "book": "S4600_S4615",
+      "event_id": "LOCAL-20261020-001",
+      "event_type": "LOCAL_ARTIFACT_CREATE_OR_UPDATE",
+      "occurred_at_utc": "2026-10-20T11:32:29.6312365Z",
+      "operation": "CREATE_GET_ONLY_FINAL_AUDIT_SCRIPT",
+      "result": "CREATED_AND_PY_COMPILE_VERIFIED",
+      "sap_write": false,
+      "target": "scripts/audit_final_s4600_s4615_readonly.py"
+    },
+    {
+      "book": "S4600_S4615",
+      "event_id": "LOCAL-20261020-002",
+      "event_type": "LOCAL_ARTIFACT_CREATE",
+      "occurred_at_utc": "2026-10-20T11:36:40.2069931Z",
+      "operation": "CREATE_FINAL_READ_ONLY_AUDIT_REPORT",
+      "result": "MAIL_A_CORRIGER",
+      "sap_write": false,
+      "target": "reports/audit_final_read_only_s4600_s4615_2026-10-20.md"
+    },
+    {
+      "book": "S4600_S4615",
+      "event_id": "LOCAL-20261020-003",
+      "event_type": "LOCAL_ARTIFACT_CREATE_OR_UPDATE",
+      "occurred_at_utc": "2026-10-20T13:29:58.8267358Z",
+      "operation": "CREATE_CONSOLIDATED_BOOTSTRAP_MANIFEST",
+      "result": "JSON_VALID",
+      "sap_write": false,
+      "target": "data/provisioning/training_environment_bootstrap.group01.json"
+    },
+    {
+      "book": "S4600_S4615",
+      "event_id": "LOCAL-20261020-004",
+      "event_type": "LOCAL_ARTIFACT_CREATE",
+      "occurred_at_utc": "2026-10-20T13:29:59.5248014Z",
+      "operation": "CREATE_AUTONOMOUS_ENVIRONMENT_SELF_CHECK_REPORT",
+      "result": "CREATED",
+      "sap_write": false,
+      "target": "reports/training_environment_self_check_group01.md"
+    },
+    {
+      "book": "S4600_S4615",
+      "event_id": "LOCAL-20261020-005",
+      "event_type": "LOCAL_APPROVAL_RECORD_CREATE",
+      "occurred_at_utc": "2026-10-20T13:33:22.3730759Z",
+      "operation": "RECORD_WORKFLOW_LEVEL_APPROVAL",
+      "result": "APPROVED_BY_REQUESTING_USER_WITH_SCOPED_EXCLUSIONS",
+      "sap_write": false,
+      "target": "data/provisioning/training_environment_workflow_approval.group01.json"
+    },
+    {
+      "book": "S4600_S4615",
+      "event_id": "LOCAL-20261020-006",
+      "event_type": "LOCAL_CHECKPOINT_CREATE",
+      "occurred_at_utc": "2026-10-20T13:33:23.0610004Z",
+      "operation": "RECORD_FIRST_CONTROLLED_BATCH_GATE",
+      "result": "ZERO_SAFE_SAP_WRITES_AFTER_FINAL_GATE",
+      "sap_write": false,
+      "target": "data/provisioning/training_environment_launch_checkpoint.group01.json"
+    },
+    {
+      "book": "S4600_S4615",
+      "event_id": "LOCAL-20261020-007",
+      "event_type": "TRACKING_POLICY_ENABLE",
+      "note": "Future SAP writes and local provisioning artifacts must be recorded with UTC time and displayed with Africa/Casablanca context.",
+      "occurred_at_utc": "2026-10-20T13:44:53.5880528Z",
+      "operation": "ENABLE_CENTRAL_TIMESTAMPED_CHANGE_TRACKING",
+      "result": "ENABLED",
+      "sap_write": false,
+      "target": "data/provisioning/training_change_ledger.group01.json"
+    },
+    {
+      "book": "S4600",
+      "event_id": "LOCAL-20261020-008",
+      "event_type": "LOCAL_PROPOSAL_CREATE",
+      "occurred_at_utc": "2026-10-20T13:47:03.7094535Z",
+      "operation": "PREPARE_THREE_PRODUCT_TAX_PAYLOADS_AND_FINGERPRINTS",
+      "result": "AWAITING_EXACT_TAX_OWNER_APPROVAL",
+      "sap_write": false,
+      "target": "data/provisioning/s4600/product_tax_proposal.group01.json"
+    },
+    {
+      "approval_scope": "TRAINING_MASTER_DATA_PRODUCT_TAX/TAX",
+      "book": "S4600",
+      "event_id": "LOCAL-20261020-009",
+      "event_type": "LOCAL_APPROVAL_RECORD_CREATE",
+      "occurred_at_utc": "2026-10-20T13:50:12.0847280Z",
+      "operation": "RECORD_THREE_EXACT_PRODUCT_TAX_APPROVALS",
+      "result": "APPROVED_BY_REQUESTING_USER",
+      "sap_write": false,
+      "target": "data/provisioning/s4600/product_tax_write_approval.group01.json",
+      "target_fingerprints": [
+        "7fe5a3cfd41965e9fbd2fea3b6d62248156a50355a3243f9271e769da12dfd0a",
+        "40bc219bbf18e89966c0b6b0206adce6c0c2f386b4cc6632c8b5e068b1266a7f",
+        "853bc68a43475ffe605e20ac5f205627cd7c69533682099fc155ee47107e7863"
+      ]
+    },
+    {
+      "approval_scope": "TRAINING_MASTER_DATA_PRODUCT_TAX/TAX",
+      "before_state": [],
+      "book": "S4600",
+      "event_id": "SAP-20261020T135317560272Z-T-D101-ATTEMPT",
+      "event_type": "SAP_WRITE_ATTEMPT",
+      "evidence": "data\\provisioning\\s4600\\product_tax_write_approval.group01.json",
+      "interface": "API_PRODUCT_SRV/A_ProductSalesTax",
+      "occurred_at_utc": "2026-10-20T13:53:17.560305Z",
+      "operation": "S4600_PRODUCT_T_D101_TAX_BE_MWST_1",
+      "readback_state": "PENDING",
+      "sap_result": "NOT_SENT_YET",
+      "sap_write": false,
+      "target": {
+        "logical_product_id": "T-D101",
+        "sap_id": "90000132",
+        "tax_key": "BE/MWST"
+      },
+      "target_fingerprint": "7fe5a3cfd41965e9fbd2fea3b6d62248156a50355a3243f9271e769da12dfd0a"
+    },
+    {
+      "book": "S4600",
+      "event_id": "LOCAL-20261020-010",
+      "event_type": "LOCAL_ARTIFACT_CREATE",
+      "occurred_at_utc": "2026-10-20T13:52:26.5488568Z",
+      "operation": "CREATE_PRODUCT_TAX_EXECUTOR_AND_TESTS",
+      "result": "PY_COMPILE_AND_THREE_FOCUSED_TESTS_PASSED",
+      "sap_write": false,
+      "target": [
+        "scripts/execute_s4600_product_tax.py",
+        "tests/test_execute_s4600_product_tax.py"
+      ]
+    },
+    {
+      "book": "S4600",
+      "event_id": "LOCAL-20261020-011",
+      "event_type": "LOCAL_ARTIFACT_UPDATE",
+      "occurred_at_utc": "2026-10-20T13:52:59.1021230Z",
+      "operation": "FIX_PRE_POST_BOOLEAN_CONSTANT",
+      "result": "FIRST_RUN_STOPPED_BEFORE_CHECKPOINT_AND_BEFORE_POST; FIX_TESTED",
+      "sap_write": false,
+      "target": "scripts/execute_s4600_product_tax.py"
+    },
+    {
+      "approval_scope": "TRAINING_MASTER_DATA_PRODUCT_TAX/TAX",
+      "before_state": [],
+      "book": "S4600",
+      "event_id": "SAP-20261020T135317560272Z-T-D101-AMBIGUOUS",
+      "event_type": "SAP_WRITE_RESULT_AND_READ_ONLY_RECONCILIATION",
+      "evidence": "Two bounded GET reconciliations returned no A_ProductSalesTax rows for 90000132; checkpoint is AMBIGUOUS; no retry permitted.",
+      "interface": "API_PRODUCT_SRV/A_ProductSalesTax",
+      "occurred_at_utc": "2026-10-20T13:53:52.9817965Z",
+      "operation": "S4600_PRODUCT_T_D101_TAX_BE_MWST_1",
+      "readback_state": [],
+      "sap_result": "HTTP_SUCCESS_CLASS_RETURNED_BUT_EXACT_STATUS_NOT_RETAINED_BY_EXECUTOR_VERSION",
+      "sap_write": true,
+      "target": {
+        "logical_product_id": "T-D101",
+        "sap_id": "90000132",
+        "tax_key": "BE/MWST"
+      },
+      "target_fingerprint": "7fe5a3cfd41965e9fbd2fea3b6d62248156a50355a3243f9271e769da12dfd0a"
+    },
+    {
+      "book": "S4600",
+      "event_id": "READ-20261020-012",
+      "event_type": "SAP_READ_ONLY_RECONCILIATION_AND_LOCAL_REPORT",
+      "occurred_at_utc": "2026-10-20T13:59:58.1724992Z",
+      "operation": "ANALYZE_T_D101_PRODUCT_TAX_AMBIGUOUS_RESULT",
+      "result": "NO_TAX_ROW_AFTER_DELAYED_AND_EXACT_KEY_READBACK; ROOT_AND_BASIC_SALES_EXIST; SALES_DELIVERY_MISSING; ROOT_CAUSE_REQUIRES_GATEWAY_LOG",
+      "sap_write": false,
+      "target": "reports/s4600_t_d101_tax_ambiguous_analysis_2026-10-20.md"
+    },
+    {
+      "book": "S4600",
+      "event_id": "READ-20261020-013",
+      "event_type": "USER_GUI_READ_ONLY_EVIDENCE_RECONCILIATION",
+      "occurred_at_utc": "2026-10-20T14:04:21.9044192Z",
+      "operation": "REVIEW_FULL_DAY_IWFND_ERROR_LOG",
+      "result": "NO_API_PRODUCT_SRV_ENTRY; TWO_PRICING_SERVICE_ALIAS_ERRORS_ONLY; A4H_600_GATEWAY_RELEASE_7_58_VISIBLE",
+      "sap_write": false,
+      "target": "reports/s4600_t_d101_tax_ambiguous_analysis_2026-10-20.md"
+    },
+    {
+      "book": "S4600",
+      "event_id": "READ-20261020-014",
+      "event_type": "SAP_READ_ONLY_EXHAUSTIVE_PRODUCT_TAX_RECONCILIATION",
+      "occurred_at_utc": "2026-10-20T14:08:45.3412297Z",
+      "operation": "VERIFY_T_D101_TAX_THROUGH_ALL_PROVEN_API_READ_PATHS",
+      "result": "CONFIRMED_NOT_PERSISTED: FILTER_COUNTS_0; EXACT_KEY_404; NAVIGATION_COUNT_0; ROOT_EXPANSION_EMPTY; POSITIVE_REFERENCE_COUNT_1",
+      "sap_write": false,
+      "target": "reports/s4600_t_d101_tax_ambiguous_analysis_2026-10-20.md"
+    },
+    {
+      "approval_scope": "TRAINING_MASTER_DATA_BP_ADDRESS/BP_ADDRESS",
+      "book": "S4600",
+      "event_id": "APPROVAL-20261020T151405872611Z-T-S50A01-BP-ADDRESS",
+      "event_type": "USER_SCOPED_WRITE_APPROVAL_RECORDED",
+      "evidence": "User explicitly approved after presentation of the exact fictional training address and isolated BP_ADDRESS scope.",
+      "occurred_at_utc": "2026-10-20T15:14:05.8726110Z",
+      "operation": "S4600_T_S50A01_BP_ADDRESS",
+      "sap_write": false,
+      "target": {
+        "logical_id": "T-S50A01",
+        "sap_id": "1000000116"
+      },
+      "target_fingerprint": "60af943bd3ce670d8c4b3ae0b372e301615fcfe20cbd91a6b7b3ee23fbac8f1d"
+    },
+    {
+      "approval_scope": "TRAINING_MASTER_DATA_BP_ADDRESS/BP_ADDRESS",
+      "book": "S4600",
+      "event_id": "READ-20261020-015",
+      "event_type": "SAP_READ_ONLY_PREFLIGHT",
+      "evidence": "Fresh OData address and usage lookups completed before the GUI inspection; the workflow continued to GUI because both result sets were empty. The GUI runner then failed closed because SAP was not on the exact BP 1000000116 change screen. No attempt marker or checkpoint was created.",
+      "occurred_at_utc": "2026-10-20T15:19:40.1305145Z",
+      "operation": "S4600_T_S50A01_BP_ADDRESS_PREFLIGHT",
+      "result": "ADDRESS_MISSING_CONFIRMED; GUI_POSITION_BLOCKED; NO_SAP_WRITE",
+      "sap_write": false,
+      "target": {
+        "logical_id": "T-S50A01",
+        "sap_id": "1000000116"
+      },
+      "target_fingerprint": "60af943bd3ce670d8c4b3ae0b372e301615fcfe20cbd91a6b7b3ee23fbac8f1d"
+    },
+    {
+      "approval_scope": "TRAINING_MASTER_DATA_BP_ADDRESS/BP_ADDRESS",
+      "before_state": "MISSING_CONFIRMED_BY_FRESH_ODATA; EXACT_EMPTY_GUI_FORM_AND_EN_OPTION_PROVEN",
+      "book": "S4600",
+      "event_id": "SAP-20261020T152433855279Z-T-S50A01-BP-ADDRESS-BEFORE",
+      "event_type": "SAP_WRITE_INTENT_RECORDED",
+      "evidence": "Final preflight returned WOULD_CREATE for the exact approved fingerprint.",
+      "interface": "SAP_GUI_BP_ONE_SHOT",
+      "occurred_at_utc": "2026-10-20T15:24:33.8552793Z",
+      "operation": "S4600_T_S50A01_BP_ADDRESS",
+      "sap_result": "NOT_SENT_YET",
+      "sap_write": false,
+      "target": {
+        "logical_id": "T-S50A01",
+        "sap_id": "1000000116"
+      },
+      "target_fingerprint": "60af943bd3ce670d8c4b3ae0b372e301615fcfe20cbd91a6b7b3ee23fbac8f1d"
+    },
+    {
+      "approval_scope": "TRAINING_MASTER_DATA_BP_ADDRESS/BP_ADDRESS",
+      "before_state": "MISSING_CONFIRMED_BY_FRESH_ODATA; EXACT_EMPTY_GUI_FORM_AND_EN_OPTION_PROVEN",
+      "book": "S4600",
+      "event_id": "SAP-20261020T152527057842Z-T-S50A01-BP-ADDRESS-VERIFIED",
+      "event_type": "SAP_WRITE_RESULT_AND_INDEPENDENT_READBACK",
+      "evidence": "One GUI Save was attempted. A separate API_BUSINESS_PARTNER read returned address 1584 with exact approved values and current XXDEFAULT usage. Attempt marker, checkpoint, approval and identity mapping are VERIFIED.",
+      "interface": "SAP_GUI_BP_ONE_SHOT + API_BUSINESS_PARTNER_READBACK",
+      "occurred_at_utc": "2026-10-20T15:25:27.0578421Z",
+      "operation": "S4600_T_S50A01_BP_ADDRESS",
+      "readback_state": {
+        "address_id": "1584",
+        "state": "EXISTS_CURRENT_XXDEFAULT"
+      },
+      "sap_result": "CREATED_AND_VERIFIED",
+      "sap_write": true,
+      "target": {
+        "logical_id": "T-S50A01",
+        "sap_id": "1000000116"
+      },
+      "target_fingerprint": "60af943bd3ce670d8c4b3ae0b372e301615fcfe20cbd91a6b7b3ee23fbac8f1d"
+    }
+  ],
+  "historical_sap_change_sources": [
+    {
+      "coverage": "46 historical effective writes, intermediate saves, rejected or abandoned write attempts",
+      "source": "reports/sap_all_changes_inventory.csv",
+      "timestamp_rule": "Use occurred_at and timezone exactly as recorded; UNKNOWN and UTC_DAY_ONLY are preserved."
+    },
+    {
+      "coverage": "Narrative reconciliation, readback state, transport evidence and C+039 attribution limits",
+      "source": "reports/sap_all_changes_inventory.md"
+    },
+    {
+      "coverage": "Raw SAP GUI bridge actions with UTC timestamps",
+      "source": "logs/sap_gui_bridge/actions.jsonl"
+    },
+    {
+      "coverage": "Runtime request attempts and rejected sales-order operations",
+      "source": "var/sap_runtime/execution_ledger.sqlite3"
+    }
+  ],
+  "ledger_id": "A4H_600_TRAINING_GROUP01_CHANGE_LEDGER",
+  "policy": {
+    "never_rewrite_unknown_historical_timestamps": true,
+    "record_before_every_sap_write": true,
+    "record_every_sap_response": true,
+    "record_independent_readback": true,
+    "record_local_artifact_changes": true,
+    "record_rejected_ambiguous_and_cancelled_attempts": true,
+    "required_fields_for_future_sap_events": [
+      "event_id",
+      "occurred_at_utc",
+      "book",
+      "operation",
+      "target",
+      "interface",
+      "approval_scope",
+      "target_fingerprint",
+      "before_state",
+      "sap_result",
+      "readback_state",
+      "evidence"
+    ]
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,9 @@
+{
+  "operations": {
+    "S4600_PRODUCT_T_D101_TAX_BE_MWST_1": {
+      "detail": "Independent product-tax readback mismatch",
+      "status": "AMBIGUOUS"
+    }
+  },
+  "workflow_id": "S4600_GROUP01_PRODUCT_TAX"
+}

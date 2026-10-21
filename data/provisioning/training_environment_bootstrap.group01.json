@@ -1,0 +1,234 @@
+{
+  "manifest_version": "1.0",
+  "created_on": "2026-10-20",
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ",
+    "training_group": "01"
+  },
+  "mode": "PREPARE_ONLY_NO_SAP_WRITE",
+  "objective": "Build the minimum verified S4600 and S4615 training baseline without pre-executing exercise outputs.",
+  "sources": [
+    "reports/audit_final_read_only_s4600_s4615_2026-10-20.md",
+    "data/provisioning/phase5_identity_mappings.json",
+    "data/provisioning/s4600/master_data_manifest.group01.json",
+    "data/provisioning/s4615/additional_master_data_manifest.group01.json",
+    "data/books/S4600/S4600_EXERCISES.md",
+    "data/books/S4615/S4615_full_clean.md"
+  ],
+  "safety": {
+    "no_duplicate_creation": true,
+    "no_cross_book_substitution": true,
+    "no_exercise_output_precreation": true,
+    "no_invented_tax_fi_plant_or_valuation_values": true,
+    "writes_require_exact_payload_fingerprint_and_scoped_approval": true,
+    "ambiguous_writes_require_readback_and_are_never_blindly_retried": true
+  },
+  "locked_existing_objects": [
+    {
+      "logical_id": "T-S50A01",
+      "sap_id": "1000000116",
+      "verified_scope": "BP_ROOT_ONLY",
+      "action": "EXTEND_ONLY_NEVER_RECREATE"
+    },
+    {
+      "logical_id": "T-D101",
+      "sap_id": "90000132",
+      "verified_scope": "PRODUCT_BASIC_ONLY",
+      "action": "EXTEND_ONLY_NEVER_RECREATE"
+    },
+    {
+      "logical_id": "T-MS101",
+      "sap_id": "60000445",
+      "verified_scope": "PRODUCT_BASIC_ONLY",
+      "action": "EXTEND_ONLY_NEVER_RECREATE"
+    },
+    {
+      "logical_id": "T-MS201",
+      "sap_id": "60000446",
+      "verified_scope": "PRODUCT_BASIC_ONLY",
+      "action": "EXTEND_ONLY_NEVER_RECREATE"
+    },
+    {
+      "logical_id": "C615-A01",
+      "sap_id": "1000000115",
+      "verified_scope": "BP_ROOT_AND_CUSTOMER_EXTENSIONS_WITHOUT_TAX",
+      "action": "EXTEND_ONLY_NEVER_RECREATE"
+    },
+    {
+      "logical_id": "C615-D00",
+      "sap_id": "1000000114",
+      "verified_scope": "BP_ROOT_AND_CUSTOMER_EXTENSIONS_GROUP00",
+      "action": "PRESERVE_NOT_A_GROUP01_SUBSTITUTE"
+    },
+    {
+      "logical_id": "P615-101",
+      "sap_id": "10000289",
+      "verified_scope": "PRODUCT_BASIC_ONLY",
+      "action": "EXTEND_ONLY_NEVER_RECREATE"
+    },
+    {
+      "logical_id": "P615-400",
+      "sap_id": "10000287",
+      "verified_scope": "GROUP00_PRODUCT_SALES_AND_PLANT_1710_WITHOUT_VALUATION",
+      "action": "PRESERVE_EXCLUDED_AS_GROUP01_TEMPLATE"
+    }
+  ],
+  "exercise_outputs_to_preserve_as_absent_until_exercise": [
+    "T-CUS01",
+    "T-MS401",
+    "S4600_PR00_EXERCISE_RECORDS",
+    "S4600_K007_EXERCISE_RECORDS",
+    "ALL_EXERCISE_SALES_DELIVERY_BILLING_AND_FI_DOCUMENTS"
+  ],
+  "training_team_workstream": [
+    {
+      "operation": "S4600_T_S50A01_CUSTOMER_EXTENSION",
+      "target": "1000000116",
+      "current_status": "BLOCKED_MISSING_APPROVED_VALUES",
+      "known_values": {
+        "name": "Motormarkt Heidelberg",
+        "sales_area": "1010/10/00"
+      },
+      "missing_decisions": [
+        "address",
+        "customer account group",
+        "FLCU00 and FLCU01 extension values",
+        "company-code values",
+        "partner-function schema",
+        "customer tax applicability and classification",
+        "shipping and pricing fields"
+      ],
+      "owners": [
+        "TRAINING_DATA_OWNER",
+        "CUSTOMER_MASTER_OWNER",
+        "FI_OWNER_FOR_COMPANY_DATA",
+        "TAX_OWNER"
+      ]
+    },
+    {
+      "operation": "S4600_PRODUCT_SALES_EXTENSIONS",
+      "targets": [
+        "90000132/T-D101/LEIS",
+        "60000445/T-MS101/NORM",
+        "60000446/T-MS201/NORM"
+      ],
+      "current_status": "BLOCKED_MISSING_PRODUCT_TAX_DECISION",
+      "historical_results": {
+        "T-D101": "AMBIGUOUS_POST_RECONCILED_BY_READBACK_AS_NOT_CREATED",
+        "T-MS101": "REJECTED_MG_172_INCOMPLETE_TAX_CLASSIFICATION",
+        "T-MS201": "NOT_ATTEMPTED"
+      },
+      "missing_decisions": [
+        "country and tax category",
+        "tax classification for each product",
+        "whether supplying plant is mandatory in the approved minimal view"
+      ],
+      "owners": [
+        "PRODUCT_MASTER_OWNER",
+        "TAX_OWNER",
+        "SAP_ORG_OWNER_IF_PLANT_REQUIRED"
+      ]
+    },
+    {
+      "operation": "S4600_REMAINING_PRELOADED_IDENTITIES",
+      "targets": [
+        "T-S50B01",
+        "T-MS301",
+        "T-F101"
+      ],
+      "current_status": "BLOCKED_UNRESOLVED_IDENTITY_AND_INCOMPLETE_BOOK_VALUES",
+      "missing_decisions": [
+        "authorization for a new group-01 dataset if no official mapping exists",
+        "exact root master-data values not stated by the Book",
+        "plant and logistics design for 1010 and 1020",
+        "PP master data for T-F101"
+      ]
+    },
+    {
+      "operation": "S4615_EXISTING_OBJECT_EXTENSIONS",
+      "targets": [
+        "1000000115/C615-A01/customer tax if required",
+        "10000289/P615-101/sales tax plant and valuation views"
+      ],
+      "current_status": "BLOCKED_BY_TAX_PLANT_AND_FI_MM_DECISIONS",
+      "missing_decisions": [
+        "customer tax values",
+        "product item-category and tax values",
+        "compatible plant for company code 1010",
+        "valuation and account-determination values"
+      ]
+    },
+    {
+      "operation": "S4615_ADDITIONAL_GROUP01_MASTER_DATA",
+      "targets": [
+        "C615-B01",
+        "C615-C01",
+        "C615-E01",
+        "C615-F01",
+        "P615-201",
+        "P615-501",
+        "P615-601"
+      ],
+      "current_status": "BLOCKED_MISSING_SHARED_MASTER_VALUES_AND_APPROVALS",
+      "note": "Exercise deltas such as AM, account-assignment group 81, prices and billing-plan values must not be pre-applied unless the Book defines them as preload data."
+    }
+  ],
+  "administrator_workstream": [
+    {
+      "dependency": "OFFICIAL_COURSE_BASELINE",
+      "status": "OPTIONAL_NOT_BLOCKING",
+      "request": "Use an official reference client or transport only if one is already known. Repository and transport evidence contains no verified official course package.",
+      "acceptance": "No administrator round trip is required for this point; continue from the verified incremental bootstrap unless an official source is volunteered."
+    },
+    {
+      "dependency": "PLANT_1010_AND_1020",
+      "request": "Provide a company-1010-compatible plant and valuation design; provide 1020 where required by S4600.",
+      "acceptance": "API/readback shows plants, company assignment, valuation areas and approved FI/MM profile."
+    },
+    {
+      "dependency": "SD_LE_ASSIGNMENTS",
+      "request": "After plant approval, establish TVKWZ, TVSWZ and OVL2 for the required course flows without reusing 1710 by default.",
+      "acceptance": "Readback proves the exact sales-area, plant, shipping-point and determination keys."
+    },
+    {
+      "dependency": "S4600_CDCL_AND_Z001",
+      "request": "Restore the official CDCL and Z001 definitions and their dependent determination/copy-control settings.",
+      "acceptance": "Complete readback proves the exact official configuration; OR and shipping point 1010 are not substitutes."
+    },
+    {
+      "dependency": "PRICING_CONDITION_SERVICE",
+      "request": "Register the system alias for ZSD_PRICING_CONDITIONRECORD_SRV_0001 for A4H/600/ABDELJ.",
+      "acceptance": "$metadata returns HTTP 200 and scoped read/create/readback contracts are available."
+    },
+    {
+      "dependency": "FI_MM_TAX_AND_STOCK",
+      "request": "Approve exact tax, valuation, account-determination and training-stock values separately.",
+      "acceptance": "Named owners provide exact values and scopes; no values are inferred from 1710 or unrelated reference objects."
+    },
+    {
+      "dependency": "EWM_AND_PARTICIPANT_ACCESS",
+      "request": "Provide warehouse/EWM 1010 and participant sessions/catalogs S4600-01 and S4615-01.",
+      "acceptance": "Read-only smoke checks prove the warehouse applications and required Fiori catalogs are accessible."
+    },
+    {
+      "dependency": "C039_1710",
+      "request": "FI/CO Material Ledger owner diagnoses the 1710 productive-currency inconsistency using the SAP-supported procedure.",
+      "acceptance": "Separate written resolution and readback; no automatic ML or global-currency change."
+    }
+  ],
+  "execution_order_after_decisions": [
+    "Freeze official source/version and resolve logical identities",
+    "Complete non-FI customer and product master payloads",
+    "Obtain owner approvals bound to exact fingerprints",
+    "Create or extend one object at a time with fresh lookup and independent readback",
+    "Have administrators establish organizational and FI/MM dependencies",
+    "Perform environment smoke checks only; do not pre-execute exercise documents"
+  ],
+  "current_gate": {
+    "safe_sap_writes_now": 0,
+    "reason": "Every remaining operation lacks at least one exact owner decision, mandatory value, organizational prerequisite or new fingerprint approval.",
+    "next_human_input": "Exact Tax, Customer Master and Product Master owner decisions for the named mandatory fields. Administrator involvement is deferred until one consolidated implementation ticket is ready."
+  }
+}

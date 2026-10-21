@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "prepared_on": "2026-10-19",
+  "workflow_id": "S4600_GROUP01_PRODUCT_BASIC",
+  "mode": "CONTROLLED_FIRST_WRITE",
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "operation_scope": "TRAINING_MASTER_DATA_PRODUCT_BASIC",
+  "approval_status": "AWAITING_EXPLICIT_OWNER_GRANT",
+  "approved_by": null,
+  "authorization_evidence": null,
+  "allow_write": false,
+  "operations": {
+    "S4600_PRODUCT_T_D101_BASIC_ROOT": {
+      "logical_product_id": "T-D101",
+      "target_fingerprint": "8f8693d3f551e5bc3c039b75fb59b65ba9f277e3180bb54d3de8ba867111cac0",
+      "limit": "ONE_MM01_PRODUCT_BASIC_SAVE_ONLY"
+    },
+    "S4600_PRODUCT_T_MS101_BASIC_ROOT": {
+      "logical_product_id": "T-MS101",
+      "target_fingerprint": "fa083806edf4ac75763ec608894d40f1bac438cf3223465fae981d1a420fcc38",
+      "limit": "ONE_MM01_PRODUCT_BASIC_SAVE_ONLY"
+    },
+    "S4600_PRODUCT_T_MS201_BASIC_ROOT": {
+      "logical_product_id": "T-MS201",
+      "target_fingerprint": "f4f210ecfed61f0bc72f3fd91a3b8a26288222ccf3a608e7a554be886394185c",
+      "limit": "ONE_MM01_PRODUCT_BASIC_SAVE_ONLY"
+    }
+  },
+  "preflight_evidence": {
+    "HAWA_W_PC_00": "MM01 accepted HAWA/W, retained PC/00 on Basic Data 1, advanced to Basic Data 2 without an error, and the draft was discarded with No; no save was attempted."
+  },
+  "required_grant": "The authorized training-data owner must explicitly grant TRAINING_MASTER_DATA_PRODUCT_BASIC for each named operation and exact fingerprint, after which approved_by and authorization_evidence may be recorded and allow_write changed to true.",
+  "excluded_scope": [
+    "SALES",
+    "PLANT",
+    "WAREHOUSE",
+    "FI_MM",
+    "ACCOUNTING",
+    "VALUATION",
+    "STOCK",
+    "CUSTOMIZING"
+  ]
+}

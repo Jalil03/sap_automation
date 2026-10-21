@@ -1,0 +1,9 @@
+{
+  "operations": {
+    "S4615_PRODUCT_P101_BASIC_ROOT": {
+      "detail": "MM01 success S: article 10000289 created; fresh API_PRODUCT_SRV A_Product and A_ProductDescription GET confirmed Product=10000289, FERT, M, PC, Division 00, description S4615 Training Product 101 (FR). Basic root only; no plant, sales or accounting views.",
+      "status": "VERIFIED"
+    }
+  },
+  "workflow_id": "S4615_PRODUCT_P101_BASIC_ROOT"
+}

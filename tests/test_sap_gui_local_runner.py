@@ -1413,7 +1413,7 @@ class S4615BillingTypeActivityTests(unittest.TestCase):
         self.assertEqual([{"sales_order_type": "OR", "description": "Commande standard", "row": 0}], result["related_types"])
         self.assertEqual(1, result["read_error"]["absolute_row"])
 
-    def test_vov8_reference_display_allows_only_observed_cs_bv_or_za01(self):
+    def test_vov8_reference_display_allows_scoped_s4615_and_s4600_targets(self):
         table_id = "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL080OTCTRL_V_TVAK"
         button_id = "/app/con[0]/ses[0]/wnd[0]/tbar[1]/btn[38]"
         params = {"transaction": "VOV8", "program": "SAPL080O", "table_id": table_id, "sales_order_type": "CS", "detail_button_id": button_id}
@@ -1421,6 +1421,10 @@ class S4615BillingTypeActivityTests(unittest.TestCase):
         self.assertEqual(params, validate_request(request)["params"])
         self.assertEqual("ZA01", validate_request({**request, "params": {**params, "sales_order_type": "ZA01"}})["params"]["sales_order_type"])
         SafetyPolicy(SafetyMode.READ, Mock()).authorize(identity={"system": "A4H", "client": "600", "user": "ABDELJ", "transaction": "VOV8"}, action="DISPLAY_S4615_SALES_REFERENCE")
+        cdcl_params = {**params, "sales_order_type": "CDCL"}
+        cdcl_request = {**request, "action": "DISPLAY_S4600_CDCL_REFERENCE", "params": cdcl_params}
+        self.assertEqual(cdcl_params, validate_request(cdcl_request)["params"])
+        SafetyPolicy(SafetyMode.READ, Mock()).authorize(identity={"system": "A4H", "client": "600", "user": "ABDELJ", "transaction": "VOV8"}, action="DISPLAY_S4600_CDCL_REFERENCE")
         with self.assertRaises(ProtocolError):
             validate_request({**request, "params": {**params, "sales_order_type": "OR"}})
         table = Mock(Type="GuiTableControl", RowCount=2, VisibleRowCount=2)
@@ -1453,6 +1457,28 @@ class S4615BillingTypeActivityTests(unittest.TestCase):
         with patch("src.sap_gui_bridge.navigation._wait_for_screen", return_value={**detail, "input_fields": [{"id": "/usr/txtV_TVAK-AUART", "text": "BV"}]}):
             with self.assertRaisesRegex(ActionBlockedError, "did not open the selected"):
                 display_s4615_sales_reference(session, params)
+
+    def test_vov8_cdcl_complete_scan_can_confirm_absence(self):
+        table_id = "/app/con[0]/ses[0]/wnd[0]/usr/tblSAPL080OTCTRL_V_TVAK"
+        button_id = "/app/con[0]/ses[0]/wnd[0]/tbar[1]/btn[38]"
+        params = {"transaction": "VOV8", "program": "SAPL080O", "table_id": table_id,
+                  "sales_order_type": "CDCL", "detail_button_id": button_id}
+        table = Mock(Type="GuiTableControl", RowCount=1, VisibleRowCount=1)
+        table.VerticalScrollbar.Position = 0
+        table.VerticalScrollbar.Maximum = 0
+        table.GetAbsoluteRow.return_value = Mock(Selected=False)
+        session = Mock(identity={"transaction": "VOV8"})
+        session.raw.Info.Program = "SAPL080O"
+        def find(control_id):
+            if control_id == table_id:
+                return table
+            if control_id.endswith("AUART[0,0]"):
+                return Mock(Id=control_id, Type="GuiTextField", Text="OR")
+            raise AssertionError(control_id)
+        session.find.side_effect = find
+        result = display_s4615_sales_reference(session, params)
+        self.assertEqual("CONFIRMED_NOT_FOUND", result["result"])
+        self.assertEqual(1, result["rows_read"])
 
     def test_selects_exact_row_and_button(self):
         table = Mock()

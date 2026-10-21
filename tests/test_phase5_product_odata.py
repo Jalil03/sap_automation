@@ -1,7 +1,7 @@
 import unittest
 from pathlib import Path
 
-from scripts.run_phase5_product_odata import load_operation, root_payload
+from src.provisioning.sap_api_backend import load_operation, root_payload
 
 
 ROOT = Path(__file__).resolve().parents[1]

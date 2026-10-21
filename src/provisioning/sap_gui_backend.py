@@ -60,6 +60,8 @@ EXPECTED_TARGETS: dict[str, dict[str, Any]] = {
         "distribution_channel": "10", "unit": "PC",
     },
     "VOV4_ITEM_CATEGORY_DETERMINATION": {"contract_id": "S4615_BV_CB04"},
+    "ENSURE_BP_STANDARD_ADDRESS": {"logical_id": "C615-A01", "sap_id": "1000000115"},
+    "S4600_T_S50A01_BP_ADDRESS": {"logical_id": "T-S50A01", "sap_id": "1000000116"},
 }
 
 VOV4_CONTRACTS_PATH = Path(__file__).resolve().parents[2] / "config" / "sap_gui_vov4_contracts.json"
@@ -2552,6 +2554,107 @@ def execute_runner_action(session: Any, request: dict[str, Any]) -> dict[str, An
     params = request["params"]
     operation = params["operation"]
     phase = params["phase"]
+    if operation == "S4615_ZF01_ACCOUNTING_BLOCK":
+        from .s4615_zf01_accounting_block_gui import (
+            TARGET as ZF01_TARGET, VALUES as ZF01_VALUES,
+            save_once, confirm_transport, verify_readback,
+        )
+        if params["target"] != ZF01_TARGET:
+            raise ActionBlockedError("ZF01 accounting-block target mismatch")
+        if phase == "PROVISION" and params["values"] == ZF01_VALUES:
+            return save_once(session)
+        if phase == "PROVISION" and params["values"] == {"confirm_transport": "A4HK908422"}:
+            return confirm_transport(session)
+        if phase == "READBACK" and params["values"] == {}:
+            return verify_readback(session)
+        raise ActionBlockedError("ZF01 accounting-block phase or values not allowlisted")
+    if operation == "S4615_VTFLC_ZF01_LF_TAN":
+        from .s4615_vtflc_gui import prepare_header, prepare_item, save_once, confirm_transport, verify_header, verify_item
+        if params["target"] != {"billing_type": "ZF01", "delivery_type": "LF", "item_category": "TAN"}:
+            raise ActionBlockedError("S4615 VTFLC target mismatch")
+        if phase != "PROVISION":
+            raise ActionBlockedError("S4615 VTFLC supports only exact provision steps")
+        values = params["values"]
+        if values == {"step": "prepare_header"}:
+            return prepare_header(session)
+        if values == {"step": "save_header"}:
+            return save_once(session, "header")
+        if values == {"step": "prepare_item"}:
+            return prepare_item(session)
+        if values == {"step": "save_item"}:
+            return save_once(session, "item")
+        if values == {"step": "confirm_transport_header"}:
+            return confirm_transport(session, "header")
+        if values == {"step": "confirm_transport_item"}:
+            return confirm_transport(session, "item")
+        if values == {"step": "verify_header"}:
+            return verify_header(session)
+        if values == {"step": "verify_item"}:
+            return verify_item(session)
+        raise ActionBlockedError("S4615 VTFLC write step is not allowlisted")
+    if operation == "S4615_SHIPPING_POINT_1010_BE":
+        from .s4615_shipping_point_be_gui import (
+            TARGET as SHIPPING_TARGET, provision_once, confirm_address, confirm_transport,
+            verify_readback,
+        )
+        if params["target"] != SHIPPING_TARGET:
+            raise ActionBlockedError("Shipping point BE target mismatch")
+        if phase == "LOOKUP" and params["values"] == {}:
+            from .s4615_shipping_point_gui import lookup_from_snapshot
+            return lookup_from_snapshot(inspect_screen(session))
+        if phase == "PROVISION":
+            return provision_once(session, params["target"], params["values"])
+        if phase == "RECONCILE" and params["values"] == {}:
+            return confirm_address(session)
+        if phase == "RECONCILE_CONFIRM" and params["values"] == {}:
+            return confirm_transport(session)
+        if phase == "READBACK" and params["values"] == {}:
+            return verify_readback(session)
+        raise ActionBlockedError("Unsupported shipping point BE phase or values")
+    if operation == "S4615_SHIPPING_POINT_1010":
+        from .s4615_shipping_point_gui import TARGET, inspect_new_entry_form, lookup_from_snapshot, save_once, cancel_empty_address_popup, confirm_discard_address
+        if params["target"] != TARGET:
+            raise ActionBlockedError("Shipping point 1010 target mismatch")
+        if phase == "LOOKUP":
+            if params["values"] != {}:
+                raise ActionBlockedError("Shipping point 1010 LOOKUP takes no values")
+            return lookup_from_snapshot(inspect_screen(session))
+        if phase == "FORM_INSPECT":
+            if params["values"] != {}:
+                raise ActionBlockedError("Shipping point 1010 FORM_INSPECT takes no values")
+            return inspect_new_entry_form(session)
+        if phase == "PROVISION":
+            return save_once(session, params["target"], params["values"])
+        if phase == "RECONCILE":
+            if params["values"] != {}:
+                raise ActionBlockedError("Shipping point 1010 RECONCILE takes no values")
+            return cancel_empty_address_popup(session)
+        if phase == "RECONCILE_CONFIRM":
+            if params["values"] != {}:
+                raise ActionBlockedError("Shipping point 1010 RECONCILE_CONFIRM takes no values")
+            return confirm_discard_address(session)
+        raise ActionBlockedError("Shipping point 1010 write contract is not yet evidenced")
+    if operation == "S4615_PRODUCT_P101_BASIC_ROOT":
+        from .s4615_product_basic_gui import prepare_basic_data_1, prepare_basic_views, prepare_initial_screen, save_basic_root_once
+        if phase == "MM01_INITIAL_PREPARE":
+            return prepare_initial_screen(session, params["target"], params["values"])
+        if phase == "MM01_VIEWS_PREPARE":
+            return prepare_basic_views(session, params["target"], params["values"])
+        if phase == "MM01_BASIC1_PREPARE":
+            return prepare_basic_data_1(session, params["target"], params["values"])
+        if phase == "PROVISION":
+            return save_basic_root_once(session, params["target"], params["values"])
+        raise ActionBlockedError("P615-101 root SAVE is unsupported until the remaining MM01 screens are evidenced")
+    if operation == "ENSURE_BP_STANDARD_ADDRESS":
+        from .s4615_bp_address_gui import TARGET, save_once
+        if params["target"] != TARGET or phase != "PROVISION":
+            raise ActionBlockedError("BP standard address only supports exact one-shot PROVISION")
+        return save_once(session, params["target"], params["values"])
+    if operation == "S4600_T_S50A01_BP_ADDRESS":
+        from .s4600_t_s50a01_bp_address_gui import TARGET, save_once
+        if params["target"] != TARGET or phase != "PROVISION":
+            raise ActionBlockedError("T-S50A01 BP address only supports exact one-shot PROVISION")
+        return save_once(session, params["target"], params["values"])
     if operation == "S4615_SALES_TYPE_ZA01":
         if params["target"] != {"sales_order_type": "ZA01"}:
             raise ActionBlockedError("ZA01 target mismatch")

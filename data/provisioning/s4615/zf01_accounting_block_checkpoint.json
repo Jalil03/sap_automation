@@ -1,0 +1,13 @@
+{
+  "operations": {
+    "S4615_ZF01_ACCOUNTING_BLOCK": {
+      "detail": "Fresh VOFA re-entry: ZF01 RFBFK=true",
+      "status": "VERIFIED"
+    },
+    "TRANSPORT_CONTINUE": {
+      "detail": "Exact V_TVFK transport Continue sent",
+      "status": "VERIFIED"
+    }
+  },
+  "workflow_id": "S4615_ZF01_ACCOUNTING_BLOCK"
+}

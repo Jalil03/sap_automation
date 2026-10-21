@@ -1,0 +1,9 @@
+{
+  "operations": {
+    "S4615_SHIPPING_POINT_1010_BE": {
+      "detail": "Fresh SE16N TVST and OVXD detail: 1010, BE, approved description",
+      "status": "VERIFIED"
+    }
+  },
+  "workflow_id": "S4615_SHIPPING_POINT_1010_BE"
+}

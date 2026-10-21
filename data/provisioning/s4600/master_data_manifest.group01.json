@@ -1,0 +1,165 @@
+{
+  "manifest_version": "1.1",
+  "book": "S4600",
+  "training_group": "01",
+  "mode": "APPROVAL_GATE_PREPARED_NO_EXECUTABLE_WRITES",
+  "execution_authorized": false,
+  "canonical_data_modified": false,
+  "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+  "sources": {
+    "book": "data/books/S4600/S4600_EXERCISES.md",
+    "canonical": "data/validated/canonical_objects.json",
+    "mappings": "data/provisioning/phase5_identity_mappings.json",
+    "live_audit": "reports/s4600_full_live_readiness_audit.md",
+    "fresh_duplicate_audit": "runtime/sap_reads/s4600_bootstrap_group01.json",
+    "execution_manifest": "data/provisioning/s4600/bootstrap_execution_manifest.group01.json"
+  },
+  "policy": {
+    "source_templates_preserved": true,
+    "placeholder_resolution": "Replace ## with 01 in runtime identifiers only; apply explicit arithmetic formulas separately.",
+    "sap_id_assignment": "UNKNOWN until installed grouping/numbering and any existing identity are verified; logical ID is not an invented SAP-generated ID.",
+    "missing_values": "Null or missing values are unresolved, never execution defaults.",
+    "approval_scope": "No creation approval is granted by this planning manifest. Require exact target/value fingerprint; separate FI, tax, organizational and valuation approval where relevant.",
+    "lifecycle": ["LOOKUP", "PREPARE", "VALIDATE", "APPROVAL", "CREATE_OR_EXTEND", "INDEPENDENT_READBACK"],
+    "no_ambiguous_retry": true
+  },
+  "shared_requirements": {
+    "sales_area": {"value": "1010/10/00", "provenance": "BOOK_CONFIRMED", "source": "Exercise 3 pages 57-58"},
+    "shipping_point": {"template": "Z0##", "resolved_value": "Z001", "provenance": "BOOK_CONFIRMED_AND_PLACEHOLDER_RESOLVED", "sap_state": "CONFIRMED_MISSING", "evidence": "runtime/sap_gui_responses/080efce4-7892-489d-adde-e3639695707f.json"},
+    "plant_1010": {"sap_state": "CONFIRMED_MISSING_IN_API_PLANT_SRV", "owner": "SAP_ORG_FI_MM"},
+    "plant_1020": {"sap_state": "CONFIRMED_MISSING_IN_API_PLANT_SRV", "owner": "SAP_ORG_FI_MM"},
+    "customer_creation_missing_defaults": ["installed BP numbering/grouping", "approved name/address where not specified", "required roles/partner schema", "payment terms", "reconciliation account", "customer pricing procedure", "tax applicability/classification", "account assignment group"],
+    "product_creation_missing_defaults": ["installed product numbering", "material type/industry where unspecified", "base unit where unspecified", "item category group", "sales/plant views", "tax applicability/classification", "valuation/accounting requirements", "account determination and initial stock where applicable"]
+  },
+  "preparation_review": {
+    "reviewed_on": "2026-10-19",
+    "review_mode": "READ_AND_LOCAL_PREPARATION_ONLY_STOP_BEFORE_WRITE",
+    "fresh_live_audit": {
+      "environment": "A4H/600/ABDELJ",
+      "mode": "READ_ONLY",
+      "evidence": "runtime/sap_reads/s4600_bootstrap_group01.json",
+      "result": "All seven literal keys returned 404; all exact external-ID/SearchTerm1/ProductOldID checks returned zero rows; exact Motormarkt Heidelberg name returned zero rows.",
+      "interpretation": "Bounded candidates were not found, but no target is classified globally absent and no internally numbered identity is ruled out."
+    },
+    "preloaded_training_objects": ["T-S50A01", "T-S50B01", "T-MS101", "T-MS201", "T-MS301", "T-F101", "T-D101"],
+    "exercise_outputs_not_prerequisites": ["T-CUS01", "T-MS401"],
+    "deterministic_sap_mappings_found": [],
+    "identity_rule": "Never create a preloaded object merely because its literal logical ID is not found. Require an approved mapping/source decision or a separately authorized bootstrap scope.",
+    "numbering_validation": {
+      "business_partner": "BPAB external alphanumeric compatibility is required only for T-CUS01 and remains unverified in the installed system.",
+      "product": "No external/internal numbering mode is assumed for preloaded products or T-MS401. Capture any generated SAP ID and persist mapping only after readback."
+    },
+    "anti_duplicate_checks": {
+      "business_partner": ["logical-to-SAP identity mapping", "exact BusinessPartner/Customer key", "BusinessPartnerIDByExtSystem", "SearchTerm1 and exact name/address only as bounded candidates"],
+      "product": ["logical-to-SAP identity mapping", "exact Product key", "ProductOldID", "exact description only as a bounded candidate"],
+      "condition_record": ["condition type", "installed key combination", "sales organization/channel", "customer/product", "validity interval", "currency/unit and overlapping record"]
+    },
+    "independent_readback": {
+      "business_partner": ["BP root", "roles", "company-code data", "sales-area data", "partner functions and tax only when in approved scope"],
+      "product": ["root/basic data", "sales views", "plant views", "units", "tax", "valuation only when separately approved"],
+      "condition_record": ["SAP condition-record ID", "full key", "validity", "rate/scales", "currency and unit"]
+    },
+    "validation_result": "APPROVAL_MANIFEST_READY_ZERO_SAFE_WRITES",
+    "remaining_team_owned": ["resolve approved identities for preloaded objects", "prove installed numbering and write contracts", "validate non-sensitive general/sales fields", "prepare exact operation fingerprints"],
+    "remaining_admin_owned": ["plant and warehouse context", "customer FI/tax approvals", "product tax/valuation/accounting", "participant catalogs and authorizations"]
+  },
+  "objects": [
+    {
+      "logical_id_template": "T-S50A##", "logical_id": "T-S50A01", "object_type": "BUSINESS_PARTNER", "origin": "BOOK_PRE_SUPPLIED",
+      "verified_sap_mapping": {"sap_id": "1000000116", "scope": "BP_ROOT_ONLY", "source": "data/provisioning/phase5_identity_mappings.json"}, "mapping_status": "LIVE_VERIFIED_BP_ROOT_ONLY",
+      "book_values": {"name_observed": "Motormarkt Heidelberg", "sales_area": "1010/10/00"},
+      "required_capabilities": ["sold-to", "ship-to", "bill-to", "payer", "SD and FI training flows"],
+      "missing_required_values": ["existing SAP identity", "approved creation data from shared customer requirements", "shipping/plant defaults", "pricing and partner-function assignments"],
+      "approvals_required": ["TRAINING_MASTER_DATA", "CUSTOMER_FI_VALUES", "CUSTOMER_TAX_VALUES"],
+      "exercise_dependencies": [3,4,5,6,7,8,10,12,13,14,16,17,19,21,22,28,30,31,32,33,34,35],
+      "source": {"book_pages": [57,58,87,88], "canonical_object_id": "S4600_CH3_EX3_SALES_ORDER_STANDARD"},
+      "readiness": "BP_ROOT_CREATED_AND_VERIFIED; CUSTOMER_EXTENSIONS_STILL_MISSING"
+    },
+    {
+      "logical_id_template": "T-S50B##", "logical_id": "T-S50B01", "object_type": "BUSINESS_PARTNER", "origin": "BOOK_PRE_SUPPLIED",
+      "verified_sap_mapping": null, "mapping_status": "NO_DETERMINISTIC_MATCH_IN_TARGETED_READS",
+      "book_values": {"sales_area": "1010/10/00", "delivering_plant": "1010"},
+      "missing_required_values": ["existing SAP identity", "approved creation data from shared customer requirements", "shipping conditions", "required partner functions"],
+      "approvals_required": ["TRAINING_MASTER_DATA", "CUSTOMER_FI_VALUES", "CUSTOMER_TAX_VALUES"],
+      "exercise_dependencies": [18,19,20,23,26],
+      "source": {"canonical_object_id": "S4600_CH6_EX20_BUSINESS_PARTNER_T-S50B-GROUP", "book_pages": [205,207]},
+      "readiness": "BLOCKED_NEEDS_MASTER_DATA_AND_PLANT_1010"
+    },
+    {
+      "logical_id_template": "T-CUS##", "logical_id": "T-CUS01", "object_type": "BUSINESS_PARTNER", "origin": "EXERCISE_OUTPUT_NOT_SYSTEM_PREREQUISITE",
+      "verified_sap_mapping": null, "mapping_status": "NO_VERIFIED_MAPPING",
+      "book_values": {"category": "ORGANIZATION", "grouping": "BPAB", "book_numbering_description": "Num alpha ext (a-z;CUST/SUPL)", "name": "Motos et autres", "roles": ["FLCU00","FLCU01"], "address": {"street": "Rue principale", "house_number_template": "##", "house_number": "01", "postal_code": "20111", "city": "Hambourg", "country": "DE", "region": "HH", "language": "EN"}, "company_code": "1010", "sales_area": "1010/10/00", "currency": "EUR", "shipping_condition_formula": "50 + int(##)", "shipping_condition_group01": "51", "delivering_plant": "1010", "incoterms": "DAP", "incoterms_location": "Hambourg", "payment_terms": "ZB00", "customer_account_assignment_group_label": "Revenus intérieurs", "customer_pricing_procedure": "S", "tax": {"country": "DE", "category": "TTX1", "classification": "1"}, "reconciliation_account": "12100000"},
+      "exercise_deltas": [{"exercise": 10, "action": "add ship-to partner", "logical_partner_template": "T-S50A##", "logical_partner": "T-S50A01", "sap_partner_id": null}],
+      "missing_required_values": ["installed BPAB external-number compatibility", "technical code for Revenus intérieurs", "installed 51/ZB00/S/TTX1 compatibility", "12100000 validity in company 1010 and scoped FI approval", "current standard address and partner schema write/readback contract"],
+      "approvals_required": ["TRAINING_MASTER_DATA", "CUSTOMER_FI_VALUES", "CUSTOMER_TAX_VALUES"],
+      "exercise_dependencies": [9,10],
+      "source": {"canonical_object_id": "S4600_CH4_EX9_BUSINESS_PARTNER_T-CUS-GROUP", "book_pages": [105,106,107,108,109,110]},
+      "readiness": "BOOK_DATA_PREPARED_INSTALLED_CONTRACT_AND_APPROVAL_PENDING"
+    },
+    {
+      "logical_id_template": "T-MS1##", "logical_id": "T-MS101", "object_type": "MATERIAL", "origin": "BOOK_PRE_SUPPLIED",
+      "verified_sap_mapping": null, "mapping_status": "NO_DETERMINISTIC_MATCH_IN_TARGETED_READS",
+      "book_values": {"sales_organization": "1010", "distribution_channel": "10", "plant_for_stock": "1010", "order_unit": "PC", "product_family_description": "phare"},
+      "exercise_conditions": [{"exercise": 13, "condition_type": "PR00", "customer": "T-S50A01", "currency": "EUR", "unit": "PC", "quantity_scales": [{"from": 1,"price":53},{"from":10,"price":51},{"from":20,"price":49}]}],
+      "missing_required_values": ["existing SAP identity", "approved root and sales/plant master data from shared product requirements", "stock and accounting prerequisites", "exact group-specific pricing records"],
+      "approvals_required": ["TRAINING_MASTER_DATA", "PRODUCT_TAX_VALUES", "MM_VALUATION_IF_REQUIRED", "CONDITION_RECORDS"],
+      "exercise_dependencies": [3,5,6,11,12,13,14,16,18,19,22,32,35],
+      "source": {"book_pages": [57,58,71,119,121,137,139], "canonical_object_id": "S4600_CH4_EX13_PRICING_CONDITION_PR00_CUSTOMER_MATERIAL"},
+      "readiness": "BLOCKED_NEEDS_MASTER_DATA_AND_LOGISTICS"
+    },
+    {
+      "logical_id_template": "T-MS2##", "logical_id": "T-MS201", "object_type": "MATERIAL", "origin": "BOOK_PRE_SUPPLIED",
+      "verified_sap_mapping": null, "mapping_status": "NO_DETERMINISTIC_MATCH_IN_TARGETED_READS",
+      "book_values": {"sales_organization": "1010", "distribution_channel": "10", "order_unit": "PC"},
+      "missing_required_values": ["existing SAP identity", "description/material type/base unit", "sales and plant views", "item category and schedule-line determination", "pricing, tax, stock and valuation prerequisites"],
+      "approvals_required": ["TRAINING_MASTER_DATA", "PRODUCT_TAX_VALUES", "MM_VALUATION_IF_REQUIRED"],
+      "exercise_dependencies": [3,10,16,17,18,22,28],
+      "source": {"book_pages": [57,58,111,113], "canonical_object_id": "S4600_CH3_EX3_SALES_ORDER_STANDARD"},
+      "readiness": "BLOCKED_NEEDS_MASTER_DATA"
+    },
+    {
+      "logical_id_template": "T-MS3##", "logical_id": "T-MS301", "object_type": "MATERIAL", "origin": "BOOK_PRE_SUPPLIED",
+      "verified_sap_mapping": null, "mapping_status": "NO_DETERMINISTIC_MATCH_IN_TARGETED_READS",
+      "book_values": {"sales_organization": "1010", "distribution_channel": "10", "order_unit": "PC", "plants": ["1010","1020"], "delivering_plant": "1020", "availability_check": "02"},
+      "missing_required_values": ["existing SAP identity", "description/material type/base unit", "plant and sales master-data values", "stock/receipts for ATP scenarios", "tax and valuation prerequisites"],
+      "approvals_required": ["TRAINING_MASTER_DATA", "PRODUCT_TAX_VALUES", "MM_VALUATION_IF_REQUIRED", "STOCK_OPERATIONS_SEPARATE"],
+      "exercise_dependencies": [19,20,21,23,34],
+      "source": {"canonical_object_id": "S4600_CH6_EX20_MATERIAL_T-MS3-GROUP", "book_pages": [205,206,207]},
+      "readiness": "BLOCKED_NEEDS_MASTER_DATA_AND_PLANTS_1010_1020"
+    },
+    {
+      "logical_id_template": "T-MS4##", "logical_id": "T-MS401", "object_type": "MATERIAL", "origin": "EXERCISE_OUTPUT_NOT_SYSTEM_PREREQUISITE",
+      "verified_sap_mapping": null, "mapping_status": "NO_VERIFIED_MAPPING",
+      "book_values": {"reference_logical_id": "T-MS101", "industry_label": "Commerce", "material_type_label": "Prod. commercialisables", "description": "Phare standard", "plant": "1010", "sales_organization": "1010", "distribution_channel": "10", "tax_classification": "1", "minimum_order_quantity":10, "minimum_order_unit":"PC", "sales_text":"Article fragile !"},
+      "required_views": ["Basic Data 1","Sales organization 1","Sales organization 2","Sales general/plant","Sales text"],
+      "exercise_conditions": [{"condition_type":"PR00","rate":35,"currency":"EUR","pricing_unit":1,"quantity_unit":"PC","scale_from_quantity":1}],
+      "missing_required_values": ["verified T-MS101 source identity and fields", "installed material type/industry codes", "tax country/category", "product numbering", "target-specific approvals and copy/readback contract"],
+      "approvals_required": ["TRAINING_MASTER_DATA", "PRODUCT_TAX_VALUES", "CONDITION_RECORDS"],
+      "exercise_dependencies": [11],
+      "source": {"canonical_object_id":"S4600_CH4_EX11_MATERIAL_T-MS4-GROUP", "book_pages":[119,120,121,122]},
+      "readiness":"BLOCKED_NEEDS_VERIFIED_REFERENCE_AND_PLANT_1010"
+    },
+    {
+      "logical_id_template":"T-F1##", "logical_id":"T-F101", "object_type":"MATERIAL", "origin":"BOOK_PRE_SUPPLIED",
+      "verified_sap_mapping":null, "mapping_status":"NO_DETERMINISTIC_MATCH_IN_TARGETED_READS",
+      "book_values":{"plant":"1010","strategy_group":"20"},
+      "required_capabilities":["make-to-order","MRP","BOM/routing and production-order conversion"],
+      "missing_required_values":["existing SAP identity","material type/base unit and sales views","MRP/production master data","BOM/routing","valuation/accounting and account determination"],
+      "approvals_required":["TRAINING_MASTER_DATA","PP_CONFIGURATION_IF_REQUIRED","MM_VALUATION_IF_REQUIRED"],
+      "exercise_dependencies":[30],
+      "source":{"canonical_object_id":"S4600_CH8_EX30_MATERIAL_T-F1-GROUP","book_pages":[283,286]},
+      "readiness":"BLOCKED_NEEDS_PP_MASTER_DATA_AND_PLANT_1010"
+    },
+    {
+      "logical_id_template":"T-D1##", "logical_id":"T-D101", "object_type":"MATERIAL", "origin":"BOOK_PRE_SUPPLIED",
+      "verified_sap_mapping":null, "mapping_status":"NO_DETERMINISTIC_MATCH_IN_TARGETED_READS",
+      "book_values":{"material_type":"DIEN","item_category_group":"LEIS","order_unit":"H","sales_organization":"1010","distribution_channel":"10","plant_view_requested":"1010"},
+      "required_capabilities":["service order-related billing without physical PGI"],
+      "missing_required_values":["existing SAP identity","description/base unit/numbering","service price and tax requirements","installed service item/copy/billing behavior","whether the Book-requested plant view can be omitted for an approved equivalent scenario"],
+      "approvals_required":["TRAINING_MASTER_DATA","PRODUCT_TAX_VALUES","CONDITION_RECORDS_IF_REQUIRED"],
+      "exercise_dependencies":[31],
+      "source":{"canonical_object_id":"S4600_CH8_EX31_MATERIAL_T-D1-GROUP","book_pages":[293,295]},
+      "readiness":"BLOCKED_NEEDS_SERVICE_MASTER_DATA_AND_CONTRACT"
+    }
+  ]
+}

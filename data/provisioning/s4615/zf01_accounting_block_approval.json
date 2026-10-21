@@ -1,0 +1,30 @@
+{
+  "mode": "CONTROLLED_FIRST_WRITE",
+  "workflow_id": "S4615_ZF01_ACCOUNTING_BLOCK",
+  "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+  "operation_scopes": {"S4615_ZF01_ACCOUNTING_BLOCK": "ORG_CUSTOMIZING"},
+  "route_evidence": {
+    "S4615_ZF01_ACCOUNTING_BLOCK": "VOFA SAPL081F screen 101, ZF01 key, V_TVFK-RFBFK checkbox and exact Save; reports/s4615_sd_customizing_approval_package.md; runtime/sap_gui_responses/b5abc73e-168d-40b9-96ca-87c1491b1cfc.json; V_TVFK transport contract in src/provisioning/sap_gui_backend.py"
+  },
+  "sensitive_approvals": {
+    "S4615_ZF01_ACCOUNTING_BLOCK": {
+      "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+      "operation": "S4615_ZF01_ACCOUNTING_BLOCK",
+      "scope": "ORG_CUSTOMIZING",
+      "approved_by": "REQUESTING_USER_SELF_ATTESTED",
+      "authorization_evidence": "Current user request explicitly approves VOFA ZF01 V_TVFK-RFBFK false to true with transport A4HK908422 and acknowledges shared impact"
+    }
+  },
+  "approval": {
+    "workflow_id": "S4615_ZF01_ACCOUNTING_BLOCK",
+    "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+    "approved_by": "REQUESTING_USER_SELF_ATTESTED",
+    "authorization_evidence": "Current user request: S4615 FINAL SCOPED VOFA APPROVAL",
+    "operations": ["S4615_ZF01_ACCOUNTING_BLOCK"],
+    "scopes": ["ORG_CUSTOMIZING"],
+    "target_fingerprints": {
+      "S4615_ZF01_ACCOUNTING_BLOCK": "c44a5f53d32294785cfb73761de0510b4df415f74df774402947a055cc7aaa78"
+    }
+  },
+  "excluded_scope": ["OTHER_BILLING_TYPES", "OTHER_ZF01_FIELDS", "FI_MM", "MATERIAL_LEDGER", "CURRENCY", "STOCK", "PGI", "TRANSPORT_RELEASE"]
+}

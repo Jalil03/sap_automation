@@ -1,0 +1,1 @@
+{"operation": "ENSURE_C615_A01_SALES_AREA_1010_10_00", "target": {"logical_id": "C615-A01", "sap_id": "1000000115", "sales_area": "1010/10/00"}, "status": "VERIFIED", "retry_allowed": false}

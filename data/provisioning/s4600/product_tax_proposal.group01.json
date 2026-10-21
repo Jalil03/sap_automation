@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "prepared_on": "2026-10-20T13:47:03.7094535Z",
+  "workflow_id": "S4600_GROUP01_PRODUCT_TAX",
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "mode": "APPROVED_PENDING_TECHNICAL_PREFLIGHT",
+  "provenance": {
+    "classification_source": "Observed installed value on P615-400/10000287 in the BE sales context",
+    "book_status": "NOT_A_BOOK_VALUE",
+    "decision_status": "APPROVED_BY_REQUESTING_USER_FOR_NEW_S4600_TRAINING_DATASET"
+  },
+  "operations": {
+    "S4600_PRODUCT_T_D101_TAX_BE_MWST_1": {
+      "target": {
+        "logical_product_id": "T-D101",
+        "sap_id": "90000132",
+        "tax_key": "BE/MWST"
+      },
+      "payload": {
+        "Product": "90000132",
+        "Country": "BE",
+        "TaxCategory": "MWST",
+        "TaxClassification": "1"
+      },
+      "target_fingerprint": "7fe5a3cfd41965e9fbd2fea3b6d62248156a50355a3243f9271e769da12dfd0a"
+    },
+    "S4600_PRODUCT_T_MS101_TAX_BE_MWST_1": {
+      "target": {
+        "logical_product_id": "T-MS101",
+        "sap_id": "60000445",
+        "tax_key": "BE/MWST"
+      },
+      "payload": {
+        "Product": "60000445",
+        "Country": "BE",
+        "TaxCategory": "MWST",
+        "TaxClassification": "1"
+      },
+      "target_fingerprint": "40bc219bbf18e89966c0b6b0206adce6c0c2f386b4cc6632c8b5e068b1266a7f"
+    },
+    "S4600_PRODUCT_T_MS201_TAX_BE_MWST_1": {
+      "target": {
+        "logical_product_id": "T-MS201",
+        "sap_id": "60000446",
+        "tax_key": "BE/MWST"
+      },
+      "payload": {
+        "Product": "60000446",
+        "Country": "BE",
+        "TaxCategory": "MWST",
+        "TaxClassification": "1"
+      },
+      "target_fingerprint": "853bc68a43475ffe605e20ac5f205627cd7c69533682099fc155ee47107e7863"
+    }
+  },
+  "execution_rules": [
+    "Require an explicit TAX_OWNER approval for these exact fingerprints",
+    "Run a fresh exact-key duplicate lookup before each POST",
+    "Create one A_ProductSalesTax row at a time",
+    "Perform an independent exact-key readback after each POST",
+    "Stop the affected object on SAP error or ambiguous outcome",
+    "Do not modify plant, FI/MM, valuation, stock or shared customizing"
+  ]
+}

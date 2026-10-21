@@ -1,6 +1,19 @@
 # Phase 5 Current State — Book 1 / S4615
 
-Last updated: 2026-10-17. This is the current operational record from the latest live-verified state supplied for A4H.
+Last updated: 2026-10-18. This is the current operational record from the latest live-verified state supplied for A4H.
+
+## S4615 group-01 customer address and roles (2026-10-18)
+
+- Existing logical mapping `C615-A01 -> BP 1000000115` was reused; no BP root was recreated.
+- A fresh OData GET confirmed no address and no `XXDEFAULT` usage before the write. The scoped workflow approval authorized the fictional BE/EN address.
+- One allowlisted SAP GUI BP Save created AddressID `1581`. Independent OData GET readback verified the exact approved street/postal code/city/country/language and current `XXDEFAULT` usage.
+- The one-shot attempt and workflow checkpoint are `VERIFIED`; a second automatic Save is prohibited.
+- The earlier FLCU00 HTTP 400 / FSBP_ECC025 was reconciled against the verified current address. The first corrected role attempts were rejected `R1/084` while BP maintenance was open; both were checkpointed, not blindly retried. After the user exited that session, fresh GETs returned 404 and distinct, fingerprinted one-shot recovery attempts created FLCU00 and FLCU01. Independent GETs verified both. A targeted GET confirmed `A_Customer` HTTP 200.
+- Targeted GETs for `A_CustomerCompany(1000000115,1010)` and `A_CustomerSalesArea(1000000115,1010/10/00)` returned HTTP 404. No company-code, sales-area, partner-function, or BP-root write was performed in this role run. A01 FI approval and sales-area tax/customer values remain separately gated.
+- Subsequent targeted read-only tax check: live `API_BUSINESS_PARTNER` metadata confirms `A_CustomerSalesAreaTax` keys `Customer/SalesOrganization/DistributionChannel/Division/DepartureCountry/CustomerTaxCategory` and a `CustomerTaxClassification` field. GET for BP `1000000115` returned 0 rows; GET for sales area `1010/10/00` returned 0 rows. No A01 tax classification can be inferred. Proposed `400000`, `0004`, `EUR`, `01`, `02`, and account-assignment group `01` remain proposals, not A01-approved write values.
+- The user subsequently approved exact A01 values `400000`, `0004`, `EUR`, `01`, pricing `02`, account-assignment group `01`, `CFR/Bruxelles`, and self-reference partner functions `DO/RF/PY/RM`. Installed metadata treats tax as a separate entity, not a mandatory `A_CustomerSalesArea` POST field. A one-shot OData POST created `A_CustomerSalesArea(1000000115,1010/10/00)` with only these approved commercial fields; a fresh independent GET verified all payload fields. A targeted `A_CustSalesPartnerFunc` GET found four existing rows (`DO`, `RF`, `PY`, `RM`, PartnerCounter `0`), each referencing `1000000115`; no partner POST was needed.
+- `A_CustomerCompany(1000000115,1010)` remains absent. User approval of the target `400000` does not establish the separate FI/reconciliation-owner approval required by Phase 5 policy; no company POST was attempted. Tax classification remains unknown and unwritten; S4615 end-to-end tax behavior is not yet proven.
+- The user then self-attested authority over S4615 training customer FI settings and explicitly approved only `A_CustomerCompany(1000000115,1010)` with `ReconciliationAccount=400000` and `PaymentTerms=0004`. The exact-operation `FI_MM` policy fingerprint, installed metadata and fresh GET passed. One OData POST was made; independent GET verified all four approved fields. The one-shot checkpoint is `VERIFIED`; do not recreate. C615-A01 now has verified BP root, address, roles, customer root, company, sales area and four self-referencing partner functions. No tax classification was written.
 
 ## Environment
 
@@ -37,6 +50,7 @@ Last updated: 2026-10-17. This is the current operational record from the latest
 | Sales Area 1010/10/00 | EXISTS | Human checkpoint verified; saved under transport `A4HK908422`; subsequent customer extension POST accepted the combination |
 | A_CustomerSalesArea / 1010/10/00 | EXISTS | Created through `API_BUSINESS_PARTNER`; independent fresh-session readback succeeded |
 | Product P615-400 | EXISTS | SAP material `10000287` created through MM01; independent Product API readbacks verified root, Plant `1710`, Sales `1010/10`, and BE/MWST tax data |
+| Product P615-101 basic root | EXISTS | SAP material `10000289`; independent Product API readbacks verified FERT/M, PC, division 00 and description. No sales, plant or accounting views. |
 | Plant assignment 1010/10/1710 | EXISTS | Human checkpoint live-verified |
 | S4615 cash-sale dry-run | READY | All seven dependency GETs, service access, ledger anti-duplicate, and SAP anti-duplicate checks passed with resolved SAP identities |
 | Pricing determination 1010/10/00 + A + 02 | EXISTS | OVKK target `A17J02` created and verified live |
@@ -89,6 +103,12 @@ The FINSC dependency is now resolved for the exact stored rule. Live GUI mainten
 The subsequent MM01 retry selected only Accounting 1 and Accounting 2 for material `10000287`, target plant `1710`, reference material `FG228`, and reference plant `1710`. Before reaching the accounting fields, SAP stopped with message **C+039**, `Les devises du ledger articles ont été modifiées`. SAP's long text states that the current currency/type configuration for valuation area `1710` differs from the configuration used at Material Ledger productive startup, and therefore postings are blocked to preserve consistency. The long text contains no maintained procedure. No material save was attempted. This is now the sole active boundary before the accounting extension and Sales Order retry.
 
 ## Product state
+
+### S4615 shipping point 1010 — pending address, not verified
+
+Live OVXD (`SAPLV03B`, `V_TVST`) displayed all 19 existing shipping points; `1010` was absent. The scoped S4615 adapter opened the exact New Entries form and staged only key `1010` and the project-default description `Pt expédition 1010`. One controlled Save was attempted. SAP opened `Traiter l'adresse:  1010` (`SAPLSZA1/201`, `wnd[1]`) before persistence confirmation. The native GUI `Required` property marked address country mandatory. No address was entered. The address and transport dialogs were cancelled without confirmation; a fresh OVXD re-entry and an independent SE16N `TVST` read both found 19 entries and no `1010`. The one-shot attempt checkpoint is `REJECTED`, not retryable automatically. Proposed country `BE` follows company 1010's Belgian context but was outside the first write fingerprint and needs exact scoped approval. Shipping point `1010` remains **MISSING**.
+
+For group-01 `P615-101`, a controlled MM01 Basic Data 1/2 creation was saved once after an exact-key/description absence check. SAP confirmed `L'article 10000289 est créé`; independent fresh API_PRODUCT_SRV GETs verified Product `10000289`, FERT/M, BaseUnit PC, Division 00, and French description `S4615 Training Product 101`. The logical mapping `P615-101 -> 10000289` is persisted with scope `BASIC_ROOT_ONLY` and the write checkpoint is `VERIFIED`. No sales, plant, accounting, valuation, or Material Ledger view was created. The installed `A_Product` POST remains unsupported and no RFC connector/signature is available; the evidenced MM01 root route is the current fallback. Delivery/PGI and Exercises 3/13 remain blocked by the missing 1010-compatible plant/sales/valuation context, not by the product root.
 
 Logical Product `P615-400` is represented by live SAP material `10000287`. The Book unit remains `PC`; it was not replaced with template-specific `289` or `/PC`.
 

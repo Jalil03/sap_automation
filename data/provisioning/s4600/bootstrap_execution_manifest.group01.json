@@ -1,0 +1,190 @@
+{
+  "manifest_version": "1.0",
+  "book": "S4600",
+  "training_group": "01",
+  "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+  "prepared_on": "2026-10-19",
+  "approval_state": "AWAITING_USER_REVIEW",
+  "execution_authorized": false,
+  "write_count_if_approved_now": 0,
+  "scope": {
+    "included": ["BP/customer general data", "customer sales-area data", "product basic data", "product sales data when prerequisites exist"],
+    "excluded": ["T-CUS01", "T-MS401", "PR00/K007", "sales documents", "global customizing", "plant or warehouse creation", "FI/MM/ML/valuation", "stock/PGI", "financial postings", "transport release", "S4615", "S4650"]
+  },
+  "sources": {
+    "book": "data/books/S4600/S4600_EXERCISES.md",
+    "planning_manifest": "data/provisioning/s4600/master_data_manifest.group01.json",
+    "completion_plan": "reports/s4600_environment_completion_plan.md",
+    "identity_mappings": "data/provisioning/phase5_identity_mappings.json",
+    "fresh_duplicate_evidence": "runtime/sap_reads/s4600_bootstrap_group01.json",
+    "prewrite_checkpoint": "data/provisioning/s4600/bootstrap_prewrite_checkpoint.group01.json"
+  },
+  "duplicate_search_summary": {
+    "method": "Fresh read-only OData GETs on A4H/600/ABDELJ",
+    "customers": "Literal A_BusinessPartner and A_Customer keys returned 404; exact BusinessPartnerIDByExtSystem and SearchTerm1 returned zero rows for both targets; exact Motormarkt Heidelberg name returned zero rows.",
+    "products": "Literal A_Product keys returned 404 and exact ProductOldID returned zero rows for all five targets.",
+    "classification_limit": "These bounded negative searches do not prove global absence under an unknown internal SAP number."
+  },
+  "technical_contracts": {
+    "business_partner_root": {
+      "status": "STRUCTURALLY_PROVEN_IN_SAME_ENVIRONMENT_NOT_TARGET_READY",
+      "route": "API_BUSINESS_PARTNER/A_BusinessPartner POST with internal SAP number capture",
+      "evidence": "Existing C615-A01 one-shot checkpoint and independent readback",
+      "gap": "No Book-evidenced grouping and complete target-specific general data for T-S50A01/T-S50B01"
+    },
+    "customer_sales_area": {
+      "status": "IMPLEMENTATION_EXISTS_NOT_TARGET_READY",
+      "route": "API_BUSINESS_PARTNER customer extensions",
+      "gap": "Requires a verified customer root plus exact approved sales fields; FI/tax fields remain outside this approval"
+    },
+    "product_basic": {
+      "status": "GUI_ROUTE_PROVEN_IN_SAME_ENVIRONMENT_NOT_TARGET_READY",
+      "route": "MM01 Basic Data 1/2 with generated ID capture and API_PRODUCT_SRV readback",
+      "gap": "A_Product POST is not supported; target-specific type, industry, base unit and exact description are incomplete"
+    },
+    "product_sales": {
+      "status": "NO_PROVEN_SAFE_TARGET_CONTRACT",
+      "gap": "Required sales/tax/item-category values and a reusable write/readback route are not fully evidenced"
+    }
+  },
+  "common_safety": {
+    "fresh_lookup_before_write": true,
+    "one_object_at_a_time": true,
+    "ambiguous_write_retry": "FORBIDDEN; reconcile by independent GET",
+    "rollback": "No automatic delete or reversal. On a verified wrong creation, freeze further extensions, retain the mapping/checkpoint, and request an approved correction or deactivation plan.",
+    "readback": "Fresh session, exact generated SAP key, exact persisted approved fields and scope-specific views"
+  },
+  "objects": [
+    {
+      "logical_id": "T-S50A01",
+      "object_type": "BUSINESS_PARTNER",
+      "classification": "UNRESOLVED_IDENTITY",
+      "proposed_values": {
+        "OrganizationBPName1": {"value": "Motormarkt Heidelberg", "source": "S4600_EXERCISES.md pages 87-88"},
+        "sales_area": {"value": "1010/10/00", "source": "S4600_EXERCISES.md pages 57-58"}
+      },
+      "duplicate_evidence": "Fresh literal-key/external-ID/SearchTerm1/exact-name checks found zero bounded candidates; global absence not proven.",
+      "missing_values": ["verified SAP identity or approved bootstrap identity decision", "BP grouping/number assignment", "complete address", "required roles and partner functions", "shipping defaults", "customer pricing procedure"],
+      "forbidden_or_separate": ["reconciliation account", "payment terms requiring FI approval", "customer tax classification", "plant default while plant 1010 is missing"],
+      "intended_operation": "NONE until identity and exact general/sales values are resolved",
+      "views_left_missing_if_general_root_were_later_approved": ["company-code/FI", "tax", "plant-dependent logistics", "partner functions unless separately evidenced"],
+      "readback": ["A_BusinessPartner exact generated/mapped key", "A_Customer root if created", "approved roles", "A_CustomerSalesArea 1010/10/00"],
+      "risk": "Creating a duplicate internally numbered preload or an unusable customer with incomplete organizational data"
+    },
+    {
+      "logical_id": "T-S50B01",
+      "object_type": "BUSINESS_PARTNER",
+      "classification": "NEEDS_ADMIN_DECISION",
+      "proposed_values": {
+        "sales_area": {"value": "1010/10/00", "source": "S4600_EXERCISES.md exercise 20"},
+        "delivering_plant": {"value": "1010", "source": "S4600_EXERCISES.md pages 205-207", "state": "CONFIRMED_MISSING_IN_API_PLANT_SRV"}
+      },
+      "duplicate_evidence": "Fresh literal-key/external-ID/SearchTerm1 checks found zero bounded candidates; global absence not proven.",
+      "missing_values": ["verified SAP identity", "name and address", "BP grouping/number assignment", "roles/partner functions", "shipping conditions"],
+      "admin_dependency": "Plant 1010 and its assignments; plant creation is forbidden in this workflow",
+      "intended_operation": "NONE",
+      "readback": ["A_BusinessPartner", "A_Customer", "A_CustomerSalesArea 1010/10/00"],
+      "risk": "Incomplete customer and invalid delivering-plant assignment"
+    },
+    {
+      "logical_id": "T-MS101",
+      "object_type": "MATERIAL",
+      "classification": "NEEDS_MISSING_DATA",
+      "proposed_values": {
+        "sales_organization": {"value": "1010", "source": "S4600_EXERCISES.md pages 57-58"},
+        "distribution_channel": {"value": "10", "source": "S4600_EXERCISES.md pages 57-58"},
+        "order_unit": {"value": "PC", "source": "S4600_EXERCISES.md exercises 3/13"},
+        "product_family_description": {"value": "phare", "source": "S4600_EXERCISES.md exercise 11; family description only, not an exact master description"},
+        "plant_for_stock": {"value": "1010", "source": "S4600_EXERCISES.md exercise 5", "state": "CONFIRMED_MISSING_IN_API_PLANT_SRV"}
+      },
+      "duplicate_evidence": "Fresh literal Product key 404 and exact ProductOldID zero rows; global absence not proven.",
+      "missing_values": ["verified SAP identity", "exact description", "material type", "industry sector", "base unit", "item category group", "product tax values"],
+      "admin_dependencies": ["plant 1010", "valuation/accounting", "stock"],
+      "intended_operation": "NONE; even Basic-only creation lacks mandatory exact values",
+      "readback": ["A_Product exact key", "A_ProductDescription", "A_ProductSalesDelivery 1010/10 if later approved"],
+      "risk": "Duplicate or semantically wrong product; sales data could imply unsupported tax/logistics behavior"
+    },
+    {
+      "logical_id": "T-MS201",
+      "object_type": "MATERIAL",
+      "classification": "NEEDS_MISSING_DATA",
+      "proposed_values": {
+        "sales_organization": {"value": "1010", "source": "S4600_EXERCISES.md pages 57-58"},
+        "distribution_channel": {"value": "10", "source": "S4600_EXERCISES.md pages 57-58"},
+        "order_unit": {"value": "PC", "source": "S4600_EXERCISES.md exercise 3"}
+      },
+      "duplicate_evidence": "Fresh literal Product key 404 and exact ProductOldID zero rows; global absence not proven.",
+      "missing_values": ["verified SAP identity", "exact description", "material type", "industry sector", "base unit", "item category group", "tax and pricing requirements"],
+      "admin_dependencies": ["plant/logistics if delivery is required", "valuation/accounting and stock"],
+      "intended_operation": "NONE",
+      "readback": ["A_Product", "A_ProductDescription", "A_ProductSalesDelivery 1010/10 if later approved"],
+      "risk": "Duplicate or unusable product master"
+    },
+    {
+      "logical_id": "T-MS301",
+      "object_type": "MATERIAL",
+      "classification": "NEEDS_ADMIN_DECISION",
+      "proposed_values": {
+        "sales_organization": {"value": "1010", "source": "S4600_EXERCISES.md"},
+        "distribution_channel": {"value": "10", "source": "S4600_EXERCISES.md"},
+        "order_unit": {"value": "PC", "source": "S4600_EXERCISES.md"},
+        "plants": {"value": ["1010", "1020"], "source": "S4600_EXERCISES.md pages 205-207", "state": "BOTH_CONFIRMED_MISSING_IN_API_PLANT_SRV"},
+        "delivering_plant": {"value": "1020", "source": "S4600_EXERCISES.md pages 205-207"},
+        "availability_check": {"value": "02", "source": "S4600_EXERCISES.md exercise 20"}
+      },
+      "duplicate_evidence": "Fresh literal Product key 404 and exact ProductOldID zero rows; global absence not proven.",
+      "missing_values": ["verified SAP identity", "description", "material type", "industry sector", "base unit", "sales/tax fields"],
+      "admin_dependencies": ["plants 1010 and 1020", "MRP/ATP configuration", "valuation/accounting", "stock/receipts"],
+      "intended_operation": "NONE",
+      "readback": ["A_Product", "sales view", "plant/MRP views for both plants"],
+      "risk": "Basic-only product would not unlock ATP exercises and could conflict with the intended preload"
+    },
+    {
+      "logical_id": "T-F101",
+      "object_type": "MATERIAL",
+      "classification": "NEEDS_ADMIN_DECISION",
+      "proposed_values": {
+        "plant": {"value": "1010", "source": "S4600_EXERCISES.md exercise 30", "state": "CONFIRMED_MISSING_IN_API_PLANT_SRV"},
+        "strategy_group": {"value": "20", "source": "S4600_EXERCISES.md exercise 30"}
+      },
+      "duplicate_evidence": "Fresh literal Product key 404 and exact ProductOldID zero rows; global absence not proven.",
+      "missing_values": ["verified SAP identity", "description", "material type", "industry sector", "base unit", "sales views"],
+      "admin_dependencies": ["plant 1010", "MRP/PP master data", "BOM/routing", "valuation/accounting and account determination"],
+      "intended_operation": "NONE",
+      "readback": ["A_Product", "plant/MRP3 view", "BOM and routing identity"],
+      "risk": "A partial basic master cannot satisfy make-to-order production and may mask missing PP prerequisites"
+    },
+    {
+      "logical_id": "T-D101",
+      "object_type": "MATERIAL",
+      "classification": "NEEDS_MISSING_DATA",
+      "proposed_values": {
+        "material_type": {"value": "DIEN", "source": "S4600_EXERCISES.md exercise 31"},
+        "item_category_group": {"value": "LEIS", "source": "S4600_EXERCISES.md exercise 31"},
+        "order_unit": {"value": "H", "source": "S4600_EXERCISES.md exercise 31"},
+        "sales_organization": {"value": "1010", "source": "S4600_EXERCISES.md exercise 31"},
+        "distribution_channel": {"value": "10", "source": "S4600_EXERCISES.md exercise 31"},
+        "plant_view_requested": {"value": "1010", "source": "S4600_EXERCISES.md exercise 31", "state": "PLANT_CONFIRMED_MISSING_IN_API_PLANT_SRV"}
+      },
+      "duplicate_evidence": "Fresh literal Product key 404 and exact ProductOldID zero rows; global absence not proven.",
+      "missing_values": ["verified SAP identity", "exact description", "industry sector", "base unit (order unit H is not silently treated as base unit)", "product numbering", "service price", "tax values"],
+      "admin_dependencies": ["decision whether the Book-requested 1010 plant view may be omitted", "installed service item/copy/billing determination"],
+      "intended_operation": "NONE; Basic-only creation is not exact and sales extension is not contract-ready",
+      "readback": ["A_Product", "A_ProductDescription", "A_ProductSalesDelivery 1010/10", "TAD/order-related billing behavior when later tested"],
+      "risk": "Wrong unit or incomplete service product could create incorrect billing behavior"
+    }
+  ],
+  "approval_gate": {
+    "safe_objects_now": [],
+    "existing_verified_objects": [],
+    "ready_for_creation": [],
+    "ready_for_partial_creation": [],
+    "decision": "NO_GO_FOR_SAP_WRITE",
+    "reason": "No target has both a resolved identity/absence decision, complete exact mandatory values, and a proven target write/readback contract within the allowed non-FI/non-MM scope.",
+    "smallest_next_actions": [
+      "Provide or approve deterministic SAP mappings for the seven Book-preloaded objects, or explicitly attest that they must be bootstrapped as new internally numbered masters after the bounded duplicate evidence is reviewed.",
+      "Provide exact non-FI/non-tax general master values for T-S50A01/T-S50B01 and exact basic-product fields for the five products.",
+      "Obtain administrator decisions for plants 1010/1020 and PP/valuation/stock dependencies without authorizing their creation here."
+    ]
+  }
+}

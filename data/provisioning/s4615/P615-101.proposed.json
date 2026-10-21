@@ -1,0 +1,89 @@
+{
+  "proposal_version": 1,
+  "status": "BASIC_ROOT_VERIFIED_SALES_PLANT_VALUATION_BLOCKED",
+  "not_for_sap_execution": true,
+  "course": "S4615",
+  "scenario_id": "S4615_CH3_EX3",
+  "training_user_code": "01",
+  "object_type": "MATERIAL",
+  "logical_id": "P615-101",
+  "original_book_template": "P615-1##",
+  "sap_product_id": "10000289",
+  "live_root_evidence": {
+    "creation_route": "MM01_BASIC_DATA_1_2",
+    "sap_confirmation": "L'article 10000289 est créé",
+    "independent_readback": "API_PRODUCT_SRV A_Product and A_ProductDescription HTTP 200",
+    "verified_scope": "BASIC_ROOT_ONLY"
+  },
+  "reference_policy": {
+    "structural_fert_reference": "FG228",
+    "pc_association_evidence": "10000217",
+    "copy_reference_identity": false,
+    "excluded_functional_template": "P615-400 / 10000287",
+    "source": "reports/s4615_cross_org_template_search.md"
+  },
+  "ready_fields": {
+    "base_unit": {
+      "value": "PC",
+      "provenance": "USER_APPROVED_P615_101_PRODUCT_DECISION",
+      "note": "Base unit and sales order unit are both PC; no alternative-unit conversion is proposed."
+    },
+    "description": {
+      "value": "S4615 Training Product 101",
+      "provenance": "USER_DIRECTIVE"
+    },
+    "product_type": {
+      "value": "FERT",
+      "provenance": "USER_APPROVED_P615_101_PRODUCT_DECISION"
+    },
+    "industry_sector": {
+      "value": "M",
+      "provenance": "USER_APPROVED_P615_101_PRODUCT_DECISION"
+    },
+    "sales_division": {
+      "value": "00",
+      "provenance": "BOOK_CANONICAL:S4615_CH3_EX3_SALES_ORDER_FAIR"
+    },
+    "sales_organization": {
+      "value": "1010",
+      "provenance": "BOOK_AND_SAP_VERIFIED_ENVIRONMENT"
+    },
+    "distribution_channel": {
+      "value": "10",
+      "provenance": "BOOK_AND_SAP_VERIFIED_ENVIRONMENT"
+    },
+    "sales_order_unit": {
+      "value": "PC",
+      "provenance": "BOOK_CANONICAL:S4615_CH3_EX3_SALES_ORDER_FAIR",
+      "note": "Order unit only; this does not establish BaseUnit or an SAP UoM conversion."
+    }
+  },
+  "admin_confirmation_fields": {
+    "product_group": "ADMIN_CONFIRMATION_REQUIRED",
+    "plant": "ADMIN_CONFIRMATION_REQUIRED",
+    "delivering_plant": "ADMIN_CONFIRMATION_REQUIRED",
+    "item_category_group": "ADMIN_CONFIRMATION_REQUIRED",
+    "account_determination_product_group": "ADMIN_CONFIRMATION_REQUIRED",
+    "availability_check": "ADMIN_CONFIRMATION_REQUIRED",
+    "country_specific_tax_classifications": "ADMIN_CONFIRMATION_REQUIRED",
+    "alternative_units": "NOT_REQUIRED_FOR_PC_BASE_AND_PC_ORDER_UNIT_UNLESS_SAP_REQUESTS_A_SEPARATE_RECORD",
+    "valuation_area": "ADMIN_CONFIRMATION_REQUIRED",
+    "valuation_class": "ADMIN_CONFIRMATION_REQUIRED",
+    "price_control": "ADMIN_CONFIRMATION_REQUIRED",
+    "price_determination": "ADMIN_CONFIRMATION_REQUIRED",
+    "standard_price_and_currency": "ADMIN_CONFIRMATION_REQUIRED",
+    "accounting_and_material_ledger_requirements": "ADMIN_CONFIRMATION_REQUIRED"
+  },
+  "provenance": [
+    "data/validated/canonical_objects.json:S4615_CH3_EX3_SALES_ORDER_FAIR",
+    "data/books/S4615/S4615_provisioning_facts.md",
+    "reports/s4615_cross_org_template_search.md"
+  ],
+  "guardrails": [
+    "Keep canonical P615-1## unchanged; 01 is a runtime training-code resolution.",
+    "BaseUnit PC is the user's explicit P615-101 decision; do not create an unproven alternative-unit conversion or translate FG228 /PC or 289 into PC.",
+    "Do not copy 1710-specific plant, valuation, USD or Material Ledger fields from FG228.",
+    "Do not reuse P615-400 / 10000287 as a functional template.",
+    "No SAP write is authorized by this proposal."
+  ]
+}

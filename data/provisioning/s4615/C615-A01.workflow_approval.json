@@ -1,0 +1,218 @@
+{
+  "operation": "S4615_CUSTOMER_A01",
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "logical_id": "C615-A01",
+  "existing_business_partner": "1000000115",
+  "approved_by": "REQUESTING_USER_SELF_ATTESTED",
+  "approval_basis": "User explicitly authorized management of S4615 training customer master data and requested this scoped workflow",
+  "approved_scope": [
+    "BP_ADDRESS",
+    "FLCU00_ROLE",
+    "FLCU01_ROLE",
+    "CUSTOMER_COMPANY_1010",
+    "CUSTOMER_SALES_AREA_1010_10_00",
+    "PARTNER_FUNCTIONS"
+  ],
+  "excluded_scope": [
+    "BP_ROOT_CREATION",
+    "PLANT",
+    "PRODUCT",
+    "MATERIAL_LEDGER"
+  ],
+  "approval_scopes_evidenced": [
+    "CUSTOMER_MASTER_OWNER"
+  ],
+  "approval_scopes_not_evidenced": [
+    "CUSTOMER_MASTER_AND_TAX_OWNER"
+  ],
+  "step_authorizations": {
+    "BP_ADDRESS": {
+      "execute": true,
+      "basis": "User requested the approved Belgian training address for existing BP 1000000115; write remains gated by a proven route"
+    },
+    "FLCU00_ROLE": {
+      "execute": true,
+      "basis": "User explicitly requested eligible independent role provisioning for this mapped BP"
+    },
+    "FLCU01_ROLE": {
+      "execute": true,
+      "basis": "User explicitly requested eligible independent role provisioning for this mapped BP"
+    },
+    "CUSTOMER_COMPANY_1010": {
+      "execute": true,
+      "basis": "User self-attested FI training approval for this exact A_CustomerCompany operation and four values"
+    },
+    "CUSTOMER_SALES_AREA_1010_10_00": {
+      "execute": true,
+      "basis": "User explicitly approved exact C615-A01 sales-area values in the current request; tax classification remains unapproved and excluded from this write"
+    }
+  },
+  "sales_area_approved_payload": {
+    "Customer": "1000000115",
+    "SalesOrganization": "1010",
+    "DistributionChannel": "10",
+    "Division": "00",
+    "Currency": "EUR",
+    "ShippingCondition": "01",
+    "CustomerPricingProcedure": "02",
+    "CustomerAccountAssignmentGroup": "01",
+    "IncotermsClassification": "CFR",
+    "IncotermsLocation1": "Bruxelles",
+    "CustomerPaymentTerms": "0004"
+  },
+  "sales_area_target_fingerprint": "4a695694c8d8386233ca71bff15607682a7604ea3ba319a79b952fb162d867c7",
+  "company_extension_policy": {
+    "mode": "AUTONOMOUS_TRAINING",
+    "workflow_id": "S4615_CUSTOMER_A01",
+    "environment": {
+      "system": "A4H",
+      "client": "600",
+      "user": "ABDELJ"
+    },
+    "approval": {
+      "workflow_id": "S4615_CUSTOMER_A01",
+      "environment": {
+        "system": "A4H",
+        "client": "600",
+        "user": "ABDELJ"
+      },
+      "approved_by": "REQUESTING_USER_SELF_ATTESTED_FI_TRAINING_SCOPE",
+      "authorization_evidence": "User explicitly confirmed authority to approve S4615 training customer FI settings and approved one A_CustomerCompany POST for customer 1000000115/company 1010/account 400000/terms 0004",
+      "operations": [
+        "ENSURE_C615_A01_COMPANY_1010"
+      ],
+      "scopes": [
+        "FI_MM"
+      ],
+      "target_fingerprints": {
+        "ENSURE_C615_A01_COMPANY_1010": "675360c2281e9f2913ba129aa4cbfe6da6efd157be9c1832b0106b0b8d71d4df"
+      }
+    },
+    "operation_scopes": {
+      "ENSURE_C615_A01_COMPANY_1010": "FI_MM"
+    },
+    "route_evidence": {
+      "ENSURE_C615_A01_COMPANY_1010": "Live API_BUSINESS_PARTNER metadata: A_CustomerCompany entity set, nullable-false Customer/CompanyCode, creatable ReconciliationAccount/PaymentTerms; controlled first write only"
+    },
+    "sensitive_approvals": {
+      "ENSURE_C615_A01_COMPANY_1010": {
+        "environment": {
+          "system": "A4H",
+          "client": "600",
+          "user": "ABDELJ"
+        },
+        "operation": "ENSURE_C615_A01_COMPANY_1010",
+        "scope": "FI_MM",
+        "approved_by": "REQUESTING_USER_SELF_ATTESTED_FI_TRAINING_SCOPE",
+        "authorization_evidence": "User explicitly approved exact FI customer company extension values in the current request"
+      }
+    }
+  },
+  "role_target_fingerprints": {
+    "FLCU00": "5c182e0f73bcfc6ba671c4f2c8e93e17dc2329e299445b8655d8dbd1c78beb43",
+    "FLCU01": "6681220e00abd3e9d1a37c8346fb8066ba6f547bd689d2b16232709ec25335c1"
+  },
+  "lock_release_evidence": {
+    "bp_id": "1000000115",
+    "user_reported_exit": true,
+    "source": "User response: done i exited; no claim of independently observed SAP lock state"
+  },
+  "role_lock_recovery_fingerprints": {
+    "FLCU00": "fe3050475358145c2240bdcaec5625dc9170c60c1aa3d468febf4385f4e0fd6d",
+    "FLCU01": "1266d3630e0b256448e32604a35adb7118b6d9cb2f67836d4ec5ce3af461d00a"
+  },
+  "proposed_values": {
+    "address": {
+      "StreetName": "1 Rue de la Formation S4615",
+      "PostalCode": "1000",
+      "CityName": "Bruxelles",
+      "Country": "BE",
+      "Language": "EN",
+      "provenance": "PROJECT_APPROVED_FICTIONAL_TRAINING_ADDRESS"
+    },
+    "roles": [
+      "FLCU00",
+      "FLCU01"
+    ],
+    "company_code": "1010",
+    "reconciliation_account": {
+      "value": "400000",
+      "provenance": "SAP_VALID_FOR_COMPANY_1010",
+      "a01_value_approved_by_user": true,
+      "a01_fi_approval": "USER_SELF_ATTESTED_EXACT_COMPANY_EXTENSION"
+    },
+    "sales_area": "1010/10/00",
+    "payment_terms": {
+      "value": "0004",
+      "provenance": "USER_APPROVED_A01_TRAINING_DECISION"
+    },
+    "shipping_condition": {
+      "value": "01",
+      "provenance": "USER_APPROVED_A01_TRAINING_DECISION"
+    },
+    "customer_pricing_procedure": {
+      "value": "02",
+      "provenance": "USER_APPROVED_A01_TRAINING_DECISION"
+    },
+    "customer_account_assignment_group": {
+      "value": "01",
+      "provenance": "USER_APPROVED_A01_TRAINING_DECISION"
+    },
+    "sales_currency": {
+      "value": "EUR",
+      "provenance": "USER_APPROVED_A01_TRAINING_DECISION"
+    },
+    "incoterms": {
+      "value": "CFR",
+      "location": "Bruxelles",
+      "provenance": "USER_APPROVED_A01_TRAINING_DECISION"
+    },
+    "partner_functions": {
+      "value": [
+        "DO",
+        "RF",
+        "PY",
+        "RM"
+      ],
+      "partner": "1000000115",
+      "provenance": "USER_APPROVED_AND_SAP_GET_VERIFIED_SELF_REFERENCE"
+    },
+    "tax_classification": null
+  },
+  "latest_read_only_preflight": {
+    "service": "API_BUSINESS_PARTNER",
+    "operation": "GET $metadata?sap-client=600",
+    "http_status": 200,
+    "result": "METADATA_CONFIRMED"
+  },
+  "verified_step_states": {
+    "BP_ADDRESS": "EXISTS_CURRENT_XXDEFAULT",
+    "FLCU00_ROLE": "EXISTS",
+    "FLCU01_ROLE": "EXISTS",
+    "CUSTOMER_ROOT": "EXISTS_GET_200_AFTER_ROLES",
+    "CUSTOMER_COMPANY_1010": "EXISTS",
+    "CUSTOMER_SALES_AREA_1010_10_00": "EXISTS",
+    "PARTNER_FUNCTIONS": "EXISTS_DO_RF_PY_RM_SELF_REFERENCE"
+  },
+  "address_evidence": {
+    "bp_address_get_http": 200,
+    "bp_address_count": 0,
+    "address_usage_get_http": 200,
+    "address_usage_count": 0,
+    "address_id_handling": "NOT_PROVEN_FOR_DIRECT_API_POST_DO_NOT_SUPPLY_GUESSED_ID",
+    "previous_same_environment": "C615-D00 first-address OData creation failed R1/000 CHECK_TABLE_MISSING; SAP GUI creation produced SAP-assigned AddressID 1557 and current XXDEFAULT usage",
+    "role_error": "FSBP_ECC025: BP has no current standard address; supplied SAP Gateway error-log evidence",
+    "verified_address_id": "1581"
+  },
+  "execution_authorized": false,
+  "reason_not_executable": [
+    "Core A01 customer master extensions are verified; no customer tax classification has been approved or written. Tax is separate and optional for the installed sales-area create contract, but end-to-end S4615 billing tax behavior remains unverified",
+    "The S4615 exercise flow still depends on product P615-101 and unexecuted sales/delivery/billing documents; this approval does not cover those writes"
+  ],
+  "write_policy": "Fresh check before each write; one write per approved step; independent readback; no automatic retry after an ambiguous result",
+  "existing_mapping": "data/provisioning/phase5_identity_mappings.json:C615-A01"
+}
