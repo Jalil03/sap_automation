@@ -1,0 +1,37 @@
+{
+  "approval_id": "S4600-EX6-PGI-80000085-20261022-USER-CONFIRMED",
+  "status": "APPROVED",
+  "approved_at_utc": "2026-10-22T11:32:45.7399629Z",
+  "approval_source": "Explicit user response 'oui' to the exact scoped PGI authorization request",
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "operation_scope": "POST_GOODS_ISSUE_DELIVERY_80000085_2026_10_22",
+  "workflow_sha256": "92de846da77d719676d3aa3943a5a2aaee7cfe166ac0dd26561b66594d9a3078",
+  "approved_target": {
+    "delivery_document": "80000085",
+    "goods_movement_date": "2026-10-22",
+    "plant": "FR10",
+    "storage_location": "0001",
+    "movement_type": "601",
+    "items": [
+      {
+        "item": "000010",
+        "material": "10000282",
+        "quantity": "10"
+      },
+      {
+        "item": "000020",
+        "material": "10000283",
+        "quantity": "20"
+      }
+    ]
+  },
+  "constraints": {
+    "maximum_post_attempts": 1,
+    "no_automatic_retry": true,
+    "independent_readback_required": true
+  }
+}

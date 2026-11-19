@@ -1,0 +1,25 @@
+{
+  "approval_id": "CHAT-2026-10-21-S4600-EX28-INQUIRY-GROUP00",
+  "status": "APPROVED",
+  "approved_by": "user",
+  "approved_at": "2026-10-21",
+  "approval_basis": "User explicitly requested exercise 28, BAPI first and SAP GUI fallback. Direct RFC/BAPI was unavailable; VA11 GUI contract was preflighted without save.",
+  "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+  "operation_scope": "CREATE_ONE_S4600_EX28_GROUP00_INQUIRY_DO_VA11",
+  "payload_sha256": "ac21b531a153724123cbc80cafbb1169844e6fbe280617c6b323341c85646e07",
+  "derived_values": {
+    "binding_period_validity_end_date": {
+      "value": "2026-10-25",
+      "source": "Book phrase: fin de la semaine",
+      "rule": "Sunday ending the ISO week containing 2026-10-21",
+      "confidence": "MEDIUM"
+    }
+  },
+  "constraints": {
+    "maximum_save_attempts": 1,
+    "create_quotation_approved": false,
+    "create_sales_order_approved": false,
+    "stop_on_sap_error": true,
+    "independent_readback_required": true
+  }
+}

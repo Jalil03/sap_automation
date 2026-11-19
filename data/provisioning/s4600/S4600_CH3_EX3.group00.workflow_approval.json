@@ -1,0 +1,25 @@
+{
+  "approval_id": "CHAT-2026-10-21-S4600-EX3-GROUP00",
+  "approval_source": "User confirmation in the active conversation after the exact Exercise 3 pilot was proposed",
+  "approval_quote": "d'acc , on commence",
+  "status": "APPROVED",
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "operation_scope": "CREATE_ONE_S4600_EX3_GROUP00_SALES_ORDER",
+  "mode": "CONTROLLED_FIRST_WRITE",
+  "target": {
+    "service": "API_SALES_ORDER_SRV",
+    "entity_set": "A_SalesOrder",
+    "customer_reference": "4-200"
+  },
+  "payload_sha256": "d4fc2dd1f63c863595b8cf557e450f864afbd58dd41b4c308c1522ef12289f8b",
+  "constraints": {
+    "maximum_post_attempts": 1,
+    "retry_after_ambiguous_or_failed_write": false,
+    "independent_readback_required": true,
+    "next_document_not_approved": true
+  }
+}

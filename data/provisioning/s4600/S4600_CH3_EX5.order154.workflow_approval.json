@@ -1,0 +1,26 @@
+{
+  "approval_id": "CHAT-2026-10-21-S4600-EX5-ORDER154",
+  "approval_source": "User confirmation in the active conversation after the delivery-154 operation and parallel read-only audits were proposed",
+  "approval_quote": "d'accord je confirme et done moii un rapport a la fn",
+  "status": "APPROVED",
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "operation_scope": "CREATE_ONE_OUTBOUND_DELIVERY_FROM_SALES_ORDER_154",
+  "mode": "CONTROLLED_FIRST_WRITE",
+  "target": {
+    "service": "API_OUTBOUND_DELIVERY_SRV",
+    "entity_set": "A_OutbDeliveryHeader",
+    "reference_sales_order": "154"
+  },
+  "payload_sha256": "0d4673eafe835c792d11b0cc8e8d22c3b547476bfd9b5afdb8206eecaeaeae31",
+  "constraints": {
+    "maximum_post_attempts": 1,
+    "retry_after_ambiguous_or_failed_write": false,
+    "independent_readback_required": true,
+    "picking_not_approved": true,
+    "goods_issue_not_approved": true
+  }
+}

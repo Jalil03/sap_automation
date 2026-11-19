@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "status": "PROPOSED_AWAITING_EXPLICIT_WRITE_APPROVAL",
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "exercise": "S4600_CH4_EX9",
+  "logical_id": "T-CUS00",
+  "numbering_strategy": {
+    "sap_business_partner": "GENERATED_INTERNAL_ID",
+    "logical_id_field": "SearchTerm1",
+    "logical_id_value": "T-CUS00",
+    "reason": "This is the proven API route already used with BPAB in A4H/600; the generated SAP ID must be captured and mapped."
+  },
+  "root": {
+    "BusinessPartnerGrouping": "BPAB",
+    "BusinessPartnerCategory": "2",
+    "OrganizationBPName1": "Motos et autres",
+    "SearchTerm1": "T-CUS00"
+  },
+  "address": {
+    "StreetName": "Rue principale",
+    "HouseNumber": "00",
+    "PostalCode": "20111",
+    "CityName": "Hambourg",
+    "Country": "DE",
+    "Region": "HH",
+    "Language": "EN"
+  },
+  "roles": [
+    "FLCU00",
+    "FLCU01"
+  ],
+  "company_code": {
+    "CompanyCode": "FR10",
+    "PaymentTerms": "0002",
+    "ReconciliationAccount": "41111000",
+    "CustomerAccountGroup": "CUST"
+  },
+  "sales_area": {
+    "SalesOrganization": "FR10",
+    "DistributionChannel": "10",
+    "Division": "1W",
+    "Currency": "EUR",
+    "ShippingCondition": "01",
+    "SupplyingPlant": "FR10",
+    "IncotermsClassification": "DAP",
+    "IncotermsLocation1": "Hambourg",
+    "CustomerPaymentTerms": "0004",
+    "CustomerAccountAssignmentGroup": "C1",
+    "CustomerPricingProcedure": "01",
+    "CustomerAccountGroup": "CUST"
+  },
+  "sales_area_taxes": [
+    {
+      "DepartureCountry": "CM",
+      "CustomerTaxCategory": "MWST",
+      "CustomerTaxClassification": ""
+    },
+    {
+      "DepartureCountry": "CM",
+      "CustomerTaxCategory": "ZMWS",
+      "CustomerTaxClassification": ""
+    },
+    {
+      "DepartureCountry": "FR",
+      "CustomerTaxCategory": "LCFR",
+      "CustomerTaxClassification": ""
+    },
+    {
+      "DepartureCountry": "FR",
+      "CustomerTaxCategory": "MWST",
+      "CustomerTaxClassification": "1"
+    }
+  ],
+  "partner_functions_expected_after_sales_area_creation": [
+    "DO",
+    "RF",
+    "PY",
+    "RM"
+  ],
+  "sources": {
+    "book_identity_and_address": "data/books/S4600/S4600_EXERCISES.md exercise 9, group suffix 00",
+    "fr10_german_customer_reference": "runtime/sap_reads/s4600_ex9_group00_readiness_2026-10-22.json customer 1000000113",
+    "fr10_accounting_account": "1000000113 company FR10 and verified FR10 customer accounting postings",
+    "tax_values": "1000000113 FR10/10/1W sales-area tax readback"
+  },
+  "excluded_book_values_not_evidenced_for_fr10": {
+    "company_code": "1010",
+    "sales_area": "1010/10/00",
+    "supplying_plant": "1010",
+    "reconciliation_account": "12100000",
+    "payment_terms": "ZB00",
+    "shipping_condition": "50",
+    "customer_pricing_procedure": "S",
+    "tax_category": "TTX1"
+  },
+  "write_authorized": false
+}

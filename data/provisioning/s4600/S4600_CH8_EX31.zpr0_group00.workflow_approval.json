@@ -1,0 +1,28 @@
+{
+  "approval_id": "S4600-EX31-ZPR0-GROUP00-20261022",
+  "status": "APPROVED",
+  "approval_class": "TRAINING_MASTER_DATA",
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "operation_scope": "CREATE_ONE_S4600_EX31_ZPR0_CUSTOMER_MATERIAL_VK11",
+  "payload_sha256": "19778c7acde3acce46bef010886d9fdd39b9d91558f56065c2559d5dac944347",
+  "authorization_evidence": [
+    "The user explicitly asked whether the proposed ZPR0 write was risky or could block SAP.",
+    "The assistant presented the exact ZPR0 scope: FR10/10, customer 1000000112, material 90000133, 150 EUR per 1 H, validity 2026-10-22 through 2026-12-31.",
+    "The user explicitly replied: d'accord je confirme."
+  ],
+  "constraints": {
+    "maximum_save_attempts": 1,
+    "lookup_before_save": true,
+    "independent_vk13_readback": true,
+    "stop_on_sap_error": true,
+    "no_retry_on_ambiguous_outcome": true,
+    "no_sales_order_creation": true,
+    "no_billing": true,
+    "no_fi_posting": true,
+    "no_customizing_change": true
+  }
+}

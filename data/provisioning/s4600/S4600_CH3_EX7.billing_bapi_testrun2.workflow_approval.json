@@ -1,0 +1,27 @@
+{
+  "approval_id": "S4600-EX7-BILLING-BAPI-TESTRUN2-20261022-USER-CONFIRMED",
+  "status": "APPROVED",
+  "approval_source": "Explicit user response 'oui' to the exact second and final TESTRUN request",
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "operation_scope": "ONE_FINAL_BAPI_BILLINGDOC_CREATEMULTIPLE_TESTRUN_NO_COMMIT",
+  "target": {
+    "reference_document": "0080000085",
+    "reference_document_category": "J",
+    "reference_items": [
+      "000010",
+      "000020"
+    ],
+    "testrun": "X",
+    "posting": ""
+  },
+  "constraints": {
+    "maximum_function_calls": 1,
+    "bapi_transaction_commit_allowed": false,
+    "independent_absence_readback_required": true,
+    "no_further_automatic_retry": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "approval_id": "CHAT-2026-10-21-S4600-EX5-DELIVERY80000085-PICK-AFTER-CSRF",
+  "status": "APPROVED",
+  "approved_by": "user",
+  "approved_at": "2026-10-21",
+  "approval_basis": "User authorized continuation through simple reconciled technical issues and requested a report at the end; exact operation remains one PickAllItems call after CSRF and ETag refresh.",
+  "environment": {"system": "A4H", "client": "600", "user": "ABDELJ"},
+  "operation_scope": "PICK_ALL_ITEMS_DELIVERY_80000085_AFTER_CSRF_ETAG_REFRESH_ONLY",
+  "workflow_sha256": "bb2315293aac8ece1dc158166ff17f53d39f547825d9d39be267e4d4794afe50",
+  "constraints": {
+    "maximum_post_attempts": 1,
+    "post_goods_issue_approved": false,
+    "stop_on_unreconciled_or_business_error": true,
+    "independent_readback_required": true
+  }
+}

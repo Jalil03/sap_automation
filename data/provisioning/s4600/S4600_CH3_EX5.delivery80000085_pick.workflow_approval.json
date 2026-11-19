@@ -1,0 +1,24 @@
+{
+  "approval_id": "CHAT-2026-10-21-S4600-EX5-DELIVERY80000085-PICK",
+  "status": "APPROVED",
+  "approved_by": "user",
+  "approved_at": "2026-10-21",
+  "approval_basis": "User confirmed the proposed sequence: set storage location 0001 on delivery 80000085 and perform picking, with goods issue excluded.",
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "operation_scope": "UPDATE_DELIVERY_80000085_STORAGE_AND_PICK_ONLY",
+  "workflow_sha256": "8f930cf92454d3fa1d436824cdc95fd8f331a091260687641797c1ed448676af",
+  "constraints": {
+    "delivery_document": "80000085",
+    "storage_location": "0001",
+    "delivery_items": ["000010", "000020"],
+    "maximum_attempts_per_operation": 1,
+    "post_goods_issue_approved": false,
+    "billing_approved": false,
+    "stop_on_sap_error": true,
+    "independent_readback_required": true
+  }
+}

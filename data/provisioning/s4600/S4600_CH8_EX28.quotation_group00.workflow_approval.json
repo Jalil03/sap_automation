@@ -1,0 +1,26 @@
+{
+  "approval_id": "S4600-EX28-QUOTATION-GROUP00-20261021",
+  "status": "APPROVED",
+  "approval_class": "TRAINING_MASTER_DATA",
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "operation_scope": "CREATE_ONE_S4600_EX28_GROUP00_QUOTATION_OFF_VA21",
+  "payload_sha256": "a66a19531e529273a7931473109ff0ecd399d123014537ac4b5386d7cc275a54",
+  "authorization_evidence": [
+    "User explicitly confirmed attacking exercise 28 and requested BAPI first, SAP GUI fallback.",
+    "User explicitly requested continuing with API and installing missing dependencies if needed.",
+    "Workflow is limited to the S4600 group-00 training quotation derived from inquiry 10000104."
+  ],
+  "constraints": {
+    "maximum_save_attempts": 1,
+    "lookup_before_save": true,
+    "independent_odata_readback": true,
+    "stop_on_sap_error": true,
+    "no_retry_on_ambiguous_outcome": true,
+    "no_sales_order_creation": true,
+    "no_delivery_or_billing": true
+  }
+}

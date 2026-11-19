@@ -1,0 +1,27 @@
+{
+  "approval_id": "S4600-EX31-PR00-GROUP00-20261022",
+  "status": "APPROVED",
+  "approval_class": "TRAINING_MASTER_DATA",
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "operation_scope": "CREATE_ONE_S4600_EX31_PR00_CUSTOMER_MATERIAL_PLANT_VK11",
+  "payload_sha256": "f0ace19cd5bf1f807114c49e06dd77140a467a3833122e68abdbab9a5a2ab778",
+  "authorization_evidence": [
+    "User explicitly accepted defining fictitious training values for the missing exercise 31 price.",
+    "User explicitly confirmed the proposed PR00 value of 150 EUR per 1 H, customer 1000000112, material 90000133, FR10 scope, valid through 2026-12-31.",
+    "Live VK11 discovery resolved the installed technical key to customer + material + plant FR10."
+  ],
+  "constraints": {
+    "maximum_save_attempts": 1,
+    "lookup_before_save": true,
+    "independent_vk13_readback": true,
+    "stop_on_sap_error": true,
+    "no_retry_on_ambiguous_outcome": true,
+    "no_sales_order_creation": true,
+    "no_billing": true,
+    "no_fi_posting": true
+  }
+}

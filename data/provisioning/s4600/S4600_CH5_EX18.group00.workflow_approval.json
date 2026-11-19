@@ -1,0 +1,26 @@
+{
+  "approval_id": "CHAT-2026-10-22-S4600-EX18-GROUP00",
+  "approval_source": "User confirmation in the active conversation after presentation of the exact payload fingerprint",
+  "approval_quote": "d'accord",
+  "status": "APPROVED",
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "operation_scope": "CREATE_ONE_S4600_EX18_GROUP00_SALES_ORDER",
+  "mode": "CONTROLLED_FIRST_WRITE",
+  "target": {
+    "service": "API_SALES_ORDER_SRV",
+    "entity_set": "A_SalesOrder",
+    "customer_reference": "6-100",
+    "sold_to_party": "1000000113"
+  },
+  "payload_sha256": "b16baabbbdca9fef0aee2395a054740064de13cd2ff3e09f89273fdf54c3903c",
+  "constraints": {
+    "maximum_post_attempts": 1,
+    "retry_after_ambiguous_or_failed_write": false,
+    "independent_readback_required": true,
+    "next_document_not_approved": true
+  }
+}

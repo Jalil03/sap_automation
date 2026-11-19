@@ -1,0 +1,20 @@
+{
+  "approval_id": "CHAT-2026-10-21-S4600-EX5-DELIVERY80000085-RESUME-PICK",
+  "status": "APPROVED",
+  "approved_by": "user",
+  "approved_at": "2026-10-21",
+  "approval_basis": "User confirmed one new attempt for item 000020 with a freshly read ETag, followed by picking only if both storage locations equal 0001.",
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "operation_scope": "RESUME_DELIVERY_80000085_ITEM_000020_AND_PICK_ONLY",
+  "workflow_sha256": "eb8b5342ed2d4d788610928d7be8da6e97e24b2dbe1deeeed5a2443c16ff82aa",
+  "constraints": {
+    "maximum_attempts_per_operation": 1,
+    "post_goods_issue_approved": false,
+    "stop_on_sap_error": true,
+    "independent_readback_required": true
+  }
+}

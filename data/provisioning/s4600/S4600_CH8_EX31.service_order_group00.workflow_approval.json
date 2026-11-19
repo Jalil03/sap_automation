@@ -1,0 +1,29 @@
+{
+  "approval_id": "S4600-EX31-SERVICE-ORDER-GROUP00-20261022",
+  "status": "APPROVED",
+  "approval_class": "TRAINING_MASTER_DATA",
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "operation_scope": "CREATE_ONE_S4600_EX31_GROUP00_SERVICE_ORDER_CS_VA01",
+  "payload_sha256": "5e301c3256b0277e237e426527ac14045c5bff3448e8fe9d35f914c2b825751a",
+  "authorization_evidence": [
+    "The assistant recommended completing exercise 4, then finalizing the exercise 31 service order, while stating that the sales-order save required dedicated authorization.",
+    "The user replied: d'accord, je confirme.",
+    "Before execution the assistant restated the exact order values: CS, FR10/10/1W, customer 1000000112, reference 8-600, material 90000133, quantity 3 H, expected net amount 450 EUR, and explicitly excluded billing."
+  ],
+  "constraints": {
+    "maximum_save_attempts": 1,
+    "lookup_before_save": true,
+    "independent_odata_readback": true,
+    "stop_on_sap_error": true,
+    "no_retry_on_ambiguous_outcome": true,
+    "no_billing": true,
+    "no_delivery": true,
+    "no_goods_movement": true,
+    "no_fi_posting": true,
+    "no_customizing_change": true
+  }
+}

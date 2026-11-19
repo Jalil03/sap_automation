@@ -1,0 +1,35 @@
+{
+  "approval_id": "S4600-EX7-BILLING-80000085-20261022-USER-CONFIRMED",
+  "status": "APPROVED",
+  "approved_at_utc": "2026-10-22T12:41:32.3286583Z",
+  "approval_source": "User explicitly confirmed the disclosed real SD/FI billing risk",
+  "environment": {
+    "system": "A4H",
+    "client": "600",
+    "user": "ABDELJ"
+  },
+  "operation_scope": "CREATE_AND_POST_ONE_BILLING_FROM_DELIVERY_80000085",
+  "workflow_sha256": "6745f60457470f74c3d4a2b9f6b3bf6111351f6a47c1b8b79921834f144f76b8",
+  "approved_target": {
+    "function": "BAPI_BILLINGDOC_CREATEMULTIPLE",
+    "reference_document": "0080000085",
+    "reference_document_category": "J",
+    "reference_items": [
+      "000010",
+      "000020"
+    ],
+    "testrun": "",
+    "posting": "",
+    "expected_company_code": "FR10",
+    "expected_payer": "1000000112",
+    "expected_net_amount": "3100.00",
+    "expected_tax_amount": "620.00",
+    "currency": "EUR"
+  },
+  "constraints": {
+    "maximum_function_calls": 1,
+    "no_automatic_retry": true,
+    "independent_readback_required": true,
+    "no_automatic_correction_or_cancellation": true
+  }
+}
